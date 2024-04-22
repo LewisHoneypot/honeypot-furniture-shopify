@@ -1,0 +1,151 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<div class="section__m-account spacing gradient"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+  --padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width m-auto">
+    <div class="p-w__header p-w__header--nogap">
+      <div class="p-w__header--wrapper left">
+        {% render 'breadcrumb',
+          padding_top: '0.5rem',
+          padding_bottom: '0.5rem',
+          alignment: 'start'
+        %}
+        <h1 class="p-w__heading p-w__heading--page f-bold heading-size-small m-0">{{ 'customer.account.title' | t }}</h1>
+        <div class="p-w__description rte">
+          <a href="{{ routes.account_logout_url }}" class="link link--text u-link d-inline-block">{{ 'customer.log_out' | t }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="p-w__content">
+      <div class="customer account">
+        <div class="account__wrapper d-flex f-wrap a-i-start r-gap" style="--r-gap: 2rem;">
+          <div class="account__item account__item--order f-grow">
+            <h2 class="h3 d-none">{{ 'customer.orders.title' | t }}</h2>
+            {%- paginate customer.orders by 20 -%}
+              {%- if customer.orders.size > 0 -%}
+                <table role="table" class="order-history w-100 pos-relative b-none">
+                  <caption class="visually-hidden">
+                    {{ 'customer.orders.title' | t }}
+                  </caption>
+                  <thead role="rowgroup" class="d-none-xs">
+                    <tr role="row">
+                      <th id="ColumnOrder" scope="col" role="columnheader" class="l-h-1 b-none p-0 left uppercase subrte">{{ 'customer.orders.order_number' | t }}</th>
+                      <th id="ColumnDate" scope="col" role="columnheader" class="l-h-1 b-none p-0 left uppercase subrte">{{ 'customer.orders.date' | t }}</th>
+                      <th id="ColumnPayment" scope="col" role="columnheader" class="l-h-1 b-none p-0 left uppercase subrte">{{ 'customer.orders.payment_status' | t }}</th>
+                      <th id="ColumnFulfillment" scope="col" role="columnheader" class="l-h-1 b-none p-0 left uppercase subrte">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                      <th id="ColumnTotal" scope="col" role="columnheader" class="l-h-1 subrte b-none p-0 right left-xs uppercase">{{ 'customer.orders.total' | t }}</th>
+                    </tr>
+                  </thead>
+                  <tbody role="rowgroup" class="color-foreground pos-relative">
+                    {%- for order in customer.orders -%}
+                      <tr role="row" class="w-100 f-column j-c-start">
+                        <td id="RowOrder" class="l-h-1 p-0 b-none a-i-center right-xs" role="cell" headers="ColumnOrder" data-label="{{ 'customer.orders.order_number' | t }}">
+                          <a href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}" class="link u-link">
+                            {{ order.name }}
+                          </a>
+                        </td>
+                        <td class="l-h-1 p-0 b-none right-xs" headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                          {{ order.created_at | time_tag: format: 'date' }}
+                        </td>
+                        <td class="l-h-1 p-0 b-none right-xs" headers="RowOrder ColumnPayment" role="cell" data-label="{{ 'customer.orders.payment_status' | t }}">
+                          {{ order.financial_status_label }}
+                        </td>
+                        <td class="l-h-1 p-0 b-none right-xs" headers="RowOrder ColumnFulfillment" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                          {{ order.fulfillment_status_label }}
+                        </td>
+                        <td class="l-h-1 p-0 b-none right" headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                          {{ order.total_net_amount | money_with_currency }}
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+                  </tbody>
+                </table>
+              {%- else -%}
+                <div class="rte">
+                  <p>{{ 'customer.orders.none' | t }}</p>
+                </div>
+              {%- endif -%}
+              {%- if paginate.pages > 1 -%}
+                {%- if paginate.parts.size > 0 -%}
+                  <div class="pagination-wrapper center">
+                    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                      <ul role="list" class="pagination__list d-flex f-wrap j-c-center a-i-center list-unstyled g-gap" style="--g-gap: 1rem;">
+                        {%- if paginate.previous -%}
+                          <li>
+                            <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}" class="pagination__item pagination__item--prev pagination__item-arrow d-inline-flex a-i-center j-c-center pos-relative w-100 motion-reduce u-none gradient">
+                              {% render 'icon-caret' %}
+                            </a>
+                          </li>
+                        {%- endif -%}
+                        {%- for part in paginate.parts -%}
+                          <li class="center">
+                            {%- if part.is_link -%}
+                              <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}" class="pagination__item d-inline-flex a-i-center j-c-center pos-relative w-100 u-none h-link gradient">
+                                {{- part.title -}}
+                              </a>
+                            {%- else -%}
+                              {%- if part.title == paginate.current_page -%}
+                                <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}" class="pagination__item pagination__item--current d-inline-flex a-i-center j-c-center pos-relative w-100 link u-u u-link gradient">
+                                  {{- part.title -}}
+                                </span>
+                              {%- else -%}
+                                <span class="pagination__item">{{ part.title }}</span>
+                              {%- endif -%}
+                            {%- endif -%}
+                          </li>
+                        {%- endfor -%}
+                        {%- if paginate.next -%}
+                          <li>
+                            <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" class="pagination__item pagination__item--next pagination__item-arrow d-inline-flex a-i-center j-c-center pos-relative w-100 motion-reduce u-none gradient">
+                              {% render 'icon-caret' %}
+                            </a>
+                          </li>
+                        {%- endif -%}
+                      </ul>
+                    </nav>
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endpaginate -%}
+          </div>
+          <div class="account__item account__item--detail rte">
+            <h2 class="h3">{{ 'customer.account.details' | t }}</h2>
+            {{ customer.default_address | format_address }}
+            <a href="{{ routes.account_addresses_url }}" class="link link--text u-link d-inline-block">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.main-account.name",
+  "settings": [
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 36
+  }]
+}
+{% endschema %}

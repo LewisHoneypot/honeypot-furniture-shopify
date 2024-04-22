@@ -1,0 +1,361 @@
+{% if product.metafields.custom.product_bundle %}
+    {%- assign handle_metafields =  product.metafields.custom.product_bundle | split: ',' -%}
+    {%- assign handle_size =  handle_metafields | size -%}
+
+    {%- liquid
+        capture icon_arrow_list
+            render 'icon-arrow-list'
+        endcapture
+
+        assign handle_metafields = product.metafields.custom.product_bundle | split: ','
+    -%}
+
+    <product-bundle class="section__product-bundle d-block spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+        style="--padding-top: {{ section.settings.padding_top }}px;
+        --padding-bottom: {{ section.settings.padding_bottom }}px;
+        --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+        --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+    >
+        <div class="{{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;--padding-width: var(--width, 0)"{% endif %}>
+            {%- if section.settings.heading != blank -%}
+                <div class="p-w__header {{ section.settings.header_alignment }} m-spacing" style="--m-spacing-b: {{ section.settings.heading_margin_bottom }}px;">
+                    <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                        {{ section.settings.heading | escape }}
+                    </h2>
+                </div>
+            {%- endif -%}
+            <div class="p-w__content">
+                <div class="bundle-product">
+                    {%- assign product_form_bundle_id = 'product-form-bundle-' | append: product.id -%}
+                    {%- form 'product', product, id: product_form_bundle_id, class: 'frequently-bought-together-form' -%}
+                        <div class="bundle-product-wrapper has-halo-block-loader">
+                            <div class="bundle-product-left">
+                                test - {{ product.metafields.custom.product_bundle }}
+                            </div>
+                            <div class="bundle-product-right">
+                                <slider-component class="carousel d-block pos-relative swiper-more-item"
+                                    data-space-between="10" data-space-between-tablet="20" data-space-between-desktop="20"
+                                    data-type-pagination="{{ section.settings.pagination_type }}"
+                                    data-item-xxl="3.5" 
+                                    data-item-xl="3.5" 
+                                    data-item-lg="2.1" 
+                                    data-item-md="2.1" 
+                                    data-item-sm="2" 
+                                    data-item-xs="2"
+                                >
+                                    <div class="swiper grid-scroll d-block pos-relative no-js-grid-scroll no-js-overflow-x">
+                                        <div class="swiper-wrapper">
+                                            <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide no-js-grid__item no-js-grid__scroll">
+                                                {% render 'card-product',
+                                                    card_product: product,
+                                                    media_aspect_ratio: settings.card_image_ratio,
+                                                    show_secondary_image: settings.show_secondary_image,
+                                                    show_vendor: settings.show_vendor_product,
+                                                    show_vendor_mobile: settings.show_vendor_mobile,
+                                                    show_rating: settings.show_rating_product,
+                                                    show_rating_mobile: settings.show_rating_mobile,
+                                                    show_quick_add: settings.enable_quick_add,
+                                                    show_quick_add_mobile: settings.enable_quick_add_mobile,
+                                                    show_swatch: settings.show_swatch,
+                                                    show_swatch_mobile: settings.show_swatch_mobile,
+                                                    show_wishlist: settings.show_wishlist,
+                                                    show_wishlist_mobile: settings.show_wishlist_mobile,
+                                                    card_button_text_size: settings.card_button_text_size,
+                                                    card_button_type: settings.card_button_type,
+                                                    card_button_transform: settings.card_button_transform,
+                                                    index: forloop.index,
+                                                    section_id: section.id
+                                                %}
+                                            </div>
+                                            {%- for handle in handle_metafields limit: 10 -%}
+                                                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide no-js-grid__item no-js-grid__scroll">
+                                                    {%- liquid
+                                                        assign handle_bundle = handle | strip
+                                                        assign product = all_products[handle_bundle]
+                                                    -%}
+                                                    {% render 'card-product',
+                                                        card_product: product,
+                                                        media_aspect_ratio: settings.card_image_ratio,
+                                                        show_secondary_image: settings.show_secondary_image,
+                                                        show_vendor: settings.show_vendor_product,
+                                                        show_vendor_mobile: settings.show_vendor_mobile,
+                                                        show_rating: settings.show_rating_product,
+                                                        show_rating_mobile: settings.show_rating_mobile,
+                                                        show_quick_add: settings.enable_quick_add,
+                                                        show_quick_add_mobile: settings.enable_quick_add_mobile,
+                                                        show_swatch: settings.show_swatch,
+                                                        show_swatch_mobile: settings.show_swatch_mobile,
+                                                        show_wishlist: settings.show_wishlist,
+                                                        show_wishlist_mobile: settings.show_wishlist_mobile,
+                                                        card_button_text_size: settings.card_button_text_size,
+                                                        card_button_type: settings.card_button_type,
+                                                        card_button_transform: settings.card_button_transform,
+                                                        index: forloop.index,
+                                                        section_id: section.id
+                                                    %}
+                                                </div>
+                                            {%- endfor -%}
+                                        </div>
+                                        <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                                            {%- if section.settings.arrows_type != 'none' -%}
+                                                <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                    {{ icon_arrow_list }}
+                                                </button>
+                                                <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                    {{ icon_arrow_list }}
+                                                </button>
+                                            {%- endif -%}
+                                            <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                        </div>
+                                    </div>
+                                </slider-component>
+                            </div>
+                        </div>
+                    {%- endform -%}
+                </div>
+            </div>
+        </div>
+    </product-bundle>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "t:sections.product-bundle.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+        },
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "page-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 10,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.heading.label"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "default": "Frequently bought together",
+        "label": "t:sections.all.heading.label"
+    },
+    {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__2"
+    },
+    {
+        "type": "text_alignment",
+        "id": "header_alignment",
+        "label": "t:sections.all.text_alignment.label__4",
+        "default": "center"
+    },
+    {
+        "type": "range",
+        "id": "heading_margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 16,
+        "unit": "px",
+        "label": "t:sections.all.spacing.heading_margin_bottom"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.carousel.label"
+    },
+    {
+        "type": "select",
+        "id": "arrows_type",
+        "options": [
+        {
+        "value": "none",
+        "label": "t:sections.all.carousel.arrows.options"
+        },
+        {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+        },
+        {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+        },
+        {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+        },
+        {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+        },
+        {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+        }],
+        "default": "lg",
+        "label": "t:sections.all.carousel.arrows.label"
+    },
+    {
+        "type": "select",
+        "id": "enable_pagination_type",
+        "options": [
+        {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+        },
+        {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+        },
+        {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+        },
+        {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+        },
+        {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+        }],
+        "default": "all",
+        "label": "t:sections.all.carousel.pagination.label__1"
+    },
+    {
+        "type": "select",
+        "id": "pagination_type",
+        "options": [
+        {
+            "value": "none",
+            "label": "t:sections.all.carousel.pagination.options"
+        },
+        {
+            "value": "dots",
+            "label": "t:sections.all.carousel.pagination.options__1"
+        },
+        {
+            "value": "progressbar",
+            "label": "t:sections.all.carousel.pagination.options__2"
+        }],
+        "default": "progressbar",
+        "label": "t:sections.all.carousel.pagination.label"
+    },
+    {
+        "type": "header",
+        "content": "t:settings_schema.colors.name"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 78
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 35
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 15
+    }]
+}
+{% endschema %}

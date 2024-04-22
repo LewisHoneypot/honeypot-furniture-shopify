@@ -1,0 +1,1028 @@
+{%- if section.blocks.size > 0 -%}
+  <{% if section.settings.enable_cursor_hover %}cursor-move{% else %}div{% endif %} class="section__marquee{% if section.settings.enable_cursor_hover %} hide-cursor pos-relative{% endif %} d-block spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    style="--padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    {% if section.settings.use_custom_color %}
+    --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
+    --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
+    --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
+    {% endif %}"
+  >
+    <div class="{{ section.settings.section_width }}{% if section.settings.enable_full_width %} f-w-tablet-mobile{% endif %} m-auto o-h" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+      <div class="marquee-list pos-relative d-flex w-100 w-s-nowrap o-h separating-{{ section.settings.type_separating }}" style="--duration: {{ section.settings.duration_speed }}s;">
+        {%- if section.settings.enable_cursor_hover -%}
+          <div class="cursor-move d-none-mw-l"><span class="visually-hidden">cursor</span></div>
+        {%- endif -%}
+        <div class="marquee__items d-flex f-shrink z-index-1 mi-w" 
+          style="--mi-w: 100%;
+          {% if section.settings.custom_between %}
+            --gap-item: {{ section.settings.carousel_gap }}px;
+          {% endif %}
+          "
+        >
+          {%- case section.blocks.size -%}
+            {% when 1 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign type_marquee = section.blocks[0].settings.type_marquee
+                  assign text = section.blocks[0].settings.text
+                  assign image_marquee = section.blocks[0].settings.image_marquee
+                  assign image_height = section.blocks[0].settings.image_height
+                  assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                  assign link = section.blocks[0].settings.link
+                  assign color_underline = section.blocks[0].settings.colors_underline
+                  assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                  assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                  assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 2 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 2
+                  if number == 0
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 3 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 3
+                  if number == 0
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[2].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 4 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 4
+                  if number == 0
+                    assign type_marquee = section.blocks[3].settings.type_marquee
+                    assign text = section.blocks[3].settings.text
+                    assign image_marquee = section.blocks[3].settings.image_marquee
+                    assign image_height = section.blocks[3].settings.image_height
+                    assign image_height_2x = section.blocks[3].settings.image_height | times: 2
+                    assign link = section.blocks[3].settings.link
+                    assign color_underline = section.blocks[3].settings.colors_underline
+                    assign set_color_underline = section.blocks[3].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[3].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[3].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  elsif number == 2
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[2].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 5 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 5
+                  if number == 0
+                    assign type_marquee = section.blocks[4].settings.type_marquee
+                    assign text = section.blocks[4].settings.text
+                    assign image_marquee = section.blocks[4].settings.image_marquee
+                    assign image_height = section.blocks[4].settings.image_height
+                    assign image_height_2x = section.blocks[4].settings.image_height | times: 2
+                    assign link = section.blocks[4].settings.link
+                    assign color_underline = section.blocks[4].settings.colors_underline
+                    assign set_color_underline = section.blocks[4].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[4].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[4].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  elsif number == 2
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  elsif number == 3
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[2].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[3].settings.type_marquee
+                    assign text = section.blocks[3].settings.text
+                    assign image_marquee = section.blocks[3].settings.image_marquee
+                    assign image_height = section.blocks[3].settings.image_height
+                    assign image_height_2x = section.blocks[3].settings.image_height | times: 2
+                    assign link = section.blocks[3].settings.link
+                    assign color_underline = section.blocks[3].settings.colors_underline
+                    assign set_color_underline = section.blocks[3].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[3].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[3].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+          {%- endcase -%}
+        </div>
+        <div class="marquee__items d-flex f-shrink j-c-around z-index-1 mi-w" style="--mi-w: 100%;">
+          {%- case section.blocks.size -%}
+            {% when 1 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign type_marquee = section.blocks[0].settings.type_marquee
+                  assign text = section.blocks[0].settings.text
+                  assign image_marquee = section.blocks[0].settings.image_marquee
+                  assign image_height = section.blocks[0].settings.image_height
+                  assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                  assign link = section.blocks[0].settings.link
+                  assign color_underline = section.blocks[0].settings.colors_underline
+                  assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                  assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                  assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 2 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 2
+                  if number == 0
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 3 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 3
+                  if number == 0
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[2].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 4 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 4
+                  if number == 0
+                    assign type_marquee = section.blocks[3].settings.type_marquee
+                    assign text = section.blocks[3].settings.text
+                    assign image_marquee = section.blocks[3].settings.image_marquee
+                    assign image_height = section.blocks[3].settings.image_height
+                    assign image_height_2x = section.blocks[3].settings.image_height | times: 2
+                    assign link = section.blocks[3].settings.link
+                    assign color_underline = section.blocks[3].settings.colors_underline
+                    assign set_color_underline = section.blocks[3].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[3].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[30].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  elsif number == 2
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[2].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+            {% when 5 %}
+              {%- for i in (1..10) -%}
+                {%- liquid
+                  assign number = forloop.index | modulo : 5
+                  if number == 0
+                    assign type_marquee = section.blocks[4].settings.type_marquee
+                    assign text = section.blocks[4].settings.text
+                    assign image_marquee = section.blocks[4].settings.image_marquee
+                    assign image_height = section.blocks[4].settings.image_height
+                    assign image_height_2x = section.blocks[4].settings.image_height | times: 2
+                    assign link = section.blocks[4].settings.link
+                    assign color_underline = section.blocks[4].settings.colors_underline
+                    assign set_color_underline = section.blocks[4].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[4].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[4].settings.options_colors_underline
+                  elsif number == 1
+                    assign type_marquee = section.blocks[0].settings.type_marquee  
+                    assign text = section.blocks[0].settings.text
+                    assign image_marquee = section.blocks[0].settings.image_marquee
+                    assign image_height = section.blocks[0].settings.image_height
+                    assign image_height_2x = section.blocks[0].settings.image_height | times: 2
+                    assign link = section.blocks[0].settings.link
+                    assign color_underline = section.blocks[0].settings.colors_underline
+                    assign set_color_underline = section.blocks[0].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[0].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[0].settings.options_colors_underline
+                  elsif number == 2
+                    assign type_marquee = section.blocks[1].settings.type_marquee
+                    assign text = section.blocks[1].settings.text
+                    assign image_marquee = section.blocks[1].settings.image_marquee
+                    assign image_height = section.blocks[1].settings.image_height
+                    assign image_height_2x = section.blocks[1].settings.image_height | times: 2
+                    assign link = section.blocks[1].settings.link
+                    assign color_underline = section.blocks[1].settings.colors_underline
+                    assign set_color_underline = section.blocks[1].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[1].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[1].settings.options_colors_underline
+                  elsif number == 3
+                    assign type_marquee = section.blocks[2].settings.type_marquee
+                    assign text = section.blocks[2].settings.text
+                    assign image_marquee = section.blocks[2].settings.image_marquee
+                    assign image_height = section.blocks[2].settings.image_height
+                    assign image_height_2x = section.blocks[2].settings.image_height | times: 2
+                    assign link = section.blocks[2].settings.link
+                    assign color_underline = section.blocks[2].settings.colors_underline
+                    assign set_color_underline = section.blocks[2].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[2].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[02].settings.options_colors_underline
+                  else
+                    assign type_marquee = section.blocks[3].settings.type_marquee
+                    assign text = section.blocks[3].settings.text
+                    assign image_marquee = section.blocks[3].settings.image_marquee
+                    assign image_height = section.blocks[3].settings.image_height
+                    assign image_height_2x = section.blocks[3].settings.image_height | times: 2
+                    assign link = section.blocks[3].settings.link
+                    assign color_underline = section.blocks[3].settings.colors_underline
+                    assign set_color_underline = section.blocks[3].settings.enable_color_underline
+                    assign set_transparent_text = section.blocks[3].settings.set_transparent_text
+                    assign options_colors_underline = section.blocks[3].settings.options_colors_underline
+                  endif
+                -%}
+                {%- render 'icon-star', style_icon: section.settings.type_separating -%}
+                {%- if type_marquee == 'text' -%}
+                  {%- if text != blank -%}
+                    <{% if link != blank %}a{% else %}span{% endif %} class="marquee__item pos-relative m-0{% if set_color_underline %} set-underline underline--{{ options_colors_underline }}{% endif %} {{ section.settings.heading_font | prepend: 'typography-' }}{% if section.settings.heading_font == 'font-heading' %} {{ section.settings.heading_size | prepend: 'heading-size-' }}{% else %} {{ section.settings.heading_size | prepend: 'text-size-' }}{% endif %}{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}"{% endif %}
+                      {% if set_transparent_text  %}data-splitting="words"{% endif %}
+                      style="{% if set_color_underline %}--color-underline: {{ color_underline.rgb }}{% endif %}"
+                    >
+                      {{ text }}
+                    </{% if link != blank %}a{% else %}span{% endif %}>
+                  {%- endif -%}
+                {%- else -%}
+                  <{% if link != blank %}a{% else %}div{% endif %} class="marquee__image marquee__item media pos-relative m-0{% if link != blank %} link u-none color-foreground d-block{% endif %}"{% if link != blank %} href="{{ link }}" aria-label="link"{% endif %}{% if image_marquee != blank %} style="--ratio-w: {{ image_height | times: image_marquee.aspect_ratio }}px; --ratio-h: {{ image_height }}px;"{% endif %}>
+                    {%- if image_marquee != blank -%}
+                      <img
+                        srcset="{{ image_marquee | image_url: height: image_height }} 1x, {{ image_marquee | image_url: height: image_height_2x }} 2x"
+                        src="{{ image_marquee | image_url: height: image_height }}"
+                        alt="{{ image_marquee.alt | escape }}"
+                        loading="lazy"
+                        width="{{ image_height | times: image_marquee.aspect_ratio }}"
+                        height="{{ image_height }}"
+                        class="motion-reduce w-100 h-auto"
+                      />
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg d-block' }}
+                    {%- endif -%}
+                  </{% if link != blank %}a{% else %}div{% endif %}>
+                {%- endif -%}
+              {%- endfor -%}
+          {%- endcase -%}
+        </div>
+      </div>
+    </div>
+  </{% if section.settings.enable_cursor_hover %}cursor-move{% else %}div{% endif %}>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.marquee.name",
+  "max_blocks": 5,
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.popup"]
+  },
+  "settings": [
+  {
+    "type": "select",
+    "id": "section_width",
+    "options": [
+    {
+      "value": "full-width",
+      "label": "t:sections.all.section_width.options__1"
+    },
+    {
+      "value": "page-width",
+      "label": "t:sections.all.section_width.options__2"
+    },
+    {
+      "value": "customized-width",
+      "label": "t:sections.all.section_width.options__3"
+    }],
+    "default": "page-width",
+    "label": "t:sections.all.section_width.label"
+  },
+  {
+    "type": "range",
+    "id": "customize_width",
+    "min": 1000,
+    "max": 1800,
+    "step": 50,
+    "default": 1800,
+    "unit": "px",
+    "label": "t:sections.all.customize_width.label"
+  },
+  {
+    "type": "checkbox",
+    "id": "enable_full_width",
+    "default": false,
+    "label": "t:sections.all.section_width.enable_full_width"
+  },
+  { 
+    "type": "checkbox",
+    "id": "enable_cursor_hover",
+    "default": false,
+    "label": "t:sections.marquee.settings.enable_cursor_hover"
+  },
+  { 
+    "type": "header",
+    "content": "t:sections.marquee.name"
+  },
+  {
+    "type": "range",
+    "id": "duration_speed",
+    "min": 20,
+    "max": 100,
+    "step": 1,
+    "default": 30,
+    "unit": "s",
+    "label": "t:sections.marquee.settings.duration"
+  },
+  {
+    "type": "select",
+    "id": "heading_font",
+    "options": [
+    {
+      "value": "font-heading",
+      "label": "t:settings_schema.global.settings.typography_style.options__1"
+    },
+    {
+      "value": "font-body",
+      "label": "t:settings_schema.global.settings.typography_style.options__2"
+    }],
+    "default": "font-heading",
+    "label": "t:settings_schema.global.settings.typography_style.label"
+  },
+  {
+    "type": "select",
+    "id": "heading_size",
+    "options": [
+    {
+      "value": "default",
+      "label": "t:sections.all.font_size.options"
+    },
+    {
+      "value": "xx-small",
+      "label": "t:sections.all.font_size.options__1"
+    },
+    {
+      "value": "x-small",
+      "label": "t:sections.all.font_size.options__2"
+    },
+    {
+      "value": "small",
+      "label": "t:sections.all.font_size.options__3"
+    },
+    {
+      "value": "medium",
+      "label": "t:sections.all.font_size.options__4"
+    },
+    {
+      "value": "large",
+      "label": "t:sections.all.font_size.options__5"
+    },
+    {
+      "value": "x-large",
+      "label": "t:sections.all.font_size.options__6"
+    },
+    {
+      "value": "xx-large",
+      "label": "t:sections.all.font_size.options__7"
+    },
+    {
+      "value": "xxx-large",
+      "label": "t:sections.all.font_size.options__8"
+    }],
+    "default": "default",
+    "label": "t:sections.all.font_size.label__10"
+  },
+  {
+    "type": "select",
+    "id": "type_separating",
+    "options": [
+    {
+      "value": "none",
+      "label": "t:sections.marquee.blocks.separating.options__1"
+    },
+    {
+      "value": "dots",
+      "label": "t:sections.marquee.blocks.separating.options__2"
+    },
+    {
+      "value": "stars-6",
+      "label": "t:sections.marquee.blocks.separating.options__3"
+    }],
+    "default": "dots",
+    "label": "t:sections.marquee.blocks.separating.name"
+  },
+  {
+    "type": "checkbox",
+    "id": "custom_between",
+    "label": "t:sections.marquee.settings.custom_between"
+  },
+  {
+    "type": "range",
+    "id": "carousel_gap",
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.marquee.settings.space_between_item",
+    "default": 30
+  },
+  {
+    "type": "header",
+    "content": "t:settings_schema.colors.name"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_custom_color",
+    "default": true,
+    "label": "t:sections.all.colors.use_custom_color"
+  },
+  {
+    "type": "color",
+    "id": "colors_text",
+    "default": "#424242",
+    "label": "t:sections.all.colors.colors_text"
+  },
+  {
+    "type": "color",
+    "id": "colors_background",
+    "label": "t:sections.all.colors.colors_background"
+  },
+  {
+    "type": "color_background",
+    "id": "gradient_background",
+    "default": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+    "label": "t:sections.all.colors.gradient_background"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 20
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 20
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 10
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 10
+  }],
+  "blocks": [
+  {
+    "type": "marquee",
+    "name": "t:sections.marquee.name",
+    "settings": [
+    {
+      "type": "select",
+      "id": "type_marquee",
+      "options": [
+      {
+        "value": "text",
+        "label": "t:sections.marquee.blocks.text.name"
+      },
+      {
+        "value": "image",
+        "label": "t:sections.marquee.blocks.image.name"
+      }],
+      "default": "text",
+      "label": "t:settings_schema.layout.name"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Welcome to our store</p>",
+      "label": "t:sections.all.text.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "set_transparent_text",
+      "default": false,
+      "label": "t:sections.marquee.blocks.text.label__3"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_underline",
+      "default": false,
+      "label": "t:sections.marquee.blocks.text.label__2",
+      "info": "t:sections.marquee.blocks.text.info"
+    },
+    {
+      "type": "color",
+      "id": "colors_underline",
+      "default": "#000",
+      "label": "t:sections.marquee.blocks.text.label__1"
+    },
+    {
+      "type": "select",
+      "id": "options_colors_underline",
+      "options": [
+      {
+        "value": "full",
+        "label": "t:sections.marquee.blocks.text.options__1"
+      },
+      {
+        "value": "bold",
+        "label": "t:sections.marquee.blocks.text.options__2"
+      }],
+      "default": "full",
+      "label": "t:sections.marquee.blocks.text.label__4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_marquee",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "default": 152,
+      "unit": "px",
+      "label": "t:sections.marquee.blocks.image.name"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.all.link_url.label"
+    }]
+  }],
+  "presets": [
+  {
+    "name": "t:sections.marquee.presets.name",
+    "blocks": [
+    {
+      "type": "marquee"
+    },
+    {
+      "type": "marquee"
+    }]
+  }]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+{% layout none %}
+
+<div id="RecentlyViewedProducts">
+    <div role="listitem" class="carousel__item recently__item swiper-slide no-js-grid__item no-js-grid__scroll">
+        <div class="product">
+            {%- liquid
+                assign ratio = product.featured_media.aspect_ratio
+                if ratio == 0 or ratio == null
+                    assign ratio = 1
+                endif
+            -%}
+            <div class="item__card pos-relative">
+                <div class="item__card-media o-h">
+                    <div class="media media--transparent media--adapt pos-relative" style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;">
+                        {%- if product.featured_media -%}
+                            <img
+                                srcset="{{ product.featured_media | image_url: width: 550 }}"
+                                src="{{ product.featured_media | image_url: width: 550 }}"
+                                sizes="(min-width: 750px) 550, calc(100vw - 30px)"
+                                alt="{{ product.featured_media.alt | escape }}"
+                                class="motion-reduce"
+                                loading="lazy"
+                                width="{{ product.featured_media.width }}"
+                                height="{{ product.featured_media.height }}"
+                            >
+                        {%- else -%}
+                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                        {%- endif -%}
+                    </div>
+                </div>
+                <div class="item__card-content m-t" style="--m-t: 1.5rem;">
+                    <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
+                        <a href="{{ product.url }}" class="d-block link {{ settings.link_type | prepend: "link--style-" }} u-none link--text link-cover">
+                            <span class="link-style">{{ product.title | escape }}</span>
+                        </a>
+                    </h3>
+                    <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
+                        {% render 'price',
+                            product: product,
+                            price_class: ''
+                        %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

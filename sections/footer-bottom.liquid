@@ -1,0 +1,317 @@
+{%- liquid
+    capture icon_caret
+        render 'icon-caret'
+    endcapture
+    capture icon_arrow
+        render 'icon-arrow'
+    endcapture
+    capture icon_arrow_long_2
+        render 'icon-arrow-long-2'
+    endcapture
+-%}
+<div class="footer footer__bottom footer__content footer__content-bottom spacing"
+    style="--padding-top: {{ section.settings.footer_bottom_padding_top }}px;
+    --padding-bottom: {{ section.settings.footer_bottom_padding_bottom }}px;
+    --color-foreground: {{ section.settings.footer_bottom_color.red }}, {{ section.settings.footer_bottom_color.green }}, {{ section.settings.footer_bottom_color.blue }};
+    --color-background: {{ section.settings.footer_bottom_colors_background.red }}, {{ section.settings.footer_bottom_colors_background.green }}, {{ section.settings.footer_bottom_colors_background.blue }};
+    --gradient-background: {% if section.settings.footer_bottom_gradient_background != blank %}{{ section.settings.footer_bottom_gradient_background }}{% else %}{{ section.settings.footer_bottom_colors_background }}{% endif %};"
+>
+    <div class="{{ section.settings.section_width }} m-auto"{% if section.settings.section_width == 'customized-width' %} style="--page-width:{{ section.settings.customize_width }}px;"{% endif %}>
+        <div class="footer__content-bottom-wrapper d-flex f-column r-gap" style="--r-gap: 2rem;">
+            {%- liquid
+                if section.settings.enable_country_selector and localization.available_countries.size > 1
+                    assign check_selector = true
+                elsif section.settings.enable_language_selector and localization.available_languages.size > 1
+                    assign check_selector = true
+                else
+                    assign check_selector = false
+                endif
+            -%}
+            {%- if check_selector -%}
+                <div class="footer__column footer__localization d-flex f-row f-wrap j-c-start j-c-start-xs pos-relative w-100 a-i-center r-gap c-gap" style="--c-gap: 1rem; --r-gap: 1rem;">
+                    {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+                        <noscript>
+                            {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form d-flex f-column f-grow f-shrink f-basis p-0 m-auto' -%}
+                                <div class="localization-form__select pos-relative left">
+                                    <h2 class="visually-hidden" id="FooterCountryLabelNoScript">{{ 'localization.country_label' | t }}</h2>
+                                    <select class="localization-selector t-button b-none color-foreground c-pointer" name="country_code" aria-labelledby="FooterCountryLabelNoScript">
+                                        {%- for country in localization.available_countries -%}
+                                            <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %} class="color-foreground">
+                                                {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                                            </option>
+                                        {%- endfor -%}
+                                    </select>
+                                    {{ icon_caret }}
+                                </div>
+                                <button class="button button--secondary {{ settings.button_style | prepend: 'button--style-' }}">{{ 'localization.update_country' | t }}</button>
+                            {%- endform -%}
+                        </noscript>
+                        <localization-form>
+                            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form d-flex f-column f-grow f-shrink f-basis p-0 m-auto' -%}
+                                <div class="no-js-hidden">
+                                    <h2 class="text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                                    <div class="disclosure pos-relative">
+                                        <button type="button" class="disclosure__button d-flex a-i-center localization-form__select pos-relative left localization-selector caption-large b-none w-100 u-none c-pointer t-button b-none bg-transparent" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
+                                            {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+                                            {{ icon_caret }}
+                                        </button>
+                                        <div class="disclosure__list-wrapper o-h pos-absolute z-index-2 bottom-100 gradient gradient-global global-settings-popup" hidden>
+                                            <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled pos-relative overflow-y cus-scrollbar">
+                                                {%- for country in localization.available_countries -%}
+                                                    <li class="disclosure__item pos-relative" tabindex="-1">
+                                                        <a class="link link--text disclosure__link subrte d-block h-link u-none{% if country.iso_code == localization.country.iso_code %} u-u{% endif %} focus-inset" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                                                            {{ country.name }} <span class="localization-form__currency d-inline-block">({{ country.currency.iso_code }} {{ country.currency.symbol }})</span>
+                                                        </a>
+                                                    </li>
+                                                {%- endfor -%}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+                                </div>
+                            {%- endform -%}
+                        </localization-form>
+                    {%- endif -%}
+                    {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+                        <noscript>
+                            {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form d-flex f-column f-grow f-shrink f-basis p-0 m-auto' -%}
+                                <div class="localization-form__select pos-relative left">
+                                    <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">{{ 'localization.language_label' | t }}</h2>
+                                    <select class="localization-selector t-button b-none color-foreground c-pointer" name="locale_code" aria-labelledby="FooterLanguageLabelNoScript">
+                                        {%- for language in localization.available_languages -%}
+                                            <option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected{% endif %} class="color-foreground">
+                                                {{ language.endonym_name | capitalize }}
+                                            </option>
+                                        {%- endfor -%}
+                                    </select>
+                                    {{ icon_caret }}
+                                </div>
+                                <button class="button button--secondary {{ settings.button_style | prepend: 'button--style-' }}">{{ 'localization.update_language' | t }}</button>
+                            {%- endform -%}
+                        </noscript>
+                        <localization-form>
+                            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form d-flex f-column f-grow f-shrink f-basis p-0 m-auto' -%}
+                                <div class="no-js-hidden">
+                                    <h2 class="text-body" id="FooterLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                                    <div class="disclosure pos-relative">
+                                        <button type="button" class="disclosure__button d-flex a-i-center localization-form__select pos-relative left localization-selector caption-large b-none w-100 u-none c-pointer t-button b-none bg-transparent" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
+                                            {{ localization.language.endonym_name | capitalize }}
+                                            {{ icon_caret }}
+                                        </button>
+                                        <div class="disclosure__list-wrapper o-h pos-absolute z-index-2 bottom-100 gradient gradient-global global-settings-popup" hidden>
+                                            <ul id="FooterLanguageList" role="list" class="disclosure__list list-unstyled pos-relative overflow-y cus-scrollbar">
+                                                {%- for language in localization.available_languages -%}
+                                                    <li class="disclosure__item pos-relative" tabindex="-1">
+                                                        <a class="link link--text disclosure__link subrte d-block h-link u-none{% if language.iso_code == localization.language.iso_code %} u-u{% endif %} focus-inset" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
+                                                            {{ language.endonym_name | capitalize }}
+                                                        </a>
+                                                    </li>
+                                                {%- endfor -%}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+                                </div>
+                            {%- endform -%}
+                        </localization-form>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+            <div class="footer__column footer__column--info d-flex f-row w-100 j-c-between a-i-center g-gap" style="--g-gap: 1rem;">
+                {%- if section.settings.text_copyright != blank or section.settings.show_policy -%}
+                    <div class="footer__copyright left center-xs color-foreground {{ section.settings.text_size | prepend: 'text-size text-size-' }}">
+                        {%- if section.settings.text_copyright != blank -%}
+                            <div class="copyright__content">{{ section.settings.text_copyright }}</div>
+                        {%- endif -%}
+                        {%- if section.settings.show_policy -%}
+                            <ul class="policies list-unstyled d-flex f-wrap m-t g-gap" style="--m-t: 1rem;--g-gap: 1.5rem;">
+                                {%- for policy in shop.policies -%}
+                                    {%- if policy != blank -%}
+                                        <li><small class="copyright__content"><a href="{{ policy.url }}" target="_blank" class="link" >{{ policy.title }}</a></small></li>
+                                    {%- endif -%}
+                                {%- endfor -%}
+                            </ul>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+                {%- if section.settings.payment_enable -%}
+                    <div class="footer__payment">
+                        <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                        <ul class="list list-payment list-unstyled d-flex f-wrap j-c-end j-c-center-xs" role="list">
+                            {%- for type in shop.enabled_payment_types -%}
+                                <li class="list-payment__item d-flex a-i-center">
+                                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                                </li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "t:sections.footer.settings.header__2.content",
+    "class": "section",
+    "tag": "section",
+    "enabled_on": {
+        "groups": ["footer"]
+    },
+    "settings": [
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+        },
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "page-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "medium",
+        "label": "t:sections.all.font_size.label__3"
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_country_selector",
+        "default": false,
+        "label": "t:sections.footer.settings.enable_country_selector.label",
+        "info": "t:sections.footer.settings.enable_country_selector.info"
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_language_selector",
+        "default": false,
+        "label": "t:sections.footer.settings.enable_language_selector.label",
+        "info": "t:sections.footer.settings.enable_language_selector.info"
+    },
+    {
+        "type": "checkbox",
+        "id": "payment_enable",
+        "default": true,
+        "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_policy",
+        "default": false,
+        "label": "t:sections.footer.settings.show_policy.label",
+        "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.footer.settings.copyright_and_powered_enable.header"
+    },
+    {
+        "type": "richtext",
+        "id": "text_copyright",
+        "label": "t:sections.all.text.label",
+        "default": "<p>©2024 Name store</p>"
+    },
+    {
+        "type": "header",
+        "content": "t:settings_schema.colors.name"
+    },
+    {
+        "type": "color",
+        "id": "footer_bottom_color",
+        "default": "#424242",
+        "label": "t:sections.all.colors.colors_text"
+    },
+    {
+        "type": "color",
+        "id": "footer_bottom_colors_background",
+        "label": "t:sections.all.colors.colors_background",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "color_background",
+        "id": "footer_bottom_gradient_background",
+        "label": "t:sections.all.colors.gradient_background"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "footer_bottom_padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 60
+    },
+    {
+        "type": "range",
+        "id": "footer_bottom_padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 60
+    }],
+    "presets": [
+    {
+        "name": "t:sections.footer.settings.header__2.content"
+    }]
+}
+{% endschema %}

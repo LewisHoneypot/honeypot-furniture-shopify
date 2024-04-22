@@ -1,0 +1,29 @@
+{%- if page and page != empty -%}
+  <div class="page-card-wrapper card-wrapper pos-relative h-100">
+    <div class="card page-card d-flex f-column h-100 gradient gradient-global">
+      <div class="card__inner pos-relative o-h w-100">
+        <div class="page-card__image-wrapper card__media o-h">
+          <div class="page-card__image media">
+            <div class="media media--adapt pos-relative o-h d-block" style="padding-bottom: 100%;">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          </div>
+        </div>
+        {%- if show_badge -%}
+          <div class="card__badge pos-absolute z-index-1 d-flex f-column {{ settings.badge_position }} {{ settings.badge_transform }}"
+            style="--badge-font-size: {{ settings.badge_font_size }}px;"
+          >
+            <span class="badge d-inline-block center break gradient {{ settings.badge_button_type }}">{{ 'templates.search.page' | t }}</span>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading m-0">
+            <a href="{{ page.url }}" class="d-block u-none color-current link-cover">{{ page.title | escape }}</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

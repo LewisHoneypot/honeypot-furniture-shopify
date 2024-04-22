@@ -1,0 +1,984 @@
+{%- if section.blocks.size > 0 -%}
+    {%- liquid
+        capture icon_arrow_list
+            render 'icon-arrow-list'
+        endcapture
+    -%}
+    <div class="section__f-product-tab spacing spacing-xs pos-relative style--{{ section.settings.type_style }} color-{{ section.settings.color_scheme }} gradient"
+        style="--padding-top: {{ section.settings.padding_top }}px;
+            --padding-bottom: {{ section.settings.padding_bottom }}px;
+            --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+            --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+    >
+        <div class="{{ section.settings.section_width }} m-auto"{% if section.settings.section_width == 'customized-width' %} style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+            {%- if section.settings.heading != blank or section.settings.text != blank -%}
+                <animate-element class="f-product-tab__heading pos-relative z-index-2">
+                    <div class="tab__title {{ section.settings.text_alignment }}">
+                        {%- if section.settings.heading != blank -%}
+                            <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0" data-animate="{{ section.settings.text_animation }}" style="--a-delay: 0.2s;">
+                                {{ section.settings.heading | escape }}
+                            </h2>
+                        {%- endif -%}
+                        {%- if section.settings.text != blank -%}
+                            <div class="p-w__text rte" data-animate="{{ section.settings.text_animation }}" style="--a-delay: 0.3s;">
+                                {{ section.settings.text }}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </animate-element>
+            {%- endif -%}
+            {%- if section.settings.type_style == 'special' -%}
+                <theme-tab class="tab__tabs d-flex a-i-center j-c-between f-wrap">
+                    <div class="tab__item tab__item-tab w-100">
+                        <div class="d-flex f-column">
+                            <ul class="tab__list left list-unstyled d-block overflow-x w-100" role="list">
+                                {%- for block in section.blocks -%}
+                                    {%- liquid
+                                        assign products = block.settings.product_list | default: block.settings.collection.products
+                                    -%}
+                                    <li class="tab__list-item v-a-top {% if forloop.first == true %} active{% endif %}" role="listitem"{{ block.shopify_attributes }}>
+                                        <button class="tab__list-opener h1 t-button b-none c-pointer gradient left d-flex w-100 m-0 no-js-hidden" type="button" data-tab="#Tab-{{ block.id }}" onclick="this.closest('theme-tab').open(this, 'Tab-{{ block.id }}')">
+                                            <span class="text-inner pos-relative d-inline-block">
+                                                {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                                            </span>
+                                        </button>
+                                        <noscript>
+                                            <a {% if block.settings.collection == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.collection.url }}"{% endif %} class="tab__list-opener h1 t-button b-none u-none c-pointer gradient left d-flex w-100 m-0">
+                                                <span class="text-inner pos-relative d-inline-block">
+                                                    {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                                                </span>
+                                            </a>
+                                        </noscript>
+                                        <div class="tab__content-wrap-mobile d-none-md">
+                                            <div class="tab__content-item tab-in-mobile f-column j-c-between a-i-center{% if forloop.first == true %} active{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                                                id="Tab-{{ block.id }}" 
+                                                data-tab-id="Tab-{{ block.id }}"
+                                                {% if forloop.first == true %} 
+                                                    loaded="loaded"
+                                                {% endif %}
+                                            >
+                                                {%- if forloop.first == true -%}
+                                                    <div class="item item__product w-100">
+                                                        <slider-component
+                                                        class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                                        data-space-between="10"
+                                                        data-type-pagination="{{ section.settings.pagination_type }}"
+                                                        data-item-to-show-desktop="1"
+                                                        data-item-to-show-tablet="1"
+                                                        data-item-to-show-mobile="1"
+                                                        >
+                                                            <div class="swiper d-block pos-relative no-js-overflow-x">
+                                                                <div class="carousel__items swiper-wrapper d-flex f-nowrap" 
+                                                                    id="Slider-mobile-{{ section.id }}" 
+                                                                    aria-label="Featured product tab" 
+                                                                    style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;"
+                                                                >
+                                                                    {%- for product in products limit: section.settings.products_to_show -%}
+                                                                        <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll" aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}">
+                                                                            {%- liquid
+                                                                                assign sectionId = section.id | prepend: 'mobile-'
+                                                                            -%}
+                                                                            {% render 'card-product',
+                                                                                card_product: product,
+                                                                                media_aspect_ratio: 'portrait',
+                                                                                show_secondary_image: false,
+                                                                                show_vendor: settings.show_vendor_product,
+                                                                                show_vendor_mobile: settings.show_vendor_mobile,
+                                                                                show_rating: false,
+                                                                                show_rating_mobile: false,
+                                                                                show_quick_add: false,
+                                                                                show_quick_add_mobile: false,
+                                                                                show_swatch: false,
+                                                                                show_swatch_mobile: false,
+                                                                                card_button_text_size: section.settings.card_button_text_size,
+                                                                                card_button_type: settings.card_button_type,
+                                                                                card_button_transform: settings.card_button_transform,
+                                                                                index: forloop.index,
+                                                                                section_id: sectionId,
+                                                                                class: true,
+                                                                                check_p_tab: true
+                                                                            %}
+                                                                            <ul class="outstanding-product__list pos-absolute w-100 h-100 top-0 left-0 list-unstyled e-none">
+                                                                                {%- for i in (1..3) -%}
+                                                                                    {%- capture description -%}featured_product_description_{{ i }}{%- endcapture -%}
+                                                                                    {%- liquid
+                                                                                        assign description = product.metafields.custom[description]
+                                                                                    -%}
+                                                                                    {%- if description != blank -%}
+                                                                                        <li class="outstanding-product__item item--{{ i }} d-block pos-absolute" style="--dlay: 0.{{ i }}s">
+                                                                                            <span>
+                                                                                                {{ description }}
+                                                                                            </span>
+                                                                                        </li>
+                                                                                    {%- endif -%}
+                                                                                {%- endfor -%}
+                                                                            </ul>
+                                                                        </div>
+                                                                    {%- else -%}
+                                                                        {%- for i in (1..2) -%}
+                                                                            <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                                                {% render 'card-product',
+                                                                                    index: forloop.index,
+                                                                                    show_vendor: section.settings.show_vendor
+                                                                                %}
+                                                                            </div>
+                                                                        {%- endfor -%}
+                                                                    {%- endfor -%}
+                                                                </div>
+                                                                <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}">
+                                                                    {%- if section.settings.arrows_type != 'none' -%}
+                                                                        <button type="button" data-step="1" class="button-slider button-slider__prev preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                                            {{ icon_arrow_list }}
+                                                                        </button>
+                                                                        <button type="button" data-step="1" class="button-slider button-slider__next preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                                            {{ icon_arrow_list }}
+                                                                        </button>
+                                                                    {%- endif -%}
+                                                                    <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                                                </div>
+                                                            </div>
+                                                        </slider-component>
+                                                    </div>
+                                                {%- else -%}
+                                                    <template>
+                                                        <div class="item item__product w-100">
+                                                            <slider-component
+                                                                class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                                                data-space-between="10"
+                                                                data-type-pagination="{{ section.settings.pagination_type }}"
+                                                                data-item-to-show-desktop="1"
+                                                                data-item-to-show-tablet="1"
+                                                                data-item-to-show-mobile="1"
+                                                            >
+                                                                <div class="swiper d-block pos-relative no-js-overflow-x">
+                                                                    <div class="carousel__items swiper-wrapper d-flex f-nowrap" 
+                                                                        id="Slider-{{ section.id }}" 
+                                                                        aria-label="Featured product tab" 
+                                                                        style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;"
+                                                                    >
+                                                                        {%- for product in products limit: section.settings.products_to_show -%}
+                                                                            <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll" aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}">
+                                                                                {% render 'card-product',
+                                                                                    card_product: product,
+                                                                                    media_aspect_ratio: 'portrait',
+                                                                                    show_secondary_image: false,
+                                                                                    show_vendor: settings.show_vendor_product,
+                                                                                    show_vendor_mobile: settings.show_vendor_mobile,
+                                                                                    show_rating: false,
+                                                                                    show_rating_mobile: false,
+                                                                                    show_quick_add: false,
+                                                                                    show_quick_add_mobile: false,
+                                                                                    show_swatch: false,
+                                                                                    show_swatch_mobile: false,
+                                                                                    card_button_text_size: section.settings.card_button_text_size,
+                                                                                    card_button_type: settings.card_button_type,
+                                                                                    card_button_transform: settings.card_button_transform,
+                                                                                    index: forloop.index,
+                                                                                    section_id: section.id,
+                                                                                    class: true,
+                                                                                    check_p_tab: true
+                                                                                %}
+                                                                                <ul class="outstanding-product__list pos-absolute w-100 h-100 top-0 left-0 list-unstyled e-none">
+                                                                                    {%- for i in (1..3) -%}
+                                                                                        {%- capture description -%}featured_product_description_{{ i }}{%- endcapture -%}
+                                                                                        {%- liquid
+                                                                                            assign description = product.metafields.custom[description]
+                                                                                        -%}
+                                                                                        {%- if description != blank -%}
+                                                                                            <li class="outstanding-product__item item--{{ i }} item--{{ i }} d-block pos-absolute" style="--dlay: 0.{{ i }}s">
+                                                                                                <span>
+                                                                                                    {{ description }}
+                                                                                                </span>
+                                                                                            </li>
+                                                                                        {%- endif -%}
+                                                                                    {%- endfor -%}
+                                                                                </ul>
+                                                                            </div>
+                                                                        {%- else -%}
+                                                                            {%- for i in (1..2) -%}
+                                                                                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                                                    {% render 'card-product',
+                                                                                        index: forloop.index,
+                                                                                        show_vendor: section.settings.show_vendor
+                                                                                    %}
+                                                                                </div>
+                                                                            {%- endfor -%}
+                                                                        {%- endfor -%}
+                                                                    </div>
+                                                                    <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}" style="--padding: 0px;">
+                                                                        {%- if section.settings.arrows_type != 'none' -%}
+                                                                            <button type="button" data-step="1" class="button-slider button-slider__prev preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                                                {{ icon_arrow_list }}
+                                                                            </button>
+                                                                            <button type="button" data-step="1" class="button-slider button-slider__next preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                                                {{ icon_arrow_list }}
+                                                                            </button>
+                                                                        {%- endif -%}
+                                                                        <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </slider-component>
+                                                        </div>
+                                                    </template>
+                                                {%- endif -%}
+                                            </div>
+                                        </div>
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab__item tab__item-content w-100 d-none-xs">
+                        {%- for block in section.blocks -%}
+                            {%- liquid
+                                assign products = block.settings.product_list | default: block.settings.collection.products
+                            -%}
+                            <div class="tab__content-item d-none f-column j-c-between a-i-center{% if forloop.first == true %} active{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                                id="Tab-{{ block.id }}" 
+                                data-tab-id="Tab-{{ block.id }}" 
+                                {% if forloop.first == true %} 
+                                    loaded="loaded"
+                                {% endif %}
+                            >
+                                {%- if forloop.first == true -%}
+                                    <div class="item item__product w-100">
+                                        <slider-component class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                            data-space-between="10"
+                                            data-type-pagination="{{ section.settings.pagination_type }}"
+                                            data-item-to-show-desktop="1"
+                                            data-item-to-show-tablet="1"
+                                            data-item-to-show-mobile="1"
+                                        >
+                                        <div class="swiper d-block pos-relative no-js-overflow-x">
+                                            <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Featured product tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                                                {%- for product in products limit: section.settings.products_to_show -%}
+                                                    <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll pos-relative" 
+                                                        role="listitem" 
+                                                        id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                                                        aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                                                    >
+                                                        {% render 'card-product',
+                                                            card_product: product,
+                                                            media_aspect_ratio: 'portrait',
+                                                            show_secondary_image: false,
+                                                            show_vendor: settings.show_vendor_product,
+                                                            show_vendor_mobile: settings.show_vendor_mobile,
+                                                            show_rating: false,
+                                                            show_rating_mobile: false,
+                                                            show_quick_add: false,
+                                                            show_quick_add_mobile: false,
+                                                            show_swatch: false,
+                                                            show_swatch_mobile: false,
+                                                            card_button_text_size: section.settings.card_button_text_size,
+                                                            card_button_type: settings.card_button_type,
+                                                            card_button_transform: settings.card_button_transform,
+                                                            index: forloop.index,
+                                                            section_id: section.id,
+                                                            class: true,
+                                                            check_p_tab: true
+                                                        %}
+                                                        <ul class="outstanding-product__list pos-absolute w-100 h-100 top-0 left-0 list-unstyled e-none">
+                                                            {%- for i in (1..3) -%}
+                                                                {%- capture description -%}featured_product_description_{{ i }}{%- endcapture -%}
+                                                                {%- liquid
+                                                                    assign description = product.metafields.custom[description]
+                                                                -%}
+                                                                {%- if description != blank -%}
+                                                                    <li class="outstanding-product__item item--{{ i }} item--{{ i }} d-block pos-absolute" style="--dlay: 0.{{ i }}s">
+                                                                        <span>
+                                                                            {{ description }}
+                                                                        </span>
+                                                                    </li>
+                                                                {%- endif -%}
+                                                            {%- endfor -%}
+                                                        </ul>
+                                                    </div>
+                                                {%- else -%}
+                                                    {%- for i in (1..2) -%}
+                                                        <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                            {% render 'card-product',
+                                                                index: forloop.index,
+                                                                show_vendor: section.settings.show_vendor
+                                                            %}
+                                                        </div>
+                                                    {%- endfor -%}
+                                                {%- endfor -%}
+                                            </div>
+                                            <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}">
+                                                {%- if section.settings.arrows_type != 'none' -%}
+                                                    <button type="button" data-step="1" class="button-slider button-slider__prev preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                        {{ icon_arrow_list }}
+                                                    </button>
+                                                    <button type="button" data-step="1" class="button-slider button-slider__next preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                        {{ icon_arrow_list }}
+                                                    </button>
+                                                {%- endif -%}
+                                                <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                            </div>
+                                        </div>
+                                        </slider-component>
+                                    </div>
+                                {%- else -%}
+                                    <template>
+                                        <div class="item item__product w-100">
+                                            <slider-component class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                                data-space-between="10"
+                                                data-type-pagination="{{ section.settings.pagination_type }}"
+                                                data-item-to-show-desktop="1"
+                                                data-item-to-show-tablet="1"
+                                                data-item-to-show-mobile="1"
+                                            >
+                                                <div class="swiper d-block pos-relative no-js-overflow-x">
+                                                    <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Featured product tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                                                        {%- for product in products limit: section.settings.products_to_show -%}
+                                                            <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll" 
+                                                                role="listitem" 
+                                                                id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                                                                aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                                                            >
+                                                                {% render 'card-product',
+                                                                    card_product: product,
+                                                                    media_aspect_ratio: 'portrait',
+                                                                    show_secondary_image: false,
+                                                                    show_vendor: settings.show_vendor_product,
+                                                                    show_vendor_mobile: settings.show_vendor_mobile,
+                                                                    show_rating: false,
+                                                                    show_rating_mobile: false,
+                                                                    show_quick_add: false,
+                                                                    show_quick_add_mobile: false,
+                                                                    show_swatch: false,
+                                                                    show_swatch_mobile: false,
+                                                                    card_button_text_size: section.settings.card_button_text_size,
+                                                                    card_button_type: settings.card_button_type,
+                                                                    card_button_transform: settings.card_button_transform,
+                                                                    index: forloop.index,
+                                                                    section_id: section.id,
+                                                                    class: true,
+                                                                    check_p_tab: true
+                                                                %}
+                                                                <ul class="outstanding-product__list pos-absolute w-100 h-100 top-0 left-0 list-unstyled e-none">
+                                                                    {%- for i in (1..3) -%}
+                                                                        {%- capture description -%}featured_product_description_{{ i }}{%- endcapture -%}
+                                                                        {%- liquid
+                                                                            assign description = product.metafields.custom[description]
+                                                                        -%}
+                                                                        {%- if description != blank -%}
+                                                                            <li class="outstanding-product__item item--{{ i }} d-block pos-absolute" style="--dlay: 0.{{ i }}s">
+                                                                                <span>
+                                                                                    {{ description }}
+                                                                                </span>
+                                                                            </li>
+                                                                        {%- endif -%}
+                                                                    {%- endfor -%}
+                                                                </ul>
+                                                            </div>
+                                                        {%- else -%}
+                                                            {%- for i in (1..2) -%}
+                                                                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                                    {% render 'card-product',
+                                                                        index: forloop.index,
+                                                                        show_vendor: section.settings.show_vendor
+                                                                    %}
+                                                                </div>
+                                                            {%- endfor -%}
+                                                        {%- endfor -%}
+                                                    </div>
+                                                    <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}" style="--padding: 0px;">
+                                                        {%- if section.settings.arrows_type != 'none' -%}
+                                                            <button type="button" data-step="1" class="button-slider button-slider__prev preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                                {{ icon_arrow_list }}
+                                                            </button>
+                                                            <button type="button" data-step="1" class="button-slider button-slider__next preventParallax swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                                {{ icon_arrow_list }}
+                                                            </button>
+                                                        {%- endif -%}
+                                                        <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                                    </div>
+                                                </div>
+                                            </slider-component>
+                                        </div>
+                                    </template>
+                                {%- endif -%}
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </theme-tab>
+            {%- else -%}
+                <theme-tab class="tab__tabs">
+                    <div class="tab__item tab__item-tab">
+                        <ul class="tab__list list-unstyled d-flex f-wrap w-100" role="list">
+                            {%- for block in section.blocks -%}
+                                {%- liquid
+                                    assign heading = block.settings.heading | default: block.settings.collection.title
+                                -%}
+                                <li class="tab__list-item v-a-top d-flex{% if forloop.first == true %} active{% endif %}" role="listitem" {{ block.shopify_attributes }}>
+                                    <button class="tab__list-opener h1 t-button {{ settings.link_type | prepend: "link--style-" }} u-none b-none c-pointer gradient d-flex a-i-center w-100 m-0 no-js-hidden" type="button" data-tab="#Tab-{{ block.id }}" onclick="this.closest('theme-tab').open(this, 'Tab-{{ block.id }}')">
+                                        <span class="text-inner pos-relative d-inline-block link-style">
+                                            {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                                        </span>
+                                    </button>
+                                    <noscript>
+                                        <a {% if block.settings.collection == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.collection.url }}"{% endif %} class="tab__list-opener h1 t-button b-none {{ settings.link_type | prepend: "link--style-" }} u-none c-pointer gradient d-flex w-100 m-0">
+                                            <span class="text-inner pos-relative d-inline-block link-style">
+                                                {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                                            </span>
+                                        </a>
+                                    </noscript>
+                                </li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                    <div class="tab__item tab__item-content w-100 pos-relative">
+                        {%- for block in section.blocks -%}
+                            {%- liquid
+                                assign products = block.settings.product_list | default: block.settings.collection.products
+                            -%}
+                            <div class="tab__content-item f-column j-c-between a-i-center{% if forloop.first == true %} active{% endif %}" id="Tab-{{ block.id }}" data-tab-id="Tab-{{ block.id }}"{% if forloop.first == true %} loaded="loaded"{% endif %}>
+                                {%- if forloop.first == true -%}
+                                    <div class="item item__product w-100">
+                                        <slider-component class="carousel perview-auto d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                            data-space-between="20"
+                                            data-type-pagination="{{ section.settings.pagination_type }}"
+                                            data-item-to-show-desktop="auto"
+                                            data-item-to-show-tablet="auto"
+                                            data-item-to-show-mobile="auto"
+                                            data-item-to-show-small-mobile="auto"
+                                        >
+                                            <div class="swiper d-block pos-relative no-js-overflow-x">
+                                                {%- liquid
+                                                    for product in products
+                                                    assign forloopIndex = forloop.index
+                                                    endfor
+                                                -%}
+                                                <div class="carousel__items swiper-wrapper d-flex f-nowrap total-card--{{ forloopIndex }}" aria-label="Featured product tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                                                    {%- for product in products limit: section.settings.products_to_show -%}
+                                                        <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll pos-relative{% if forloop.last == true %} last{% endif %}" 
+                                                            role="listitem" 
+                                                            id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                                                            aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                                                        >
+                                                            {% render 'card-product',
+                                                                card_product: product,
+                                                                media_aspect_ratio: settings.card_image_ratio,
+                                                                show_secondary_image: settings.show_secondary_image,
+                                                                show_vendor: settings.show_vendor_product,
+                                                                show_vendor_mobile: settings.show_vendor_mobile,
+                                                                show_rating: settings.show_rating_product,
+                                                                show_rating_mobile: settings.show_rating_mobile,
+                                                                show_quick_add: settings.enable_quick_add,
+                                                                show_quick_add_mobile: settings.enable_quick_add_mobile,
+                                                                show_swatch: settings.show_swatch,
+                                                                show_swatch_mobile: settings.show_swatch_mobile,
+                                                                show_wishlist: settings.show_wishlist,
+                                                                show_wishlist_mobile: settings.show_wishlist_mobile,
+                                                                card_button_text_size: section.settings.card_button_text_size,
+                                                                card_button_type: settings.card_button_type,
+                                                                card_button_transform: settings.card_button_transform,
+                                                                index: forloop.index,
+                                                                section_id: section.id,
+                                                                class: true,
+                                                                check_p_tab: true
+                                                            %}
+                                                        </div>
+                                                    {%- else -%}
+                                                            {%- for i in (1..2) -%}
+                                                                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                                    {% render 'card-product',
+                                                                        index: forloop.index,
+                                                                        show_vendor: section.settings.show_vendor
+                                                                    %}
+                                                                </div>
+                                                            {%- endfor -%}
+                                                    {%- endfor -%}
+                                                </div>
+                                                <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}">
+                                                    {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                                                        <div class="arrow-wrap d-flex pos-absolute swiper-screen__{{ section.settings.arrows_type }}">
+                                                    {%- endif -%}
+                                                        {%- if section.settings.arrows_type != 'none' -%}
+                                                            <button type="button" data-step="1" class="button-slider button-slider__prev{% if settings.arrow_style != 'modern-plus' %} button-slider__hover swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                                {{ icon_arrow_list }}
+                                                            </button>
+                                                            <button type="button" data-step="1" class="button-slider button-slider__next{% if settings.arrow_style != 'modern-plus' %} button-slider__hover swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                                {{ icon_arrow_list }}
+                                                            </button>
+                                                        {%- endif -%}
+                                                    {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                                                            <div class="mask-overlay pos-absolute top-0 left-0"></div>
+                                                        </div>
+                                                    {%- endif -%}
+                                                    <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                                </div>
+                                            </div>
+                                        </slider-component>
+                                    </div>
+                                {%- else -%}
+                                    <template>
+                                        <div class="item item__product w-100">
+                                            <slider-component class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient"
+                                                data-space-between="20"
+                                                data-type-pagination="{{ section.settings.pagination_type }}"
+                                                data-item-to-show-desktop="auto"
+                                                data-item-to-show-tablet="auto"
+                                                data-item-to-show-mobile="auto"
+                                                data-item-to-show-small-mobile="auto"
+                                            >
+                                                <div class="swiper d-block pos-relative no-js-overflow-x">
+                                                    {%- liquid
+                                                        for product in products
+                                                        assign forloopIndex = forloop.index
+                                                        endfor
+                                                    -%}
+                                                    <div class="carousel__items swiper-wrapper d-flex f-nowrap total-card--{{ forloopIndex }}" aria-label="Featured product tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                                                        {%- for product in products limit: section.settings.products_to_show -%}
+                                                            <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll" 
+                                                                role="listitem" 
+                                                                id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                                                                aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                                                            >
+                                                                {% render 'card-product',
+                                                                    card_product: product,
+                                                                    media_aspect_ratio: settings.card_image_ratio,
+                                                                    show_secondary_image: settings.show_secondary_image,
+                                                                    show_vendor: settings.show_vendor_product,
+                                                                    show_vendor_mobile: settings.show_vendor_mobile,
+                                                                    show_rating: settings.show_rating_product,
+                                                                    show_rating_mobile: settings.show_rating_mobile,
+                                                                    show_quick_add: settings.enable_quick_add,
+                                                                    show_quick_add_mobile: settings.enable_quick_add_mobile,
+                                                                    show_swatch: settings.show_swatch,
+                                                                    show_swatch_mobile: settings.show_swatch_mobile,
+                                                                    show_wishlist: settings.show_wishlist,
+                                                                    show_wishlist_mobile: settings.show_wishlist_mobile,
+                                                                    card_button_text_size: section.settings.card_button_text_size,
+                                                                    card_button_type: settings.card_button_type,
+                                                                    card_button_transform: settings.card_button_transform,
+                                                                    index: forloop.index,
+                                                                    section_id: section.id,
+                                                                    class: true,
+                                                                    check_p_tab: true
+                                                                %}
+                                                            </div>
+                                                        {%- else -%}
+                                                            {%- for i in (1..2) -%}
+                                                                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll">
+                                                                    {% render 'card-product',
+                                                                        index: forloop.index,
+                                                                        show_vendor: section.settings.show_vendor
+                                                                    %}
+                                                                </div>
+                                                            {%- endfor -%}
+                                                        {%- endfor -%}
+                                                    </div>
+                                                    <div class="carousel__controls no-js-hidden arrow-style-{{ settings.arrow_style }}" style="--padding: 0px;">
+                                                        {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                                                            <div class="arrow-wrap d-flex pos-absolute swiper-screen__{{ section.settings.arrows_type }}">
+                                                        {%- endif -%}
+                                                            {%- if section.settings.arrows_type != 'none' -%}
+                                                                <button type="button" data-step="1" class="button-slider button-slider__prev{% if settings.arrow_style != 'modern-plus' %} button-slider__hover swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                                                                    {{ icon_arrow_list }}
+                                                                </button>
+                                                                <button type="button" data-step="1" class="button-slider button-slider__next{% if settings.arrow_style != 'modern-plus' %} button-slider__hover swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                                                                    {{ icon_arrow_list }}
+                                                                </button>
+                                                            {%- endif -%}
+                                                        {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                                                                <div class="mask-overlay pos-absolute top-0 left-0"></div>
+                                                            </div>
+                                                        {%- endif -%}
+                                                        <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                                                    </div>
+                                                </div>
+                                            </slider-component>
+                                        </div>
+                                    </template>
+                                {%- endif -%}
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </theme-tab>
+            {%- endif -%}
+        </div>
+    </div>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "t:sections.featured-product-tab.name",
+    "tag": "section",
+    "class": "section",
+    "max_blocks": 5,
+    "disabled_on": {
+        "groups": ["header", "footer", "custom.popup"]
+    },
+    "settings": [
+    {
+        "type": "select",
+        "id": "type_style",
+        "options": [
+        {
+        "value": "special",
+        "label": "t:settings_schema.layout.settings.style.options__1"
+        },
+        {
+        "value": "classic",
+        "label": "t:settings_schema.layout.settings.style.options__2"
+        }],
+        "default": "special",
+        "label": "t:settings_schema.layout.name__2"
+    },
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+        },
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "page-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "text_alignment",
+        "id": "text_alignment",
+        "label": "t:sections.all.text_alignment.label",
+        "default": "center"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "default": "Featured product tab",
+        "label": "t:sections.all.heading.label"
+    },
+    {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__2"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "default": "<p>Pair text with an image to focus on your chosen collection. Add details on availability, style, or even provide a review.</p>",
+        "label": "t:sections.all.text.label"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.product.header.content"
+    },
+    {
+        "type": "range",
+        "id": "products_to_show",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 5,
+        "label": "t:sections.all.product.product_list_limit"
+    },
+    {
+        "type": "color_scheme",
+        "id": "product_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "select",
+        "id": "card_button_text_size",
+        "options": [
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "medium",
+        "label": "t:sections.all.font_size.label__7",
+        "info": "Use for (Classic layout)"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.carousel.label"
+    },
+    {
+        "type": "select",
+        "id": "arrows_type",
+        "options": [
+        {
+        "value": "none",
+        "label": "t:sections.all.carousel.arrows.options"
+        },
+        {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+        },
+        {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+        },
+        {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+        },
+        {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+        },
+        {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+        }],
+        "default": "all",
+        "label": "t:sections.all.carousel.arrows.label"
+    },
+    {
+        "type": "select",
+        "id": "enable_pagination_type",
+        "options": [
+        {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+        },
+        {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+        },
+        {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+        },
+        {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+        },
+        {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+        }],
+        "default": "all",
+        "label": "t:sections.all.carousel.pagination.label__1"
+    },
+    {
+        "type": "select",
+        "id": "pagination_type",
+        "options": [
+        {
+            "value": "none",
+            "label": "t:sections.all.carousel.pagination.options"
+        },
+        {
+            "value": "dots",
+            "label": "t:sections.all.carousel.pagination.options__1"
+        },
+        {
+            "value": "progressbar",
+            "label": "t:sections.all.carousel.pagination.options__2"
+        },
+        {
+            "value": "fraction",
+            "label": "t:sections.all.carousel.pagination.options__3"
+        }],
+        "default": "progressbar",
+        "label": "t:sections.all.carousel.pagination.label"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.animation.content"
+    },
+    {
+        "type": "select",
+        "id": "text_animation",
+        "options": [
+        {
+            "value": "none",
+            "label": "t:sections.all.animation.set_animation.options__1.label"
+        },
+        {
+            "value": "fade-up",
+            "label": "t:sections.all.animation.set_animation.options__2.label"
+        },
+        {
+            "value": "fade-down",
+            "label": "t:sections.all.animation.set_animation.options__3.label"
+        },
+        {
+            "value": "zoom-in",
+            "label": "t:sections.all.animation.set_animation.options__4.label"
+        },
+        {
+            "value": "zoom-out",
+            "label": "t:sections.all.animation.set_animation.options__5.label"
+        }],
+        "default": "none",
+        "label": "t:sections.all.animation.set_animation.label__2"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 40
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 30
+    }
+    ],
+    "blocks": [
+    {
+        "type": "tab",
+        "name": "t:sections.featured-collection-tab.blocks.tab.name",
+        "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "default": "Tab name",
+            "label": "t:sections.all.tab_name.label"
+        },
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.all.collection.label"
+        },
+        {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Products",
+            "info": "Replaces collection when selected."
+        }]
+    }],
+    "presets": [
+    {
+        "name": "t:sections.featured-product-tab.presets.name",
+        "blocks": [
+        {
+            "type": "tab"
+        },
+        {
+            "type": "tab"
+        },
+        {
+            "type": "tab"
+        }]
+    }]
+}
+{% endschema %}

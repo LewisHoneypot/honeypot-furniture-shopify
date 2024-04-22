@@ -1,0 +1,133 @@
+<div class="section__az-brands spacing spacing-xs gradient"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+  --padding-bottom: {{ section.settings.padding_bottom }}px;
+  --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+  --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+>
+  <div class="{{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+    <div class="p-w__content">
+      <az-brands class="d-block clearfix" data-brand='[{%- for vendor in shop.vendors -%}{"name": "{{ vendor | escape }}","letter": "{{ vendor | strip_html | downcase | truncate: 1, "" }}","handle": "{{ vendor | url_for_vendor }}"}{% unless forloop.last %},{% endunless %}{%- endfor -%}]'>
+        <az-layout class="d-block brands__layout">
+          <div class="brands__header">
+            {%- assign array = "0-9|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z" | split: "|" -%}
+            <ul id="AZTable-{{ section.id }}" class="brands__table d-flex j-c-between f-row f-nowrap overflow-x overflow-x-s list-unstyled{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              <li data-letter="all" class="all-letter d-block active">
+                <button role="button" class="d-block t-button b-none c-pointer color-foreground u-none uppercase center">{{ 'general.brands.all' | t }}</button>
+              </li>
+              {%- for item in array -%}
+                <li data-letter="{{ item | downcase }}" class="d-block disable">
+                  <button data-id="{{ item | downcase }}" role="button" class="d-block t-button b-none c-pointer color-foreground u-none uppercase center">{{ item | downcase }}</button>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <div class="brands__body">
+            <div id="AZWrapper-{{ section.id }}" class="brands__grid{% if section.settings.hide_brand %} hide-no__brand{% else %} active-all{% endif %}">
+              {%- for item in array -%}
+                <div class="az-group d-none{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                  data-letter="{{ item | downcase }}" 
+                  id="az-code-{{ item | downcase }}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <h3 class="az-group__title left h2 m-0 uppercase">{{ item | downcase }}</h3>
+                  <ul class="az-group__list d-flex f-wrap list-unstyled g-gap" role="list" style="--g-gap: 1rem;"></ul>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </az-layout>
+      </az-brands>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.az-brands.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  {
+    "type": "select",
+    "id": "section_width",
+    "options": [
+    {
+      "value": "full-width",
+      "label": "t:sections.all.section_width.options__1"
+    },
+    {
+      "value": "page-width",
+      "label": "t:sections.all.section_width.options__2"
+    },
+    {
+      "value": "customized-width",
+      "label": "t:sections.all.section_width.options__3"
+    }],
+    "default": "page-width",
+    "label": "t:sections.all.section_width.label"
+  },
+  {
+    "type": "range",
+    "id": "customize_width",
+    "min": 1000,
+    "max": 1800,
+    "step": 50,
+    "default": 1800,
+    "unit": "px",
+    "label": "t:sections.all.customize_width.label"
+  },
+  {
+    "type": "checkbox",
+    "id": "hide_brand",
+    "default": false,
+    "label": "t:sections.az-brands.settings.brand.name"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 30
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 30
+  }]
+}
+{% endschema %}

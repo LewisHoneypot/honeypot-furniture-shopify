@@ -1,0 +1,81 @@
+{%- liquid
+  if filter_type == 'horizontal' or filter_type == 'horizontal-plus'
+    assign filter_type = filter_type
+  else
+    assign filter_type = 'panigation'
+  endif
+  capture icon_caret
+    render 'icon-caret', style: filter_type
+  endcapture
+-%}
+{%- if paginate.parts.size > 0 -%}
+  <div class="pagination-wrapper {{ alignment }} {{ pageType | prepend: 'style-' }} {{ filter_type | prepend: 'filter-' }}">
+    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+      <ul class="pagination__list d-flex f-wrap j-c-center a-i-center a-i-stretch list-unstyled g-gap" role="list" style="--g-gap: 1rem;">
+        {%- if paginate.previous -%}
+          <li class="pagination--prev">
+            <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow d-inline-flex a-i-center j-c-center pos-relative w-100 motion-reduce gradient{% if filter_type == 'horizontal-plus' %} a-i-center j-c-between uppercase link u-link link--style-line{% else %} u-none{% endif %}" aria-label="{{ 'general.pagination.previous' | t }}">
+              {{ icon_caret }}
+              {%- if filter_type == 'horizontal-plus' -%}
+                <span class="text link-style">
+                  {{ 'general.pagination.previous' | t }}
+                </span>
+              {%- endif -%}
+            </a>
+          </li>
+        {%- endif -%}
+        {%- for part in paginate.parts -%}
+          {% if pageType == 'special' %}
+            {% if part.title == paginate.current_page %}
+              {%- if paginate.previous -%}
+                <li class="center">
+                  <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item d-inline-flex a-i-center j-c-center pos-relative w-100 u-none h-link gradient" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                    {{- part.title | time: 1 | minus: 1 -}}
+                  </a>
+                </li>
+              {%- endif -%}
+              <li class="center">
+                <a role="link" aria-disabled="true" class="pagination__item pagination__item--current d-inline-flex a-i-center j-c-center pos-relative w-100 link u-u u-link gradient" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                  {{- part.title -}}
+                </a>
+              </li>
+              {%- if paginate.next -%}
+                <li class="center">
+                  <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item d-inline-flex a-i-center j-c-center pos-relative w-100 u-none h-link gradient" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                    {{- part.title | time: 1 | plus: 1 -}}
+                  </a>
+                </li>
+              {%- endif -%}
+            {% endif %}
+          {% else %}
+            <li class="center">
+              {%- if part.is_link -%}
+                <a href="{{ part.url }}{{ anchor }}" class="pagination__item d-inline-flex a-i-center j-c-center pos-relative w-100 u-none h-link gradient" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{- part.title -}}</a>
+              {%- else -%}
+                {%- if part.title == paginate.current_page -%}
+                  <a role="link" aria-disabled="true" class="pagination__item pagination__item--current d-inline-flex a-i-center j-c-center pos-relative w-100 link u-u u-link gradient" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                    {{- part.title -}}
+                  </a>
+                {%- else -%}
+                  <span class="3 pagination__item">{{ part.title }}</span>
+                {%- endif -%}
+              {%- endif -%}
+            </li>
+          {% endif %}
+        {%- endfor -%}
+        {%- if paginate.next -%}
+          <li class="pagination--next">
+            <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow d-inline-flex a-i-center j-c-center pos-relative w-100 motion-reduce gradient{% if filter_type == 'horizontal-plus' %} a-i-center j-c-between uppercase link u-link link--style-line{% else %} u-none{% endif %}"  aria-label="{{ 'general.pagination.next' | t }}">
+              {%- if filter_type == 'horizontal-plus' -%}
+                <span class="text link-style">
+                  {{ 'general.pagination.next' | t }}
+                </span>
+              {%- endif -%}
+              {{ icon_caret }}
+            </a>
+          </li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+{%- endif -%}

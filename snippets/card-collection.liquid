@@ -1,0 +1,120 @@
+{%- liquid
+  assign ratio = 1
+  if card_collection.featured_image and media_aspect_ratio == 'adapt'
+    assign ratio = card_collection.featured_image.aspect_ratio
+    if custom_image != blank
+      assign ratio = custom_image.aspect_ratio
+    endif
+  endif
+  if ratio == 0 or ratio == null
+    assign ratio = 1
+  endif
+-%}
+<div class="card-wrapper collection-card-wrapper animate-arrow pos-relative h-100">
+  <div class="card d-flex f-column h-100 gradient gradient-global">
+    <div class="card__inner pos-relative o-h w-100">
+      <div class="card__media o-h">
+        <div class="media media--transparent media--{{ media_aspect_ratio }} pos-relative o-h d-block"
+          {% if media_aspect_ratio == 'adapt' %}
+            style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+          {% endif %}
+        >
+          {%- if card_collection.featured_image and custom_image == blank -%}
+            <img
+              srcset="
+                {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 360 -%}{{ card_collection.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 533 -%}{{ card_collection.featured_image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 720 -%}{{ card_collection.featured_image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 940 -%}{{ card_collection.featured_image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1066 -%}{{ card_collection.featured_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w
+              "
+              src="{{ card_collection.featured_image | image_url: width: 533 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+              alt="{{ card_collection.featured_image.alt | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+          {%- elsif custom_image != blank -%}
+            <img
+              srcset="
+                {%- if custom_image.width >= 165 -%}{{ custom_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if custom_image.width >= 360 -%}{{ custom_image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if custom_image.width >= 533 -%}{{ custom_image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if custom_image.width >= 720 -%}{{ custom_image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if custom_image.width >= 940 -%}{{ custom_image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if custom_image.width >= 1066 -%}{{ custom_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ custom_image | image_url }} {{ custom_image.width }}w
+              "
+              src="{{ custom_image | image_url: width: 533 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+              alt="{{ custom_image.alt | escape }}"
+              height="{{ custom_image.height }}"
+              width="{{ custom_image.width }}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+          {%- else -%}
+            {%- liquid
+              if index > 6
+                assign index = index | modulo: 6 | plus: 1
+              endif
+            -%}
+            {{ 'collection-' | append: index | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="card__content d-grid w-100">
+      <div class="card__information">
+        {%- unless hide_collection_title -%}
+          <h3 class="card__heading m-0">
+            <a
+              {% if card_collection == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ card_collection.url }}"
+              {% endif %}
+              class="d-block h-link link--style-line color-current link-cover"
+            >
+              <span class="link-style">
+                {%- if card_collection.title != blank -%}
+                  {{- card_collection.title | escape -}}
+                {%- else -%}
+                  {{ 'onboarding.collection_title' | t }}
+                {%- endif -%}
+              </span>
+              {%- unless hide_collection_title_arrow -%}
+                <span class="icon-wrap o-h w-s-nowrap">{% render 'icon-arrow' %}</span>
+              {%- endunless -%}
+            </a>
+          </h3>
+        {%- endunless -%}
+        {%- if show_collection_product_count and card_collection.all_products_count > 0 -%}
+          <span class="count u-u">
+            {{- 'sections.collection_list.count' | t: count: card_collection.all_products_count -}}
+          </span>
+        {%- endif -%}
+        {%- if button_label != blank -%}
+          <div class="button-wrap">
+            <a
+              {% if card_collection.url == blank %}
+                role="link"aria-disabled="true"
+              {% else %}
+                href="{{ card_collection.url }}"
+              {% endif %}
+              class="collections-button button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}"
+              aria-label="{{ button_label }}"
+            >
+              <span class="text">{{ button_label | escape }}</span>
+              {% render 'button-main-style' %}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>

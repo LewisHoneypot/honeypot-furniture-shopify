@@ -1,0 +1,130 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<div class="section__m-active-account spacing gradient"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+  --padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width m-auto">
+    <div class="p-w__header p-w__header--nogap">
+      <div class="p-w__header--wrapper left">
+        {% render 'breadcrumb',
+          padding_top: '0.5rem',
+          padding_bottom: '0.5rem',
+          alignment: 'start'
+        %}
+        <h1 class="p-w__heading p-w__heading--page f-bold heading-size-small m-0">{{ 'customer.activate_account.title' | t }}</h1>
+        <div class="p-w__description rte">
+          <p>{{ 'customer.activate_account.subtext' | t }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-w__content">
+      <div class="customer activate">
+        {%- form 'activate_customer_password' -%}
+          {%- if form.errors -%}
+            <h2 class="form__message d-flex a-i-center l-h-1 m-0" tabindex="-1" autofocus>
+              {% render 'icon-error' %}
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h2>
+            <ul>
+              {%- for field in form.errors -%}
+                <li>
+                  {%- if field == 'form' -%}
+                    {{ form.errors.messages[field] }}
+                  {%- else -%}
+                    <a href="#{{ field }}" class="link link--text u-link">
+                      {{ form.errors.translated_fields[field] | capitalize }}
+                      {{ form.errors.messages[field] }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+          <div class="field f-a-none f-b-none pos-relative">
+            <label for="password" class="field__label d-block field__label--inline">{{ 'customer.activate_account.password' | t }}</label>
+            <input
+              class="field__input"
+              type="password"
+              name="customer[password]"
+              id="password"
+              autocomplete="new-password"
+              placeholder="{{ 'customer.activate_account.password' | t }}"
+              {% if form.errors contains 'password' %}
+                aria-invalid="true"
+                aria-describedby="password-error"
+              {% endif %}
+            >
+            {%- if form.errors contains 'password' -%}
+              <span id="password-error" class="form__message d-flex a-i-center l-h-1 m-b subrte">
+                {% render 'icon-error' %}
+                {{ form.errors.translated_fields.password | capitalize }}
+                {{ form.errors.messages.password }}
+              </span>
+            {%- endif -%}
+          </div>
+          <div class="field f-a-none f-b-none pos-relative">
+            <label for="password_confirmation" class="field__label d-block field__label--inline">{{ 'customer.activate_account.password_confirm' | t }}</label>
+            <input
+              class="field__input"
+              type="password"
+              name="customer[password_confirmation]"
+              id="password_confirmation"
+              autocomplete="new-password"
+              placeholder="{{ 'customer.activate_account.password_confirm' | t }}"
+              {% if form.errors contains 'password' %}
+                aria-invalid="true"
+                aria-describedby="password_confirmation-error"
+              {% endif %}
+            >
+            {%- if form.errors contains 'password_confirmation' -%}
+              <span id="password_confirmation-error" class="form__message d-flex a-i-center l-h-1 m-b subrte">
+                {% render 'icon-error' %}
+                {{ form.errors.translated_fields.password_confirmation | capitalize }}
+                {{ form.errors.messages.password_confirmation }}
+              </span>
+            {%- endif -%}
+          </div>
+          <div class="field__action d-flex f-wrap a-i-center j-c-start g-gap m-t" style="--g-gap: 2rem; --m-t: 4rem;">
+            <button class="button {{ settings.button_style | prepend: 'button--style-' }} mi-w" style="--mi-w: 25rem;">
+              <span>{{ 'customer.activate_account.submit' | t }}</span>
+            </button>
+            <button name="decline" class="button {{ settings.button_style | prepend: 'button--style-' }} button--transparent mi-w" style="--mi-w: 25rem;">
+              <span>{{ 'customer.activate_account.cancel' | t }}</span>
+            </button>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-activate-account.name",
+  "settings": [
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 36
+  }]
+}
+{% endschema %}

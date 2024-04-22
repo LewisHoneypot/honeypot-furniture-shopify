@@ -1,0 +1,714 @@
+{%- if section.blocks.size > 0 -%}
+	{%- liquid
+		capture icon_arrow_long
+	    render 'icon-arrow-long'
+	  endcapture
+	  capture icon_arrow_list
+      render 'icon-arrow-list'
+    endcapture
+	-%}
+	<div class="section__f-collection-tab style--{{ section.settings.type_style }}{% unless section.settings.show_line_separator %} spacing spacing-xs{% endunless %} pos-relative color-{{ section.settings.color_scheme }} gradient"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+>
+	<div class="page-width m-auto o-h">
+		{%- if section.settings.show_line_separator -%}
+      <div class="b-bottom spacing spacing-xs">
+    {%- endif -%}
+		<theme-tab class="tab__tabs{% if section.settings.type_style != 'special' %} d-flex f-wrap{% endif %}">
+			<div class="tab__item tab__item-tab w-100">
+        <div class="d-flex f-column">
+          {%- if section.settings.heading != blank or section.settings.text != blank -%}
+            <div class="tab__title {{ section.settings.text_alignment }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              {%- if section.settings.heading != blank -%}
+                <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0">{{ section.settings.heading | escape }}</h2>
+              {%- endif -%}
+              {%- if section.settings.text != blank -%}
+                <div class="p-w__text rte">{{ section.settings.text }}</div>
+              {%- endif-%}
+            </div>
+          {%- endif -%}
+          <ul class="tab__list {{ section.settings.text_alignment }} list-unstyled d-block w-s-nowrap overflow-x w-100{% if section.settings.type_style == 'special' %} d-flex a-i-center j-c-{{ section.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}-md g-gap-lg{% endif %}" 
+            role="list"
+            style="{% if section.settings.type_style == 'special' %}--g-gap-lg: 5.7rem;{% endif %}"
+          >
+            {%- for block in section.blocks -%}
+              <li class="tab__list-item d-inline-block v-a-top d-block-lg{% if forloop.first == true %} active{% endif %}" 
+                role="listitem" 
+                {{ block.shopify_attributes }}
+              >
+                <button class="tab__list-opener h1 t-button b-none c-pointer gradient d-flex a-i-center j-c-between j-c-center-xs w-100 m-0 no-js-hidden{% if section.settings.type_style == 'special' %} link--style-line{% endif %}" type="button" data-tab="#Tab-{{ block.id }}" onclick="this.closest('theme-tab').open(this, 'Tab-{{ block.id }}')">
+                  {%- if section.settings.type_style == 'special' -%}
+                    <span class="text link-style">
+                  {%- endif -%}
+                    {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                  {%- if section.settings.type_style == 'special' -%}
+                    </span>
+                  {%- endif -%}
+
+                  {%- if section.settings.type_style != 'special' -%}
+                    {{ icon_arrow_long }}
+                  {%- endif -%}
+                </button>
+                <noscript>
+                  <a {% if block.settings.collection == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.collection.url }}"{% endif %} class="tab__list-opener h1 t-button b-none c-pointer gradient d-flex a-i-center j-c-between j-c-center-xs w-100 m-0{% if section.settings.type_style == 'special' %} link--style-line{% endif %}">
+                    {%- if section.settings.type_style == 'special' -%}
+                      <span class="text link-style">
+                    {%- endif -%}
+                      {{ block.settings.heading | escape | default: block.settings.collection.title }}
+                    {%- if section.settings.type_style == 'special' -%}
+                      </span>
+                    {%- endif -%}
+                    {%- if section.settings.type_style != 'special' -%}
+                      {{ icon_arrow_long }}
+                    {%- endif -%}
+                  </a>
+                </noscript>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+			</div>
+			<div class="tab__item tab__item-content w-100">
+				{%- for block in section.blocks -%}
+					<div class="tab__content-item d-none f-column j-c-between a-i-center{% if section.settings.type_style == 'special' %} a-i-stretch f-row-reverse f-wrap{% endif %}{% if forloop.first == true %} active{% endif %}" id="Tab-{{ block.id }}" data-tab-id="Tab-{{ block.id }}" {% if forloop.first == true %} loaded="loaded"{% endif %}>
+						{%- if forloop.first == true -%}
+							<div class="item item__banner w-100 pos-relative{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-left{% endif %}">
+                <div class="item__banner-wrap pos-sticky top-0 left-0">
+                  {%- liquid
+                      assign poster = block.settings.image | default: block.settings.collection.image
+                  -%}
+                  <{% if block.settings.collection.url != blank %}a{% else %}div{% endif %} class="media media--transparent media--adapt media--zoom d-block pos-relative o-h rounded{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}" 
+                    {%- if block.settings.collection.url != blank %} href="{{ block.settings.collection.url }}"{% endif -%}
+                    style="padding-bottom:{% if poster != blank %} {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}{% else %} 100{% endif %}%;"
+                  >
+                    {%- if poster != blank -%}
+                      {%- capture sizes -%}
+                        (min-width: 990px) 710px, (min-width: 750px) 550px, calc(100vw - 30px)
+                      {%- endcapture -%}
+                      {{ poster | image_url: width: 710 | image_tag:
+                        loading: 'lazy',
+                        sizes: sizes,
+                        widths: '275, 550, 710',
+                        class: 'motion-reduce'
+                      }}
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                    {%- endif -%}
+                  </{% if block.settings.collection.url != blank %}a{% else %}div{% endif %}>
+                  {%- if section.settings.type_style == 'special' -%}
+                    <div class="item__banner-content d-flex f-column-m-lg a-i-end-xl j-c-between pos-absolute bottom-0 left-0 w-100 g-gap" style="--g-gap:1rem;--color-foreground: {{ block.settings.colors_text.rgb }}">
+                      {%- if block.settings.collection.title != blank -%}
+                        <h3 class="item__banner-title heading-size-x-large m-0 l-h-1">{{ block.settings.collection.title }}</h3>
+                      {%- endif -%}
+                      {%- if section.settings.show_view_all and block.settings.collection.url != blank and section.settings.type_style == 'special' -%}
+                        <a href="{{ block.settings.collection.url }}" class="link u-link f-shrink {{ settings.link_type | prepend: "link--style-" }}"aria-label="{{ block.settings.button_label }}">
+                          <span class="text link-style">{{ 'sections.featured_collection.view_all_tab_shop' | t }}</span>
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="item item__product w-100">
+                {%- if section.settings.type_style != 'special' -%}
+                  <slider-component class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" data-space-between="10" data-type-pagination="{{ section.settings.pagination_type }}" data-item-to-show-desktop="1" data-item-to-show-tablet="1" data-item-to-show-mobile="1">
+                    <div class="swiper d-block pos-relative no-js-overflow-x"> 
+                      <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Featured collection tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                        {%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+                          <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                            aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                            role="listitem" 
+                            id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                          >
+                            {% render 'card-product',
+                              card_product: product,
+                              media_aspect_ratio: settings.card_image_ratio,
+                              show_secondary_image: settings.show_secondary_image,
+                              show_vendor: settings.show_vendor_product,
+                              show_vendor_mobile: settings.show_vendor_mobile,
+                              show_rating: settings.show_rating_product,
+                              show_rating_mobile: settings.show_rating_mobile,
+                              show_quick_add: settings.enable_quick_add,
+                              show_quick_add_mobile: settings.enable_quick_add_mobile,
+                              show_swatch: settings.show_swatch,
+                              show_swatch_mobile: settings.show_swatch_mobile,
+                              card_button_text_size: settings.card_button_text_size,
+                              card_button_type: settings.card_button_type,
+                              card_button_transform: settings.card_button_transform,
+                              index: forloop.index,
+                              section_id: section.id
+                            %}
+                          </div>
+                        {%- else -%}
+                          {%- for i in (1..2) -%}
+                            <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                              role="listitem" 
+                              id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                            >
+                              {% render 'card-product', index: forloop.index, show_vendor: section.settings.show_vendor %}
+                            </div>
+                          {%- endfor -%}
+                        {%- endfor -%}
+                      </div>
+                      <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                        {%- if section.settings.arrows_type != 'none' -%}
+                          <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                            {{ icon_arrow_list }}
+                          </button>
+                          <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                            {{ icon_arrow_list }}
+                          </button>
+                        {%- endif -%}
+                        <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                      </div>
+                    </div>
+                  </slider-component>
+                {%- else -%}
+                  <div class="products-grid d-flex f-wrap">
+                    {%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+                      {%- liquid
+                        assign total = forloop.length
+                        if total > 3
+                            assign item_ind = 'item-underline pos-relative'
+                        else
+                            assign item_ind = 'item-no-underline'
+                        endif
+                      -%}
+                      <div class="products-grid__item {{ item_ind }} item--{{ forloop.length }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-left{% endif %}"
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ forloop.index }};"
+                        {% endif %}
+                      >
+                        {% render 'card-product',
+                          card_product: product,
+                          media_aspect_ratio: settings.card_image_ratio,
+                          show_secondary_image: settings.show_secondary_image,
+                          show_vendor: false,
+                          show_vendor_mobile: false,
+                          show_rating: false,
+                          show_rating_mobile: false,
+                          show_quick_add: true,
+                          show_quick_add_mobile: true,
+                          show_swatch: false,
+                          show_swatch_mobile: false,
+                          show_wishlist: settings.show_wishlist,
+                          show_wishlist_mobile: settings.show_wishlist_mobile,
+                          card_button_text_size: settings.card_button_text_size,
+                          card_button_type: settings.card_button_type,
+                          card_button_transform: settings.card_button_transform,
+                          card_style_popup: 'advanced-default',
+                          product_cards_style: 'advanced-default',
+                          index: forloop.index,
+                          section_id: section.id
+                        %}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+                {%- if section.settings.show_view_all and block.settings.collection.url != blank and section.settings.type_style != 'special' -%}
+                  <a href="{{ block.settings.collection.url }}" class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}  button--transparent tab__view-all m-t mi-w" aria-label="{{ 'sections.featured_collection.view_all_tab' | t: collection_name: block.settings.heading }}" style="--m-t: 2rem; --mi-w: 25rem;">
+                    <span class="text">{{ 'sections.featured_collection.view_all_tab' | t: collection_name: block.settings.heading }}</span>
+                    {% render 'button-main-style' %}
+                  </a>
+                {%- endif -%}
+              </div>
+						{%- else -%}
+							<template>
+								<div class="item item__banner w-100 pos-relative{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-left{% endif %}">
+                  <div class="item__banner-wrap pos-sticky top-0 left-0">
+                    {%- liquid
+                        assign poster = block.settings.image | default: block.settings.collection.image
+                    -%}
+                    <{% if block.settings.collection.url != blank %}a{% else %}div{% endif %} class="media media--transparent media--adapt media--zoom d-block pos-relative o-h rounded{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}" 
+                      {%- if block.settings.collection.url != blank %} href="{{ block.settings.collection.url }}"{% endif -%}
+                      style="padding-bottom:{% if poster != blank %} {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}{% else %} 100{% endif %}%;"
+                    >
+                      {%- if poster != blank -%}
+                        {%- capture sizes -%}
+                          (min-width: 990px) 710px, (min-width: 750px) 550px, calc(100vw - 30px)
+                        {%- endcapture -%}
+                        {{ poster | image_url: width: 710 | image_tag:
+                          loading: 'lazy',
+                          sizes: sizes,
+                          widths: '275, 550, 710',
+                          class: 'motion-reduce'
+                        }}
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                    </{% if block.settings.collection.url != blank %}a{% else %}div{% endif %}>
+                    {%- if section.settings.type_style == 'special' -%}
+                      <div class="item__banner-content d-flex f-column-m-lg a-i-end-xl j-c-between pos-absolute bottom-0 left-0 w-100 g-gap" style="--g-gap:1rem;--color-foreground: {{ block.settings.colors_text.rgb }}">
+                        {%- if block.settings.collection.title != blank -%}
+                          <h3 class="item__banner-title heading-size-x-large m-0 l-h-1">{{ block.settings.collection.title }}</h3>
+                        {%- endif -%}
+                        {%- if section.settings.show_view_all and block.settings.collection.url != blank and section.settings.type_style == 'special' -%}
+                          <a href="{{ block.settings.collection.url }}" class="link u-link f-shrink {{ settings.link_type | prepend: "link--style-" }}"aria-label="{{ block.settings.button_label }}">
+                            <span class="text link-style">{{ 'sections.featured_collection.view_all_tab_shop' | t }}</span>
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="item item__product w-100">
+                  {%- if section.settings.type_style != 'special' -%}
+                    <slider-component class="carousel d-block pos-relative color-{{ section.settings.product_color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" data-space-between="10" data-type-pagination="{{ section.settings.pagination_type }}" data-item-to-show-desktop="1" data-item-to-show-tablet="1" data-item-to-show-mobile="1">
+                      <div class="swiper d-block pos-relative no-js-overflow-x"> 
+                        <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Featured collection tab" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1;">
+                          {%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+                            <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                              role="listitem" 
+                              id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                              aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}"
+                            >
+                              {% render 'card-product',
+                                card_product: product,
+                                media_aspect_ratio: settings.card_image_ratio,
+                                show_secondary_image: settings.show_secondary_image,
+                                show_vendor: settings.show_vendor_product,
+                                show_vendor_mobile: settings.show_vendor_mobile,
+                                show_rating: settings.show_rating_product,
+                                show_rating_mobile: settings.show_rating_mobile,
+                                show_quick_add: settings.enable_quick_add,
+                                show_quick_add_mobile: settings.enable_quick_add_mobile,
+                                show_swatch: settings.show_swatch,
+                                show_swatch_mobile: settings.show_swatch_mobile,
+                                card_button_text_size: settings.card_button_text_size,
+                                card_button_type: settings.card_button_type,
+                                card_button_transform: settings.card_button_transform,
+                                index: forloop.index,
+                                section_id: section.id
+                              %}
+                            </div>
+                          {%- else -%}
+                            {%- for i in (1..2) -%}
+                              <div class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                role="listitem" 
+                                id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                              >
+                                {% render 'card-product', index: forloop.index, show_vendor: section.settings.show_vendor %}
+                              </div>
+                            {%- endfor -%}
+                          {%- endfor -%}
+                        </div>
+                        <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden" style="--padding: 0px;">
+                          {%- if section.settings.arrows_type != 'none' -%}
+                            <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                              {{ icon_arrow_list }}
+                            </button>
+                            <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                              {{ icon_arrow_list }}
+                            </button>
+                          {%- endif -%}
+                          <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                        </div>
+                      </div>
+                    </slider-component>
+                  {%- else -%}
+                    <div class="products-grid d-flex f-wrap">
+                      {%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+                        {%- liquid
+                          assign total = forloop.length
+                          if total > 3
+                              assign item_leng = 'item-underline pos-relative'
+                          else
+                              assign item_leng = 'item-no-underline'
+                          endif
+                        -%}
+                        <div class="products-grid__item {{ item_leng }} item--{{ total }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-left{% endif %}"
+                          {% if settings.animations_reveal_on_scroll %}
+                            data-cascade
+                            style="--animation-order: {{ forloop.index }};"
+                          {% endif %}
+                        >
+                          {% render 'card-product',
+                            card_product: product,
+                            media_aspect_ratio: settings.card_image_ratio,
+                            show_secondary_image: settings.show_secondary_image,
+                            show_vendor: false,
+                            show_vendor_mobile: false,
+                            show_rating: false,
+                            show_rating_mobile: false,
+                            show_quick_add: true,
+                            show_quick_add_mobile: true,
+                            show_swatch: false,
+                            show_swatch_mobile: false,
+                            show_wishlist: settings.show_wishlist,
+                            show_wishlist_mobile: settings.show_wishlist_mobile,
+                            card_button_text_size: settings.card_button_text_size,
+                            card_button_type: settings.card_button_type,
+                            card_button_transform: settings.card_button_transform,
+                            card_style_popup: 'advanced-default',
+                            product_cards_style: 'advanced-default',
+                            index: forloop.index,
+                            section_id: section.id
+                          %}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.show_view_all and block.settings.collection.url != blank and section.settings.type_style != 'special' -%}
+                    <a href="{{ block.settings.collection.url }}" class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}  button--transparent tab__view-all m-t mi-w" aria-label="{{ 'sections.featured_collection.view_all_tab' | t: collection_name: block.settings.heading }}" style="--m-t: 2rem; --mi-w: 25rem;">
+                      <span class="text">{{ 'sections.featured_collection.view_all_tab' | t: collection_name: block.settings.heading }}</span>
+                      {% render 'button-main-style' %}
+                    </a>
+                  {%- endif -%}
+                </div>
+							</template>
+						{%- endif -%}
+					</div>
+				{%- endfor-%}
+			</div>
+		</theme-tab>
+		{%- if section.settings.show_line_separator -%}
+      </div>
+    {%- endif -%}
+	</div>
+</div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "t:sections.featured-collection-tab.name",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.popup"]
+  },
+  "settings": [
+  {
+    "type": "header",
+    "content": "t:settings_schema.general.name"
+  },
+  {
+    "type": "select",
+    "id": "type_style",
+    "options": [
+      {
+        "value": "special",
+        "label": "t:settings_schema.layout.settings.style.options__1"
+      },
+      {
+        "value": "classic",
+        "label": "t:settings_schema.layout.settings.style.options__2"
+      }
+    ],
+    "default": "classic",
+    "label": "t:settings_schema.layout.name__2"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_line_separator",
+    "default": true,
+    "label": "t:sections.all.show_line_separator.label"
+  },
+  {
+    "type": "header",
+    "content": "t:settings_schema.contents.content"
+  },
+  {
+    "type": "text",
+    "id": "heading",
+    "default": "Featured collection",
+    "label": "t:sections.all.heading.label"
+  },
+  {
+    "type": "select",
+    "id": "heading_size",
+    "options": [
+    {
+      "value": "default",
+      "label": "t:sections.all.font_size.options"
+    },
+    {
+      "value": "xx-small",
+      "label": "t:sections.all.font_size.options__1"
+    },
+    {
+      "value": "x-small",
+      "label": "t:sections.all.font_size.options__2"
+    },
+    {
+      "value": "small",
+      "label": "t:sections.all.font_size.options__3"
+    },
+    {
+      "value": "medium",
+      "label": "t:sections.all.font_size.options__4"
+    },
+    {
+      "value": "large",
+      "label": "t:sections.all.font_size.options__5"
+    },
+    {
+      "value": "x-large",
+      "label": "t:sections.all.font_size.options__6"
+    },
+    {
+      "value": "xx-large",
+      "label": "t:sections.all.font_size.options__7"
+    },
+    {
+      "value": "xxx-large",
+      "label": "t:sections.all.font_size.options__8"
+    }],
+    "default": "default",
+    "label": "t:sections.all.font_size.label__2"
+  },
+  {
+    "type": "richtext",
+    "id": "text",
+    "default": "<p>Pair text with an image to focus on your chosen collection. Add details on availability, style, or even provide a review.</p>",
+    "label": "t:sections.all.text.label"
+  },
+  {
+    "type": "text_alignment",
+    "id": "text_alignment",
+    "label": "t:sections.all.text_alignment.label",
+    "default": "left"
+  },
+  {
+    "type": "range",
+    "id": "products_to_show",
+    "min": 1,
+    "max": 6,
+    "step": 1,
+    "default": 5,
+    "label": "t:sections.all.product.product_list_limit"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_view_all",
+    "default": true,
+    "label": "t:sections.featured-collection.settings.show_view_all.label"
+  },
+  {
+    "type": "header",
+    "content": "t:settings_schema.colors.name"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.product.header.content"
+  },
+  {
+    "type": "color_scheme",
+    "id": "product_color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+      "type": "header",
+      "content": "t:sections.all.carousel.label",
+      "info": "t:sections.featured-collection-tab.settings.info"
+  },
+  {
+      "type": "select",
+      "id": "arrows_type",
+      "options": [
+          {
+              "value": "none",
+              "label": "t:sections.all.carousel.arrows.options"
+          },
+          {
+              "value": "all",
+              "label": "t:sections.all.carousel.arrows.options__1"
+          },
+          {
+              "value": "lg",
+              "label": "t:sections.all.carousel.arrows.options__2"
+          },
+          {
+              "value": "md",
+              "label": "t:sections.all.carousel.arrows.options__3"
+          },
+          {
+              "value": "sm",
+              "label": "t:sections.all.carousel.arrows.options__4"
+          },
+          {
+              "value": "xs",
+              "label": "t:sections.all.carousel.arrows.options__5"
+          }],
+      "default": "all",
+      "label": "t:sections.all.carousel.arrows.label"
+  },
+  {
+      "type": "checkbox",
+      "id": "carousel_infinite_scroll",
+      "default": false,
+      "label": "t:sections.all.carousel.heading_1"
+  },
+  {
+      "type": "select",
+      "id": "enable_pagination_type",
+      "options": [
+      {
+          "value": "all",
+          "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+          "value": "lg",
+          "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+          "value": "md",
+          "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+          "value": "sm",
+          "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+          "value": "xs",
+          "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+      "default": "all",
+      "label": "t:sections.all.carousel.pagination.label__1"
+  },
+  {
+      "type": "select",
+      "id": "pagination_type",
+      "options": [
+          {
+              "value": "none",
+              "label": "t:sections.all.carousel.pagination.options"
+          },
+          {
+              "value": "dots",
+              "label": "t:sections.all.carousel.pagination.options__1"
+          },
+          {
+              "value": "progressbar",
+              "label": "t:sections.all.carousel.pagination.options__2"
+          },
+          {
+              "value": "fraction",
+              "label": "t:sections.all.carousel.pagination.options__3"
+          }],
+      "default": "progressbar",
+      "label": "t:sections.all.carousel.pagination.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.animation.content"
+  },
+  {
+    "type": "select",
+    "id": "image_behavior",
+    "options": [
+    {
+      "value": "none",
+      "label": "t:sections.all.animation.image_behavior.options__1.label"
+    },
+    {
+      "value": "ambient",
+      "label": "t:sections.all.animation.image_behavior.options__2.label"
+    },
+    {
+      "value": "zoom-in",
+      "label": "t:sections.all.animation.image_behavior.options__5.label"
+    }],
+    "default": "none",
+    "label": "t:sections.all.animation.image_behavior.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 30
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 30
+  }],
+  "blocks": [{
+    "type": "tab",
+    "name": "t:sections.featured-collection-tab.blocks.tab.name",
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Tab name",
+      "label": "t:sections.all.tab_name.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.all.collection.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "header",
+      "content": "t:settings_schema.layout.settings.content_style.label"
+    },
+    {
+      "type": "color",
+      "id": "colors_text",
+      "default": "#000",
+      "label": "t:sections.all.colors.colors_text"
+    }]
+  }],
+  "presets": [{
+    "name": "t:sections.featured-collection-tab.presets.name",
+    "blocks": [
+    {
+      "type": "tab"
+    },
+    {
+      "type": "tab"
+    },
+    {
+      "type": "tab"
+    }]
+  }]
+}
+{% endschema %}

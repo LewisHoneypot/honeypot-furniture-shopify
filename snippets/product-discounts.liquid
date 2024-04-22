@@ -1,0 +1,34 @@
+{%- liquid
+    assign current_variant = product.selected_or_first_available_variant
+    if current_variant.compare_at_price > current_variant.price
+        assign product_discount_price = current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round | append: '%' | prepend: '-'
+        assign product_discount_text = product_discount_price | append: ' off'
+    endif
+-%}
+
+{%- if settings.show_product_discounts and product_discount_text != blank -%}
+    {%- if check_discount_price -%}
+        <span class="price-discount price-item price-item--sale price-item--last d-inline-block">
+            ({{ product_discount_price }})
+        </span>
+    {%- else -%}
+        <div class="product-discount pos-absolute left-0 right-0 z-index-1 {{ settings.discounts_text_size | prepend: 'text-size-' }} {{ class_discount }}" style="--color-foreground: {{ settings.discounts_colors_text }}; --color-background: {{ settings.discounts_colors_background }};">
+            <div class="discount-box d-flex o-h p-extend" style="--p-extend: 0.05rem 0;">
+                <div class="banner-discount d-flex a-i-center">
+                    {%- for i in (1..10) -%}
+                        <span class="banner-discount__item f-italic">
+                            {{ product_discount_text }}
+                        </span>
+                    {%- endfor -%}
+                </div>
+                <div class="banner-discount d-flex a-i-center">
+                    {%- for i in (1..10) -%}
+                        <span class="banner-discount__item f-italic">
+                            {{ product_discount_text }}
+                        </span>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    {%- endif -%}
+{%- endif -%}

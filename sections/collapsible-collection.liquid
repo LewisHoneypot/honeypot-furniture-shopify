@@ -1,0 +1,381 @@
+<div class="section__collapse-coll spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    style="
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    "
+>
+    <div class="{{ section.settings.section_width }} m-auto"{% if section.settings.section_width == 'customized-width' %} style="--page-width:{{ section.settings.customize_width }}px;"{% endif %}>
+        <div class="collapse-coll">
+            {%- unless section.settings.heading == blank -%}
+                <div class="p-w__header m-spacing" style=" --m-spacing-b: {{ section.settings.heading_margin_bottom }}px;">
+                    <div class="p-w__header--wrapper {{  section.settings.text_alignment }}">
+                        <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                            {{ section.settings.heading | escape }}
+                        </h2>
+                    </div>
+                </div>
+            {%- endunless -%}
+            <div class="p-w__content">
+                <collapse-collection class="collapse-coll__row d-block">
+                    {%- for block in section.blocks -%}
+                        <div class="collapse-coll__item">
+                            <div class="item d-flex j-c-between pos-relative c-pointer">
+                                {%- liquid
+                                    assign heading = block.settings.heading | default: block.settings.collection.title
+                                    assign description = block.settings.text | default: block.settings.collection.description
+                                    assign image_src = block.settings.image | default: block.settings.collection.image
+                                    assign image_width = block.settings.image.width | default: block.settings.collection.image.width
+                                    assign image_height = block.settings.image.height | default: block.settings.collection.image.height
+                                    assign button_link = block.settings.button_link | default: block.settings.collection.url
+                                -%}
+                                <div class="item-content w-100">
+                                    <div class="item-content__head d-flex">
+                                        <div class="item-content__count {{ section.settings.heading_size_block | prepend: 'heading-size-' }} m-0">
+                                            <span class="visually-hidden"></span>
+                                        </div>
+                                        {%- if block.settings.heading != blank or block.settings.collection.title != blank -%}
+                                            <div class="item-content__heading">
+                                                <h3 class="{{ section.settings.heading_size_block | prepend: 'heading-size-' }} m-0">
+                                                    {{ heading | escape }}
+                                                </h3>
+                                            </div>
+                                        {%- endif -%}
+                                    </div>
+                                    <div class="item-content__text accordion__content m-w" style="--m-w:93.3rem">
+                                        {%- if block.settings.text != blank or block.settings.collection.description != blank -%}
+                                            <div class="item-content__desc rte">
+                                                {{ description }}
+                                            </div>
+                                        {%- endif -%}
+                                        {%- if block.settings.button_label != blank -%}
+                                            <div class="item-content__button">
+                                                <a {% if button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ button_link }}"{% endif %}
+                                                    class="button text-size-medium{% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %} {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}"
+                                                    aria-label="{{ block.settings.button_label }}"
+                                                >
+                                                    <span class="text">{{ block.settings.button_label | escape }}</span>
+                                                    {% render 'button-main-style' %}
+                                                </a>
+                                            </div>
+                                        {%- endif -%}
+                                    </div>
+                                </div>
+                                <div class="item-image accordion__image w-100" style="--m-w : 58.8rem">
+                                    {%- if block.settings.image != blank or block.settings.collection.image != blank -%}
+                                        <img
+                                            srcset="{{ image_src | image_url }} {{ block.settings.collection.image.width }}w"
+                                            class="w-100 h-100 o-f-cover motion-reduce"
+                                            src="{{ image_src | image_url: width: 750 }}"
+                                            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+                                            alt="{{ block.settings.collection.image.alt | default: block.settings.collection.title }}"
+                                            width="{{ image_width }}"
+                                            height="{{ image_height }}"
+                                            loading="lazy"
+                                        >
+                                    {%- else -%}
+                                        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-100 h-100' }}
+                                    {%- endif -%}
+                                </div>
+                                <div class="item-icon pos-absolute">
+                                    {% render 'icon-plus' %}
+                                </div>
+                            </div>
+                        </div>
+                    {%- endfor -%}
+                </collapse-collection>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.collapsible_collection.name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+        "groups": ["header", "footer", "custom.popup"]
+    },
+    "settings": [
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+        },
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "customized-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1400,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.all.heading.label",
+        "default": "Collapsible heading"
+    },
+    {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__2"
+    },
+    {
+        "type": "range",
+        "id": "heading_margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.spacing.heading_margin_bottom",
+        "default": 30
+    },
+    {
+        "type": "select",
+        "id": "heading_size_block",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__6"
+    },
+    {
+        "type": "text_alignment",
+        "id": "text_alignment",
+        "label": "t:sections.all.text_alignment.label",
+        "default": "left"
+    },
+    {
+        "type": "select",
+        "id": "button_transparent",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.button_style.label__2"
+        },
+        {
+            "value": "transparent",
+            "label": "t:sections.all.button_style.label__3"
+        }],
+        "default": "transparent",
+        "label": "t:sections.all.button_style.label__1"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 35
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 43
+    }],
+    "blocks": [
+    {
+        "type": "collapsible_row",
+        "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+        "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.all.collection.label"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "info": "t:sections.all.heading.info__3"
+        },
+
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.all.text.label",
+            "info": "t:sections.all.text.info__1"
+        },
+        {
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "t:sections.all.button_label.label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.all.button_link.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 10
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 10
+        }]
+    }],
+    "presets": [
+    {
+        "name": "t:sections.collapsible_collection.presets.name",
+        "blocks": [
+        {
+            "type": "collapsible_row"
+        },
+        {
+            "type": "collapsible_row"
+        },
+        {
+            "type": "collapsible_row"
+        },
+        {
+            "type": "collapsible_row"
+        }]
+    }]
+}
+{% endschema %}

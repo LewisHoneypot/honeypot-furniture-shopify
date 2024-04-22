@@ -1,0 +1,595 @@
+{%- if section.blocks.size > 0 -%}
+  {%- liquid
+    assign highest_ratio = 1
+    assign sizes = '(min-width: 750px) 50vw, 100vw'
+    for block in section.blocks
+      if block.settings.image.aspect_ratio > highest_ratio
+        assign highest_ratio = block.settings.image.aspect_ratio
+      endif
+    endfor
+    assign item_full_width = false
+    if section.blocks.size == 1
+      assign item_full_width = true
+      assign sizes = '100vw'
+    endif
+    capture icon_arrow_list
+      render 'icon-arrow-list'
+    endcapture
+    capture icon_arrow_long
+      render 'icon-arrow-long'
+    endcapture
+  -%}
+  <div class="section__lookbook spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    style="--padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+  >
+    <div class="page-width m-auto">
+      {%- if section.settings.heading != blank or section.settings.text != blank -%}
+        <div class="p-w__header">
+          <div class="p-w__header--wrapper d-flex f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
+            {%- if section.settings.heading != blank or section.settings.text != blank -%}
+              <div class="p-w__header--item">
+                {%- if section.settings.heading != blank -%}
+                  <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
+                {%- endif-%}
+                {%- if section.settings.text != blank -%}
+                  <div class="p-w__text rte m-t" style="--m-t: 1rem;">{{ section.settings.text }}</div>
+                {%- endif-%}
+              </div>
+            {%- endif -%}
+            {%- if section.settings.button_label != blank -%}
+              <div class="p-w__header--item">
+                <a {% if section.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}  button--transparent mi-w" aria-label="{{ section.settings.link_label | escape }}" style="--mi-w: 24rem;">
+                  <span class="text">{{ section.settings.button_label | escape }}</span>
+                  {% render 'button-main-style' %}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+      <div class="p-w__content">
+        <slider-component class="carousel{% if item_full_width %} carousel--full{% endif %} d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" data-space-between="10" data-type-pagination="{{ section.settings.pagination_type }}" data-item-to-show-desktop="1.215" data-item-to-show-tablet="1" data-item-to-show-mobile="1">
+          <div class="swiper grid-scroll d-block pos-relative no-js-overflow-x"> 
+            <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Lookbook" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1.25;">
+              {%- for block in section.blocks -%}
+                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if item_full_width %} grid__item-full grid__item-scroll--full{% endif %}" {{ block.shopify_attributes }}>
+                  <div class="item pos-relative">
+                    <div class="item__media d-block color-foreground">
+                      <div class="media media--transparent media--{{ section.settings.image_ratio }} pos-relative o-h d-block"
+                        {% if section.settings.image_ratio == 'adapt' %}
+                          {% if block.settings.image != blank %}
+                            style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+                          {% else %}
+                            style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                          {% endif %}
+                        {% endif %}
+                      >
+                        {%- if block.settings.image != blank -%}
+                          {{
+                            block.settings.image | image_url: width: 3840 | image_tag:
+                            loading: 'lazy',
+                            sizes: sizes,
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                            class: 'motion-reduce'
+                          }}
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                    <theme-lookbook class="lookbook d-block">
+                      {%- assign has_product = false -%}
+                      {%- for i in (1..5) -%}
+                        {%- capture product -%}product_{{ i }}{%- endcapture -%}
+                        {%- capture horizontal -%}horizontal_{{ i }}{%- endcapture -%}
+                        {%- capture vertical -%}vertical_{{ i }}{%- endcapture -%}
+                        {%- liquid
+                          assign product = block.settings[product]
+                          assign horizontal = block.settings[horizontal]
+                          assign vertical = block.settings[vertical]
+                        -%}
+                        {%- if product != blank -%}
+                          {%- assign has_product = true -%}
+                          <lookbook-point class="lookbook__point d-block pos-absolute l-h-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" 
+                            data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}" 
+                            {% if settings.animations_reveal_on_scroll %}
+                              style="--animation-order: {{ forloop.index }}; left: {{ horizontal }}%; top: {{ vertical }}%;"
+                            {% else %}
+                              style="left: {{ horizontal }}%; top: {{ vertical }}%;"
+                            {% endif %}
+                          >
+                            <button class="lookbook__point-button d-block t-button p-0 b-none c-pointer b-circle focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.view' | t: title : product.title }}">&nbsp;</button>
+                            <noscript>
+                              <a href="{{ product.url }}" class="lookbook__point-button d-block t-button c-pointer b-none b-circle u-none color-foreground focus-inset">
+                                <span class="visually-hidden">{{ 'general.lookbook.view' | t: title : product.title }}</span>
+                                &nbsp;
+                              </a>
+                            </noscript>
+                            <div class="lookbook__point-popup pos-absolute z-index-1 global-settings-popup gradient d-none no-js-hidden" id="LOOKBOOK-{{ block.id }}-{{ product.id }}-{{ forloop.index }}">
+                              <template>
+                                <div class="item__card pos-relative animate-arrow">
+                                  <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
+                                    <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
+                                      <span class="link-style">{{ product.title | escape }}</span>
+                                    </a>
+                                  </h3>
+                                  <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
+                                    {% render 'price',
+                                      product: product,
+                                      price_class: ''
+                                    %}
+                                    {{ icon_arrow_long }}
+                                  </div>
+                                </div>
+                              </template>
+                            </div>
+                          </lookbook-point>
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- if has_product -%}
+                        <lookbook-drawer-opener class="lookbook__drawer-opener d-none d-block-xl pos-absolute o-h no-js-hidden" data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}">
+                          <button class="d-block t-button b-none c-pointer o-h l-h-1 gradient" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.show' | t }}">
+                            <span class="text">{{ 'general.lookbook.show' | t }}</span>
+                          </button>
+                        </lookbook-drawer-opener>
+                        <lookbook-drawer id="LOOKBOOK-{{ block.id }}-{{ section.id }}" class="lookbook__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex a-i-end j-c-end no-js-hidden">
+                          <div class="side-drawer no-animation--popup w-100">
+                            <div id="Drawer-Overlay-LOOKBOOK-{{ block.id }}-{{ section.id }}" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+                            <template>
+                              <div class="lookbook__drawer-inner drawer__inner gradient d-flex f-column o-h color-background-1" role="dialog" aria-modal="true" aria-label="{{ 'general.lookbook.view_all' | t }}" tabindex="-1">
+                                <div class="lookbook__drawer-header drawer__header d-flex j-c-between a-i-center pos-relative">
+                                  <h2 class="lookbook__drawer-heading drawer__heading break m-0">{{ 'general.lookbook.view_all' | t }}</h2>
+                                  <button class="lookbook__drawer-close drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('lookbook-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+                                </div>
+                                <div class="lookbook__drawer-wrapper drawer__wrapper d-flex f-nowrap overflow-x g-gap p-b" style="--g-gap: 1rem; --p-b: 1rem;">
+                                  {%- for i in (1..5) -%}
+                                    {%- capture product -%}product_{{ i }}{%- endcapture -%}
+                                    {%- assign product = block.settings[product] -%}
+                                    {%- if product != blank -%}
+                                      {%- liquid
+                                        assign ratio = product.featured_media.aspect_ratio
+                                        if ratio == 0 or ratio == null
+                                          assign ratio = 1
+                                        endif
+                                      -%}
+                                      <div class="item__card-drawer pos-relative">
+                                        <div class="item__card-media o-h">
+                                          <div class="media media--transparent media--adapt pos-relative" style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                                          >
+                                            {%- if product.featured_media -%}
+                                              <img
+                                                srcset="{{ product.featured_media | image_url: width: 550 }}"
+                                                src="{{ product.featured_media | image_url: width: 550 }}"
+                                                sizes="(min-width: 750px) 550, calc(100vw - 30px)"
+                                                alt="{{ product.featured_media.alt | escape }}"
+                                                class="motion-reduce"
+                                                loading="lazy"
+                                                width="{{ product.featured_media.width }}"
+                                                height="{{ product.featured_media.height }}"
+                                              >
+                                            {%- else -%}
+                                              {{ 'product-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+                                            {%- endif -%}
+                                          </div>
+                                        </div>
+                                        <div class="item__card-content m-t" style="--m-t: 1.5rem;">
+                                          <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
+                                            <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
+                                              <span class="link-style">{{ product.title | escape }}</span>
+                                            </a>
+                                          </h3>
+                                          <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
+                                            {% render 'price',
+                                              product: product,
+                                              price_class: ''
+                                            %}
+                                            {{ icon_arrow_long }}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    {%- endif -%}
+                                  {%- endfor-%}
+                                </div>
+                              </div>
+                            </template>
+                          </div>
+                        </lookbook-drawer>
+                      {%- endif -%}
+                    </theme-lookbook>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+            {%- if section.blocks.size > 1 -%}
+              <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                {%- if section.settings.arrows_type != 'none' -%}
+                  <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                    {{ icon_arrow_list }}
+                  </button>
+                  <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                    {{ icon_arrow_list }}
+                  </button>
+                {%- endif -%}
+                <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+              </div>
+            {%- endif -%}
+          </div>
+        </slider-component>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.lookbook.name",
+  "class": "section",
+  "tag": "section",
+  "max_blocks": 2,
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.popup"]
+  },
+  "settings": [
+  {
+    "type": "text",
+    "id": "heading",
+    "default": "Images",
+    "label": "t:sections.all.heading.label"
+  },
+  {
+    "type": "richtext",
+    "id": "text",
+    "default": "<p>Share information about your brand with your customers.</p>",
+    "label": "t:sections.all.text.label"
+  },
+  {
+    "type": "text",
+    "id": "button_label",
+    "default": "Button label",
+    "label": "t:sections.all.button_label.label"
+  },
+  {
+    "type": "url",
+    "id": "button_link",
+    "label": "t:sections.all.button_link.label"
+  },
+  {
+    "type": "select",
+    "id": "image_ratio",
+    "options": [
+      {
+        "value": "adapt",
+        "label": "t:sections.all.image_ratio.options__1"
+      },
+      {
+        "value": "portrait",
+        "label": "t:sections.all.image_ratio.options__2"
+      },
+      {
+        "value": "square",
+        "label": "t:sections.all.image_ratio.options__3"
+      },
+      {
+        "value": "circle",
+        "label": "t:sections.all.image_ratio.options__4"
+      },
+      {
+        "value": "landscape",
+        "label": "t:sections.all.image_ratio.options__5"
+      }],
+    "default": "adapt",
+    "label": "t:sections.all.image_ratio.label"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.carousel.label"
+  },
+  {
+    "type": "select",
+    "id": "arrows_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.arrows.options"
+      },
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.arrows.label"
+  },
+  {
+    "type": "checkbox",
+    "id": "carousel_infinite_scroll",
+    "default": false,
+    "label": "t:sections.all.carousel.heading_1"
+  },
+  {
+    "type": "select",
+    "id": "enable_pagination_type",
+    "options": [
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.pagination.label__1"
+  },
+  {
+    "type": "select",
+    "id": "pagination_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.pagination.options"
+      },
+      {
+        "value": "dots",
+        "label": "t:sections.all.carousel.pagination.options__1"
+      },
+      {
+        "value": "progressbar",
+        "label": "t:sections.all.carousel.pagination.options__2"
+      },
+      {
+        "value": "fraction",
+        "label": "t:sections.all.carousel.pagination.options__3"
+      }],
+    "default": "progressbar",
+    "label": "t:sections.all.carousel.pagination.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 20
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 20
+  }],
+  "blocks": [
+  {
+    "type": "image",
+    "name": "t:sections.lookbook.blocks.image.name",
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lookbook.blocks.image.settings.header__1.content"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "t:sections.all.product.label"
+    },
+    {
+      "type": "range",
+      "id": "horizontal_1",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.horizontal.label",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "vertical_1",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.vertical.label",
+      "default": 26
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lookbook.blocks.image.settings.header__2.content"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "t:sections.all.product.label"
+    },
+    {
+      "type": "range",
+      "id": "horizontal_2",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.horizontal.label",
+      "default": 19
+    },
+    {
+      "type": "range",
+      "id": "vertical_2",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.vertical.label",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lookbook.blocks.image.settings.header__3.content"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "t:sections.all.product.label"
+    },
+    {
+      "type": "range",
+      "id": "horizontal_3",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.horizontal.label",
+      "default": 58
+    },
+    {
+      "type": "range",
+      "id": "vertical_3",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.vertical.label",
+      "default": 44
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lookbook.blocks.image.settings.header__4.content"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "t:sections.all.product.label"
+    },
+    {
+      "type": "range",
+      "id": "horizontal_4",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.horizontal.label",
+      "default": 53
+    },
+    {
+      "type": "range",
+      "id": "vertical_4",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.vertical.label",
+      "default": 75
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lookbook.blocks.image.settings.header__5.content"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "t:sections.all.product.label"
+    },
+    {
+      "type": "range",
+      "id": "horizontal_5",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.horizontal.label",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "vertical_5",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:sections.lookbook.blocks.image.settings.vertical.label",
+      "default": 50
+    }]
+  }],
+  "presets": [
+  {
+    "name": "t:sections.lookbook.presets.name",
+    "blocks": [
+    {
+      "type": "image"
+    },
+    {
+      "type": "image"
+    }]
+  }]
+}
+{% endschema %}

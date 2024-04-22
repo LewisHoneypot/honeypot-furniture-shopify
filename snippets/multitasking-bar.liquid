@@ -1,0 +1,273 @@
+{%- if settings.show_multitasking_bar -%}
+	{{ 'component-multitasking-bar.css' | asset_url | stylesheet_tag }}
+	{%- liquid
+		assign show_multitasking_bar = false
+		if settings.multitasking_show_recently_viewed or settings.multitasking_show_search or settings.multitasking_show_account or settings.multitasking_show_cart or settings.multitasking_show_social or settings.multitasking_show_back_to_top
+			assign show_multitasking_bar = true
+		endif
+
+		if settings.multitasking_show_social
+			assign show_social_media = false
+			if settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_instagram_link != blank or settings.social_tumblr_link != blank or settings.social_snapchat_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank or settings.social_tiktok_link != blank or settings.show_newsletter_popup
+				assign show_social_media = true
+			endif
+		endif
+		capture icon_caret
+			render 'icon-caret'
+		endcapture
+
+    	assign multitasking_style = settings.multitasking_style
+		assign multitasking_collapse = settings.multitasking_collapse
+
+		capture icon_cart
+			render 'icon-cart', style_icon: 'modern-no-bg'
+		endcapture
+		capture icon_search
+			render 'icon-search', style_icon: 'modern-no-bg'
+		endcapture
+		capture icon_account
+			render 'icon-account', style_icon: 'modern-no-bg'
+		endcapture
+	-%}
+
+	{%- if show_multitasking_bar -%}
+		<multitasking-bar class="multitasking-bar multitasking-bar--style-{{ multitasking_style }} pos-fixed h-auto z-index-2 gradient d-none e-none no-js-hidden{% if multitasking_collapse %} multitasking-bar-collapse{% endif %}" id="multitasking-bar" data-breakpoint="(min-width: 990px)" style="--right: 0.5%;--hover-button-label: {{ settings.multitasking_secondary_button_label }};--hover-button-background: {{ settings.multitasking_secondary_button_background }}; --icon-color: {{ settings.multitasking_icon_color }}; --background: {{ settings.multitasking_background }};">
+			<recently-viewed-products data-bar="#multitasking-bar"></recently-viewed-products>
+			{%- if show_social_media -%}
+				<div class="multi-t__links multi-t__tab e-none pos-fixed z-index-10 gradient" id="multitasking-tab-links" style="--top: 35%;">
+					<div class="multi-t__content">
+						<div class="multi-t__list pos-relative w-100" id="multitasking-links-list">
+							{%- render 'social-icons',
+							class: 'd-flex j-c-center a-i-center pos-relative',
+							itemClass: 'pos-relative d-flex j-c-center a-i-center w-100'
+							-%}
+						</div>
+					</div>
+				</div>
+			{%- endif -%}
+			<div class="multi-t__wrap pos-relative d-flex f-column" id="multitasking-wrap">
+				{%- if settings.multitasking_show_recently_viewed -%}
+					<button class="multi-t__button p-0 d-flex a-i-center j-c-center pos-relative c-pointer t-button b-none gradient active" data-target="multitasking-tab-products" data-side-drawer-desktop="#Drawer-Multitasking-Bar-Desktop" data-side-drawer="#Drawer-Multitasking-Bar" type="button" aria-label="{{ 'multitasking_bar.title' | t }}">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.1 479.39" class="icon icon-recently-viewed" aria-hidden="true" focusable="false" role="presentation">
+							<path d="M250.58,479.39c-8.32-1.31-16.7-2.36-25-4-58.29-11.37-105.26-40.94-141.09-88.24-6.86-9-6-18.73,1.94-24.57,7.7-5.66,17.09-3.57,23.74,5.32A197.18,197.18,0,0,0,285.56,446.7c72.16-6.1,127.32-40.21,164.81-101.93,22.25-36.62,30.95-76.91,28.1-119.78C473.08,143.56,418.19,68.58,336,42.73,264,20.1,197.59,33,138.89,80.58c-39.2,31.76-62.43,73.51-71.65,123.08a18.25,18.25,0,0,0,0,2.25c3.3-3.35,6-6.23,8.87-9,7-6.73,16.75-6.83,23.16-.32s6.29,16-.37,22.79q-19.62,19.91-39.52,39.51c-7.84,7.69-18.7,6.59-24.91-2.55Q18.49,232.88,3,209.09c-5.28-8.05-3.26-17.8,4.37-22.77,7.4-4.82,16.78-2.75,22.34,5,1.69,2.35,3.28,4.77,4.95,7.2,3.88-13.53,6.68-26.87,11.5-39.44C77.69,76.7,136.3,23.79,222.64,5.76,310-12.48,385.78,12.89,447.42,77.41c35.21,36.85,55.29,81.56,61.78,132.24.56,4.41,1.26,8.8,1.9,13.21v33.93c-.4,2.94-.85,5.87-1.2,8.81-5.35,45.62-21.73,86.8-50.45,122.74q-56,70.11-144.41,87.05c-8.78,1.66-17.68,2.68-26.53,4Z"/>
+							<path d="M247.61,175.92q0-35.19,0-70.37c0-10.53,6.54-17.52,16.19-17.43,9.28.1,15.7,7.19,15.7,17.45q0,64.62-.07,129.25a8.58,8.58,0,0,0,3.86,7.83c27.65,20.75,55.29,41.54,82.66,62.66A24.82,24.82,0,0,1,374,316.64c2.14,6.68-1.19,13.35-6.94,16.69-6.18,3.6-12.43,3.38-18.23-.89-10.44-7.69-20.78-15.53-31.15-23.31-20.74-15.56-41.43-31.21-62.26-46.66a18.08,18.08,0,0,1-7.9-15.69C247.68,223.16,247.61,199.54,247.61,175.92Z"/>
+						</svg>
+					</button>
+				{%- endif -%}
+				{%- if settings.multitasking_show_search -%}
+					<side-drawer-opener data-side-drawer="#Drawer-Search" class="multi-t__button">
+						<button class="multi-t__button pos-relative t-button b-none b-circle c-pointer d-flex j-c-center a-i-center p-0 color-foreground bg-transparent focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}" data-target="multitasking-tab-search">
+							{{ icon_search }}
+						</button>
+						<noscript>
+							<a href="{{ routes.search_url }}" class="multi-t__button pos-relative link u-none color-foreground focus-inset">
+							{{ icon_search }}
+							<span class="visually-hidden">{{ 'general.search.search' | t }}</span>
+							</a>
+						</noscript>
+					</side-drawer-opener>
+				{%- endif -%}
+				{%- if settings.multitasking_show_account -%}
+					<side-drawer-opener data-side-drawer="#Drawer-Account" class="multi-t__button">
+						<button class="multi-t__button pos-relative t-button b-none b-circle c-pointer d-flex j-c-center a-i-center p-0 color-foreground bg-transparent focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{% if customer %}{{ 'customer.account_fallback' | t }}{% else %}{{ 'customer.log_in' | t }}{% endif %}" data-target="multitasking-tab-account">
+							{{ icon_account }}
+						</button>
+						<noscript>
+							<a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="multi-t__button pos-relative link u-none color-foreground focus-inset">
+							{{ icon_account }}
+							<span class="visually-hidden">
+								{%- liquid
+								if customer
+									echo 'customer.account_fallback' | t
+								else
+									echo 'customer.log_in' | t
+								endif
+								-%}
+							</span>
+							</a>
+						</noscript>
+					</side-drawer-opener>
+				{%- endif -%}
+				{%- if settings.multitasking_show_cart -%}
+					{%- if settings.cart_type == 'drawer' -%}
+					<side-drawer-opener data-side-drawer="#Cart-Drawer" class="multi-t__button">
+						<button class="multi-t__button pos-relative t-button b-none b-circle c-pointer d-flex j-c-center a-i-center p-0 color-foreground bg-transparent focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{{ 'templates.cart.cart_items' | t: count: cart.item_count }}" data-target="multitasking-tab-cart">
+						{{ icon_cart }}
+						{%- if cart.item_count < 100 -%}
+							<div class="cart-count-bubble l-h-1 pos-absolute b-circle d-flex j-c-center a-i-center cart-icon-bubble">
+							<span aria-hidden="true">{{ cart.item_count }}</span>
+							<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+							</div>
+						{%- endif -%}
+						</button>
+						<noscript>
+						<a href="{{ routes.cart_url }}" class="multi-t__button pos-relative link u-none color-foreground focus-inset">
+							{{ icon_cart }}
+							<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+							{%- if cart.item_count < 100 -%}
+							<div class="cart-count-bubble l-h-1 pos-absolute b-circle d-flex j-c-center a-i-center cart-icon-bubble">
+								<span aria-hidden="true">{{ cart.item_count }}</span>
+								<span class="visually-hidden">
+								{{- 'sections.header.cart_count' | t: count: cart.item_count -}}
+								</span>
+							</div>
+							{%- endif -%}
+						</a>
+						</noscript>
+					</side-drawer-opener>
+					{%- else -%}
+					<a href="{{ routes.cart_url }}" class="multi-t__button pos-relative toolbox__item toolbox__item--cart d-flex j-c-center a-i-center p-0 u-none color-foreground pos-relative f-a-none focus-inset" data-target="multitasking-tab-cart">
+						{{ icon_cart }}
+						<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+						{%- if cart.item_count < 100 -%}
+						<div class="cart-count-bubble l-h-1 pos-absolute b-circle d-flex j-c-center a-i-center cart-icon-bubble">
+							<span aria-hidden="true">{{ cart.item_count }}</span>
+							<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+						</div>
+						{%- endif -%}
+					</a>
+					{%- endif -%}
+				{%- endif -%}
+				{%- if show_social_media -%}
+					<button class="multi-t__button p-0 d-flex a-i-center j-c-center pos-relative c-pointer t-button b-none gradient" data-target="multitasking-tab-links" type="button" aria-label="{{ 'multitasking_bar.social' | t }}">
+						{% render 'icon-share' %}
+					</button>
+				{%- endif -%}
+				{%- if settings.multitasking_show_back_to_top -%}
+					<button class="multi-t__button p-0 d-flex a-i-center j-c-center pos-relative c-pointer t-button b-none gradient" data-target="back-to-top" role="button" aria-label="{{ 'multitasking_bar.back_to_top' | t }}">
+						{% render 'icon-arrow' %}
+					</button>
+				{%- endif -%}
+				{%- if multitasking_style != 'modern' -%}<span class="glider"></span>{%- endif -%}
+				{%- if multitasking_collapse -%}
+					<button class="multi-t__button multi-t__button-collapse p-0 d-flex a-i-center j-c-center pos-relative c-pointer t-button b-none gradient" data-target="collapse" role="button" aria-label="{{ 'accessibility.collapse' | t }}">
+						{% render 'icon-plus' %}
+					</button>
+				{%- endif -%}
+			</div>
+		</multitasking-bar>
+		<multitasking-desktop-bar class="multitasking-desktop-bar d-block d-none-mw-md no-js-hidden" id="multitasking-desktop-bar" data-breakpoint="(min-width: 990px)">
+			<side-drawer class="multi-t__products drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex a-i-end j-c-end" data-moved="true" id="Drawer-Multitasking-Bar-Desktop">
+				<div class="side-drawer no-animation--popup w-100">
+					<div id="Drawer-Overlay-Multitasking-Bar" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+					<div class="multi-t__drawer-inner gradient d-flex pos-absolute pos-absolute-c-c p-extend f-column o-h cus-scrollbar" role="dialog" aria-modal="true" aria-label="{{ 'multitasking_bar.title' | t }}" tabindex="-1" style="--p-extend: 3.2rem">
+						<div class="multi-t__drawer-header d-flex j-c-between a-i-center pos-relative c-gap" style="--c-gap: 2rem">
+							<h2 class="multi-t__drawer-heading break m-0">{{ 'multitasking_bar.title' | t }}</h2>
+							<button class="drawer__close d-block t-button b-none b-circle c-pointer button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+						</div>
+						<recently-viewed-products class="d-block" data-handle="{{ product.handle }}" data-template="card" data-bar="#multitasking-desktop-bar" data-breakpoint="(min-width: 990px)">
+							<slider-component class="carousel d-block pos-relative" data-space-between="15" data-type-pagination="progressbar" data-item-to-show-desktop="3" data-item-to-show-tablet="2" data-item-to-show-mobile="1">
+								<div class="swiper d-block pos-relative no-js-overflow-x">
+									<div class="swiper-wrapper multi-t__list-product">
+										<div class="multi-t__list-empty h3 center m-0 d-block w-100">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-no-product" aria-hidden="true" focusable="false" role="presentation" xml:space="preserve">
+												<path d="M360.967,130.599c-4.06-0.818-8.018,1.8-8.841,5.86c-0.823,4.06,1.801,8.018,5.86,8.841
+												c1.147,0.232,2.013,1.286,2.013,2.45v160c0,1.355-1.145,2.5-2.5,2.5H179.676c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5H357.5
+												c9.649,0,17.5-7.851,17.5-17.5v-160C375,139.46,369.099,132.247,360.967,130.599z"></path>
+												<path d="M274.824,130.25H97.5c-9.649,0-17.5,7.851-17.5,17.5v160c0,8.063,5.48,15.046,13.326,16.982
+												c0.604,0.149,1.208,0.221,1.803,0.221c3.369,0,6.432-2.287,7.276-5.705c0.992-4.021-1.463-8.086-5.484-9.078
+												c-0.955-0.235-1.92-1.143-1.92-2.42v-160c0-1.355,1.145-2.5,2.5-2.5h177.324c4.142,0,7.5-3.357,7.5-7.5
+												S278.966,130.25,274.824,130.25z"></path>
+												<path d="M235.363,170.798c-2.655-0.363-5.3-0.548-7.863-0.548c-31.706,0-57.5,25.794-57.5,57.5c0,2.563,0.185,5.209,0.548,7.863
+												c0.515,3.759,3.731,6.483,7.421,6.483c0.339,0,0.682-0.023,1.027-0.07c4.104-0.562,6.975-4.345,6.413-8.448
+												c-0.271-1.982-0.409-3.943-0.409-5.828c0-23.435,19.065-42.5,42.5-42.5c1.884,0,3.845,0.138,5.828,0.409
+												c4.108,0.564,7.886-2.309,8.448-6.413C242.338,175.143,239.467,171.359,235.363,170.798z"></path>
+												<path d="M219.127,284.636c2.789,0.407,5.605,0.614,8.373,0.614c31.706,0,57.5-25.794,57.5-57.5c0-2.77-0.207-5.587-0.613-8.373
+												c-0.599-4.099-4.408-6.934-8.505-6.337c-4.099,0.599-6.936,4.406-6.337,8.505c0.303,2.071,0.456,4.158,0.456,6.205
+												c0,23.435-19.065,42.5-42.5,42.5c-2.044,0-4.132-0.153-6.205-0.456c-4.099-0.6-7.907,2.238-8.505,6.337
+												S215.028,284.037,219.127,284.636z"></path>
+												<path d="M318.5,203.25c9.098,0,16.5-7.402,16.5-16.5c0-8.318-6.227-15.355-14.484-16.37c-2.293-0.277-4.585,0.509-6.218,2.142
+												l-10.027,10.027c-1.633,1.632-2.422,3.926-2.141,6.217C303.145,197.023,310.183,203.25,318.5,203.25z"></path>
+												<path d="M117.5,114.75h30c4.142,0,7.5-3.357,7.5-7.5s-3.358-7.5-7.5-7.5h-30c-4.142,0-7.5,3.357-7.5,7.5
+												S113.358,114.75,117.5,114.75z"></path>
+												<path d="M388.367,66.633C345.397,23.664,288.268,0,227.5,0S109.603,23.664,66.633,66.633C23.664,109.603,0,166.732,0,227.5
+												s23.664,117.897,66.633,160.867C109.603,431.336,166.732,455,227.5,455s117.897-23.664,160.867-66.633
+												C431.336,345.397,455,288.268,455,227.5S431.336,109.603,388.367,66.633z M15,227.5C15,110.327,110.327,15,227.5,15
+												c55.894,0,106.807,21.703,144.783,57.11L72.11,372.283C36.703,334.307,15,283.395,15,227.5z M227.5,440
+												c-55.894,0-106.807-21.703-144.783-57.11L382.89,82.717C418.297,120.693,440,171.606,440,227.5C440,344.673,344.673,440,227.5,440z
+												"></path>
+											</svg>
+											<span class="text">{{ 'multitasking_bar.no_product' | t }}</span>
+										</div>
+									</div>
+									<div class="carousel__controls arrow-style-classic no-js-hidden" style="--padding: 1.5rem;--padding-width: 1.5rem;--padding-grid-scroll: 0px;">
+										<button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__all button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+											<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+											</svg>
+										</button>
+										<button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__all button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+											<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+											</svg>
+										</button>
+										<div class="swiper-pagination pos-relative"></div>
+									</div>
+								</div>
+							</slider-component>
+						</recently-viewed-products>
+					</div>
+				</div>
+			</side-drawer>
+		</multitasking-desktop-bar>
+		<multitasking-mobile-bar class="multitasking-mobile-bar d-block d-none-lg no-js-hidden" id="multitasking-desktop-bar" data-breakpoint="(max-width: 989px)">
+			<side-drawer class="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex a-i-end j-c-end" data-moved="true" id="Drawer-Multitasking-Bar">
+				<div class="popup-wrapper side-drawer no-animation--popup w-100">
+					<div id="Drawer-Overlay-Multitasking-Bar" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+					<div class="multi-t__drawer-inner drawer__inner gradient d-flex f-column o-h cus-scrollbar" role="dialog" aria-modal="true" aria-label="{{ 'multitasking_bar.title' | t }}" tabindex="-1" style="--p-extend: 3.2rem">
+						<div class="drawer__header d-flex j-c-between a-i-center pos-relative c-gap" style="--c-gap: 2rem">
+							<h2 class="drawer__heading break m-0">{{ 'multitasking_bar.title' | t }}</h2>
+							<button class="drawer__close d-block t-button b-none b-circle c-pointer button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+						</div>
+						<recently-viewed-products class="d-block" data-handle="{{ product.handle }}" data-template="card" data-bar="#multitasking-mobile-bar" data-breakpoint="(max-width: 989px)">
+							<slider-component class="carousel d-block pos-relative" data-space-between="15" data-type-pagination="progressbar" data-item-to-show-desktop="1.5" data-item-to-show-tablet="1.5" data-item-to-show-mobile="1.3" data-item-to-show-mobile-xs="1.3">
+								<div class="swiper d-block pos-relative no-js-overflow-x">
+									<div class="swiper-wrapper multi-t__list-product">
+										<div class="multi-t__list-empty h6 center m-0 d-block w-100">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-no-product" aria-hidden="true" focusable="false" role="presentation" xml:space="preserve">
+												<path d="M360.967,130.599c-4.06-0.818-8.018,1.8-8.841,5.86c-0.823,4.06,1.801,8.018,5.86,8.841
+												c1.147,0.232,2.013,1.286,2.013,2.45v160c0,1.355-1.145,2.5-2.5,2.5H179.676c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5H357.5
+												c9.649,0,17.5-7.851,17.5-17.5v-160C375,139.46,369.099,132.247,360.967,130.599z"></path>
+												<path d="M274.824,130.25H97.5c-9.649,0-17.5,7.851-17.5,17.5v160c0,8.063,5.48,15.046,13.326,16.982
+												c0.604,0.149,1.208,0.221,1.803,0.221c3.369,0,6.432-2.287,7.276-5.705c0.992-4.021-1.463-8.086-5.484-9.078
+												c-0.955-0.235-1.92-1.143-1.92-2.42v-160c0-1.355,1.145-2.5,2.5-2.5h177.324c4.142,0,7.5-3.357,7.5-7.5
+												S278.966,130.25,274.824,130.25z"></path>
+												<path d="M235.363,170.798c-2.655-0.363-5.3-0.548-7.863-0.548c-31.706,0-57.5,25.794-57.5,57.5c0,2.563,0.185,5.209,0.548,7.863
+												c0.515,3.759,3.731,6.483,7.421,6.483c0.339,0,0.682-0.023,1.027-0.07c4.104-0.562,6.975-4.345,6.413-8.448
+												c-0.271-1.982-0.409-3.943-0.409-5.828c0-23.435,19.065-42.5,42.5-42.5c1.884,0,3.845,0.138,5.828,0.409
+												c4.108,0.564,7.886-2.309,8.448-6.413C242.338,175.143,239.467,171.359,235.363,170.798z"></path>
+												<path d="M219.127,284.636c2.789,0.407,5.605,0.614,8.373,0.614c31.706,0,57.5-25.794,57.5-57.5c0-2.77-0.207-5.587-0.613-8.373
+												c-0.599-4.099-4.408-6.934-8.505-6.337c-4.099,0.599-6.936,4.406-6.337,8.505c0.303,2.071,0.456,4.158,0.456,6.205
+												c0,23.435-19.065,42.5-42.5,42.5c-2.044,0-4.132-0.153-6.205-0.456c-4.099-0.6-7.907,2.238-8.505,6.337
+												S215.028,284.037,219.127,284.636z"></path>
+												<path d="M318.5,203.25c9.098,0,16.5-7.402,16.5-16.5c0-8.318-6.227-15.355-14.484-16.37c-2.293-0.277-4.585,0.509-6.218,2.142
+												l-10.027,10.027c-1.633,1.632-2.422,3.926-2.141,6.217C303.145,197.023,310.183,203.25,318.5,203.25z"></path>
+												<path d="M117.5,114.75h30c4.142,0,7.5-3.357,7.5-7.5s-3.358-7.5-7.5-7.5h-30c-4.142,0-7.5,3.357-7.5,7.5
+												S113.358,114.75,117.5,114.75z"></path>
+												<path d="M388.367,66.633C345.397,23.664,288.268,0,227.5,0S109.603,23.664,66.633,66.633C23.664,109.603,0,166.732,0,227.5
+												s23.664,117.897,66.633,160.867C109.603,431.336,166.732,455,227.5,455s117.897-23.664,160.867-66.633
+												C431.336,345.397,455,288.268,455,227.5S431.336,109.603,388.367,66.633z M15,227.5C15,110.327,110.327,15,227.5,15
+												c55.894,0,106.807,21.703,144.783,57.11L72.11,372.283C36.703,334.307,15,283.395,15,227.5z M227.5,440
+												c-55.894,0-106.807-21.703-144.783-57.11L382.89,82.717C418.297,120.693,440,171.606,440,227.5C440,344.673,344.673,440,227.5,440z
+												"></path>
+											</svg>
+											<span class="text">{{ 'multitasking_bar.no_product' | t }}</span>
+										</div>
+									</div>
+									<div class="carousel__controls no-js-hidden">
+										<div class="swiper-pagination pos-relative"></div>
+									</div>
+								</div>
+							</slider-component>
+						</recently-viewed-products>
+					</div>
+				</div>
+			</side-drawer>
+		</multitasking-mobile-bar>
+		{%- liquid
+			assign files = 'multitasking-bar.js'
+			assign files = files | split: ', '
+			render 'theme-loader', files: files
+		-%}
+	{%- endif -%}
+{%- endif -%}

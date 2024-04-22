@@ -1,0 +1,431 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'collections' -%}
+      {%- unless block.settings.link_list == blank and block.settings.heading == blank -%}
+        <div class="sidebarBlock b-collections element-spacing-all" {{ block.shopify_attributes }}
+          style="--padding-top: {{ block.settings.padding_top }}px;
+            --padding-bottom: {{ block.settings.padding_bottom }}px;"
+        >
+          {%- if block.settings.heading != blank -%}
+            <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+          {%- endif -%}
+          {%- if block.settings.link_list != blank -%}
+            <div class="sidebarBlock-content">
+              <ul class="list-unstyled" role="list">
+                {%- for link in block.settings.link_list.links -%}
+                  <li class="list__collection-item" role="listitem">
+                    {%- if link.links != blank -%}
+                      <details id="Details-{{ block.id }}-{{ forloop.index }}" class="pos-relative">
+                        <summary class="summary__title link u-none color-foreground focus-inset d-flex a-i-center{% if link.child_active %} active{% endif %} c-pointer pos-relative">
+                          <span>{{ link.title | escape }}</span>
+                        </summary>
+                        <ul class="gradient list-unstyled" role="list">
+                          {%- for childlink in link.links -%}
+                            <li class="list__collection-item" role="listitem">
+                              {%- if childlink.links == blank -%}
+                                <a href="{{ childlink.url }}" class="link link--text h-link link--style-line" aria-label="link">
+                                  <span class="link-style">{{ childlink.title }}</span>
+                                </a>
+                              {%- else -%}
+                                <details id="Details-Sub-{{ block.id }}-{{ forloop.index }}" class="pos-relative">
+                                  <summary class="summary__title link u-none color-foreground focus-inset d-flex a-i-center{% if childlink.child_active %} active{% endif %} c-pointer pos-relative">
+                                    <span>{{ childlink.title | escape }}</span>
+                                  </summary>
+                                  <ul class="gradient list-unstyled" role="list">
+                                    {%- for grandchildlink in childlink.links -%}
+                                      <li class="list__collection-item" role="listitem">
+                                        <a href="{{ grandchildlink.url }}" class="link link--text h-link link--style-line" aria-label="link">
+                                          <span class="link-style">{{ grandchildlink.title }}</span>
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </details>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </details>
+                    {%- else -%}
+                      <a href="{{ link.url }}" class="link link--text h-link link--style-line" aria-label="link">
+                        <span class="link-style">{{ link.title }}</span>
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+    {%- when 'products' -%}
+      <div class="sidebarBlock b-products element-spacing-all" {{ block.shopify_attributes }}
+        style="--padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;"
+      >
+        {%- if block.settings.heading != blank -%}
+          <h3 class="sidebarBlock-heading uppercase pos-relative m-0">
+            {{ block.settings.heading | escape }}
+          </h3>
+        {%- endif -%}
+        <div class="sidebarBlock-content">
+          <slider-component class="d-block pos-relative m-t"{% if sidebar_type != 'popup' %} data-space-between="10" data-type-pagination="dots" data-item-to-show-desktop="1" data-item-to-show-tablet="1"{% else %} data-type-pagination="none" data-space-between="16" data-item-to-show-desktop="1.06" data-item-to-show-tablet="1.06"{% endif %} data-item-to-show-mobile="1" style="--m-t: 0.8rem;">
+            <div class="swiper d-block pos-relative no-js-overflow-x"> 
+              {%- liquid
+                assign products_to_display = block.settings.collection.all_products_count | default: 6
+                if products_to_display > block.settings.product_list_limit
+                  assign products_to_display = block.settings.product_list_limit
+                  assign more_in_collection = true
+                endif
+                assign number_of_slides = products_to_display | plus: 0.0 | divided_by: block.settings.products_per_page | round
+              -%}
+              <div id="Slider-{{ block.id }}" class="swiper-wrapper d-flex f-nowrap"{% if number_of_slides > 1 %} aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
+              {% if sidebar_type == 'popup' %}
+                {%- for product in block.settings.collection.products limit: number_of_slides -%}
+                    <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide no-js-grid__item no-js-grid__scroll">
+                        {% render 'card-product', 
+                            card_product: product,
+                            media_aspect_ratio: settings.card_image_ratio,
+                            show_secondary_image: settings.show_secondary_image,
+                            show_vendor: settings.show_vendor_product,
+                            show_vendor_mobile: settings.show_vendor_mobile,
+                            show_rating: settings.show_rating_product,
+                            show_rating_mobile: settings.show_rating_mobile,
+                            show_quick_add: settings.enable_quick_add,
+                            show_quick_add_mobile: settings.enable_quick_add_mobile,
+                            show_swatch: settings.show_swatch,
+                            show_swatch_mobile: settings.show_swatch_mobile,
+                            card_button_text_size: settings.card_button_text_size,
+                            card_button_type: settings.card_button_type,
+                            card_button_transform: settings.card_button_transform,
+                            index: forloop.index,
+                            section_id: section.id 
+                        %}
+                    </div>
+                {%- else -%}
+                    {%- for i in (1..5) -%}
+                        <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide no-js-grid__item no-js-grid__scroll">
+                            {% render 'card-product', index: forloop.index, show_vendor: section.settings.show_vendor %}
+                        </div>
+                    {%- endfor -%}
+                {%- endfor -%}
+              {% else %}
+                {%- for i in (1..number_of_slides) -%}
+                  <div id="Slide-{{ block.id }}-{{ forloop.index }}" class="slideshow__item swiper-slide no-js-grid__item no-js-grid__scroll" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
+                    <ul class="list__product d-flex f-column list-unstyled grid" role="list">
+                      {%- for product in block.settings.collection.products limit: block.settings.products_per_page offset: continue -%}
+                        {%- liquid
+                          assign ratio = 1
+                          if product.featured_media and block.settings.image_ratio == 'adapt'
+                            assign ratio = product.featured_media.aspect_ratio
+                          endif
+                          if ratio == 0 or ratio == null
+                            assign ratio = 1
+                          endif
+                        -%}
+                        <li class="list__product-item">
+                          <div class="card card--horizontal d-flex f-row a-i-start h-100 pos-relative gradient-global">
+                            <div class="card__inner pos-relative o-h w-100">
+                              <div class="card__media o-h">
+                                <div class="media media--transparent media--{{ block.settings.image_ratio }} pos-relative o-h d-block"
+                                  {% if block.settings.image_ratio == 'adapt' %}
+                                    style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                                  {% endif %}
+                                >
+                                  {%- if product.featured_media -%}
+                                    <img
+                                      srcset="{{ product.featured_media | image_url: width: 100 }}"
+                                      src="{{ product.featured_media | image_url: width: 100 }}"
+                                      sizes="{{ product.featured_media.width }}"
+                                      alt="{{ product.featured_media.alt | escape }}"
+                                      class="motion-reduce"
+                                      loading="lazy"
+                                      width="{{ product.featured_media.width }}"
+                                      height="{{ product.featured_media.height }}"
+                                    >
+                                  {%- else -%}
+                                    {%- liquid
+                                      assign index = forloop.index
+                                      if index > 6
+                                        assign index = index | modulo: 6 | plus: 1
+                                      endif
+                                    -%}
+                                    {{ 'product-' | append: index | placeholder_svg_tag: 'placeholder-svg' }}
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card__content d-grid w-100">
+                              <div class="card__information">
+                                <h3 class="card__heading o-h m-0" id="title-{{ section_id }}-{{ product.id }}">
+                                  <a href="{{ product.url }}" id="CardLink-{{ section_id }}-{{ product.id }}" class="d-block u-none color-current h-link link-cover" aria-labelledby="CardLink-{{ section_id }}-{{ product.id }}">{{ product.title | escape }}</a>
+                                </h3>
+                                <div class="card__price">
+                                  {% render 'price', main_price: true, product: product, price_class: '' %}
+                                </div>
+                                {%- if block.settings.show_swatch and product.has_only_default_variant == false-%}
+                                  {%- liquid
+                                    assign swatch = settings.swatch | split: "," | strip | downcase | handle
+                                  -%}
+                                  {%- for option in product.options_with_values -%}
+                                    {%- liquid
+                                      assign is_swatch = false
+                                      assign option_name = option.name | downcase
+                                      if swatch contains option_name
+                                        assign is_swatch = true
+                                        assign option_size = option.values | size
+                                        assign variants_option1_arr = product.variants | map: 'option1'
+                                        assign variants_option2_arr = product.variants | map: 'option2'
+                                        assign variants_option3_arr = product.variants | map: 'option3'
+                                      endif
+                                    -%}
+                                    {%- if is_swatch -%}
+                                      <div class="card__swatch d-flex f-wrap a-i-center">
+                                        {%- for value in option.values -%}
+                                          {% unless forloop.index > 4 %}
+                                            {%- liquid
+                                              assign variant_image = ''
+                                              for variant in product.variants
+                                                case option.position
+                                                  when 1
+                                                    if variants_option1_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                      assign variant_image = product.variants[forloop.index0].image
+                                                      break
+                                                    endif
+                                                  when 2
+                                                    if variants_option2_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                      assign variant_image = product.variants[forloop.index0].image
+                                                      break
+                                                    endif
+                                                  when 3
+                                                    if variants_option3_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                      assign variant_image = product.variants[forloop.index0].image
+                                                      break
+                                                    endif
+                                                endcase
+                                              endfor
+                                            -%}
+                                            <span class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                              title="{{ value }}" {% unless variant_image != blank and image_bg_url != '' %} style="--border-variant-color: {{ value | split: ' ' | last | handle }};"{% endunless %}
+                                            >
+                                              {%- if variant_image != blank -%}
+                                                <span class="pattern d-block w-100 h-100 pos-relative center" style="background-image: url({{ variant_image.src | product_img_url: '30x'}});" role="none"></span>
+                                              {%- else -%}
+                                                {%- liquid
+                                                  assign image_bg = value | handle | append: '.' | append: 'png'
+                                                  assign image_bg_url = ''
+                                                  if images[image_bg] != blank
+                                                    assign image_bg_url = image_bg | file_url
+                                                  else
+                                                    assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                                    if images[image_bg] != blank
+                                                      assign image_bg_url = image_bg | file_url
+                                                    endif
+                                                  endif
+                                                -%}
+                                                {%- if image_bg_url != '' %}
+                                                  <span class="pattern d-block w-100 h-100 pos-relative center" style="background-image: url({{ image_bg_url }})" role="none"></span>
+                                                {%- else -%}
+                                                  <span class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}" style="background-color: {{ value | split: ' ' | last | handle }};" role="none"></span>
+                                                {%- endif -%}
+                                              {%- endif -%}
+                                            </span>
+                                          {%- endunless -%}
+                                        {%- endfor -%}
+                                        {%- if option_size > 4 -%}
+                                          {%- assign count = option_size | minus: 4 -%}
+                                          <span class="card__swatch--count color-light">
+                                            {{ 'products.product.more_variants' | t: count: count }}
+                                          </span>
+                                        {%- endif -%}
+                                      </div>
+                                      {% break %}
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                                {%- endif -%}
+                                <div class="card__link link h-link u-u link--text">{{ 'products.product.details' | t }}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      {%- else -%}
+                        {%- for i in (1..6) limit: block.settings.products_per_page offset: continue -%}
+                          <li class="list__product-item">
+                            <div class="card card--horizontal d-flex f-row a-i-start h-100 pos-relative gradient-global">
+                              <div class="card__inner pos-relative o-h w-100">
+                                <div class="card__media o-h">
+                                  <div class="media media--transparent media--{{ block.settings.image_ratio }} pos-relative o-h d-block"
+                                    {% if block.settings.image_ratio == 'adapt' %}
+                                      style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                                    {% endif %}
+                                  >
+                                    {{ 'product-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__content d-grid w-100">
+                                <div class="card__information">
+                                  <h3 class="card__heading o-h m-0">
+                                    <a class="d-block u-none color-current h-link link-cover" role="link" aria-disabled="true">{{ 'onboarding.product_title' | t }}</a>
+                                  </h3>
+                                  <div class="card__price">
+                                    {% render 'price', main_price: true, price_class: ' left ' %}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        {%- endfor -%}
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endfor -%}
+              {% endif %}
+              </div>
+              {%- if number_of_slides > 1 -%}
+                {% if sidebar_type == 'popup' %}
+                  {%- liquid 
+                    capture icon_arrow_list
+                      render 'icon-arrow-list'
+                    endcapture
+                  -%}
+                  <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden" style="--padding: 0px;">
+                    <button type="button" data-step="1" class="button-slider button-slider__prev button-slider__hover gradient color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                      {{ icon_arrow_list }}
+                    </button>
+                    <button type="button" data-step="1" class="button-slider button-slider__next button-slider__hover gradient color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                      {{ icon_arrow_list }}
+                    </button>
+                    <div class="swiper-pagination pos-relative"></div>
+                  </div>
+                {% else %}
+                  <div class="slideshow__controls pos-relative pos-relative-xs">
+                    <div class="swiper-pagination pos-relative"></div>
+                  </div>
+                {% endif %}
+              {%- endif -%}
+            </div>
+          </slider-component>
+        </div>
+      </div>
+    {%- when 'brands' -%}
+      <div class="sidebarBlock b-brands element-spacing-all" {{ block.shopify_attributes }}
+        style="--padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;"
+      >
+        {%- if block.settings.heading != blank -%}
+          <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+        {%- endif -%}
+        <div class="sidebarBlock-content">
+          <ul class="list-unstyled" role="list">
+            {%- for vendor in shop.vendors limit: 10 -%}
+              <li class="list__brand-item" role="listitem">
+                <a href="{{ vendor | url_for_vendor }}" class="link link--text h-link u-none" aria-label="link">{{ vendor }}</a>
+              </li>
+            {%- endfor -%}
+            {%- if shop.vendors.size > 10 and block.settings.show_view_all -%}
+              <li role="listitem">
+                <a {% if block.settings.link == blank %} role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %} class="link--text link u-link" aria-label="link">{{ 'general.brands.view_all' | t }}</a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
+      </div>
+    {%- when 'posts' -%}
+      <div class="sidebarBlock b-posts element-spacing-all" {{ block.shopify_attributes }}
+        style="--padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;"
+      >
+        {%- if block.settings.heading != blank -%}
+          <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+        {%- endif -%}
+        <div class="sidebarBlock-content">
+          <ul class="list-unstyled m-t" role="list" style="--m-t: 0.8rem;">
+            {%- for article in blog.articles limit: 4 -%}
+              <li class="list__post-item d-block pos-relative" role="listitem">
+                {% if sidebar_type == 'popup' %}
+                  <div class="tags d-flex w-100">
+                    {% for tag in article.tags limit: 2 %}
+                      <div class="item-tag d-inline-flex">{{ tag }}</div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                <h4 class="heading m-0">
+                  <a href="{{ article.url }}" class="link link--text h-link link--style-line" aria-label="link">
+                    <span class="link-style">{{ article.title }}</span>
+                  </a>
+                </h4>
+                <p class="list__post-date m-0 color-light">{{ article.published_at | time_tag: '%d/%m/%Y' }}</p>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    {%- when 'tags' -%}
+      <div class="sidebarBlock b-tags element-spacing-all" {{ block.shopify_attributes }}
+        style="--padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;"
+      >
+        {%- if block.settings.heading != blank -%}
+          <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+        {%- endif -%}
+        <div class="sidebarBlock-content">
+          <ul class="d-flex f-wrap list-unstyled g-gap m-t" role="list" style="--g-gap: 1rem; --m-t: 1rem;">
+            {%- for tag in blog.all_tags limit: 10 -%}
+              <li class="list__tag-item o-h center gradient" role="listitem">
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="d-block link link--text u-none" aria-label="link">{{ tag }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    {%- when 'image' -%}
+      <div class="sidebarBlock b-image element-spacing-all" {{ block.shopify_attributes }}
+        style="--padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;"
+      >
+        {%- if block.settings.heading != blank -%}
+          <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+        {%- endif -%}
+        <div class="sidebarBlock-content">
+          <animate-element class="d-block pos-relative gradient-global o-h" background>
+            <{% if block.settings.link != blank %}a{% else %}div{% endif %} class="d-block media media--adapt media--zoom media--transparent u-none color-foreground pos-relative o-h" {% if block.settings.link != blank %}href="{{ block.settings.link }}"{% endif %}
+              {% if block.settings.image != blank %}
+                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+              {% else %}
+                style="padding-bottom: 100%;"
+              {% endif %}
+              data-animate="zoom-out"
+            >
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 300 | image_tag:
+                  loading: 'lazy',
+                  sizes: '300',
+                  widths: '300',
+                  class: 'motion-reduce'
+                }}
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </{% if block.settings.link != blank %}a{% else %}div{% endif %}>
+          </animate-element>
+        </div>
+      </div>
+    {%- when 'text' -%}
+      {%- unless block.settings.text == blank and block.settings.heading == blank -%}
+        <div class="sidebarBlock b-text element-spacing-all" {{ block.shopify_attributes }}
+          style="--padding-top: {{ block.settings.padding_top }}px;
+            --padding-bottom: {{ block.settings.padding_bottom }}px;"
+        >
+          {%- if block.settings.heading != blank -%}
+            <h3 class="sidebarBlock-heading uppercase pos-relative m-0">{{ block.settings.heading | escape }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <div class="sidebarBlock-content">
+              <div class="rte m-t" style="--m-t: 0.5rem;">{{ block.settings.text }}</div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+  {%- endcase -%}
+{%- endfor -%}

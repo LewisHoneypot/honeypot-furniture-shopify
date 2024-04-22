@@ -1,0 +1,391 @@
+{%- if section.blocks.size > 0 -%}
+  <div class="link-list layout--{{ section.settings.type_layout }} color-{{ section.settings.color_scheme }} gradient"
+    style="
+    {% if section.settings.use_custom_color %}
+      --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
+      --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
+      --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
+    {% endif %}
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;" 
+  >
+    <div class="{{ section.settings.section_width }} m-auto{% if section.settings.section_width == 'full-width' %} p-banner{% endif %}">
+      {%- if section.settings.type_layout == 'scroll' -%}
+        <div class="link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap"{% if section.settings.section_width == 'page-width' %} style="--g-gap: 3rem;"{% endif %}>
+          {%- for block in section.blocks -%}
+            {%- liquid
+              if section.settings.section_width == 'full-width'
+                assign aligment = 'center'
+              else
+                case section.blocks.size
+                  when 3
+                    if forloop.index == 3
+                      assign aligment = 'right'
+                    elsif forloop.index == 2
+                      assign aligment = 'center'
+                    else forloop.index == 1
+                      assign aligment = 'left'
+                    endif
+                  when 2
+                    if forloop.index == 2
+                      assign aligment = 'right'
+                    else forloop.index == 1
+                      assign aligment = 'left'
+                    endif
+                  when 1
+                    assign aligment = 'center'
+                endcase
+              endif
+            -%}
+            {%- case block.type -%}
+              {%- when 'text' -%}
+                {%- if block.settings.text -%}
+                  <div class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                    style="
+                      --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
+                      --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
+                    "
+                  >
+                    <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                  </div>
+                {%- endif -%}
+              {%- when 'link_list' -%}
+                {%- if block.settings.link_list != blank -%}
+                  <div class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                    style="
+                      --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
+                      --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
+                    "
+                  >
+                    <ul class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte" style="--c-gap: 2.5rem;" role="list">
+                      {%- for link in block.settings.link_list.links -%}
+                        <li>
+                          <a href="{{ link.url }}" class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}">
+                            <span class="link-style">{{ link.title }}</span>
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <slider-component class="carousel d-block link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap infinite-scroll"
+          style="
+            {% if section.settings.section_width == 'page-width' %}--g-gap: 3rem;{% endif %}
+            --c-xs: 1; --c-sm: 1; --c-md: {% if section.blocks.size >= 2 %}2{% else %}1{% endif %}; --c-lg: {% if section.blocks.size >= 2 %}2{% else %}1{% endif %}; --n-j-grid-h-md: 0px; --n-j-grid-h-xs: 0px; --padding-h-md: 0px; --padding-h-xs: 0px;
+          "
+          data-space-between="0"
+          data-type-pagination="progressbar" 
+          data-item-to-show-desktop="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}" 
+          data-item-to-show-tablet="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}" 
+          data-item-to-show-mobile="1"
+        >
+          <div class="swiper d-block w-100 no-js-grid-scroll no-js-overflow-x">
+            <div class="swiper-wrapper">
+              {%- for block in section.blocks -%}
+                {%- liquid
+                  if section.settings.section_width == 'full-width'
+                    assign aligment = 'center'
+                  else
+                    case section.blocks.size
+                      when 3
+                        if forloop.index == 3
+                          assign aligment = 'right'
+                        elsif forloop.index == 2
+                          assign aligment = 'center'
+                        else forloop.index == 1
+                          assign aligment = 'left'
+                        endif
+                      when 2
+                        if forloop.index == 2
+                          assign aligment = 'right'
+                        else forloop.index == 1
+                          assign aligment = 'left'
+                        endif
+                      when 1
+                        assign aligment = 'center'
+                    endcase
+                  endif
+                -%}
+                {%- case block.type -%}
+                  {%- when 'text' -%}
+                    {%- if block.settings.text -%}
+                      <div class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing{% if section.settings.type_layout != 'carousel' %} spacing-all{% endif %} cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                        data-swiper-parallax="40%"
+                        role="listitem" 
+                        id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        style="
+                          --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
+                          --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
+                        "
+                      >
+                        <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                      </div>
+                    {%- endif -%}
+                  {%- when 'link_list' -%}
+                    {%- if block.settings.link_list != blank -%}
+                      <div class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                        data-swiper-parallax="40%"
+                        role="listitem" 
+                        id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        style="
+                          --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
+                          --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
+                        "
+                      >
+                        <ul class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte" style="--c-gap: 2.5rem;" role="list">
+                          {%- for link in block.settings.link_list.links -%}
+                            <li>
+                              <a href="{{ link.url }}" class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}">
+                                <span class="link-style">{{ link.title }}</span>
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    {%- endif -%}
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            <div class="carousel__controls no-js-hidden">
+              <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative m-t-i"></div>
+            </div>
+          </div>
+        </slider-component>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.link-list.name",
+  "class": "section-link-list pos-relative z-index-4",
+  "max_blocks": 3,
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+  {
+    "type": "select",
+    "id": "section_width",
+    "options": [
+    {
+      "value": "full-width",
+      "label": "t:sections.all.section_width.options__1"
+    },
+    {
+      "value": "page-width",
+      "label": "t:sections.all.section_width.options__2"
+    }],
+    "default": "page-width",
+    "label": "t:sections.all.section_width.label"
+  },
+  {
+    "type": "select",
+    "id": "type_layout",
+    "options": [
+    {
+      "value": "carousel",
+      "label": "t:sections.all.layout.options__1"
+    },
+    {
+      "value": "scroll",
+      "label": "t:sections.all.layout.options__3"
+    }],
+    "default": "scroll",
+    "label": "t:sections.all.layout.name"
+  },
+  {
+    "type": "select",
+    "id": "text_size",
+    "options": [
+    {
+      "value": "xx-small",
+      "label": "t:sections.all.font_size.options__1"
+    },
+    {
+      "value": "x-small",
+      "label": "t:sections.all.font_size.options__2"
+    },
+    {
+      "value": "small",
+      "label": "t:sections.all.font_size.options__3"
+    },
+    {
+      "value": "medium",
+      "label": "t:sections.all.font_size.options__4"
+    },
+    {
+      "value": "large",
+      "label": "t:sections.all.font_size.options__5"
+    },
+    {
+      "value": "x-large",
+      "label": "t:sections.all.font_size.options__6"
+    },
+    {
+      "value": "xx-large",
+      "label": "t:sections.all.font_size.options__7"
+    },
+    {
+      "value": "xxx-large",
+      "label": "t:sections.all.font_size.options__8"
+    }],
+    "default": "medium",
+    "label": "t:sections.all.font_size.label__3"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.carousel.label"
+  },
+  {
+    "type": "select",
+    "id": "enable_pagination_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.pagination.options"
+      },
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.pagination.label__1"
+  },
+  {
+    "type": "header",
+    "content": "t:settings_schema.colors.name"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_custom_color",
+    "default": true,
+    "label": "t:sections.all.colors.use_custom_color"
+  },
+  {
+    "type": "color",
+    "id": "colors_text",
+    "default": "#424242",
+    "label": "t:sections.all.colors.colors_text"
+  },
+  {
+    "type": "color",
+    "id": "colors_background",
+    "label": "t:sections.all.colors.colors_background"
+  },
+  {
+    "type": "color_background",
+    "id": "gradient_background",
+    "default": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+    "label": "t:sections.all.colors.gradient_background"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 10
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 10
+  }],
+  "blocks": [
+  {
+    "type": "text",
+    "name": "t:sections.link-list.blocks.text.name",
+    "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Welcome to our store</p>",
+      "label": "t:sections.all.text.label"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "t:settings_schema.colors.settings.colors_background.label"
+    },
+    {
+      "type": "color",
+      "id": "secondary_background",
+      "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
+    }]
+  },
+  {
+    "type": "link_list",
+    "name": "t:sections.link-list.blocks.link_list.name",
+    "settings": [
+    {
+      "type": "link_list",
+      "id": "link_list",
+      "label": "t:sections.all.menu.label",
+      "info": "t:sections.all.menu.info"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "t:settings_schema.colors.settings.colors_background.label"
+    },
+    {
+      "type": "color",
+      "id": "secondary_background",
+      "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
+    }]
+  }],
+  "presets": [
+  {
+    "name": "t:sections.link-list.presets.name",
+    "blocks": [
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "link_list"
+    }]
+  }]
+}
+{% endschema %}

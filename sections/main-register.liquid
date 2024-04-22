@@ -1,0 +1,219 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<div class="section__m-register spacing color-{{ section.settings.color_scheme }} gradient"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+  --padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="{{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+    <div class="p-w__header p-w__header--nogap">
+      <div class="p-w__header--wrapper left">
+        {% render 'breadcrumb',
+          padding_top: '0.5rem',
+          padding_bottom: '0.5rem',
+          alignment: 'start'
+        %}
+        <h1 class="p-w__heading p-w__heading--page f-bold heading-size-small m-0">{{ 'customer.register.title' | t }}</h1>
+      </div>
+    </div>
+    <div class="p-w__content">
+      <div class="customer register">
+        <div class="grid-col d-flex a-i-center f-wrap pos-relative" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 2; --grid: 1.5rem;">
+          <div class="grid__item">
+            <div class="login-info">
+              {%- form 'create_customer', novalidate: 'novalidate' -%}
+                {%- if form.errors -%}
+                  <h2 class="form__message d-flex a-i-center l-h-1 m-0 focus-inset-hide" tabindex="-1" autofocus>
+                    {% render 'icon-error' %}
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                  <ul>
+                    {%- for field in form.errors -%}
+                      <li>
+                        {%- if field == 'form' -%}
+                          {{ form.errors.messages[field] }}
+                        {%- else -%}
+                          <a href="#RegisterForm-{{ field }}" class="link link--text u-link u-u">
+                            {{ form.errors.translated_fields[field] | capitalize }}
+                            {{ form.errors.messages[field] }}
+                          </a>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                <div class="field f-a-none f-b-none pos-relative">
+                  <label for="RegisterForm-FirstName" class="field__label field__label--inline d-block">
+                    {{ 'customer.register.first_name' | t }}
+                  </label>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="customer[first_name]"
+                    id="RegisterForm-FirstName"
+                    {% if form.first_name %}
+                      value="{{ form.first_name }}"
+                    {% endif %}
+                    autocomplete="given-name"
+                    placeholder="{{ 'customer.register.first_name' | t }}"
+                  >
+                </div>
+                <div class="field f-a-none f-b-none pos-relative">
+                  <label for="RegisterForm-LastName" class="field__label field__label--inline d-block">
+                    {{ 'customer.register.last_name' | t }}
+                  </label>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="customer[last_name]"
+                    id="RegisterForm-LastName"
+                    {% if form.last_name %}
+                      value="{{ form.last_name }}"
+                    {% endif %}
+                    autocomplete="family-name"
+                    placeholder="{{ 'customer.register.last_name' | t }}"
+                  >
+                </div>
+                <div class="field f-a-none f-b-none pos-relative">
+                  <label for="RegisterForm-email" class="field__label field__label--inline d-block">
+                    {{ 'customer.register.email' | t }}
+                  </label>
+                  <input
+                    class="field__input"
+                    type="email"
+                    name="customer[email]"
+                    id="RegisterForm-email"
+                    {% if form.email %}
+                      value="{{ form.email }}"
+                    {% endif %}
+                    spellcheck="false"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    aria-required="true"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="RegisterForm-email-error"
+                    {% endif %}
+                    placeholder="{{ 'customer.register.email' | t }}"
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <span id="RegisterForm-email-error" class="form__message d-flex a-i-center l-h-1 m-b subrte">
+                      {% render 'icon-error' %}
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}.
+                    </span>
+                  {%- endif -%}
+                </div>
+                <div class="field f-a-none f-b-none pos-relative">
+                  <label for="RegisterForm-password" class="field__label field__label--inline d-block">
+                    {{ 'customer.register.password' | t }}
+                  </label>
+                  <input
+                    class="field__input"
+                    type="password"
+                    name="customer[password]"
+                    id="RegisterForm-password"
+                    aria-required="true"
+                    {% if form.errors contains 'password' %}
+                      aria-invalid="true"
+                      aria-describedby="RegisterForm-password-error"
+                    {% endif %}
+                    placeholder="{{ 'customer.register.password' | t }}"
+                  >
+                  {%- if form.errors contains 'password' -%}
+                    <span id="RegisterForm-password-error" class="form__message d-flex a-i-center l-h-1 m-b subrte">
+                      {% render 'icon-error' %}
+                      {{ form.errors.translated_fields.password | capitalize }}
+                      {{ form.errors.messages.password }}.
+                    </span>
+                  {%- endif -%}
+                </div>
+                <div class="field__action m-t" style="--m-t: 4rem;">
+                  <button type="submit" class="button {{ settings.button_style | prepend: 'button--style-' }} mi-w" style="--mi-w: 25rem;">
+                    <span>{{ 'customer.register.submit' | t }}</span>
+                  </button>
+                </div>
+              {%- endform -%}
+            </div>
+          </div>
+          <div class="grid__item">
+            <div class="register-info rte">
+              <h2 class="h2 f-bold m-b" style="--m-b: 2rem;">{{ 'customer.login_page.new_customers.heading' | t }}</h2>
+              <p>{{ 'customer.login_page.new_customers.text' | t }}</p>
+              <ul>
+                <li>{{ 'customer.login_page.new_customers.info_1' | t }}</li>
+                <li>{{ 'customer.login_page.new_customers.info_2' | t }}</li>
+                <li>{{ 'customer.login_page.new_customers.info_3' | t }}</li>
+                <li>{{ 'customer.login_page.new_customers.info_4' | t }}</li>
+                <li>{{ 'customer.login_page.new_customers.info_5' | t }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.main-register.name",
+  "settings": [
+  {
+    "type": "select",
+    "id": "section_width",
+    "options": [
+    {
+      "value": "full-width",
+      "label": "t:sections.all.section_width.options__1"
+    },
+    {
+      "value": "page-width",
+      "label": "t:sections.all.section_width.options__2"
+    },
+    {
+      "value": "customized-width",
+      "label": "t:sections.all.section_width.options__3"
+    }],
+    "default": "customized-width",
+    "label": "t:sections.all.section_width.label"
+  },
+  {
+    "type": "range",
+    "id": "customize_width",
+    "min": 1000,
+    "max": 1800,
+    "step": 50,
+    "default": 1400,
+    "unit": "px",
+    "label": "t:sections.all.customize_width.label"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 36
+  }]
+}
+{% endschema %}

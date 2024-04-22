@@ -1,0 +1,38 @@
+{%- liquid
+  assign files = "share.js" | split: ', '
+  render 'theme-loader', files: files
+  capture icon_share
+    render 'icon-share'
+  endcapture
+-%}
+<share-button id="Share-{{ section.id }}" class="share-button d-block pos-relative">
+  <button class="share-button__button p-0 t-button gradient b-circle b-none c-pointer center hidden l-h-1" aria-label="{{ share_label }}">{{ icon_share }}</button>
+  <details id="Details-{{ section.id }}">
+    <summary class="share-button__button p-0 t-button gradient b-circle b-none c-pointer center l-h-1 c-pointer pos-relative">
+      {{ icon_share }}
+    </summary>
+    <div class="share-button__fallback d-flex a-i-center pos-absolute z-index-3 w-100 b-none gradient motion-reduce">
+      <div class="field f-a-none f-b-none">
+        <span id="ShareMessage-{{ section.id }}" class="share-button__message d-flex a-i-center w-100 h-100 hidden" role="status"></span>
+        <input
+          type="text"
+          class="field__input o-h f-grow left"
+          id="ShareUrl-{{ section.id }}"
+          value="{{ share_link }}"
+          placeholder="{{ 'general.share.share_url' | t }}"
+          onclick="this.select();"
+          readonly
+        >
+        <label class="field__label field__label--fixed pos-absolute e-none subrte" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
+      </div>
+      <button class="share-button__close c-pointer t-button b-none c-pointer p-0 f-shrink pos-relative d-flex a-i-center j-c-center hidden no-js-hidden">
+        {% render 'icon-close' %}
+        <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
+      </button>
+      <button class="share-button__copy c-pointer t-button b-none c-pointer p-0 f-shrink pos-relative d-flex a-i-center j-c-center no-js-hidden">
+        {% render 'icon-clipboard' %}
+        <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
+      </button>
+    </div>
+  </details>
+</share-button>

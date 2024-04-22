@@ -1,0 +1,33 @@
+<div class="disclosure pos-relative">
+    <button
+    type="button"
+    class="disclosure__button localization-form__select localization-selector pos-relative d-block link link--text caption-large c-pointer bg-transparent"
+    aria-expanded="false"
+    aria-controls="{{ localPosition }}List"
+    aria-describedby="{{ localPosition }}Label"
+    >
+    <span>{{ localization.language.endonym_name | capitalize }}</span>
+    {% render 'icon-caret' %}
+    </button>
+    <div class="disclosure__list-wrapper {{ class_dropdown }}">
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled overflow-y cus-scrollbar">
+        {%- for language in localization.available_languages -%}
+        <li class="disclosure__item" tabindex="-1">
+            <a
+            class="link link--text u-none disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
+            href="#"
+            hreflang="{{ language.iso_code }}"
+            lang="{{ language.iso_code }}"
+            {% if language.iso_code == localization.language.iso_code %}
+                aria-current="true"
+            {% endif %}
+            data-value="{{ language.iso_code }}"
+            >
+            {{ language.endonym_name | capitalize }}
+            </a>
+        </li>
+        {%- endfor -%}
+    </ul>
+    </div>
+</div>
+<input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">

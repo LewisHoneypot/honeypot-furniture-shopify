@@ -1,0 +1,5 @@
+{%- unless request.design_mode -%}
+	<preload-screen class="preload-screen pos-fixed top-0 left-0 w-100v h-100v d-flex a-i-center j-c-center gradient o-h e-none no-js-hidden{% if settings.enable_preloading_screen %} d-block{% else %} hidden{% endif %}">
+		<span class="loading-bar d-block pos-relative o-h"></span>
+	</preload-screen>
+{%- endunless -%}

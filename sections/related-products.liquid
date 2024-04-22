@@ -1,0 +1,262 @@
+{%- liquid 
+  capture icon_arrow_list
+    render 'icon-arrow-list'
+  endcapture
+-%}
+<div class="section__f-collection style-collection-{{ settings.arrow_style }} section__r-product spacing spacing-xs pos-relative color-{{ section.settings.color_scheme }} gradient no-js-hidden"
+  style="--padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+>
+  <product-recommendations class="related-products d-block" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+    <div class="page-width m-auto">
+      {%- if recommendations.performed and recommendations.products_count > 0 -%}
+        {%- if section.settings.heading != blank -%}
+          <div class="p-w__header">
+            <div class="p-w__header--wrapper left">
+              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {{ section.settings.heading | escape }}
+              </h2>
+            </div>
+          </div>
+        {%- endif -%}
+        <div class="p-w__content">
+          <slider-component class="carousel d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" data-space-between="10" data-type-pagination="{{ section.settings.pagination_type }}" data-item-to-show-desktop="{{ section.settings.carousel_number }}" data-item-to-show-tablet="3" data-item-to-show-mobile="2">
+            <div class="swiper grid-scroll d-block pos-relative no-js-overflow-x">
+              <div class="swiper-wrapper" style="--c-xs: 1; --c-sm: 2; --c-md: 3; --c-lg: 4;">
+                {%- for recommendation in recommendations.products -%}
+                  <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-product',
+                      card_product: recommendation,
+                      media_aspect_ratio: settings.card_image_ratio,
+                      show_secondary_image: settings.show_secondary_image,
+                      show_vendor: settings.show_vendor_product,
+                      show_vendor_mobile: settings.show_vendor_mobile,
+                      show_rating: settings.show_rating_product,
+                      show_rating_mobile: settings.show_rating_mobile,
+                      show_quick_add: settings.enable_quick_add,
+                      show_quick_add_mobile: settings.enable_quick_add_mobile,
+                      show_swatch: settings.show_swatch,
+                      show_swatch_mobile: settings.show_swatch_mobile,
+                      card_button_text_size: settings.card_button_text_size,
+                      card_button_type: settings.card_button_type,
+                      card_button_transform: settings.card_button_transform,
+                      index: forloop.index,
+                      section_id: section.id
+                    %}
+                  </div>
+                {%- endfor -%}
+              </div>
+              <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                  <div class="arrow-wrap d-flex pos-absolute swiper-screen__{{ section.settings.arrows_type }}">
+                {%- endif -%}
+                  {%- if section.settings.arrows_type != 'none' -%}
+                    <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }}{% if settings.arrow_style != 'modern-plus' %} button-slider__hover{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                      {{ icon_arrow_list }}
+                    </button>
+                    <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }}{% if settings.arrow_style != 'modern-plus' %} button-slider__hover{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                      {{ icon_arrow_list }}
+                    </button>
+                  {%- endif -%}
+                {%- if section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' -%}
+                    <div class="mask-overlay pos-absolute top-0 left-0"></div>
+                  </div>
+                {%- endif -%}
+                <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+              </div>
+            </div>
+          </slider-component>
+        </div>
+      {%- endif -%}
+    </div>
+  </product-recommendations>
+</div>
+
+{%- if settings.enable_quick_add or settings.enable_quick_add_mobile -%}
+  {%- assign files = "quick-add.js, product-form.js" | split: ', ' -%}
+  {% render 'theme-loader', files: files %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.related-products.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  {
+    "type": "paragraph",
+    "content": "t:sections.related-products.settings.paragraph__1.content"
+  },
+  {
+    "type": "text",
+    "id": "heading",
+    "default": "You may also like",
+    "label": "t:sections.all.heading.label"
+  },
+  {
+    "type": "range",
+    "id": "products_to_show",
+    "min": 2,
+    "max": 10,
+    "step": 1,
+    "default": 5,
+    "label": "t:sections.all.product.product_list_limit"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.carousel.label"
+  },
+  {
+    "type": "select",
+    "id": "arrows_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.arrows.options"
+      },
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.arrows.label"
+  },
+  {
+    "type": "checkbox",
+    "id": "carousel_infinite_scroll",
+    "default": false,
+    "label": "t:sections.all.carousel.heading_1"
+  },
+  {
+    "type": "range",
+    "id": "carousel_number",
+    "min": 1,
+    "max": 5,
+    "step": 1,
+    "label": "t:sections.all.carousel.heading_2",
+    "default": 4
+  },
+  {
+    "type": "select",
+    "id": "enable_pagination_type",
+    "options": [
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.pagination.label__1"
+  },
+  {
+    "type": "select",
+    "id": "pagination_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.pagination.options"
+      },
+      {
+        "value": "dots",
+        "label": "t:sections.all.carousel.pagination.options__1"
+      },
+      {
+        "value": "progressbar",
+        "label": "t:sections.all.carousel.pagination.options__2"
+      },
+      {
+        "value": "fraction",
+        "label": "t:sections.all.carousel.pagination.options__3"
+      }],
+    "default": "progressbar",
+    "label": "t:sections.all.carousel.pagination.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 78
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 35
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 15
+  }]
+}
+{% endschema %}

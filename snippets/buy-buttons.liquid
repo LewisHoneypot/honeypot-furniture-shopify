@@ -1,0 +1,213 @@
+{%- liquid
+  capture icon_spinner
+    render 'icon-spinner'
+  endcapture
+-%}
+{%- if product != blank -%}
+  {%- liquid
+    assign gift_card_recipient_feature_active = false
+    if show_gift_card_recipient and product.gift_card?
+      assign gift_card_recipient_feature_active = true
+    endif
+    assign show_dynamic_checkout = false
+    if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
+      assign show_dynamic_checkout = true
+    endif
+  -%}
+  <product-form class="product-form d-block">
+    <div class="product-form__error-message-wrapper" role="alert" hidden>
+      <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13">
+        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+      </svg>
+      <span class="product-form__error-message"></span>
+    </div>
+    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled class="product-variant-id">
+      <div class="product-form__buttons d-flex f-wrap a-i-end{% if type_style != 'special' %} g-gap{% endif %}{% if show_quantity_selector != true %} none-qty-selector{% endif %}{% if show_wishlist_product %} has-wlist{% endif %}"{% if type_style != 'special' %} style="--g-gap: 1rem;"{% endif %}>
+        {%- liquid
+          assign check_against_inventory = true
+          if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+            assign check_against_inventory = false
+          endif
+          if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+            assign quantity_rule_soldout = true
+          endif
+        -%}
+        {%- if gift_card_recipient_feature_active -%}
+          {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+        {%- endif -%}
+        {%- if show_quantity_selector -%}
+          <div id="Quantity-Form-{{ section.id }}" class="product-form__input product-form__quantity">
+            {% # theme-check-disable %}
+            {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+            {% # theme-check-enable %}
+            <div class="form__label d-block pos-relative">
+              <label class="quantity__label form__label d-block" for="Quantity-{{ section.id }}">
+                {{ 'products.product.quantity.label' | t }}
+              </label>
+              {%- if show_quantity_selector -%}
+                <div class="product-form__messages d-flex f-column g-gap pos-absolute top-0" style="--g-gap: 1rem;">
+                  <span class="quantity__rules-cart quantity__main no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}" data-quantity-rules>
+                    <span class="icon__rules-cart loading-overlay__hide loading-overlay hidden">
+                      <span class="icon d-inline-block">{{ icon_spinner }}</span>
+                    </span>
+                    <span class="icon__rules-cart loading-overlay__show">
+                      {%- render 'icon-fire' %}
+                    </span>
+                    <span class="quantity__rules d-inline-block">
+                      <span class="quantity-cart d-inline-flex">{{ cart_qty }}</span> in cart
+                    </span>
+                  </span>
+                  <div class="quantity__rules no-js-hidden">
+                    {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
+                      <span class="divider">
+                        {{- 'products.product.quantity.multiples_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.increment -}}
+                      </span>
+                    {%- endif -%}
+                    {%- if product.selected_or_first_available_variant.quantity_rule.min > 1 -%}
+                      <span class="divider">
+                        {{- 'products.product.quantity.minimum_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.min -}}
+                      </span>
+                    {%- endif -%}
+                    {%- if product.selected_or_first_available_variant.quantity_rule.max != null -%}
+                      <span class="divider">
+                        {{- 'products.product.quantity.maximum_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.max -}}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+            <quantity-input class="quantity d-flex w-100 pos-relative">
+              <button class="quantity__button f-shrink t-button b-none c-pointer bg-transparent p-0 d-flex a-i-center j-c-center no-js-hidden" name="minus" type="button" {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}>
+                <span class="visually-hidden">{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}</span>
+                {% render 'icon-minus' %}
+              </button>
+              <input
+                class="quantity__input t-button b-none bg-transparent w-100 f-grow center"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                data-cart-quantity="{{ cart_qty }}"
+                data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                  data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                  max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                {% endif %}
+                step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                form="{{ product_form_id }}"
+                {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                  disabled
+                {% endif %}
+              />
+              <button class="quantity__button f-shrink t-button b-none c-pointer bg-transparent p-0 d-flex a-i-center j-c-center no-js-hidden" name="plus" type="button" {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}
+              >
+                <span class="visually-hidden">{{- 'products.product.quantity.increase' | t: product: product.title | escape -}}</span>
+                {% render 'icon-plus' %}
+              </button>
+            </quantity-input>
+          </div>
+        {%- endif -%}
+        <button
+          id= "ProductSubmitButton-{{ section_id }}"
+          type="submit"
+          name="add"
+          class="product-form__submit button button--style-diagonal-swipe{% if type_style == 'special' %} uppercase{% endif %} w-100"
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            disabled
+          {% endif %}
+          style="--button-color-text: {{ block.settings.add_to_cart_colors_text.red }}, {{ block.settings.add_to_cart_colors_text.green }}, {{ block.settings.add_to_cart_colors_text.blue }};
+            --button-color-background: {{ block.settings.add_to_cart_colors_background.red }}, {{ block.settings.add_to_cart_colors_background.green }}, {{ block.settings.add_to_cart_colors_background.blue }};
+            --button-gradient-background: {% if block.settings.add_to_cart_gradient_background != blank %}{{ block.settings.add_to_cart_gradient_background }}{% else %}{{ block.settings.add_to_cart_colors_background }}{% endif %};
+            --button-color-text-hover: {{ block.settings.add_to_cart_colors_text_hover.red }}, {{ block.settings.add_to_cart_colors_text_hover.green }}, {{ block.settings.add_to_cart_colors_text_hover.blue }};
+            --button-color-background-hover: {{ block.settings.add_to_cart_colors_background_hover.red }}, {{ block.settings.add_to_cart_colors_background_hover.green }}, {{ block.settings.add_to_cart_colors_background_hover.blue }};
+            --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};
+          "
+        >
+          <span>
+            {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- else -%}
+              {{ 'products.product.add_to_cart' | t }}
+            {%- endif -%}
+          </span>
+          <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>
+        </button>
+        {%- if show_wishlist_product -%}
+          <card-wishlist class="product-form__wlist c-pointer d-inline-flex a-i-center j-c-center pos-relative bg-transparent"
+            style="--button-color-text: {{ block.settings.wishlist_colors_text.red }}, {{ block.settings.wishlist_colors_text.green }}, {{ block.settings.wishlist_colors_text.blue }};
+              --button-color-background: {{ block.settings.wishlist_colors_background.red }}, {{ block.settings.wishlist_colors_background.green }}, {{ block.settings.wishlist_colors_background.blue }};
+              --button-gradient-background: {% if block.settings.add_to_cart_gradient_background != blank %}{{ block.settings.add_to_cart_gradient_background }}{% else %}{{ block.settings.add_to_cart_colors_background }}{% endif %};
+              --button-color-text-hover: {{ block.settings.wishlist_colors_text_hover.red }}, {{ block.settings.wishlist_colors_text_hover.green }}, {{ block.settings.wishlist_colors_text_hover.blue }};
+              --button-color-background-hover: {{ block.settings.wishlist_colors_background_hover.red }}, {{ block.settings.wishlist_colors_background_hover.green }}, {{ block.settings.wishlist_colors_background_hover.blue }};
+              --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};
+            "
+          >
+            <button class="wishlist-form pos-relative c-pointer b-none bg-transparent p-0 d-inline-flex a-i-center j-c-center" type="button" aria-haspopup="dialog" aria-label="{{ 'templates.wishlist.wishlist_items' | t: count: cart.item_count }}" data-wishlist-handle="{{ product.handle }}">
+              {%- render 'icon-heart' -%}
+            </button>
+          </card-wishlist>
+        {%- endif -%}
+        {%- if show_dynamic_checkout -%}
+          <style type="text/css" media="screen">
+            .shopify-payment-button{
+              --button-color-text: {{ block.settings.buy_it_now_colors_text.red }}, {{ block.settings.buy_it_now_colors_text.green }}, {{ block.settings.buy_it_now_colors_text.blue }};
+              --button-color-background: {{ block.settings.buy_it_now_colors_background.red }}, {{ block.settings.buy_it_now_colors_background.green }}, {{ block.settings.buy_it_now_colors_background.blue }};
+              --button-gradient-background: {% if block.settings.buy_it_now_gradient_background != blank %}{{ block.settings.buy_it_now_gradient_background }}{% else %}{{ block.settings.buy_it_now_colors_background }}{% endif %};
+              --button-color-text-hover: {{ block.settings.buy_it_now_colors_text_hover.red }}, {{ block.settings.buy_it_now_colors_text_hover.green }}, {{ block.settings.buy_it_now_colors_text_hover.blue }};
+              --button-color-background-hover: {{ block.settings.buy_it_now_colors_background_hover.red }}, {{ block.settings.buy_it_now_colors_background_hover.green }}, {{ block.settings.buy_it_now_colors_background_hover.blue }};
+              --button-gradient-background-hover: {% if block.settings.buy_it_now_gradient_background_hover != blank %}{{ block.settings.buy_it_now_gradient_background_hover }}{% else %}{{ block.settings.buy_it_now_colors_background_hover }}{% endif %};
+            }  
+          </style>
+          {{ form | payment_button }}
+        {%- endif -%}
+      </div>
+    {%- endform -%}
+  </product-form>
+{%- else -%}
+  <div class="product-form">
+    <div class="product-form__buttons form">
+      <button type="submit" name="add" class="product-form__submit button button--style-diagonal-swipe{% if type_style == 'special' %} uppercase{% endif %}" disabled
+        style="--button-color-text: {{ block.settings.add_to_cart_colors_text.red }}, {{ block.settings.add_to_cart_colors_text.green }}, {{ block.settings.add_to_cart_colors_text.blue }};
+          --button-color-background: {{ block.settings.add_to_cart_colors_background.red }}, {{ block.settings.add_to_cart_colors_background.green }}, {{ block.settings.add_to_cart_colors_background.blue }};
+          --button-gradient-background: {% if block.settings.add_to_cart_gradient_background != blank %}{{ block.settings.add_to_cart_gradient_background }}{% else %}{{ block.settings.add_to_cart_colors_background }}{% endif %};
+          --button-color-text-hover: {{ block.settings.add_to_cart_colors_text_hover.red }}, {{ block.settings.add_to_cart_colors_text_hover.green }}, {{ block.settings.add_to_cart_colors_text_hover.blue }};
+          --button-color-background-hover: {{ block.settings.add_to_cart_colors_background_hover.red }}, {{ block.settings.add_to_cart_colors_background_hover.green }}, {{ block.settings.add_to_cart_colors_background_hover.blue }};
+          --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};"
+      >
+        {{ 'products.product.sold_out' | t }}
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+{%- if show_pickup_availability -%}
+  {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+    | where: 'pick_up_enabled', true
+  -%}
+  <pickup-availability class="product__pickup-availabilities d-block no-js-hidden"
+    {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+      available
+    {% endif %}
+    data-root-url="{{ routes.root_url }}"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    data-has-only-default-variant="{{ product.has_only_default_variant }}"
+  >
+    <template>
+      <pickup-availability-preview class="pickup-availability-preview d-flex a-i-start">
+        {% render 'icon-unavailable' %}
+        <div class="pickup-availability-info">
+          <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+          <button class="pickup-availability-button link link--text u-u u-link t-button p-0 left">
+            {{ 'products.product.pickup_availability.refresh' | t }}
+          </button>
+        </div>
+      </pickup-availability-preview>
+    </template>
+  </pickup-availability>
+  <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

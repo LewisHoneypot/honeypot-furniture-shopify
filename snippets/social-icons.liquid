@@ -1,0 +1,239 @@
+{%- liquid
+  assign has_social_icons = true
+  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    assign has_social_icons = false
+  endif
+-%}
+{%- if has_social_icons -%}
+  <ul class="list-unstyled list-social {{ class }}">
+    {%- if settings.social_facebook_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_facebook_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- if type_style != 'modern' and type_style != 'classy' and type_style != 'rounded' -%}
+              {%- render 'icon-facebook' -%}
+            {%- else -%}
+              {%- render 'icon-facebook-normal' -%}
+            {%- endif -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.facebook' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_facebook_link }}">
+              <span class="link-style">{{ 'general.social.links.facebook' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_twitter_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_twitter_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- if type_style != 'special' -%}
+              {%- render 'icon-twitter' -%}
+            {%- else -%}
+              {%- render 'icon-twitter-square' -%}
+            {%- endif -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.twitter' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_twitter_link }}">
+              <span class="link-style">{{ 'general.social.links.twitter' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_instagram_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_instagram_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- if type_style == 'rounded' -%}
+              {%- render 'icon-instagram-rounded' -%}
+            {%- else -%}
+              {%- render 'icon-instagram' -%}
+            {%- endif -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.instagram' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_instagram_link }}">
+              <span class="link-style">{{ 'general.social.links.instagram' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_youtube_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_youtube_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- render 'icon-youtube' -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.youtube' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_youtube_link }}">
+              <span class="link-style">{{ 'general.social.links.youtube' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_tiktok_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_tiktok_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- if type_style == 'rounded' -%}
+              {%- render 'icon-tiktok-rounded' -%}
+            {%- else -%}
+              {%- render 'icon-tiktok' -%}
+            {%- endif -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.tiktok' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_tiktok_link }}">
+              <span class="link-style">{{ 'general.social.links.tiktok' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_pinterest_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_pinterest_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- if type_style == 'special' -%}
+              {%- render 'icon-pinterest-square' -%}
+            {%- elsif type_style == 'modern' or type_style == 'classy' -%}
+              {%- render 'icon-pinterest-normal' -%}
+            {%- else -%}
+              {%- render 'icon-pinterest' -%}
+            {%- endif -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.pinterest' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_pinterest_link }}">
+              <span class="link-style">{{ 'general.social.links.pinterest' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_snapchat_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_snapchat_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- render 'icon-snapchat' -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.snapchat' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_snapchat_link }}">
+              <span class="link-style">{{ 'general.social.links.snapchat' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_tumblr_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_tumblr_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- render 'icon-tumblr' -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.tumblr' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_tumblr_link }}">
+              <span class="link-style">{{ 'general.social.links.tumblr' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+    {%- if settings.social_vimeo_link != blank -%}
+      <li class="list-social__item {{ itemClass }}">
+        {%- if settings.enable_animated_cursor -%}
+          <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+            <span class="cursor-fixed__parallax-inner d-inline-block">
+        {%- endif -%}
+          <a href="{{ settings.social_vimeo_link }}" class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent">
+            {%- render 'icon-vimeo' -%}
+            <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">{{ 'general.social.links.vimeo' | t }}</span>
+          </a>
+        {%- if settings.enable_animated_cursor -%}
+            </span>
+          </span>
+        {%- endif -%}	
+        {%- if itemClass != blank -%}
+          <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+            <a class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase" href="{{ settings.social_vimeo_link }}">
+              <span class="link-style">{{ 'general.social.links.vimeo' | t }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

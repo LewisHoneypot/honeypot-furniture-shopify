@@ -1,0 +1,218 @@
+<style>
+    .recently-purchased {
+        left: 10px;
+        bottom: 10px;
+        width: 505px;
+        max-width: calc(100% - 20px);
+        box-shadow: var(--buttons-shadow-horizontal-offset) var(--buttons-shadow-vertical-offset) var(--buttons-shadow-blur-radius) rgba(var(--color-shadow),var(--buttons-shadow-opacity));
+    }
+
+    .recently-purchased__wrapper {
+        padding: 0 2rem 0 0;
+        position: relative;
+    }
+
+    .recently-purchased__card-image {
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+
+    .recently-purchased__card-image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .recently-purchased__card-content {
+        padding: 1rem 0 1rem 2rem;
+        width: calc(100% - 120px);
+    }
+
+    .recently-purchased__card-content .sub-title {
+        color: rgba(var(--color-foreground), 1);
+        font-size: calc(var(--font-body-size) - 2px);
+        word-break: break-all;
+    }
+
+    .recently-purchased__card-content .title {
+        color: rgba(var(--color-foreground), 1);
+        font-size: calc(var(--font-body-size) - 2px);
+    }
+
+    .recently-purchased__card-content .info {
+        color: rgba(var(--color-foreground), 0.6);
+        font-size: calc(var(--font-body-size) - 2px);
+        margin-top: 1.5rem;
+    }
+
+    .recently-purchased__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        padding: 0.2rem;
+    }
+
+    .rp-to-left {
+        animation: slideToLeft 0.7s ease forwards;
+    }
+
+    .rp-to-bottom {
+        animation: slideToBottom 0.7s ease forwards;
+    }
+
+    @keyframes slideToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(calc(-100% + 15px));
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideToBottom {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(calc(100% + 15px));
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        .recently-purchased {
+            left: 15px;
+            bottom: 15px;
+        }
+
+        .recently-purchased__wrapper {
+            padding: 0 4rem 0 0;
+        }
+
+        .recently-purchased__card-image {
+            width: 150px;
+            height: 150px;
+        }
+
+        .recently-purchased__card-content {
+            padding: 1rem 0 1rem 4rem;
+            width: calc(100% - 150px);
+        }
+
+        .recently-purchased__card-content .title {
+            font-size: calc(var(--font-body-size) - 4px);
+        }
+
+        .recently-purchased__card-content .info {
+            font-size: calc(var(--font-body-size) - 4px);
+            margin-top: 3rem;
+        }
+
+        .recently-purchased__close {
+            right: 20px;
+        }
+    }
+</style>
+
+{%- liquid
+    assign time_ago = section.settings.time | split: '|'
+    assign locals = section.settings.location | split: '|'
+-%}
+
+<recently-purchased class="recently-purchased pos-fixed h-auto z-index-2 no-js-hidden rp-to-left color-{{ section.settings.color_scheme }} gradient" data-time="{{ section.settings.change_slider_every }}">
+    <div class="recently-purchased__wrapper">
+        <div class="recently-purchased__list">
+            {%- for product in section.settings.product_list -%}
+            <div class="recently-purchased__item{% unless forloop.first %} d-none{% endunless %}">
+                <div class="recently-purchased__card d-flex">
+                    <div class="recently-purchased__card-image">
+                        {%- assign product_image = product.featured_media | image_url: width: 150 | image_tag: alt: product.featured_media.alt -%}
+                        {%- if product.featured_media -%}
+                        {{ product_image | replace: "src=", 'loading="lazy" decoding="async" src=' }}
+                        {%- endif -%}
+                    </div>
+                    <div class="recently-purchased__card-content d-flex f-column j-c-center">
+                        <a href="{{ product.url }}" class="title link u-none">
+                            <span class="sub-title">Someone recently bought a</span>
+                            <span class="u-u f-w-600">{{ product.title }}</span>
+                        </a>
+                        {%- assign index = forloop.index | minus: 1 -%}
+                        <span class="info">{% if time_ago[index] != blank %}{{ time_ago[index] }} {{ 'recently-purchased.ago' | t -}}{% endif %}{% if locals[index] != blank %} {{ 'recently-purchased.from' | t -}} {{ locals[index] }}{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+        <div class="recently-purchased__close d-flex">{% render 'icon-close' %}</div>
+    </div>
+</recently-purchased>
+
+{%- liquid
+    assign files = 'recently-purchased.js'
+    assign files = files | split: ', '
+    render 'theme-loader', files: files
+-%}
+
+{% schema %}
+{
+    "name": "t:sections.recently-purchased.name",
+    "tag": "section",
+    "class": "section-recently-purchased d-none",
+    "limit": 1,
+    "enabled_on": {
+        "groups": ["custom.popup"]
+    },
+    "settings": [
+    {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "t:sections.recently-purchased.settings.product_list.label"
+    },
+    {
+        "type": "range",
+        "id": "change_slider_every",
+        "label": "t:sections.recently-purchased.settings.change_slider_every.label",
+        "min": 3,
+        "max": 60,
+        "step": 1,
+        "unit": "s",
+        "default": 5
+    },
+    {
+        "type": "textarea",
+        "id": "location",
+        "label": "t:sections.recently-purchased.settings.location.label",
+        "default": "Blackburn, UK | Melbourne, AU | Sydney, AU | Albury, AU | New York, US | New Deli, India | London, UK | Tokyo, Japan | Beijing, China | Blackburn, UK",
+        "info": "t:sections.recently-purchased.settings.location.info"
+    },
+    {
+        "type": "textarea",
+        "id": "time",
+        "label": "t:sections.recently-purchased.settings.time.label",
+        "default": "10 mins | 15 mins | 20 mins | 30 mins | 25 mins | 30 mins | 35 mins | 40 mins | 1 hour | 2 hours",
+        "info": "t:sections.recently-purchased.settings.time.info"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.colors.section_color"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    }],
+    "presets": [
+    {
+        "name": "t:sections.recently-purchased.presets.name"
+    }]
+}
+{% endschema %}

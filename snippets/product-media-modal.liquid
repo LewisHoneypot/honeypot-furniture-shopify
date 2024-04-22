@@ -1,0 +1,20 @@
+<product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal gradient pos-fixed top-0 left-0 w-100 h-100">
+  <div class="product-media-modal__dialog d-flex a-i-center h-100v" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
+    <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle d-block t-button b-circle b-none c-pointer pos-fixed z-index-2 button--close" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+    <div class="product-media-modal__content gradient w-100 o-a m-h" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0" style="--m-h: 100vh;">
+      {%- liquid
+        if product.selected_or_first_available_variant.featured_media != null
+          assign media = product.selected_or_first_available_variant.featured_media
+          render 'product-media', media: media, loop: section.settings.enable_video_looping
+        endif
+      -%}
+      {%- for media in product.media -%}
+        {%- liquid
+          unless media.id == product.selected_or_first_available_variant.featured_media.id
+            render 'product-media', media: media, loop: section.settings.enable_video_looping
+          endunless
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</product-modal>

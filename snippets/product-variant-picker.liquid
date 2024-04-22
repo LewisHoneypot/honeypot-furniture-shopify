@@ -1,0 +1,145 @@
+{%- unless product.has_only_default_variant -%}
+  {%- liquid
+    assign id_append = ''
+    if is_sticky
+      assign id_append = '-duplicate'
+    endif
+    capture icon_caret
+      render 'icon-caret'
+    endcapture
+  -%}
+  {%- if block.settings.picker_type == 'button' -%}
+    <variant-radios
+      id="variant-radios-{{ section.id }}{{ id_append }}"
+      class="d-block no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {% if update_url == false %}
+        data-update-url="false"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- assign swatch = block.settings.swatch | split: ',' | strip | downcase | handle -%}
+      {%- for option in product.options_with_values -%}
+        {%- liquid
+          assign is_swatch = false
+          assign option_name = option.name | downcase
+          if swatch contains option_name
+            assign is_swatch = true
+          endif
+        -%}
+        <fieldset class="js product-form__input{% if is_swatch %} product-form__swatch{% else %} product-form__size{% endif %} b-none p-0 pos-relative">
+          <legend class="form__label d-block">
+            {{ option.name }}:
+            <span data-header-option>
+              {{ option.selected_value }}
+            </span>
+          </legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            is_swatch: is_swatch,
+            id_append: id_append
+          %}
+        </fieldset>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-radios>
+  {%- else -%}
+    <variant-selects
+      id="variant-selects-{{ section.id }}{{ id_append }}"
+      class="d-block no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {% if update_url == false %}
+        data-update-url="false"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        <div class="product-form__input product-form__input--dropdown">
+          <label class="form__label d-block" for="Option-{{ section.id }}-{{ forloop.index0 }}{{ id_append }}">
+            {{ option.name }}:
+            <span data-header-option>
+              {{ option.selected_value }}
+            </span>
+          </label>
+          <div class="select w-auto pos-relative d-flex m-w" style="--m-w: 25rem;">
+            <select
+              id="Option-{{ section.id }}-{{ forloop.index0 }}{{ id_append }}"
+              class="select__select c-pointer"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}{{ id_append }}"
+            >
+              {% render 'product-variant-options',
+                product: product,
+                option: option,
+                block: block,
+                id_append: id_append
+              %}
+            </select>
+            {{ icon_caret }}
+          </div>
+        </div>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-selects>
+  {%- endif -%}
+{%- endunless -%}
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label d-block" for="Variants-{{ section.id }}{{ id_append }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select w-auto pos-relative d-flex">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}{{ id_append }}"
+        class="select__select c-pointer"
+        form="{{ product_form_id }}{{ id_append }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {%- liquid
+              echo variant.title
+              echo variant.price | money | strip_html | prepend: ' - '
+              if variant.available == false
+                echo 'products.product.sold_out' | t | prepend: ' - '
+              endif
+              if variant.quantity_rule.increment > 1
+                echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
+              endif
+              if variant.quantity_rule.min > 1
+                echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
+              endif
+              if variant.quantity_rule.max != null
+                echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
+              endif
+              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
+              # theme-check-disable
+              assign cart_quantity = cart | item_count_for_variant: variant.id
+              # theme-check-enable
+              if cart_quantity > 0
+                echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
+              endif
+            -%}
+          </option>
+        {%- endfor -%}
+      </select>
+      {{ icon_caret }}
+    </div>
+  </div>
+</noscript>

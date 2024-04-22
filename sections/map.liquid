@@ -1,0 +1,112 @@
+{%- if section.settings.map_address != blank -%}
+  <div class="section__map spacing spacing-xs gradient"
+    style="--padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+      --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+      --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+  >
+    <div class="{{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+      <div class="p-w__content">
+        <map-template data-zoom="14" data-type="roadmap" data-location="{{ section.settings.map_address }}">
+          <iframe defer class="d-block w-100 h-100 b-none mi-h mi-h-xs" loading="lazy" scrolling="no" title="{{ section.settings.map_address }}" src="" srcdoc="loading..." style="--mi-h: 40vh; --mi-h-xs: 35vh;"></iframe>
+        </map-template>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.map.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+      "groups": ["custom.popup"]
+  },
+  "settings": [
+  {
+    "type": "text",
+    "id": "map_address",
+    "label": "t:sections.map.settings.map_address.label",
+    "info": "t:sections.map.settings.map_address.info",
+    "default": "Brooklyn, NY, USA"
+  },
+  {
+    "type": "select",
+    "id": "section_width",
+    "options": [
+    {
+      "value": "full-width",
+      "label": "t:sections.all.section_width.options__1"
+    },
+    {
+      "value": "page-width",
+      "label": "t:sections.all.section_width.options__2"
+    },
+    {
+      "value": "customized-width",
+      "label": "t:sections.all.section_width.options__3"
+    }],
+    "default": "full-width",
+    "label": "t:sections.all.section_width.label"
+  },
+  {
+    "type": "range",
+    "id": "customize_width",
+    "min": 1000,
+    "max": 1800,
+    "step": 50,
+    "default": 1800,
+    "unit": "px",
+    "label": "t:sections.all.customize_width.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 0
+  }],
+  "presets": [
+  {
+    "name": "t:sections.map.presets.name"
+  }]
+}
+{% endschema %}

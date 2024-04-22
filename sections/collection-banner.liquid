@@ -1,0 +1,525 @@
+<{% if section.settings.type_style == 'banner' %}div{% else %}image-reveal{% endif %} class="section__coll-banner style-coll--{{ section.settings.type_style }} d-block spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    style="
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    "
+>
+    <div class="{{ section.settings.section_width }} m-auto{% if section.settings.section_width == 'full-width' %} p-banner{% endif %}"{% if section.settings.section_width == 'customized-width' %} style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+        {%- if section.settings.type_style == 'banner' -%}
+            <div class="coll-banner">
+                {%- if section.settings.heading != blank or section.settings.text != blank -%}
+                    <div class="p-w__header m-spacing" style="--m-spacing-b: {{ section.settings.heading_margin_bottom }}px;">
+                        <div class="p-w__header--wrapper {{ section.settings.text_alignment }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                            {%- if section.settings.heading != blank -%}
+                                <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading m-spacing {{ section.settings.heading_size | prepend: 'heading-size-' }} {{ section.settings.heading_font | prepend: 'typography-' }}"
+                                    style="--m-spacing-b: 1.6rem;"
+                                >
+                                    {{ section.settings.heading | escape }}
+                                </h2>
+                            {%- endif -%}
+                            {%- if section.settings.text != blank -%}
+                                <div class="p-w__text rte m-t {{ section.settings.text_size | prepend: 'text-size text-size-' }}">
+                                    {{ section.settings.text }}
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endif -%}
+                <hover-collection class="coll-banner__wrap d-block pos-relative o-h rounded">
+                    <div class="coll-banner__image">
+                        <div class="images pos-relative">
+                            {%- for block in section.blocks -%}
+                                <div class="image pos-absolute w-100 h-100 top-0 left-0">
+                                    <div class="image__full image__inner pos-absolute w-100 h-100 top-0 left-0">
+                                        {%- if block.settings.collection.image != blank -%}
+                                            {%- assign image_alt = block.settings.collection.image.alt | default: block.settings.collection.title -%}
+                                            {{ block.settings.collection.image | image_url: width: block.settings.collection.width | image_tag:
+                                                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                                sizes: '100vw',
+                                                alt: image_alt,
+                                                class: 'w-100 h-100 o-f-cover motion-reduce'
+                                            }}
+                                        {%- else -%}
+                                            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-100 h-100' }}
+                                        {%- endif -%}
+                                    </div>
+                                    <div class="image__clip image__inner pos-absolute w-100 h-100 top-0 left-0">
+                                        {%- if block.settings.collection.image != blank -%}
+                                            {%- assign image_alt = block.settings.collection.image.alt | default: block.settings.collection.title -%}
+                                            {{ block.settings.collection.image | image_url: width: block.settings.collection.width | image_tag:
+                                                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                                sizes: '100vw',
+                                                alt: image_alt,
+                                                class: 'w-100 h-100 o-f-cover motion-reduce'
+                                            }}
+                                        {%- else -%}
+                                            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-100 h-100' }}
+                                        {%- endif -%}
+                                    </div>
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                    <div class="coll-banner__names pos-absolute center z-index-2">
+                        <div class="names d-flex a-i-center j-c-center f-wrap w-100 mt-auto{% if section.settings.button_label == blank %} mb-auto{% endif %}">
+                            {%- for block in section.blocks -%}
+                                <div class="name uppercase">
+                                    <h3 class="name__text {{ section.settings.link_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                        {% if settings.animations_reveal_on_scroll %}
+                                            data-cascade
+                                            style="--animation-order: {{ forloop.index }};"
+                                        {% endif %}
+                                    >
+                                        <a href="{{ block.settings.collection.url }}" class="link u-none pos-relative">
+                                            {{ block.settings.collection.title | default: 'Collection heading' }}
+                                        </a>
+                                    </h3>
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                        {%- if section.settings.button_label != blank -%}
+                            <div class="button-wrap mt-auto">
+                                {%- if settings.enable_animated_cursor -%}
+                                    <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                                {%- endif -%}
+                                    <{% if settings.enable_animated_cursor %}span{% else %}a {% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}{% endif %}  class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %}">
+                                        <span class="text">{{ section.settings.button_label | escape }}</span>
+                                        {% render 'button-main-style' %}
+                                    </{% if settings.enable_animated_cursor %}span{% else %}a{% endif %}>
+                                {%- if settings.enable_animated_cursor -%}
+                                        </span>
+                                    </a>
+                                {%- endif -%}	
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </hover-collection>
+            </div>
+        {%- else -%}
+            <div class="coll-cate">
+                {%- if section.settings.heading != blank or section.settings.text != blank -%}
+                    <div class="p-w__header m-spacing" style="--m-spacing-b: {{ section.settings.heading_margin_bottom }}px;">
+                        <div class="p-w__header--wrapper {{ section.settings.text_alignment }}">
+                            {%- if section.settings.heading != blank -%}
+                                <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading text-size {{ section.settings.heading_size | prepend: 'text-size-' }} {{ section.settings.heading_font | prepend: 'typography-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                                    {{ section.settings.heading | escape }}
+                                </h2>
+                            {%- endif -%}
+                            {%- if section.settings.text != blank -%}
+                                <div class="p-w__text rte m-t {{ section.settings.text_size | prepend: 'text-size text-size-' }}">
+                                    {{ section.settings.text }}
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endif -%}
+                <div class="p-w__content">
+                    <animate-element class="coll-cate__wrap d-block mx-auto">
+                        <div class="coll-cate__images pos-fixed d-none-mw-l">
+                            {%- for block in section.blocks -%}
+                                {%- if block.settings.collection.image != blank -%}
+                                    <img
+                                        srcset="
+                                        {%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if block.settings.collection.image.width >= 535 -%}{{ block.settings.collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if block.settings.collection.image.width >= 750 -%}{{ block.settings.collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if block.settings.collection.image.width >= 1070 -%}{{ block.settings.collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if block.settings.collection.image.width >= 1500 -%}{{ block.settings.collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{ block.settings.collection.image | image_url }} {{ block.settings.collection.image.width }}w
+                                        "
+                                        class="w-100 h-100 o-f-cover motion-reduce"
+                                        src="{{ block.settings.collection.image | image_url: width: 750 }}"
+                                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+                                        alt="{{ block.settings.collection.image.alt | default: block.settings.collection.title }}"
+                                        width="{{ block.settings.collection.image.width }}"
+                                        height="{{ block.settings.collection.image.height }}"
+                                        data-image="label-{{ forloop.index }}-{{ section.id }}"
+                                        loading="lazy"
+                                    >
+                                {%- else -%}
+                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg w-100 h-100' }}
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </div>
+                        <nav class="coll-cate__nav center">
+                            <ul class="coll-cate__menu list-unstyled d-inline">
+                                {%- for block in section.blocks -%}
+                                <li class="item d-inline" data-label="label-{{ forloop.index }}-{{ section.id }}" data-animate="fade" style="--a-delay:0.{{ forloop.index }}s; --duration-long:800ms;">
+                                    <a href="{{ block.settings.collection.url }}" class="item__link link u-none capitalize">
+                                        {{ block.settings.collection.title | default: 'Collection heading' }}
+                                    </a>
+                                </li>
+                                {%- endfor -%}
+                            </ul>
+                        </nav>
+                        {%- if section.settings.button_label != blank -%}
+                            <div class="button-wrap mt-auto center mt" style="--m-t: 4rem;">
+                                {%- if settings.enable_animated_cursor -%}
+                                    <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                                {%- endif -%}
+                                        <{% if settings.enable_animated_cursor %}span{% else %}a {% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %}">
+                                            <span class="text">{{ section.settings.button_label | escape }}</span>
+                                            {% render 'button-main-style' %}
+                                        </{% if settings.enable_animated_cursor %}span{% else %}a{% endif %}>
+                                {%- if settings.enable_animated_cursor -%}
+                                        </span>
+                                    </a>
+                                {%- endif -%}
+                            </div>
+                        {%- endif -%}
+                    </animate-element>
+                </div>
+            </div>
+        {%- endif -%}
+    </div>
+</{% if section.settings.type_style == 'banner' %}div{% else %}image-reveal{% endif %}>
+
+{% schema %}
+{
+    "name": "t:sections.collection-banner.name",
+    "tag": "section",
+    "class": "section",
+    "max_blocks": 10,
+    "disabled_on": {
+    "groups": ["header", "footer", "custom.popup"]
+    },
+    "settings": [
+    {
+        "type": "select",
+        "id": "type_style",
+        "options": [
+        {
+            "value": "banner",
+            "label": "Banner"
+        },
+        {
+            "value": "thumbnails",
+            "label": "Thumbnails"
+        }],
+        "default": "banner",
+        "label": "t:settings_schema.layout.name__2"
+    },
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+        },
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "full-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "default": "Collections",
+        "label": "t:sections.all.heading.label"
+    },
+    {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__2"
+    },
+    {
+        "type": "select",
+        "id": "heading_font",
+        "options": [
+        {
+            "value": "font-heading",
+            "label": "t:settings_schema.global.settings.typography_style.options__1"
+        },
+        {
+            "value": "font-body",
+            "label": "t:settings_schema.global.settings.typography_style.options__2"
+        }],
+        "default": "font-body",
+        "label": "t:settings_schema.global.settings.typography_style.label__1"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.all.text.label"
+    },
+    {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+        {
+        "value": "xx-small",
+        "label": "t:sections.all.font_size.options__1"
+        },
+        {
+        "value": "x-small",
+        "label": "t:sections.all.font_size.options__2"
+        },
+        {
+        "value": "small",
+        "label": "t:sections.all.font_size.options__3"
+        },
+        {
+        "value": "medium",
+        "label": "t:sections.all.font_size.options__4"
+        },
+        {
+        "value": "large",
+        "label": "t:sections.all.font_size.options__5"
+        },
+        {
+        "value": "x-large",
+        "label": "t:sections.all.font_size.options__6"
+        },
+        {
+        "value": "xx-large",
+        "label": "t:sections.all.font_size.options__7"
+        },
+        {
+        "value": "xxx-large",
+        "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "medium",
+        "label": "t:sections.all.font_size.label__3"
+    },
+    {
+        "type": "range",
+        "id": "heading_margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.spacing.heading_margin_bottom",
+        "default": 20
+    },
+    {
+        "type": "select",
+        "id": "text_alignment",
+        "options": [
+        {
+            "value": "left",
+            "label": "t:sections.all.text_alignment.options__1"
+        },
+        {
+            "value": "center",
+            "label": "t:sections.all.text_alignment.options__2"
+        },
+        {
+            "value": "right",
+            "label": "t:sections.all.text_alignment.options__3"
+        }],
+        "default": "center",
+        "label": "t:sections.all.text_alignment.label__2"
+    },
+    {
+        "type": "text",
+        "id": "button_label",
+        "label": "t:sections.all.button_label.label"
+    },
+    {
+        "type": "select",
+        "id": "button_transparent",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.button_style.label__2"
+        },
+        {
+            "value": "transparent",
+            "label": "t:sections.all.button_style.label__3"
+        }],
+        "default": "transparent",
+        "label": "t:sections.all.button_style.label__1"
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.all.button_link.label"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.collection-banner.name"
+    },
+    {
+        "type": "select",
+        "id": "link_size",
+        "options": [
+        {
+            "value": "default",
+            "label": "t:sections.all.font_size.options"
+        },
+        {
+            "value": "xx-small",
+            "label": "t:sections.all.font_size.options__1"
+        },
+        {
+            "value": "x-small",
+            "label": "t:sections.all.font_size.options__2"
+        },
+        {
+            "value": "small",
+            "label": "t:sections.all.font_size.options__3"
+        },
+        {
+            "value": "medium",
+            "label": "t:sections.all.font_size.options__4"
+        },
+        {
+            "value": "large",
+            "label": "t:sections.all.font_size.options__5"
+        },
+        {
+            "value": "x-large",
+            "label": "t:sections.all.font_size.options__6"
+        },
+        {
+            "value": "xx-large",
+            "label": "t:sections.all.font_size.options__7"
+        },
+        {
+            "value": "xxx-large",
+            "label": "t:sections.all.font_size.options__8"
+        }],
+        "default": "default",
+        "label": "t:sections.all.font_size.label__5"
+    },
+    {
+        "type": "header",
+        "content": "t:settings_schema.colors.name"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 78
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 35
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 15
+    }],
+    "blocks": [
+    {
+        "type": "collection",
+        "name": "t:sections.collection-list.blocks.collection.name",
+        "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.all.collection.label"
+        }]
+    }],
+    "presets": [
+    {
+        "name": "t:sections.collection-banner.presets.name",
+        "blocks": [
+        {
+            "type": "collection"
+        },
+        {
+            "type": "collection"
+        },
+        {
+            "type": "collection"
+        }]
+    }]
+}
+{% endschema %}

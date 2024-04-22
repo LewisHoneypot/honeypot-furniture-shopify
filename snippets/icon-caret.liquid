@@ -1,0 +1,18 @@
+{% if style == 'horizontal' %}
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-caret-special" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" width="24" height="24" fill="none">
+    <g clip-path="url(#clip0_103_8737)"><path d="M16 7L9 13L16 19" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <defs> <clipPath id="clip0_103_8737"> <rect width="24" height="24" fill="white" transform="matrix(0 -1 1 0 0 24)" /></clipPath></defs>
+  </svg>
+{% elsif style == 'horizontal-plus' %}
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-caret-horizontal-plus" viewBox="0 0 33 32" aria-hidden="true" focusable="false" role="presentation" width="33" height="32" fill="none">
+    <path d="M23.3845 8L31.1668 16M31.1668 16L23.3845 24M31.1668 16H1.8335" stroke="black"/>
+  </svg>
+{% elsif style == 'panigation' %}
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 24" fill="none" class="icon icon-caret">
+    <path d="M10.4823 7L19.4424 13L10.4823 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+{% else %}
+  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+  </svg>
+{% endif %}

@@ -1,0 +1,30 @@
+{%- if settings.arrow_style == 'special' -%}
+    <div class="icon-wrap pos-relative o-h d-flex j-c-center a-i-center">
+        <i class="icon-inner icon-fr">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret-special" viewBox="0 0 34 34">
+                <path d="M17 1L17 33M17 33L33 18.3559M17 33L1 18.3559" stroke="black" stroke-linecap="round" fill="currentColor"/>
+            </svg>
+        </i>
+        <i class="icon-inner icon-sec pos-absolute">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret-special" viewBox="0 0 34 34">
+                <path d="M17 1L17 33M17 33L33 18.3559M17 33L1 18.3559" stroke="black" stroke-linecap="round" fill="currentColor"/>
+            </svg>
+        </i>
+    </div>
+{%- elsif settings.arrow_style == 'modern-plus' -%}
+    <svg  aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret-modern-plus" width="76" height="42" viewBox="0 0 76 42" fill="none">
+        <path d="M66.5516 22.5594H65.9996C46.0063 22.5594 26.013 22.5564 6.01965 22.5504C5.61847 22.561 5.21943 22.4885 4.84765 22.3375C4.55381 22.2002 4.31377 21.9694 4.16504 21.6812C4.01631 21.3931 3.96729 21.0638 4.02565 20.7448C4.10546 20.3774 4.31028 20.0492 4.60516 19.816C4.90005 19.5828 5.26673 19.4591 5.64265 19.466C5.83165 19.4531 6.02164 19.4611 6.21165 19.4611L66.5546 19.4611L66.5926 19.3611C66.4926 19.2551 66.3996 19.1471 66.2976 19.0451C62.2143 14.9726 58.1303 10.9012 54.0456 6.83067C53.8387 6.66417 53.6729 6.45234 53.5608 6.21155C53.4488 5.97076 53.3937 5.70745 53.3996 5.44196C53.4085 5.15579 53.502 4.87869 53.6685 4.64572C53.8349 4.41275 54.0668 4.23439 54.3346 4.13323C54.5704 4.02232 54.8324 3.97937 55.0912 4.00922C55.35 4.03907 55.5954 4.14053 55.7996 4.30219C56.0725 4.52604 56.3332 4.76433 56.5806 5.01604C61.4653 9.87237 66.3476 14.7334 71.2276 19.599L71.3616 19.733C71.5592 19.8795 71.7197 20.07 71.8306 20.2895C71.9414 20.509 71.9994 20.7514 72 20.9972C72.0006 21.2431 71.9437 21.4857 71.8339 21.7057C71.7241 21.9257 71.5645 22.1171 71.3676 22.2645C69.691 23.9415 68.011 25.6151 66.3276 27.2854C62.9223 30.6734 59.5166 34.063 56.1106 37.4543C55.9406 37.6563 55.7212 37.811 55.4738 37.9033C55.2263 37.9956 54.9593 38.0224 54.6984 37.9812C54.4376 37.94 54.1918 37.832 53.9849 37.6679C53.778 37.5038 53.6171 37.289 53.5176 37.0444C53.4095 36.821 53.3652 36.5721 53.3895 36.3251C53.4139 36.0781 53.506 35.8427 53.6556 35.6447C53.8255 35.4112 54.0167 35.194 54.2266 34.9958C58.2393 30.9967 62.2546 26.9975 66.2726 22.9983C66.3917 22.9021 66.5208 22.819 66.6576 22.7504L66.5516 22.5504" fill="currentColor"/>
+    </svg>
+{%- elsif settings.arrow_style == 'modern' -%}
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret-modern" width="45" height="46" viewBox="0 0 45 46">
+        <path d="M32.1811 11.75L43.125 23M43.125 23L32.1811 34.25M43.125 23H1.875" stroke="currentColor" stroke-width="2"/>
+    </svg>
+{%- elsif settings.arrow_style == 'dreamy' -%}
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret-dreamy" width="20" height="20" viewBox="0 0 20 20">
+        <path d="M14.8235 5.192C14.4985 5.1795 14.1969 5.36544 14.0641 5.66231C13.9297 5.95919 13.9875 6.30606 14.2125 6.54356L16.6703 9.19981H1.20002C0.910962 9.19512 0.643774 9.34669 0.498462 9.59669C0.351587 9.84512 0.351587 10.1545 0.498462 10.4029C0.643774 10.6529 0.910962 10.8045 1.20002 10.7998H16.6703L14.2125 13.4561C14.0125 13.6654 13.9422 13.9654 14.0266 14.242C14.111 14.5186 14.3375 14.7279 14.6188 14.7904C14.9016 14.8529 15.1953 14.7576 15.3875 14.5436L19.5891 9.99981L15.3875 5.45606C15.2438 5.29669 15.0391 5.19981 14.8235 5.192Z" fill="currentColor"/>
+    </svg>
+{%- else -%}
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+    </svg>
+{%- endif -%}

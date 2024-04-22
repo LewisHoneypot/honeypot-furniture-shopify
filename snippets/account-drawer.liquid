@@ -1,0 +1,141 @@
+{%- liquid
+capture icon_arrow
+	render 'icon-arrow'
+endcapture
+-%}
+<side-drawer class="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden color-{{ settings.login_color_scheme }} account-style--{{ settings.login_style }} gradient" id="Drawer-Account">
+	<div class="side-drawer">
+		<div id="Drawer-Overlay-Account" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+		<div class="drawer__inner gradient d-flex f-column o-h cus-scrollbar h-100" role="dialog" aria-modal="true" aria-label="{% if customer %}{{ 'customer.account_fallback' | t }}{% else %}{% if settings.login_style != 'special' %}{{ 'customer.log_in' | t }}{% else %}{{ 'customer.customer_login' | t }}{% endif %}{% endif %}" tabindex="-1">
+			{%- if settings.login_style == 'special' -%}
+				<button class="drawer__close d-block t-button b-none b-circle c-pointer button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+			{%- endif -%}
+			<div class="drawer__header{% if settings.login_style != 'special' %} d-flex j-c-between a-i-center{% endif %} pos-relative">
+				<h2 class="drawer__heading break m-0">
+					{%- liquid
+						if customer
+							echo 'customer.account_fallback' | t
+						else
+							if settings.login_style != 'special'
+								echo 'customer.log_in' | t
+							else
+								echo 'customer.customer_login' | t
+							endif
+						endif
+					-%}
+				</h2>
+				{%- if settings.login_style == 'special' -%}
+					<div class="drawer__description">
+						{{ 'customer.login_page.new_customers.info_6' | t }}
+					</div>
+				{%- endif -%}
+				{%- if settings.login_style != 'special' -%}
+					<button class="drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+				{%- endif -%}
+			</div>
+			<div class="drawer__wrapper{% if settings.login_style == 'special' %} m-b{% endif %}"{% if settings.login_style == 'special' %} style="--m-b: 6rem;"{% endif %}>
+				{%- if customer -%}
+					<ul class="drawer__list list-unstyled" role="list">
+						<li class="m-t" role="listItem" style="--m-t: 1rem;">
+							<a class="link u-none color-foreground d-flex j-c-between a-i-center w-100 l-h-1 subrte animate-arrow" href="{{ routes.account_url }}" aria-label="link">
+								{{ 'customer.account.details' | t }}
+								{{ icon_arrow }}
+							</a>
+						</li>
+						<li class="m-t" role="listItem" style="--m-t: 1rem;">
+							<a class="link u-none color-foreground d-flex j-c-between a-i-center w-100 l-h-1 subrte animate-arrow" href="{{ routes.account_addresses_url }}" aria-label="link">
+								{{ 'customer.addresses.title' | t }}
+								{{ icon_arrow }}
+							</a>
+						</li>
+						<li class="m-t" role="listItem" style="--m-t: 1rem;">
+							<a class="link u-none color-foreground d-flex j-c-between a-i-center w-100 l-h-1 subrte animate-arrow" href="{{ routes.account_login_url }}#recover" aria-label="link">
+								{{ 'customer.recover_password.title' | t }}
+								{{ icon_arrow }}
+							</a>
+						</li>
+						<li class="m-t" role="listItem" style="--m-t: 1rem;">
+							<a class="link u-none color-foreground d-flex j-c-between a-i-center w-100 l-h-1 subrte animate-arrow" href="{{ routes.account_logout_url }}" aria-label="link">
+								{{ 'customer.log_out' | t }}
+								{{ icon_arrow }}
+							</a>
+						</li>
+					</ul>
+				{%- else -%}
+					{%- form 'customer_login', novalidate: 'novalidate', class: 'customer-drawer__form' -%}
+						<div class="field field-bg f-a-none d-flex w-100 pos-relative">
+							<input
+							type="email"
+							name="customer[email]"
+							id="CustomerEmailDrawer"
+							autocomplete="email"
+							autocorrect="off"
+							autocapitalize="off"
+							{% if form.errors contains 'form' %}
+								aria-invalid="true"
+							{% endif %}
+							placeholder="{{ 'customer.login_page.email' | t }}"
+							class="field__input field__input--bg f-grow left"
+							>
+							<label class="field__label field__label--fixed e-none pos-absolute subrte" for="CustomerEmailDrawer">{{ 'customer.login_page.email' | t }}</label>
+						</div>
+						{%- if form.password_needed -%}
+							<div class="field field-bg f-a-none m-t d-flex w-100 pos-relative" style="--m-t: {% if settings.login_style == 'special' %}1.6rem{% else %}1.5rem{% endif %};">
+								<input
+									type="password"
+									value=""
+									name="customer[password]"
+									id="CustomerPasswordDrawer"
+									autocomplete="current-password"
+									{% if form.errors contains 'form' %}
+										aria-invalid="true"
+									{% endif %}
+									placeholder="{{ 'customer.login_page.password' | t }}"
+									class="field__input field__input--bg f-grow left"
+								>
+								<label class="field__label field__label--fixed e-none pos-absolute subrte" for="CustomerPasswordDrawer">{{ 'customer.login_page.password' | t }}</label>
+							</div>
+						{%- endif -%}
+						<div class="field field-bg f-a-none f-wrap r-gap m-t d-flex w-100 pos-relative" style="--r-gap: 1rem;{% if settings.login_style == 'special' %} --m-t: 1.6rem;{% else %} --m-t: 3rem;{% endif %}">
+							<button class="button {{ settings.button_style | prepend: 'button--style-' }}{% if settings.sign_in_button_transparent == 'transparent' %} button--transparent{% endif %} w-100 color-{{ settings.sign_in_color_scheme }} gradient">
+								<span class="text">
+									{%- if settings.login_style == 'special' -%}
+										{{ 'customer.log_in' | t }}
+									{%- else -%}
+										{{ 'customer.login_page.sign_in' | t }}
+									{%- endif -%}
+								</span>
+							</button>
+							{%- if settings.login_style != 'special' -%}
+								<a href="{{ routes.account_register_url }}" class="button {{ settings.button_style | prepend: 'button--style-' }}{% if settings.create_account_button_transparent == 'transparent' %} button--transparent{% endif %} w-100 color-{{ settings.create_account_color_scheme }} gradient">
+									<span class="text">{{ 'customer.login_page.create_account' | t }}</span>
+								</a>
+							{%- endif -%}
+						</div>
+						{%- if form.password_needed -%}
+							<div class="field field-bg f-a-none center m-t d-flex w-100 pos-relative j-c-center" style="--m-t: {% if settings.login_style == 'special' %}1.6rem{% else %}1.5rem{% endif %};">
+								<a href="{{ routes.account_login_url }}#recover" class="link link--text link--style-line u-link">
+									<span class="link-style">{{ 'customer.login_page.forgot_password' | t }}</span>
+								</a>
+							</div>
+						{%- endif -%}
+					{%- endform -%}
+				{%- endif -%}
+			</div>
+			{%- if settings.login_style == 'special' -%}
+				<div class="drawer__footer b-full b-full-top">
+					{%- if settings.login_style == 'special' -%}
+						<div class="drawer__description m-t" style="--m-t: 2.4rem;">
+							{{ 'customer.login_page.new_customers.info_7' | t }}
+						</div>
+					{%- endif -%}
+					<a href="{{ routes.account_register_url }}" class="button {{ settings.button_style | prepend: 'button--style-' }}{% if settings.create_account_button_transparent == 'transparent' %} button--transparent{% endif %} w-100 color-{{ settings.create_account_color_scheme }} gradient m-t"
+						style="--m-t: 2.4rem;"
+					>
+						<span class="text upercase">{{ 'customer.login_page.create_account_2' | t }}</span>
+					</a>
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+</side-drawer>

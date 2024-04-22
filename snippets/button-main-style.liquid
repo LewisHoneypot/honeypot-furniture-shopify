@@ -1,0 +1,12 @@
+{%- if settings.button_icon != 'none' -%}
+    {%- case settings.button_icon -%}
+        {%- when 'caret' -%}
+            <div class="button-main main-arrow-classic d-flex z-index-2 p-l" style="--p-l: 3rem;">
+                {% render 'icon-caret' %}
+            </div>
+        {%- when 'arrow' -%}
+            <div class="button-main main-arrow-special z-index-2">
+                {% render 'icon-arrow' %}
+            </div>
+    {%- endcase -%}
+{%- endif -%}

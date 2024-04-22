@@ -1,0 +1,1203 @@
+{%- if card_product and card_product != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == null
+      assign ratio = 1
+    endif
+    capture icon_spinner
+      render 'icon-spinner'
+    endcapture
+    capture icon_caret
+      render 'icon-caret'
+    endcapture
+
+    assign image_width = image_width | default: '320, 450, 550, 750, 950, 1024, 1200, 1400, 1600, 1800, 2000'
+    assign sizes = "(min-width: 361px) calc(100vw/2), calc(100vw/3)"
+
+    assign secondary_image_class = ' card--1-image'
+    assign product_img_first_classes = 'img-first motion-reduce'
+    assign product_img_second_classes = 'img-second motion-reduce'
+
+    assign product_image = card_product.featured_media | image_url: width: card_product.featured_media.width | image_tag: widths: image_width, sizes: sizes, alt: card_product.featured_media.alt, class: product_img_first_classes
+    if card_product.media[1] != nil and show_secondary_image
+      assign secondary_image_class = ' card--2-images'
+      assign product_image_second = card_product.media[1] | image_url: width: card_product.featured_image.width | image_tag: widths: image_width, sizes: sizes, alt: card_product.title, class: product_img_second_classes
+    endif
+
+    if product_cards_style != nil
+      assign product_cards_style = product_cards_style
+    else
+      assign product_cards_style = settings.product_cards_style
+    endif
+  -%}
+  <div class="product-card-wrapper card-wrapper{% if card_style_popup != nil %} style-popup-{{ card_style_popup }}{% else %} style-product-{{ product_cards_style }}{% if settings.use_custom_color %} cus-bg-color{% endif %}{% endif %}{{ secondary_image_class }}{% if check_p_tab %} card--block-tab{% endif %} pos-relative h-100"
+    {%- if settings.use_custom_color %}
+      style="
+        --cus-color-background: {{ settings.cus_card_colors_background.red }}, {{ settings.cus_card_colors_background.green }}, {{ settings.cus_card_colors_background.blue }};
+      "
+    {%- endif -%}
+  >
+    <{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %}animate-element{% else %}div{% endif %} 
+      class="card{% if card_style_popup != nil %} card--standard{% else %} card--{{ product_cards_style | replace: 'standard-plus', 'standard' | replace: 'advanced-card', 'default' | replace: 'advanced-default', 'default' }}{% endif %} d-flex f-column {{ class_card }} rounded-ovh
+        {%- unless check_color %} gradient gradient-global{% endunless -%}
+        {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} pos-relative{% else %} h-100{% endif -%}
+      "
+    >
+      <div class="card__inner pos-relative o-h w-100{% if card_style_popup == 'advanced-default' %} rounded-ovh{% endif %}">
+        <div class="card__media o-h">
+          <{% if product_cards_style == 'standard' or product_cards_style == 'standard-plus' %}div{% else %}a href="{{ card_product.url }}"{% endif %}
+            class="card-media media media--transparent media--{{ media_aspect_ratio }} pos-relative o-h d-block"
+            {%- if media_aspect_ratio == 'adapt' %}
+              style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+            {% endif -%}
+          >
+            {%- if card_product.featured_media -%}
+              {{ product_image | replace: "src=", 'loading="lazy" decoding="async" src=' }}
+              {{ product_image_second | replace: "src=", 'loading="lazy" decoding="async" src=' }}
+            {%- else -%}
+              {%- liquid
+                assign index = index | default: 1
+                if index > 6
+                  assign index = index | modulo: 6 | plus: 1
+                endif
+              -%}
+              {{ 'product-' | append: index | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </{% if product_cards_style == 'standard' or product_cards_style == 'standard-plus' %}div{% else %}a{% endif %}>
+
+          {%- liquid 
+            if product_cards_style == 'card' or product_cards_style == 'standard-plus' or product_cards_style == 'advanced-card' or product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default'
+              assign class_discount = settings.badge_position | replace: 'top left', 'left' | replace: 'top right', 'right' | prepend: 'discounts-style-'
+            endif
+          -%}
+          {% render 'product-discounts', product: card_product, class_discount: class_discount %}
+        </div>
+        {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' or product_cards_style == 'standard-plus' -%}
+          <div class="card__badge pos-absolute z-index-1 d-flex f-column {{ settings.badge_position }} {{ settings.badge_transform }}"
+            style="--badge-font-size: {{ settings.badge_font_size }}px;"
+          >
+            {%- if card_product.compare_at_price > card_product.price and card_product.available -%}
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge sale-badge d-inline-block center break gradient {{ settings.badge_button_type }}"
+              >
+                {{- 'products.product.on_sale' | t -}}
+              </span>
+            {%- endif -%}
+            {%- if card_product.available == false -%}
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge sold-out-badge d-inline-block center break gradient {{ settings.badge_button_type }}"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if product_cards_style == 'default' or product_cards_style == 'card' or product_cards_style == 'standard' or product_cards_style == 'standard-plus' or product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
+          <div class="card__wishlist effect--{{ settings.product_cards_style }} pos-absolute z-index-2 d-flex f-column {{ settings.badge_position | replace: 'top left', 'right' | replace: 'top right', 'left' }}{% if product_cards_style == 'card' %} d-none-mw-md{% endif %}">
+            {%- if show_wishlist or show_wishlist_mobile -%}
+              <card-wishlist class="card__function-item card__function-wishlist d-block{% unless show_wishlist_mobile %} d-none-mw-xl{% endunless %}{% unless show_wishlist %} d-none-xl{% endunless %}">
+                <button class="button-wishlist wishlist-{{ settings.product_cards_style }}{% if card_button_type == 'transparent' %} button--transparent{% endif %} pos-relative c-pointer{% if settings.product_cards_style == 'standard-plus' %} b-none p-0 bg-transparent v-a-middle{% else %} b-circle{% endif %} d-inline-flex a-i-center j-c-center" type="button" aria-haspopup="dialog" aria-label="{{ 'templates.wishlist.wishlist_items' | t: count: cart.item_count }}" data-wishlist-handle="{{ card_product.handle }}">
+                  {%- liquid 
+                    if settings.product_cards_style == 'standard-plus'
+                      assign styleIcon = 'wishlist-plus'
+                    elsif settings.product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default'
+                      assign styleIcon = 'wishlist-advanced-default'
+                    endif
+                  -%}
+                  {% render 'icon-wishlist-card' 
+                    style_icon: styleIcon
+                  %}
+                </button>
+              </card-wishlist>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if show_quick_add or show_swatch or show_quick_add_mobile or show_swatch_mobile -%}
+          {%- unless product_cards_style == 'default' or product_cards_style == 'advanced-default' or product_cards_style == 'advanced-card' or card_style_popup == 'advanced-default' -%}
+            <div class="card__quickadd quick-add no-js-hidden pos-absolute{% unless product_cards_style == 'card' or product_cards_style == 'advanced-card' %} pos-relative-ixl{% endunless %} z-index-2 w-100 bottom-0 left-0
+              {%- unless product_cards_style == 'card' or product_cards_style == 'advanced-card' %}{%- if show_quick_add == false %} d-none-xl{% endif %}{% endunless -%}
+              {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' %}{% if show_quick_add == false and show_swatch == false %} d-none-xl{% endif %}{% endif -%}
+              {% if product_cards_style == 'card' %} d-none-mw-md{% endif %}"
+            >
+              {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' %}
+                {%- if card_product.has_only_default_variant == false -%}
+                  {%- if show_swatch or show_swatch_mobile -%}
+                    {%- liquid
+                      assign swatch = settings.swatch | split: ',' | strip | downcase | handle
+                    -%}
+                    {%- for option in card_product.options_with_values -%}
+                      {%- liquid
+                        assign is_swatch = false
+                        assign option_name = option.name | downcase
+                        if swatch contains option_name
+                          assign is_swatch = true
+                          assign option_size = option.values | size
+                          assign variants_option1_arr = card_product.variants | map: 'option1'
+                          assign variants_option2_arr = card_product.variants | map: 'option2'
+                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                        endif
+                      -%}
+                      {%- if is_swatch -%}
+                        <div class="card__swatch d-flex f-wrap a-i-center j-c-center{% unless show_swatch_mobile %} d-none-mw-xl{% endunless %}{% unless show_swatch %} d-none-xl{% endunless %}">
+                          {%- for value in option.values -%}
+                            {% unless forloop.index > 4 %}
+                              {%- liquid
+                                assign variant_image = ''
+                                for variant in card_product.variants
+                                  case option.position
+                                    when 1
+                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 2
+                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 3
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                  endcase
+                                endfor
+                              -%}
+                              <span
+                                class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                title="{{ value }}" {% unless variant_image != blank and image_bg_url != '' %} style="--border-variant-color: {{ value | split: ' ' | last | handle }};"{% endunless %}
+                              >
+                                {%- if variant_image != blank -%}
+                                  <span
+                                    class="pattern d-block w-100 h-100 pos-relative center"
+                                    style="background-image: url({{ variant_image.src | product_img_url: '30x'}});"
+                                    role="none"
+                                  ></span>
+                                {%- else -%}
+                                  {%- liquid
+                                    assign image_bg = value | handle | append: '.' | append: 'png'
+                                    assign image_bg_url = ''
+                                    if images[image_bg] != blank
+                                      assign image_bg_url = image_bg | file_url
+                                    else
+                                      assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                      if images[image_bg] != blank
+                                        assign image_bg_url = image_bg | file_url
+                                      endif
+                                    endif
+                                  -%}
+                                  {%- if image_bg_url != '' %}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center"
+                                      style="background-image: url({{ image_bg_url }})"
+                                      role="none"
+                                    ></span>
+                                  {%- else -%}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}"
+                                      style="background-color: {{ value | split: ' ' | last | handle }};"
+                                      role="none"
+                                    ></span>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </span>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- if option_size > 4 -%}
+                            {%- assign count = option_size | minus: 4 -%}
+                            <span class="card__swatch--count color-light">
+                              {{ 'products.product.more_variants' | t: count: count }}
+                            </span>
+                          {%- endif -%}
+                        </div>
+                        {% break %}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- if show_quick_add or show_quick_add_mobile -%}
+                {%- liquid
+                  assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+                  assign qty_rules = false
+                  if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                    assign qty_rules = true
+                  endif
+                -%}
+                {%- if card_product.variants.size > 1 or qty_rules -%}
+                  <modal-opener data-modal="#QuickAdd-{{ card_product.id }}" class="d-block{% unless show_quick_add_mobile %} d-none-mw-xl{% endunless %}{% unless show_quick_add %} d-none-xl{% endunless %}">
+                    <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                    <button
+                      id="{{ product_form_id }}-submit"
+                      type="submit"
+                      name="add"
+                      class="quick-add__submit button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {{ card_button_text_size | prepend: 'text-size-' }} {{ card_button_transform }} w-100{% if card_button_type == 'transparent' %} button--transparent{% endif %}"
+                      aria-haspopup="dialog"
+                      aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                      data-product-url="{{ card_product.url | split: "?" | first }}?view=quick-view"
+                      aria-label="{{ 'templates.cart.cart_items' | t: count: cart.item_count }}"
+                    >
+                      <span class="text d-flex a-i-center{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} j-c-center center{% else %}{% if settings.button_type == 'standard' %} center{% if settings.button_icon != 'none' %} j-c-between{% else %} j-c-center{% endif %}{% else %} j-c-between left{% endif %}{% endif %} w-100">
+                        {{ 'products.product.choose_options' | t }}
+                        {% if product_cards_style == 'standard' %}
+                          {% render 'button-main-style' %}
+                        {% endif %}
+                      </span>
+                      <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>
+                    </button>
+                  </modal-opener>
+                  <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal popup-modal d-flex a-i-center j-c-center pos-fixed top-0 left-0 w-100 h-100 o-h m-auto gradient">
+                    <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}" aria-modal="true" class="quick-add-modal__content popup-modal__content w-100 h-auto m-auto o-h pos-relative gradient template-popup global-settings-popup" tabindex="-1">
+                      <button id="ModalClose-{{ card_product.id }}" type="button" class="quick-add-modal__toggle popup-modal__toggle d-block t-button b-none c-pointer b-circle pos-absolute z-index-3 button--close" aria-label="{{ 'accessibility.close' | t }}">
+                        <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                      </button>
+                      <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info popup-modal__content-info h-100"></div>
+                    </div>
+                  </quick-add-modal>
+                {%- else -%}
+                  <product-form class="d-block">
+                    {%- form 'product',
+                      card_product,
+                      id: product_form_id,
+                      class: 'form',
+                      novalidate: 'novalidate',
+                      data-type: 'add-to-cart-form'
+                    -%}
+                      <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                      <button 
+                        id="{{ product_form_id }}-submit" 
+                        type="submit" 
+                        name="add" 
+                        class="quick-add__submit button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {{ card_button_text_size | prepend: 'text-size-' }} {{ card_button_transform }} w-100{% if card_button_type == 'transparent' %} button--transparent{% endif %}" 
+                        aria-haspopup="dialog" 
+                        aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}" 
+                        aria-live="polite" 
+                        data-sold-out-message="true"
+                        {% if card_product.selected_or_first_available_variant.available == false %} disabled{% endif %}
+                      >
+                        <span class="text{% if card_product.selected_or_first_available_variant.available %} d-flex a-i-center{% endif %}{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} j-c-center center{% else %}{% if settings.button_type == 'standard' %} center{% if settings.button_icon != 'none' %} j-c-between{% else %} j-c-center{% endif %}{% else %} j-c-between left{% endif %}{% endif %} w-100">
+                          {%- if card_product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                            {% if product_cards_style == 'standard' %}
+                              {% render 'button-main-style' %}
+                            {% endif %}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                        </span>
+                        <span class="sold-out-message hidden">
+                          {{ 'products.product.sold_out' | t }}
+                        </span>
+                        <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>
+                      </button>
+                    {%- endform -%}
+                  </product-form>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
+          {%- endunless -%}
+        {%- endif -%}
+
+        {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' -%}
+          <div class="card-function-group pos-absolute {{ settings.badge_position | replace: 'top left', 'right' | replace: 'top right', 'left' }} d-none-lg">
+            <div class="card__wishlist effect--{{ settings.product_cards_style }} {{ settings.badge_position | replace: 'top left', 'right' | replace: 'top right', 'left' }}">
+              {%- if show_wishlist or show_wishlist_mobile -%}
+                <card-wishlist class="card__function-item card__function-wishlist d-block{% unless show_wishlist_mobile %} d-none-mw-xl{% endunless %}{% unless show_wishlist %} d-none-xl{% endunless %}">
+                  <button class="button-wishlist wishlist-{{ settings.product_cards_style }}{% if card_button_type == 'transparent' %} button--transparent{% endif %} pos-relative c-pointer{% if settings.product_cards_style == 'standard-plus' %} b-none p-0 bg-transparent v-a-middle{% else %} b-circle{% endif %} d-inline-flex a-i-center j-c-center" type="button" aria-haspopup="dialog" aria-label="{{ 'templates.wishlist.wishlist_items' | t: count: cart.item_count }}" data-wishlist-handle="{{ card_product.handle }}">
+                    {%- liquid 
+                      if settings.product_cards_style == 'standard-plus'
+                        assign styleIcon = 'wishlist-plus'
+                      elsif settings.product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default'
+                        assign styleIcon = 'wishlist-advanced-default'
+                      endif
+                    -%}
+                    {% render 'icon-wishlist-card' 
+                      style_icon: styleIcon
+                    %}
+                  </button>
+                </card-wishlist>
+              {%- endif -%}
+            </div>
+            {%- if show_quick_add_mobile -%}
+              {%- liquid
+                assign product_form_id = 'quick-add-mobile-' | append: section_id | append: card_product.id
+                assign qty_rules = false
+                if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                  assign qty_rules = true
+                endif
+              -%}
+              {%- if card_product.variants.size > 1 or qty_rules -%}
+                <modal-opener data-modal="#QuickAdd-{{ card_product.id }}-mobile" class="d-none-lg">
+                  <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}-mobile" disabled>
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button button-cart_mobile pos-relative c-pointer b-circle d-inline-flex a-i-center j-c-center link-cover"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                    data-product-url="{{ card_product.url | split: "?" | first }}?view=quick-view"
+                    aria-label="{{ 'templates.cart.cart_items' | t: count: cart.item_count }}"
+                  >
+                    <span class="text d-flex a-i-center j-c-center center w-100 e-none">
+                      {% if product_cards_style == 'card' %}
+                        {% render 'icon-bag' %}
+                      {% elsif product_cards_style == 'advanced-card' %}
+                        {% render 'icon-bag', style_icon: 'advanced-card' %}
+                      {% endif %}
+                    </span>
+                  <div class="loading-overlay__spinner z-index-2 hidden d-inline-flex pos-abolute">{{ icon_spinner }}</div>
+                  </button>
+                </modal-opener>
+                <quick-add-modal id="QuickAdd-{{ card_product.id }}-mobile" class="quick-add-modal popup-modal d-flex a-i-center j-c-center pos-fixed top-0 left-0 w-100 h-100 o-h m-auto gradient">
+                  <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}" aria-modal="true" class="quick-add-modal__content popup-modal__content w-100 h-auto m-auto o-h pos-relative gradient template-popup global-settings-popup" tabindex="-1">
+                    <button id="ModalClose-{{ card_product.id }}" type="button" class="quick-add-modal__toggle popup-modal__toggle d-block t-button b-none c-pointer b-circle pos-absolute z-index-3 button--close" aria-label="{{ 'accessibility.close' | t }}">
+                      <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                    </button>
+                    <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info popup-modal__content-info h-100"></div>
+                  </div>
+                </quick-add-modal>
+              {%- else -%}
+                <product-form class="d-none-xl">
+                  {%- form 'product',
+                    card_product,
+                    id: product_form_id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                    <button
+                      id="{{ product_form_id }}-submit"
+                      type="submit"
+                      name="add"
+                      class="quick-add__submit button button-cart_mobile pos-relative c-pointer b-circle d-inline-flex a-i-center j-c-center"
+                      aria-haspopup="dialog"
+                      aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                      aria-live="polite"
+                      data-sold-out-message="true"
+                      {% if card_product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
+                    >
+                      <span class="text{% if card_product.selected_or_first_available_variant.available %} d-flex a-i-center{% endif %}{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} j-c-center center{% else %} j-c-between left{% endif %} w-100 e-none">
+                        {% if product_cards_style == 'card' %}
+                          {% render 'icon-bag' %}
+                        {% elsif product_cards_style == 'advanced-card' %}
+                          {% render 'icon-bag', style_icon: 'advanced-card' %}
+                        {% endif %}
+                      </span>
+                      <span class="sold-out-message hidden">
+                        {{ 'products.product.sold_out' | t }}
+                      </span>
+                      <div class="loading-overlay__spinner z-index-2 hidden{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} d-inline-flex pos-abolute{% else %} d-inline-block{% endif %}">{{ icon_spinner }}</div>
+                    </button>
+                  {%- endform -%}
+                </product-form>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="card__content w-100{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} pos-absolute top-0 left-0 h-100 e-none{% else %} d-grid{% endif %}{% unless show_swatch_mobile %} hide-q-add-mobile{% endunless %}">
+        <div class="card__information{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} h-100{% if product_cards_style == 'advanced-card' %} d-grid f-row j-c-between a-i-end{% else %} d-flex f-column{% endif %}{% endif %}"
+          {%- if settings.use_custom_color %}
+            style="--color-background: {{ settings.cus_card_colors_background.red }}, {{ settings.cus_card_colors_background.green }}, {{ settings.cus_card_colors_background.blue }};"
+          {%- endif -%}
+        >
+          {%- if product_cards_style == 'advanced-card' -%}
+            <div class="card__vendor-w-heading e-auto pos-relative">
+          {%- endif -%}
+            {%- if product_cards_style != 'advanced-default' -%}
+              {%- if card_style_popup != 'advanced-default' -%}
+                {%- if show_vendor or show_vendor_mobile -%}
+                  <div class="card__vendor subrte{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} uppercase{% else %} f-bold{% endif %}{% unless show_vendor_mobile %} d-none-mw-xl{% endunless %}{% unless show_vendor %} d-none-xl{% endunless %}"{% if product_cards_style == 'card' %} data-animate="fade-down" style="--a-delay: 0.05s;"{% endif %}{% if product_cards_style == 'advanced-card' %} data-animate="fade-up" style="--a-delay: 0.2s;"{% endif %}>
+                    <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                    {{ card_product.vendor }}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endif -%}
+            <h3 class="card__heading m-0" id="title-{{ section_id }}-{{ card_product.id }}"{% if product_cards_style == 'card' %} data-animate="fade-down" style="--a-delay: 0.1s;"{% endif %}{% if product_cards_style == 'advanced-card' %} data-animate="fade-up" style="--a-delay: 0.15s;"{% endif %}>
+              <a 
+                href="{{ card_product.url }}" 
+                id="CardLink-{{ section_id }}-{{ card_product.id }}" 
+                class="full-unstyled-link d-block u-none color-current link-cover{% if product_cards_style == "default" %} pos-relative{% endif %}" 
+                aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }}"
+              >
+                {{ card_product.title | escape }}
+              </a>
+            </h3>
+            {%- if product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
+              {%- if show_vendor or show_vendor_mobile -%}
+                <div class="card__vendor subrte uppercase{% unless show_vendor_mobile %} d-none-mw-xl{% endunless %}{% unless show_vendor %} d-none-xl{% endunless %}">
+                  <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                  {{ card_product.vendor }}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+            {%- if product_cards_style == 'advanced-card' -%}
+              {%- if show_swatch or show_swatch_mobile -%}
+                {%- if card_product.has_only_default_variant == false -%}
+                  {%- if show_swatch or show_swatch_mobile -%}
+                    {%- liquid
+                      assign swatch = settings.swatch | split: ',' | strip | downcase | handle
+                    -%}
+                    {%- for option in card_product.options_with_values -%}
+                      {%- liquid
+                        assign is_swatch = false
+                        assign option_name = option.name | downcase
+                        if swatch contains option_name
+                          assign is_swatch = true
+                          assign option_size = option.values | size
+                          assign variants_option1_arr = card_product.variants | map: 'option1'
+                          assign variants_option2_arr = card_product.variants | map: 'option2'
+                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                        endif
+                      -%}
+                      {%- if is_swatch -%}
+                        <div class="card__swatch d-flex f-wrap a-i-center j-c-start d-none-mw-md{% unless show_swatch_mobile %} d-none-mw-xl{% endunless %}{% unless show_swatch %} d-none-xl{% endunless %}">
+                          {%- for value in option.values -%}
+                            {% unless forloop.index > 4 %}
+                              {%- liquid
+                                assign variant_image = ''
+                                for variant in card_product.variants
+                                  case option.position
+                                    when 1
+                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 2
+                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 3
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                  endcase
+                                endfor
+                              -%}
+                              <span
+                                class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                title="{{ value }}"
+                                data-animate="fade-up" style="--a-delay: {{ '0.1' | times: forloop.index }}s;{% unless variant_image != blank and image_bg_url != '' %}--border-variant-color: {{ value | split: ' ' | last | handle }};{% endunless %}"
+                              >
+                                {%- if variant_image != blank -%}
+                                  <span
+                                    class="pattern d-block w-100 h-100 pos-relative center"
+                                    style="background-image: url({{ variant_image.src | product_img_url: '30x'}});"
+                                    role="none"
+                                  ></span>
+                                {%- else -%}
+                                  {%- liquid
+                                    assign image_bg = value | handle | append: '.' | append: 'png'
+                                    assign image_bg_url = ''
+                                    if images[image_bg] != blank
+                                      assign image_bg_url = image_bg | file_url
+                                    else
+                                      assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                      if images[image_bg] != blank
+                                        assign image_bg_url = image_bg | file_url
+                                      endif
+                                    endif
+                                  -%}
+                                  {%- if image_bg_url != '' %}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center"
+                                      style="background-image: url({{ image_bg_url }})"
+                                      role="none"
+                                    ></span>
+                                  {%- else -%}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}"
+                                      style="background-color: {{ value | split: ' ' | last | handle }};"
+                                      role="none"
+                                    ></span>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </span>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- if option_size > 4 -%}
+                            {%- assign count = option_size | minus: 4 -%}
+                            <span class="card__swatch--count color-light"
+                              data-animate="fade-up" style="--a-delay: 0.5s;"
+                            >
+                              {{ 'products.product.more_variants' | t: count: count }}
+                            </span>
+                          {%- endif -%}
+                        </div>
+                        {% break %}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- if product_cards_style == 'advanced-card' -%}
+            </div>
+          {%- endif -%}
+
+          {%- if product_cards_style == 'card' -%}
+            <div class="card__badge d-flex a-i-center f-wrap {{ settings.badge_transform }} d-none-mw-md" 
+              data-animate="fade-down" 
+              style="--a-delay: 0.15s;--badge-font-size: {{ settings.badge_font_size }}px;"
+            >
+              {%- if card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span id="Badge-{{ section_id }}-{{ card_product.id }}" aria-labelledby="Badge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge sale-badge break gradient d-inline-flex a-i-center j-c-center {{ settings.badge_button_type }}">
+                  {{ 'products.product.on_sale' | t }}
+                </span>
+              {%- endif -%}
+              {%- if card_product.available == false -%}
+                <span id="Badge-{{ section_id }}-{{ card_product.id }}" 
+                  class="badge sold-out-badge break gradient d-inline-flex a-i-center j-c-center {{ settings.badge_button_type }}">
+                  {{ 'products.product.sold_out' | t }}
+                </span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' -%}
+            <div class="card__rating-w-price d-flex a-i-end{% if product_cards_style == 'advanced-card' %} f-column h-100{% if settings.badge_position == 'top right' %} j-c-end{% else %} j-c-between{% endif %}{% else %} j-c-between m-t e-auto{% endif %}" data-animate="fade-down"{% if product_cards_style == 'card' %} style="--a-delay: 0.1s; --m-t: auto"{% endif %}>
+          {%- endif -%}
+            {%- if product_cards_style == 'advanced-card' -%}
+              <div class="card__function e-auto function--badge-{{ settings.badge_position | replace: 'top left', 'left' | replace: 'top right', 'right' }} d-none-mw-md">
+                {%- if show_wishlist or show_wishlist_mobile -%}
+                  <card-wishlist class="card__function-item card__function-wishlist d-block{% unless show_wishlist_mobile %} d-none-mw-xl{% endunless %}{% unless show_wishlist %} d-none-xl{% endunless %}">
+                    <button class="button-wishlist wishlist-{{ settings.product_cards_style }}{% if card_button_type == 'transparent' %} button--transparent{% endif %} pos-relative c-pointer b-circle d-inline-flex a-i-center j-c-center" type="button" aria-haspopup="dialog" aria-label="{{ 'templates.wishlist.wishlist_items' | t: count: cart.item_count }}" data-wishlist-handle="{{ card_product.handle }}">
+                      {%- liquid 
+                        if settings.product_cards_style == 'standard-plus'
+                          assign styleIcon = 'wishlist-plus'
+                        elsif settings.product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default'
+                          assign styleIcon = 'wishlist-advanced-default'
+                        endif
+                      -%}
+                      {% render 'icon-wishlist-card' 
+                        style_icon: styleIcon
+                      %}
+                    </button>
+                  </card-wishlist>
+                {%- endif -%}
+                {%- if show_quick_add or show_quick_add_mobile -%}
+                  {%- liquid
+                    assign product_form_id = 'quick-add-advanced-' | append: section_id | append: card_product.id
+                    assign qty_rules = false
+                    if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                      assign qty_rules = true
+                    endif
+                  -%}
+                  <div class="card__function-item card__function-cart">
+                    {%- if card_product.variants.size > 1 or qty_rules -%}
+                      <modal-opener data-modal="#QuickAdd-{{ card_product.id }}" class="d-block{% unless show_quick_add_mobile %} d-none-mw-xl{% endunless %}{% unless show_quick_add %} d-none-xl{% endunless %}">
+                        <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                        <button
+                          id="{{ product_form_id }}-submit"
+                          type="submit"
+                          name="add"
+                          class="quick-add__submit button-advanced-card pos-relative c-pointer b-circle d-inline-flex a-i-center j-c-center"
+                          aria-haspopup="dialog"
+                          aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                          data-product-url="{{ card_product.url | split: "?" | first }}?view=quick-view"
+                          aria-label="{{ 'templates.cart.cart_items' | t: count: cart.item_count }}"
+                        >
+                          <span class="text d-flex a-i-center j-c-center center w-100">
+                            {% render 'icon-bag', style_icon: 'advanced-card' %}
+                          </span>
+                          <div class="loading-overlay__spinner z-index-2 hidden d-inline-flex pos-abolute">{{ icon_spinner }}</div>
+                        </button>
+                      </modal-opener>
+                      <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal popup-modal d-flex a-i-center j-c-center pos-fixed top-0 left-0 w-100 h-100 o-h m-auto gradient">
+                        <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}" aria-modal="true" class="quick-add-modal__content popup-modal__content w-100 h-auto m-auto o-h pos-relative gradient template-popup global-settings-popup" tabindex="-1">
+                          <button id="ModalClose-{{ card_product.id }}" type="button" class="quick-add-modal__toggle popup-modal__toggle d-block t-button b-none c-pointer b-circle pos-absolute z-index-3 button--close" aria-label="{{ 'accessibility.close' | t }}">
+                            <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                          </button>
+                          <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info popup-modal__content-info h-100"></div>
+                        </div>
+                      </quick-add-modal>
+                    {%- else -%}
+                      <product-form class="d-block">
+                        {%- form 'product',
+                          card_product,
+                          id: product_form_id,
+                          class: 'form',
+                          novalidate: 'novalidate',
+                          data-type: 'add-to-cart-form'
+                        -%}
+                          <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                          <button
+                            id="{{ product_form_id }}-submit"
+                            type="submit"
+                            name="add"
+                            class="quick-add__submit button-advanced-card pos-relative c-pointer b-circle d-inline-flex a-i-center j-c-center"
+                            aria-haspopup="dialog"
+                            aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                            aria-live="polite"
+                            data-sold-out-message="true"
+                            aria-label="{{ 'templates.cart.cart_items' | t: count: 1 }}"
+                            {% if card_product.selected_or_first_available_variant.available == false %}
+                              disabled
+                            {% endif %}
+                          >
+                            <span class="text{% if card_product.selected_or_first_available_variant.available %} d-flex a-i-center{% endif %}{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} j-c-center center{% else %} j-c-between left{% endif %} w-100">
+                              {% render 'icon-bag', style_icon: 'advanced-card' %}
+                            </span>
+                            <span class="sold-out-message hidden">
+                              {{ 'products.product.sold_out' | t }}
+                            </span>
+                            <div class="loading-overlay__spinner z-index-2 hidden{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} d-inline-flex pos-abolute{% else %} d-inline-block{% endif %}">{{ icon_spinner }}</div>
+                          </button>
+                        {%- endform -%}
+                      </product-form>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if product_cards_style == 'advanced-card' -%}
+              <div class="card__advanced-rating-price e-auto">
+            {%- endif -%}
+              {%- if show_rating or show_rating_mobile -%}
+                {%- if card_product.metafields.reviews.rating.value != blank -%}
+                  {%- liquid
+                    assign rating_decimal = 0
+                    assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
+                    if decimal >= 0.3 and decimal <= 0.7
+                      assign rating_decimal = 0.5
+                    elsif decimal > 0.7
+                      assign rating_decimal = 1
+                    endif
+                  -%}
+                  <div class="card__rating{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} d-flex f-shrink a-i-center{% if product_cards_style == 'advanced-card' %} j-c-end{% endif %}{% endif %}{% if product_cards_style == 'standard-plus' %} d-flex a-i-center j-c-start c-gap m-0{% endif %}{% unless show_rating_mobile %} d-none-mw-xl{% endunless %}{% unless show_rating %} d-none-xl{% endunless %}"
+                    {% if product_cards_style == 'standard-plus' %}style="--c-gap: 0.5rem;"{% endif %}
+                  >
+                    <div
+                      class="rating{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} d-inline-block{% else %} d-inline-flex{% endif %}"
+                      role="img"
+                      aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
+                    >
+                      <span aria-hidden="true" class="rating-star d-inline-block l-h-1"
+                        style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                      ></span>
+                    </div>
+                    <p class="rating-text d-none caption m-0">
+                      <span aria-hidden="true">
+                        {{- card_product.metafields.reviews.rating.value }} /
+                        {{ card_product.metafields.reviews.rating.value.scale_max -}}
+                      </span>
+                    </p>
+                    {%- if product_cards_style != 'standard-plus' -%}
+                      <p class="rating-count d-inline-block caption m-0">
+                        <span aria-hidden="true">({{- card_product.metafields.reviews.rating_count -}})</span>
+                        <span class="visually-hidden">
+                          {{- card_product.metafields.reviews.rating_count }}
+                          {{ 'accessibility.total_reviews' | t -}}
+                        </span>
+                      </p>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+              {%- if product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
+                <div class="advanced__default-price-cart d-flex a-i-center j-c-between c-gap break" style="--c-gap: 0.5rem;">
+              {%- endif -%}
+                <div class="card__price{% if product_cards_style == 'card' %} m-l{% endif %}{% if product_cards_style == 'advanced-card' %} right{% endif %}"{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} style="--color-default-price: 0,0,0; --m-l:auto;"{% endif %}>
+                  {% render 'price', product: card_product, price_class: '' %}
+                </div>
+              {%- if product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
+                  {%- if show_quick_add or show_quick_add_mobile -%}
+                    {%- liquid
+                      assign product_form_id = 'quick-add-advanced-default-' | append: section_id | append: card_product.id
+                      assign qty_rules = false
+                      if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                        assign qty_rules = true
+                      endif
+                    -%}
+                    <div class="card__function-item card__function-cart z-index-2">
+                      {%- if card_product.variants.size > 1 or qty_rules -%}
+                        <modal-opener data-modal="#QuickAdd-{{ card_product.id }}" class="d-block{% unless show_quick_add_mobile %} d-none-mw-xl{% endunless %}{% unless show_quick_add %} d-none-xl{% endunless %}">
+                          <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                          <button
+                            id="{{ product_form_id }}-submit"
+                            type="submit"
+                            name="add"
+                            class="quick-add__submit button-advanced-default pos-relative c-pointer b-none bg-transparent c-gap p-0-i v-a-baseline d-flex a-i-end j-c-center typography-font-body"
+                            aria-haspopup="dialog"
+                            aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                            data-product-url="{{ card_product.url | split: "?" | first }}?view=quick-view"
+                            aria-label="{{ 'templates.cart.cart_items' | t: count: cart.item_count }}"
+                            style="--c-gap: 0.6rem;"
+                          >
+                            <div class="block-text f-w-600">
+                              {{ 'products.product.quick_add' | t }}
+                            </div>
+                            <div class="block-icon">
+                              <span class="text d-flex a-i-center j-c-center w-100">
+                                {% render 'icon-cart-card' %}
+                              </span>
+                              <div class="loading-overlay__spinner z-index-2 hidden">{{ icon_spinner }}</div>
+                            </div>
+                          </button>
+                        </modal-opener>
+                        <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal popup-modal d-flex a-i-center j-c-center pos-fixed top-0 left-0 w-100 h-100 o-h m-auto gradient">
+                          <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}" aria-modal="true" class="quick-add-modal__content popup-modal__content w-100 h-auto m-auto o-h pos-relative gradient template-popup global-settings-popup" tabindex="-1">
+                            <button id="ModalClose-{{ card_product.id }}" type="button" class="quick-add-modal__toggle popup-modal__toggle d-block t-button b-none c-pointer b-circle pos-absolute z-index-3 button--close" aria-label="{{ 'accessibility.close' | t }}">
+                              <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                            </button>
+                            <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info popup-modal__content-info h-100"></div>
+                          </div>
+                        </quick-add-modal>
+                      {%- else -%}
+                        <product-form class="d-block">
+                          {%- form 'product',
+                            card_product,
+                            id: product_form_id,
+                            class: 'form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                            <button
+                              id="{{ product_form_id }}-submit"
+                              type="submit"
+                              name="add"
+                              class="quick-add__submit button-advanced-default pos-relative c-pointer b-none bg-transparent c-gap p-0-i v-a-baseline d-flex a-i-end j-c-center typography-font-body"
+                              aria-haspopup="dialog"
+                              aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                              aria-live="polite"
+                              data-sold-out-message="true"
+                              aria-label="{{ 'templates.cart.cart_items' | t: count: 1 }}"
+                              style="--c-gap: 0.6rem;"
+                              {% if card_product.selected_or_first_available_variant.available == false %}
+                                disabled
+                              {% endif %}
+                            >
+                              <div class="block-text f-w-600">
+                                {{ 'products.product.quick_add' | t }}
+                              </div>
+                              <div class="block-icon">
+                                <span class="text{% if card_product.selected_or_first_available_variant.available %} d-flex a-i-center{% endif %} w-100">
+                                  {% render 'icon-cart-card' %}
+                                </span>
+                                <span class="sold-out-message hidden">
+                                  {{ 'products.product.sold_out' | t }}
+                                </span>
+                                <div class="loading-overlay__spinner z-index-2 hidden">{{ icon_spinner }}</div>
+                              </div>
+                            </button>
+                          {%- endform -%}
+                        </product-form>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- if product_cards_style == 'advanced-card' -%}
+              </div>
+            {%- endif -%}
+            {%- if product_cards_style == 'standard' or product_cards_style == 'standard-plus' -%}
+              {%- if show_swatch or show_swatch_mobile -%}
+                {%- if card_product.has_only_default_variant == false -%}
+                  {%- if show_swatch or show_swatch_mobile -%}
+                    {%- liquid
+                      assign swatch = settings.swatch | split: ',' | strip | downcase | handle
+                    -%}
+                    {%- for option in card_product.options_with_values -%}
+                      {%- liquid
+                        assign is_swatch = false
+                        assign option_name = option.name | downcase
+                        if swatch contains option_name
+                          assign is_swatch = true
+                          assign option_size = option.values | size
+                          assign variants_option1_arr = card_product.variants | map: 'option1'
+                          assign variants_option2_arr = card_product.variants | map: 'option2'
+                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                        endif
+                      -%}
+                      {%- if is_swatch -%}
+                        <div class="card__swatch d-flex f-wrap a-i-center j-c-start{% unless show_swatch_mobile %} d-none-mw-xl{% endunless %}{% unless show_swatch %} d-none-xl{% endunless %}">
+                          {%- liquid 
+                            if product_cards_style == 'standard-plus'
+                              assign swatch_limit = 5
+                            else
+                              assign swatch_limit = 4
+                            endif
+                          -%}
+                          {%- for value in option.values -%}
+                            {% unless forloop.index > swatch_limit %}
+                              {%- liquid
+                                assign variant_image = ''
+                                for variant in card_product.variants
+                                  case option.position
+                                    when 1
+                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 2
+                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 3
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                  endcase
+                                endfor
+                              -%}
+                              <span
+                                class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                title="{{ value }}" {% unless variant_image != blank and image_bg_url != '' %} style="--border-variant-color: {{ value | split: ' ' | last | handle }};"{% endunless %}
+                              >
+                                {%- if variant_image != blank -%}
+                                  <span
+                                    class="pattern d-block w-100 h-100 pos-relative center"
+                                    style="background-image: url({{ variant_image.src | product_img_url: '30x'}});"
+                                    role="none"
+                                  ></span>
+                                {%- else -%}
+                                  {%- liquid
+                                    assign image_bg = value | handle | append: '.' | append: 'png'
+                                    assign image_bg_url = ''
+                                    if images[image_bg] != blank
+                                      assign image_bg_url = image_bg | file_url
+                                    else
+                                      assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                      if images[image_bg] != blank
+                                        assign image_bg_url = image_bg | file_url
+                                      endif
+                                    endif
+                                  -%}
+                                  {%- if image_bg_url != '' %}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center"
+                                      style="background-image: url({{ image_bg_url }})"
+                                      role="none"
+                                    ></span>
+                                  {%- else -%}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}"
+                                      style="background-color: {{ value | split: ' ' | last | handle }};"
+                                      role="none"
+                                    ></span>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </span>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- if option_size > swatch_limit -%}
+                            {%- assign count = option_size | minus: swatch_limit -%}
+                            <span class="card__swatch--count color-light">
+                              {%- if product_cards_style == 'standard' -%}
+                                {{ 'products.product.more_variants' | t: count: count }}
+                              {%- elsif product_cards_style == 'standard-plus' -%}
+                                {{ 'products.product.count_variants' | t: count: count }}
+                              {%- endif -%}
+                            </span>
+                          {%- endif -%}
+                        </div>
+                        {% break %}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' -%}
+            </div>
+          {%- endif -%}
+
+          {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' or product_cards_style == 'default' or product_cards_style == 'advanced-default' -%}
+            {%- if show_swatch or show_swatch_mobile or show_quick_add or show_quick_add_mobile -%}
+              {%- if card_product.has_only_default_variant == false -%}
+                {%- if show_swatch or show_swatch_mobile -%}
+                  {%- liquid
+                    assign swatch = settings.swatch | split: ',' | strip | downcase | handle
+                  -%}
+                  {%- for option in card_product.options_with_values -%}
+                    {%- liquid
+                      assign is_swatch = false
+                      assign option_name = option.name | downcase
+                      if swatch contains option_name
+                        assign is_swatch = true
+                        assign option_size = option.values | size
+                        assign variants_option1_arr = card_product.variants | map: 'option1'
+                        assign variants_option2_arr = card_product.variants | map: 'option2'
+                        assign variants_option3_arr = card_product.variants | map: 'option3'
+                      endif
+                    -%}
+                    {%- if is_swatch -%}
+                      <div class="card__swatch d-flex f-wrap a-i-center{% if product_cards_style == 'default' %} j-c-center{% else %}{% if card_style_popup != 'advanced-default' %} b-full b-full-top{% endif %}{% endif %}{% unless show_swatch_mobile %} d-none-mw-xl{% endunless %}{% unless show_swatch %} d-none-xl{% endunless %}{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} d-none-lg{% endif %}">
+                        {%- if product_cards_style == 'default' or product_cards_style == 'card' or product_cards_style == 'advanced-card' -%}
+                          {%- for value in option.values -%}
+                            {% unless forloop.index > 4 %}
+                              {%- liquid
+                                assign variant_image = ''
+                                for variant in card_product.variants
+                                  case option.position
+                                    when 1
+                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 2
+                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 3
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                  endcase
+                                endfor
+                              -%}
+                              <span
+                                class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                title="{{ value }}" {% unless variant_image != blank and image_bg_url != '' %} style="--border-variant-color: {{ value | split: ' ' | last | handle }};"{% endunless %}
+                              >
+                                {%- if variant_image != blank -%}
+                                  <span
+                                    class="pattern d-block w-100 h-100 pos-relative center"
+                                    style="background-image: url({{ variant_image.src | product_img_url: '30x'}});"
+                                    role="none"
+                                  ></span>
+                                {%- else -%}
+                                  {%- liquid
+                                    assign image_bg = value | handle | append: '.' | append: 'png'
+                                    assign image_bg_url = ''
+                                    if images[image_bg] != blank
+                                      assign image_bg_url = image_bg | file_url
+                                    else
+                                      assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                      if images[image_bg] != blank
+                                        assign image_bg_url = image_bg | file_url
+                                      endif
+                                    endif
+                                  -%}
+                                  {%- if image_bg_url != '' %}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center"
+                                      style="background-image: url({{ image_bg_url }})"
+                                      role="none"
+                                    ></span>
+                                  {%- else -%}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}"
+                                      style="background-color: {{ value | split: ' ' | last | handle }};"
+                                      role="none"
+                                    ></span>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </span>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- if option_size > 4 -%}
+                            {%- assign count = option_size | minus: 4 -%}
+                            <span class="card__swatch--count color-light">
+                              {{ 'products.product.more_variants' | t: count: count }}
+                            </span>
+                          {%- endif -%}
+                        {%- elsif product_cards_style == 'advanced-default' -%}
+                          {%- for value in option.values -%}
+                            {% unless forloop.index > 5 %}
+                              {%- liquid
+                                assign variant_image = ''
+                                for variant in card_product.variants
+                                  case option.position
+                                    when 1
+                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 2
+                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 3
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                    when 4
+                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                        assign variant_image = card_product.variants[forloop.index0].image
+                                        break
+                                      endif
+                                  endcase
+                                endfor
+                              -%}
+                              <span
+                                class="card__swatch--item d-block pos-relative z-index-2 c-pointer{% unless variant_image != blank and image_bg_url != '' %} pattern-color{% endunless %}"
+                                title="{{ value }}" {% unless variant_image != blank and image_bg_url != '' %} style="--border-variant-color: {{ value | split: ' ' | last | handle }};"{% endunless %}
+                              >
+                                {%- if variant_image != blank -%}
+                                  <span
+                                    class="pattern d-block w-100 h-100 pos-relative center"
+                                    style="background-image: url({{ variant_image.src | product_img_url: '30x'}});"
+                                    role="none"
+                                  ></span>
+                                {%- else -%}
+                                  {%- liquid
+                                    assign image_bg = value | handle | append: '.' | append: 'png'
+                                    assign image_bg_url = ''
+                                    if images[image_bg] != blank
+                                      assign image_bg_url = image_bg | file_url
+                                    else
+                                      assign image_bg = value | handle | append: '.' | append: 'jpg'
+                                      if images[image_bg] != blank
+                                        assign image_bg_url = image_bg | file_url
+                                      endif
+                                    endif
+                                  -%}
+                                  {%- if image_bg_url != '' %}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center"
+                                      style="background-image: url({{ image_bg_url }})"
+                                      role="none"
+                                    ></span>
+                                  {%- else -%}
+                                    <span
+                                      class="pattern d-block w-100 h-100 pos-relative center{% if value contains 'white' or value contains 'White' %} pattern-white{% endif %} {{ value }}"
+                                      style="background-color: {{ value | split: ' ' | last | handle }};"
+                                      role="none"
+                                    ></span>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </span>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- if option_size > 5 -%}
+                            {%- assign count = option_size | minus: 5 -%}
+                            <span class="card__swatch--count color-light">
+                              {{ 'products.product.more_variants' | t: count: count }}
+                            </span>
+                          {%- endif -%}
+                        {%- endif -%}
+                      </div>
+                      {% break %}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- if product_cards_style == 'default' -%}
+                {%- if show_quick_add or show_quick_add_mobile -%}
+                  <div class="card__quickadd quick-add no-js-hidden">
+                      {%- liquid
+                        assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+                        assign qty_rules = false
+                        if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                          assign qty_rules = true
+                        endif
+                      -%}
+                      {%- if card_product.variants.size > 1 or qty_rules -%}
+                        <modal-opener data-modal="#QuickAdd-{{ card_product.id }}" class="d-block{% unless show_quick_add_mobile %} d-none-mw-xl{% endunless %}{% unless show_quick_add %} d-none-xl{% endunless %}">
+                          <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                          <button
+                            id="{{ product_form_id }}-submit"
+                            type="submit"
+                            name="add"
+                            class="quick-add__submit button {{ settings.button_style | prepend: 'button--style-' }} {{ card_button_text_size | prepend: 'text-size-' }} {{ card_button_transform }} w-100 center{% if card_button_type == 'transparent' %} button--transparent{% endif %}"
+                            aria-haspopup="dialog"
+                            aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                            data-product-url="{{ card_product.url | split: "?" | first }}?view=quick-view"
+                          >
+                            <span class="text">
+                              {{ 'products.product.choose_options' | t }}
+                            </span>
+                            <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>
+                          </button>
+                        </modal-opener>
+                        <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal popup-modal d-flex a-i-center j-c-center pos-fixed top-0 left-0 w-100 h-100 o-h m-auto gradient">
+                          <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}" aria-modal="true" class="quick-add-modal__content popup-modal__content w-100 h-auto m-auto o-h pos-relative gradient template-popup global-settings-popup" tabindex="-1">
+                            <button id="ModalClose-{{ card_product.id }}" type="button" class="quick-add-modal__toggle popup-modal__toggle d-block t-button b-none c-pointer b-circle pos-absolute z-index-3 button--close" aria-label="{{ 'accessibility.close' | t }}">
+                              <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                            </button>
+                            <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info popup-modal__content-info h-100"></div>
+                          </div>
+                        </quick-add-modal>
+                      {%- else -%}
+                        <product-form class="d-block">
+                          {%- form 'product',
+                            card_product,
+                            id: product_form_id,
+                            class: 'form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                            <button id="{{ product_form_id }}-submit" type="submit" name="add" class="quick-add__submit button {{ settings.button_style | prepend: 'button--style-' }} {{ card_button_text_size | prepend: 'text-size-' }} {{ card_button_transform }} w-100 j-c-center{% if card_button_type == 'transparent' %} button--transparent{% endif %}" aria-haspopup="dialog" aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}" aria-live="polite" data-sold-out-message="true"{% if card_product.selected_or_first_available_variant.available == false %} disabled{% endif %}>
+                              <span class="text{% if card_product.selected_or_first_available_variant.available %} d-flex a-i-center{% endif %} j-c-center center w-100">
+                                {%- if card_product.selected_or_first_available_variant.available -%}
+                                  {{ 'products.product.add_to_cart' | t }}
+                                {%- else -%}
+                                  {{ 'products.product.sold_out' | t }}
+                                {%- endif -%}
+                              </span>
+                              <span class="sold-out-message hidden">
+                                {{ 'products.product.sold_out' | t }}
+                              </span>
+                              <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>
+                            </button>
+                          {%- endform -%}
+                        </product-form>
+                      {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %}animate-element{% else %}div{% endif %}>
+  </div>
+{%- else -%}
+  <div class="product-card-wrapper card-wrapper pos-relative h-100">
+    <div class="card d-flex f-column h-100">
+      <div class="card__inner pos-relative o-h w-100 gradient gradient-global">
+        <div class="card__media o-h">
+          <div class="media media--transparent pos-relative o-h d-block" style="padding-bottom: 100%;">
+            {%- liquid
+              assign index = index | default: 1
+              if index > 6
+                assign index = index | modulo: 6 | plus: 1
+              endif
+            -%}
+            {{ 'product-' | append: index | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        </div>
+      </div>
+      <div class="card__content d-grid w-100">
+        <div class="card__information">
+          {%- if show_vendor -%}
+            <div class="card__vendor subrte f-bold">
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              {{ 'products.product.vendor' | t }}
+            </div>
+          {%- endif -%}
+          <h3 class="card__heading m-0">
+            <a role="link" aria-disabled="true" class="d-block u-none color-current link-cover">
+              {{- 'onboarding.product_title' | t -}}
+            </a>
+          </h3>
+          <div class="card__price">
+            {% render 'price', main_price: true, price_class: ' left ' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,21 @@
+<side-drawer class="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden" id="Drawer-Wishlist">
+    <div class="side-drawer">
+        <div id="Drawer-Overlay-Wishlist" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+            <div class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100" role="dialog" aria-modal="true" aria-label="{{ 'templates.wishlist.wishlist' | t }}" tabindex="-1">
+            <div class="drawer__header d-flex j-c-between a-i-center pos-relative">
+				<h2 class="drawer__heading break m-0">{{ 'templates.wishlist.wishlist' | t }}</h2>
+				<button class="drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+			</div>
+            <div class="drawer__wrapper">
+                <wishlist-drawer>
+                    <ul class="wisthlist-grid list-unstyled"></ul>
+                </wishlist-drawer>
+            </div>
+            <div class="wisthlist-grid__empty center m-0 w-100 d-flex f-column j-c-center a-i-center f h-100" style="--w-f-icon: 4.5rem; --h-f-icon: 4.5rem;">
+                {% render 'icon-wishlist-card' %}
+                <h2 class="drawer__heading break m-t m-b" style="--m-t: 1.5rem; --m-b: 1rem;">{{ 'templates.wishlist.empty' | t }}</h2>
+                <span class="text">{{ 'templates.wishlist.empty_description' | t }}</span>
+            </div>
+        </div>
+    </div>
+</side-drawer>

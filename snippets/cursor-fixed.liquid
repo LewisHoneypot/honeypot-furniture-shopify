@@ -1,0 +1,22 @@
+{%- if style_cursor == 'following' -%}
+    <cursor-fixed class="cursor-fixed top-0 left-0 pos-absolute e-none" 
+        style="
+            --color-cursor: {{ settings.colors_animated_cursor.red }},{{ settings.colors_animated_cursor.green }},{{ settings.colors_animated_cursor.blue }}
+        "
+    >
+        <div class="cursor-fixed__wrap">
+            <div class="cursor cursor--large pos-fixed b-circle"></div>
+            <div class="cursor cursor--small pos-fixed b-circle"></div>
+        </div>
+    </cursor-fixed>
+{%- else -%}
+    <cursor-blur class="cursor-fixed top-0 left-0 pos-absolute e-none" 
+        style="
+            --color-cursor: {{ settings.colors_animated_cursor.red }},{{ settings.colors_animated_cursor.green }},{{ settings.colors_animated_cursor.blue }}
+        "
+    >
+        <div class="cursor-fixed__wrap">
+            <div class="cursor cursor--blur pos-fixed b-circle"></div>
+        </div>
+    </cursor-blur>
+{%- endif -%}

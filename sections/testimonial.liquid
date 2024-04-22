@@ -1,0 +1,591 @@
+{%- if section.blocks.size > 0 -%}
+  {%- liquid
+    capture icon_arrow_list
+      render 'icon-arrow-list'
+    endcapture
+  -%}
+  <slideshow-component class="section__testimonial style--{{ section.settings.type_style }} d-block spacing color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}"
+    data-type-pagination="{{ section.settings.pagination_type }}"
+    data-speed="{{ section.settings.change_slides_speed }}"
+    style="
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+      --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+      --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    {% if section.settings.use_custom_color %}
+    --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
+    --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
+    --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
+    {% endif %}"
+  >
+    <div class="page-width m-auto">
+      {%- if section.settings.heading != blank -%}
+        <div class="p-w__header{% if section.settings.section_width == 'full-width' %} page-width{% endif %} m-spacing"
+          style="--m-spacing-b: {{ section.settings.margin_bottom }}px;"
+        >
+          <animate-element class="p-w__header--wrapper d-block {{ section.settings.heading_alignment }}">
+            {%- if section.settings.heading != blank -%}
+              <h2 class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0"
+                id="SectionHeading-{{ section.id }}"
+                data-animate="fade-down"
+                style="--a-delay: 0.2s;"
+              >
+                {{ section.settings.heading | escape }}
+              </h2>
+            {%- endif -%}
+          </animate-element>
+        </div>
+      {%- endif -%}
+      <div role="region" aria-roledescription="Testimonials" aria-label="Testimonials" class="slideshow swiper slider">
+        {%- if section.settings.use_bg_image -%}
+          <div class="slideshow__bg media media--transparent pos-relative" style="padding-bottom: {% if section.settings.image != blank %}{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}{% else %}56{% endif %}%;">
+            {%- if section.settings.image != blank -%}
+              {{ section.settings.image | image_url: width: 3840 | image_tag:
+                loading: 'lazy',
+                width: section.settings.image.width,
+                height: image_height,
+                class: image_class,
+                sizes: '100vw',
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-100 h-100' }}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        <div 
+          aria-live="polite" 
+          aria-atomic="true" 
+          id="Slider-{{ section.id }}" 
+          class="slideshow__items swiper-wrapper slider__items{% if section.settings.enable_autoplay %} swiper-autoplay{% endif %} f-row no-js-overflow-x no-js-scroll-b d-flex f-row{% if section.settings.use_bg_image == true %} pos-absolute pos-relative-swiper-xs top-0 left-0{% endif %} w-100 h-100"
+        >
+          {%- for block in section.blocks -%}
+            <div class="slideshow__item swiper-slide slider__item slider__item--{{ forloop.index }} scroll-s-start mi-w" 
+              role="group" 
+              aria-roledescription="Slide" 
+              aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}" 
+              tabindex="-1" 
+              id="Slide-{{ section.id }}-{{ forloop.index }}" 
+              style="--mi-w: 100%;" 
+              {{ block.shopify_attributes }}
+            >
+              <div class="d-flex pos-relative w-100 h-100">
+                {%- if block.settings.heading != blank or block.settings.text != blank -%}
+                  <div class="slider__content slideshow__content d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h banner__content banner__content--{{ block.settings.box_align }}">
+                    <animate-element class="slider__content--wrapper d-flex f-column j-c-center w-100 h-100 {{ block.settings.text_alignment }} banner__box">
+                      <div class="banner__box--wrapper w-100">
+                        {%- if block.settings.rating != '0' and section.settings.type_style == 'special' -%}
+                          <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.6s;">
+                            <div class="rating d-inline-block"
+                              role="img"
+                              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}"
+                            >
+                              <span class="rating-star d-inline-block l-h-1"
+                                aria-hidden="true"
+                                style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"
+                              ></span>
+                            </div>
+                          </div>
+                        {%- endif -%}
+                        {%- if block.settings.heading != blank -%}
+                          <h2 class="banner__heading u-u{% if section.settings.type_style == 'special' %} pos-relative heading-size-medium{% else %} h4{% endif %}"
+                            data-animate="fade-down"
+                            style="--a-delay: 0.4s;"
+                          >
+                            {{ block.settings.heading | escape }}
+                          </h2>
+                        {%- endif -%}
+                        {%- if block.settings.text != blank -%}
+                          <div class="banner__text{% if section.settings.type_style == 'special' %} text-size-xx-large{% else %} h2{% endif %} rte m-0"
+                            data-animate="fade-down"
+                            style="--a-delay: 0.6s;"
+                          >
+                            {{ block.settings.text }}
+                          </div>
+                        {%- endif -%}
+                        <div class="banner__info d-flex f-wrap a-i-center g-gap j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" style="--g-gap: 1.5rem;">
+                          {%- if block.settings.rating != '0' and section.settings.type_style == 'classic' -%}
+                            <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.8s;">
+                              <div class="rating d-inline-block" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
+                                <span aria-hidden="true" class="rating-star d-inline-block l-h-1" style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"></span>
+                              </div>
+                            </div>
+                          {%- endif -%}
+                          {%- if block.settings.name != blank or block.setting.avatar != blank -%}
+                            <div class="banner__info--author{% if block.settings.avatar %} w-100 d-flex a-i-center j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}{% endif %}"
+                              data-animate="fade-down"
+                              style="--a-delay: 0.8s;"
+                            >
+                              {%- if block.settings.avatar != blank -%}
+                                <div class="banner__info--avatar" style="width: 4rem">
+                                  <div
+                                    class=" media media--adapt media--transparent o-h d-block pos-relative b-circle"
+                                    style="padding-bottom: {{ 1 | divided_by: block.settings.avatar.aspect_ratio | times: 100 }}%;"
+                                  >
+                                    {%- assign alt = block.settings.avatar.alt | default: shop.name | escape -%}
+                                    {{
+                                      block.settings.avatar
+                                      | image_url: width: 50, height: 50
+                                      | image_tag: alt: alt, loading: 'lazy'
+                                    }}
+                                  </div>
+                                </div>
+                              {%- endif -%}
+
+                              {%- if block.settings.name != blank -%}
+                                <div class="banner__info--name {% if section.settings.type_style == 'special' %} text-size-s-small{% endif %}">
+                                  {{ block.settings.name | escape }}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </animate-element>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- if section.blocks.size > 1 -%}
+          <div class="slideshow__controls arrow-style-{{ settings.arrow_style }} controls-{{ section.settings.pagination_type }} d-flex a-i-center j-c-center w-100 no-js-hidden">
+            {%- if section.settings.arrows_type != 'none' -%}
+              <button type="button" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                {{ icon_arrow_list }}
+              </button>
+            {%- endif -%}
+            {%- if section.settings.enable_autoplay -%}
+              <button type="button" class="button-slider button-slider__autoplay gradient gradient-global t-button b-none c-pointer d-flex a-i-center j-c-center no-js-hidden pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+                {%- render 'icon-pause' -%}
+                {%- render 'icon-play' -%}
+                <svg class="autoplay-progress" viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+              </button>
+            {%- endif -%}
+            {%- if section.settings.arrows_type != 'none' -%}
+              <button type="button" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                {{ icon_arrow_list }}
+              </button>
+            {%- endif -%}
+            <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} slider-counter pos-relative-xs z-index-1 d-flex a-i-center j-c-center"></div>
+          </div>
+          <noscript>
+            <div class="slideshow__controls d-flex a-i-center j-c-center w-100">
+              <div class="slider-counter pos-absolute pos-relative-xs z-index-2">
+                <div class="slider-counter__wrapper d-flex a-i-center j-c-center">
+                  {%- for block in section.blocks -%}
+                    <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link link--text u-none" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
+                      {{ forloop.index }}
+                    </a>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </noscript>
+        {%- endif -%}
+      </div>
+    </div>
+  </slideshow-component>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.testimonial.name",
+  "tag": "section",
+  "class": "section o-h pos-relative",
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.popup"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "type_style",
+      "options": [
+        {
+          "value": "special",
+          "label": "t:settings_schema.layout.settings.style.options__1"
+        },
+        {
+          "value": "classic",
+          "label": "t:settings_schema.layout.settings.style.options__2"
+        }
+      ],
+      "default": "classic",
+      "label": "t:settings_schema.layout.name__2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Heading",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "xx-small",
+          "label": "t:sections.all.font_size.options__1"
+        },
+        {
+          "value": "x-small",
+          "label": "t:sections.all.font_size.options__2"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.all.font_size.options__3"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.all.font_size.options__4"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.all.font_size.options__5"
+        },
+        {
+          "value": "x-large",
+          "label": "t:sections.all.font_size.options__6"
+        },
+        {
+          "value": "xx-large",
+          "label": "t:sections.all.font_size.options__7"
+        },
+        {
+          "value": "xxx-large",
+          "label": "t:sections.all.font_size.options__8"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.all.font_size.label__2"
+    },
+    {
+      "type": "text_alignment",
+      "id": "heading_alignment",
+      "label": "t:sections.all.text_alignment.label__2",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.spacing.margin_bottom",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "use_bg_image",
+      "default": true,
+      "label": "t:sections.all.background_image.label__1"
+    },
+  {
+    "type": "image_picker",
+    "id": "image",
+    "label": "t:sections.all.background_image.label"
+  },
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "background-1"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_custom_color",
+    "default": false,
+    "label": "t:sections.all.colors.use_custom_color"
+  },
+  {
+    "type": "color",
+    "id": "colors_text",
+    "default": "#424242",
+    "label": "t:sections.all.colors.colors_text"
+  },
+  {
+    "type": "color",
+    "id": "colors_background",
+    "label": "t:sections.all.colors.colors_background"
+  },
+  {
+    "type": "color_background",
+    "id": "gradient_background",
+    "default": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+    "label": "t:sections.all.colors.gradient_background"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.carousel.label"
+  },
+  {
+    "type": "select",
+    "id": "arrows_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.arrows.options"
+      },
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.arrows.label"
+  },
+  {
+    "type": "checkbox",
+    "id": "carousel_infinite_scroll",
+    "default": false,
+    "label": "t:sections.all.carousel.heading_1"
+  },
+  {
+    "type": "checkbox",
+    "id": "enable_autoplay",
+    "label": "t:sections.all.enable_autoplay.label",
+    "default": false
+  },
+  {
+    "type": "range",
+    "id": "change_slides_speed",
+    "min": 3,
+    "max": 10,
+    "step": 1,
+    "unit": "s",
+    "label": "t:sections.all.change_slides_speed.label",
+    "default": 5
+  },
+  {
+    "type": "select",
+    "id": "enable_pagination_type",
+    "options": [
+      {
+        "value": "all",
+        "label": "t:sections.all.carousel.arrows.options__1"
+      },
+      {
+        "value": "lg",
+        "label": "t:sections.all.carousel.arrows.options__2"
+      },
+      {
+        "value": "md",
+        "label": "t:sections.all.carousel.arrows.options__3"
+      },
+      {
+        "value": "sm",
+        "label": "t:sections.all.carousel.arrows.options__4"
+      },
+      {
+        "value": "xs",
+        "label": "t:sections.all.carousel.arrows.options__5"
+      }],
+    "default": "all",
+    "label": "t:sections.all.carousel.pagination.label__1"
+  },
+  {
+    "type": "select",
+    "id": "pagination_type",
+    "options": [
+      {
+        "value": "none",
+        "label": "t:sections.all.carousel.pagination.options"
+      },
+      {
+        "value": "dots",
+        "label": "t:sections.all.carousel.pagination.options__1"
+      },
+      {
+        "value": "fraction",
+        "label": "t:sections.all.carousel.pagination.options__3"
+      }],
+    "default": "dots",
+    "label": "t:sections.all.carousel.pagination.label"
+  },
+  {
+    "type": "header",
+    "content": "t:sections.all.padding.section_padding_heading"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "padding_top_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top_mobile",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom_mobile",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom_mobile",
+    "default": 0
+  }],
+  "blocks": [
+  {
+    "type": "slide",
+    "name": "t:sections.testimonial.blocks.slide.name",
+    "limit": 5,
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Heading",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Show honest feedbacks about your product or service.</p>",
+      "label": "t:sections.all.text.label"
+    },
+    {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "t:sections.all.avatar.label",
+          "info": "t:sections.all.avatar.info"
+        },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "t:sections.all.name.label",
+      "default": "Customer's name"
+    },
+    {
+      "type": "select",
+      "id": "rating",
+      "label": "t:sections.all.rating.label",
+      "options": [
+        { "value": "0", "label": "t:sections.all.rating.options__1" },
+        { "value": "1", "label": "t:sections.all.rating.options__2" },
+        { "value": "2", "label": "t:sections.all.rating.options__3" },
+        { "value": "3", "label": "t:sections.all.rating.options__4" },
+        { "value": "4", "label": "t:sections.all.rating.options__5" },
+        { "value": "5", "label": "t:sections.all.rating.options__6" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "select",
+      "id": "box_align",
+      "options": [
+      {
+        "value": "top-left",
+        "label": "t:sections.all.desktop_content_position.options__1"
+      },
+      {
+        "value": "top-center",
+        "label": "t:sections.all.desktop_content_position.options__2"
+      },
+      {
+        "value": "top-right",
+        "label": "t:sections.all.desktop_content_position.options__3"
+      },
+      {
+        "value": "middle-left",
+        "label": "t:sections.all.desktop_content_position.options__4"
+      },
+      {
+        "value": "middle-center",
+        "label": "t:sections.all.desktop_content_position.options__5"
+      },
+      {
+        "value": "middle-right",
+        "label": "t:sections.all.desktop_content_position.options__6"
+      },
+      {
+        "value": "bottom-left",
+        "label": "t:sections.all.desktop_content_position.options__7"
+      },
+      {
+        "value": "bottom-center",
+        "label": "t:sections.all.desktop_content_position.options__8"
+      },
+      {
+        "value": "bottom-right",
+        "label": "t:sections.all.desktop_content_position.options__9"
+      }],
+      "default": "middle-left",
+      "label": "t:sections.all.desktop_content_position.label",
+      "info": "t:sections.all.desktop_content_position.info"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "t:sections.all.text_alignment.options__1"
+      },
+      {
+        "value": "center",
+        "label": "t:sections.all.text_alignment.options__2"
+      },
+      {
+        "value": "right",
+        "label": "t:sections.all.text_alignment.options__3"
+      }],
+      "default": "center",
+      "label": "t:sections.all.text_alignment.label"
+    }]
+  }],
+  "presets": [
+  {
+    "name": "t:sections.testimonial.presets.name",
+    "blocks": [
+    {
+      "type": "slide"
+    },
+    {
+      "type": "slide"
+    }]
+  }]
+}
+{% endschema %}

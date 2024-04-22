@@ -1,0 +1,60 @@
+<side-drawer class="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden" id="Drawer-Search">
+	<div class="side-drawer">
+    <div id="Drawer-Overlay-Search" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+    <div class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}" tabindex="-1">
+      <div class="drawer__header d-flex j-c-between a-i-center pos-relative">
+        <h2 class="drawer__heading break m-0">{{ 'general.search.search' | t }}</h2>
+        <button class="drawer__close d-block t-button b-none b-circle c-pointer button--close" type="button" onclick="this.closest('side-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
+          <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+        </button>
+      </div>
+      <div class="drawer__wrapper">
+        {%- if settings.predictive_search_enabled -%}
+          <predictive-search class="search-modal__form url__data d-block pos-relative" data-loading-text="{{ 'accessibility.loading' | t }}" data-url-style-sheet="{{ 'component-predictive-search.css' | asset_url }}">
+        {%- endif -%}
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+            <div class="field field-bg f-a-none d-flex w-100 pos-relative">
+              <input class="search__input field__input field__input--bg f-grow left"
+                id="Search-In-Modal"
+                type="search"
+                name="q"
+                value=""
+                placeholder="{{ 'general.search.search' | t }}"
+                {%- if settings.predictive_search_enabled -%}
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results-list"
+                  aria-controls="predictive-search-results-list"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                {%- endif -%}
+              >
+              <label class="field__label field__label--fixed pos-absolute e-none subrte" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+              <input type="hidden" name="options[prefix]" value="last">
+              <button class="search__button field__button pos-absolute pos-absolute-c-r d-flex a-i-center j-c-center t-button b-none p-0 o-h c-pointer" aria-label="{{ 'general.search.search' | t }}">
+                {% render 'icon-search' %}
+              </button>
+            </div>
+            <button type="reset" class="reset__button link u-link link--style-line t-button b-none c-pointer bg-transparent p-0 m-t{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}" style="--m-t: 1.5rem;">
+              <span class="link-style">{{ 'general.search.reset' | t }}</span>
+            </button>
+            {%- if settings.predictive_search_enabled -%}
+              <div class="predictive-search d-none no-js-hidden" tabindex="-1" data-predictive-search>
+                <div class="predictive-search__loading-state">
+                  {% render 'icon-spinner' %}
+                </div>
+              </div>
+              <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+            {%- endif -%}
+          </form>
+        {%- if settings.predictive_search_enabled -%}
+          </predictive-search>
+        {%- endif -%}
+      </div>
+    </div>
+	</div>
+</side-drawer>

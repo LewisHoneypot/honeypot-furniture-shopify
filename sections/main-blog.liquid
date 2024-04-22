@@ -1,0 +1,733 @@
+{%- liquid
+  capture icon_caret
+    render 'icon-caret'
+  endcapture
+  assign style = section.settings.type_style
+-%}
+{%- paginate blog.articles by section.settings.articles_per_page -%}
+  <div class="section__m-blog blog-style-{{ style }} spacing spacing-xs gradient{% if section.settings.show_line_separator %} bottom-line{% endif %} color-{{ section.settings.color_scheme }} gradient o-h" style="--padding-top: {{ section.settings.padding_top }}px; --padding-bottom: {{ section.settings.padding_bottom }}px; --padding-top-xs: {{ section.settings.padding_top_mobile }}px; --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;">
+    <div class="main-blog style-{{ section.settings.sidebar_type }} {{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+      <div class="p-w__header p-w__header--nogap">
+        <div class="p-w__header--wrapper left">
+          {% if style == "special" %}
+            {% assign padding_bottom = '5.3rem' %}
+          {% else %}
+            {% assign padding_bottom = '0.5rem' %}
+          {% endif %}
+          {% render 'breadcrumb', padding_top: '0.5rem', padding_bottom: padding_bottom, alignment: 'start' %}
+          <h1 class="p-w__heading p-w__heading--page f-bold heading-size-small m-0 m-spacing{% if style != 'special' %} uppercase{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+            {{ blog.title | escape }}
+          </h1>
+        </div>
+      </div>
+      <div class="p-w__content container-line">
+        {%- if section.blocks.size > 0 -%}
+        {{ 'component-sidebar.css' | asset_url | stylesheet_tag }}
+        <div class="p-w__drawer clearfix">
+          <aside aria-labelledby="verticalTitle" class="aside aside__vertical">
+            <page-drawer
+              id="Drawer-{{ section.id }}"
+              data-breakpoint="xs,sm"
+              data-class-component="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex {% if section.settings.sidebar_type == "popup" %}j-c-start{% else %}j-c-end{% endif %} no-js-hidden"
+              data-class-inner="drawer__inner overflow-y overflow-x-h h-100"
+              data-class-overlay="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"
+              data-sidebar-type="{% if section.settings.sidebar_type == "popup" %}true{% else %}false{% endif %}">
+              <div class="page-drawer{% if section.settings.sidebar_type == "popup" %} d-flex{% endif %}">
+                <div id="Drawer-Overlay-{{ section.id }}"></div>
+                <div class="gradient d-flex f-column"
+                  id="Drawer-Inner-{{ section.id }}"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="{{ 'general.sidebar.heading' | t }}"
+                  tabindex="-1"
+                >
+                  <div class="drawer__header d-flex j-c-between a-i-center pos-relative no-js-hidden{% if section.settings.sidebar_type == "default" %} d-none-md{% endif %}">
+                    <h2 class="drawer__heading break m-0">{{ 'general.sidebar.heading' | t }}</h2>
+                    {% if section.settings.sidebar_type != "popup" %}
+                      <button class="drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('page-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
+                        <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                      </button>
+                    {% endif %}
+                  </div>
+                  <div class="drawer__wrapper">
+                    {% render 'asides', section: section, sidebar_type: section.settings.sidebar_type %}
+                  </div>
+                </div>
+              </div>
+              {% if section.settings.sidebar_type == "popup" %}
+                <button class="drawer__close d-block t-button b-none c-pointer button--close" type="button" onclick="this.closest('page-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
+                  <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                </button>
+              {% endif %}
+            </page-drawer>
+          </aside>
+          <div class="aside__sibling">
+          <page-drawer-opener class="page__drawer-opener d-block no-js-hidden{% if section.settings.sidebar_type == "default" %} d-none-md o-h{% endif %}" data-side-drawer="#Drawer-{{ section.id }}">
+            <button class="{% if section.settings.sidebar_type == "default" %}d-block {% else %}d-flex f-row-reverse a-i-center uppercase {% endif %}t-button b-none c-pointer o-h l-h-1 gradient"
+              type="button"
+              aria-haspopup="dialog"
+              aria-label="{{ 'general.sidebar.heading' | t }}"
+            >
+              {% if section.settings.sidebar_type == "default" %}
+                {% render 'icon-filter' %}
+                {{ 'general.sidebar.heading' | t }}
+              {% else %}
+                {% render 'icon-filter-2' %}
+                {{ 'general.sidebar.label' | t }}
+              {% endif %}
+            </button>
+          </page-drawer-opener>
+        {%- endif -%}
+          <div class="blog-articles p-b{% if style == 'special' %} d-flex{% else %} d-grid grid{% endif %}" style="--grid-v-xs: 1.5rem; --grid-v-sm: 3rem; --grid-v-md: 4.5rem; --grid-v-lg: 6rem; --p-b: 3rem;">
+            {%- for article in blog.articles -%}
+              <div class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+                <div class="article-card-wrapper card-wrapper pos-relative w-100">
+                  <div class="card article-card gradient">
+                    <div class="card__inner pos-relative o-h w-100">
+                      <a class="article-card__image-wrapper card__media o-h" href="{{ article.url }}" aria-label="{{ article.title | escape }}">
+                        <animate-element class="d-block article-card__image">
+                          {%- liquid
+                            assign ratio = 1
+                            if article.image
+                              assign ratio = article.image.aspect_ratio
+                            endif
+                            if ratio == 0 or ratio == null
+                              assign ratio = 1
+                            endif
+                          -%}
+                          <div class="media media--transparent media--adapt media--zoom" style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                            data-animate="zoom-out"
+                          >
+                            {%- if article.image -%}
+                              <img
+                              srcset="{%- if article.image.src.width >= 165 -%}
+                              {{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                              {%- if article.image.src.width >= 360 -%}
+                              {{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                              {%- if article.image.src.width >= 533 -%}
+                              {{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                              {%- if article.image.src.width >= 720 -%}
+                              {{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                              {%- if article.image.src.width >= 1000 -%}
+                              {{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                              {%- if article.image.src.width >= 1500 -%}
+                              {{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                              {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+                              src="{{ article.image.src | image_url: width: 533 }}"
+                              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                              alt="{{ article.image.src.alt | escape }}"
+                              class="motion-reduce"
+                              {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                              width="{{ article.image.width }}"
+                              height="{{ article.image.height }}">
+                            {%- else -%}
+                              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {%- endif -%}
+                          </div>
+                        </animate-element>
+                      </a>
+                    </div>
+                    <animate-element class="card__content d-block">
+                      {% if style == 'special' %}
+                        <div class="tags d-flex f-wrap w-100">
+                          {% for tag in article.tags limit: 3 %}
+                            <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="item-tag d-inline-flex u-none" aria-label="link">{{ tag }}</a>
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                      <h2 class="card__heading{% if style == 'special' %} p-w__heading heading-size-default{% else %} large{% endif %}" data-animate="fade-up" style="--a-delay: 0.2s;">
+                        <a href="{{ article.url }}" class="d-block u-none color-current link-cover">{{ article.title | escape }}</a>
+                      </h2>
+                      {%- if section.settings.show_date or section.settings.show_author -%}
+                        <div class="article-card__info card__info large color-light" data-animate="fade-up" style="--a-delay: 0.25s;">
+                          {% if style == 'special' %}
+                            {% if section.settings.show_author %}              
+                              <div class="author">{{ 'blogs.article.author_1' | t : author :  article.author }}</div>
+                            {% endif %}
+                            {% if section.settings.show_date %}
+                              <div class="day">{{ article.published_at | time_tag: '%d/%m/%Y' }}</div>
+                            {% endif %}
+                            {% else %}
+                            <span>
+                              {% if section.settings.show_author %}
+                                {{ 'blogs.article.author' | t: author: article.author }}
+                              {% endif %}
+                              {% if section.settings.show_date %}
+                                {{ 'blogs.article.published_at' | t }} {{ article.published_at | time_tag: '%b %d, %Y' }}
+                              {% endif %}
+                            </span>
+                          {% endif %}
+                        </div>
+                      {%- endif -%}
+                      {%- if section.settings.show_excerpts -%}
+                        {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                          <p class="article-card__excerpt card__excerpt" data-animate="fade-up" style="--a-delay: 0.275s;">
+                            {%- if article.excerpt.size > 0 -%}
+                              {{ article.excerpt | strip_html }}
+                            {%- else -%}
+                              {{ article.content | strip_html | truncatewords: 400 }}
+                            {%- endif -%}
+                          </p>
+                        {%- endif -%}
+                      {%- endif -%}
+                      {% if style != 'special' %}
+                        <a href="{{ article.url }}" class="article-card__button button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %} mi-w" data-animate="fade-up" style="--mi-w: 20rem; --a-delay: 0.2s;">
+                          <span class="text">{{ 'blogs.article.read_more' | t }}</span>
+                          {% render 'button-main-style' %}
+                        </a>
+                      {%- endif -%}
+                    </animate-element>
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+          {%- if paginate.pages > 1 -%}
+            {%- render 'pagination', 
+              paginate: paginate, 
+              pageType: style 
+            -%}
+          {%- endif -%}
+        {%- if section.blocks.size > 0 -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+  {
+    "name": "t:sections.main-blog.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+          {
+            "value": "full-width",
+            "label": "t:sections.all.section_width.options__1"
+          },
+          {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+          },
+          {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+          }
+        ],
+        "default": "full-width",
+        "label": "t:sections.all.section_width.label"
+      },
+      {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+      },
+      {
+        "type": "select",
+        "id": "type_style",
+        "options": [
+        {
+          "value": "special",
+          "label": "t:settings_schema.layout.settings.style.options__1"
+        },
+        {
+          "value": "classic",
+          "label": "t:settings_schema.layout.settings.style.options__2"
+        }],
+        "default": "classic",
+        "label": "t:settings_schema.layout.name__2"
+      },
+      {
+        "type": "range",
+        "id": "articles_per_page",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 4,
+        "label": "t:sections.all.article.articles_per_page"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_line_separator",
+        "default": false,
+        "label": "t:sections.all.show_line_separator.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.article.header.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_image",
+        "default": true,
+        "label": "t:sections.all.article.show_image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_date",
+        "default": true,
+        "label": "t:sections.all.article.show_date"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_author",
+        "default": false,
+        "label": "t:sections.all.article.show_author"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_excerpts",
+        "default": true,
+        "label": "t:sections.all.article.show_excerpts.label",
+        "info": "t:sections.all.article.show_excerpts.info"
+      },
+      {
+        "type": "select",
+        "id": "button_transparent",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.all.button_style.label__2"
+          },
+          {
+            "value": "transparent",
+            "label": "t:sections.all.button_style.label__3"
+          }
+        ],
+        "default": "default",
+        "label": "t:sections.all.button_style.label__1",
+        "info": "t:sections.image-banner.settings.item.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.article.sidebar_type.name"
+      },
+      {
+        "type": "select",
+        "id": "sidebar_type",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.all.article.sidebar_type.options__1"
+          },
+          {
+            "value": "popup",
+            "label": "t:sections.all.article.sidebar_type.options__2"
+          }
+        ],
+        "default": "default",
+        "label": "t:sections.all.article.sidebar_type.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors.name"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 20
+      }
+    ],
+    "blocks": [
+      {
+        "type": "products",
+        "name": "t:sections.main-sidebar.blocks.products.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Best Sellers"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.all.collection.label"
+          },
+          {
+            "type": "range",
+            "id": "product_list_limit",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "default": 10,
+            "label": "t:sections.all.product.product_list_limit"
+          },
+          {
+            "type": "range",
+            "id": "products_per_page",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "default": 3,
+            "label": "t:sections.all.product.products_per_page"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.product.header.content"
+          },
+          {
+            "type": "select",
+            "id": "image_ratio",
+            "options": [
+              {
+                "value": "adapt",
+                "label": "t:sections.all.image_ratio.options__1"
+              },
+              {
+                "value": "portrait",
+                "label": "t:sections.all.image_ratio.options__2"
+              },
+              {
+                "value": "square",
+                "label": "t:sections.all.image_ratio.options__3"
+              }
+            ],
+            "label": "t:sections.all.image_ratio.label",
+            "default": "square"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_swatch",
+            "default": false,
+            "label": "t:sections.all.product.show_swatch.label",
+            "info": "t:sections.all.product.show_swatch.info"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "collections",
+        "name": "t:sections.main-sidebar.blocks.collections.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Categories"
+          },
+          {
+            "type": "link_list",
+            "id": "link_list",
+            "label": "t:sections.all.menu.label"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "brands",
+        "name": "t:sections.main-sidebar.blocks.brands.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Brands"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_view_all",
+            "default": true,
+            "label": "t:sections.all.brands.show_view_all"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.all.link_url.label"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "posts",
+        "name": "t:sections.main-sidebar.blocks.posts.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Recent Post"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "tags",
+        "name": "t:sections.main-sidebar.blocks.tags.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Blog Tags"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "t:sections.main-sidebar.blocks.image.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Advertising Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.all.image.label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.all.link_url.label"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "t:sections.main-sidebar.blocks.text.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.all.heading.label",
+            "default": "Custom Block"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "label": "t:sections.all.text.label"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 5
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

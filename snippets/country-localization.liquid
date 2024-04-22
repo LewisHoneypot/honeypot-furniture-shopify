@@ -1,0 +1,38 @@
+<div class="disclosure pos-relative">
+    <button
+    type="button"
+    class="disclosure__button localization-form__select localization-selector pos-relative d-block link link--text caption-large c-pointer bg-transparent"
+    aria-expanded="false"
+    aria-controls="{{ localPosition }}List"
+    aria-describedby="{{ localPosition }}Label"
+    >
+    <span>
+        {{- localization.country.currency.iso_code }}
+        {{ localization.country.currency.symbol }} | {{ localization.country.name -}}
+    </span>
+    {% render 'icon-caret' %}
+    </button>
+    <div class="disclosure__list-wrapper {{ class_dropdown }}">
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled overflow-y cus-scrollbar">
+        {%- for country in localization.available_countries -%}
+        <li class="disclosure__item" tabindex="-1">
+            <a
+            class="link link--text u-none disclosure__link caption-large focus-inset{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}"
+            href="#"
+            {% if country.iso_code == localization.country.iso_code %}
+                aria-current="true"
+            {% endif %}
+            data-value="{{ country.iso_code }}"
+            >
+            <span class="localization-form__currency">
+                {{- country.currency.iso_code }}
+                {{ country.currency.symbol }} |</span
+            >
+            {{ country.name }}
+            </a>
+        </li>
+        {%- endfor -%}
+    </ul>
+    </div>
+</div>
+<input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">

@@ -1,0 +1,113 @@
+{%- liquid
+  capture separate
+    echo '<li>'
+    echo '<span class="separate d-block pos-relative" aria-hidden="true"></span>'
+    echo '</li>'
+  endcapture
+-%}
+{%- unless template == 'index' -%}
+  <nav
+    class="breadcrumb color-background-1 bg-transparent-i gradient{% if font_size == 'default' %} subrte{% else %} {{ font_size | prepend: 'text-size text-size-' }}{% endif %} element-spacing"
+    role="navigation"
+    aria-label="breadcrumbs"
+    style="
+      --padding-top: {{ padding_top  }};
+      --padding-bottom: {{ padding_bottom }};
+    "
+  >
+  	<ul class="d-flex f-wrap j-c-{{ alignment }} list-unstyled g-gap" style="--g-gap: 0.7rem;">
+  		<li>
+  			<a class="link link--text h-link link--style-line" href="{{ routes.root_url }}">
+          <span class="link-style">{{ 'breadcrumb.home' | t }}</span>
+        </a>
+  		</li>
+  		{{ separate }}
+	  	{%- case template -%}
+	  		{%- when 'article' -%}
+	  			<li>
+            <a class="link link--text h-link link--style-line" href="{{- blog.url -}}">
+              <span class="link-style">{{ blog.title | split: '|' | first }}</span>
+            </a>
+	        </li>
+	        {{ separate }}
+	        <li class="is-active">
+	          <span aria-current="page">{{ article.title | split: '|' | first }}</span>
+	        </li>
+	      {%- when 'blog' -%}
+	      	{%- if current_tags -%}
+            <li>
+              <a class="link link--text h-link link--style-line" href="{{- blog.url -}}">
+                <span class="link-style">{{ blog.title | split: '|' | first }}</span>
+              </a>
+            </li>
+            {{ separate }}
+            <li class="is-active">
+              {%- capture tag_url -%}{{- blog.url -}}/tagged/{{- current_tags | join: "+" }}{%- endcapture -%}
+              <a class="link link--text h-link link--style-line" href="{{ tag_url }}" aria-current="page">
+                <span class="link-style">{{- current_tags | join: ' + ' -}}</span>
+              </a>
+            </li>
+          {%- else -%}
+            <li class="is-active">
+              <span aria-current="page">{{ blog.title }}</span>
+            </li>
+          {%- endif -%}
+	      {%- when 'cart' -%}
+	       	<li class="is-active">
+	          <span aria-current="page">{{ 'breadcrumb.cart' | t }}</span>
+	        </li>
+	      {%- when 'collection' and collection.handle -%}
+	      	{%- if current_tags -%}
+	      		<li>
+              <a class="link link--text h-link link--style-line" href="/collections" aria-current="page">
+                <span class="link-style">{{ 'breadcrumb.collections' | t }}</span>
+              </a>
+            </li>
+            {{ separate }}
+            <li>
+              <a class="link link--text h-link link--style-line" href="{{- collection.url -}}">
+                <span class="link-style">{{ collection.title | split: '|' | first }}</span>
+              </a>
+            </li>
+            {{ separate }}
+            <li class="is-active">
+              {%- capture tag_url -%}{{- collection.url -}}/{{- current_tags | join: "+" }}{%- endcapture -%}
+              <a class="link link--text h-link link--style-line" href="{{ tag_url }}" aria-current="page">
+                <span class="link-style">{{ current_tags | join: ' + ' }}</span>
+              </a>
+            </li>
+	      	{%- else -%}
+	      		<li>
+              <a class="link link--text h-link link--style-line" href="/collections" aria-current="page">
+                <span class="link-style">{{ 'breadcrumb.collections' | t }}</span>
+              </a>
+            </li>
+            {{ separate }}
+            <li class="is-active">
+              <span aria-current="page">{{ collection.title }}</span>
+            </li>
+	      	{%- endif -%}
+	      {%- when 'product' -%}
+	      	{%- if collection.url -%}
+            <li>
+              <a class="link link--text h-link link--style-line" href="collection.url">
+                <span class="link-style">{{ collection.title | split: '|' | first }}</span>
+              </a>
+            </li>
+            {{ separate }}
+          {%- endif -%}
+          <li class="is-active">
+            <span aria-current="page">{{ product.title | split: '|' | first }}</span>
+          </li>
+	      {%- when 'search' -%}
+	      	<li class="is-active">
+	          <span aria-current="page">{{ 'breadcrumb.search' | t }}</span>
+	        </li>
+	      {%- else -%}
+	      	<li class="is-active">
+            <span aria-current="page">{{ page_title }}</span>
+          </li>
+	  	{%- endcase -%}
+  	</ul>
+  </nav>
+{%- endunless -%}

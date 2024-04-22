@@ -1,0 +1,314 @@
+{%- if section.blocks.size > 0 -%}
+    <div class="section__c-tab spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+        style="--padding-top: {{ section.settings.padding_top }}px;
+        --padding-bottom: {{ section.settings.padding_bottom }}px;
+        --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+        --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+    >
+        <custom-tab class="{{ section.settings.section_width }} m-auto d-block"{% if section.settings.section_width == 'customized-width' %} style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
+            <ul class="custom__tab-item custom__tab-list d-none j-c-center a-i-center list-unstyled{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" role="list">
+                {%- for block in section.blocks -%}
+                    {%- if request.page_type == 'product' -%}
+                        <li class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}" 
+                            {{ block.shopify_attributes }}
+                            role="listitem" 
+                        >
+                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left" type="button" aria-haspopup="dialog" aria-label="{{ block.settings.heading | escape }}" data-tabs-title data-tab="#Custom-tab-{{ block.id }}">
+                                {{ block.settings.heading | escape }}
+                            </button>
+                            {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                                <a href="{{ block.settings.page.url }}" class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js">
+                                    {{ block.settings.heading | escape }}
+                                </a>
+                            {%- endif -%}
+                        </li>
+                    {%- else -%}
+                        {%- if block.settings.content_type != 'description' -%}
+                            <li class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}" 
+                                {{ block.shopify_attributes }}
+                                role="listitem" 
+                            >
+                                <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left" type="button" aria-haspopup="dialog" aria-label="{{ block.settings.heading | escape }}" data-tabs-title data-tab="#Custom-tab-{{ block.id }}">
+                                    {{ block.settings.heading | escape }}
+                                </button>
+                                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                                    <a href="{{ block.settings.page.url }}" class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js">
+                                        {{ block.settings.heading | escape }}
+                                    </a>
+                                {%- endif -%}
+                            </li>
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+            <div class="custom__tab-item w-100">
+                {%- for block in section.blocks -%}
+                    {%- if request.page_type == 'product' -%}
+                        <div class="custom__tab-content b-bottom-mobile">
+                            <ul class="custom__tab-mobile d-none list-unstyled" role="list">
+                                <li class="custom__tab-list-item icon-effect{% if forloop.first == true %} active{% endif %}" role="listitem" {{ block.shopify_attributes }} data-tab-mobile="#Custom-tab-{{ block.id }}">
+                                    <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left" type="button" aria-haspopup="dialog" aria-label="{{ block.settings.heading | escape }}" data-tabs-title data-tab="#Custom-tab-{{ block.id }}">
+                                        {{ block.settings.heading | escape }}
+                                        <span class="i-plus-effect">
+                                        </span>
+                                    </button>
+                                    {%- if block.settings.page != blank and  block.settings.page.url != blank -%}
+                                        <a href="{{ block.settings.page.url }}" class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js">
+                                            {{ block.settings.heading | escape }}
+                                        </a>
+                                    {%- endif -%}
+                                </li>
+                            </ul>
+                            <div class="custom__tab-text o-h{% if forloop.first == true %} active{% endif %}" id="Custom-tab-{{ block.id }}" data-tab-id="Custom-tab-{{ block.id }}">
+                                <div class="item item__description spacing spacing-xs"
+                                    style="
+                                    --padding-top: {{ block.settings.padding_top }}px;
+                                    --padding-bottom: {{ block.settings.padding_bottom }}px;
+                                    --padding-top-xs: {{ block.settings.padding_top_mobile }}px;
+                                    --padding-bottom-xs: {{ block.settings.padding_bottom_mobile }}px;
+                                    "
+                                >
+                                    {%- if block.settings.content_type == 'description' -%}
+                                        {{ product.description }}
+                                    {%- elsif block.settings.content_type == 'page' -%}
+                                        {{ block.settings.page.content }}
+                                    {%- else -%}
+                                        {{ block.settings.content }}
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        </div>
+                    {%- else -%}
+                        {%- if block.settings.content_type != 'description' -%}
+                            <div class="custom__tab-content b-bottom-mobile">
+                                <ul class="custom__tab-mobile d-none list-unstyled" role="list">
+                                    <li class="custom__tab-list-item icon-effect{% if forloop.first == true %} active{% endif %}" role="listitem" {{ block.shopify_attributes }} data-tab-mobile="#Custom-tab-{{ block.id }}">
+                                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left" type="button" aria-haspopup="dialog" aria-label="{{ block.settings.heading | escape }}" data-tabs-title data-tab="#Custom-tab-{{ block.id }}">
+                                            {{ block.settings.heading | escape }}
+                                            <span class="i-plus-effect">
+                                            </span>
+                                        </button>
+                                        {%- if block.settings.page != blank and  block.settings.page.url != blank -%}
+                                            <a href="{{ block.settings.page.url }}" class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js">
+                                                {{ block.settings.heading | escape }}
+                                            </a>
+                                        {%- endif -%}
+                                    </li>
+                                </ul>
+                                <div class="custom__tab-text o-h{% if forloop.first == true %} active{% endif %}" id="Custom-tab-{{ block.id }}" data-tab-id="Custom-tab-{{ block.id }}">
+                                    <div class="item item__description spacing spacing-xs"
+                                        style="
+                                        --padding-top: {{ block.settings.padding_top }}px;
+                                        --padding-bottom: {{ block.settings.padding_bottom }}px;
+                                        --padding-top-xs: {{ block.settings.padding_top_mobile }}px;
+                                        --padding-bottom-xs: {{ block.settings.padding_bottom_mobile }}px;
+                                        "
+                                    >
+                                        {%- if block.settings.content_type == 'page' -%}
+                                            {{ block.settings.page.content }}
+                                        {%- else -%}
+                                            {{ block.settings.content }}
+                                        {%- endif -%}
+                                    </div>
+                                </div>
+                            </div>
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </custom-tab>
+    </div>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "t:sections.custom-tab.name",
+    "class": "section",
+    "tag": "section",
+    "max_blocks": 5,
+    "disabled_on": {
+        "groups": ["header", "footer", "custom.popup"]
+    },
+    "settings": [
+    {
+        "type": "select",
+        "id": "section_width",
+        "options": [
+        {
+            "value": "page-width",
+            "label": "t:sections.all.section_width.options__2"
+        },
+        {
+            "value": "customized-width",
+            "label": "t:sections.all.section_width.options__3"
+        }],
+        "default": "page-width",
+        "label": "t:sections.all.section_width.label"
+    },
+    {
+        "type": "range",
+        "id": "customize_width",
+        "min": 1000,
+        "max": 1800,
+        "step": 50,
+        "default": 1800,
+        "unit": "px",
+        "label": "t:sections.all.customize_width.label"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 40
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 20
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 20
+    }],
+    "blocks": [
+    {
+        "type": "text",
+        "name": "t:sections.custom-tab.settings.custom_tab.label",
+        "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "default": "Custom row",
+            "label": "t:sections.all.heading.label",
+            "info": "t:sections.all.heading.info__1"
+        },
+        {
+            "type": "select",
+            "id": "content_type",
+            "label": "t:sections.all.select_content.label",
+            "options": [
+            {
+                "value": "description",
+                "label": "t:sections.all.select_content.options__1"
+            },
+            {
+                "value": "page",
+                "label": "t:sections.all.select_content.options__3"
+            },
+            {
+                "value": "custom",
+                "label": "t:sections.all.select_content.options__2"
+            }],
+            "default": "custom",
+            "info": "t:sections.all.select_content.info"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "label": "t:sections.all.content.label"
+        },
+        {
+            "type": "page",
+            "id": "page",
+            "label": "t:sections.all.content_from_page.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.block_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 61
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 61
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top_mobile",
+            "default": 8
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom_mobile",
+            "default": 8
+        }]
+    }],
+    "presets": [
+    {
+        "name": "t:sections.custom-tab.presets.name",
+        "blocks": [
+        {
+            "type": "text"
+        },
+        {
+            "type": "text"
+        },
+        {
+            "type": "text"
+        },
+        {
+            "type": "text"
+        }]
+    }]
+}
+{% endschema %}

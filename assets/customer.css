@@ -1,0 +1,298 @@
+.customer form{
+  max-width: 59rem;
+}
+
+.customer.addresses form{
+  max-width: 100%;
+  margin-top: 3rem;
+}
+
+.customer .field {
+  margin: 0.5rem 0 0 0;
+}
+
+.customer .field__label{
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.customer.addresses .field__label{
+  margin-top: 0;
+}
+
+.customer .field__input {
+  padding: 1.2rem 1.5rem;
+  border: var(--inputs-border-width) solid rgba(var(--color-foreground),.55);
+}
+
+.customer ul {
+  text-align: left;
+  padding-left: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.customer.addresses ul,
+.customer.order ul {
+  padding-left: 0;
+}
+
+.customer ul:last-child{
+  margin-bottom: 0;
+}
+
+.customer ul li {
+  padding: 0.7rem 0;
+}
+
+.customer ul a {
+  display: inline;
+}
+
+.customer ul a.pagination__item{
+  display: inline-flex;
+}
+
+.customer table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.customer thead {
+  background: rgba(var(--color-foreground),.04);
+}
+
+.customer tfoot::before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(var(--color-foreground), 0.08);
+}
+
+.customer td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.customer td:empty {
+  display: initial;
+}
+
+.customer td:first-of-type {
+  padding-top: 4rem;
+}
+
+.customer td:last-of-type {
+  padding-bottom: 4rem;
+}
+
+.customer tbody tr {
+  border-top: 0.01rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.customer tbody tr:first-of-type {
+  border-top: none;
+}
+
+.customer tfoot tr {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.customer tfoot td{
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.register-info {
+  padding: 3rem 2rem;
+  background: rgba(var(--color-foreground),.04);
+}
+
+.register-info p{
+  margin-bottom: 2.4rem;
+}
+
+/* Login */
+#recover:target {
+  display: block;
+}
+
+#recover:target + div {
+  display: block;
+}
+
+#recover:target ~ #login,
+#recover:target ~ #login + div {
+  display: none;
+}
+
+/* Account/Order */
+.account__item--order{
+  flex-basis: 100%;
+}
+
+.account__item .h3{
+  margin-bottom: 2rem;
+}
+
+.order-item__properties{
+  margin-top: 0.2rem;
+}
+
+.order .fulfillment {
+  width: fit-content;
+  background: rgba(var(--color-foreground),.04);
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.order .fulfillment a {
+  margin: 0.7rem 0;
+}
+
+.order .cart-discount {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .order td .cart-discount {
+    display: none;
+  }
+}
+
+.order .cart-discount svg {
+  width: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+/* Addresses */
+.addresses [aria-expanded='true'] ~ div[id] {
+  display: block;
+}
+
+.addresses__panel{
+  padding: 2rem;
+  margin: 0 0 2rem;
+  background: rgba(var(--color-foreground),.04);
+}
+
+.addresses__list-item > button + button {
+  margin-left: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .customer table {
+    border-top: 0.1rem solid transparent;
+    border-bottom: 0.1rem solid transparent;
+  }
+  
+  .customer tfoot::before {
+    background: CanvasText;
+  }
+
+  .customer tbody tr {
+    border-top: 0.1rem solid transparent;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .customer tfoot{
+    display: block;
+  }
+
+  .customer tr,
+  .customer td {
+    display: flex;
+    width: 100%;
+  }
+
+  .customer td:before {
+    content: attr(data-label);
+    font-size: clamp(1.4rem, calc(var(--font-body-size) - 0.2rem), 1.8rem);
+    font-weight: var(--font-body-weight-bold);
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: left;
+    padding-right: 2rem;
+  }
+
+  .customer td.d-none-xs{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .customer table {
+    box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.08);
+  }
+
+  .customer th,
+  .customer td:first-of-type {
+    padding-left: 0;
+    padding-right: 2.2rem;
+  }
+
+  .customer th{
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+
+  .customer td {
+    vertical-align: middle;
+    padding-right: 2.2rem;
+    padding-top: 2rem!important;
+    padding-bottom: 2rem!important;
+  }
+
+  .customer th:first-of-type,
+  .customer td:first-of-type {
+    padding-left: 2.2rem;
+  }
+
+  .customer tfoot td {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+  }
+
+  .account__item .h3 {
+    --cus-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .register-info{
+    padding: 4rem 3rem;
+  }
+
+  .account__item--order{
+    flex-basis: 0;
+    width: calc(100% - 34rem);
+    padding-right: 3rem;
+  }
+
+  .account__item--detail{
+    width: 34rem;
+    position: sticky;
+    top: 3rem;
+    padding: 2rem;
+    background: rgba(var(--color-foreground),.04);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .login-info{
+    padding-right: 9rem;
+  }
+
+  .register-info{
+    padding: 7rem;
+    margin-left: 3rem;
+  }
+}
