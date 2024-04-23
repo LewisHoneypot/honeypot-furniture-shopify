@@ -134,6 +134,24 @@
                     {{ product.title | escape }}
                   </h1>
                 </div>
+              
+              {%- when 'color_swatch' -%}
+                {%- if product.metafields.custom.product_color_list != blank -%}
+                  <h4>Available Colours:</h4>
+                  <div class="color-list">
+                    {% for p in product.metafields.custom.product_color_list.value %}
+                      <a
+                        {% if product.handle == p.handle %}
+                          href="#" style="cursor:default; outline:2px solid #000000; outline-offset:2px;"
+                        {% else %}
+                          href="{{ p.url }}"
+                        {% endif %}
+                      >
+                        <div class="color-item" style="background-color: {{ p.metafields.custom.color.value }};"></div>
+                      </a>
+                    {% endfor %}
+                  </div>
+                {%- endif -%} 
               {%- when 'vendor' -%}
                 <div class="product__vendor element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" 
                   {{ block.shopify_attributes }}
@@ -568,25 +586,7 @@
                       {{ block.settings.heading | escape }}
                     </a>
                   {%- endif -%}
-                {%- endif -%}
-
-              {%- when 'color_swatch' -%}
-                {%- if product.metafields.custom.product_color_list != blank -%}
-                  <h4>Available Colours:</h4>
-                  <div class="color-list">
-                    {% for p in product.metafields.custom.product_color_list.value %}
-                      <a
-                        {% if product.handle == p.handle %}
-                          href="#" style="cursor:default; outline:2px solid #000000; outline-offset:2px;"
-                        {% else %}
-                          href="{{ p.url }}"
-                        {% endif %}
-                      >
-                        <div class="color-item" style="background-color: {{ p.metafields.custom.color.value }};"></div>
-                      </a>
-                    {% endfor %}
-                  </div>
-                {%- endif -%}                              
+                {%- endif -%}                             
                               
               {%- when 'variant_picker' -%}
                 <div class="product__variant element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -4496,15 +4496,15 @@
 
 
 {% stylesheet %}
-.color-list{
-      display: flex;
-      }
-.color-list a {
-      margin-right: 1rem;
-      }
-.color-item{
-      aspect-ratio: 1;
-      width: 3.5rem;
-      border-radius: 100%;
-      }
+  .color-list{
+        display: flex;
+        }
+  .color-list a {
+        margin-right: 1rem;
+        }
+  .color-item{
+        aspect-ratio: 1;
+        width: 3.5rem;
+        display: block !important;
+        }
 {% endstylesheet %}
