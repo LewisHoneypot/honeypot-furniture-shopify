@@ -21,7 +21,7 @@
     "padding_full_width": 68,
     "spacing_grid_horizontal": 15,
     "spacing_grid_vertical": 15,
-    "enable_animated_cursor": true,
+    "enable_animated_cursor": false,
     "colors_animated_cursor": "#ede9e2",
     "buttons_font_weight": "bold",
     "buttons_border_thickness": 2,
