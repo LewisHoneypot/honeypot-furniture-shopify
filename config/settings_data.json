@@ -78,19 +78,19 @@
     "badge_transform": "capitalize",
     "badge_position": "top left",
     "badge_corner_radius": 0,
-    "social_facebook_link": "https://facebook.com/shopify",
-    "social_instagram_link": "http://instagram.com/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
     "social_youtube_link": "",
     "social_tiktok_link": "",
-    "social_twitter_link": "https://twitter.com/shopify",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https://pinterest.com/shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
-    "favicon": "shopify://shop_images/FaviconBee.png",
+    "favicon": "shopify:\/\/shop_images\/FaviconBee.png",
     "currency_code_enabled": true,
     "cart_style": "special",
     "cart_type": "drawer",
@@ -119,7 +119,7 @@
     "multitasking_collapse": true,
     "multitasking_secondary_button_background": "#d0e9e9",
     "enable_preloading_screen": true,
-    "checkout_logo_image": "shopify://shop_images/Logo-horizontal-black-transparent.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo-horizontal-black-transparent.png",
     "checkout_accent_color": "#988c8b",
     "checkout_button_color": "#000000",
     "checkout_error_color": "#B30E13",
@@ -127,12 +127,12 @@
     "colors_following_cursor": "#005a6e",
     "heading_scale": 100,
     "body_scale": 100,
-    "preloading_screen_logo": "shopify://shop_images/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
+    "preloading_screen_logo": "shopify:\/\/shop_images\/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
     "preloading_screen_logo_width": 180,
     "colors_text": "#121212",
     "button_colors_text": "#FFFFFF",
     "button_colors_background": "#121212",
-    "logo": "shopify://shop_images/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
+    "logo": "shopify:\/\/shop_images\/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
     "logo_width": 90,
     "spacing_sections": 0,
     "blog_card_style": "standard",
@@ -180,7 +180,7 @@
     "card_color_scheme": "background-2",
     "accent_icons": "text",
     "brand_headline": "",
-    "brand_description": "<p></p>",
+    "brand_description": "<p><\/p>",
     "brand_image_width": 100,
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
@@ -197,13 +197,19 @@
       "main-password-header": {
         "type": "main-password-header",
         "settings": {
-          "logo": "shopify://shop_images/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
+          "logo": "shopify:\/\/shop_images\/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
           "logo_max_width": 180
         }
       },
-      "main-password-footer": { "type": "main-password-footer", "settings": {} }
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+        }
+      }
     },
-    "content_for_index": [],
+    "content_for_index": [
+
+    ],
     "color_schemes": {
       "background-1": {
         "settings": {
@@ -698,7 +704,7 @@
       "sold_out_badge_color_scheme": "inverse",
       "accent_icons": "text",
       "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_description": "<p><\/p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
@@ -721,13 +727,14 @@
         "main-password-header": {
           "type": "main-password-header",
           "settings": {
-            "logo": "shopify://shop_images/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
+            "logo": "shopify:\/\/shop_images\/concept-logo_5f74b6f0-f224-434d-a796-b8cad5d7659e.png",
             "logo_max_width": 180
           }
         },
         "main-password-footer": {
           "type": "main-password-footer",
-          "settings": {}
+          "settings": {
+          }
         }
       }
     }
