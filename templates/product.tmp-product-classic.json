@@ -1,1 +1,862 @@
-{"sections":{"main":{"type":"main-product","blocks":{"663b1401-2653-492c-8576-70628c7c7b65":{"type":"vendor","settings":{"padding_top":0,"padding_bottom":0}},"title":{"type":"title","settings":{"padding_top":8,"padding_bottom":8,"heading_size":"medium"}},"7bb79f3c-d40b-4ca5-9a57-27085fdc0c00":{"type":"rating","settings":{"padding_top":8,"padding_bottom":8,"link_to_review":true}},"price":{"type":"price","settings":{"show_taxes":true,"show_shipping":false,"use_custom_color":true,"colors_text":"#a5a3a3","padding_top":12,"padding_bottom":16}},"1efd3a14-832f-4cbc-b597-1f3c80b2c8a7":{"type":"inventory","settings":{"inventory_threshold":24,"show_inventory_label":false,"show_availability":true,"show_shipping":true,"inventory_text":"standard","colors_text":"#824bc2","colors_icon":"#ffffff","colors_background":"#121212","gradient_background":"linear-gradient(90deg, rgba(126, 38, 241, 1) 6.26%, rgba(187, 22, 111, 1) 103.5%)","padding_top":5,"padding_bottom":8}},"2fcd6f2a-d844-44c2-a61d-fe0c57a763e3":{"type":"information","settings":{"show_sku":false,"show_availability":false,"show_type":false,"show_shipping":false,"padding_top":5,"padding_bottom":5}},"d3b55398-95c5-4d57-979f-24802dda108a":{"type":"description","settings":{"description_type":"product_desc","number":17,"text":"","padding_top":12,"padding_bottom":12}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch":"Color","padding_top":8,"padding_bottom":12}},"buy_buttons":{"type":"buy_buttons","settings":{"show_quantity_selector":true,"show_wishlist_product":true,"show_dynamic_checkout":true,"show_pickup_availability":true,"show_gift_card_recipient":false,"add_to_cart_colors_text":"#ffffff","add_to_cart_colors_background":"#000000","add_to_cart_gradient_background":"","add_to_cart_colors_text_hover":"#ffffff","add_to_cart_colors_background_hover":"#fff9f9","add_to_cart_gradient_background_hover":"linear-gradient(215deg, rgba(248, 208, 218, 0.6) 34.38%, rgba(195, 236, 252, 0.72) 73.44%)","buy_it_now_colors_text":"#000000","buy_it_now_colors_background":"#ffffff","buy_it_now_gradient_background":"","buy_it_now_colors_text_hover":"#ffffff","buy_it_now_colors_background_hover":"#000000","buy_it_now_gradient_background_hover":"","wishlist_colors_text":"#000000","wishlist_colors_background":"#000000","wishlist_colors_text_hover":"#eb9c9c","wishlist_colors_background_hover":"#eb9c9c","padding_top":10,"padding_bottom":5}},"color_swatch_gNKP3H":{"type":"color_swatch","settings":{}},"b4a60cb8-a075-4a50-b5c5-69cc79a79503":{"type":"collapsible_tab","settings":{"heading":"ABOUT THE PRODUCT","heading_size":"h4","heading_font":"f-normal","icon":"none","content":"","page":"about-us","padding_top":24,"padding_bottom":24}},"3d2b4f06-b821-467d-b712-ec6f8bcc00ac":{"type":"collapsible_tab","settings":{"heading":"INGREDIENTS","heading_size":"h4","heading_font":"f-normal","icon":"none","content":"<p>INGREDIENTS<\/p>","page":"","padding_top":24,"padding_bottom":24}},"5ebbb45c-c9c7-4727-80c9-f57acffb4669":{"type":"collapsible_tab","settings":{"heading":"HOW TO USE","heading_size":"h4","heading_font":"f-normal","icon":"none","content":"<p>HOW TO USE<\/p>","page":"theme-faqs","padding_top":24,"padding_bottom":24}},"f172f031-f0cf-4aaa-8ee0-ba3892df0310":{"type":"ask_an_expert","settings":{"heading":"HAVE QUESTIONS","heading_size":"large","heading_font":"f-w-600","icon":"message","colors_icon":"#000000","colors_icon_background":"#e8e2dc","button_label":"ASK AN EXPERT","button_type":"transparent","button_color_scheme":"scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c","padding_top":24,"padding_bottom":0,"ask_an_expert_heading":"Have Questions?","ask_an_expert_title":"ASK THE FASHION EXPERT ANYTHING ON CONCEPT","ask_an_expert_desc":"<p>We will follow up with you via email within 24-36 hours<\/p>","ask_an_expert_text":"<p>Please answer the following questionnaire<\/p>","ask_an_expert_option_1":"Do You Need","ask_an_expert_option_1_1":"Pricing","ask_an_expert_option_1_2":"Answers","ask_an_expert_option_1_3":"Both","ask_an_expert_option_2":"How would you like me to contact you?","ask_an_expert_option_2_1":"Phone","ask_an_expert_option_2_2":"Email","ask_an_expert_option_2_3":"Both"}}},"block_order":["663b1401-2653-492c-8576-70628c7c7b65","title","7bb79f3c-d40b-4ca5-9a57-27085fdc0c00","price","1efd3a14-832f-4cbc-b597-1f3c80b2c8a7","2fcd6f2a-d844-44c2-a61d-fe0c57a763e3","d3b55398-95c5-4d57-979f-24802dda108a","variant_picker","buy_buttons","color_swatch_gNKP3H","b4a60cb8-a075-4a50-b5c5-69cc79a79503","3d2b4f06-b821-467d-b712-ec6f8bcc00ac","5ebbb45c-c9c7-4727-80c9-f57acffb4669","f172f031-f0cf-4aaa-8ee0-ba3892df0310"],"settings":{"enable_sticky_add_to_cart":true,"show_product_badges":true,"enable_share":true,"type_style":"modern","media_size":"small","gallery_layout":"slider_thumbnail","image_zoom":"lightbox","enable_video_looping":false,"image_ratio":"adapt","carousel_direction":"horizontal","carousel_gap_desktop":10,"carousel_gap_tablet":20,"color_scheme":"background-1","padding_top":0,"padding_bottom":77,"padding_top_mobile":0,"padding_bottom_mobile":30}},"1679044770251ee1c2":{"type":"apps","settings":{"section_width":"page-width","customize_width":1800,"color_scheme":"background-1","use_custom_color":true,"colors_text":"#000000","colors_background":"#eeeeee","gradient_background":"","type_review":"modern","padding_top":68,"padding_bottom":70,"padding_top_mobile":33,"padding_bottom_mobile":35}},"621be3cd-4147-460f-91ba-588045460f3e":{"type":"multicolumn","blocks":{"c252f74d-c7da-4324-bc8d-a0ac3f5b9eea":{"type":"column-text","settings":{"block_content_max_w":"customize","custom_content_max_w":260,"set_border":true,"subheading":"ABOUT THE BRAND","subheading_size":"x-small","heading":"AMBER ®","heading_size":"medium","text":"<p>The famous brand brings more protective to your skin and heath<\/p>","text_size":"x-small","button_type":"standard","button_label":"SHOP AMBER BEAUTY","button_link":"shopify:\/\/collections\/all","use_custom_color":true,"color_scheme":"scheme-b53aaaf6-d4d2-4722-94b6-c857c8e791e3"}},"template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-2":{"type":"column","settings":{"block_content_max_w":"full","custom_content_max_w":250,"set_border":false,"content_position":"bottom","subheading":"","subheading_size":"medium","heading":"","heading_size":"h1","text":"","text_size":"medium","button_type":"special","button_label":"SHOP MASCARA","button_link":"shopify:\/\/collections\/all"}},"template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-3":{"type":"column","settings":{"block_content_max_w":"full","custom_content_max_w":250,"set_border":false,"content_position":"bottom","subheading":"","subheading_size":"medium","heading":"","heading_size":"h1","text":"","text_size":"medium","button_type":"special","button_label":"SHOP FACE POWDERS","button_link":"shopify:\/\/collections\/all"}},"bf7c38cb-ffa8-4220-9668-92d87d8d9b4b":{"type":"column","settings":{"block_content_max_w":"full","custom_content_max_w":250,"set_border":false,"content_position":"bottom","subheading":"","subheading_size":"medium","heading":"","heading_size":"h1","text":"","text_size":"medium","button_type":"special","button_label":"SHOP FOUNDATION MAKEUP","button_link":"shopify:\/\/collections\/all"}}},"block_order":["c252f74d-c7da-4324-bc8d-a0ac3f5b9eea","template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-2","template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-3","bf7c38cb-ffa8-4220-9668-92d87d8d9b4b"],"settings":{"content_inside_image":true,"heading":"","link_label":"","link":"","image_ratio":"adapt","text_alignment":"center","button_transparent":"default","color_scheme":"scheme-9195152a-f67f-4a14-959a-efe8e5cc65b6","use_custom_color":true,"colors_text":"#2a0e2a","colors_background":"#f4eef7","gradient_background":"","carousel_gap":10,"carousel_gap_tablet":10,"carousel_gap_mobile":10,"carousel_number":3,"carousel_number_tablet":1.2,"carousel_number_mobile":"1","arrows_type":"all","carousel_infinite_scroll":false,"enable_pagination_type":"all","pagination_type":"none","image_animation":"none","text_animation":"none","margin_top":40,"margin_bottom":40,"padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":35}},"d429c49f-e09d-426d-a360-6ab92fc46930":{"type":"icon-with-text","blocks":{"template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1":{"type":"item","settings":{"icon":"truck-3","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"#f5f3f6","heading":"FREE WORLD-WIDE SHOPPING","text":"<p>For order over $100<\/p>","link_label":"Learn more","link":"shopify:\/\/collections\/all"}},"template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0":{"type":"item","settings":{"icon":"return-4","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"#f5f3f6","heading":"EASY FREE RETURN","text":"<p>30 days guarantee on all items<\/p>","link_label":"Find out more","link":"shopify:\/\/collections"}},"template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2":{"type":"item","settings":{"icon":"care","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"#f5f3f6","heading":"HANDLE WITH CARE","text":"<p>Commitment to preserving the beauty<\/p>","link_label":"Learn how","link":"shopify:\/\/collections"}},"template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3":{"type":"item","settings":{"icon":"shield","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"#f5f3f6","heading":"100% SECURED CHECKOUT","text":"<p>Trusted SLL protection<\/p>","link_label":"Learn more","link":"shopify:\/\/collections"}}},"block_order":["template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1","template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0","template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2","template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3"],"settings":{"type_style":"modern","section_width":"page-width","customize_width":1800,"heading":"","heading_size":"default","text":"","text_margin_top":16,"text_alignment":"center","margin_bottom":60,"blocks_heading_font":"font-body","blocks_heading_size":"large","blocks_text_size":"medium","color_scheme":"","use_custom_color":false,"colors_text":"#2d2d2d","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)","layout":"vertical","enable_background_icon":true,"type_vertical":"grid","arrows_type":"all","text_animation":"none","padding_top":70,"padding_bottom":69,"padding_top_mobile":35,"padding_bottom_mobile":35}},"92d596e0-c4d5-488b-86e8-d20f02930b64":{"type":"carousel-images","blocks":{"template--17212248555759__92d596e0-c4d5-488b-86e8-d20f02930b64-slide-1":{"type":"slide","settings":{"video_url":"","content_margin_negative_top_desktop":75,"content_margin_negative_top_tablet":60,"content_margin_negative_top_mobile":45,"subheading":"","subheading_font":"font-body","subheading_size":"medium","heading":"BEAURY COURSES","heading_size":"medium","description":"<p>PROFESSIONAL MAKEUP & STYLE <\/p><p>FOR BEAUTY LOVERS<\/p>","description_size":"x-small","button_style":"default","button_label":"SHOP NOW","button_link":"shopify:\/\/collections\/all","text_alignment":"center"}}},"block_order":["template--17212248555759__92d596e0-c4d5-488b-86e8-d20f02930b64-slide-1"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":true,"color_scheme":"","arrows_type":"all","carousel_infinite_scroll":true,"enable_pagination_type":"all","pagination_type":"dots","accessibility_info":"Slideshow about our brand","padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":35}},"4352e471-a735-4605-a447-633a4408588d":{"type":"rich-text","blocks":{"b937ece4-12ab-420a-ad0c-8601ac724d7c":{"type":"heading","settings":{"heading":"QUESTIONS & ANSWERS","heading_size":"default","padding_top":0,"padding_bottom":0}}},"block_order":["b937ece4-12ab-420a-ad0c-8601ac724d7c"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"center","color_scheme":"","padding_top":70,"padding_bottom":32,"padding_top_mobile":35,"padding_bottom_mobile":16}},"b91e672f-fb1d-40b0-85e0-f628954fda3f":{"type":"rich-text","blocks":{"template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-heading-1":{"type":"heading","settings":{"heading":"Q: What are some essential steps for a flawless makeup routine?","heading_size":"x-small","padding_top":20,"padding_bottom":16}},"template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-text-1":{"type":"text","settings":{"text":"<p>A: Begin with a hydrating primer, choose the right foundation for your skin type, and highlight your features with well-blended concealer. Complete the look with a setting spray for long-lasting radiance.<\/p>","show_line_separator":false,"padding_top":0,"padding_bottom":40}}},"block_order":["template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-heading-1","template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-text-1"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"10246cad-db26-4ba2-acff-59f72ae4ddea":{"type":"rich-text","blocks":{"f5e7115e-f512-4f5e-8a9b-77a719041d09":{"type":"heading","settings":{"heading":"Q: Can you share tips for achieving a natural-looking makeup finish?","heading_size":"x-small","padding_top":20,"padding_bottom":16}},"aefdce53-d22e-4362-83ef-f5194976b0db":{"type":"text","settings":{"text":"<p>A: Opt for a lightweight foundation, focus on enhancing your natural features with neutral tones, and blend thoroughly to avoid harsh lines. Finish with a touch of translucent powder for a subtle, dewy effect.<\/p>","show_line_separator":false,"padding_top":0,"padding_bottom":40}}},"block_order":["f5e7115e-f512-4f5e-8a9b-77a719041d09","aefdce53-d22e-4362-83ef-f5194976b0db"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":true,"text_alignment":"left","color_scheme":"","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"56c09621-1f99-49b6-bbd5-2095539dbf9f":{"type":"rich-text","blocks":{"c32bce46-ea69-48f9-a158-c09ee8e937dc":{"type":"heading","settings":{"heading":"Q: How can one create a bold and dramatic makeup look for special occasions?","heading_size":"x-small","padding_top":20,"padding_bottom":16}},"f88e0e5f-10ac-45f7-b2ee-5df7737a6b45":{"type":"text","settings":{"text":"<p>A: Start with a high-coverage foundation, use vibrant eyeshadows and bold lip colors, and don't shy away from experimenting with winged eyeliner and false lashes. Set the look with a long-wearing setting spray for extra glam.<\/p>","show_line_separator":false,"padding_top":0,"padding_bottom":20}}},"block_order":["c32bce46-ea69-48f9-a158-c09ee8e937dc","f88e0e5f-10ac-45f7-b2ee-5df7737a6b45"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":true,"text_alignment":"left","color_scheme":"","padding_top":0,"padding_bottom":32,"padding_top_mobile":0,"padding_bottom_mobile":0}},"073ab25e-c100-4cad-b797-f59ff9c9dff7":{"type":"rich-text","blocks":{"20cfd83c-3b28-45f0-9b53-ad60c7dd8de4":{"type":"button","settings":{"primary_button_label":"SEE ALL QUESTIONS & ANSWERS","primary_button_link":"shopify:\/\/collections\/all","primary_button_type":"default","secondary_button_label":"","secondary_button_link":"shopify:\/\/collections\/all","secondary_button_type":"transparent","padding_top":0,"padding_bottom":0}}},"block_order":["20cfd83c-3b28-45f0-9b53-ad60c7dd8de4"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"center","color_scheme":"scheme-f1b707b9-9166-4638-81dc-8d500cf73a11","padding_top":0,"padding_bottom":70,"padding_top_mobile":0,"padding_bottom_mobile":35}},"related-products":{"type":"related-products","disabled":true,"settings":{"heading":"You may also like","products_to_show":5,"color_scheme":"accent-2","arrows_type":"all","carousel_infinite_scroll":false,"carousel_number":3,"enable_pagination_type":"all","pagination_type":"progressbar","padding_top":36,"padding_bottom":28,"padding_top_mobile":35,"padding_bottom_mobile":15}},"eddd30a2-6fd5-4812-9435-7f26437f5514":{"type":"featured-collection","blocks":{"template--17242421395695__eddd30a2-6fd5-4812-9435-7f26437f5514-heading-1":{"type":"heading","settings":{"heading":"YOU MAY ALSO LIKE","heading_size":"default","label_view_all":"","show_view_all":"link","text_view_all":"","text_view_all_size":"medium","text_alignment":"center","padding_top":0,"padding_bottom":32}}},"block_order":["template--17242421395695__eddd30a2-6fd5-4812-9435-7f26437f5514-heading-1"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator_top":true,"show_line_separator_bottom":true,"collection":"","product_list":["cosmetic-sample-product-08","essie-salon-quality-nail-piolish","lubridern-moisture-hydrating-hand-lotion","cosmetic-sample-product-10","she-shea-nourish-body-lotion"],"products_to_show":5,"carousel_number":3.2,"carousel_number_tablet":2.1,"carousel_number_mobile":"2","spacing_desktop":50,"spacing_tablet":24,"spacing_mobile":10,"arrows_type":"lg","carousel_infinite_scroll":false,"enable_pagination_type":"all","pagination_type":"progressbar","color_scheme":"accent-2","use_background_gradient":false,"colors_background_special":"","gradient_background_special":"linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)","text_animation":"split","padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":35}},"recently-products":{"type":"recently-products","settings":{"heading":"RECENTlY VIEWED","heading_margin_bottom":40,"color_scheme":"accent-2","columns_desktop":3,"columns_mobile":"2","spacing_desktop":40,"spacing_tablet":24,"spacing_mobile":10,"arrows_type":"lg","carousel_infinite_scroll":false,"enable_pagination_type":"all","pagination_type":"progressbar","padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":35}},"29a4766e-9b16-4206-927b-f13e02616027":{"type":"collage","blocks":{"template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1":{"type":"image","settings":{"heading_image":"","heading_size":"default","button_transparent":"default","button_type":"special","button_label":"SHOP BEAUTY UNDER $29","link":"shopify:\/\/collections\/sofas","image_overlay_opacity":30,"color_overlay_opacity":"#000000","desktop_content_position":"bottom-center"}},"template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2":{"type":"image","settings":{"heading_image":"","heading_size":"default","button_transparent":"default","button_type":"special","button_label":"SHOP SKINCARE UNDER $39","link":"shopify:\/\/collections\/sofas","image_overlay_opacity":30,"color_overlay_opacity":"#000000","desktop_content_position":"bottom-center"}},"f5abe1cd-56f2-403f-8b40-a046c3872559":{"type":"text","settings":{"icon":"summer","icon_margin_bottom":25,"subheading":"MUST HAVE","subheading_size":"x-small","subheading_margin_bottom":16,"heading":"BEAT-THE-HEAT","heading_size":"default","heading_margin_bottom":16,"text":"<p>PROTECT AND GLOW WITH <\/p><p>SUMMER ESSENTIALS<\/p>","text_size":"x-small","text_margin_bottom":0,"button_transparent":"default","button_type":"standard","button_label":"SHOP NOW","button_link":"shopify:\/\/collections\/collection-03","button_margin_top":32,"button_margin_bottom":0,"text_alignment":"center","block_text_color_scheme":"scheme-b53aaaf6-d4d2-4722-94b6-c857c8e791e3"}}},"block_order":["template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1","template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2","f5abe1cd-56f2-403f-8b40-a046c3872559"],"settings":{"section_width":"customized-width","customize_width":1600,"enable_full_width":false,"heading":"","text":"","text_alignment":"center","heading_margin_bottom":30,"image_ratio":"adapt","spacing_desktop":20,"spacing_tablet":10,"spacing_mobile":10,"enable_carousel":false,"enable_pagination_type":"all","pagination_type":"progressbar","color_scheme":"scheme-9195152a-f67f-4a14-959a-efe8e5cc65b6","image_animation":"zoom-out","image_behavior":"none","text_animation":"fade-up","padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":35}}},"order":["main","1679044770251ee1c2","621be3cd-4147-460f-91ba-588045460f3e","d429c49f-e09d-426d-a360-6ab92fc46930","92d596e0-c4d5-488b-86e8-d20f02930b64","4352e471-a735-4605-a447-633a4408588d","b91e672f-fb1d-40b0-85e0-f628954fda3f","10246cad-db26-4ba2-acff-59f72ae4ddea","56c09621-1f99-49b6-bbd5-2095539dbf9f","073ab25e-c100-4cad-b797-f59ff9c9dff7","related-products","eddd30a2-6fd5-4812-9435-7f26437f5514","recently-products","29a4766e-9b16-4206-927b-f13e02616027"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "663b1401-2653-492c-8576-70628c7c7b65": {
+          "type": "vendor",
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "heading_size": "medium"
+          }
+        },
+        "7bb79f3c-d40b-4ca5-9a57-27085fdc0c00": {
+          "type": "rating",
+          "settings": {
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "link_to_review": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes": true,
+            "show_shipping": false,
+            "use_custom_color": true,
+            "colors_text": "#a5a3a3",
+            "padding_top": 12,
+            "padding_bottom": 16
+          }
+        },
+        "1efd3a14-832f-4cbc-b597-1f3c80b2c8a7": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 24,
+            "show_inventory_label": false,
+            "show_availability": true,
+            "show_shipping": true,
+            "inventory_text": "standard",
+            "colors_text": "#824bc2",
+            "colors_icon": "#ffffff",
+            "colors_background": "#121212",
+            "gradient_background": "linear-gradient(90deg, rgba(126, 38, 241, 1) 6.26%, rgba(187, 22, 111, 1) 103.5%)",
+            "padding_top": 5,
+            "padding_bottom": 8
+          }
+        },
+        "2fcd6f2a-d844-44c2-a61d-fe0c57a763e3": {
+          "type": "information",
+          "settings": {
+            "show_sku": false,
+            "show_availability": false,
+            "show_type": false,
+            "show_shipping": false,
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "d3b55398-95c5-4d57-979f-24802dda108a": {
+          "type": "description",
+          "settings": {
+            "description_type": "product_desc",
+            "number": 17,
+            "text": "",
+            "padding_top": 12,
+            "padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 8,
+            "padding_bottom": 12
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_wishlist_product": true,
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": true,
+            "show_gift_card_recipient": false,
+            "add_to_cart_colors_text": "#ffffff",
+            "add_to_cart_colors_background": "#000000",
+            "add_to_cart_gradient_background": "",
+            "add_to_cart_colors_text_hover": "#ffffff",
+            "add_to_cart_colors_background_hover": "#fff9f9",
+            "add_to_cart_gradient_background_hover": "linear-gradient(215deg, rgba(248, 208, 218, 0.6) 34.38%, rgba(195, 236, 252, 0.72) 73.44%)",
+            "buy_it_now_colors_text": "#000000",
+            "buy_it_now_colors_background": "#ffffff",
+            "buy_it_now_gradient_background": "",
+            "buy_it_now_colors_text_hover": "#ffffff",
+            "buy_it_now_colors_background_hover": "#000000",
+            "buy_it_now_gradient_background_hover": "",
+            "wishlist_colors_text": "#000000",
+            "wishlist_colors_background": "#000000",
+            "wishlist_colors_text_hover": "#eb9c9c",
+            "wishlist_colors_background_hover": "#eb9c9c",
+            "padding_top": 10,
+            "padding_bottom": 5
+          }
+        },
+        "color_swatch_gNKP3H": {
+          "type": "color_swatch",
+          "settings": {
+          }
+        },
+        "b4a60cb8-a075-4a50-b5c5-69cc79a79503": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "ABOUT THE PRODUCT",
+            "heading_size": "h4",
+            "heading_font": "f-normal",
+            "icon": "none",
+            "content": "",
+            "page": "about-us",
+            "padding_top": 24,
+            "padding_bottom": 24
+          }
+        },
+        "3d2b4f06-b821-467d-b712-ec6f8bcc00ac": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INGREDIENTS",
+            "heading_size": "h4",
+            "heading_font": "f-normal",
+            "icon": "none",
+            "content": "<p>INGREDIENTS<\/p>",
+            "page": "",
+            "padding_top": 24,
+            "padding_bottom": 24
+          }
+        },
+        "5ebbb45c-c9c7-4727-80c9-f57acffb4669": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HOW TO USE",
+            "heading_size": "h4",
+            "heading_font": "f-normal",
+            "icon": "none",
+            "content": "<p>HOW TO USE<\/p>",
+            "page": "theme-faqs",
+            "padding_top": 24,
+            "padding_bottom": 24
+          }
+        },
+        "f172f031-f0cf-4aaa-8ee0-ba3892df0310": {
+          "type": "ask_an_expert",
+          "settings": {
+            "heading": "HAVE QUESTIONS",
+            "heading_size": "large",
+            "heading_font": "f-w-600",
+            "icon": "message",
+            "colors_icon": "#000000",
+            "colors_icon_background": "#e8e2dc",
+            "button_label": "ASK AN EXPERT",
+            "button_type": "transparent",
+            "button_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+            "padding_top": 24,
+            "padding_bottom": 0,
+            "ask_an_expert_heading": "Have Questions?",
+            "ask_an_expert_title": "ASK THE FASHION EXPERT ANYTHING ON CONCEPT",
+            "ask_an_expert_desc": "<p>We will follow up with you via email within 24-36 hours<\/p>",
+            "ask_an_expert_text": "<p>Please answer the following questionnaire<\/p>",
+            "ask_an_expert_option_1": "Do You Need",
+            "ask_an_expert_option_1_1": "Pricing",
+            "ask_an_expert_option_1_2": "Answers",
+            "ask_an_expert_option_1_3": "Both",
+            "ask_an_expert_option_2": "How would you like me to contact you?",
+            "ask_an_expert_option_2_1": "Phone",
+            "ask_an_expert_option_2_2": "Email",
+            "ask_an_expert_option_2_3": "Both"
+          }
+        }
+      },
+      "block_order": [
+        "663b1401-2653-492c-8576-70628c7c7b65",
+        "title",
+        "7bb79f3c-d40b-4ca5-9a57-27085fdc0c00",
+        "price",
+        "1efd3a14-832f-4cbc-b597-1f3c80b2c8a7",
+        "2fcd6f2a-d844-44c2-a61d-fe0c57a763e3",
+        "d3b55398-95c5-4d57-979f-24802dda108a",
+        "variant_picker",
+        "buy_buttons",
+        "color_swatch_gNKP3H",
+        "b4a60cb8-a075-4a50-b5c5-69cc79a79503",
+        "3d2b4f06-b821-467d-b712-ec6f8bcc00ac",
+        "5ebbb45c-c9c7-4727-80c9-f57acffb4669",
+        "f172f031-f0cf-4aaa-8ee0-ba3892df0310"
+      ],
+      "settings": {
+        "enable_sticky_add_to_cart": true,
+        "show_product_badges": true,
+        "enable_share": true,
+        "type_style": "modern",
+        "media_size": "small",
+        "gallery_layout": "slider_thumbnail",
+        "image_zoom": "lightbox",
+        "enable_video_looping": false,
+        "image_ratio": "adapt",
+        "carousel_direction": "horizontal",
+        "carousel_gap_desktop": 10,
+        "carousel_gap_tablet": 20,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 77,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "1679044770251ee1c2": {
+      "type": "apps",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "background-1",
+        "use_custom_color": true,
+        "colors_text": "#000000",
+        "colors_background": "#eeeeee",
+        "gradient_background": "",
+        "type_review": "modern",
+        "padding_top": 68,
+        "padding_bottom": 70,
+        "padding_top_mobile": 33,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "621be3cd-4147-460f-91ba-588045460f3e": {
+      "type": "multicolumn",
+      "blocks": {
+        "c252f74d-c7da-4324-bc8d-a0ac3f5b9eea": {
+          "type": "column-text",
+          "settings": {
+            "block_content_max_w": "customize",
+            "custom_content_max_w": 260,
+            "set_border": true,
+            "subheading": "ABOUT THE BRAND",
+            "subheading_size": "x-small",
+            "heading": "AMBER ®",
+            "heading_size": "medium",
+            "text": "<p>The famous brand brings more protective to your skin and heath<\/p>",
+            "text_size": "x-small",
+            "button_type": "standard",
+            "button_label": "SHOP AMBER BEAUTY",
+            "button_link": "shopify:\/\/collections\/all",
+            "use_custom_color": true,
+            "color_scheme": "scheme-b53aaaf6-d4d2-4722-94b6-c857c8e791e3"
+          }
+        },
+        "template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-2": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "bottom",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "",
+            "heading_size": "h1",
+            "text": "",
+            "text_size": "medium",
+            "button_type": "special",
+            "button_label": "SHOP MASCARA",
+            "button_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-3": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "bottom",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "",
+            "heading_size": "h1",
+            "text": "",
+            "text_size": "medium",
+            "button_type": "special",
+            "button_label": "SHOP FACE POWDERS",
+            "button_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "bf7c38cb-ffa8-4220-9668-92d87d8d9b4b": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "bottom",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "",
+            "heading_size": "h1",
+            "text": "",
+            "text_size": "medium",
+            "button_type": "special",
+            "button_label": "SHOP FOUNDATION MAKEUP",
+            "button_link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "c252f74d-c7da-4324-bc8d-a0ac3f5b9eea",
+        "template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-2",
+        "template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-3",
+        "bf7c38cb-ffa8-4220-9668-92d87d8d9b4b"
+      ],
+      "settings": {
+        "content_inside_image": true,
+        "heading": "",
+        "link_label": "",
+        "link": "",
+        "image_ratio": "adapt",
+        "text_alignment": "center",
+        "button_transparent": "default",
+        "color_scheme": "scheme-9195152a-f67f-4a14-959a-efe8e5cc65b6",
+        "use_custom_color": true,
+        "colors_text": "#2a0e2a",
+        "colors_background": "#f4eef7",
+        "gradient_background": "",
+        "carousel_gap": 10,
+        "carousel_gap_tablet": 10,
+        "carousel_gap_mobile": 10,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.2,
+        "carousel_number_mobile": "1",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "none",
+        "image_animation": "none",
+        "text_animation": "none",
+        "margin_top": 40,
+        "margin_bottom": 40,
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "d429c49f-e09d-426d-a360-6ab92fc46930": {
+      "type": "icon-with-text",
+      "blocks": {
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck-3",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "#f5f3f6",
+            "heading": "FREE WORLD-WIDE SHOPPING",
+            "text": "<p>For order over $100<\/p>",
+            "link_label": "Learn more",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0": {
+          "type": "item",
+          "settings": {
+            "icon": "return-4",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "#f5f3f6",
+            "heading": "EASY FREE RETURN",
+            "text": "<p>30 days guarantee on all items<\/p>",
+            "link_label": "Find out more",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
+          "type": "item",
+          "settings": {
+            "icon": "care",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "#f5f3f6",
+            "heading": "HANDLE WITH CARE",
+            "text": "<p>Commitment to preserving the beauty<\/p>",
+            "link_label": "Learn how",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "#f5f3f6",
+            "heading": "100% SECURED CHECKOUT",
+            "text": "<p>Trusted SLL protection<\/p>",
+            "link_label": "Learn more",
+            "link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3"
+      ],
+      "settings": {
+        "type_style": "modern",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "heading": "",
+        "heading_size": "default",
+        "text": "",
+        "text_margin_top": 16,
+        "text_alignment": "center",
+        "margin_bottom": 60,
+        "blocks_heading_font": "font-body",
+        "blocks_heading_size": "large",
+        "blocks_text_size": "medium",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#2d2d2d",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "vertical",
+        "enable_background_icon": true,
+        "type_vertical": "grid",
+        "arrows_type": "all",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 69,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "92d596e0-c4d5-488b-86e8-d20f02930b64": {
+      "type": "carousel-images",
+      "blocks": {
+        "template--17212248555759__92d596e0-c4d5-488b-86e8-d20f02930b64-slide-1": {
+          "type": "slide",
+          "settings": {
+            "video_url": "",
+            "content_margin_negative_top_desktop": 75,
+            "content_margin_negative_top_tablet": 60,
+            "content_margin_negative_top_mobile": 45,
+            "subheading": "",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading": "BEAURY COURSES",
+            "heading_size": "medium",
+            "description": "<p>PROFESSIONAL MAKEUP & STYLE <\/p><p>FOR BEAUTY LOVERS<\/p>",
+            "description_size": "x-small",
+            "button_style": "default",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/all",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17212248555759__92d596e0-c4d5-488b-86e8-d20f02930b64-slide-1"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "color_scheme": "",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": true,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "4352e471-a735-4605-a447-633a4408588d": {
+      "type": "rich-text",
+      "blocks": {
+        "b937ece4-12ab-420a-ad0c-8601ac724d7c": {
+          "type": "heading",
+          "settings": {
+            "heading": "QUESTIONS & ANSWERS",
+            "heading_size": "default",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "b937ece4-12ab-420a-ad0c-8601ac724d7c"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 70,
+        "padding_bottom": 32,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "b91e672f-fb1d-40b0-85e0-f628954fda3f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Q: What are some essential steps for a flawless makeup routine?",
+            "heading_size": "x-small",
+            "padding_top": 20,
+            "padding_bottom": 16
+          }
+        },
+        "template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A: Begin with a hydrating primer, choose the right foundation for your skin type, and highlight your features with well-blended concealer. Complete the look with a setting spray for long-lasting radiance.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-heading-1",
+        "template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-text-1"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "10246cad-db26-4ba2-acff-59f72ae4ddea": {
+      "type": "rich-text",
+      "blocks": {
+        "f5e7115e-f512-4f5e-8a9b-77a719041d09": {
+          "type": "heading",
+          "settings": {
+            "heading": "Q: Can you share tips for achieving a natural-looking makeup finish?",
+            "heading_size": "x-small",
+            "padding_top": 20,
+            "padding_bottom": 16
+          }
+        },
+        "aefdce53-d22e-4362-83ef-f5194976b0db": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A: Opt for a lightweight foundation, focus on enhancing your natural features with neutral tones, and blend thoroughly to avoid harsh lines. Finish with a touch of translucent powder for a subtle, dewy effect.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "f5e7115e-f512-4f5e-8a9b-77a719041d09",
+        "aefdce53-d22e-4362-83ef-f5194976b0db"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "56c09621-1f99-49b6-bbd5-2095539dbf9f": {
+      "type": "rich-text",
+      "blocks": {
+        "c32bce46-ea69-48f9-a158-c09ee8e937dc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Q: How can one create a bold and dramatic makeup look for special occasions?",
+            "heading_size": "x-small",
+            "padding_top": 20,
+            "padding_bottom": 16
+          }
+        },
+        "f88e0e5f-10ac-45f7-b2ee-5df7737a6b45": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A: Start with a high-coverage foundation, use vibrant eyeshadows and bold lip colors, and don't shy away from experimenting with winged eyeliner and false lashes. Set the look with a long-wearing setting spray for extra glam.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "c32bce46-ea69-48f9-a158-c09ee8e937dc",
+        "f88e0e5f-10ac-45f7-b2ee-5df7737a6b45"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "073ab25e-c100-4cad-b797-f59ff9c9dff7": {
+      "type": "rich-text",
+      "blocks": {
+        "20cfd83c-3b28-45f0-9b53-ad60c7dd8de4": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "SEE ALL QUESTIONS & ANSWERS",
+            "primary_button_link": "shopify:\/\/collections\/all",
+            "primary_button_type": "default",
+            "secondary_button_label": "",
+            "secondary_button_link": "shopify:\/\/collections\/all",
+            "secondary_button_type": "transparent",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "20cfd83c-3b28-45f0-9b53-ad60c7dd8de4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "center",
+        "color_scheme": "scheme-f1b707b9-9166-4638-81dc-8d500cf73a11",
+        "padding_top": 0,
+        "padding_bottom": 70,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "products_to_show": 5,
+        "color_scheme": "accent-2",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "carousel_number": 3,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
+      }
+    },
+    "eddd30a2-6fd5-4812-9435-7f26437f5514": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--17242421395695__eddd30a2-6fd5-4812-9435-7f26437f5514-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "YOU MAY ALSO LIKE",
+            "heading_size": "default",
+            "label_view_all": "",
+            "show_view_all": "link",
+            "text_view_all": "",
+            "text_view_all_size": "medium",
+            "text_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 32
+          }
+        }
+      },
+      "block_order": [
+        "template--17242421395695__eddd30a2-6fd5-4812-9435-7f26437f5514-heading-1"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator_top": true,
+        "show_line_separator_bottom": true,
+        "collection": "",
+        "product_list": [
+          "cosmetic-sample-product-08",
+          "essie-salon-quality-nail-piolish",
+          "lubridern-moisture-hydrating-hand-lotion",
+          "cosmetic-sample-product-10",
+          "she-shea-nourish-body-lotion"
+        ],
+        "products_to_show": 5,
+        "carousel_number": 3.2,
+        "carousel_number_tablet": 2.1,
+        "carousel_number_mobile": "2",
+        "spacing_desktop": 50,
+        "spacing_tablet": 24,
+        "spacing_mobile": 10,
+        "arrows_type": "lg",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "accent-2",
+        "use_background_gradient": false,
+        "colors_background_special": "",
+        "gradient_background_special": "linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)",
+        "text_animation": "split",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "recently-products": {
+      "type": "recently-products",
+      "settings": {
+        "heading": "RECENTlY VIEWED",
+        "heading_margin_bottom": 40,
+        "color_scheme": "accent-2",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "spacing_desktop": 40,
+        "spacing_tablet": 24,
+        "spacing_mobile": 10,
+        "arrows_type": "lg",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "29a4766e-9b16-4206-927b-f13e02616027": {
+      "type": "collage",
+      "blocks": {
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1": {
+          "type": "image",
+          "settings": {
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "default",
+            "button_type": "special",
+            "button_label": "SHOP BEAUTY UNDER $29",
+            "link": "shopify:\/\/collections\/sofas",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "bottom-center"
+          }
+        },
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2": {
+          "type": "image",
+          "settings": {
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "default",
+            "button_type": "special",
+            "button_label": "SHOP SKINCARE UNDER $39",
+            "link": "shopify:\/\/collections\/sofas",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "bottom-center"
+          }
+        },
+        "f5abe1cd-56f2-403f-8b40-a046c3872559": {
+          "type": "text",
+          "settings": {
+            "icon": "summer",
+            "icon_margin_bottom": 25,
+            "subheading": "MUST HAVE",
+            "subheading_size": "x-small",
+            "subheading_margin_bottom": 16,
+            "heading": "BEAT-THE-HEAT",
+            "heading_size": "default",
+            "heading_margin_bottom": 16,
+            "text": "<p>PROTECT AND GLOW WITH <\/p><p>SUMMER ESSENTIALS<\/p>",
+            "text_size": "x-small",
+            "text_margin_bottom": 0,
+            "button_transparent": "default",
+            "button_type": "standard",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/collection-03",
+            "button_margin_top": 32,
+            "button_margin_bottom": 0,
+            "text_alignment": "center",
+            "block_text_color_scheme": "scheme-b53aaaf6-d4d2-4722-94b6-c857c8e791e3"
+          }
+        }
+      },
+      "block_order": [
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1",
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2",
+        "f5abe1cd-56f2-403f-8b40-a046c3872559"
+      ],
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1600,
+        "enable_full_width": false,
+        "heading": "",
+        "text": "",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "scheme-9195152a-f67f-4a14-959a-efe8e5cc65b6",
+        "image_animation": "zoom-out",
+        "image_behavior": "none",
+        "text_animation": "fade-up",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1679044770251ee1c2",
+    "621be3cd-4147-460f-91ba-588045460f3e",
+    "d429c49f-e09d-426d-a360-6ab92fc46930",
+    "92d596e0-c4d5-488b-86e8-d20f02930b64",
+    "4352e471-a735-4605-a447-633a4408588d",
+    "b91e672f-fb1d-40b0-85e0-f628954fda3f",
+    "10246cad-db26-4ba2-acff-59f72ae4ddea",
+    "56c09621-1f99-49b6-bbd5-2095539dbf9f",
+    "073ab25e-c100-4cad-b797-f59ff9c9dff7",
+    "related-products",
+    "eddd30a2-6fd5-4812-9435-7f26437f5514",
+    "recently-products",
+    "29a4766e-9b16-4206-927b-f13e02616027"
+  ]
+}
