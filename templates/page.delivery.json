@@ -27,7 +27,7 @@
         "text_Unt4Kk": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer 1-7 Day delivery to mainland England and Wales for items in stock. All furniture is brand new, transported directly from our Headquarters in Lincolnshire. As part of the service, our two-person delivery team will assemble your sofa directly at the point of use.</p>",
+            "text": "<p>We offer 1-7 Day delivery to mainland England and Wales for items in stock. All furniture is brand new, transported directly from our Headquarters in Lincolnshire. As part of the service, our two-person delivery team will assemble your sofa directly at the point of use.<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -48,7 +48,11 @@
           }
         }
       },
-      "block_order": ["heading_8y68yx", "text_Unt4Kk", "button_UnD4pF"],
+      "block_order": [
+        "heading_8y68yx",
+        "text_Unt4Kk",
+        "button_UnD4pF"
+      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -82,7 +86,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Place Your Order",
-            "text": "<p>Find your favourite items and checkout using a variety of payment and finance options.</p>",
+            "text": "<p>Find your favourite items and checkout using a variety of payment and finance options.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -95,7 +99,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Await Confirmation",
-            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.</p>",
+            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -109,7 +113,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#c66969",
             "heading": "Guarantee heading",
-            "text": "<p>Share information about your products, policies or services.</p>",
+            "text": "<p>Share information about your products, policies or services.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -122,7 +126,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "The Day Of Delivery",
-            "text": "<p>You'll receieve a live tracking link and our two-person team will deliver your items. </p>",
+            "text": "<p>You'll receieve a live tracking link and our two-person team will deliver your items. <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -135,7 +139,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Enjoy Your New Furniture",
-            "text": "<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.</p>",
+            "text": "<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -148,7 +152,9 @@
         "item_xrTYWQ",
         "item_ypLzVb"
       ],
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
         "type_style": "classic",
         "section_width": "customized-width",
@@ -194,7 +200,7 @@
         "heading_FtzRWC": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Live Delivery Tracking</h3>",
+            "heading": "<h3>Live Delivery Tracking<\/h3>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -203,24 +209,27 @@
         "text_hB8Ee3": {
           "type": "text",
           "settings": {
-            "text": "<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br/><br/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br/><br/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.</p>",
+            "text": "<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br\/><br\/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br\/><br\/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
-      "block_order": ["heading_FtzRWC", "text_hB8Ee3"],
+      "block_order": [
+        "heading_FtzRWC",
+        "text_hB8Ee3"
+      ],
       "settings": {
         "type_style": "classic",
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
-        "image": "shopify://shop_images/Screenshot_2024-04-16_at_09.19.16.png",
+        "image": "shopify:\/\/shop_images\/Screenshot_2024-04-16_at_09.19.16.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -258,7 +267,7 @@
           "settings": {
             "heading": "What if the items don't fit through my door?",
             "icon": "question_mark",
-            "row_content": "<p>If we are unable to successfully deliver your items due to the size of your doorway, we will return the items to our Headquarters and offer a full refund with no hidden costs or charges. </p>",
+            "row_content": "<p>If we are unable to successfully deliver your items due to the size of your doorway, we will return the items to our Headquarters and offer a full refund with no hidden costs or charges. <\/p>",
             "page": ""
           }
         },
@@ -267,7 +276,7 @@
           "settings": {
             "heading": "How much does delivery cost?",
             "icon": "question_mark",
-            "row_content": "<p>Delivery costs £49 for England and Wales and £99 for parts of Scotland. You can use our postcode checker to check your exact postcode. </p>",
+            "row_content": "<p>Delivery costs £49 for England and Wales and £99 for parts of Scotland. You can use our postcode checker to check your exact postcode. <\/p>",
             "page": ""
           }
         },
@@ -276,7 +285,7 @@
           "settings": {
             "heading": "When will my order be delivered?",
             "icon": "question_mark",
-            "row_content": "<p>For in-stock items, we are usually able to deliver within 7 days. Some orders take a little longer depending on your location and the availability of gthe items you order.We deliver to different regions of the UK on different days of the week. Simply enter your postcode into our postcode checker below to see which days we deliver to your area. </p>",
+            "row_content": "<p>For in-stock items, we are usually able to deliver within 7 days. Some orders take a little longer depending on your location and the availability of gthe items you order.We deliver to different regions of the UK on different days of the week. Simply enter your postcode into our postcode checker below to see which days we deliver to your area. <\/p>",
             "page": ""
           }
         },
@@ -285,7 +294,7 @@
           "settings": {
             "heading": "Do you assemble my furniture?",
             "icon": "question_mark",
-            "row_content": "<p>If you have ordered a sofa, our delivery team will assemble your sofa in any room of choice. This is included as part of our delivery service at no extra cost. There is no assembly included on flatpack furniture and other items. </p>",
+            "row_content": "<p>If you have ordered a sofa, our delivery team will assemble your sofa in any room of choice. This is included as part of our delivery service at no extra cost. There is no assembly included on flatpack furniture and other items. <\/p>",
             "page": ""
           }
         }
@@ -328,6 +337,21 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 30
       }
+    },
+    "postcode_checker_J8VQBA": {
+      "type": "postcode-checker",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "heading": "Delivery Postcode Checker",
+        "instructions": "To check delivery costs, type the first part of your postcode e.g. for NG33 5LY, enter NG33.",
+        "instructions_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
     }
   },
   "order": [
@@ -339,6 +363,7 @@
     "image_with_text_zJhwhJ",
     "custom_liquid_bBkwGJ",
     "collapsible_content_4F8ffL",
-    "contact_form_T3V7XG"
+    "contact_form_T3V7XG",
+    "postcode_checker_J8VQBA"
   ]
 }
