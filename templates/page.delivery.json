@@ -65,21 +65,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "postcode_checker_J8VQBA": {
-      "type": "postcode-checker",
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "heading": "Delivery Postcode Checker",
-        "instructions": "To check delivery costs, type the first part of your postcode e.g. for NG33 5LY, enter NG33.",
-        "instructions_alignment": "center",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 30
-      }
-    },
     "custom_liquid_T7RRLB": {
       "type": "custom-liquid",
       "settings": {
@@ -197,6 +182,21 @@
         "padding_bottom": 50,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
+      }
+    },
+    "postcode_checker_J8VQBA": {
+      "type": "postcode-checker",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "heading": "Delivery Postcode Checker",
+        "instructions": "To check delivery costs, type the first part of your postcode e.g. for NG33 5LY, enter NG33.",
+        "instructions_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
       }
     },
     "custom_liquid_PEbtxe": {
@@ -357,9 +357,9 @@
   "order": [
     "main",
     "rich_text_JPy3zj",
-    "postcode_checker_J8VQBA",
     "custom_liquid_T7RRLB",
     "icon_with_text_ngUGpR",
+    "postcode_checker_J8VQBA",
     "custom_liquid_PEbtxe",
     "image_with_text_zJhwhJ",
     "custom_liquid_bBkwGJ",

@@ -37,14 +37,17 @@
         "text_9kyCPf": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
-      "block_order": ["heading_cCFWTq", "text_9kyCPf"],
+      "block_order": [
+        "heading_cCFWTq",
+        "text_9kyCPf"
+      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -144,13 +147,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify://shop_images/Carnaby_Beige_U_Shape_Sofa_Evergreen_LS_5_Low_Res.jpg",
+            "image": "shopify:\/\/shop_images\/Carnaby_Beige_U_Shape_Sofa_Evergreen_LS_5_Low_Res.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Carnaby",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -163,13 +166,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify://shop_images/Mirabel_Sofa_Grey_Right_Hand_Facing_Corner_Lifestyle_Low_Res_1_1.jpg",
+            "image": "shopify:\/\/shop_images\/Mirabel_Sofa_Grey_Right_Hand_Facing_Corner_Lifestyle_Low_Res_1_1.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Mirabel",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -182,13 +185,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify://shop_images/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_11_Low_Res.jpg",
+            "image": "shopify:\/\/shop_images\/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_11_Low_Res.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Tucano",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -196,7 +199,11 @@
           }
         }
       },
-      "block_order": ["column_cqTp3g", "column_PwYy6q", "column_VUbCax"],
+      "block_order": [
+        "column_cqTp3g",
+        "column_PwYy6q",
+        "column_VUbCax"
+      ],
       "settings": {
         "content_inside_image": false,
         "heading": "Discover more from us...",
@@ -245,7 +252,7 @@
         "text_xA3UUY": {
           "type": "text",
           "settings": {
-            "text": "<p>Mention <strong>@honeypotfurniture</strong> and <strong>#BuzzingWithStyle</strong> in your Instagram photos for the chance to be featured in our gallery.</p>",
+            "text": "<p>Mention <strong>@honeypotfurniture<\/strong> and <strong>#BuzzingWithStyle<\/strong> in your Instagram photos for the chance to be featured in our gallery.<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -265,7 +272,11 @@
           }
         }
       },
-      "block_order": ["heading_YXCnEh", "text_xA3UUY", "button_wmPdEn"],
+      "block_order": [
+        "heading_YXCnEh",
+        "text_xA3UUY",
+        "button_wmPdEn"
+      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -284,7 +295,7 @@
         "image_HVReRL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/INSPO_GAL_3.webp",
+            "image": "shopify:\/\/shop_images\/INSPO_GAL_3.webp",
             "link": ""
           }
         },
@@ -301,11 +312,15 @@
           }
         }
       },
-      "block_order": ["image_HVReRL", "image_rQj6dn", "image_QDkr7A"],
+      "block_order": [
+        "image_HVReRL",
+        "image_rQj6dn",
+        "image_QDkr7A"
+      ],
       "settings": {
         "heading": "Meet our Ambassadors",
         "heading_size": "default",
-        "text": "<p>Share information about your brand with your customers.</p>",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
         "link_label": "Get to know here",
         "link": "",
         "heading_alignment": "start",
