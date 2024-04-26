@@ -951,7 +951,7 @@
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": false,
-        "color_autoplay": "#FFFFFF",
+        "color_autoplay": "#ffffff",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
@@ -966,12 +966,12 @@
           "type": "slide",
           "settings": {
             "type_banner": "full",
-            "image_primary": "shopify:\/\/shop_images\/Trustpilot_Reviews_1.jpg",
+            "image_primary": "shopify:\/\/shop_images\/Trustpilot_Reviews_2.jpg",
             "heading": "",
             "heading_size": "x-large",
             "subheading": "Customer Reviews",
             "subheading_size": "medium",
-            "description": "<p><strong>I purchased the \"Rupert\" range and I can honestly it's the best Sofa I've ever had! And I've had many! From the classic elegant look, to the luxury feel and comfort, I often get asked about it, everyone loves it when they visit, Also the service and extremely quick delivery from Honeypot was 2nd to none! I highly recommend this company and their fabulous furniture, 5 stars from me!<\/strong><\/p>",
+            "description": "<p><strong>I purchased the \"Rupert\" range and I can honestly it's the best Sofa I've ever had! And I've had many! From the classic elegant look, to the luxury feel and comfort, I often get asked about it, everyone loves it when they visit, Also the service and extremely quick delivery from Honeypot was 2nd to none! I highly recommend this company and their fabulous furniture, 5 stars from me!<br\/><br\/>- Teena<\/strong><\/p>",
             "description_size": "large",
             "button_style": "default",
             "button_label": "",
@@ -1015,6 +1015,60 @@
         "image_behavior": "none",
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "testimonial_NkEcJz": {
+      "type": "testimonial",
+      "blocks": {
+        "slide_nKhEhJ": {
+          "type": "slide",
+          "settings": {
+            "heading": "I can honestly say it's the best Sofa I've ever had!",
+            "text": "<h6>I purchased the \"Rupert\" range and I can honestly it's the best Sofa I've ever had! And I've had many! From the classic elegant look, to the luxury feel and comfort, I often get asked about it, everyone loves it when they visit, Also the service and extremely quick delivery from Honeypot was 2nd to none! I highly recommend this company and their fabulous furniture, 5 stars from me!<\/h6>",
+            "name": "Teena",
+            "rating": "5",
+            "box_align": "middle-center",
+            "text_alignment": "center"
+          }
+        },
+        "slide_T33ykV": {
+          "type": "slide",
+          "settings": {
+            "heading": "Heading",
+            "text": "<p>Show honest feedbacks about your product or service.<\/p>",
+            "name": "Customer's name",
+            "rating": "5",
+            "box_align": "middle-left",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_nKhEhJ",
+        "slide_T33ykV"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Customer Reviews",
+        "heading_size": "small",
+        "heading_alignment": "center",
+        "margin_bottom": 0,
+        "use_bg_image": false,
+        "color_scheme": "",
+        "use_custom_color": true,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(180deg, rgba(241, 232, 225, 1), rgba(248, 253, 254, 1) 100%)",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_autoplay": false,
+        "change_slides_speed": 5,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
     }
   },
   "order": [
@@ -1033,6 +1087,7 @@
     "featured_blog_DdAnpK",
     "79993e5e-b47d-42d2-8535-5d30f78f1b0f",
     "slideshow_E9Lebj",
-    "visual_hightlight_XzftDa"
+    "visual_hightlight_XzftDa",
+    "testimonial_NkEcJz"
   ]
 }
