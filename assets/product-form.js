@@ -31,6 +31,60 @@ if (!customElements.get('product-form')) {
       delete config.headers['Content-Type'];
 
       const formData = new FormData(this.form);
+      /************************************************************/
+      document.querySelectorAll('.all-wrpp-varit input').forEach(function(input){
+          if (!input.hasAttribute('disabled')) {
+            var name = input.getAttribute('name');
+            var value = input.value;
+        
+            var ipType = input.getAttribute('type');
+            if (ipType !== 'radio') {
+                if (ipType !== 'checkbox') {
+                    formData.append(name, value);
+                } else {
+                    if (input.checked) {
+                        formData.append(name, value);
+                    } 
+                }
+            } 
+          }
+      });
+
+      document.querySelectorAll('.all-wrpp-varit select').forEach(function(select){
+        if (!select.hasAttribute('disabled')) {
+          var name = select.getAttribute('name');
+          var value = select.value;
+
+          var disAtrr = select.getAttribute('disabled');
+          if (disAtrr !== 'disabled') {
+              formData.append(name, value);
+          }
+        }
+      });
+
+      document.querySelectorAll('.all-wrpp-varit textarea').forEach(function(textarea){
+          if (!textarea.hasAttribute('disabled')) {
+            var name = textarea.getAttribute('name');
+            var value = textarea.value;
+        
+            var disAtrr = textarea.getAttribute('disabled');
+            if (disAtrr !== 'disabled') {
+                formData.append(name, value);
+            }
+          }
+      });
+
+      //swatch override
+      document.querySelectorAll('.swt-checked input').forEach(function(input) {
+          if (!input.hasAttribute('disabled')) {
+            var name = input.getAttribute('name');
+            var value = input.value;
+        
+            formData.append(name, value);
+          }
+      });
+      /************************************************************/
+
       if (this.cart) {
         formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
         formData.append('sections_url', window.location.pathname);

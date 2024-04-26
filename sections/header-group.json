@@ -1,1 +1,156 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"logo_width":100,"text":"<p>COVID-19 Updates & Shipment Delays. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"}},"d826dfdb-6961-4fc5-906d-23f75f404022":{"type":"announcement","settings":{"logo_width":100,"text":"<p>Free Shipping on all orders*. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"}}},"block_order":["announcement-bar-0","d826dfdb-6961-4fc5-906d-23f75f404022"],"disabled":true,"settings":{"text_size":"medium","enable_autoplay":false,"change_slides_speed":5,"enable_link_tablet_mobile":false,"label_link":"","link":"","label_link_2":"","link_2":"","color_scheme":"scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0","padding_top":16,"padding_bottom":16,"padding_top_mobile":16,"padding_bottom_mobile":16}},"b38aad37-e5d6-4a4a-9109-e406344cc53a":{"type":"link-list","blocks":{"text_TCMy7h":{"type":"text","settings":{"text":"<p>Call Us: 01476 589446 - 08:00-20:00<\/p>","background":"","secondary_background":""}},"sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2":{"type":"link_list","settings":{"link_list":"top-page-menu","background":"","secondary_background":""}}},"block_order":["text_TCMy7h","sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2"],"settings":{"section_width":"page-width","type_layout":"scroll","text_size":"x-small","enable_pagination_type":"md","color_scheme":"inverse","use_custom_color":false,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(-90deg, rgba(246, 238, 227, 1), rgba(255, 242, 255, 1) 100%)","padding_top":9,"padding_bottom":9}},"header":{"type":"header","blocks":{"mega_menu_1_QYBCyP":{"type":"mega_menu_1","settings":{"menu_item":"Sofas","section_width":"customized-width","customize_width":1400,"image_1":"shopify:\/\/shop_images\/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_4_High_Res_98da9aad-31da-4184-b7e9-cb68fca1fc22.png","text_image_1":"","link_image_1":"","image_overlay_opacity":30,"color_overlay_opacity":"#000000"}}},"block_order":["mega_menu_1_QYBCyP"],"custom_css":[".menu-drawer {background-color: #ffffff;}"],"settings":{"section_width":"customized-width","customize_width":1800,"type_style":"classic","show_line_separator":true,"type_sticky_header":"always","color_scheme":"inverse","text_size":"medium","font_transform":"capitalize","enable_transparent":true,"logo_transparent":"shopify:\/\/shop_images\/transparrent.png","color_opacity_1":100,"text_transparent":"#ffffff","color_opacity_2":70,"logo":"shopify:\/\/shop_images\/Logov1-3.png","logo_width":180,"logo_position":"middle-left","logo_alignment_desktop":"start","menu":"main-menu","menu_alignment_desktop":"center","spacing_gap":20,"menu_transform":"capitalize","link_type":"line","use_custom_button":false,"use_button_label":"Button label","use_button_link":"","icon_type_style":"classic","enable_search":true,"enable_account":true,"enable_cart":true,"enable_wishlist":false,"enable_country_selector":false,"enable_language_selector":false,"function_alignment_desktop":"end","enable_search_mobile":true,"enable_account_mobile":true,"enable_cart_mobile":true,"enable_wishlist_mobile":false,"enable_country_selector_mobile":true,"enable_language_selector_mobile":true,"mobile_logo_position":"center","padding_top":16,"padding_bottom":16}}},"order":["announcement-bar","b38aad37-e5d6-4a4a-9109-e406344cc53a","header"]}
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "logo_width": 100,
+            "text": "<p>COVID-19 Updates & Shipment Delays. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"
+          }
+        },
+        "d826dfdb-6961-4fc5-906d-23f75f404022": {
+          "type": "announcement",
+          "settings": {
+            "logo_width": 100,
+            "text": "<p>Free Shipping on all orders*. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "d826dfdb-6961-4fc5-906d-23f75f404022"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_size": "medium",
+        "enable_autoplay": false,
+        "change_slides_speed": 5,
+        "enable_link_tablet_mobile": false,
+        "label_link": "",
+        "link": "",
+        "label_link_2": "",
+        "link_2": "",
+        "color_scheme": "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "b38aad37-e5d6-4a4a-9109-e406344cc53a": {
+      "type": "link-list",
+      "blocks": {
+        "text_TCMy7h": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Call Us: 01476 589446 - 08:00-20:00<\/p>",
+            "background": "",
+            "secondary_background": ""
+          }
+        },
+        "sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2": {
+          "type": "link_list",
+          "settings": {
+            "link_list": "top-page-menu",
+            "background": "",
+            "secondary_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_TCMy7h",
+        "sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "type_layout": "scroll",
+        "text_size": "x-small",
+        "enable_pagination_type": "md",
+        "color_scheme": "background-2",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(-90deg, rgba(246, 238, 227, 1), rgba(255, 242, 255, 1) 100%)",
+        "padding_top": 9,
+        "padding_bottom": 9
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_1_QYBCyP": {
+          "type": "mega_menu_1",
+          "settings": {
+            "menu_item": "Sofas",
+            "section_width": "customized-width",
+            "customize_width": 1400,
+            "image_1": "shopify:\/\/shop_images\/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_4_High_Res_98da9aad-31da-4184-b7e9-cb68fca1fc22.png",
+            "text_image_1": "",
+            "link_image_1": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_1_QYBCyP"
+      ],
+      "custom_css": [
+        ".menu-drawer {background-color: #ffffff;}"
+      ],
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1800,
+        "type_style": "classic",
+        "show_line_separator": true,
+        "type_sticky_header": "always",
+        "color_scheme": "background-2",
+        "text_size": "medium",
+        "font_transform": "capitalize",
+        "enable_transparent": true,
+        "logo_transparent": "shopify:\/\/shop_images\/transparrent.png",
+        "color_opacity_1": 100,
+        "text_transparent": "#ffffff",
+        "color_opacity_2": 70,
+        "logo": "shopify:\/\/shop_images\/Primary_Logo-with-furniture.png",
+        "logo_width": 100,
+        "logo_position": "middle-left",
+        "logo_alignment_desktop": "start",
+        "menu": "main-menu",
+        "menu_alignment_desktop": "center",
+        "spacing_gap": 20,
+        "menu_transform": "capitalize",
+        "link_type": "line",
+        "use_custom_button": false,
+        "use_button_label": "Button label",
+        "use_button_link": "",
+        "icon_type_style": "classic",
+        "enable_search": true,
+        "enable_account": true,
+        "enable_cart": true,
+        "enable_wishlist": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "function_alignment_desktop": "end",
+        "enable_search_mobile": true,
+        "enable_account_mobile": true,
+        "enable_cart_mobile": true,
+        "enable_wishlist_mobile": false,
+        "enable_country_selector_mobile": true,
+        "enable_language_selector_mobile": true,
+        "mobile_logo_position": "center",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "b38aad37-e5d6-4a4a-9109-e406344cc53a",
+    "header"
+  ]
+}

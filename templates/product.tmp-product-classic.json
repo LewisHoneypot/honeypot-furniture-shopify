@@ -5,10 +5,7 @@
       "blocks": {
         "663b1401-2653-492c-8576-70628c7c7b65": {
           "type": "vendor",
-          "settings": {
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
+          "settings": { "padding_top": 0, "padding_bottom": 0 }
         },
         "title": {
           "type": "title",
@@ -111,11 +108,7 @@
             "padding_bottom": 5
           }
         },
-        "color_swatch_gNKP3H": {
-          "type": "color_swatch",
-          "settings": {
-          }
-        },
+        "color_swatch_gNKP3H": { "type": "color_swatch", "settings": {} },
         "b4a60cb8-a075-4a50-b5c5-69cc79a79503": {
           "type": "collapsible_tab",
           "settings": {
@@ -136,7 +129,7 @@
             "heading_size": "h4",
             "heading_font": "f-normal",
             "icon": "none",
-            "content": "<p>INGREDIENTS<\/p>",
+            "content": "<p>INGREDIENTS</p>",
             "page": "",
             "padding_top": 24,
             "padding_bottom": 24
@@ -149,7 +142,7 @@
             "heading_size": "h4",
             "heading_font": "f-normal",
             "icon": "none",
-            "content": "<p>HOW TO USE<\/p>",
+            "content": "<p>HOW TO USE</p>",
             "page": "theme-faqs",
             "padding_top": 24,
             "padding_bottom": 24
@@ -171,8 +164,8 @@
             "padding_bottom": 0,
             "ask_an_expert_heading": "Have Questions?",
             "ask_an_expert_title": "ASK THE FASHION EXPERT ANYTHING ON CONCEPT",
-            "ask_an_expert_desc": "<p>We will follow up with you via email within 24-36 hours<\/p>",
-            "ask_an_expert_text": "<p>Please answer the following questionnaire<\/p>",
+            "ask_an_expert_desc": "<p>We will follow up with you via email within 24-36 hours</p>",
+            "ask_an_expert_text": "<p>Please answer the following questionnaire</p>",
             "ask_an_expert_option_1": "Do You Need",
             "ask_an_expert_option_1_1": "Pricing",
             "ask_an_expert_option_1_2": "Answers",
@@ -250,11 +243,11 @@
             "subheading_size": "x-small",
             "heading": "AMBER ®",
             "heading_size": "medium",
-            "text": "<p>The famous brand brings more protective to your skin and heath<\/p>",
+            "text": "<p>The famous brand brings more protective to your skin and heath</p>",
             "text_size": "x-small",
             "button_type": "standard",
             "button_label": "SHOP AMBER BEAUTY",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "shopify://collections/all",
             "use_custom_color": true,
             "color_scheme": "scheme-b53aaaf6-d4d2-4722-94b6-c857c8e791e3"
           }
@@ -274,7 +267,7 @@
             "text_size": "medium",
             "button_type": "special",
             "button_label": "SHOP MASCARA",
-            "button_link": "shopify:\/\/collections\/all"
+            "button_link": "shopify://collections/all"
           }
         },
         "template--17212248555759__621be3cd-4147-460f-91ba-588045460f3e-column-3": {
@@ -292,7 +285,7 @@
             "text_size": "medium",
             "button_type": "special",
             "button_label": "SHOP FACE POWDERS",
-            "button_link": "shopify:\/\/collections\/all"
+            "button_link": "shopify://collections/all"
           }
         },
         "bf7c38cb-ffa8-4220-9668-92d87d8d9b4b": {
@@ -310,7 +303,7 @@
             "text_size": "medium",
             "button_type": "special",
             "button_label": "SHOP FOUNDATION MAKEUP",
-            "button_link": "shopify:\/\/collections\/all"
+            "button_link": "shopify://collections/all"
           }
         }
       },
@@ -364,9 +357,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#f5f3f6",
             "heading": "FREE WORLD-WIDE SHOPPING",
-            "text": "<p>For order over $100<\/p>",
+            "text": "<p>For order over $100</p>",
             "link_label": "Learn more",
-            "link": "shopify:\/\/collections\/all"
+            "link": "shopify://collections/all"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0": {
@@ -377,9 +370,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#f5f3f6",
             "heading": "EASY FREE RETURN",
-            "text": "<p>30 days guarantee on all items<\/p>",
+            "text": "<p>30 days guarantee on all items</p>",
             "link_label": "Find out more",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
@@ -390,9 +383,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#f5f3f6",
             "heading": "HANDLE WITH CARE",
-            "text": "<p>Commitment to preserving the beauty<\/p>",
+            "text": "<p>Commitment to preserving the beauty</p>",
             "link_label": "Learn how",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
@@ -403,9 +396,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#f5f3f6",
             "heading": "100% SECURED CHECKOUT",
-            "text": "<p>Trusted SLL protection<\/p>",
+            "text": "<p>Trusted SLL protection</p>",
             "link_label": "Learn more",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         }
       },
@@ -459,11 +452,11 @@
             "subheading_size": "medium",
             "heading": "BEAURY COURSES",
             "heading_size": "medium",
-            "description": "<p>PROFESSIONAL MAKEUP & STYLE <\/p><p>FOR BEAUTY LOVERS<\/p>",
+            "description": "<p>PROFESSIONAL MAKEUP & STYLE </p><p>FOR BEAUTY LOVERS</p>",
             "description_size": "x-small",
             "button_style": "default",
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "shopify://collections/all",
             "text_alignment": "center"
           }
         }
@@ -500,9 +493,7 @@
           }
         }
       },
-      "block_order": [
-        "b937ece4-12ab-420a-ad0c-8601ac724d7c"
-      ],
+      "block_order": ["b937ece4-12ab-420a-ad0c-8601ac724d7c"],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -530,7 +521,7 @@
         "template--17212248555759__b91e672f-fb1d-40b0-85e0-f628954fda3f-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>A: Begin with a hydrating primer, choose the right foundation for your skin type, and highlight your features with well-blended concealer. Complete the look with a setting spray for long-lasting radiance.<\/p>",
+            "text": "<p>A: Begin with a hydrating primer, choose the right foundation for your skin type, and highlight your features with well-blended concealer. Complete the look with a setting spray for long-lasting radiance.</p>",
             "show_line_separator": false,
             "padding_top": 0,
             "padding_bottom": 40
@@ -568,7 +559,7 @@
         "aefdce53-d22e-4362-83ef-f5194976b0db": {
           "type": "text",
           "settings": {
-            "text": "<p>A: Opt for a lightweight foundation, focus on enhancing your natural features with neutral tones, and blend thoroughly to avoid harsh lines. Finish with a touch of translucent powder for a subtle, dewy effect.<\/p>",
+            "text": "<p>A: Opt for a lightweight foundation, focus on enhancing your natural features with neutral tones, and blend thoroughly to avoid harsh lines. Finish with a touch of translucent powder for a subtle, dewy effect.</p>",
             "show_line_separator": false,
             "padding_top": 0,
             "padding_bottom": 40
@@ -606,7 +597,7 @@
         "f88e0e5f-10ac-45f7-b2ee-5df7737a6b45": {
           "type": "text",
           "settings": {
-            "text": "<p>A: Start with a high-coverage foundation, use vibrant eyeshadows and bold lip colors, and don't shy away from experimenting with winged eyeliner and false lashes. Set the look with a long-wearing setting spray for extra glam.<\/p>",
+            "text": "<p>A: Start with a high-coverage foundation, use vibrant eyeshadows and bold lip colors, and don't shy away from experimenting with winged eyeliner and false lashes. Set the look with a long-wearing setting spray for extra glam.</p>",
             "show_line_separator": false,
             "padding_top": 0,
             "padding_bottom": 20
@@ -636,19 +627,17 @@
           "type": "button",
           "settings": {
             "primary_button_label": "SEE ALL QUESTIONS & ANSWERS",
-            "primary_button_link": "shopify:\/\/collections\/all",
+            "primary_button_link": "shopify://collections/all",
             "primary_button_type": "default",
             "secondary_button_label": "",
-            "secondary_button_link": "shopify:\/\/collections\/all",
+            "secondary_button_link": "shopify://collections/all",
             "secondary_button_type": "transparent",
             "padding_top": 0,
             "padding_bottom": 0
           }
         }
       },
-      "block_order": [
-        "20cfd83c-3b28-45f0-9b53-ad60c7dd8de4"
-      ],
+      "block_order": ["20cfd83c-3b28-45f0-9b53-ad60c7dd8de4"],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -767,7 +756,7 @@
             "button_transparent": "default",
             "button_type": "special",
             "button_label": "SHOP BEAUTY UNDER $29",
-            "link": "shopify:\/\/collections\/sofas",
+            "link": "shopify://collections/sofas",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "desktop_content_position": "bottom-center"
@@ -781,7 +770,7 @@
             "button_transparent": "default",
             "button_type": "special",
             "button_label": "SHOP SKINCARE UNDER $39",
-            "link": "shopify:\/\/collections\/sofas",
+            "link": "shopify://collections/sofas",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "desktop_content_position": "bottom-center"
@@ -798,13 +787,13 @@
             "heading": "BEAT-THE-HEAT",
             "heading_size": "default",
             "heading_margin_bottom": 16,
-            "text": "<p>PROTECT AND GLOW WITH <\/p><p>SUMMER ESSENTIALS<\/p>",
+            "text": "<p>PROTECT AND GLOW WITH </p><p>SUMMER ESSENTIALS</p>",
             "text_size": "x-small",
             "text_margin_bottom": 0,
             "button_transparent": "default",
             "button_type": "standard",
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/collections\/collection-03",
+            "button_link": "shopify://collections/collection-03",
             "button_margin_top": 32,
             "button_margin_bottom": 0,
             "text_alignment": "center",

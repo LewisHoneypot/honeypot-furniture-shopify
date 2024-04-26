@@ -1,1 +1,149 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"footer-2":{"type":"text","settings":{"heading":"","heading_font":"f-bold","subtext":"<p>Office Hours<br\/>Mon-Fri: 9am-5pm<\/p><p><\/p><p><\/p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 589446<\/a><\/p><p>Email: <a href=\"mailto:support@concept.com\">cs@honeypotfurniture.co.uk<\/a><\/p>","subtext_size":"medium","image_width":180,"show_social":true,"social_media_colors_text":"#2d2d2d","social_media_colors_background":"","social_media_gradient_background":"","margin_bottom":26,"margin_bottom_xs":30}},"footer-0":{"type":"link_list","settings":{"heading":"Quick Links","heading_font":"f-bold","menu":"footer","custom_separator_color":false,"separator_color":"rgba(0,0,0,0)","padding_bottom_xs":15,"padding_top_xs":15}},"footer-1":{"type":"link_list","settings":{"heading":"Customer Service","heading_font":"f-bold","menu":"","custom_separator_color":false,"separator_color":"rgba(0,0,0,0)","padding_bottom_xs":15,"padding_top_xs":15}},"3d5e046f-f018-45d1-b98d-d4874a780020":{"type":"link_list","settings":{"heading":"Furthur Info","heading_font":"f-bold","menu":"","custom_separator_color":false,"separator_color":"rgba(0,0,0,0)","padding_bottom_xs":15,"padding_top_xs":15}},"17114992-59f7-4a83-bf27-1f00c171e823":{"type":"newsletter","disabled":true,"settings":{"block_width":"default","type_style_newsletter":"default","image_width":100,"heading":"Subscribe to our emails","heading_font":"f-bold","heading_typography":"font-heading","heading_size":"h3","heading_size_step":0,"subtext":"<p>Be the first to know about new collections and exclusive offers.<\/p>","text_size":"medium","text_margin_top":0,"text_margin_bottom":16,"text_alignment":"left","button_label":"","hide_arrow":false,"caption":"<p>Learn more about how we protect your personal data by viewing our <a href=\"\/\" target=\"_blank\" title=\"\/\">Privacy Notice<\/a>.<\/p>","caption_size":"medium","check_text":"","show_social":false,"social_media_colors_text":"#2d2d2d","social_media_colors_background":"","social_media_gradient_background":"","margin_top":0,"margin_bottom":0}},"link_list_mnzbkY":{"type":"link_list","settings":{"heading":"Legal","heading_font":"f-bold","menu":"legal","custom_separator_color":false,"separator_color":"transparent","padding_bottom_xs":15,"padding_top_xs":15}}},"block_order":["footer-2","footer-0","footer-1","3d5e046f-f018-45d1-b98d-d4874a780020","17114992-59f7-4a83-bf27-1f00c171e823","link_list_mnzbkY"],"settings":{"type_style":"classic","section_width":"page-width","customize_width":1800,"margin_top":30,"heading_size":"h3","heading_typography":"font-heading","text_size":"default","text_typography":"font-body","link_row_gap":0,"show_line_separator":false,"footer_top_padding_top":80,"footer_top_padding_bottom":65,"footer_top_padding_top_mobile":40,"footer_top_padding_bottom_mobile":40,"footer_top_color_scheme":"scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0","footer_bot_show_line_separator":false,"footer_bottom_padding_top":26,"footer_bottom_padding_bottom":26,"footer_bottom_padding_top_mobile":30,"footer_bottom_padding_bottom_mobile":30,"footer_bottom_color_scheme":"","bottom_text_size":"medium","enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"show_policy":false,"show_social":false,"social_media_colors_text":"#2d2d2d","social_media_colors_background":"","social_media_gradient_background":"","text_copyright":"<p>©2024 Name store<\/p>"}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "heading_font": "f-bold",
+            "subtext": "<p>Office Hours<br\/>Mon-Fri: 9am-5pm<\/p><p><\/p><p><\/p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 589446<\/a><\/p><p>Email: <a href=\"mailto:support@concept.com\">cs@honeypotfurniture.co.uk<\/a><\/p>",
+            "subtext_size": "medium",
+            "image_width": 180,
+            "show_social": true,
+            "social_media_colors_text": "#2d2d2d",
+            "social_media_colors_background": "",
+            "social_media_gradient_background": "",
+            "margin_bottom": 26,
+            "margin_bottom_xs": 30
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick Links",
+            "heading_font": "f-bold",
+            "menu": "footer",
+            "custom_separator_color": false,
+            "separator_color": "rgba(0,0,0,0)",
+            "padding_bottom_xs": 15,
+            "padding_top_xs": 15
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Service",
+            "heading_font": "f-bold",
+            "menu": "",
+            "custom_separator_color": false,
+            "separator_color": "rgba(0,0,0,0)",
+            "padding_bottom_xs": 15,
+            "padding_top_xs": 15
+          }
+        },
+        "3d5e046f-f018-45d1-b98d-d4874a780020": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Furthur Info",
+            "heading_font": "f-bold",
+            "menu": "",
+            "custom_separator_color": false,
+            "separator_color": "rgba(0,0,0,0)",
+            "padding_bottom_xs": 15,
+            "padding_top_xs": 15
+          }
+        },
+        "17114992-59f7-4a83-bf27-1f00c171e823": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "block_width": "default",
+            "type_style_newsletter": "default",
+            "image_width": 100,
+            "heading": "Subscribe to our emails",
+            "heading_font": "f-bold",
+            "heading_typography": "font-heading",
+            "heading_size": "h3",
+            "heading_size_step": 0,
+            "subtext": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
+            "text_size": "medium",
+            "text_margin_top": 0,
+            "text_margin_bottom": 16,
+            "text_alignment": "left",
+            "button_label": "",
+            "hide_arrow": false,
+            "caption": "<p>Learn more about how we protect your personal data by viewing our <a href=\"\/\" target=\"_blank\" title=\"\/\">Privacy Notice<\/a>.<\/p>",
+            "caption_size": "medium",
+            "check_text": "",
+            "show_social": false,
+            "social_media_colors_text": "#2d2d2d",
+            "social_media_colors_background": "",
+            "social_media_gradient_background": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "link_list_mnzbkY": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "heading_font": "f-bold",
+            "menu": "legal",
+            "custom_separator_color": false,
+            "separator_color": "rgba(0,0,0,0)",
+            "padding_bottom_xs": 15,
+            "padding_top_xs": 15
+          }
+        }
+      },
+      "block_order": [
+        "footer-2",
+        "footer-0",
+        "footer-1",
+        "3d5e046f-f018-45d1-b98d-d4874a780020",
+        "17114992-59f7-4a83-bf27-1f00c171e823",
+        "link_list_mnzbkY"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "margin_top": 30,
+        "heading_size": "h3",
+        "heading_typography": "font-heading",
+        "text_size": "default",
+        "text_typography": "font-body",
+        "link_row_gap": 0,
+        "show_line_separator": false,
+        "footer_top_padding_top": 80,
+        "footer_top_padding_bottom": 65,
+        "footer_top_padding_top_mobile": 40,
+        "footer_top_padding_bottom_mobile": 40,
+        "footer_top_color_scheme": "background-2",
+        "footer_bot_show_line_separator": false,
+        "footer_bottom_padding_top": 26,
+        "footer_bottom_padding_bottom": 26,
+        "footer_bottom_padding_top_mobile": 30,
+        "footer_bottom_padding_bottom_mobile": 30,
+        "footer_bottom_color_scheme": "",
+        "bottom_text_size": "medium",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "show_social": false,
+        "social_media_colors_text": "#2d2d2d",
+        "social_media_colors_background": "",
+        "social_media_gradient_background": "",
+        "text_copyright": "<p>©2024 Name store<\/p>"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
