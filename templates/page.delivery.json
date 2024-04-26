@@ -194,16 +194,16 @@
         "instructions_alignment": "center",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 30
+        "padding_bottom": 0,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 0
       }
     },
     "custom_liquid_PEbtxe": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
-        "padding_top": 30,
+        "custom_liquid": "<hr>",
+        "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
