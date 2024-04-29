@@ -14,6 +14,9 @@
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "settings": {
+            "available_colours": "Available Colours",
+            "padding_top": 0,
+            "padding_bottom": 10
           }
         },
         "price": {
@@ -35,15 +38,6 @@
             "size_chart_type": "custom_image",
             "size_chart_image_type": "jpg",
             "color_size_chart_scheme": "background-2",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "variant_picker_8eYRnm": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "dropdown",
-            "swatch": "Color",
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -75,6 +69,18 @@
             "padding_top": 10,
             "padding_bottom": 5
           }
+        },
+        "complementary_WVee4W": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs well with",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "image_ratio": "square",
+            "show_swatch": false,
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
         }
       },
       "block_order": [
@@ -82,8 +88,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "variant_picker_8eYRnm",
-        "buy_buttons"
+        "buy_buttons",
+        "complementary_WVee4W"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
@@ -316,7 +322,6 @@
         "image_L4QhHh": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rupert-Sofas.png",
             "product_1": "inga-fullback-sofa-beige-u-shape-corner",
             "horizontal_1": 32,
             "vertical_1": 26,
