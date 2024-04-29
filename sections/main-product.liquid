@@ -573,22 +573,24 @@
                 {%- endif -%}                             
 
               {%- when 'color_swatch' -%}
-                {%- if product.metafields.custom.product_color_list != blank -%}
-                  <h4>Available Colours:</h4>
-                  <div class="color-list">
-                    {% for p in product.metafields.custom.product_color_list.value %}
-                      <a
-                        {% if product.handle == p.handle %}
-                          href="#" style="cursor:default; outline:2px solid #000000; outline-offset:2px;"
-                        {% else %}
-                          href="{{ p.url }}"
-                        {% endif %}
-                      >
-                        <div class="color-item" style="background-color: {{ p.metafields.custom.color.value }};"></div>
-                      </a>
-                    {% endfor %}
+                {%- if product.metafields.custom.product_colour_list != blank -%}
+                  <div class="product__variant {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px;">
+                    <h4>{{ block.settings.available_colours }}:</h4>
+                    <div class="color-list">
+                      {% for p in product.metafields.custom.product_colour_list.value %}
+                        <a
+                          {% if product.handle == p.handle %}
+                            href="#" style="cursor:default; outline:2px solid #000000; outline-offset:2px;"
+                          {% else %}
+                            href="{{ p.url }}"
+                          {% endif %}
+                        >
+                          <div class="color-item" style="background-color: {{ p.metafields.custom.color.value }};"></div>
+                        </a>
+                      {% endfor %}
+                    </div>
                   </div>
-                {%- endif -%} 
+                {%- endif -%}
                               
               {%- when 'variant_picker' -%}
                 <div class="product__variant element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -1199,12 +1201,11 @@
               onclick="this.closest('side-drawer').close()"
               aria-label="{{ 'accessibility.close' | t }}"
             >
-              <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
-            </button>
-            <div class="product-popup-modal__content-info popup-modal__content-info">
-              <h2 class="h2 center">{{ block.settings.page.title }}</h2>
-              {{ block.settings.page.content }}
-            </div>
+            <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+          </button>
+          <div class="product-popup-modal__content-info popup-modal__content-info">
+            <h2 class="h2 center">{{ block.settings.page.title }}</h2>
+            {{ block.settings.page.content }}
           </div>
         </div>
       </div>
@@ -1699,11 +1700,38 @@
       "default": 5
     }]
   },
-            {
-      "type": "color_swatch",
-      "name": "color swatch",
-      "limit": 1
-        },
+  {
+    "type": "color_swatch",
+    "name": "Colour Swatch",
+    "limit": 1,
+    "settings": [
+    {
+      "type": "text",
+      "id": "available_colours",
+      "default": "Available Colours",
+      "label": "Available Colours"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 10
+    }]
+  },
   {
     "type": "title",
     "name": "t:sections.main-product.blocks.title.name",
@@ -1785,9 +1813,7 @@
       "default": "h1",
       "label": "t:sections.all.font_size.label__2"
     }]
-  },
-
-    
+  },    
   {
     "type": "vendor",
     "name": "t:sections.main-product.blocks.vendor.name",
@@ -4506,6 +4532,7 @@
         }
   .color-item{
         aspect-ratio: 1;
+        height: 3.5rem;
         width: 3.5rem;
         display: block !important;
         }
