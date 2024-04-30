@@ -69,18 +69,6 @@
             "padding_top": 10,
             "padding_bottom": 5
           }
-        },
-        "complementary_WVee4W": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs well with",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "image_ratio": "square",
-            "show_swatch": false,
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
         }
       },
       "block_order": [
@@ -88,8 +76,7 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "buy_buttons",
-        "complementary_WVee4W"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
@@ -520,7 +507,7 @@
         "color_scheme": "background-2",
         "use_custom_color": false,
         "colors_text": "#424242",
-        "colors_background": "#F6EEE3",
+        "colors_background": "#f6eee3",
         "gradient_background": "",
         "padding_top": 30,
         "padding_bottom": 30,
