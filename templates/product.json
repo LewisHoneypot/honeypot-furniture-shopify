@@ -69,6 +69,15 @@
             "padding_top": 10,
             "padding_bottom": 5
           }
+        },
+        "drawer_j3bNWd": {
+          "type": "drawer",
+          "settings": {
+            "heading": "More Sizes",
+            "content_type": "pairs_well_with",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -76,7 +85,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "buy_buttons"
+        "buy_buttons",
+        "drawer_j3bNWd"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
