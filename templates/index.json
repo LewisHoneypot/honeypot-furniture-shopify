@@ -1047,8 +1047,8 @@
           "type": "slide",
           "settings": {
             "heading": "Beautiful sofa!",
-            "text": "<p>Beautifully made U shaped bishop sofa was purchased online from this small family run business - excellent communication from start to finish and useful delivery updates on the day to make this a hassle free purchase - highly recommended!<br\/><br\/>Lesley<\/p>",
-            "name": "Customer's name",
+            "text": "<h5>Beautifully made U shaped bishop sofa was purchased online from this small family run business - excellent communication from start to finish and useful delivery updates on the day to make this a hassle free purchase - highly recommended!<br\/><br\/>Lesley<\/h5>",
+            "name": "",
             "rating": "5",
             "box_align": "middle-left",
             "text_alignment": "center"
