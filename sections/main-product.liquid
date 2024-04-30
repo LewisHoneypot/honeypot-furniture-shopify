@@ -1477,6 +1477,23 @@
               <div class="drawer__wrapper-details">
                 {%- if block.settings.content_type == 'description' -%}
                   {{ product.description }}
+                {%- elsif block.settings.content_type == 'pairs_well_with' -%}                
+                  {% assign recommended_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}
+
+                  {% for recommended in recommended_products %}
+                    <a href="{{ recommended.url }}">
+                      <div class="recommended-product">
+                        <div class="img-container">
+                          <img srcset="{{ recommended.images[0] | image_url }}" height="40" width="100"/>
+                        </div>
+                        <div class="info">
+                          <p class="title">{{ recommended.title }}</p>
+                          <p class="price">{{ recommended.price | money }}</p>
+                        </div>
+                      </div>
+                    </a>
+                  {% endfor %}
+
                 {%- else -%}
                   {{ block.settings.content }}
                   {{ block.settings.page.content }}
@@ -3243,6 +3260,10 @@
               "label": "t:sections.all.select_content.options__1"
             },
             {
+              "value": "pairs_well_with",
+              "label": "t:sections.all.select_content.options__4"
+            },
+            {
               "value": "custom",
               "label": "t:sections.all.select_content.options__2"
             }
@@ -4851,16 +4872,51 @@
 {% endschema %}
 
 {% stylesheet %}
-  .color-list {
-    display: flex;
-  }
-  .color-list a {
-    margin-right: 1rem;
-  }
-  .color-item {
-    aspect-ratio: 1;
-    height: 3.5rem;
-    width: 3.5rem;
-    display: block !important;
+  .page-product {
+    .color-list {
+      display: flex;
+    }
+    .color-list a {
+      margin-right: 1rem;
+    }
+    .color-item {
+      aspect-ratio: 1;
+      height: 3.5rem;
+      width: 3.5rem;
+      display: block !important;
+    }
+    .drawer__wrapper {
+      margin-top:50px;
+      .drawer__wrapper-details {
+        a, a:hover, a:visited {
+        text-decoration: none;
+        color: rgba(var(--color-foreground), 1)
+        }
+        .recommended-product {
+          display: flex;
+          /* justify-content: space-between; */
+          min-height: 100px;
+          .img-container {
+            min-width: 100px;
+            display: flex;
+            justify-content: center;
+            img {
+              object-fit: contain;
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .info {
+            margin: auto 0 auto 21px;
+            .price {
+              margin: auto;
+            }
+            .title {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
   }
 {% endstylesheet %}
