@@ -135,8 +135,8 @@
             <div class="message color-light subrte"></div>
           </cart-message>
         {%- endif -%}
-        <div id="previewCart-wrapper" class="previewCart-wrapper d-flex f-column j-c-between o-h h-100">
-          <div class="previewCart">
+        <div id="previewCart-wrapper" class="previewCart-wrapper d-flex f-column j-c-between h-100">
+          <div class="previewCart">            
             <div id="Overlay-Preview-Cart" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
             <cart-drawer-items class="f-1 overflow-y scroll-visible{% if cart == empty %} is-empty{% endif %}">
               <form
@@ -401,6 +401,7 @@
                 <div id="CartDrawer-CartErrors" role="alert"></div>
               </form>
             </cart-drawer-items>
+
             {%- if settings.show_quick_cart_popular_product and settings.quick_cart_popular_product_collection.products.size > 1 -%}
               {%- liquid
                   assign collection = settings.quick_cart_popular_product_collection.products
@@ -546,6 +547,12 @@
                 </ul>
               </div>
             {%- endif -%}
+          </div>
+      
+          <div class="previewCart-staingard cart__ctas">
+            <div class="title">Protect From Accidental Damage</div>
+            <p class="description">Nam at odio tincidunt ex ornare vehicula. Suspendisse nec lacus sed massa aliquet semper eu in arcu.</p>
+            <button type="submit" id="staingard-button" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"><span>Add Staingard</span></button>
           </div>
 
           <div class="cart__totals gradient{% if settings.cart_style == 'special' %} bg-transparent{% endif %}{% if cart == empty %} d-none{% endif %}">
@@ -806,3 +813,28 @@
     });
   });
 </script>
+
+<style>
+  .previewCart-staingard {
+    background-color: #f1e8e1;
+    margin: auto -24px 0 -24px;
+    .title {
+      padding: 10px;
+      margin: 15px;
+      font-weight: bold;
+    }
+    .description {
+      padding: 0 10px 10px 10px;
+      margin: 0 15px 15px 15px;
+    }
+    #staingard-button {
+      margin: 0 24px 24px 0;
+      float: right;
+      color: #fff;
+      max-width: 200px;
+    }
+    button:hover {
+      color: rgba(var(--button-color-text-hover), 1);
+    }
+  }
+</style>

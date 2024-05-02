@@ -1494,6 +1494,13 @@
                     </a>
                   {% endfor %}
 
+                  <p>Type: {{product.metafields.details.SeatingCapacity.type}}</p>
+                  <p>Value: {{product.metafields.details.SeatingCapacity.value}}</p>
+
+                  {%- for item in product.metafields.details -%}
+                    {{ item }} <br>
+                  {%- endfor %}
+                
                 {%- else -%}
                   {{ block.settings.content }}
                   {{ block.settings.page.content }}
