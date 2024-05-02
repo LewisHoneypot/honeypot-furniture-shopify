@@ -321,11 +321,71 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "heading_NqEWrM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>2. Set Time Limits<\/strong>",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_TGzn4e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It may be helpful to set yourself time limits per room so that you don’t get distracted and can stay on schedule. Just do whatever you can in the time limit and then move on once the time is up. Remember, doing something is better than doing nothing, even if you don’t finish.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "heading_Layp3d": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>3. Be Ruthless<\/strong>",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_dHUBrP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You will need to be ruthless when you declutter and organise your home. It will be tempting to get caught up in the emotions of your belongings, but this is why we need to take a more detached and practical approach. It might help to get five bags or boxes ready: keep, sell, bin, recycle, donate. Get rid of anything you don’t use, wear or love. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "heading_n9dHzj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>4. Organise Your Belongings<\/strong>",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_QADQ3y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Once you have decluttered as much as you can, you need to find a home for all the belongings that you want to keep. You want to avoid having piles of unnecessary items on your surfaces. This makes it harder to clean and clutter is not good for our mental health. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
         "heading_Qb9Gd9",
-        "text_YdiFer"
+        "text_YdiFer",
+        "heading_NqEWrM",
+        "text_TGzn4e",
+        "heading_Layp3d",
+        "text_dHUBrP",
+        "heading_n9dHzj",
+        "text_QADQ3y"
       ],
       "settings": {
         "section_width": "customized-width",
@@ -341,30 +401,6 @@
     },
     "rich_text_6jMw4D": {
       "type": "rich-text",
-      "blocks": {
-        "heading_ryfnPH": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>2. Set Time Limits<\/strong>",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_rzdPwT": {
-          "type": "text",
-          "settings": {
-            "text": "<p>It may be helpful to set yourself time limits per room so that you don’t get distracted and can stay on schedule. Just do whatever you can in the time limit and then move on once the time is up. Remember, doing something is better than doing nothing, even if you don’t finish.<\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_ryfnPH",
-        "text_rzdPwT"
-      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -379,30 +415,6 @@
     },
     "rich_text_DCxi7K": {
       "type": "rich-text",
-      "blocks": {
-        "heading_ApkV9c": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>4. A Corner Sofa as a Guest Bed <\/strong>",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_iy9F7N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A corner sofa with bed can be an excellent option if you don’t have a guest bedroom in your home. A living room that features a corner sofa bed can double up as a guest room when needed, without wasting space when it is not needed.  <\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_ApkV9c",
-        "text_iy9F7N"
-      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
