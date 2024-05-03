@@ -289,10 +289,10 @@
     "video_QM4Cg7": {
       "type": "video",
       "settings": {
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "",
         "description": "",
         "enable_autoplay": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
