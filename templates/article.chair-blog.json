@@ -437,13 +437,59 @@
         "padding_bottom_mobile": 20
       }
     },
+    "collage_BCkYzx": {
+      "type": "collage",
+      "blocks": {
+        "image_EheBkM": {
+          "type": "image",
+          "settings": {
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_EheBkM"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "rich_text_H4zP4r": {
       "type": "rich-text",
       "blocks": {
         "heading_eLVbhk": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Decluttering the Living Room<\/strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -452,7 +498,7 @@
         "text_xH6NMm": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>The living room is where we spend a lot of time gathered with family and friends. It is a communal area when we tend to share downtime and entertainment. So, it stands to reason that any room we wish to relax in should be neat, tidy, and clutter free. <\/p><p><\/p><p>Make considered decisions about what you wish to display in the living room and hide everything else away. Make use of furniture with lots of storage so that you can keep your belongings out of sight. Choose coffee tables, TV units, sideboards, bookcases and entertainment units with doors and drawers. If possible, choose sofas and footstools with hidden storage too. Most of our sofa beds come with built-in storage perfect for keeping bedding and other textiles nicely tucked away.  <\/p><p><\/p><p>For anything else that needs to be kept in the living room, make use of boxes, baskets, trunks and small storage boxes, tins or bowls. <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -484,6 +530,7 @@
     "rich_text_MCKYqC",
     "rich_text_6jMw4D",
     "rich_text_DCxi7K",
+    "collage_BCkYzx",
     "rich_text_H4zP4r"
   ]
 }
