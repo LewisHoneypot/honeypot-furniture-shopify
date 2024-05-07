@@ -375,6 +375,15 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "text_QBtLzd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Now that we have a strategy for decluttering in place, we’d like to share some of our decluttering tips and tricks with you for the rooms in your home.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
@@ -385,7 +394,8 @@
         "heading_Layp3d",
         "text_dHUBrP",
         "heading_n9dHzj",
-        "text_QADQ3y"
+        "text_QADQ3y",
+        "text_QBtLzd"
       ],
       "settings": {
         "section_width": "customized-width",
@@ -426,6 +436,44 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "rich_text_H4zP4r": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eLVbhk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_xH6NMm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_eLVbhk",
+        "text_xH6NMm"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
@@ -435,6 +483,7 @@
     "collection_with_product_mLU7wy",
     "rich_text_MCKYqC",
     "rich_text_6jMw4D",
-    "rich_text_DCxi7K"
+    "rich_text_DCxi7K",
+    "rich_text_H4zP4r"
   ]
 }
