@@ -340,6 +340,7 @@
       "block_order": [
         "image_L4QhHh"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop The Look",
         "text": "",
@@ -362,6 +363,7 @@
       "blocks": {
         "heading_z3PBJz": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Shop The Look",
             "heading_size": "default",
@@ -378,6 +380,7 @@
       "block_order": [
         "heading_z3PBJz"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -474,8 +477,8 @@
           "type": "heading",
           "settings": {
             "show_line_separator_top": false,
-            "heading": "Subscribe to our emails",
-            "heading_size": "default",
+            "heading": "Subscribe to our emails for exclusive offers, rewards and much more!",
+            "heading_size": "small",
             "heading_margin_bottom": 0,
             "description": "",
             "description_size": "medium",
@@ -514,7 +517,7 @@
         "text_alignment_mobile": "center",
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
-        "color_scheme": "background-2",
+        "color_scheme": "inverse",
         "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "#f6eee3",
