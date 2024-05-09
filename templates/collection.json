@@ -251,7 +251,7 @@
         "spacing_tablet": 20,
         "spacing_mobile": 8,
         "arrows_type": "lg",
-        "carousel_infinite_scroll": false,
+        "carousel_infinite_scroll": true,
         "enable_pagination_type": "all",
         "pagination_type": "progressbar",
         "padding_top": 0,
