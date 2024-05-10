@@ -206,7 +206,7 @@
         "text_TnieaV": {
           "type": "text",
           "settings": {
-            "text": "<p>If you've purchased a sofa, you can add 5-years accidental damage cover to your finance agreement from as little as a few pounds per month extra. <br\/><br\/>Our team will discuss this with you when confirming your delivery date. Alternatiovely you can contact us to get this added to your agreement or discuss any questions you may have. <\/p>",
+            "text": "<p>If you've purchased a sofa, you can add 5-years accidental damage cover to your finance agreement from as little as a few pounds per month extra. <br\/><br\/>Our team will discuss this with you when confirming your delivery date. Alternatiovely you can contact us to get this added to your agreement or discuss any questions you may have. <br\/><br\/>Office Hours: Mon-Fri 8AM - 8PM<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -215,8 +215,8 @@
           "type": "link",
           "settings": {
             "show_view_all": "link",
-            "link_label": "Link label",
-            "link": "",
+            "link_label": "Call Us",
+            "link": "tel:01476589446",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -232,7 +232,8 @@
         "type_style": "classic",
         "section_width": "page-width",
         "customize_width": 1800,
-        "color_scheme": "",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "image": "shopify:\/\/shop_images\/Staingard-1.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
