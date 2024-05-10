@@ -11,6 +11,38 @@
         "padding_bottom_mobile": 30
       }
     },
+    "image_with_text_fe9mUJ": {
+      "type": "image-with-text",
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Van-_1_-_1.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "rich_text_JPy3zj": {
       "type": "rich-text",
       "blocks": {
@@ -356,6 +388,7 @@
   },
   "order": [
     "main",
+    "image_with_text_fe9mUJ",
     "rich_text_JPy3zj",
     "custom_liquid_T7RRLB",
     "icon_with_text_ngUGpR",
