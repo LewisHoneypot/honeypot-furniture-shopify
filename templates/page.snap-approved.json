@@ -206,7 +206,7 @@
         "text_TnieaV": {
           "type": "text",
           "settings": {
-            "text": "<p>If you've purchased a sofa, you can add 5-years accidental damage cover to your finance agreement from as little as a few pounds per month extra. <br\/><br\/>Our team will discuss this with you when confirming your delivery date. Alternatiovely you can contact us to get this added to your agreement or discuss any questions you may have. <br\/><br\/>Office Hours: Mon-Fri 8AM - 8PM<\/p>",
+            "text": "<p>If you've purchased a sofa, you can add 5-years accidental damage cover to your finance agreement from as little as a few pounds per month extra. <br\/><br\/>Staingard includes:<br\/><br\/> - 5-year fabric upholstery care plan<\/p><p> - Covers accidental damage and staining.<\/p><p> - Genuine 'Clean, Repair or Replace' policy<\/p><p> - At home professional cleaning<br\/><br\/>Our team will discuss this with you when confirming your delivery date. Alternatively you can contact us and request this to be added to your agreement or discuss any questions you may have. <br\/><br\/>Office Hours: Mon-Fri 8AM - 8PM<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -233,7 +233,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify:\/\/shop_images\/Staingard-1.jpg",
+        "image": "shopify:\/\/shop_images\/Staingard-2.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -248,7 +248,7 @@
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "layout_mobile": "text_first_mobile",
+        "layout_mobile": "image_first_mobile",
         "mobile_content_alignment": "left",
         "image_animation": "zoom-in",
         "text_animation": "zoom-in",
