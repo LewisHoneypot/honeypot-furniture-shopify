@@ -195,7 +195,7 @@
         "text_6VHUwd": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Teddy Chair with Colbee Corner<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -221,6 +221,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-10T143852.998.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
