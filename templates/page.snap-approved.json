@@ -372,7 +372,7 @@
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "use_custom_color": true,
+        "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "#f6eee3",
         "gradient_background": "linear-gradient(320deg, rgba(249, 232, 249, 1) 16%, rgba(254, 246, 254, 1) 52%, rgba(237, 233, 226, 1) 87%)",
