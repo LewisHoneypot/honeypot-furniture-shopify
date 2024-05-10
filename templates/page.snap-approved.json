@@ -191,6 +191,72 @@
         "padding_bottom_mobile": 0
       }
     },
+    "image_with_text_XnpJGp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yf4L9C": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Have You Considered Staingard?<\/strong><\/h2>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_TnieaV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you've purchased a sofa, you can add 5-years accidental damage cover to your finance agreement from as little as a few pounds per month extra. <br\/><br\/>Our team will discuss this with you when confirming your delivery date. Alternatiovely you can contact us to get this added to your agreement or discuss any questions you may have. <\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_wc3jwT": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_yf4L9C",
+        "text_TnieaV",
+        "link_wc3jwT"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "text_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "zoom-in",
+        "text_animation": "zoom-in",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "collapsible_content_TwdAn7": {
       "type": "collapsible-content",
       "blocks": {
@@ -376,6 +442,7 @@
     "custom_liquid_tyJDCQ",
     "icon_with_text_KkzXCE",
     "custom_liquid_4FJRyL",
+    "image_with_text_XnpJGp",
     "collapsible_content_TwdAn7",
     "newsletter_UJLpNi",
     "featured_blog_pXkqkX"
