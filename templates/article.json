@@ -22,29 +22,6 @@
             "padding_bottom": 50
           }
         },
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62": {
-          "type": "lookbook",
-          "settings": {
-            "heading": "The upgrade your home needs",
-            "heading_size": "medium",
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T111059.593.png",
-            "primary_button_label": "SHOP CORNERS",
-            "primary_button_link": "shopify:\/\/collections",
-            "secondary_button_label": "",
-            "secondary_button_link": "shopify:\/\/collections\/all",
-            "lookbook_color_scheme": "",
-            "padding_top": 50,
-            "padding_bottom": 50
-          }
-        },
-        "textarea_cxtAp8": {
-          "type": "textarea",
-          "settings": {
-            "textarea": "Choosing a sofa for your home is a big decision. A sofa is probably the most used piece of furniture in your home other than the bed so it is a big investment and one that should get serious consideration. \n\nBefore deciding on a sofa for your home you should think about your budget, the available space and your lifestyle. These three considerations will help you narrow down the options and decide what is right for your home and your personal circumstances. \nIf space and budget allow, choosing a corner sofa is pretty much always a good idea.\n\nCorner sofas bring many benefits to your home that other kinds of seating just can’t compete with. So, let’s look at four excellent reasons to choose a corner sofa.",
-            "padding_top": 12,
-            "padding_bottom": 20
-          }
-        },
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e": {
           "type": "tag",
           "disabled": true,
@@ -133,6 +110,7 @@
           "disabled": true,
           "settings": {
             "heading": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-07T121503.493.png",
             "link": "",
             "padding_top": 5,
             "padding_bottom": 5
@@ -151,7 +129,23 @@
         "richtext_J4KGhy": {
           "type": "richtext",
           "settings": {
-            "richtext": "<h2><strong>1.<\/strong> <strong>Corner Sofas are Ideal for Relaxing and Entertaining<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p>",
+            "richtext": "<p>When it comes to choosing furniture for your home it can be easy to feel overwhelmed by all the options on offer. Do you want a recliner sofa, a sofa bed or a corner sofa? A leather sofa or a fabric sofa? Do you want an armchair, a swivel chair or an accent chair? And what even is the difference?<\/p><p>In this post, we will be examining the accent chair. Often confused with the armchair, the accent chair has the power to transform a room, so let's take a closer look.<\/p>",
+            "padding_top": 5,
+            "padding_bottom": 0
+          }
+        },
+        "richtext_FG7nV8": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><strong>What is an Accent Chair?<\/strong><\/p><p>An accent chair, also known as an occasional chair, is used to make a bold statement in a room through the use of colour, design, shape, and material.  They are used to add visual interest as they stand out from the rest of the furniture in the room.<\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p><strong>Accent Chair Vs Armchair: What's the Difference?<\/strong><\/p><p>An accent chair can be an armchair, but an armchair isn't necessarily an accent chair. So, any chair that has arms is an armchair. If it is decorative and makes a statement it is also an accent chair. If, however, an armchair matches the style and fabric of the sofa, it is not considered to be an accent chair. <\/p><p>Accent chairs come in many shapes and sizes. They could be tub chairs, club chairs, slipper chairs or wingback chairs. They could even be a chaise longue. The size and shape really aren't important and nor is the distinction.<\/p><p><strong>What are Accent Chairs Used for?<\/strong><\/p><p>As we said, accent chairs are often called occasional chairs. This is because they are often used occasionally. They provide extra seating when necessary and are mainly selected for their decorative value over their functionality. Often they are there to fill a space and to look nice but can be used when needed. <\/p><p>This doesn't have to be the case though. You may have an accent chair that is used just as much as the main furniture in the room, in which case, it pays to choose one that is comfortable and not just attractive. <\/p><p><strong>Do Accent Chairs Have to Match?<\/strong><\/p><p>The whole point of accent chairs is that they specifically don't match. So, let's say you have a <a href=\"https:\/\/honeypotfurniture.co.uk\/sofas\/\"><span style=\"text-decoration:underline\">grey sofa<\/span><\/a> and you find yourself wondering \"what colour accent chair goes with a grey sofa?\". Well, as grey is a neutral colour, practically all colours will work with grey but it may help to take the undertones of the grey sofa into consideration when choosing a colour for your chair. You may also want to decide whether you want a bold pop of colour like orange, yellow or teal, or whether you want to go for something more subdued such as dusky pink, <a href=\"https:\/\/honeypotfurniture.co.uk\/blog\/what-are-the-big-colour-trends-for-2022\/\"><span style=\"text-decoration:underline\">sage green<\/span><\/a> or baby blue. <\/p><p>Think about choosing a patterned fabric or at least one in a different material or finish so that it stands out against the grey sofa. <\/p><p>If you have more than one accent chair in the room, rest assured that there are no rules when it comes to pairing them. You can choose two the same if you want to minimise the impact or you could choose two completely different accent chairs if you'd rather go for a bigger statement. <\/p><p>The thing to bear in mind is that you should choose colours that enhance what is in the rest of the room. There should be a seamless flow between your accent chair, other furniture in the room and the wall colour for example. <\/p><p><\/p><p><\/p><p><\/p><p><\/p><p><\/p>",
+            "padding_top": 5,
+            "padding_bottom": 0
+          }
+        },
+        "richtext_extPWY": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><strong>How to Position Accent Chairs<\/strong><\/p><p>Knowing where to place your accent chair can make or break the room layout but there are plenty of options. First of all, decide how many chairs you need and what they will be used for. This will dictate where you place them. <\/p><p>For example, if you intend to use it in the living room for reading, maybe find a quiet corner near a window so you can benefit from natural light and be out of the main thoroughfare in the room. If you will be sitting in it to watch TV, position it at a good viewing angle so you can watch the action. If it will be used for conversing and socialising, maybe position it perpendicular to the sofa, or opposite the coffee table so that you and your guests can easily interact. <\/p><p>Of course, accent chairs aren't limited to the living room. If you are using it in the bedroom, you may want to place it in the corner out of the way or maybe next to a window. If you want to place one in a nursery, consider putting it close to the cot or the child's bed. This makes it easier to move sleeping babies into the cot or to sit in to read bedtime stories. If you have space, you may want to place an accent chair in the hallway to be used for putting on and removing shoes. Just make sure people don't use it as a dumping ground. <\/p><p><strong>How to Choose an Accent Chair<\/strong><\/p><p>When it comes to choosing the perfect accent chair for your home these are the things you should consider:<\/p><ul><li><strong>What will you use it for?<\/strong><\/li><li><strong>How many accent chairs do you need?<\/strong><\/li><li><strong>Where will you position them?<\/strong><\/li><li><strong>Does the colour of your chosen accent chairs work with the rest of the room?<\/strong><\/li><li><strong>Will you go for patterned fabric, plain or textured?<\/strong><\/li><\/ul><p><strong>Why Do You Need an Accent Chair?<\/strong><\/p><p>There are many reasons you may decide to buy an accent chair. The reason may be practical in that you require additional seating in the room. But usually, the reason you need an accent chair is to bring some visual interest into the room and make a design statement. <\/p><p>If you’ve bought an accent chair from Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive.<\/p>",
             "padding_top": 5,
             "padding_bottom": 0
           }
@@ -169,8 +163,6 @@
       "block_order": [
         "title",
         "featured_image",
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62",
-        "textarea_cxtAp8",
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e",
         "dbb1046b-8608-4216-9c87-234fbf663d9b",
         "6ac17fb1-5639-4998-b799-b1b94a51450b",
@@ -182,6 +174,8 @@
         "dfb4131b-663f-4f55-8b18-d7a8c8da99e0",
         "c2d92a77-6742-443f-ab49-4f4531f241dd",
         "richtext_J4KGhy",
+        "richtext_FG7nV8",
+        "richtext_extPWY",
         "richtext_xYeKhn"
       ],
       "settings": {
@@ -195,223 +189,23 @@
         "padding_bottom_mobile": 0
       }
     },
-    "visual_hightlight_HDMgc8": {
-      "type": "visual-hightlight",
-      "settings": {
-        "slide_height": 70,
-        "color_scheme": "",
-        "carousel_infinite_scroll": true,
-        "enable_autoplay": false,
-        "change_slides_speed": 3,
-        "enable_pagination_type": "all",
-        "pagination_type": "dots",
-        "image_behavior": "none",
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "6eb9b3c8-7aad-4657-8a17-1511a91315cf": {
-      "type": "featured-collection",
-      "blocks": {
-        "22324957-4cd0-4be5-bc28-108a2b3549a9": {
-          "type": "heading",
-          "settings": {
-            "heading": "You may also like",
-            "heading_size": "default",
-            "label_view_all": "",
-            "show_view_all": "button",
-            "text_view_all": "ALL SHOP",
-            "text_view_all_size": "x-large",
-            "text_alignment": "left",
-            "padding_top": 0,
-            "padding_bottom": 30
-          }
-        }
-      },
-      "block_order": [
-        "22324957-4cd0-4be5-bc28-108a2b3549a9"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "show_line_separator_top": false,
-        "show_line_separator_bottom": false,
-        "collection": "discover-the-essentials",
-        "product_list": [
-
-        ],
-        "products_to_show": 3,
-        "carousel_number": 3,
-        "carousel_number_tablet": 2,
-        "carousel_number_mobile": "2",
-        "spacing_desktop": 50,
-        "spacing_tablet": 20,
-        "spacing_mobile": 10,
-        "arrows_type": "md",
-        "carousel_infinite_scroll": false,
-        "enable_pagination_type": "xs",
-        "pagination_type": "progressbar",
-        "color_scheme": "",
-        "use_background_gradient": false,
-        "colors_background_special": "",
-        "gradient_background_special": "linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 100,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 50
-      }
-    },
-    "collection_with_product_mLU7wy": {
-      "type": "collection-with-product",
-      "blocks": {
-        "slide_TR6AwY": {
-          "type": "slide",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "button_transparent": "transparent",
-            "button_label": "Button label",
-            "button_link": "",
-            "text_alignment": "center",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "slide_TR6AwY"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "full-width",
-        "customize_width": 1050,
-        "heading_font": "font-heading",
-        "heading_size": "default",
-        "slide_height": 70,
-        "color_scheme_product": "",
-        "color_scheme": "",
-        "change_slides_speed": 5,
-        "change_slides_duration": 1,
-        "arrows_type": "all",
-        "carousel_infinite_scroll": true,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "image_with_text_DRcAqw": {
+    "image_with_text_NLjHi4": {
       "type": "image-with-text",
       "blocks": {
-        "text_8xTi8N": {
-          "type": "text",
+        "heading_6LgdDH": {
+          "type": "heading",
           "settings": {
-            "text": "<p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p>",
+            "heading": "<p>Image with text<\/p>",
+            "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
           }
         },
-        "link_MGgtMN": {
+        "link_Gmh6pk": {
           "type": "link",
           "settings": {
             "show_view_all": "link",
-            "link_label": "Shop All Corners",
-            "link": "",
-            "button_transparent": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_8xTi8N",
-        "link_MGgtMN"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/BANNER_3_mob_for_ben.webp",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_MCKYqC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Qb9Gd9": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>2. Corner Sofas Create and Save Space<\/strong>",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_YdiFer": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Due to their angular shape, corner sofas can easily be pushed back into the corner of the room. This creates more floor space in the centre of the room which gives the impression that the room is larger and more spacious. Simply choose which corner it will sit in and then choose either a left-handed or right-handed corner sofa. <\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_Qb9Gd9",
-        "text_YdiFer"
-      ],
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1500,
-        "show_line_separator": false,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_MVqykj": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_QAhtbX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A corner sofa will take up less floor area than two sofas and an armchair. Because corner sofas can often accommodate more people, they can be used without the need for any other seating in smaller rooms and so save space. In this way, a corner sofa is perfect for a small living room.<\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_qKLHHA": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Space Saving Corners",
+            "link_label": "Link label",
             "link": "",
             "button_transparent": "transparent",
             "padding_top": 10,
@@ -420,210 +214,19 @@
         }
       },
       "block_order": [
-        "text_QAhtbX",
-        "link_qKLHHA"
+        "heading_6LgdDH",
+        "link_Gmh6pk"
       ],
       "settings": {
         "type_style": "classic",
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_6jMw4D": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ryfnPH": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>3. Corner Sofas Create Zones in a Room<\/strong>",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_rzdPwT": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Because of their versatility, corner sofas can be placed almost anywhere in your living room. Whilst they are often pushed back into a corner or against a wall, they don’t have to be. In fact, if the room is large enough a corner sofa can be positioned further into the room. <\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_ryfnPH",
-        "text_rzdPwT"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "show_line_separator": false,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_46mhg6": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_YcFAy9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>When used in this way, a corner sofa can actually be used to zone a room. It can create a visual division in the room separating different areas. This works particularly well in open plan spaces where the living room and dining room are essentially one space. A corner sofa can delineate where one space ends and another space starts. <\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_MwREMW": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Trendy Corners",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_YcFAy9",
-        "link_MwREMW"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T105113.962.png",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_DCxi7K": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ApkV9c": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>4. A Corner Sofa as a Guest Bed <\/strong>",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_iy9F7N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A corner sofa with bed can be an excellent option if you don’t have a guest bedroom in your home. A living room that features a corner sofa bed can double up as a guest room when needed, without wasting space when it is not needed.  <\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_ApkV9c",
-        "text_iy9F7N"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "show_line_separator": false,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_j9QUHJ": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_aCTEz6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A corner sofa with pullout bed can quickly be transformed into a comfortable guest bed for those planned or impromptu overnight stays by friends and family. Better still is a corner sofa bed with storage so that all the spare bedding can be kept to hand but concealed when not in use. <\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_WkxtpL": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Corner Sofabeds",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_aCTEz6",
-        "link_WkxtpL"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T105445.387.png",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
+        "colors_heading": "#FFFFFF",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -646,15 +249,6 @@
   },
   "order": [
     "main",
-    "visual_hightlight_HDMgc8",
-    "6eb9b3c8-7aad-4657-8a17-1511a91315cf",
-    "collection_with_product_mLU7wy",
-    "image_with_text_DRcAqw",
-    "rich_text_MCKYqC",
-    "image_with_text_MVqykj",
-    "rich_text_6jMw4D",
-    "image_with_text_46mhg6",
-    "rich_text_DCxi7K",
-    "image_with_text_j9QUHJ"
+    "image_with_text_NLjHi4"
   ]
 }
