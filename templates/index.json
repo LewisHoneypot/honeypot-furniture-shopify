@@ -403,7 +403,7 @@
         "collection_7KV883": {
           "type": "collection",
           "settings": {
-            "collection": "bundles"
+            "collection": "bundles-1"
           }
         }
       },
@@ -724,7 +724,7 @@
         "colors_background_content": "",
         "color_scheme": "scheme-89b6d850-7344-4b60-8a06-5b847e8e19a0",
         "use_custom_color": false,
-        "colors_text": "#FFFFFF",
+        "colors_text": "#ffffff",
         "colors_background": "#006eac",
         "gradient_background": "",
         "padding_top": 30,
