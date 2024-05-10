@@ -346,7 +346,7 @@
           "settings": {
             "heading": "PayPal",
             "content_type": "custom",
-            "content": "<p>With Pay in 3, there's no interest, no late fees or setup fees. Your purchases are covered by the same security and Buyer Protection you already enjoy from PayPal.<br\/><br\/>Find out more. <\/p>",
+            "content": "<p>With Pay in 3, there's no interest, no late fees or setup fees. Your purchases are covered by the same security and Buyer Protection you already enjoy from PayPal.<\/p>",
             "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
