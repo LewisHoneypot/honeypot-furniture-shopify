@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "af56dcf8-8a72-482f-b12b-b4ef33768eeb": {
+      "type": "map",
+      "settings": {
+        "map_address": "Honeypot Furniture",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 4,
+        "padding_bottom": 36,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "d1c5ec7d-2c7a-4649-a40a-563193a66463": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Please Do Get In Touch!<\/p>",
+            "show_line_separator": true,
+            "padding_top": 0,
+            "padding_bottom": 25
+          }
+        },
+        "13f481e9-b58f-4365-9135-6e1c09456cd0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We'd love to hear from you. Please use the form to send us your message or ideaas. Or simply pop in for a cup of fresh tea and a cookie:<\/p>",
+            "padding_top": 32,
+            "padding_bottom": 10
+          }
+        },
+        "72c6451a-da68-49ed-8562-cb9b3936a098": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Get in touch",
+            "primary_button_link": "\/",
+            "primary_button_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "secondary_button_color_scheme": "",
+            "padding_top": 17,
+            "padding_bottom": 22
+          }
+        },
+        "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Opening hours:<\/strong><\/p><p>Monday to Saturday: 9am - 10pm<\/p><p>Sundays: 10am - 6pm<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "7eb523e0-fbfa-4d9b-90d1-038ce283339f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Email: example@example.com<\/p><p>Call us: (012)-345-6789<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "d01a6557-5884-4263-a2ef-8a5cb59815aa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Headquarter:<\/strong><\/p><p>1669 Ave Dermentum, Onsectetur Sagittis,<\/p><p>CA 880986, United State<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "d1c5ec7d-2c7a-4649-a40a-563193a66463",
+        "13f481e9-b58f-4365-9135-6e1c09456cd0",
+        "72c6451a-da68-49ed-8562-cb9b3936a098",
+        "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41",
+        "7eb523e0-fbfa-4d9b-90d1-038ce283339f",
+        "d01a6557-5884-4263-a2ef-8a5cb59815aa"
+      ],
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "heading": "",
+        "color_scheme": "accent-2",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "af56dcf8-8a72-482f-b12b-b4ef33768eeb",
+    "main",
+    "form"
+  ]
+}
