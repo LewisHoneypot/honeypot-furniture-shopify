@@ -1,0 +1,427 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "e6b84b43-97fe-4098-9357-8efb9ba52080": {
+          "type": "collections",
+          "settings": {
+            "heading": "Categories",
+            "link_list": "",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "bfaa660b-8966-45db-8f47-9a67a2cda4ba": {
+          "type": "posts",
+          "settings": {
+            "heading": "Recent Articles",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "e2b74895-e2ec-490a-914d-8634bfff9169": {
+          "type": "products",
+          "settings": {
+            "heading": "Best Sellers",
+            "collection": "new-arrivals",
+            "product_list_limit": 6,
+            "products_per_page": 1,
+            "image_ratio": "square",
+            "show_swatch": false,
+            "padding_top": 14,
+            "padding_bottom": 10
+          }
+        },
+        "448a8077-c0df-4fd4-a54a-4799279db8cb": {
+          "type": "text",
+          "settings": {
+            "heading": "Custom Block",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "padding_top": 16,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "e6b84b43-97fe-4098-9357-8efb9ba52080",
+        "bfaa660b-8966-45db-8f47-9a67a2cda4ba",
+        "e2b74895-e2ec-490a-914d-8634bfff9169",
+        "448a8077-c0df-4fd4-a54a-4799279db8cb"
+      ],
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1600,
+        "type_style": "special",
+        "articles_per_page": 2,
+        "show_line_separator": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpts": false,
+        "button_transparent": "default",
+        "sidebar_type": "popup",
+        "color_scheme": "",
+        "padding_top": 15,
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "90e30edb-d999-4112-99f2-c819a560023e": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1600,
+        "padding_container_full_w": 0,
+        "show_line_separator": true,
+        "style_layout": "enable_grid",
+        "icon": "none",
+        "heading": "Featured",
+        "heading_size": "default",
+        "show_view_all": "none",
+        "button_label": "",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "blog-demo-3",
+        "post_limit": 4,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "landscape",
+        "show_content": true,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": true,
+        "show_button": false,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 2,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 1,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "ee9acfaf-4628-41f8-95be-902e78f4c4bb": {
+      "type": "featured-blog-post",
+      "disabled": true,
+      "settings": {
+        "show_line_separator": true,
+        "article": "blog-new\/liquid-gold-the-transformative-benefits-of-oil-serums-in-skincare-regimens",
+        "image_ratio": "adapt",
+        "show_date": true,
+        "show_author": true,
+        "color_scheme": "",
+        "heading": "Related product",
+        "collection": "related-blog-posts",
+        "product_color_scheme": "",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar_vertical",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "57970167-ee8a-406a-ad95-e7939540df43": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1600,
+        "padding_container_full_w": 0,
+        "show_line_separator": true,
+        "style_layout": "enable_list",
+        "icon": "none",
+        "heading": "Special Offer",
+        "heading_size": "default",
+        "show_view_all": "button",
+        "button_label": "LOAD MORE",
+        "heading_alignment": "left",
+        "heading_margin_bottom": 60,
+        "blog": "blog-demo-2",
+        "post_limit": 3,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_content": true,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": true,
+        "show_button": false,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 3,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 1,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "all-article-tags": {
+      "type": "all-article-tags",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1600,
+        "padding_top": 42,
+        "padding_bottom": 100
+      }
+    },
+    "featured_blog_Ekhzdj": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1800,
+        "padding_container_full_w": 0,
+        "show_line_separator": false,
+        "style_layout": "enable_carousel",
+        "icon": "none",
+        "heading": "All Blog Posts",
+        "heading_size": "default",
+        "show_view_all": "none",
+        "button_label": "Button label",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "4-excellent-reasons-to-choose-a-corner-sofa",
+        "post_limit": 3,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_content": false,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": false,
+        "show_button": true,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 3,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 2,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "fade-up",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_9iBKDN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CzaBqV": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Design Sheppard",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_36FpBA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stacey Sheppard brings her keen eye for design and deep industry insights to her guest blog posts. With a focus on interior design trends, tips, and expert advice, Stacey offers readers fresh perspectives on creating stylish and functional spaces. Her approachable writing style and extensive knowledge make her posts a must-read for anyone looking to elevate their home. Dive into Stacey's articles for inspiration and practical design solutions.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzaBqV",
+        "text_36FpBA"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "featured_blog_Gx3JKd": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1800,
+        "padding_container_full_w": 0,
+        "show_line_separator": false,
+        "style_layout": "enable_carousel",
+        "icon": "none",
+        "heading": "",
+        "heading_size": "default",
+        "show_view_all": "none",
+        "button_label": "Button label",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "news",
+        "post_limit": 3,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_content": false,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": false,
+        "show_button": true,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 3,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 2,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "fade-up",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "newsletter_rxaBWF": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_XNJpUn": {
+          "type": "heading",
+          "settings": {
+            "show_line_separator_top": false,
+            "heading": "Subscribe to our emails",
+            "heading_size": "default",
+            "heading_margin_bottom": 0,
+            "description": "",
+            "description_size": "medium",
+            "text_margin_bottom": 0,
+            "text_link": "",
+            "primary_text_link": "",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "email_form_WK9964": {
+          "type": "email_form",
+          "settings": {
+            "description": "",
+            "description_size": "medium",
+            "text": "Sign up for our newsletter",
+            "button_transparent": "transparent",
+            "show_email": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_XNJpUn",
+        "email_form_WK9964"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "full_width": true,
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "use_custom_colors_background_content": true,
+        "colors_background_content": "",
+        "color_scheme": "",
+        "use_custom_color": true,
+        "colors_text": "#424242",
+        "colors_background": "#f6eee3",
+        "gradient_background": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "90e30edb-d999-4112-99f2-c819a560023e",
+    "ee9acfaf-4628-41f8-95be-902e78f4c4bb",
+    "57970167-ee8a-406a-ad95-e7939540df43",
+    "all-article-tags",
+    "featured_blog_Ekhzdj",
+    "rich_text_9iBKDN",
+    "featured_blog_Gx3JKd",
+    "newsletter_rxaBWF"
+  ]
+}
