@@ -148,14 +148,6 @@
             "padding_bottom": 0
           }
         },
-        "richtext_J4KGhy": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<h1><strong>Tips to Declutter and Organise Your Home<\/strong><\/h1>",
-            "padding_top": 5,
-            "padding_bottom": 0
-          }
-        },
         "richtext_xYeKhn": {
           "type": "richtext",
           "disabled": true,
@@ -181,7 +173,6 @@
         "e578b579-5e2e-4751-91c7-d07c8906fdd6",
         "dfb4131b-663f-4f55-8b18-d7a8c8da99e0",
         "c2d92a77-6742-443f-ab49-4f4531f241dd",
-        "richtext_J4KGhy",
         "richtext_xYeKhn"
       ],
       "settings": {
@@ -304,6 +295,15 @@
     "rich_text_MCKYqC": {
       "type": "rich-text",
       "blocks": {
+        "heading_ymhUTp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Tips to Declutter and Organise Your Home<\/strong>",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
         "heading_Qb9Gd9": {
           "type": "heading",
           "settings": {
@@ -387,6 +387,7 @@
         }
       },
       "block_order": [
+        "heading_ymhUTp",
         "heading_Qb9Gd9",
         "text_YdiFer",
         "heading_NqEWrM",
