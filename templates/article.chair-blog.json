@@ -22,21 +22,6 @@
             "padding_bottom": 50
           }
         },
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62": {
-          "type": "lookbook",
-          "settings": {
-            "heading": "Sample lookbook block",
-            "heading_size": "default",
-            "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-            "primary_button_label": "MAKEUP COLLECTION",
-            "primary_button_link": "shopify:\/\/collections",
-            "secondary_button_label": "SKINCARE COLLECTION",
-            "secondary_button_link": "shopify:\/\/collections\/all",
-            "lookbook_color_scheme": "",
-            "padding_top": 50,
-            "padding_bottom": 50
-          }
-        },
         "textarea_cxtAp8": {
           "type": "textarea",
           "settings": {
@@ -161,7 +146,6 @@
       "block_order": [
         "title",
         "featured_image",
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62",
         "textarea_cxtAp8",
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e",
         "dbb1046b-8608-4216-9c87-234fbf663d9b",
