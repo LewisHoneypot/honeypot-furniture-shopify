@@ -207,10 +207,70 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "text_AxW9Ln": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Home Bar Units<\/strong><\/p><p>Home bar units can be the height of luxury so these are at the top of our list of home bar ideas. Nestled discreetly into a corner of your living or dining room, these unassuming pieces of furniture are a great option if you want to hide your alcohol away behind closed doors. With ample storage space for all your spirits and your home bar accessories, you can keep everything you need for entertaining close at hand, but safely out of view. <\/p><p>With so many options to choose from you can pick home bar furniture that blends in with the rest of your home or you can choose to make a stunning design statement by opting for something that stands out. Whether you’re looking for something more minimalist in Scandi-style light wood, or something more modern and opulent in dark wood with brass accents, there is a style to suit any taste and aesthetic.  <br\/><br\/><\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_qkbLqp": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Home Bar Units<\/strong><\/p><p>Home bar units can be the height of luxury so these are at the top of our list of home bar ideas. Nestled discreetly into a corner of your living or dining room, these unassuming pieces of furniture are a great option if you want to hide your alcohol away behind closed doors. With ample storage space for all your spirits and your home bar accessories, you can keep everything you need for entertaining close at hand, but safely out of view. <\/p><p><\/p><p>With so many options to choose from you can pick home bar furniture that blends in with the rest of your home or you can choose to make a stunning design statement by opting for something that stands out. Whether you’re looking for something more minimalist in Scandi-style light wood, or something more modern and opulent in dark wood with brass accents, there is a style to suit any taste and aesthetic.  <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_xPWJ7J": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Home Bar Console<\/strong><\/p><p>A console bar can be a great option if you decide you want somewhere specific to seat your guests while you entertain in your home bar. They are narrow so don’t take up too much floor space and are taller than the average table so you can easily slide bar stools underneath. <\/p><p>Most console bars have tiered storage or shelving so that you can house all your home bar accessories whilst still keeping them easily accessible. Some also have built-in racks for hanging wine glasses.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_AJANff": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Bar Cart Trolley<\/strong><\/p><p>A bar cart trolley is extremely flexible as it is on castors and can therefore be wheeled around if you need move it around or change its position. It can be kept out of the way when not in use and then wheeled out whenever you have people round to entertain.<\/p><p>They are often a lot smaller than other home bar ideas so can be used even in homes where space is at a premium. Some are similar in size to an average side table so you really don’t need to have a palatial home to have your own bar. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_g97bcw": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Cocktail Bar<\/strong><\/p><p>If you are really looking to channel your favourite cocktail lounge, then a home cocktail bar is the perfect option for you. Stock it up with spirits, mixers, bar tools and glassware and you’ll be right on track to perfect your mixology and bottle flipping skills. Who knows, maybe you’ll even invent your own signature cocktail to enjoy with your guests. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_3RAGy7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Outdoor Bar<\/strong><\/p><p>If an indoor bar isn’t for you, why not <a href=\"https:\/\/honeypotfurniture.co.uk\/blog\/how-to-create-an-outdoor-entertaining-space-in-8-simple-steps\/\"><span style=\"text-decoration:underline\">move your entertaining out to the garden<\/span><\/a> and take full advantage of any nice weather and the benefits of surrounding yourself with nature.  A bar table and bar stools will provide a perfect seating area for sipping on your favourite beverages this summer whilst spending time with friends and family.<\/p><p>So, there you have it, we’ve shared five different home bar ideas to help you entertain in style. What do you think? Did you jump on the home bar bandwagon over the past few years and if not, would you consider it now?<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
-        "text_67qjMj"
+        "text_67qjMj",
+        "text_AxW9Ln",
+        "text_qkbLqp",
+        "text_xPWJ7J",
+        "text_AJANff",
+        "text_g97bcw",
+        "text_3RAGy7"
       ],
       "settings": {
         "section_width": "page-width",
