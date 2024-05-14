@@ -126,22 +126,6 @@
             "padding_bottom": 0
           }
         },
-        "richtext_J4KGhy": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<p>If the average lifespan of a UK adult is roughly 81 years, according to <a href=\"https:\/\/www.ons.gov.uk\/peoplepopulationandcommunity\/birthsdeathsandmarriages\/lifeexpectancies\/bulletins\/nationallifetablesunitedkingdom\/2018to2020\"><span style=\"text-decoration:underline\">ONS figures<\/span><\/a> published in 2021, and healthy adults need approximately 8 hours of sleep a night, that would mean that we spend at least 236,520 hours or 27 years of our lives asleep. And that is not including all the time that we spend trying to fall asleep. <\/p><p>Given that most of us spend the majority of our sleeping hours in the bedroom, it’s vitally important that this room is conducive to a good night’s sleep. Studies have shown that our sleeping environment has a meaningful impact on our sleeping patterns and the quality of our sleep is a major factor for health and wellbeing. <\/p><p>So how can we ensure that we create a bedroom that promotes healthy sleep habits? Well, there are a number of factors that can influence the sleeping environment and the quality of sleep that we get. Let’s take a look at some of those factors.<\/p>",
-            "padding_top": 5,
-            "padding_bottom": 0
-          }
-        },
-        "richtext_FG7nV8": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<p><strong>Bedroom Design<\/strong><\/p><p>A bedroom should be a sanctuary, somewhere that feels calm and relaxing and restful. This means that we want to create a space that is tidy, comfortable and uncluttered in order to promote healthy sleep habits. A 2015 study by St. Lawrence University found that a cluttered bedroom leads to poor sleep and increased anxiety and people with a messy bedroom also find it harder to fall asleep in the first place. <\/p><p>It is also advisable to choose <a href=\"https:\/\/honeypotfurniture.co.uk\/blog\/3-of-the-best-colours-for-bedrooms\/\"><span style=\"text-decoration:underline\">colours for the bedroom<\/span><\/a> that foster a sense of calm and that promote sleep. Blue, green and pink are some of our favourite colours for bedrooms and according to colour psychology, these colours tend to elicit calming physical responses in the body making us feel more at ease at bedtime. <\/p><p><strong>Temperature<\/strong><\/p><p>The temperature of our bedroom can have serious implications for the quality of our sleep. As we approach bedtime, our body temperature naturally starts to drop in preparation for sleep and this is what kickstarts the production of melatonin, a natural hormone that helps to control our sleep cycle. <\/p><p>If the bedroom is too hot, we can become restless. If it’s too cold, we will struggle to fall asleep. Ideally the bedroom should be somewhere around 16-18°C to promote a good night’s sleep. <\/p><p><strong>Lighting<\/strong><\/p><p>Our melatonin levels are also affected by light. As it starts to get dark our bodies release melatonin to relax the body and help us drift off to sleep. So ideally, we need our bedrooms to be as dark as possible to promote the best conditions for sleep. Consider installing blackout blinds to block out as much natural light and light pollution as possible. <\/p><p>We also need to be aware of the effects of the blue light that is emitted by electronic devices such as TVs, tablets and mobile phones. The blue light suppresses melatonin levels and therefore makes it much harder for us to fall asleep. Using electronic devices before bed can also lead to disturbed sleep as the content that we tend to consume on them can be too engaging and doesn’t allow us to switch off and prepare for sleep.<\/p><p>Ideally, we should ban electronic devices from the bedroom entirely and at the very least switch them off an hour before we plan to sleep. Many adults struggle to implement healthy sleep habits when it comes to our electronic devices.<\/p><p><strong>Noise<\/strong><\/p><p>Most of us need a quiet bedroom to sleep well. A noisy environment can make it extremely difficult to fall asleep and stay asleep particularly in the lighter stages of sleep. If we are woken up suddenly whilst in deep REM sleep, this can lead to sleep inertia which is the feeling of incomplete awakening and grogginess. This can reduce our ability to perform even simple tasks.<\/p><p>Noise-interrupted sleep can limit our motor skills, our creativity, impair our judgment, and even affect our memory. So, it is important to ensure a quiet environment for sleep.<\/p><p><strong>Bed and Bedding<\/strong><\/p><p>For the vast majority of us, the <a href=\"https:\/\/honeypotfurniture.co.uk\/beds\/\"><span style=\"text-decoration:underline\">bed<\/span><\/a> is by far the most significant element of a good night’s sleep. An uncomfortable bed and <a href=\"https:\/\/honeypotfurniture.co.uk\/beds\/mattresses\/\"><span style=\"text-decoration:underline\">mattress<\/span><\/a> won’t promote deep or effective sleep and will leave us waking tired and achy. <\/p><p><a href=\"https:\/\/bedadvice.co.uk\/bed-talk\/how-often-should-you-change-your-mattress\/#:~:text=Quite%20often%20a%20mattress%20has,always%20be%20the%20ideal%20time.\"><span style=\"text-decoration:underline\">The National Bed Federation recommends replacing your mattress every seven to eight years.<\/span><\/a> During this time our mattress will undergo 20,000 hours of wear and tear and will no longer be able to support us and our sleep needs.<\/p><p>Pillows are also important to our quality of sleep. Poor pillow support can lead to neck pain, stiff necks and persistent headaches. We need to choose a good pillow that can support our head in the correct alignment.<\/p><p><a href=\"https:\/\/honeypotfurniture.co.uk\/bedroom\/bedding\/\"><span style=\"text-decoration:underline\">Bedding<\/span><\/a> should also be a considered choice. It can affect our body temperature during sleep as well as our comfort levels, so it is important to make sure we get this right. Both temperature and comfort are personal preferences so we should work out what bedding provides us with the best night sleep. <\/p><p>A bedroom that promotes healthy sleep habits is vital if we are to ensure that we wake well rested and ready for our day ahead. Poor quality sleep can leave us feeling tired and lethargic, but it can also cause more serious health problems from headaches, poor memory and difficulty focusing, to anxiety, depression, obesity, diabetes and even cardiovascular disease.<\/p><p>If you have created a bedroom using Honeypot Furniture products, please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive so we can see.<\/p>",
-            "padding_top": 5,
-            "padding_bottom": 19
-          }
-        },
         "richtext_xYeKhn": {
           "type": "richtext",
           "disabled": true,
@@ -165,8 +149,6 @@
         "e578b579-5e2e-4751-91c7-d07c8906fdd6",
         "dfb4131b-663f-4f55-8b18-d7a8c8da99e0",
         "c2d92a77-6742-443f-ab49-4f4531f241dd",
-        "richtext_J4KGhy",
-        "richtext_FG7nV8",
         "richtext_xYeKhn"
       ],
       "settings": {
@@ -206,7 +188,7 @@
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": false,
-        "color_autoplay": "#FFFFFF",
+        "color_autoplay": "#ffffff",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
@@ -214,51 +196,32 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "image_with_text_FKcFTc": {
-      "type": "image-with-text",
+    "rich_text_VQxCPE": {
+      "type": "rich-text",
       "blocks": {
-        "link_e7HVtw": {
-          "type": "link",
+        "text_67qjMj": {
+          "type": "text",
           "settings": {
-            "show_view_all": "link",
-            "link_label": "Link label",
-            "link": "",
-            "button_transparent": "transparent",
+            "text": "<p>When the global pandemic first shut the UK down and workers across the country were asked to work from home where possible, many of us found ourselves unprepared for such a situation. People who normally commuted to work in an office were suddenly having to set up shop at home, with many ill equipped to do so. <\/p><p>Those who were lucky enough to have a space they could use as a home office had to kit it out with all the necessary equipment they needed for the job. But for a lot of people, finding an adequate and appropriate place to work wasn’t quite so easy.<\/p><p>All over the UK, people working from the kitchen table, the dining room, the bedroom or even the living room. With no dedicate space to call their own, away from potential distractions, working from home suddenly became a monumental challenge. <\/p><p>A year and a half later and the world of work has undergone a drastic transformation. As government restrictions are lifted and many head back to the office, talk of a hybrid model means that we may see many workers choose to continue working from home for at least part of the week. <\/p><p>If this is the case, it’s time that we take a cold, hard look at our home office set up and make sure that it is geared up to deal with the demands of working from home. To thrive at home, we need to make sure that we have access to everything that we need to be comfortable, and most importantly, productive. <\/p><p>But we also have the opportunity to create a space that goes above and beyond the traditional office. Most corporate offices are less than inspiring and do little to help improve our mental health and wellbeing. We have a real opportunity here to create a workspace that not only looks good and feels good, but that helps us to maximise productivity in our home office. <\/p><p><\/p><p><\/p><p>Let’s have a look at 7 top tips for maximising productivity in your home office. <\/p><ol><li><strong>Create a dedicated workspace<\/strong><\/li><\/ol><p>If possible, carve out space that will be used exclusively for your work. The last thing you want to be doing is moving all your stuff off the kitchen table every time it needs to be used for meals. Having a multi-purpose space is not efficient and will be very disruptive. <br\/><br\/>Understandably, not everyone has this luxury but there are some really compact, space-saving desks on the market now that can be wall hung, balanced against the wall or folded away. So, if space is a problem, you have options. <\/p><ul><li><strong>Create boundaries between work and home life<br\/><\/strong>One of the main issues that people have reported when working from home is the lack of boundaries between work life and home life. Being able to close the door to your home office and walk away is ideal. However, it’s not so easy when there is no differentiation in the place where these activities take place. <br\/><\/li><\/ul><p>It is important to make a clear distinction between where you live and the space that you work in. You should consider dividing the space and creating a distinct work zone that can be closed off and hidden away once you clock off from work. Screens and room dividers will come in handy here as will foldaway desks. <\/p><p>The old saying <em>out of sight, out of mind<\/em> really does ring true here. You will be better able to switch off after a long day of work if you can no longer see your desk. <\/p><ul><li><strong>Consider the Colour<br\/><\/strong>If you have a completely self-contained space to use as a home office it is worth giving some consideration to the colour that you paint the walls. In most corporate offices, the walls are either white or magnolia, neither of which are particularly inspiring.<\/li><\/ul><p>Before you decorate, take a moment to think about how you want to feel in the space. If you want to feel calm and focused, consider choosing greens or blues. If you need to feel energized and invigorated, red or orange tones may be more appropriate. <\/p><ul><li><strong>Illuminate the Room<br\/><\/strong>Lighting is extremely important when it comes to maximising productivity in your home office. Poor lighting can leave you feeling drained and moody and can cause eye strain and headaches. None of these things will increase your productivity. <\/li><\/ul><p>Therefore, it is important to ensure you have good quality light sources. This includes soft diffuse ambient lighting, bright and focussed task lighting and most importantly as much natural light as possible. <\/p><ul><li><strong>Connect with Nature<\/strong><\/li><\/ul><p>It has been proven that as humans we feel much better when we are able to connect with nature. So try positioning your desk in front of a window so that you can see views of nature while you work. If you don’t have any natural views to look at, bring as much greenery and foliage into the office as you can.<\/p><p>Alternatively, choose botanical art prints or wallpaper to mimic the look of a natural environment. And try incorporating natural materials such as rattan, cork or bamboo where possible. <\/p><p>Maybe play the sounds of nature such as bird song or the crashing of ocean waves and introduce the scents of nature by lighting scented candles or using a diffuser.<\/p><ul><li><strong>Suitable office chair<br\/><\/strong>Being comfortable is one of the keys to maximising productivity in your home office and the chair that you choose is immensely important. An ergonomic office chair is an absolute must if you are going to be seated at a desk for any length of time as they provide the necessary support for our backs and ensure the correct posture to prevent injuries.<\/li><\/ul><p><\/p><ul><li><strong>Declutter<br\/><\/strong>The final tip for maximising productivity in your home office is to declutter. Declutter the space around you and declutter your desk. There is nothing more distracting than being surrounded by clutter. Studies show that there is a strong link between clutter and procrastination so by making sure you have a clear and tidy space in which to work will help you to stay focussed and motivated and therefore be more productive. <\/li><\/ul>",
+            "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
       "block_order": [
-        "link_e7HVtw"
+        "text_67qjMj"
       ],
       "settings": {
-        "type_style": "classic",
         "section_width": "page-width",
         "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
         "color_scheme": "",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     }
   },
@@ -266,6 +229,6 @@
     "main",
     "rich_text_axgV7j",
     "slideshow_kET49Q",
-    "image_with_text_FKcFTc"
+    "rich_text_VQxCPE"
   ]
 }
