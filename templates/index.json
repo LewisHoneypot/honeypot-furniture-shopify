@@ -347,7 +347,7 @@
       "settings": {
         "type_style": "classic",
         "heading": "Shop Sofas by Size",
-        "heading_size": "default",
+        "heading_size": "medium",
         "heading_margin_bottom": 25,
         "show_view_all": false,
         "text_view_all": "",
@@ -569,7 +569,7 @@
       ],
       "settings": {
         "heading": "",
-        "text": "<h3>Real Customers, Real Homes - Shop The Look<\/h3>",
+        "text": "<p>Real Customers, Real Homes - Shop The Look<\/p>",
         "button_label": "Get More Inspiration",
         "button_link": "shopify:\/\/collections\/home-decor",
         "image_ratio": "adapt",
