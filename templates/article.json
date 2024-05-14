@@ -283,12 +283,41 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "rich_text_GyRE9A": {
+      "type": "rich-text",
+      "blocks": {
+        "text_AdUwtp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you’ve created a home bar with the help of Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive so we can see.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_AdUwtp"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
     "main",
     "rich_text_axgV7j",
     "slideshow_kET49Q",
-    "rich_text_VQxCPE"
+    "rich_text_VQxCPE",
+    "rich_text_GyRE9A"
   ]
 }
