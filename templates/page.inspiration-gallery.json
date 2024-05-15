@@ -28,39 +28,15 @@
         "heading_wej8ga": {
           "type": "heading",
           "settings": {
-            "heading": "Discover Honeypot Furniture",
-            "heading_size": "x-large",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_63eQtH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Dive into our inspiration gallery for sofas, a part of our Home, Garden & Furniture collection. Discover how you can complement your home decor and transform your living space.<\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "button_bxmw63": {
-          "type": "button",
-          "settings": {
-            "primary_button_label": "Customer Homes",
-            "primary_button_link": "",
-            "primary_button_type": "default",
-            "secondary_button_label": "Honeypot Inspo",
-            "secondary_button_link": "",
-            "secondary_button_type": "default",
+            "heading": "Inspiration",
+            "heading_size": "large",
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
       "block_order": [
-        "heading_wej8ga",
-        "text_63eQtH",
-        "button_bxmw63"
+        "heading_wej8ga"
       ],
       "settings": {
         "section_width": "page-width",
@@ -108,16 +84,16 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "show_line_separator": true,
-        "heading": "Customer Imagery",
-        "heading_size": "default",
-        "font_transform": "uppercase",
+        "heading": "Honeypot Homes",
+        "heading_size": "medium",
+        "font_transform": "none",
         "heading_margin_bottom": 16,
-        "content": "<p>Tell your brand's story through images.<\/p>",
+        "content": "<p>Mention <strong>@honeypotfurniture<\/strong> in your Instagram photos for the chance to be featured in our gallery.<\/p>",
         "text_margin_bottom": 16,
         "button_label": "",
         "button_link": "",
         "button_margin_bottom": 16,
-        "text_alignment": "center",
+        "text_alignment": "left",
         "cart_label": "Shop",
         "display_viewmore": false,
         "viewmore_label": "Button label",
