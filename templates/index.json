@@ -584,6 +584,75 @@
         "padding_bottom_mobile": 30
       }
     },
+    "collection_list_GDamp9": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_U64bhR": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_niexDf": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-in"
+          }
+        },
+        "collection_UTjMBb": {
+          "type": "collection",
+          "settings": {
+            "collection": "outlet"
+          }
+        },
+        "collection_yaqDQx": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-1"
+          }
+        }
+      },
+      "block_order": [
+        "collection_U64bhR",
+        "collection_niexDf",
+        "collection_UTjMBb",
+        "collection_yaqDQx"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Shop Collections",
+        "heading_size": "medium",
+        "heading_margin_bottom": 0,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "image_animation": "fade-down",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
     "496e3ccd-49a7-4461-951f-0d3c7a67bf86": {
       "type": "image-banner",
       "blocks": {
@@ -1093,6 +1162,7 @@
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
     "3d277f0b-f31b-482d-996e-089de61f3e90",
+    "collection_list_GDamp9",
     "496e3ccd-49a7-4461-951f-0d3c7a67bf86",
     "quotes_d7CMtB",
     "069a21ef-b01c-4296-b010-b63bc9797851",
