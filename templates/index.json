@@ -705,7 +705,7 @@
         "mobile_content_alignment": "center",
         "custom_content_max_width": true,
         "content_max_width": 490,
-        "mobile_color_scheme": "custom",
+        "mobile_color_scheme": "default",
         "colors_text": "#000000",
         "colors_background": "",
         "gradient_background": "",
