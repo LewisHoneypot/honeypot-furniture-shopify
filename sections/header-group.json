@@ -129,7 +129,7 @@
         ".menu-drawer {background-color: #ffffff;}"
       ],
       "settings": {
-        "section_width": "customized-width",
+        "section_width": "page-width",
         "customize_width": 1800,
         "type_style": "classic",
         "show_line_separator": true,
