@@ -94,10 +94,23 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
+        },
+        "mega_menu_1_MkHmHf": {
+          "type": "mega_menu_1",
+          "settings": {
+            "menu_item": "Bedroom",
+            "section_width": "customized-width",
+            "customize_width": 1400,
+            "text_image_1": "",
+            "link_image_1": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000"
+          }
         }
       },
       "block_order": [
-        "mega_menu_1_QYBCyP"
+        "mega_menu_1_QYBCyP",
+        "mega_menu_1_MkHmHf"
       ],
       "custom_css": [
         ".menu-drawer {background-color: #ffffff;}"
