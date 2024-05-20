@@ -78,6 +78,22 @@
             "content": "",
             "page": ""
           }
+        },
+        "staingard_drawer_iWbVLW": {
+          "type": "staingard_drawer",
+          "settings": {
+            "title": "Staingard",
+            "text1": "<p>Staingard offers a care plan for your Viva Sofabed and helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "text2": "Add 5 Years Accidental Damage Cover For Just:",
+            "seat-price": "40",
+            "tick-1-text": "5-year fabric upholstery care plan",
+            "tick-2-text": "Covers accidental damage",
+            "tick-3-text": "Covers accidental staining",
+            "tick-4-text": "'Clean, Repair or Replace' policy",
+            "tick-5-text": "At home professional cleaning",
+            "button-1-text": "Protect From Accidental Damage",
+            "button-2-text": "Return To Cart"
+          }
         }
       },
       "block_order": [
@@ -86,7 +102,8 @@
         "price",
         "size_chart_kqc3gt",
         "buy_buttons",
-        "drawer_j3bNWd"
+        "drawer_j3bNWd",
+        "staingard_drawer_iWbVLW"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
