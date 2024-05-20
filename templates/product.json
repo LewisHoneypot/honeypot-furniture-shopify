@@ -438,7 +438,7 @@
       "settings": {
         "heading": "You may also like",
         "products_to_show": 5,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "carousel_number": 3,
@@ -535,7 +535,7 @@
         "text_alignment_mobile": "center",
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
         "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "#f6eee3",
