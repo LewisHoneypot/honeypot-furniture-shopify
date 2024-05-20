@@ -549,7 +549,7 @@
             {%- endif -%}
           </div>
 
-          <script>console.log({{ cart | json }});</script>
+          {% comment %} <script>console.log({{ cart | json }});</script> {% endcomment %}
 
           {% if request.page_type == "product" %}
           
@@ -616,7 +616,7 @@
                       class="d-block product-drawer__opener no-js-hidden"
                       data-side-drawer="#Drawer-Staingard"
                     >
-                      <button type="submit" id="staingard-button" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
+                      <button type="submit" id="staingard-button" onclick="refreshStaingardPrice()" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
                         <span>{{ settings.staingard_cart_button_text }}</span>
                       </button>
                     </staingard-drawer-opener>
@@ -887,6 +887,15 @@
       document.querySelector('#cart').submit();
     });
   });
+</script>
+
+<script>
+  function refreshStaingardPrice() {
+    jQuery.getJSON('/cart.js', function(cart) {
+      $('#staingard-price').load(location.href + " #staingard-price");
+      $('#staingard-add-to-cart').load(location.href + " #staingard-add-to-cart");
+    });
+  }
 </script>
 
 <style>
