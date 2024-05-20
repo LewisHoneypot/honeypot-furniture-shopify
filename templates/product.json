@@ -260,7 +260,7 @@
           "type": "text",
           "settings": {
             "heading": "Description",
-            "content_type": "custom",
+            "content_type": "description",
             "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "page": "",
             "padding_top": 61,
