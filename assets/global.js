@@ -2242,6 +2242,28 @@ class SideDrawerOpener extends HTMLElement {
 }
 customElements.define('side-drawer-opener', SideDrawerOpener);
 
+
+
+class StaingardDrawerOpener extends HTMLElement {
+  constructor() {
+    super();
+
+    const button = this.querySelector('button');
+
+    if (!button) return;
+    button.addEventListener('click', () => {
+      const drawer = document.querySelector(this.getAttribute('data-side-drawer'));
+      drawer.classList.add('animate', 'active');
+    });
+  }
+  show() {
+    this.section.classList.remove('d-none');
+    document.body.classList.add('before-you-leave__show', 'o-h');
+    setTimeout(() => {this.drawer.classList.add('active')}, 100);
+  }
+}
+customElements.define('staingard-drawer-opener', StaingardDrawerOpener);
+
 class LookbookDrawerOpener extends SideDrawerOpener {
   constructor() {
     super();

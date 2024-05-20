@@ -1,0 +1,275 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'staingard_drawer' -%}
+
+      <side-drawer
+        class="product__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden animate"
+        id="Drawer-Staingard"
+        style="z-index:9;"
+      >
+        <div class="side-drawer">
+          <div id="Drawer-Overlay-Search" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
+          <div
+            class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Staingard"
+            tabindex="-1"
+            style="padding: 3rem 3rem 0;"
+          >
+            <div class="drawer__header d-flex j-c-between a-i-center pos-relative">
+              <h2 class="drawer__heading break m-0">{{ block.settings.title }}</h2>
+
+              <button
+                class="drawer__close d-block t-button b-none b-circle c-pointer button--close"
+                type="button"
+                onclick="this.closest('side-drawer').close()"
+                aria-label="Staingard"
+                style="top: 0rem; right: 0rem;"
+              >
+                <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+              </button>
+            </div>
+            <div class="drawer__wrapper center">
+              <p>{{ product.title | escape }}</p>
+              <img srcset="{{ product.featured_image | image_url }}" width="444" height="275">
+              <p>{{ block.settings.text1 }}</p>
+              <p>{{ block.settings.text2 }}</p>
+
+              {% for item in cart.items %}
+                {% if item.product.type == 'Sofas' %}
+                  {% if item.grams %}
+                    {% assign SeatingCapacity = item.grams %}
+                    <script>console.log({{ SeatingCapacity }});</script>
+
+                    {% if SeatingCapacity == 1 %}
+                      {% comment %} £40 {% endcomment %}
+                      {% assign StaingardId = 48612272898335 %}
+                    {% elsif SeatingCapacity == 2 %}
+                      {% comment %} £80 {% endcomment %}
+                      {% assign StaingardId = 48612274700575 %}
+                    {% elsif SeatingCapacity == 3 %}
+                      {% comment %} £120 {% endcomment %}
+                      {% assign StaingardId = 48626777522463 %}
+                    {% elsif SeatingCapacity == 4 %}
+                      {% comment %} £160 {% endcomment %}
+                      {% assign StaingardId = 48626778505503 %}
+                    {% elsif SeatingCapacity == 5 %}
+                      {% comment %} £200 {% endcomment %}
+                      {% assign StaingardId = 48626778964255 %}
+                    {% elsif SeatingCapacity >= 6 %}
+                      {% comment %} £240 {% endcomment %}
+                      {% assign StaingardId = 48626779390239 %}
+                    {% endif %}
+                  {% else %}
+                    <script>console.log('Doesn\'t contain seating capacity');</script>
+                  {% endif %}
+                {% else %}
+                  <script>console.log('Doesn\'t contain a sofa');</script>
+                {% endif %}
+              {% endfor %}
+  
+              <p>
+                <strong>£{{ SeatingCapacity | times: block.settings.seat-price }}</strong>
+              </p>
+              <p class="left" style="display: inline-block;">
+                {%- if block.settings.tick_image == null -%}
+                  <svg
+                    class="icon icon-tick"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    width="15"
+                    style="margin-right: 1rem;"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                  </svg>
+                {%- else -%}
+                  <img
+                    src="{{ block.settings.tick_image | image_url }}"
+                    {% if block.settings.tick_image.alt != blank %}
+                      alt="{{ block.settings.tick_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    height="25"
+                    width="25"
+                    loading="lazy"
+                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                  >
+                {%- endif -%}
+                {{ block.settings.tick-1-text }} <br>
+                {%- if block.settings.tick_image == null -%}
+                  <svg
+                    class="icon icon-tick"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    width="15"
+                    style="margin-right: 1rem;"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                  </svg>
+                {%- else -%}
+                  <img
+                    src="{{ block.settings.tick_image | image_url }}"
+                    {% if block.settings.tick_image.alt != blank %}
+                      alt="{{ block.settings.tick_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    height="25"
+                    width="25"
+                    loading="lazy"
+                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                  >
+                {%- endif -%}
+                {{ block.settings.tick-2-text }} <br>
+                {%- if block.settings.tick_image == null -%}
+                  <svg
+                    class="icon icon-tick"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    width="15"
+                    style="margin-right: 1rem;"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                  </svg>
+                {%- else -%}
+                  <img
+                    src="{{ block.settings.tick_image | image_url }}"
+                    {% if block.settings.tick_image.alt != blank %}
+                      alt="{{ block.settings.tick_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    height="25"
+                    width="25"
+                    loading="lazy"
+                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                  >
+                {%- endif -%}
+                {{ block.settings.tick-3-text }} <br>
+                {%- if block.settings.tick_image == null -%}
+                  <svg
+                    class="icon icon-tick"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    width="15"
+                    style="margin-right: 1rem;"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                  </svg>
+                {%- else -%}
+                  <img
+                    src="{{ block.settings.tick_image | image_url }}"
+                    {% if block.settings.tick_image.alt != blank %}
+                      alt="{{ block.settings.tick_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    height="25"
+                    width="25"
+                    loading="lazy"
+                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                  >
+                {%- endif -%}
+                {{ block.settings.tick-4-text }} <br>
+                {%- if block.settings.tick_image == null -%}
+                  <svg
+                    class="icon icon-tick"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    width="15"
+                    style="margin-right: 1rem;"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                  </svg>
+                {%- else -%}
+                  <img
+                    src="{{ block.settings.tick_image | image_url }}"
+                    {% if block.settings.tick_image.alt != blank %}
+                      alt="{{ block.settings.tick_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    height="25"
+                    width="25"
+                    loading="lazy"
+                    style="margin-right: 1rem;"
+                  >
+                {%- endif -%}
+                {{ block.settings.tick-5-text }}
+              </p>
+              
+              <input type="checkbox">
+              <p>I have read and agree to the terms and conditions</p>
+
+              <div id="staingard-add-to-cart" onclick="customAddToCart({{StaingardId}}); this.closest('side-drawer').close()" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient">
+                <span>{{ block.settings.button-1-text }}</span>
+              </div>
+
+              <button class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" onclick="this.closest('side-drawer').close()" style="margin-top: 1.4rem; margin-bottom: 2.6rem;">
+                <span>{{ block.settings.button-2-text }}</span>
+              </button>
+              
+            </div>
+
+          </div>
+        </div>
+      </side-drawer>
+
+  {%- endcase -%}
+{%- endfor -%}
+
+<script>
+  function customAddToCart(StaingardId) {
+    let formData = {
+      'items': [{
+       'id': StaingardId,
+       'quantity': 1
+       }]
+     };
+
+    fetch("/cart/add.js", {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    refreshCartDrawer();
+    refreshCartBubble();
+  }
+  
+
+  function refreshCartDrawer() {
+    jQuery.getJSON('/cart.js', function(cart) {
+      $('#CartDrawer').load(location.href + " #CartDrawer");
+    });
+  }
+  function refreshCartBubble() {
+    jQuery.getJSON('/cart.js', function(cart) {
+      $('.cart-count-bubble').load(location.href + " .cart-count-bubble");
+    });
+  }
+</script>
