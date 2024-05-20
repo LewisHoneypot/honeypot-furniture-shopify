@@ -103,7 +103,7 @@
               {% comment %} <script>console.log("CombinedSeatingCapacity:", {{ SeatingCapacity }});</script> {% endcomment %}
 
               <p>
-                <strong>£{{ SeatingCapacity | times: block.settings.seat-price }}</strong>
+                <strong id="staingard-price">£{{ SeatingCapacity | times: block.settings.seat-price }}</strong>
               </p>
               <p class="left" style="display: inline-block;">
                 {%- if block.settings.tick_image == null -%}
@@ -292,8 +292,7 @@
     });
     refreshCartDrawer();
     refreshCartBubble();
-  }
-  
+  }  
 
   function refreshCartDrawer() {
     jQuery.getJSON('/cart.js', function(cart) {
