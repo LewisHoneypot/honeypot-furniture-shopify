@@ -855,9 +855,9 @@
               <div class="cart-drawer__warnings{% if cart == empty %} d-flex f1 f-column j-c-center{% else %} d-none{% endif %}">
                 <div class="cart-drawer__empty-content">
                   <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-                  <a href="{{ routes.all_products_collection_url }}" class="button {{ settings.button_style | prepend: 'button--style-' }}{% if settings.continue_shopping_button_transparent == 'transparent' %} button--transparent{% endif %} color-{{ settings.continue_shopping_color_scheme }} gradient">
+                  <div href="{{ routes.all_products_collection_url }}" onclick="this.closest('cart-drawer').close()" class="button {{ settings.button_style | prepend: 'button--style-' }}{% if settings.continue_shopping_button_transparent == 'transparent' %} button--transparent{% endif %} color-{{ settings.continue_shopping_color_scheme }} gradient">
                     <span class="text">{{ 'general.continue_shopping' | t }}</span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
