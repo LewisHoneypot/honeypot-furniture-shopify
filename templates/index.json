@@ -289,16 +289,6 @@
         "padding_bottom_mobile": 12
       }
     },
-    "custom_liquid_VfciVH": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div id=\"trustpilot-widget\"><\/div>",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
       "type": "collection-list",
       "blocks": {
@@ -719,7 +709,7 @@
         "colors_text": "#000000",
         "colors_background": "",
         "gradient_background": "",
-        "color_scheme": "accent-1",
+        "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#d2d2d2",
         "image_behavior": "none",
@@ -1168,7 +1158,6 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112",
     "0b6105a9-a3ce-4181-b45b-7a55c709e140",
     "41769cb9-5f5a-4896-9da0-2d3bf33aef1e",
-    "custom_liquid_VfciVH",
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
