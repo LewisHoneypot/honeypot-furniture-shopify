@@ -221,7 +221,7 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
-            "content": "<p>The system consists of two serums (A and B) that work synergistically to address different aspects of pigmentation. This versatility allows for a tailored approach to individual skin needs.<\/p>",
+            "content": "<p>Metafield<\/p>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -231,6 +231,7 @@
         },
         "db60014a-6639-4c1a-9039-36607ca2a130": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Reviews",
             "content_type": "description",
