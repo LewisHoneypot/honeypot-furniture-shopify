@@ -59,8 +59,17 @@
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
 
-                    <script>console.log('Seating Capacity', {{ item.grams }});</script>
-                    {% assign SeatingCapacity = SeatingCapacity | plus: item.grams %}
+                    {% comment %} <script>console.log('SeatingCapacity', {{ item.grams }});</script> {% endcomment %}
+
+                    {% assign NewSeatingCapacity = item.grams | times: item.quantity %}
+                    
+                    {% comment %} <script>console.log('NewSeatingCapacity', {{ NewSeatingCapacity }});</script> {% endcomment %}
+
+                    {% assign SeatingCapacity = SeatingCapacity | plus: NewSeatingCapacity %}
+
+                    {% if SeatingCapacity > 6 %}
+                      {% assign SeatingCapacity = 6 %}
+                    {% endif %}
 
                     {% if SeatingCapacity == 1 %}
                       {% comment %} £40 {% endcomment %}
@@ -91,7 +100,7 @@
                 {% endif %}
               {% endfor %}
   
-              <script>console.log("Seating Capacity Combined:", {{ SeatingCapacity }});</script>
+              {% comment %} <script>console.log("CombinedSeatingCapacity:", {{ SeatingCapacity }});</script> {% endcomment %}
 
               <p>
                 <strong>£{{ SeatingCapacity | times: block.settings.seat-price }}</strong>
