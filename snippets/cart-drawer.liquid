@@ -548,12 +548,87 @@
               </div>
             {%- endif -%}
           </div>
-      
-          <div class="previewCart-staingard cart__ctas">
-            <div class="title">Protect From Accidental Damage</div>
-            <p class="description">Nam at odio tincidunt ex ornare vehicula. Suspendisse nec lacus sed massa aliquet semper eu in arcu.</p>
-            <button type="submit" id="staingard-button" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"><span>Add Staingard</span></button>
-          </div>
+
+          <script>console.log({{ cart | json }});</script>
+
+          {% if request.page_type == "product" %}
+          
+            {% if cart.item_count > 0 %}
+              {% if settings.use_staingard_drawer == true %}
+
+                {% assign containsSofa = false %}
+                {% assign containsStaingard = false %}
+                
+                {% for item in cart.items %}
+                  {% comment %} Check if sofa product is in cart {% endcomment %}
+                  {% if item.product.type == 'Sofas' %}
+                    {% assign containsSofa = true %}
+                    <script>console.log('Contains sofa TRUE');</script>
+                  {% endif %}
+                  {% comment %} Check if staingard product is in cart {% endcomment %}
+                  {% if item.product.type == 'staingard' %}
+                    {% assign containsStaingard = true %}
+                    <script>console.log('Contains staingard TRUE');</script>
+                  {% endif %}
+                {% endfor %}
+
+                {% if containsStaingard == false %}
+
+                  {% for item in cart.items %}
+                    {% if item.product.type == 'Sofas' %}
+                      {% if item.grams %}
+                        {% assign SeatingCapacity = item.grams %}
+                        <script>console.log({{ SeatingCapacity }});</script>
+
+                        {% if SeatingCapacity == 1 %}
+                          {% comment %} £40 {% endcomment %}
+                          {% assign StaingardId = 48612272898335 %}
+                        {% elsif SeatingCapacity == 2 %}
+                          {% comment %} £80 {% endcomment %}
+                          {% assign StaingardId = 9218303820063 %}
+                        {% elsif SeatingCapacity == 3 %}
+                          {% comment %} £120 {% endcomment %}
+                          {% assign StaingardId = '' %}
+                        {% elsif SeatingCapacity == 4 %}
+                          {% comment %} £160 {% endcomment %}
+                          {% assign StaingardId = '' %}
+                        {% elsif SeatingCapacity == 5 %}
+                          {% comment %} £200 {% endcomment %}
+                          {% assign StaingardId = '' %}
+                        {% elsif SeatingCapacity >= 6 %}
+                          {% comment %} £240 {% endcomment %}
+                          {% assign StaingardId = '' %}
+                        {% endif %}
+                      {% else %}
+                        <script>console.log('Doesn\'t contain seating capacity');</script>
+                      {% endif %}
+                    {% else %}
+                      <script>console.log('Doesn\'t contain a sofa');</script>
+                    {% endif %}
+                  {% endfor %}
+
+                  <div class="previewCart-staingard cart__ctas">
+
+                    <div class="title">{{ settings.staingard_cart_title }}</div>
+                    <p class="description">{{ settings.staingard_cart_paragraph }}</p>
+
+                    <staingard-drawer-opener
+                      class="d-block product-drawer__opener no-js-hidden"
+                      data-side-drawer="#Drawer-Staingard"
+                    >
+                      <button type="submit" id="staingard-button" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
+                        <span>{{ settings.staingard_cart_button_text }}</span>
+                      </button>
+                    </staingard-drawer-opener>
+
+                  </div>
+
+                {% endif %}
+
+              {% endif %}
+            {% endif %}
+
+          {% endif %}
 
           <div class="cart__totals gradient{% if settings.cart_style == 'special' %} bg-transparent{% endif %}{% if cart == empty %} d-none{% endif %}">
             {%- if settings.show_cart_note or settings.show_cart_gift or settings.show_cart_shipping -%}

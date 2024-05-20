@@ -668,7 +668,6 @@
                     </a>
                   {%- endif -%}
                 {%- endif -%}
-
               {%- when 'color_swatch' -%}
                 {%- if product.metafields.custom.product_colour_list != blank -%}
                   <div
@@ -676,6 +675,7 @@
                     style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px;"
                   >
                     <h4>{{ block.settings.available_colours }}:</h4>
+
                     <div class="color-list">
                       {% for p in product.metafields.custom.product_colour_list.value %}
                         <a
@@ -1444,6 +1444,9 @@
       </div>
     </side-drawer>
   {%- endfor -%}
+  
+  {% render 'staingard-drawer' SeatingCapacity %}
+
   {%- for block in drawers -%}
     {% if block.settings.heading != blank %}
       <side-drawer
@@ -1477,7 +1480,7 @@
               <div class="drawer__wrapper-details">
                 {%- if block.settings.content_type == 'description' -%}
                   {{ product.description }}
-                {%- elsif block.settings.content_type == 'pairs_well_with' -%}                
+                {%- elsif block.settings.content_type == 'pairs_well_with' -%}
                   {% assign recommended_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}
 
                   {% for recommended in recommended_products %}
@@ -1493,13 +1496,6 @@
                       </div>
                     </a>
                   {% endfor %}
-
-                  <p>Type: {{product.metafields.details.SeatingCapacity.type}}</p>
-                  <p>Value: {{product.metafields.details.SeatingCapacity.value}}</p>
-
-                  {%- for item in product.metafields.details -%}
-                    {{ item }} <br>
-                  {%- endfor %}
                 
                 {%- else -%}
                   {{ block.settings.content }}
@@ -1997,6 +1993,84 @@
           "unit": "px",
           "label": "t:sections.all.padding.padding_bottom",
           "default": 5
+        }
+      ]
+    },
+    {
+      "type": "staingard_drawer",
+      "name": "Staingard",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Staingard"
+        },
+        {
+          "type": "richtext",
+          "id": "text1",
+          "label": "t:sections.all.text.label",
+          "default": "<p>Staingard offers a care plan for your Viva Sofabed and helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "t:sections.all.text.label",
+          "default": "Add 5 Years Accidental Damage Cover For Just:"
+        },
+        {
+          "type": "text",
+          "id": "seat-price",
+          "label": "Price Per Seat",
+          "default": "40"
+        },
+        {
+          "type": "text",
+          "id": "tick-1-text",
+          "default": "5-year fabric upholstery care plan",
+          "label": "Tick 1 Text"
+        },
+        {
+          "type": "text",
+          "id": "tick-2-text",
+          "default": "Covers accidental damage",
+          "label": "Tick 2 Text"
+        },
+        {
+          "type": "text",
+          "id": "tick-3-text",
+          "default": "Covers accidental staining",
+          "label": "Tick 3 Text"
+        },
+        {
+          "type": "text",
+          "id": "tick-4-text",
+          "default": "'Clean, Repair or Replace' policy",
+          "label": "Tick 4 Text"
+        },
+        {
+          "type": "text",
+          "id": "tick-5-text",
+          "default": "At home professional cleaning",
+          "label": "Tick 5 Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "tick_image",
+          "label": "Tick Image"
+        },
+        {
+          "type": "text",
+          "id": "button-1-text",
+          "default": "Protect From Accidental Damage",
+          "label": "Button 1 Text"
+        },
+        {
+          "type": "text",
+          "id": "button-2-text",
+          "default": "Return To Cart",
+          "label": "Button 2 Text"
         }
       ]
     },
