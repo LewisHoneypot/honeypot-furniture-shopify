@@ -239,7 +239,7 @@
       },
       "background-2": {
         "settings": {
-          "text": "#121212",
+          "text": "#3c3c3b",
           "text_link": "#002908",
           "background": "#f1e8e1",
           "background_gradient": "",
@@ -386,9 +386,9 @@
       },
       "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0": {
         "settings": {
-          "text": "#ffffff",
+          "text": "#3c3c3b",
           "text_link": "#988c8b",
-          "background": "#434a42",
+          "background": "#d5dabe",
           "background_gradient": "",
           "button_label": "#ffffff",
           "button_background": "#121212",
