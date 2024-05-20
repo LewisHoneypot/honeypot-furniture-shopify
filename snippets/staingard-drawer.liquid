@@ -31,16 +31,36 @@
               </button>
             </div>
             <div class="drawer__wrapper center">
-              <p>{{ product.title | escape }}</p>
-              <img srcset="{{ product.featured_image | image_url }}" width="444" height="275">
+              {% comment %} <p>{{ product.title | escape }}</p> {% endcomment %}
+              
+              {%- if block.settings.main_image == null -%}
+                <img srcset="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Staingard-Logo-Final_fb86500f-add8-484b-a925-b2485913deab.jpg?v=1715695485" width="444" height="222">
+              {%- else -%}
+                <img
+                  src="{{ block.settings.main_image | image_url }}"
+                  {% if block.settings.main_image.alt != blank %}
+                    alt="{{ block.settings.main_image.alt | escape }}"
+                  {% else %}
+                    role="presentation"
+                  {% endif %}
+                  height="444"
+                  width="222"
+                  loading="lazy"
+                  style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                >
+              {%- endif -%}
+              
               <p>{{ block.settings.text1 }}</p>
               <p>{{ block.settings.text2 }}</p>
+
+              {% assign SeatingCapacity = 0 %}
 
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
-                    {% assign SeatingCapacity = item.grams %}
-                    <script>console.log({{ SeatingCapacity }});</script>
+
+                    <script>console.log('Seating Capacity', {{ item.grams }});</script>
+                    {% assign SeatingCapacity = SeatingCapacity | plus: item.grams %}
 
                     {% if SeatingCapacity == 1 %}
                       {% comment %} £40 {% endcomment %}
@@ -61,14 +81,18 @@
                       {% comment %} £240 {% endcomment %}
                       {% assign StaingardId = 48626779390239 %}
                     {% endif %}
+
                   {% else %}
                     <script>console.log('Doesn\'t contain seating capacity');</script>
                   {% endif %}
+
                 {% else %}
                   <script>console.log('Doesn\'t contain a sofa');</script>
                 {% endif %}
               {% endfor %}
   
+              <script>console.log("Seating Capacity Combined:", {{ SeatingCapacity }});</script>
+
               <p>
                 <strong>£{{ SeatingCapacity | times: block.settings.seat-price }}</strong>
               </p>
