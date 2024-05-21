@@ -62,7 +62,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -97,7 +97,7 @@
         "text_4hckRe": {
           "type": "text",
           "settings": {
-            "text": "<p>We are very pleased to announce that we have our very own Ambassador Programme, to reward publishers, bloggers and influencers when promoting Honeypot Furniture!<\/p><p>If you think that your website or blog matches our aspirations and customers, we'd love you to apply to join the Rowen Homes affiliate programme, start spreading the word and earning great commissions!<\/p>",
+            "text": "<p>We are very pleased to announce that we have our very own Ambassador Programme, to reward influencers and bloggers when promoting Honeypot!<\/p><p>If you think that your social pages or blog matches our aspirations and customers, we'd love you to apply to join the Honeypot affiliate programme, start spreading the word and earning fantastic commissions! <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
