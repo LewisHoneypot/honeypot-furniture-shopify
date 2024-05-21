@@ -29,7 +29,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Become an Ambassador <\/strong>",
-            "heading_size": "medium",
+            "heading_size": "large",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -48,6 +48,38 @@
         "padding_bottom": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
+      }
+    },
+    "image_with_text_A9VKJT": {
+      "type": "image-with-text",
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_3_1.webp",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_TAjPeQ": {
@@ -117,21 +149,8 @@
         "text_P8LHnr": {
           "type": "text",
           "settings": {
-            "text": "<p>We provide our affiliates the creative assets needed, with regular product, launch and band updates. We also have a dedicated affiliate management team that will be on hand to help you at any time!<\/p><p><\/p><p><\/p><p>We stock thousands of amazing items and products with a really strong engaged customer base, high average order value and conversion rate meaning higher commissions! We are looking to form mutually beneficial partnerships with our affiliates so if you’re a creator or publisher in the lifestyle, fashion or interiors niche we want to hear from you.<\/p>",
+            "text": "<p>We provide our affiliates with all of the creative assets needed and keep you in know with regular product, launch and brand updates. We also have a dedicated affiliate management team that will be on hand to help you at any time!<\/p><p>Our large catalogue of fabulous homeware products and strong engaged customer base and solid conversion rate allows higher commissions. With our tiered structure, you can earn extra commission depending on volume.<\/p><p>We are looking to form mutually beneficial partnerships with our affiliates so if you’re a creator or publisher in the interior or lifestyle niche we'd love to hear from you.<\/p><p>Together, we redefine collaboration by fostering genuine connections and inspiring our shared audience. We don't just endorse a product; we co-create a meaningful journey that resonates with hearts and minds.<\/p>",
             "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "button_i7rQG8": {
-          "type": "button",
-          "settings": {
-            "primary_button_label": "Button label",
-            "primary_button_link": "",
-            "primary_button_type": "default",
-            "secondary_button_label": "Button label",
-            "secondary_button_link": "",
-            "secondary_button_type": "default",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -139,8 +158,7 @@
       },
       "block_order": [
         "heading_bG8G3k",
-        "text_P8LHnr",
-        "button_i7rQG8"
+        "text_P8LHnr"
       ],
       "settings": {
         "section_width": "page-width",
@@ -153,13 +171,77 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "collage_TN3kw9": {
+      "type": "collage",
+      "blocks": {
+        "image_QyJVTF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_2_1.webp",
+            "heading_image": "Gerogia Cole (@missgcole)",
+            "heading_size": "small",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Follow on Instagram",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_iVDHka": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_QyJVTF",
+        "image_iVDHka"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Meet our current Ambassadors",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_T7RRLB",
     "rich_text_nXBKrc",
+    "image_with_text_A9VKJT",
     "rich_text_TAjPeQ",
-    "rich_text_NV4xtQ"
+    "rich_text_NV4xtQ",
+    "collage_TN3kw9"
   ]
 }
