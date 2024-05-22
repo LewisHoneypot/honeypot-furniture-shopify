@@ -207,7 +207,7 @@ fetch(endpoint)
         '<div class="card">' +
         '<div class="card-body">' +
         '<div class="reviewSectionHeader pb-3 d-inline-flex">' +
-        '<div class="userIcon pt-2">' +
+        '<div class="userIcon pt-2 pr-2">' +
         '<img src="'+userImage+'" class="pb-1" height="24" width="24">' +
         '</div>' +
         '<div class="customerInfo pl-2">' +

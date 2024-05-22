@@ -20,16 +20,15 @@
       style="--page-width: {{ section.settings.customize_width }}px;"
     {% endif %}
   >
+    
     <div id="service-reviews" class="container">
       <div class="row">
-        <div class="col-12 text-center">
+        <div id="review-bars" class="col-12 text-center">
           <!-- <div id="reviewAverage" class="col-12"></div> -->
           <div id="reviewCount"></div>
 
-          <div id="loading-indicator">
-            <div class="spinner-border" role="status">
-              <span class="sr-only"></span>
-            </div>
+          <div id="loading-indicator" class="mx-auto" style="display:table;">
+            <span class="loading-bar d-block pos-relative o-h"></span>
           </div>
 
           <div id="fiveStars" class="row">
@@ -215,9 +214,12 @@
 
 {% stylesheet %}
   #service-reviews {
-    min-width: 298px;    
-    #reviewCount {
-      min-height: 58px;
+    min-width: 298px;
+    #review-bars {
+      min-height: 287px;
+      #reviewCount {
+        min-height: 58px;
+      }
     }
     .score-bar-wrapper {
       margin-top: 13px;
@@ -236,15 +238,28 @@
     }
     /* Style for the loading indicator */
     #loading-indicator {
+      display: ruby;
       position: absolute;
       left: 0;
       width: 100%;
-      top: 216px;
+      top: 193px;
       background-color: #fff;
       color: rgba(0, 0, 0, 0.5);
       text-align: center;
       z-index: 1;
       height: 193px;
+      .loading-bar {
+        position: absolute;
+        top: 50%;
+        left: 34%;
+      }
+      @media screen and (min-width: 750px){
+        top: 285px;
+        .loading-bar {
+          top: 50%;
+          left: 44%;
+        }
+      }
       .spinner-border {
         position: relative;
         top: 20%;
