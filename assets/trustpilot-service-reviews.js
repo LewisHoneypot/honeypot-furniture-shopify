@@ -203,7 +203,7 @@ fetch(endpoint)
       
       // Create the card element
       var cardHtml =
-        '<div class="col-sm-6 col-lg-4 mb-5">' +
+        '<div class="col-sm-6 col-lg-4 mb-5 review">' +
         '<div class="card">' +
         '<div class="card-body">' +
         '<div class="reviewSectionHeader pb-3 d-inline-flex">' +

@@ -106,7 +106,7 @@
 </div>
 
 <script src="{{ 'trustpilot-service-reviews.js' | asset_url }}" defer></script>
-<script src="{{ 'trustpilot-service-reviews.scss.css' | asset_url | stylesheet_tag: preload: true }}" defer></script>
+<script src="{{ 'trustpilot-service-reviews.css' | asset_url | stylesheet_tag: preload: true }}" defer></script>
 {% comment %} <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" defer></script> {% endcomment %}
 
 {% schema %}
@@ -235,6 +235,9 @@
         height: 100%;
         display: block;
       }
+    }
+    .review {
+      width: 100%;
     }
     /* Style for the loading indicator */
     #loading-indicator {
