@@ -179,11 +179,11 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_2_1.webp",
-            "heading_image": "Gerogia Cole (@missgcole)",
+            "heading_image": "Georgia Cole (@missgcole)",
             "heading_size": "small",
             "button_transparent": "transparent",
             "button_type": "standard",
-            "button_label": "Follow on Instagram",
+            "button_label": "Follow Here",
             "link": "",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
