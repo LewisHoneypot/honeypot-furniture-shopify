@@ -237,46 +237,75 @@
         "padding_bottom_mobile": 20
       }
     },
-    "rich_text_qRXp97": {
-      "type": "rich-text",
+    "image_with_text_8Tn8Jh": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_YXCnEh": {
+        "heading_WAFJYx": {
           "type": "heading",
           "settings": {
-            "heading": "Honeypot Homes",
-            "heading_size": "default",
+            "heading": "<p>Honeypot Homes<\/p>",
+            "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
           }
         },
-        "text_xA3UUY": {
+        "text_pTCVKj": {
           "type": "text",
           "settings": {
-            "text": "<p>Mention <strong>@honeypotfurniture<\/strong> and <strong>#BuzzingWithStyle<\/strong> in your Instagram photos for the chance to be featured in our gallery.<\/p>",
-            "show_line_separator": false,
-            "padding_top": 10,
+            "text": "<h4>Take a look into the homes of our stylish customers!<\/h4>",
+            "padding_top": 0,
             "padding_bottom": 10
           }
         },
-        "button_wmPdEn": {
-          "type": "button",
+        "link_qbjgFK": {
+          "type": "link",
           "settings": {
-            "primary_button_label": "View the Gallery",
-            "primary_button_link": "",
-            "primary_button_type": "default",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "secondary_button_type": "default",
+            "show_view_all": "link",
+            "link_label": "View Gallery",
+            "link": "",
+            "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
       "block_order": [
-        "heading_YXCnEh",
-        "text_xA3UUY",
-        "button_wmPdEn"
+        "heading_WAFJYx",
+        "text_pTCVKj",
+        "link_qbjgFK"
       ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/INSPO_GAL_12.webp",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "text_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_qRXp97": {
+      "type": "rich-text",
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -321,7 +350,7 @@
         "heading": "Meet our Ambassadors",
         "heading_size": "default",
         "text": "<p>Share information about your brand with your customers.<\/p>",
-        "link_label": "Get to know here",
+        "link_label": "Meet here",
         "link": "",
         "heading_alignment": "start",
         "image_ratio": "adapt",
@@ -355,6 +384,7 @@
     "featured_blog_LtkT8c",
     "quotes_g4Wk4y",
     "multicolumn_eLND73",
+    "image_with_text_8Tn8Jh",
     "rich_text_qRXp97",
     "featured_images_KLX8PB"
   ]

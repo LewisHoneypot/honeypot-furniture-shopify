@@ -23,6 +23,7 @@
     "spacing_grid_vertical": 15,
     "enable_animated_cursor": false,
     "colors_animated_cursor": "#ede9e2",
+    "animations_reveal_on_scroll": true,
     "buttons_font_weight": "bold",
     "buttons_border_thickness": 2,
     "buttons_border_opacity": 100,
