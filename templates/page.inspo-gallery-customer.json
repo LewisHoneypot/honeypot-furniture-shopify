@@ -331,6 +331,7 @@
         "image_rQj6dn": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-04-23_at_16.23.44.png",
             "link": ""
           }
         },
@@ -350,7 +351,7 @@
         "heading": "Meet our Ambassadors",
         "heading_size": "default",
         "text": "<p>Share information about your brand with your customers.<\/p>",
-        "link_label": "Meet here",
+        "link_label": "Explore here",
         "link": "",
         "heading_alignment": "start",
         "image_ratio": "adapt",
