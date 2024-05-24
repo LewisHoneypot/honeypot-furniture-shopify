@@ -37,7 +37,7 @@
         "cc19003e-188e-4f3a-a092-71a303ff5987": {
           "type": "image",
           "settings": {
-            "banner_position": 7,
+            "banner_position": 3,
             "image": "shopify:\/\/shop_images\/1.jpg",
             "image_ratio": "adapt",
             "subtitle_image": "",
@@ -58,7 +58,7 @@
         "3fca5cef-72fc-4b52-a001-50044316c114": {
           "type": "image",
           "settings": {
-            "banner_position": 11,
+            "banner_position": 7,
             "image": "shopify:\/\/shop_images\/2_364fb46b-3958-4b65-9934-9d87e9fe54bf.jpg",
             "image_ratio": "adapt",
             "subtitle_image": "",
@@ -68,7 +68,7 @@
             "heading_size": "x-small",
             "show_view_all": "button",
             "text_view_all": "SHOP NOW",
-            "link": "shopify:\/\/collections\/new-arrivals",
+            "link": "shopify:\/\/collections\/outlet",
             "content_inside_image": true,
             "text_alignment": "center",
             "image_color_scheme": "scheme-bb90ec85-e094-470d-b6fe-69f96c26cdab",
