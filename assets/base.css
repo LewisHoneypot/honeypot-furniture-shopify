@@ -4431,7 +4431,7 @@ input:-webkit-autofill:active{
 }
 
 .field__input::placeholder {
-  opacity: 0;
+  opacity: 1;
 }
 
 .field__input:focus,
