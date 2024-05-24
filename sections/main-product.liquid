@@ -833,6 +833,7 @@
                     </a>
                   {%- endif -%}
                 </div>
+                
               {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products d-block element-spacing-all no-js-hidden{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -5095,3 +5096,7 @@
     opacity: .6;
   }
 {% endstylesheet %}
+
+<script>
+  console.log("current_variant", {{ product.variants[0].sku }});
+</script>
