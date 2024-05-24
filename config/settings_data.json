@@ -411,7 +411,7 @@
           "text": "#000000",
           "text_link": "#ede9e2",
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(180deg, rgba(237, 233, 226, 1), rgba(230, 160, 38, 0.29) 100%)",
+          "background_gradient": "",
           "button_label": "#ffffff",
           "button_background": "#121212",
           "button_gradient": "",
