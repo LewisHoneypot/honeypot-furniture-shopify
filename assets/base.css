@@ -20455,3 +20455,11 @@ body.multitasking__show .newsletter-popup-opener {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
 }
+
+.input::placeholder {
+  color: red !important;
+  display: block;
+}
+input::-ms-input-placeholder {
+  color: #999999 !important;
+}
