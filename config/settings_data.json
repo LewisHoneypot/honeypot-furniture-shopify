@@ -513,11 +513,11 @@
       },
       "scheme-bb90ec85-e094-470d-b6fe-69f96c26cdab": {
         "settings": {
-          "text": "#121212",
+          "text": "#000000",
           "text_link": "#2a6876",
           "background": "#ffffff",
           "background_gradient": "",
-          "button_label": "#000000",
+          "button_label": "#ffffff",
           "button_background": "#121212",
           "button_gradient": "",
           "secondary_button_label": "#ffffff",
