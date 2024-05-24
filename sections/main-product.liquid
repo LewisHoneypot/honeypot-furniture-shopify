@@ -5098,5 +5098,6 @@
 {% endstylesheet %}
 
 <script>
-  console.log("current_variant", {{ product.variants[0].sku }});
+  productSku = "{{ product.variants[0].sku }}";
+  console.log("current_variant", productSku);
 </script>

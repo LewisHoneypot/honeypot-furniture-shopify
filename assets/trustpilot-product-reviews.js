@@ -18,7 +18,7 @@ const phpEndpoint =
   environment +
   "/trustpilot/product-reviews.php";
 
-var productSku = "viva_sofabed_grey_2_seater";
+console.log(productSku);
 var productId = "viva_sofabed_grey_2_seater";
 
 // Trustpilot Product Reviews
