@@ -14,7 +14,7 @@
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
           "settings": {
-            "title": "Reviews",
+            "title": "Reviews Mini",
             "padding_top": 5,
             "padding_bottom": 5
           }
