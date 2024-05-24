@@ -11,6 +11,14 @@
             "heading_size": "default"
           }
         },
+        "trustpilot_mini_TB9jLy": {
+          "type": "trustpilot_mini",
+          "settings": {
+            "title": "Reviews",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "settings": {
@@ -98,6 +106,7 @@
       },
       "block_order": [
         "title",
+        "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
