@@ -668,13 +668,18 @@
                     </a>
                   {%- endif -%}
                 {%- endif -%}
+
+              {%- when 'trustpilot_mini' -%}
+                {% render 'product-trustpilot-mini' %}
+
               {%- when 'color_swatch' -%}
                 {%- if product.metafields.custom.product_colour_list != blank -%}
                   <div
                     class="product__variant {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
                     style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px;"
+                    {{ block.shopify_attributes }}
                   >
-                    <h4>{{ block.settings.available_colours }}:</h4>
+                    <p>{{ block.settings.available_colours }}:</p>
 
                     <div class="color-list">
                       {% for p in product.metafields.custom.product_colour_list.value %}
@@ -1840,8 +1845,8 @@
                 {%- elsif size_chart_type == 'custom_image' -%}
                   {% assign img = size_chart_image %}
                   <img
-                    srcset="{{ img | img_url: 'master' }}"
-                    src="{{ img | img_url: 'master' }}"
+                    srcset="{{ img | image_url: 'master' }}"
+                    src="{{ img | image_url: 'master' }}"
                     loading="lazy"
                     alt="{{ img.alt | default: shop.name | escape }}"
                   >
@@ -1969,6 +1974,42 @@
           "id": "text",
           "default": "Text block",
           "label": "t:sections.all.text.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.block_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 5
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 5
+        }
+      ]
+    },
+    {
+      "type": "trustpilot_mini",
+      "name": "Trustpilot Mini",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Reviews"
         },
         {
           "type": "header",
@@ -5003,5 +5044,54 @@
         }
       }
     }
+  }
+
+
+
+  #reviews {
+    video {
+      max-width: 100%;
+    }
+    .userIcon {
+      min-width: 26px;
+    }
+    .innerDiv {
+      border-bottom: solid 1px #F2F2F2;
+      .review-wrapper {
+        .customerInfo {
+          width: -webkit-fill-available;
+        }
+        .attributeNames, .attributeStars {
+          float:left;
+          @media screen and (min-width: 768px) {
+            margin: 44px 0;
+          }
+        }
+      }
+    }
+  }
+  .ammount-of-reviews {
+    position: relative;
+    left: 5px;
+    color: rgba(var(--color-foreground), 1);
+  }
+
+  #reviews-button {
+    text-decoration: none;
+  }
+
+  .tp-widget-readmore-arrow {
+    border-bottom: solid 1px #191919;
+    border-left: solid 1px #191919;
+    bottom: 3px;
+    height: 5px;
+    left: 9px;
+    position: relative;
+    transform: rotate(-45deg);
+    width: 5px;
+    transition: transform .2s;
+    display: inline-block;
+    cursor: pointer;
+    opacity: .6;
   }
 {% endstylesheet %}

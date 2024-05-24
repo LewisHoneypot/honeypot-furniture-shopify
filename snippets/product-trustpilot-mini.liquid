@@ -1,0 +1,29 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'trustpilot_mini' -%}
+      <script src="{{ 'trustpilot-product-reviews.js' | asset_url }}" defer></script>
+      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag: preload: true }}
+
+      <div
+        class="break element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+        {{ block.shopify_attributes }}
+        {% if settings.animations_reveal_on_scroll %}
+          style="
+            --animation-order: {{ forloop.index }};
+            --padding-top: {{ block.settings.padding_top }}px;
+            --padding-bottom: {{ block.settings.padding_bottom }}px;
+            position: inherit;
+            z-index: 1;
+          "
+        {% else %}
+          style="
+            --padding-top: {{ block.settings.padding_top }}px;
+            --padding-bottom: {{ block.settings.padding_bottom }}px;
+          "
+        {% endif %}
+      >
+        <div class="col-12 trustpilot-widget m-0 p-0"></div>
+
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
