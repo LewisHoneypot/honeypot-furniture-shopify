@@ -244,7 +244,7 @@ fetch(urlCurrentProductWithFullRange)
 // Function to get Trustpilot image based on rating
 function getReviewTrustpilotImage(rating, roundedRatingImage) {
   if (rating == "NaN") {
-    $(".trustpilot-widget").addClass("d-none");
+    $(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
       "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
@@ -257,7 +257,7 @@ function getReviewTrustpilotImage(rating, roundedRatingImage) {
 // Function to get Trustpilot image based on rating
 function getTrustpilotAnchorImage(rating, roundedRatingImage) {
   if (rating == "NaN") {
-    $(".trustpilot-widget").addClass("d-none");
+    $(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
       "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
@@ -271,8 +271,8 @@ function getTrustpilotAnchorImage(rating, roundedRatingImage) {
 // Set up the URL for the request
 const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
 
-// Target the element with the class "trustpilot-widget"
-var trustPilotContainer = $(".trustpilot-widget");
+// Target the element with the class "trustpilot-mini-widget"
+var trustPilotContainer = $(".trustpilot-mini-widget");
 
 var rangeType = 2;
 
@@ -388,7 +388,7 @@ fetch(urlCurrentProductRange, {
       );
 
       // Select widget div
-      var outerDiv = $(".trustpilot-widget"); // Replace with the actual ID or selector of your outer div
+      var outerDiv = $(".trustpilot-mini-widget"); // Replace with the actual ID or selector of your outer div
 
       // Create the link with a span inside
       var reviewsLink = $(
@@ -405,8 +405,8 @@ fetch(urlCurrentProductRange, {
 
       if (amountOfReviews == "0") {
         // $(".reviews-accordion").css("display", "none");
-        $(".trustpilot-widget").removeClass("d-lg-block");
-        $(".trustpilot-widget").addClass("d-lg-none");
+        $(".trustpilot-mini-widget").removeClass("d-lg-block");
+        $(".trustpilot-mini-widget").addClass("d-lg-none");
       }
 
       var toolTip = $('<span class="tooltip-content"></span>');
