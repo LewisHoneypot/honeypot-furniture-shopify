@@ -4431,7 +4431,7 @@ input:-webkit-autofill:active{
 }
 
 .field__input::placeholder {
-  opacity: 1;
+  opacity: 0;
 }
 
 .field__input:focus,
@@ -20454,12 +20454,4 @@ body.multitasking__show .newsletter-popup-opener {
 .px-5 {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
-}
-
-.input::placeholder {
-  color: red !important;
-  display: block;
-}
-input::-ms-input-placeholder {
-  color: #999999 !important;
 }
