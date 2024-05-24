@@ -20455,3 +20455,7 @@ body.multitasking__show .newsletter-popup-opener {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
 }
+
+.contact__form .field__input::placeholder {
+  opacity: 1;
+}
