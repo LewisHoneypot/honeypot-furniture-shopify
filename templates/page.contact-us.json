@@ -80,8 +80,7 @@
         "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41"
       ],
       "custom_css": [
-        ".field__input::placeholder {color: red;}",
-        "input::-ms-input-placeholder {color: #999999; font-style: italic; font-size: 14px;}"
+
       ],
       "settings": {
         "section_width": "customized-width",
