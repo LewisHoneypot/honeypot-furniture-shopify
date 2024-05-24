@@ -43,5 +43,6 @@
     .score-bar-fill {
       background-color: #00b67a;
       height: 100%;
+      display: block;
     }
   }
