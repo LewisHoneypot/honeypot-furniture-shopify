@@ -193,6 +193,7 @@
         "image_iVDHka": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/yFrKvQtw.png",
             "heading_image": "Image",
             "heading_size": "default",
             "button_transparent": "transparent",
@@ -213,8 +214,8 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "enable_full_width": true,
-        "heading": "Meet our current Ambassadors",
-        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "heading": "Meet our Ambassadors",
+        "text": "<p>Introducing our brand ambassadors. Explore the homes of influencers representing Honeypot and discover their unique style!<\/p>",
         "text_alignment": "center",
         "heading_margin_bottom": 30,
         "image_ratio": "adapt",
