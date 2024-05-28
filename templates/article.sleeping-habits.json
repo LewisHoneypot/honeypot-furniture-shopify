@@ -418,6 +418,14 @@
         "image_KJjMTP": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120535.789.png",
+            "link": ""
+          }
+        },
+        "image_rWMWEw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120937.057.png",
             "link": ""
           }
         }
@@ -428,7 +436,8 @@
         "image_y8Y8tK",
         "image_Wh6FXb",
         "image_UJxLEb",
-        "image_KJjMTP"
+        "image_KJjMTP",
+        "image_rWMWEw"
       ],
       "settings": {
         "heading": "Discover your dream corner sofa",
