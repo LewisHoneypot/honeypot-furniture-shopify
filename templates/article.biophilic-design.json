@@ -213,8 +213,8 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "enable_full_width": true,
-        "heading": "The Cassia Sofabed",
-        "text": "<p>Bringing nature inside the home<\/p>",
+        "heading": "Sweet serenity",
+        "text": "<p>Boosting serotonin with our Cassia Sofabed.<\/p>",
         "text_alignment": "center",
         "heading_margin_bottom": 30,
         "image_ratio": "adapt",
@@ -297,7 +297,7 @@
         "text_N8YDwh": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><strong>Bring in the natural light<\/strong><br\/>Natural light is always a good idea and you want to allow as much of it as possible to flow into your space. Make sure windows are unobstructed and any window dressings that you choose do not block out the light unnecessarily.<\/li><\/ul><p><\/p><ul><li><strong>Choose an earthy colour palette<\/strong><\/li><\/ul><p>Colours inspired by nature are grounding and create a sense of stability. Using warm earthy colours introduces calm energy and balance to a space and this is exactly the feeling that you want to create in your living room as you want it to be somewhere relaxing and serene.<\/p><p><\/p><ul><li><strong>Opt for natural materials<\/strong><br\/>Natural materials have a sense of authenticity that we as humans are very drawn to. Honest materials such as wood, bamboo, cork, seagrass, rattan, stone and wool are a great way to bring nature indoors.<\/li><\/ul><p><\/p><ul><li><strong>Fill the space with plants<\/strong><br\/>Plants are a great way to bring nature indoors. Studies have proven that indoor plants improve concentration and productivity, reduce stress levels and boost your mood. Some even remove toxins from the air. They can help to create a sense of privacy, reduce noise levels and they look fantastic! All these benefits make plants a perfect choice for your home.<\/li><\/ul><p><\/p><ul><li><strong>Take texture into account<br\/><\/strong>Texture is extremely important in biophilic design. As sensory beings, we understand the world around us through our senses. But the move towards digitalisation, which has been exacerbated by the pandemic, has left us craving more tactile experiences. So, choose accessories that are more textured for your living room. Highly textured plant pots or vases are always good as are textured blankets and cushions or deep pile rugs. Anything that makes you want to run your fingers over the surface is good bet. <\/li><\/ul><p><\/p><ul><li><strong>Add shapes and patterns that are found in nature<br\/><\/strong>Biomorphic forms are the shapes and patterns that we can see in nature. Right angles don’t really exist in nature and humans have a natural visual preference for organic shapes. The Golden Angle, the Fibonacci Series and the Golden ratio are mathematical sequences that occur in many living things, especially plants, flowers and seashells. A living space that brings these shapes and patterns in is often found to be more comfortable and interesting. <\/li><\/ul><p>So what do you think? Would bringing nature into your living room improve your sense of wellbeing?<\/p>",
+            "text": "<ul><li><strong>Bring in the natural light<\/strong><br\/>Natural light is always a good idea and you want to allow as much of it as possible to flow into your space. Make sure windows are unobstructed and any window dressings that you choose do not block out the light unnecessarily.<\/li><\/ul><p><\/p><ul><li><strong>Choose an earthy colour palette<\/strong><\/li><\/ul><p>Colours inspired by nature are grounding and create a sense of stability. Using warm earthy colours introduces calm energy and balance to a space and this is exactly the feeling that you want to create in your living room as you want it to be somewhere relaxing and serene.<\/p><p><\/p><ul><li><strong>Opt for natural materials<\/strong><br\/>Natural materials have a sense of authenticity that we as humans are very drawn to. Honest materials such as wood, bamboo, cork, seagrass, rattan, stone and wool are a great way to bring nature indoors.<\/li><\/ul><p><\/p><ul><li><strong>Fill the space with plants<\/strong><br\/>Plants are a great way to bring nature indoors. Studies have proven that indoor plants improve concentration and productivity, reduce stress levels and boost your mood. Some even remove toxins from the air. They can help to create a sense of privacy, reduce noise levels and they look fantastic! All these benefits make plants a perfect choice for your home.<\/li><\/ul><p><\/p><ul><li><strong>Take texture into account<br\/><\/strong>Texture is extremely important in biophilic design. As sensory beings, we understand the world around us through our senses. But the move towards digitalisation, which has been exacerbated by the pandemic, has left us craving more tactile experiences. So, choose accessories that are more textured for your living room. Highly textured plant pots or vases are always good as are textured blankets and cushions or deep pile rugs. Anything that makes you want to run your fingers over the surface is good bet. <\/li><\/ul><p><\/p><ul><li><strong>Add shapes and patterns that are found in nature<br\/><\/strong>Biomorphic forms are the shapes and patterns that we can see in nature. Right angles don’t really exist in nature and humans have a natural visual preference for organic shapes. The Golden Angle, the Fibonacci Series and the Golden ratio are mathematical sequences that occur in many living things, especially plants, flowers and seashells. A living space that brings these shapes and patterns in is often found to be more comfortable and interesting. <\/li><\/ul>",
             "show_line_separator": false,
             "padding_top": 0,
             "padding_bottom": 0
@@ -319,6 +319,95 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "collage_7jEFMq": {
+      "type": "collage",
+      "blocks": {
+        "image_GxKiRb": {
+          "type": "image",
+          "settings": {
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_aLQJyN": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_GxKiRb",
+        "image_aLQJyN"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "More inspo",
+        "text": "<p>Take a look into some of our customers homes that have brought nature into their homes.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_NjkrN7": {
+      "type": "rich-text",
+      "blocks": {
+        "text_9bU9L9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>So what do you think? Would bringing nature into your living room improve your sense of wellbeing?<\/p>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_9bU9L9"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
@@ -327,6 +416,8 @@
     "rich_text_axgV7j",
     "slideshow_kET49Q",
     "rich_text_t4bmPn",
-    "rich_text_FRFx86"
+    "rich_text_FRFx86",
+    "collage_7jEFMq",
+    "rich_text_NjkrN7"
   ]
 }
