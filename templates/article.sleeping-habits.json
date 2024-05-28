@@ -22,21 +22,6 @@
             "padding_bottom": 50
           }
         },
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62": {
-          "type": "lookbook",
-          "settings": {
-            "heading": "Sample lookbook block",
-            "heading_size": "default",
-            "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-            "primary_button_label": "SHOP CORNERS",
-            "primary_button_link": "shopify:\/\/collections",
-            "secondary_button_label": "",
-            "secondary_button_link": "shopify:\/\/collections\/all",
-            "lookbook_color_scheme": "",
-            "padding_top": 50,
-            "padding_bottom": 50
-          }
-        },
         "textarea_cxtAp8": {
           "type": "textarea",
           "settings": {
@@ -151,7 +136,7 @@
         "richtext_J4KGhy": {
           "type": "richtext",
           "settings": {
-            "richtext": "<h2><strong>1.<\/strong> <strong>Corner Sofas are Ideal for Relaxing and Entertaining<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p>",
+            "richtext": "<h2><strong>1.<\/strong> <strong>Corner Sofas are Ideal for Relaxing and Entertaining<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p>",
             "padding_top": 5,
             "padding_bottom": 0
           }
@@ -169,7 +154,6 @@
       "block_order": [
         "title",
         "featured_image",
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62",
         "textarea_cxtAp8",
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e",
         "dbb1046b-8608-4216-9c87-234fbf663d9b",
@@ -307,7 +291,7 @@
         "text_8xTi8N": {
           "type": "text",
           "settings": {
-            "text": "<p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p>",
+            "text": "",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -354,7 +338,7 @@
         "text_animation": "none",
         "padding_top": 0,
         "padding_bottom": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 10,
         "padding_bottom_mobile": 0
       }
     },
