@@ -380,10 +380,10 @@
     "featured_images_gMiw9q": {
       "type": "featured-images",
       "blocks": {
-        "image_LgyTDa": {
+        "image_xatz4C": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T111039.222.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T121757.648.png",
             "link": ""
           }
         },
@@ -394,24 +394,10 @@
             "link": ""
           }
         },
-        "image_y8Y8tK": {
+        "image_LgyTDa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115039.155.png",
-            "link": ""
-          }
-        },
-        "image_Wh6FXb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115926.149.png",
-            "link": ""
-          }
-        },
-        "image_UJxLEb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120125.224.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T111039.222.png",
             "link": ""
           }
         },
@@ -422,22 +408,44 @@
             "link": ""
           }
         },
+        "image_Wh6FXb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115926.149.png",
+            "link": ""
+          }
+        },
+        "image_y8Y8tK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115039.155.png",
+            "link": ""
+          }
+        },
         "image_rWMWEw": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120937.057.png",
             "link": ""
           }
+        },
+        "image_UJxLEb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120125.224.png",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "image_LgyTDa",
+        "image_xatz4C",
         "image_KG6JYy",
-        "image_y8Y8tK",
-        "image_Wh6FXb",
-        "image_UJxLEb",
+        "image_LgyTDa",
         "image_KJjMTP",
-        "image_rWMWEw"
+        "image_Wh6FXb",
+        "image_y8Y8tK",
+        "image_rWMWEw",
+        "image_UJxLEb"
       ],
       "settings": {
         "heading": "Discover your dream corner sofa",
@@ -458,10 +466,10 @@
         "spacing_desktop": 10,
         "spacing_tablet": 10,
         "spacing_mobile": 10,
-        "arrows_type": "none",
+        "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
+        "pagination_type": "dots",
         "image_animation": "none",
         "padding_top": 40,
         "padding_bottom": 40,
