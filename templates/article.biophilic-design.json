@@ -171,6 +171,69 @@
         "padding_bottom_mobile": 0
       }
     },
+    "collage_UPrp97": {
+      "type": "collage",
+      "blocks": {
+        "image_EGUxfP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T140951.895.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_TrXPRW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T141107.543.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_EGUxfP",
+        "image_TrXPRW"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "The Cassia Sofabed",
+        "text": "<p>Bringing nature inside the home<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "dots",
+        "color_scheme": "scheme-c638ff86-4b84-4bb9-990b-d59c008b07a7",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "rich_text_axgV7j": {
       "type": "rich-text",
       "settings": {
@@ -207,20 +270,6 @@
     },
     "rich_text_t4bmPn": {
       "type": "rich-text",
-      "blocks": {
-        "heading_LJbBWq": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Here are some tips and advice for bringing nature into your living room with Biophilic design<\/strong>.",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 0
-          }
-        }
-      },
-      "block_order": [
-        "heading_LJbBWq"
-      ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -236,6 +285,15 @@
     "rich_text_FRFx86": {
       "type": "rich-text",
       "blocks": {
+        "heading_tGQLbj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Here are some tips and advice for bringing nature into your living room with Biophilic design<\/strong>.",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
         "text_N8YDwh": {
           "type": "text",
           "settings": {
@@ -247,6 +305,7 @@
         }
       },
       "block_order": [
+        "heading_tGQLbj",
         "text_N8YDwh"
       ],
       "settings": {
@@ -264,6 +323,7 @@
   },
   "order": [
     "main",
+    "collage_UPrp97",
     "rich_text_axgV7j",
     "slideshow_kET49Q",
     "rich_text_t4bmPn",
