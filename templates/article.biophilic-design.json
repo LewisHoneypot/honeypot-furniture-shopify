@@ -214,7 +214,7 @@
             "heading": "<strong>Here are some tips and advice for bringing nature into your living room with Biophilic design<\/strong>.",
             "heading_size": "default",
             "padding_top": 10,
-            "padding_bottom": 10
+            "padding_bottom": 0
           }
         }
       },
@@ -255,7 +255,7 @@
         "show_line_separator": false,
         "text_alignment": "left",
         "color_scheme": "",
-        "padding_top": 30,
+        "padding_top": 0,
         "padding_bottom": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
