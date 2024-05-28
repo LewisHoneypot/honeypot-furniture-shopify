@@ -323,9 +323,10 @@
     "collage_7jEFMq": {
       "type": "collage",
       "blocks": {
-        "image_GxKiRb": {
+        "image_aLQJyN": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/20230310_142512_3.jpg",
             "heading_image": "",
             "heading_size": "default",
             "button_transparent": "transparent",
@@ -337,14 +338,30 @@
             "desktop_content_position": "top-left"
           }
         },
-        "image_aLQJyN": {
+        "image_gmre94": {
           "type": "image",
           "settings": {
-            "heading_image": "Image",
+            "image": "shopify:\/\/shop_images\/IMG_8832.jpg",
+            "heading_image": "",
             "heading_size": "default",
             "button_transparent": "transparent",
             "button_type": "standard",
-            "button_label": "Button label",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_GxKiRb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Teddy_Chair_noonshome_mary_2.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
             "link": "",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
@@ -353,14 +370,15 @@
         }
       },
       "block_order": [
-        "image_GxKiRb",
-        "image_aLQJyN"
+        "image_aLQJyN",
+        "image_gmre94",
+        "image_GxKiRb"
       ],
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
         "enable_full_width": true,
-        "heading": "More inspo",
+        "heading": "Customer inspo",
         "text": "<p>Take a look into some of our customers homes that have brought nature into their homes.<\/p>",
         "text_alignment": "center",
         "heading_margin_bottom": 30,
@@ -408,6 +426,67 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "collage_rxMm7J": {
+      "type": "collage",
+      "blocks": {
+        "image_7VLp9H": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_bX6FFN": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_7VLp9H",
+        "image_bX6FFN"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Images",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
@@ -418,6 +497,7 @@
     "rich_text_t4bmPn",
     "rich_text_FRFx86",
     "collage_7jEFMq",
-    "rich_text_NjkrN7"
+    "rich_text_NjkrN7",
+    "collage_rxMm7J"
   ]
 }
