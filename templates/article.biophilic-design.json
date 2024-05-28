@@ -339,7 +339,7 @@
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
-        "enable_full_width": true,
+        "enable_full_width": false,
         "heading": "",
         "text": "",
         "text_alignment": "center",
@@ -350,7 +350,7 @@
         "spacing_mobile": 10,
         "enable_carousel": true,
         "enable_pagination_type": "sm",
-        "pagination_type": "progressbar",
+        "pagination_type": "dots",
         "color_scheme": "scheme-c638ff86-4b84-4bb9-990b-d59c008b07a7",
         "image_animation": "none",
         "image_behavior": "none",
@@ -358,7 +358,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 10
       }
     },
     "rich_text_FRFx86": {
@@ -456,7 +456,7 @@
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
-        "enable_full_width": true,
+        "enable_full_width": false,
         "heading": "Customer inspo",
         "text": "<p>Take a look into some of our customers homes that have brought nature into their homes.<\/p>",
         "text_alignment": "center",
@@ -467,7 +467,7 @@
         "spacing_mobile": 10,
         "enable_carousel": true,
         "enable_pagination_type": "sm",
-        "pagination_type": "progressbar",
+        "pagination_type": "dots",
         "color_scheme": "",
         "image_animation": "none",
         "image_behavior": "none",
