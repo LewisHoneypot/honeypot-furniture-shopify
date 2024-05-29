@@ -109,21 +109,21 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_8.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/rupert-bundle-offer"
           }
         },
         "image_XeErBH": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_2.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/kiana-modular-sofa-ivory-large-corner"
           }
         },
         "image_hCczVX": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_7.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-3-seater"
           }
         }
       },
@@ -186,14 +186,14 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_5.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-2-seater"
           }
         },
         "image_8L4ygQ": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_40_copy.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-3-2-set"
           }
         }
       },
