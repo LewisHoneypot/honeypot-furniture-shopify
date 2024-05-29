@@ -89,7 +89,7 @@
         "show_tags": false,
         "show_button": true,
         "button_transparent": "default",
-        "text_per_line": "none",
+        "text_per_line": "1",
         "text_alignment": "left",
         "title_margin_top": 0,
         "title_margin_bottom": 10,
