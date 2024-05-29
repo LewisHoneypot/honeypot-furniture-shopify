@@ -220,14 +220,14 @@
       "background-1": {
         "settings": {
           "text": "#121212",
-          "text_link": "#2a6876",
+          "text_link": "#FFFFFF",
           "background": "#ffffff",
           "background_gradient": "",
           "button_label": "#ffffff",
-          "button_background": "#b7b0a3",
+          "button_background": "#000000",
           "button_gradient": "",
-          "secondary_button_label": "#ffffff",
-          "secondary_button_background": "#2a6876",
+          "secondary_button_label": "#000000",
+          "secondary_button_background": "#b7b0a3",
           "secondary_button_gradient": "",
           "arrow": "#121212",
           "arrow_background": "#121212",

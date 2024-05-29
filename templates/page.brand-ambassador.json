@@ -88,7 +88,7 @@
         "heading_yjzFCY": {
           "type": "heading",
           "settings": {
-            "heading": "Join our family!",
+            "heading": "<strong>Join our family!<\/strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
