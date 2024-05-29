@@ -19,7 +19,7 @@
           "type": "featured_image",
           "settings": {
             "padding_top": 14,
-            "padding_bottom": 50
+            "padding_bottom": 41
           }
         },
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e": {
@@ -204,7 +204,7 @@
           "settings": {
             "text": "<p>If the average lifespan of a UK adult is roughly 81 years, according to <a href=\"https:\/\/www.ons.gov.uk\/peoplepopulationandcommunity\/birthsdeathsandmarriages\/lifeexpectancies\/bulletins\/nationallifetablesunitedkingdom\/2018to2020\"><span style=\"text-decoration:underline\">ONS figures<\/span><\/a> published in 2021, and healthy adults need approximately 8 hours of sleep a night, that would mean that we spend at least 236,520 hours or 27 years of our lives asleep. And that is not including all the time that we spend trying to fall asleep. <\/p><p>Given that most of us spend the majority of our sleeping hours in the bedroom, it’s vitally important that this room is conducive to a good night’s sleep. Studies have shown that our sleeping environment has a meaningful impact on our sleeping patterns and the quality of our sleep is a major factor for health and wellbeing. <\/p><p>So how can we ensure that we create a bedroom that promotes healthy sleep habits? Well, there are a number of factors that can influence the sleeping environment and the quality of sleep that we get. Let’s take a look at some of those factors.<\/p>",
             "show_line_separator": false,
-            "padding_top": 10,
+            "padding_top": 0,
             "padding_bottom": 10
           }
         },
