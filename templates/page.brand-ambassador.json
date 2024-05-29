@@ -180,29 +180,29 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_2_1.webp",
             "heading_image": "Georgia Cole (@missgcole)",
-            "heading_size": "small",
-            "button_transparent": "transparent",
+            "heading_size": "large",
+            "button_transparent": "default",
             "button_type": "standard",
-            "button_label": "Follow Here",
-            "link": "",
+            "button_label": "Follow Georgia",
+            "link": "https:\/\/www.instagram.com\/missgcole\/",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
+            "desktop_content_position": "bottom-left"
           }
         },
         "image_iVDHka": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/yFrKvQtw.png",
-            "heading_image": "Image",
-            "heading_size": "default",
-            "button_transparent": "transparent",
+            "image": "shopify:\/\/shop_images\/zoe.png",
+            "heading_image": "Zoë Silva (@thesilvahome)",
+            "heading_size": "large",
+            "button_transparent": "default",
             "button_type": "standard",
-            "button_label": "Button label",
-            "link": "",
+            "button_label": "Follow Zoë",
+            "link": "https:\/\/www.instagram.com\/thesilvahome\/",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
+            "desktop_content_position": "bottom-left"
           }
         }
       },
@@ -213,19 +213,19 @@
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
-        "enable_full_width": true,
+        "enable_full_width": false,
         "heading": "Meet our Ambassadors",
         "text": "<p>Introducing our brand ambassadors. Explore the homes of influencers representing Honeypot and discover their unique style!<\/p>",
         "text_alignment": "center",
         "heading_margin_bottom": 30,
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "spacing_desktop": 20,
         "spacing_tablet": 10,
         "spacing_mobile": 10,
-        "enable_carousel": true,
+        "enable_carousel": false,
         "enable_pagination_type": "sm",
         "pagination_type": "progressbar",
-        "color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
+        "color_scheme": "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0",
         "image_animation": "none",
         "image_behavior": "none",
         "text_animation": "none",
