@@ -129,7 +129,7 @@
         "richtext_J4KGhy": {
           "type": "richtext",
           "settings": {
-            "richtext": "<p>If the average lifespan of a UK adult is roughly 81 years, according to <a href=\"https:\/\/www.ons.gov.uk\/peoplepopulationandcommunity\/birthsdeathsandmarriages\/lifeexpectancies\/bulletins\/nationallifetablesunitedkingdom\/2018to2020\"><span style=\"text-decoration:underline\">ONS figures<\/span><\/a> published in 2021, and healthy adults need approximately 8 hours of sleep a night, that would mean that we spend at least 236,520 hours or 27 years of our lives asleep. And that is not including all the time that we spend trying to fall asleep. <\/p><p>Given that most of us spend the majority of our sleeping hours in the bedroom, it’s vitally important that this room is conducive to a good night’s sleep. Studies have shown that our sleeping environment has a meaningful impact on our sleeping patterns and the quality of our sleep is a major factor for health and wellbeing. <\/p><p>So how can we ensure that we create a bedroom that promotes healthy sleep habits? Well, there are a number of factors that can influence the sleeping environment and the quality of sleep that we get. Let’s take a look at some of those factors.<\/p>",
+            "richtext": "<p>If the average lifespan of a UK adult is roughly 81 years, according to <a href=\"https:\/\/www.ons.gov.uk\/peoplepopulationandcommunity\/birthsdeathsandmarriages\/lifeexpectancies\/bulletins\/nationallifetablesunitedkingdom\/2018to2020\"><span style=\"text-decoration:underline\">ONS figures<\/span><\/a> published in 2021, and healthy adults need approximately 8 hours of sleep a night, that would mean that we spend at least 236,520 hours or 27 years of our lives asleep. And that is not including all the time that we spend trying to fall asleep.<\/p><p>Given that most of us spend the majority of our sleeping hours in the bedroom, it’s vitally important that this room is conducive to a good night’s sleep. Studies have shown that our sleeping environment has a meaningful impact on our sleeping patterns and the quality of our sleep is a major factor for health and wellbeing. <\/p><p>So how can we ensure that we create a bedroom that promotes healthy sleep habits? Well, there are a number of factors that can influence the sleeping environment and the quality of sleep that we get. Let’s take a look at some of those factors.<\/p>",
             "padding_top": 5,
             "padding_bottom": 0
           }
@@ -206,66 +206,18 @@
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": false,
-        "color_autoplay": "#FFFFFF",
+        "color_autoplay": "#ffffff",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
         "image_behavior": "none",
         "accessibility_info": "Slideshow about our brand"
       }
-    },
-    "image_with_text_FKcFTc": {
-      "type": "image-with-text",
-      "blocks": {
-        "link_e7HVtw": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Link label",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "link_e7HVtw"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
     }
   },
   "order": [
     "main",
     "rich_text_axgV7j",
-    "slideshow_kET49Q",
-    "image_with_text_FKcFTc"
+    "slideshow_kET49Q"
   ]
 }
