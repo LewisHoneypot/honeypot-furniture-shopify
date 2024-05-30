@@ -394,7 +394,7 @@
           "button_label": "#ffffff",
           "button_background": "#121212",
           "button_gradient": "",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#000000",
           "secondary_button_background": "#ede9e2",
           "secondary_button_gradient": "",
           "arrow": "#121212",
