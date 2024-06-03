@@ -64,7 +64,7 @@ fetch(urlCurrentProductWithFullRange)
       data.productReviews.forEach((review, i) => {
         var innerDiv = $("<div>").addClass("innerDiv").appendTo(outerDiv);
         var reviewWrapper = $("<div>")
-          .addClass("review-wrapper row")
+          .addClass("review-wrapper row mt-5")
           .appendTo(innerDiv);
         var reviewSection = $("<div>")
           .addClass("reviewSection pb-sm-3 col-12 col-lg-7 order-1")
@@ -73,7 +73,7 @@ fetch(urlCurrentProductWithFullRange)
           .addClass("reviewSectionHeader pb-sm-3 d-inline-flex")
           .appendTo(reviewSection);
         var attributeSection = $("<div>")
-          .addClass("attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5")
+          .addClass("attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5")
           .appendTo(reviewWrapper);
         var attributeSectionWrapper = $("<div>")
           .addClass("attributeSectionWrapper col-12 p-0")
@@ -190,6 +190,10 @@ fetch(urlCurrentProductWithFullRange)
 
           // console.log('attribute.rating', attribute.rating)
           // console.log('roundedRating', roundedRating)
+          if (attribute.attributeName == "Value for money") {
+            attribute.attributeName = "Value";
+          }
+          // console.log('attribute.attributeName', attribute.attributeName)
 
           attributeNames
             .append(
