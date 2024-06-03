@@ -71,7 +71,7 @@
             "link": "shopify:\/\/collections\/outlet",
             "content_inside_image": true,
             "text_alignment": "center",
-            "image_color_scheme": "scheme-bb90ec85-e094-470d-b6fe-69f96c26cdab",
+            "image_color_scheme": "background-1",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#ffffff"
           }
