@@ -1,1 +1,115 @@
-{"sections":{"main":{"type":"main-page","settings":{"section_width":"customized-width","customize_width":1400,"padding_top":4,"padding_bottom":36,"padding_top_mobile":10,"padding_bottom_mobile":0}},"rich_text_qgHpYy":{"type":"rich-text","blocks":{"heading_8zrh3E":{"type":"heading","settings":{"heading":"We'd love to hear from you!","heading_size":"default","padding_top":10,"padding_bottom":10}},"text_DUcWQ6":{"type":"text","settings":{"text":"<p>Our friendly team are available online, in store or over the phone to help with any questions you may have. <\/p>","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_Thpi8Y":{"type":"button","disabled":true,"settings":{"primary_button_label":"Button label","primary_button_link":"","primary_button_type":"default","secondary_button_label":"Button label","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["heading_8zrh3E","text_DUcWQ6","button_Thpi8Y"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"form":{"type":"contact-form","blocks":{"6590b1b0-227d-4fcc-9983-ab8aa8ae9b41":{"type":"text","settings":{"text":"<h3>PHONE OPERATING HOURS:<\/h3><p>Monday - Friday: 8AM - 8PM<br\/><a href=\"tel:01476 589 446\"><strong>01476 589 446<\/strong><\/a><\/p><h3>VISIT OUR SHOWROOM:<\/h3><p>Honeypot Furniture, Honey Pot Ln,<br\/>Colsterworth, Grantham,<br\/>NG33 5LY<\/p><p>Opening Hours:<br\/>Monday - Friday: 9AM - 5PM<br\/>Saturday: 10AM - 3PM<br\/>Sunday: Closed<\/p><h3>EMAIL:<\/h3><p><a href=\"mailto:sales@honeypotfurniture.co.uk\"><strong>cs@honeypotfurniture.co.uk<\/strong><\/a><\/p>","padding_top":10,"padding_bottom":10}}},"block_order":["6590b1b0-227d-4fcc-9983-ab8aa8ae9b41"],"settings":{"section_width":"customized-width","customize_width":1400,"heading":"","color_scheme":"scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c","padding_top":0,"padding_bottom":30,"padding_top_mobile":0,"padding_bottom_mobile":30}},"af56dcf8-8a72-482f-b12b-b4ef33768eeb":{"type":"map","settings":{"map_address":"Honeypot Furniture","section_width":"full-width","customize_width":1800,"padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}}},"order":["main","rich_text_qgHpYy","form","af56dcf8-8a72-482f-b12b-b4ef33768eeb"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 4,
+        "padding_bottom": 36,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_qgHpYy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8zrh3E": {
+          "type": "heading",
+          "settings": {
+            "heading": "We'd love to hear from you!",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_DUcWQ6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our friendly team are available online, in store or over the phone to help with any questions you may have. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_Thpi8Y": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_8zrh3E",
+        "text_DUcWQ6",
+        "button_Thpi8Y"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>PHONE OPERATING HOURS:<\/h3><p>Monday - Friday: 8AM - 8PM<br\/><a href=\"tel:01476 589 446\"><strong>01476 589 446<\/strong><\/a><\/p><h3>VISIT OUR SHOWROOM:<\/h3><p>Honeypot Furniture, Honey Pot Ln,<br\/>Colsterworth, Grantham,<br\/>NG33 5LY<\/p><p>Opening Hours:<br\/>Monday - Friday: 9AM - 5PM<br\/>Saturday: 10AM - 3PM<br\/>Sunday: Closed<\/p><h3>EMAIL:<\/h3><p><a href=\"mailto:sales@honeypotfurniture.co.uk\"><strong>cs@honeypotfurniture.co.uk<\/strong><\/a><\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "heading": "",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "af56dcf8-8a72-482f-b12b-b4ef33768eeb": {
+      "type": "map",
+      "settings": {
+        "map_address": "Honeypot Furniture",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_qgHpYy",
+    "form",
+    "af56dcf8-8a72-482f-b12b-b4ef33768eeb"
+  ]
+}

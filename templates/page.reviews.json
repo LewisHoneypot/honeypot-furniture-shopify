@@ -10,9 +10,76 @@
         "padding_top_mobile": 10,
         "padding_bottom_mobile": 0
       }
+    },
+    "rich_text_Hahizt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cnFWzk": {
+          "type": "heading",
+          "settings": {
+            "heading": "We let our customers do the talking...",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_ne9khT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rated excellent on TrustPilot, check out what our customers love about us below.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_yeaxwa": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Leave your review",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_cnFWzk",
+        "text_ne9khT",
+        "button_yeaxwa"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "trustpilot_service_reviews_Nyjc3L": {
+      "type": "trustpilot-service-reviews",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "user_image": "shopify:\/\/shop_images\/user-72x72.webp",
+        "staff_image": "shopify:\/\/shop_images\/bee-32x32.png"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_Hahizt",
+    "trustpilot_service_reviews_Nyjc3L"
   ]
 }

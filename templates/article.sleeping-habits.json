@@ -22,21 +22,6 @@
             "padding_bottom": 50
           }
         },
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62": {
-          "type": "lookbook",
-          "settings": {
-            "heading": "Sample lookbook block",
-            "heading_size": "default",
-            "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-            "primary_button_label": "MAKEUP COLLECTION",
-            "primary_button_link": "shopify:\/\/collections",
-            "secondary_button_label": "SKINCARE COLLECTION",
-            "secondary_button_link": "shopify:\/\/collections\/all",
-            "lookbook_color_scheme": "",
-            "padding_top": 50,
-            "padding_bottom": 50
-          }
-        },
         "textarea_cxtAp8": {
           "type": "textarea",
           "settings": {
@@ -128,16 +113,6 @@
             "padding_bottom": 10
           }
         },
-        "dfb4131b-663f-4f55-8b18-d7a8c8da99e0": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "link": "",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
         "c2d92a77-6742-443f-ab49-4f4531f241dd": {
           "type": "text",
           "disabled": true,
@@ -151,7 +126,7 @@
         "richtext_J4KGhy": {
           "type": "richtext",
           "settings": {
-            "richtext": "<h2><strong>1.<\/strong> <strong>Corner Sofas are Ideal for Relaxing and Entertaining<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p>",
+            "richtext": "<h2><strong>1.<\/strong> <strong>Corner Sofas are Ideal for Relaxing and Entertaining<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p><h2><strong>2. Corner Sofas Create and Save Space<\/strong><\/h2><p>Due to their angular shape, corner sofas can easily be pushed back into the corner of the room. This creates more floor space in the centre of the room which gives the impression that the room is larger and more spacious. Simply choose which corner it will sit in and then choose either a left-handed or right-handed corner sofa. <\/p><p>A corner sofa will take up less floor area than two sofas and an armchair. Because corner sofas can often accommodate more people, they can be used without the need for any other seating in smaller rooms and so save space. In this way, a corner sofa is perfect for a small living room.<\/p><h2><strong>3. Corner Sofas Create Zones in a Room<\/strong><\/h2><p>Because of their versatility, corner sofas can be placed almost anywhere in your living room. Whilst they are often pushed back into a corner or against a wall, they don’t have to be. In fact, if the room is large enough a corner sofa can be positioned further into the room. <\/p><p>When used in this way, a corner sofa can actually be used to zone a room. It can create a visual division in the room separating different areas. This works particularly well in open plan spaces where the living room and dining room are essentially one space. A corner sofa can delineate where one space ends and another space starts. <\/p><h2><strong>4. A Corner Sofa as a Guest Bed<\/strong><\/h2><p>A corner sofa with bed can be an excellent option if you don’t have a guest bedroom in your home. A living room that features a corner sofa bed can double up as a guest room when needed, without wasting space when it is not needed.  <\/p><p>A corner sofa with pullout bed can quickly be transformed into a comfortable guest bed for those planned or impromptu overnight stays by friends and family. Better still is a corner sofa bed with storage so that all the spare bedding can be kept to hand but concealed when not in use. <\/p>",
             "padding_top": 5,
             "padding_bottom": 0
           }
@@ -169,7 +144,6 @@
       "block_order": [
         "title",
         "featured_image",
-        "928278dd-b3d7-47ad-96aa-e2525d7f6c62",
         "textarea_cxtAp8",
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e",
         "dbb1046b-8608-4216-9c87-234fbf663d9b",
@@ -179,7 +153,6 @@
         "4b59d7e5-a6ee-41c6-8754-f3ea506d68c3",
         "223011ac-60a2-4273-af73-1fe7dd2ab5f8",
         "e578b579-5e2e-4751-91c7-d07c8906fdd6",
-        "dfb4131b-663f-4f55-8b18-d7a8c8da99e0",
         "c2d92a77-6742-443f-ab49-4f4531f241dd",
         "richtext_J4KGhy",
         "richtext_xYeKhn"
@@ -193,20 +166,6 @@
         "padding_bottom": 58,
         "padding_top_mobile": 17,
         "padding_bottom_mobile": 0
-      }
-    },
-    "visual_hightlight_HDMgc8": {
-      "type": "visual-hightlight",
-      "settings": {
-        "slide_height": 70,
-        "color_scheme": "",
-        "carousel_infinite_scroll": true,
-        "enable_autoplay": false,
-        "change_slides_speed": 3,
-        "enable_pagination_type": "all",
-        "pagination_type": "dots",
-        "image_behavior": "none",
-        "accessibility_info": "Slideshow about our brand"
       }
     },
     "6eb9b3c8-7aad-4657-8a17-1511a91315cf": {
@@ -301,63 +260,6 @@
         "padding_bottom_mobile": 40
       }
     },
-    "image_with_text_DRcAqw": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_8xTi8N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_MGgtMN": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Shop All Corners",
-            "link": "",
-            "button_transparent": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_8xTi8N",
-        "link_MGgtMN"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/BANNER_3_mob_for_ben.webp",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "rich_text_MCKYqC": {
       "type": "rich-text",
       "blocks": {
@@ -373,7 +275,7 @@
         "text_YdiFer": {
           "type": "text",
           "settings": {
-            "text": "<p>Due to their angular shape, corner sofas can easily be pushed back into the corner of the room. This creates more floor space in the centre of the room which gives the impression that the room is larger and more spacious. Simply choose which corner it will sit in and then choose either a left-handed or right-handed corner sofa. <\/p>",
+            "text": "<p>Due to their angular shape, corner sofas can easily be pushed back into the corner of the room. This creates more floor space in the centre of the room which gives the impression that the room is larger and more spacious. Simply choose which corner it will sit in and then choose either a left-handed or right-handed corner sofa. <\/p><p>A corner sofa will take up less floor area than two sofas and an armchair. Because corner sofas can often accommodate more people, they can be used without the need for any other seating in smaller rooms and so save space. In this way, a corner sofa is perfect for a small living room.<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -384,6 +286,7 @@
         "heading_Qb9Gd9",
         "text_YdiFer"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -394,63 +297,6 @@
         "padding_bottom": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_MVqykj": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_QAhtbX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A corner sofa will take up less floor area than two sofas and an armchair. Because corner sofas can often accommodate more people, they can be used without the need for any other seating in smaller rooms and so save space. In this way, a corner sofa is perfect for a small living room.<\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_qKLHHA": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Space Saving Corners",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_QAhtbX",
-        "link_qKLHHA"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "rich_text_6jMw4D": {
@@ -468,7 +314,7 @@
         "text_rzdPwT": {
           "type": "text",
           "settings": {
-            "text": "<p>Because of their versatility, corner sofas can be placed almost anywhere in your living room. Whilst they are often pushed back into a corner or against a wall, they don’t have to be. In fact, if the room is large enough a corner sofa can be positioned further into the room. <\/p>",
+            "text": "<p>Because of their versatility, corner sofas can be placed almost anywhere in your living room. Whilst they are often pushed back into a corner or against a wall, they don’t have to be. In fact, if the room is large enough a corner sofa can be positioned further into the room. <\/p><p>When used in this way, a corner sofa can actually be used to zone a room. It can create a visual division in the room separating different areas. This works particularly well in open plan spaces where the living room and dining room are essentially one space. A corner sofa can delineate where one space ends and another space starts. <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -479,6 +325,7 @@
         "heading_ryfnPH",
         "text_rzdPwT"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -489,63 +336,6 @@
         "padding_bottom": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_46mhg6": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_YcFAy9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>When used in this way, a corner sofa can actually be used to zone a room. It can create a visual division in the room separating different areas. This works particularly well in open plan spaces where the living room and dining room are essentially one space. A corner sofa can delineate where one space ends and another space starts. <\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "link_MwREMW": {
-          "type": "link",
-          "settings": {
-            "show_view_all": "link",
-            "link_label": "Trendy Corners",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_YcFAy9",
-        "link_MwREMW"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "rich_text_DCxi7K": {
@@ -563,7 +353,7 @@
         "text_iy9F7N": {
           "type": "text",
           "settings": {
-            "text": "<p>A corner sofa with bed can be an excellent option if you don’t have a guest bedroom in your home. A living room that features a corner sofa bed can double up as a guest room when needed, without wasting space when it is not needed.  <\/p>",
+            "text": "<p>A corner sofa with bed can be an excellent option if you don’t have a guest bedroom in your home. A living room that features a corner sofa bed can double up as a guest room when needed, without wasting space when it is not needed.  <\/p><p>A corner sofa with pullout bed can quickly be transformed into a comfortable guest bed for those planned or impromptu overnight stays by friends and family. Better still is a corner sofa bed with storage so that all the spare bedding can be kept to hand but concealed when not in use. <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -574,6 +364,7 @@
         "heading_ApkV9c",
         "text_iy9F7N"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -586,75 +377,114 @@
         "padding_bottom_mobile": 20
       }
     },
-    "image_with_text_j9QUHJ": {
-      "type": "image-with-text",
+    "featured_images_gMiw9q": {
+      "type": "featured-images",
       "blocks": {
-        "text_aCTEz6": {
-          "type": "text",
+        "image_xatz4C": {
+          "type": "image",
           "settings": {
-            "text": "<p>A corner sofa with pullout bed can quickly be transformed into a comfortable guest bed for those planned or impromptu overnight stays by friends and family. Better still is a corner sofa bed with storage so that all the spare bedding can be kept to hand but concealed when not in use. <\/p>",
-            "padding_top": 10,
-            "padding_bottom": 10
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T121757.648.png",
+            "link": ""
           }
         },
-        "link_WkxtpL": {
-          "type": "link",
+        "image_KG6JYy": {
+          "type": "image",
           "settings": {
-            "show_view_all": "link",
-            "link_label": "Corner Sofabeds",
-            "link": "",
-            "button_transparent": "transparent",
-            "padding_top": 10,
-            "padding_bottom": 10
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T113447.582.png",
+            "link": ""
+          }
+        },
+        "image_LgyTDa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T111039.222.png",
+            "link": ""
+          }
+        },
+        "image_KJjMTP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120535.789.png",
+            "link": ""
+          }
+        },
+        "image_Wh6FXb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115926.149.png",
+            "link": ""
+          }
+        },
+        "image_y8Y8tK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T115039.155.png",
+            "link": ""
+          }
+        },
+        "image_rWMWEw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120937.057.png",
+            "link": ""
+          }
+        },
+        "image_UJxLEb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T120125.224.png",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "text_aCTEz6",
-        "link_WkxtpL"
+        "image_xatz4C",
+        "image_KG6JYy",
+        "image_LgyTDa",
+        "image_KJjMTP",
+        "image_Wh6FXb",
+        "image_y8Y8tK",
+        "image_rWMWEw",
+        "image_UJxLEb"
       ],
       "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Chloe_Sofa_Grey_Left_Hand_Facing_Corner_LF_1_6.jpg",
-        "heading": "",
+        "heading": "Discover your dream corner sofa",
         "heading_size": "default",
-        "link_label": "",
+        "text": "<p>From storage corners to sofas big enough for the entire family, we have a corner for every home!<\/p>",
+        "link_label": "Shop here",
         "link": "",
-        "colors_heading": "#FFFFFF",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
+        "heading_alignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "",
+        "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "",
         "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
+        "carousel_number": 1.3,
+        "carousel_number_tablet": 1,
+        "carousel_number_mobile": "1.2",
+        "spacing_desktop": 10,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
         "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     }
   },
   "order": [
     "main",
-    "visual_hightlight_HDMgc8",
     "6eb9b3c8-7aad-4657-8a17-1511a91315cf",
     "collection_with_product_mLU7wy",
-    "image_with_text_DRcAqw",
     "rich_text_MCKYqC",
-    "image_with_text_MVqykj",
     "rich_text_6jMw4D",
-    "image_with_text_46mhg6",
     "rich_text_DCxi7K",
-    "image_with_text_j9QUHJ"
+    "featured_images_gMiw9q"
   ]
 }

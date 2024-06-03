@@ -467,7 +467,7 @@
           "type": "column",
           "settings": {
             "block_content_max_w": "full",
-            "custom_content_max_w": 250,
+            "custom_content_max_w": 500,
             "set_border": false,
             "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-13T104126.945.png",
             "content_position": "center",

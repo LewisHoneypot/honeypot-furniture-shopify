@@ -28,7 +28,7 @@
         "heading_wej8ga": {
           "type": "heading",
           "settings": {
-            "heading": "Inspiration",
+            "heading": "Inspiration Gallery",
             "heading_size": "large",
             "padding_top": 10,
             "padding_bottom": 10
@@ -109,21 +109,21 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_8.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/rupert-bundle-offer"
           }
         },
         "image_XeErBH": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_2.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/kiana-modular-sofa-ivory-large-corner"
           }
         },
         "image_hCczVX": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_7.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-3-seater"
           }
         }
       },
@@ -186,14 +186,14 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_5.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-2-seater"
           }
         },
         "image_8L4ygQ": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_40_copy.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-3-2-set"
           }
         }
       },
@@ -249,14 +249,14 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_12.webp",
-            "image_link": "shopify:\/\/products\/verona-fullback-sofa-grey-armchair"
+            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-armchair"
           }
         },
         "image_Ax4VHw": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_10.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-3-seater"
           }
         },
         "image_Qy7XXK": {
@@ -309,7 +309,7 @@
         "padding_top": 10,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 10
       }
     },
     "image_gallery_R3mqGX": {
@@ -319,21 +319,21 @@
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_19.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/azzuro-sofabed-cream-universal-corner"
           }
         },
         "image_yXxqFU": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/UGC_29.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/harper-sofa-plush-beige-4-seater"
           }
         },
         "image_YrD39a": {
           "type": "Image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_GAL_16.webp",
-            "image_link": ""
+            "image_link": "shopify:\/\/products\/briar-sofa-beige-left-hand-facing-corner"
           }
         }
       },
