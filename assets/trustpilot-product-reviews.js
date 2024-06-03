@@ -67,13 +67,13 @@ fetch(urlCurrentProductWithFullRange)
           .addClass("review-wrapper row")
           .appendTo(innerDiv);
         var reviewSection = $("<div>")
-          .addClass("reviewSection pb-sm-3 col-12 col-md-7 order-1")
+          .addClass("reviewSection pb-sm-3 col-12 col-lg-7 order-1")
           .appendTo(reviewWrapper);
         var reviewSectionHeader = $("<div>")
           .addClass("reviewSectionHeader pb-sm-3 d-inline-flex")
           .appendTo(reviewSection);
         var attributeSection = $("<div>")
-          .addClass("attribute-section col-12 col-md-5 order-2 pr-md-0 pb-5")
+          .addClass("attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5")
           .appendTo(reviewWrapper);
         var attributeSectionWrapper = $("<div>")
           .addClass("attributeSectionWrapper col-12 p-0")
@@ -82,7 +82,7 @@ fetch(urlCurrentProductWithFullRange)
           .addClass("col-4 p-0 attributeNames")
           .appendTo(attributeSectionWrapper);
         var attributeStars = $("<div>")
-          .addClass("col-8 p-0 attributeStars text-right text-md-left")
+          .addClass("col-8 p-0 attributeStars text-right text-lg-left")
           .appendTo(attributeSectionWrapper);
         var userIcon = $("<div>")
           .addClass("userIcon userIcon pt-2")
@@ -203,7 +203,7 @@ fetch(urlCurrentProductWithFullRange)
 
         // Create a button to toggle additional content
         var buttonWrapper = $("<div>").addClass(
-          "buttonWrapper text-center pt-4 px-4 d-md-none"
+          "buttonWrapper text-center pt-4 px-4 d-lg-none"
         );
         reviewSection.append(buttonWrapper);
         var toggleButton = $("<button>")
@@ -213,7 +213,7 @@ fetch(urlCurrentProductWithFullRange)
 
         // Additional content to toggle (e.g., more details about the review)
         var additionalContent = $("<div>")
-          .addClass("additional-content d-md-block")
+          .addClass("additional-content d-lg-block")
           .hide();
         attributeSection.append(additionalContent);
 
