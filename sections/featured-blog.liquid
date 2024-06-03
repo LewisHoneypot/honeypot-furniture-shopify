@@ -31,7 +31,7 @@
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
   "
 >
-  <div class="container-line blog-post col-{{ carousel_number }}{% if section.settings.style_layout == 'enable_carousel' %} carousel-special{% endif %} blog-{{ section.settings.style_layout }}">
+  <div class="container-line blog-post col-12 {% if section.settings.style_layout == 'enable_carousel' %} carousel-special{% endif %} blog-{{ section.settings.style_layout }}">
     <div class="{{ section.settings.header_width }} m-auto{% if section.settings.header_width == 'full-width' %} p-container-f-w{% endif %}"
       {% if section.settings.header_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}
       {% if section.settings.header_width == 'full-width' %}style="--padding-container-full-width: {{ section.settings.padding_container_full_w }}px;"{% endif %}
