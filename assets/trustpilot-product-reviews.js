@@ -207,13 +207,18 @@ fetch(urlCurrentProductWithFullRange)
 
         // Create a button to toggle additional content
         var buttonWrapper = $("<div>").addClass(
-          "buttonWrapper text-center pt-4 px-4 d-lg-none"
+          "buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item"
         );
         reviewSection.append(buttonWrapper);
+
         var toggleButton = $("<button>")
-          .addClass("toggle-button btn btn-secondary")
-          .text("Rating Breakdown");
+        .addClass("button button--style-" + button_style + " mi-w color-" + primary_button_color_scheme + "");
         buttonWrapper.append(toggleButton);
+
+        var buttonSpan = $("<span>")
+        .addClass("text")
+        .text(primary_button_label);
+        toggleButton.append(buttonSpan);
 
         // Additional content to toggle (e.g., more details about the review)
         var additionalContent = $("<div>")
@@ -230,9 +235,9 @@ fetch(urlCurrentProductWithFullRange)
           additionalContent.toggle();
           // Change button text based on visibility
           if (additionalContent.is(":visible")) {
-            toggleButton.text("Hide Breakdown");
+            buttonSpan.text("Hide Breakdown");
           } else {
-            toggleButton.text("Rating Breakdown");
+            buttonSpan.text("Rating Breakdown");
           }
         });
       });
