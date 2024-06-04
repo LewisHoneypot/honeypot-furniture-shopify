@@ -71,7 +71,7 @@
         "text_size": "x-small",
         "enable_pagination_type": "md",
         "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "use_custom_color": true,
+        "use_custom_color": false,
         "colors_text": "#000000",
         "colors_background": "#f5f5f5",
         "gradient_background": "",
