@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "custom_liquid_T7RRLB": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_T7RRLB"
+  ]
+}
