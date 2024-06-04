@@ -129,7 +129,7 @@
         "richtext_J4KGhy": {
           "type": "richtext",
           "settings": {
-            "richtext": "<p>One of the biggest interior design trends that we have seen coming through in 2021 is biophilic design. The word biophilic comes from the Greek words ‘Bios’ meaning love and ‘Philia’ meaning life, so it literally means a love of living things. Based on this, biophilic design as a concept is about bringing nature into the built environment.<\/p><p>As humans, we have an innate biological need to connect with nature and there have been many studies that show when nature is incorporated into workplaces, employees are more productive, suffer lower levels of stress and are generally happier and more creative. They also take less time off sick. <\/p><p>The same can be seen in hospitals where access to natural daylighting and views of nature lead to faster recovery rates for patients, decreased dependency on medication and improved emotional wellbeing. Staff and family members also suffer less stress. <\/p><p>But biophilic design isn’t only beneficial in commercial and public spaces. It can also have a hugely positive impact in our homes. So how can we use the concepts of biophilic design to create a living room that is good for our mental health and wellbeing and makes us feel good? The answer is to bring nature into the space.<\/p>",
+            "richtext": "<p>One of the biggest interior design trends that we have seen coming through in 2021 is biophilic design. The word biophilic comes from the Greek words ‘Bios’ meaning love and ‘Philia’ meaning life, so it literally means a love of living things. Based on this, biophilic design as a concept is about bringing nature into the built environment.<\/p><p><\/p><p>As humans, we have an innate biological need to connect with nature and there have been many studies that show when nature is incorporated into workplaces, employees are more productive, suffer lower levels of stress and are generally happier and more creative. They also take less time off sick. <\/p><p><\/p><p>The same can be seen in hospitals where access to natural daylighting and views of nature lead to faster recovery rates for patients, decreased dependency on medication and improved emotional wellbeing. Staff and family members also suffer less stress. <\/p><p><\/p><p>But biophilic design isn’t only beneficial in commercial and public spaces. It can also have a hugely positive impact in our homes. So how can we use the concepts of biophilic design to create a living room that is good for our mental health and wellbeing and makes us feel good? The answer is to bring nature into the space.<\/p>",
             "padding_top": 5,
             "padding_bottom": 0
           }
@@ -171,6 +171,69 @@
         "padding_bottom_mobile": 0
       }
     },
+    "collage_UPrp97": {
+      "type": "collage",
+      "blocks": {
+        "image_EGUxfP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T140951.895.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_TrXPRW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T141107.543.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_EGUxfP",
+        "image_TrXPRW"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Sweet serenity",
+        "text": "<p>Boosting serotonin with our collections.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "dots",
+        "color_scheme": "scheme-c638ff86-4b84-4bb9-990b-d59c008b07a7",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "rich_text_axgV7j": {
       "type": "rich-text",
       "settings": {
@@ -207,8 +270,101 @@
     },
     "rich_text_t4bmPn": {
       "type": "rich-text",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_WMiFaJ": {
+      "type": "collage",
       "blocks": {
-        "heading_LJbBWq": {
+        "image_N8XcCU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T151713.704.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_GDHBbE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T152443.369.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_Mqtrtw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-28T154449.671.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_N8XcCU",
+        "image_GDHBbE",
+        "image_Mqtrtw"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": false,
+        "heading": "",
+        "text": "",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "square",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "dots",
+        "color_scheme": "scheme-c638ff86-4b84-4bb9-990b-d59c008b07a7",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "rich_text_FRFx86": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tGQLbj": {
           "type": "heading",
           "settings": {
             "heading": "<strong>Here are some tips and advice for bringing nature into your living room with Biophilic design<\/strong>.",
@@ -216,10 +372,127 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "text_N8YDwh": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Bring in the natural light<\/strong><br\/>Natural light is always a good idea and you want to allow as much of it as possible to flow into your space. Make sure windows are unobstructed and any window dressings that you choose do not block out the light unnecessarily.<\/li><\/ul><p><\/p><ul><li><strong>Choose an earthy colour palette<\/strong><\/li><\/ul><p>Colours inspired by nature are grounding and create a sense of stability. Using warm earthy colours introduces calm energy and balance to a space and this is exactly the feeling that you want to create in your living room as you want it to be somewhere relaxing and serene.<\/p><p><\/p><ul><li><strong>Opt for natural materials<\/strong><br\/>Natural materials have a sense of authenticity that we as humans are very drawn to. Honest materials such as wood, bamboo, cork, seagrass, rattan, stone and wool are a great way to bring nature indoors.<\/li><\/ul><p><\/p><ul><li><strong>Fill the space with plants<\/strong><br\/>Plants are a great way to bring nature indoors. Studies have proven that indoor plants improve concentration and productivity, reduce stress levels and boost your mood. Some even remove toxins from the air. They can help to create a sense of privacy, reduce noise levels and they look fantastic! All these benefits make plants a perfect choice for your home.<\/li><\/ul><p><\/p><ul><li><strong>Take texture into account<br\/><\/strong>Texture is extremely important in biophilic design. As sensory beings, we understand the world around us through our senses. But the move towards digitalisation, which has been exacerbated by the pandemic, has left us craving more tactile experiences. So, choose accessories that are more textured for your living room. Highly textured plant pots or vases are always good as are textured blankets and cushions or deep pile rugs. Anything that makes you want to run your fingers over the surface is good bet. <\/li><\/ul><p><\/p><ul><li><strong>Add shapes and patterns that are found in nature<br\/><\/strong>Biomorphic forms are the shapes and patterns that we can see in nature. Right angles don’t really exist in nature and humans have a natural visual preference for organic shapes. The Golden Angle, the Fibonacci Series and the Golden ratio are mathematical sequences that occur in many living things, especially plants, flowers and seashells. A living space that brings these shapes and patterns in is often found to be more comfortable and interesting. <\/li><\/ul>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
         }
       },
       "block_order": [
-        "heading_LJbBWq"
+        "heading_tGQLbj",
+        "text_N8YDwh"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_7jEFMq": {
+      "type": "collage",
+      "blocks": {
+        "image_aLQJyN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230310_142512_3.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_gmre94": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_8832.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_GxKiRb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Teddy_Chair_noonshome_mary_2.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_aLQJyN",
+        "image_gmre94",
+        "image_GxKiRb"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": false,
+        "heading": "Customer inspo",
+        "text": "<p>Take a look into some of our customers homes that have brought nature into their homes.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "dots",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_NjkrN7": {
+      "type": "rich-text",
+      "blocks": {
+        "text_9bU9L9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>So what do you think? Would bringing nature into your living room improve your sense of wellbeing?<\/p>",
+            "show_line_separator": false,
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_9bU9L9"
       ],
       "settings": {
         "section_width": "page-width",
@@ -233,30 +506,64 @@
         "padding_bottom_mobile": 20
       }
     },
-    "rich_text_FRFx86": {
-      "type": "rich-text",
+    "collage_rxMm7J": {
+      "type": "collage",
       "blocks": {
-        "text_N8YDwh": {
-          "type": "text",
+        "image_7VLp9H": {
+          "type": "image",
           "settings": {
-            "text": "<ul><li><strong>Bring in the natural light<\/strong><br\/>Natural light is always a good idea and you want to allow as much of it as possible to flow into your space. Make sure windows are unobstructed and any window dressings that you choose do not block out the light unnecessarily.<\/li><\/ul><p><\/p><ul><li><strong>Choose an earthy colour palette<\/strong><\/li><\/ul><p>Colours inspired by nature are grounding and create a sense of stability. Using warm earthy colours introduces calm energy and balance to a space and this is exactly the feeling that you want to create in your living room as you want it to be somewhere relaxing and serene.<\/p><p><\/p><ul><li><strong>Opt for natural materials<\/strong><br\/>Natural materials have a sense of authenticity that we as humans are very drawn to. Honest materials such as wood, bamboo, cork, seagrass, rattan, stone and wool are a great way to bring nature indoors.<\/li><\/ul><p><\/p><ul><li><strong>Fill the space with plants<\/strong><br\/>Plants are a great way to bring nature indoors. Studies have proven that indoor plants improve concentration and productivity, reduce stress levels and boost your mood. Some even remove toxins from the air. They can help to create a sense of privacy, reduce noise levels and they look fantastic! All these benefits make plants a perfect choice for your home.<\/li><\/ul><p><\/p><ul><li><strong>Take texture into account<br\/><\/strong>Texture is extremely important in biophilic design. As sensory beings, we understand the world around us through our senses. But the move towards digitalisation, which has been exacerbated by the pandemic, has left us craving more tactile experiences. So, choose accessories that are more textured for your living room. Highly textured plant pots or vases are always good as are textured blankets and cushions or deep pile rugs. Anything that makes you want to run your fingers over the surface is good bet. <\/li><\/ul><p><\/p><ul><li><strong>Add shapes and patterns that are found in nature<br\/><\/strong>Biomorphic forms are the shapes and patterns that we can see in nature. Right angles don’t really exist in nature and humans have a natural visual preference for organic shapes. The Golden Angle, the Fibonacci Series and the Golden ratio are mathematical sequences that occur in many living things, especially plants, flowers and seashells. A living space that brings these shapes and patterns in is often found to be more comfortable and interesting. <\/li><\/ul><p>So what do you think? Would bringing nature into your living room improve your sense of wellbeing?<\/p>",
-            "show_line_separator": false,
-            "padding_top": 0,
-            "padding_bottom": 0
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_bX6FFN": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
           }
         }
       },
       "block_order": [
-        "text_N8YDwh"
+        "image_7VLp9H",
+        "image_bX6FFN"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
-        "show_line_separator": false,
-        "text_alignment": "left",
+        "enable_full_width": true,
+        "heading": "Images",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
         "color_scheme": "",
-        "padding_top": 30,
-        "padding_bottom": 30,
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
@@ -264,9 +571,14 @@
   },
   "order": [
     "main",
+    "collage_UPrp97",
     "rich_text_axgV7j",
     "slideshow_kET49Q",
     "rich_text_t4bmPn",
-    "rich_text_FRFx86"
+    "collage_WMiFaJ",
+    "rich_text_FRFx86",
+    "collage_7jEFMq",
+    "rich_text_NjkrN7",
+    "collage_rxMm7J"
   ]
 }

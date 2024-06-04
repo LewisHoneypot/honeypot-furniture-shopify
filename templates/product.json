@@ -11,6 +11,14 @@
             "heading_size": "default"
           }
         },
+        "trustpilot_mini_TB9jLy": {
+          "type": "trustpilot_mini",
+          "settings": {
+            "title": "Trustpilot Mini",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "settings": {
@@ -50,17 +58,17 @@
             "show_dynamic_checkout": true,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
-            "add_to_cart_colors_text": "#ffffff",
-            "add_to_cart_colors_background": "#000000",
+            "add_to_cart_colors_text": "#ede9e2",
+            "add_to_cart_colors_background": "#3c3c3b",
             "add_to_cart_gradient_background": "",
-            "add_to_cart_colors_text_hover": "#000000",
-            "add_to_cart_colors_background_hover": "#d0e9e9",
+            "add_to_cart_colors_text_hover": "#3c3c3b",
+            "add_to_cart_colors_background_hover": "#ede9e2",
             "add_to_cart_gradient_background_hover": "",
-            "buy_it_now_colors_text": "#424242",
-            "buy_it_now_colors_background": "#d0e9e9",
+            "buy_it_now_colors_text": "#3c3c3b",
+            "buy_it_now_colors_background": "#ede9e2",
             "buy_it_now_gradient_background": "",
-            "buy_it_now_colors_text_hover": "#ffffff",
-            "buy_it_now_colors_background_hover": "#988c8b",
+            "buy_it_now_colors_text_hover": "#ede9e2",
+            "buy_it_now_colors_background_hover": "#3c3c3b",
             "buy_it_now_gradient_background_hover": "",
             "wishlist_colors_text": "#000000",
             "wishlist_colors_background": "#000000",
@@ -98,6 +106,7 @@
       },
       "block_order": [
         "title",
+        "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
@@ -304,6 +313,17 @@
         "padding_bottom_mobile": 20
       }
     },
+    "trustpilot_product_revewis_Eb8Cd6": {
+      "type": "trustpilot-product-revewis",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "video_QM4Cg7": {
       "type": "video",
       "settings": {
@@ -438,7 +458,7 @@
       "settings": {
         "heading": "You may also like",
         "products_to_show": 5,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "carousel_number": 3,
@@ -535,7 +555,7 @@
         "text_alignment_mobile": "center",
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
         "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "#f6eee3",
@@ -551,6 +571,7 @@
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
+    "trustpilot_product_revewis_Eb8Cd6",
     "video_QM4Cg7",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
