@@ -331,7 +331,7 @@
     "video_QM4Cg7": {
       "type": "video",
       "settings": {
-        "video": "{{ product.metafields.custom.video_file.value }}",
+        "video": "shopify:\/\/files\/videos\/Wilcot Sofa Grey Large Corner - Without - 29052024.mp4",
         "video_url": "",
         "description": "",
         "enable_autoplay": true,
