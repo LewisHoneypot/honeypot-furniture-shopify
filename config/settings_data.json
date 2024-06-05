@@ -368,7 +368,7 @@
         "settings": {
           "text": "#2d2d2d",
           "text_link": "#2a6876",
-          "background": "#f6f6f6",
+          "background": "#ffffff",
           "background_gradient": "",
           "button_label": "#000000",
           "button_background": "#121212",
@@ -497,7 +497,7 @@
           "background": "#000000",
           "background_gradient": "",
           "button_label": "#ffffff",
-          "button_background": "#FFFFFF",
+          "button_background": "#ffffff",
           "button_gradient": "",
           "secondary_button_label": "#45544c",
           "secondary_button_background": "#ede9e2",
