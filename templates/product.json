@@ -334,7 +334,7 @@
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
         "description": "",
-        "enable_autoplay": true,
+        "enable_autoplay": false,
         "enable_video_looping": true,
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
