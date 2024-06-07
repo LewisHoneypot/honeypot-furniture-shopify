@@ -48,7 +48,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "Show Me All Mattresses",
-            "primary_button_link": "",
+            "primary_button_link": "shopify:\/\/collections\/mattresses",
             "primary_button_type": "default",
             "secondary_button_label": "Help Me Find The Perfect Mattress",
             "secondary_button_link": "",
