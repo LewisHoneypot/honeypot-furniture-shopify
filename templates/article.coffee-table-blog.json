@@ -202,7 +202,7 @@
         "text_67qjMj": {
           "type": "text",
           "settings": {
-            "text": "<p>Stools and benches are extremely versatile pieces of furniture that can be used in multiples rooms around the house and for various functions. They are great additions to the family home and can provide additional seating, storage or surface areas. <\/p><p>What makes stools and benches so flexible is the fact that they are portable and extremely easy to move around, whether that is within one room or between rooms. They can be moved to wherever extra seating or surfaces are needed at the time. <\/p><p>In this post, we will explore how you can use stools and benches in every room in the home. <\/p>",
+            "text": "<p>A <a href=\"https:\/\/honeypotfurniture.co.uk\/living-room\/coffee-tables\/\"><span style=\"text-decoration:underline\">coffee table<\/span><\/a> is generally considered to be an integral part of any living room. As with the sofa, it is one of those pieces of furniture that we have come to expect to see in the room. For many families, the coffee table is a multi-functional piece of furniture that serves many purposes. But do we really give enough thought to our coffee table when it comes to choosing this important piece of living room furniture?<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -211,7 +211,7 @@
         "text_AxW9Ln": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>In the Living Room<\/strong><\/p><p>There are many ways to use stools and benches in the living room. They can be used as extra seating for larger gatherings when friends and family come to visit. You can use them in addition to your sofas and armchairs so that everybody has a seat during social gatherings.<\/p><p>Alternatively, stools and benches can be used instead of a coffee table. Benches work particularly well as they are low and long. They provide plenty of surface area for placing things you need to keep close to hand.<\/p><p>In small spaces, a foot stool can double up as a coffee table. For upholstered stools, try placing a tray on top to protect the fabric and create a flat surface for drinks, vases or trinkets. A small stool can also be placed next to an armchair or sofa to act as a side table.  <\/p><p>Stools with storage are also a great addition to the living room. Not only can they act as additional seating or as a coffee or side table, but they allow you to store belongings inside too. Perhaps you can use them to store blankets or extra cushions, or maybe you can store magazines inside.<\/p>",
+            "text": "<p><strong>What are coffee tables used for? <\/strong><\/p><p>The purpose of a coffee table is partly in the name. It is somewhere to place your coffee or other drinks to keep them close to hand while you relax on the sofa. However, it is also used as somewhere to home the remote control and other devices you have in the living room. It can be used as somewhere to display your coffee table books or a vase of flowers or other trinkets. It might also be somewhere you play board games as a family or where the children do their colouring in or drawing. Or perhaps it’s where you gather for a laid-back meal at the weekend in front of a movie? <\/p><p>You see, didn’t we say that a coffee table is a multi-functional piece of furniture? Given how many functions it can serve, is it necessary to have a coffee table in the living room? <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -258,69 +258,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "collage_nJHnwn": {
-      "type": "collage",
-      "blocks": {
-        "image_EXqLBC": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_2.jpg",
-            "heading_image": "",
-            "heading_size": "default",
-            "button_transparent": "transparent",
-            "button_type": "standard",
-            "button_label": "",
-            "link": "",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
-          }
-        },
-        "image_HKTfQP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_1.jpg",
-            "heading_image": "",
-            "heading_size": "default",
-            "button_transparent": "transparent",
-            "button_type": "standard",
-            "button_label": "",
-            "link": "",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
-          }
-        }
-      },
-      "block_order": [
-        "image_EXqLBC",
-        "image_HKTfQP"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "enable_full_width": true,
-        "heading": "",
-        "text": "<p>The Astrid Footstool<\/p>",
-        "text_alignment": "center",
-        "heading_margin_bottom": 30,
-        "image_ratio": "adapt",
-        "spacing_desktop": 20,
-        "spacing_tablet": 10,
-        "spacing_mobile": 10,
-        "enable_carousel": true,
-        "enable_pagination_type": "sm",
-        "pagination_type": "progressbar",
-        "color_scheme": "",
-        "image_animation": "none",
-        "image_behavior": "none",
-        "text_animation": "none",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
     "rich_text_f4krkd": {
       "type": "rich-text",
       "blocks": {
@@ -348,6 +285,69 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "carousel_images_dViGta": {
+      "type": "carousel-images",
+      "blocks": {
+        "slide_GjXAKg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
+            "content_margin_negative_top_desktop": 75,
+            "content_margin_negative_top_tablet": 60,
+            "content_margin_negative_top_mobile": 45,
+            "subheading": "",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading": "",
+            "heading_size": "large",
+            "description": "",
+            "description_size": "medium",
+            "button_style": "default",
+            "button_label": "",
+            "button_link": "",
+            "text_alignment": "center"
+          }
+        },
+        "slide_eyfPwj": {
+          "type": "slide",
+          "settings": {
+            "content_margin_negative_top_desktop": 75,
+            "content_margin_negative_top_tablet": 60,
+            "content_margin_negative_top_mobile": 45,
+            "subheading": "Tell your brand's story through images",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading": "Image slide",
+            "heading_size": "large",
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<br> Add details on availability, style, or even provide a review.<\/p>",
+            "description_size": "medium",
+            "button_style": "default",
+            "button_label": "Button label",
+            "button_link": "",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GjXAKg",
+        "slide_eyfPwj"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "color_scheme": "",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": true,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "accessibility_info": "",
+        "padding_top": 78,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
+      }
     }
   },
   "order": [
@@ -356,7 +356,7 @@
     "slideshow_kET49Q",
     "rich_text_VQxCPE",
     "rich_text_GyRE9A",
-    "collage_nJHnwn",
-    "rich_text_f4krkd"
+    "rich_text_f4krkd",
+    "carousel_images_dViGta"
   ]
 }
