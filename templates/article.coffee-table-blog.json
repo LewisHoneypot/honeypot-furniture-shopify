@@ -1,0 +1,362 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "default",
+            "blog_show_date": true,
+            "blog_show_author": true,
+            "text_size": "medium",
+            "enable_share": false,
+            "padding_top": 26,
+            "padding_bottom": 50
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "padding_top": 14,
+            "padding_bottom": 50
+          }
+        },
+        "bc2e5eb0-2d12-4acb-9a16-36775ca5787e": {
+          "type": "tag",
+          "disabled": true,
+          "settings": {
+            "label": "Tags:",
+            "show_line_separator": true,
+            "padding_top": 40,
+            "padding_bottom": 50
+          }
+        },
+        "dbb1046b-8608-4216-9c87-234fbf663d9b": {
+          "type": "image-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "image_first",
+            "heading": "Tips To Arrange Your Living Room Furniture",
+            "text": "<ul><li>How To Arrange Furniture.<\/li><li>Furniture With Storage.<\/li><li>Symmetrical Furniture Arrangement.<\/li><li>Make your living room feel more sociable.<\/li><li>Use the brightening sofa.<\/li><\/ul>",
+            "button_label": "Sample Button",
+            "button_link": "shopify:\/\/collections",
+            "button_transparent": "default",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "6ac17fb1-5639-4998-b799-b1b94a51450b": {
+          "type": "textarea",
+          "disabled": true,
+          "settings": {
+            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"<\/p>",
+            "padding_top": 50,
+            "padding_bottom": 16
+          }
+        },
+        "3d1b737a-93bb-4b59-9276-41245bfd41c9": {
+          "type": "textarea",
+          "disabled": true,
+          "settings": {
+            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor<\/strong><\/h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.<\/p>\n<\/blockquote>",
+            "padding_top": 20,
+            "padding_bottom": 26
+          }
+        },
+        "23a03595-e8e3-4628-821c-cacf114e59f8": {
+          "type": "textarea",
+          "disabled": true,
+          "settings": {
+            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor<\/strong><\/h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.<\/p>",
+            "padding_top": 30,
+            "padding_bottom": 31
+          }
+        },
+        "4b59d7e5-a6ee-41c6-8754-f3ea506d68c3": {
+          "type": "posts",
+          "disabled": true,
+          "settings": {
+            "heading": "Recent Articles",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        },
+        "223011ac-60a2-4273-af73-1fe7dd2ab5f8": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {
+            "heading": "Popular Tags",
+            "padding_top": 10,
+            "padding_bottom": 14
+          }
+        },
+        "e578b579-5e2e-4751-91c7-d07c8906fdd6": {
+          "type": "products",
+          "disabled": true,
+          "settings": {
+            "heading": "Best Sellers",
+            "collection": "new",
+            "product_list_limit": 6,
+            "products_per_page": 3,
+            "image_ratio": "square",
+            "show_swatch": true,
+            "padding_top": 14,
+            "padding_bottom": 10
+          }
+        },
+        "dfb4131b-663f-4f55-8b18-d7a8c8da99e0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-07T121503.493.png",
+            "link": "",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "c2d92a77-6742-443f-ab49-4f4531f241dd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Custom Block",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "padding_top": 16,
+            "padding_bottom": 0
+          }
+        },
+        "richtext_xYeKhn": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p><p><\/p>",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "bc2e5eb0-2d12-4acb-9a16-36775ca5787e",
+        "dbb1046b-8608-4216-9c87-234fbf663d9b",
+        "6ac17fb1-5639-4998-b799-b1b94a51450b",
+        "3d1b737a-93bb-4b59-9276-41245bfd41c9",
+        "23a03595-e8e3-4628-821c-cacf114e59f8",
+        "4b59d7e5-a6ee-41c6-8754-f3ea506d68c3",
+        "223011ac-60a2-4273-af73-1fe7dd2ab5f8",
+        "e578b579-5e2e-4751-91c7-d07c8906fdd6",
+        "dfb4131b-663f-4f55-8b18-d7a8c8da99e0",
+        "c2d92a77-6742-443f-ab49-4f4531f241dd",
+        "richtext_xYeKhn"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1400,
+        "type_style": "special",
+        "color_scheme": "",
+        "padding_top": 17,
+        "padding_bottom": 58,
+        "padding_top_mobile": 17,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_axgV7j": {
+      "type": "rich-text",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "slideshow_kET49Q": {
+      "type": "slideshow",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "image_ratio": "adapt-image",
+        "image_ratio_mobile": "550px",
+        "color_scheme": "",
+        "arrows_type": "all",
+        "arrows_position": "middle-center",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": false,
+        "color_autoplay": "#ffffff",
+        "change_slides_speed": 5,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "image_behavior": "none",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_VQxCPE": {
+      "type": "rich-text",
+      "blocks": {
+        "text_67qjMj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stools and benches are extremely versatile pieces of furniture that can be used in multiples rooms around the house and for various functions. They are great additions to the family home and can provide additional seating, storage or surface areas. <\/p><p>What makes stools and benches so flexible is the fact that they are portable and extremely easy to move around, whether that is within one room or between rooms. They can be moved to wherever extra seating or surfaces are needed at the time. <\/p><p>In this post, we will explore how you can use stools and benches in every room in the home. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_AxW9Ln": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>In the Living Room<\/strong><\/p><p>There are many ways to use stools and benches in the living room. They can be used as extra seating for larger gatherings when friends and family come to visit. You can use them in addition to your sofas and armchairs so that everybody has a seat during social gatherings.<\/p><p>Alternatively, stools and benches can be used instead of a coffee table. Benches work particularly well as they are low and long. They provide plenty of surface area for placing things you need to keep close to hand.<\/p><p>In small spaces, a foot stool can double up as a coffee table. For upholstered stools, try placing a tray on top to protect the fabric and create a flat surface for drinks, vases or trinkets. A small stool can also be placed next to an armchair or sofa to act as a side table.  <\/p><p>Stools with storage are also a great addition to the living room. Not only can they act as additional seating or as a coffee or side table, but they allow you to store belongings inside too. Perhaps you can use them to store blankets or extra cushions, or maybe you can store magazines inside.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_g97bcw": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_67qjMj",
+        "text_AxW9Ln",
+        "text_g97bcw"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_GyRE9A": {
+      "type": "rich-text",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_nJHnwn": {
+      "type": "collage",
+      "blocks": {
+        "image_EXqLBC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_2.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_HKTfQP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_1.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_EXqLBC",
+        "image_HKTfQP"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "<p>The Astrid Footstool<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_f4krkd": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6ibGxD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>In the Bedroom<\/strong><\/p><p>The bedroom is another room in the home where stools and benches come in handy. Buying a bench for the end of the bed is a great idea as this gives you somewhere to sit when getting dressed and undressed. It is particularly handy when putting on trousers and socks. It also works well for when you want to sit in the bedroom and talk with someone who may be in bed. <\/p><p>Both stools and benches could be used in the bedroom with a dressing table. Having somewhere to get ready in the morning is desirable in a bedroom and dressing stools allow you to sit at the dressing table while getting ready for the day ahead. <\/p><p><strong>In the Hallway<\/strong><\/p><p>If your hallway is wide enough, it is a great idea to use stools and benches to provide seating for when you want to put on and remove your shoes. A bench seat could also be used to place handbags on or to place the mail before you have a chance to go through it. <\/p><p>If you choose a storage bench or storage stool, you can even keep your shoes or other outdoor wear stored neatly away out of sight. <\/p><p><strong>In the Dining Room<\/strong><\/p><p>The dining room is the perfect place to use stools and benches. If you have a large dining table, particularly an extendable dining table, having additional stools or benches that you can use to seat extra guests is a must. <\/p><p>Having a dining table with bench can be preferable to only using chairs. It’s much easier to seat more people on a bench when you need to create extra place settings for larger gatherings. Using a bench for the dining table can also be a great way to save space. Benches will fit nicely underneath the table out of the way, whereas chairs can only be tucked in so far. <\/p><p><strong>In the Kitchen<\/strong><\/p><p>The kitchen is another room where stools and benches come into their own. Investing in stools for the kitchen is a great idea if you have high cupboards that you cannot reach very well. A stool will give you that added height to be able to reach even the highest shelves. <\/p><p>You may want to invest in stools for a breakfast bar. Being able to sit at this raised counter for light meals, snacks or completing quick admin tasks can be very useful. A popular choice is often bar stools for the kitchen.<\/p><p><strong>In the Bathroom<\/strong><\/p><p>The bathroom is probably the most unexpected room in the home to use stools and benches, but due to their practicality and flexibility they work extremely well in bathrooms too. A stool can be used to provide seating so you can sit down while you watch the kids who are enjoying their bath time. Or it can act as a perch for your partner so you can share details about your day while they sit beside you while you soak.<\/p><p>A small stool could also be used as a surface to place your toiletries on next to the bath, making it easier to reach the products that you need while you bathe. If you’re trying to create a spa-like vibe you could also place rolled up towels on stools and benches. <\/p><p>A bench is also a useful addition for placing your clothes on once you have undressed ready to take a bath or shower.<\/p><p>Stools and benches can have many uses around the home. These flexible and versatile pieces of furniture are a great investment. <\/p><p>If you’ve bought stools or benches from Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #BuzzingWithStyle.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_6ibGxD"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_axgV7j",
+    "slideshow_kET49Q",
+    "rich_text_VQxCPE",
+    "rich_text_GyRE9A",
+    "collage_nJHnwn",
+    "rich_text_f4krkd"
+  ]
+}
