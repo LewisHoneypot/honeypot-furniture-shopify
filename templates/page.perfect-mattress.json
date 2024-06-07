@@ -87,20 +87,20 @@
         "collection_Hnx9d8": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "king-size-mattresses"
           }
         },
-        "collection_Xzgpjp": {
+        "collection_cW7wyG": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "super-king-mattresses"
           }
         }
       },
       "block_order": [
         "collection_yUe9Hw",
         "collection_Hnx9d8",
-        "collection_Xzgpjp"
+        "collection_cW7wyG"
       ],
       "settings": {
         "type_style": "classic",
