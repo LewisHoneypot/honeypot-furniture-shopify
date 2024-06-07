@@ -225,11 +225,12 @@
         "image_yJnQiR": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_6184_4e0111b0-56a0-4e78-aea6-6d6948471b62.jpg",
             "heading_image": "",
             "heading_size": "default",
             "button_transparent": "transparent",
             "button_type": "standard",
-            "button_label": "Button label",
+            "button_label": "",
             "link": "",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
