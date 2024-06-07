@@ -300,7 +300,7 @@
         "image_animation": "none",
         "text_animation": "none",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
@@ -368,7 +368,7 @@
         "image_animation": "none",
         "text_animation": "none",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
@@ -436,7 +436,7 @@
         "image_animation": "none",
         "text_animation": "none",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 20,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
