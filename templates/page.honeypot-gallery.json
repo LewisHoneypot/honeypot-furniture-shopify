@@ -20,10 +20,82 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
+    },
+    "before_after_image_VdRnMf": {
+      "type": "before-after-image",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "subheading": "",
+        "subheading_size": "large",
+        "title": "<p>Before\/after<\/p>",
+        "heading_size": "default",
+        "content": "<p>Showcase your product benefit by using before\/after image comparison.<\/p>",
+        "description_size": "large",
+        "text_alignment": "center",
+        "vertical_spacing": 16,
+        "button_transparent": "transparent",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_margin_top": 23,
+        "before_image": "shopify:\/\/shop_images\/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_1_2.jpg",
+        "label_before": "",
+        "after_image": "shopify:\/\/shop_images\/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_2_1_7d60d993-250e-4d53-8e5c-afa258067c5d.jpg",
+        "label_after": "",
+        "text_position": "left",
+        "drag_initial_position": 50,
+        "color_scheme": "",
+        "drag_cursor_color": "#000000",
+        "drag_cursor_background": "#ffffff",
+        "padding_left": 50,
+        "padding_right": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "before_after_image_HizXKx": {
+      "type": "before-after-image",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "subheading": "",
+        "subheading_size": "large",
+        "title": "<p>Before\/after<\/p>",
+        "heading_size": "default",
+        "content": "<p>Showcase your product benefit by using before\/after image comparison.<\/p>",
+        "description_size": "large",
+        "text_alignment": "center",
+        "vertical_spacing": 16,
+        "button_transparent": "transparent",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_margin_top": 23,
+        "before_image": "shopify:\/\/shop_images\/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_1.jpg",
+        "label_before": "",
+        "after_image": "shopify:\/\/shop_images\/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_2.jpg",
+        "label_after": "",
+        "text_position": "left",
+        "drag_initial_position": 50,
+        "color_scheme": "",
+        "drag_cursor_color": "#000000",
+        "drag_cursor_background": "#ffffff",
+        "padding_left": 50,
+        "padding_right": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_T7RRLB"
+    "custom_liquid_T7RRLB",
+    "before_after_image_VdRnMf",
+    "before_after_image_HizXKx"
   ]
 }
