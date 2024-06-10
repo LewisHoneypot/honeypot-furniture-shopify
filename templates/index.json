@@ -347,8 +347,8 @@
       "settings": {
         "type_style": "classic",
         "heading": "Shop Sofas by Size",
-        "heading_size": "medium",
-        "heading_margin_bottom": 25,
+        "heading_size": "small",
+        "heading_margin_bottom": 30,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -415,9 +415,9 @@
       ],
       "settings": {
         "type_style": "classic",
-        "heading": "Collections",
-        "heading_size": "medium",
-        "heading_margin_bottom": 0,
+        "heading": "Shop By Collection",
+        "heading_size": "small",
+        "heading_margin_bottom": 30,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
