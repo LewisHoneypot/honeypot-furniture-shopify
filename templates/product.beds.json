@@ -330,6 +330,7 @@
     },
     "video_QM4Cg7": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
