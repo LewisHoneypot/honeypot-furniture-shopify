@@ -258,10 +258,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "carousel_images_dViGta": {
+    "carousel_images_pby3Bk": {
       "type": "carousel-images",
       "blocks": {
-        "slide_GjXAKg": {
+        "slide_PbeUzd": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
@@ -280,43 +280,23 @@
             "button_link": "",
             "text_alignment": "center"
           }
-        },
-        "slide_eyfPwj": {
-          "type": "slide",
-          "settings": {
-            "content_margin_negative_top_desktop": 75,
-            "content_margin_negative_top_tablet": 60,
-            "content_margin_negative_top_mobile": 45,
-            "subheading": "Tell your brand's story through images",
-            "subheading_font": "font-body",
-            "subheading_size": "medium",
-            "heading": "Image slide",
-            "heading_size": "large",
-            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<br\/> Add details on availability, style, or even provide a review.<\/p>",
-            "description_size": "medium",
-            "button_style": "default",
-            "button_label": "Button label",
-            "button_link": "",
-            "text_alignment": "center"
-          }
         }
       },
       "block_order": [
-        "slide_GjXAKg",
-        "slide_eyfPwj"
+        "slide_PbeUzd"
       ],
       "settings": {
-        "section_width": "page-width",
+        "section_width": "full-width",
         "customize_width": 1800,
         "show_line_separator": false,
         "color_scheme": "",
         "arrows_type": "all",
-        "carousel_infinite_scroll": false,
+        "carousel_infinite_scroll": true,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
-        "accessibility_info": "",
-        "padding_top": 47,
-        "padding_bottom": 17,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 78,
+        "padding_bottom": 36,
         "padding_top_mobile": 35,
         "padding_bottom_mobile": 15
       }
@@ -349,24 +329,91 @@
         "padding_bottom_mobile": 20
       }
     },
+    "collage_9MPxtz": {
+      "type": "collage",
+      "blocks": {
+        "image_mWEtpC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_3LFg7c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T113923.474.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_mWEtpC",
+        "image_3LFg7c"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "image_gallery_x6hHp4": {
       "type": "image-gallery",
       "blocks": {
         "image_BLkcPr": {
           "type": "Image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112510.745.png",
             "image_link": ""
           }
         },
         "image_A7wreJ": {
           "type": "Image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112634.763.png",
             "image_link": ""
           }
         },
         "image_jqRxxQ": {
           "type": "Image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112934.744.png",
             "image_link": ""
           }
         }
@@ -451,8 +498,9 @@
     "slideshow_kET49Q",
     "rich_text_VQxCPE",
     "rich_text_GyRE9A",
-    "carousel_images_dViGta",
+    "carousel_images_pby3Bk",
     "rich_text_f4krkd",
+    "collage_9MPxtz",
     "image_gallery_x6hHp4",
     "rich_text_nNtQMW"
   ]
