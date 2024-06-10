@@ -90,12 +90,208 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "image_with_text_LywrAL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_K4HqbN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Corner Styling Inspo<\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_LN9yJz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_byNkXA": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_K4HqbN",
+        "text_LN9yJz",
+        "link_byNkXA"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T163039.563.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collage_TMrrxi": {
+      "type": "collage",
+      "blocks": {
+        "image_MaEATr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T164330.952.png",
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_qimMcX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T164349.624_09e6ab2e-2ad1-4ee1-a8a3-86c9aae11136.png",
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_MaEATr",
+        "image_qimMcX"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Images",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "square",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_tdqqLM": {
+      "type": "collage",
+      "blocks": {
+        "image_d6bJAn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T165122.208.png",
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_7F4A6A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T165201.078.png",
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_d6bJAn",
+        "image_7F4A6A"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Images",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "square",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_T7RRLB",
     "before_after_image_VdRnMf",
-    "before_after_image_HizXKx"
+    "before_after_image_HizXKx",
+    "image_with_text_LywrAL",
+    "collage_TMrrxi",
+    "collage_tdqqLM"
   ]
 }
