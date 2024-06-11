@@ -4882,3 +4882,30 @@ if(!document.querySelector('.header--top-center-special')) {
     },300)
   });
 }
+
+// TrustPilot Service Reviews
+// url for word
+var environment = "live";
+
+const serviceStarsUrl =
+  `https://honeypot-trade.co.uk/` +
+  environment +
+  `/trustpilot/service-stars.php`;
+
+// Make the GET request using jQuery
+$.ajax({
+  url: serviceStarsUrl,
+  method: "GET",
+  success: function (serviceStarsWord) {
+    let serviceStars = jQuery.parseJSON(serviceStarsWord);
+    $(".serviceStarsWord").text(serviceStars.string);
+    $(".numberOfReviewsImage").html(
+      '<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_' +
+        serviceStars.stars +
+        '.png" class="stars-image pb-1" alt="Trustpilot Stars">'
+    );
+  },
+  error: function (error) {
+    console.error("Error fetching data:", error);
+  },
+});
