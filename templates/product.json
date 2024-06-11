@@ -332,7 +332,16 @@
         "collapsible_row_V9KmDH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Read customer reviews..."
+            "heading": "Read customer reviews...",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "user_image": "shopify:\/\/shop_images\/IconTest1.png",
+            "primary_button_label": "Rating Breakdown",
+            "primary_button_color_scheme": "",
+            "secondary_button_label": "Hide Breakdown",
+            "secondary_button_color_scheme": ""
           }
         }
       },
