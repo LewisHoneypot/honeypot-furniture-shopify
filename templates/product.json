@@ -326,6 +326,58 @@
         "padding_bottom_mobile": 0
       }
     },
+    "rich_text_HNJBnm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_q8xXqp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Test",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_GiAHcm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_4ttiKW": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_q8xXqp",
+        "text_GiAHcm",
+        "button_4ttiKW"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "trustpilot_product_revewis_Eb8Cd6": {
       "type": "trustpilot-product-revewis",
       "settings": {
@@ -562,6 +614,7 @@
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "video_QM4Cg7",
+    "rich_text_HNJBnm",
     "trustpilot_product_revewis_Eb8Cd6",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
