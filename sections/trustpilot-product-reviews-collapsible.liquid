@@ -1,92 +1,126 @@
 {%- if section.blocks.size > 0 -%}
-    {%- liquid
-      capture icon_caret
-        render 'icon-caret'
-      endcapture
-    -%}
-    <div class="section__c-content spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
-      style="--padding-top: {{ section.settings.padding_top }}px;
-        --padding-bottom: {{ section.settings.padding_bottom }}px;
-        --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
-        --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
+  {%- liquid
+    capture icon_caret
+      render 'icon-caret'
+    endcapture
+  -%}
+  <div
+    class="section__c-content spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    style="
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+      --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+      --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    "
+  >
+    <div
+      class="collapsible-content {{ section.settings.section_width }} m-auto"
+      {% if section.settings.section_width == 'customized-width' %}
+        style="--page-width: {{ section.settings.customize_width }}px;"
+      {% endif %}
     >
-      <div class="collapsible-content {{ section.settings.section_width }} m-auto" {% if section.settings.section_width == 'customized-width' %}style="--page-width: {{ section.settings.customize_width }}px;"{% endif %}>
-        {%- unless section.settings.heading == blank -%}
-          <div class="p-w__header">
-            <div class="p-w__header--wrapper left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
-            </div>
+      {%- unless section.settings.heading == blank -%}
+        <div class="p-w__header">
+          <div class="p-w__header--wrapper left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
+              {{ section.settings.heading | escape }}
+            </h2>
           </div>
-        {%- endunless -%}
-        <div class="p-w__content">
-          <div class="collapsible-content__wrapper grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--grid-v-xs: 3rem; --grid-v-md: 3rem;">
-            {%- if section.settings.top_subheading != blank or section.settings.top_text != blank or section.settings.top_heading_1 != blank or section.settings.top_heading_2 != blank -%}
-              <div class="collapsible-content__item collapsible-content__itemLeft w-100 rte">
-                <div class="collapsible-content__item--wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                  {%- if section.settings.top_subheading != blank -%}
-                    <h3 class="collapsible-content__subheading m-0">{{ section.settings.top_subheading | escape }}</h3>
-                  {%- endif -%}
-                  {%- if section.settings.top_text != blank -%}
-                    <div class="collapsible-content__text m-t" style="--m-t: 1.2rem;">{{ section.settings.top_text }}</div>
-                  {%- endif -%}
-                  {%- if section.settings.top_heading_1 != blank or section.settings.top_heading_2 != blank -%}
-                    <div class="collapsible-content__group d-flex a-i-center j-c-center w-100 m-w" style="--m-w: 29rem;">
-                      {%- if section.settings.top_heading_1 != blank -%}
-                        <div class="collapsible-content__group--item d-flex f-column j-c-center a-i-center w-100 m-auto center r-gap" style="--r-gap: 0.5rem;">
-                          {{ section.settings.top_heading_1 }}
-                        </div>
-                      {%- endif -%}
-                      {%- if section.settings.top_heading_2 != blank -%}
-                        <div class="collapsible-content__group--item d-flex f-column j-c-center a-i-center w-100 m-auto center r-gap" style="--r-gap: 0.5rem;">
-                          {{ section.settings.top_heading_2 }}
-                        </div>
-                      {%- endif -%}
-                    </div>
-                  {%- endif -%}
-                </div>
+        </div>
+      {%- endunless -%}
+      <div class="p-w__content">
+        <div
+          class="collapsible-content__wrapper grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          style="--grid-v-xs: 3rem; --grid-v-md: 3rem;"
+        >
+          {%- if section.settings.top_subheading != blank
+            or section.settings.top_text != blank
+            or section.settings.top_heading_1 != blank
+            or section.settings.top_heading_2 != blank
+          -%}
+            <div class="collapsible-content__item collapsible-content__itemLeft w-100 rte">
+              <div class="collapsible-content__item--wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {%- if section.settings.top_subheading != blank -%}
+                  <h3 class="collapsible-content__subheading m-0">{{ section.settings.top_subheading | escape }}</h3>
+                {%- endif -%}
+                {%- if section.settings.top_text != blank -%}
+                  <div class="collapsible-content__text m-t" style="--m-t: 1.2rem;">
+                    {{ section.settings.top_text }}
+                  </div>
+                {%- endif -%}
+                {%- if section.settings.top_heading_1 != blank or section.settings.top_heading_2 != blank -%}
+                  <div class="collapsible-content__group d-flex a-i-center j-c-center w-100 m-w" style="--m-w: 29rem;">
+                    {%- if section.settings.top_heading_1 != blank -%}
+                      <div
+                        class="collapsible-content__group--item d-flex f-column j-c-center a-i-center w-100 m-auto center r-gap"
+                        style="--r-gap: 0.5rem;"
+                      >
+                        {{ section.settings.top_heading_1 }}
+                      </div>
+                    {%- endif -%}
+                    {%- if section.settings.top_heading_2 != blank -%}
+                      <div
+                        class="collapsible-content__group--item d-flex f-column j-c-center a-i-center w-100 m-auto center r-gap"
+                        style="--r-gap: 0.5rem;"
+                      >
+                        {{ section.settings.top_heading_2 }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
               </div>
-            {%- endif -%}
-            <div class="collapsible-content__item collapsible-content__itemRight w-100">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                  {%- when 'collapsible_row' -%}
-                    <div class="accordion accordion--style{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {{ block.shopify_attributes }}
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
-                      <details id="Details-{{ block.id }}-{{ section.id }}">
-                        <summary id="Summary-{{ block.id }}-{{ section.id }}" class="c-pointer pos-relative l-h-1 d-flex a-i-center">
-                          <h3 class="accordion__title h4 break m-0">{{ block.settings.heading | default: block.settings.page.title }}</h3>
-                          {{ icon_caret }}
-                        </summary>
-                        <div class="accordion__content rte" id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}" role="region" aria-labelledby="Summary-{{ block.id }}-{{ section.id }}">
-
-                          <div id="reviews"></div>
-													
-                        </div>
-                      </details>
-                    </div>
-                {%- endcase -%}
-              {%- endfor -%}
             </div>
+          {%- endif -%}
+          <div class="collapsible-content__item collapsible-content__itemRight w-100">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'collapsible_row' -%}
+                  <div
+                    class="accordion accordion--style{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary
+                        id="Summary-{{ block.id }}-{{ section.id }}"
+                        class="c-pointer pos-relative l-h-1 d-flex a-i-center"
+                      >
+                        <h3 class="accordion__title h4 break m-0">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h3>
+                        {{ icon_caret }}
+                      </summary>
+                      <div
+                        class="accordion__content rte"
+                        id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                        role="region"
+                        aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                      >
+                        <div id="reviews"></div>
+                      </div>
+                    </details>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
           </div>
         </div>
       </div>
     </div>
-  {%- endif -%}
-  
-  {% schema %}
-  {
-    "name": "Reviews Collapsible",
-    "tag": "section",
-    "class": "section",
-    "disabled_on": {
-      "groups": ["header", "footer", "custom.popup"]
-    },
-    "settings": [
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Reviews Collapsible",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.popup"]
+  },
+  "settings": [
     {
       "type": "text",
       "id": "heading",
@@ -97,18 +131,19 @@
       "type": "select",
       "id": "section_width",
       "options": [
-      {
-        "value": "full-width",
-        "label": "t:sections.all.section_width.options__1"
-      },
-      {
-        "value": "page-width",
-        "label": "t:sections.all.section_width.options__2"
-      },
-      {
-        "value": "customized-width",
-        "label": "t:sections.all.section_width.options__3"
-      }],
+        {
+          "value": "full-width",
+          "label": "t:sections.all.section_width.options__1"
+        },
+        {
+          "value": "page-width",
+          "label": "t:sections.all.section_width.options__2"
+        },
+        {
+          "value": "customized-width",
+          "label": "t:sections.all.section_width.options__3"
+        }
+      ],
       "default": "customized-width",
       "label": "t:sections.all.section_width.label"
     },
@@ -123,10 +158,10 @@
       "label": "t:sections.all.customize_width.label"
     },
     {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "background-1"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "header",
@@ -171,63 +206,154 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 43
-    }],
-    "blocks": [
+    }
+  ],
+  "blocks": [
     {
       "type": "collapsible_row",
       "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
       "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "default": "Collapsible row",
-        "label": "t:sections.all.heading.label",
-        "info": "t:sections.all.heading.info__1"
-      }]
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "label": "t:sections.all.heading.label",
+          "info": "t:sections.all.heading.info__1"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_top_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top_mobile",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom_mobile",
+          "default": 0
+        },
+        {
+          "type": "image_picker",
+          "id": "user_image",
+          "label": "User Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "staff_image",
+          "label": "Staff Image"
+        },
+        {
+          "type": "text",
+          "id": "primary_button_label",
+          "default": "Rating Breakdown",
+          "label": "t:sections.all.primary_button_label.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "primary_button_color_scheme",
+          "label": "t:sections.all.primary_button_color_scheme.label",
+          "default": "background-1"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_label",
+          "default": "Hide Breakdown",
+          "label": "t:sections.all.secondary_button_label.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "secondary_button_color_scheme",
+          "label": "t:sections.all.secondary_button_color_scheme.label",
+          "default": "background-1"
+        }
+      ]
     },
     {
       "type": "caption",
       "name": "t:sections.collapsible_content.blocks.caption.name",
       "settings": [
-      {
-        "type": "text",
-        "id": "caption",
-        "default": "Add a tagline",
-        "label": "t:sections.all.caption.label"
-      },
-      {
-        "type": "header",
-        "content": "t:sections.all.padding.block_padding_heading"
-      },
-      {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 10
-      },
-      {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 10
-      }]
-    }],
-    "presets": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Add a tagline",
+          "label": "t:sections.all.caption.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.block_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 10
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
       "name": "Product Reviews Collapsible",
       "blocks": [
-      {
-        "type": "collapsible_row"
-      }]
-    }]
-  }
-  {% endschema %}
-  
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  var primary_button_label = '{{section.settings.primary_button_label}}';
+  var secondary_button_label = '{{section.settings.secondary_button_label}}';
+  var button_style = '{{settings.button_style}}';
+  var primary_button_color_scheme = '{{section.settings.primary_button_color_scheme}}';
+  var secondary_button_color_scheme = '{{section.settings.secondary_button_color_scheme}}';
+</script>
