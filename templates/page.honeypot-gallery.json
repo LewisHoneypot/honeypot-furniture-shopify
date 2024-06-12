@@ -116,7 +116,7 @@
           "type": "link",
           "settings": {
             "show_view_all": "link",
-            "link_label": "Link label",
+            "link_label": "Shop all corners",
             "link": "",
             "button_transparent": "transparent",
             "padding_top": 10,
