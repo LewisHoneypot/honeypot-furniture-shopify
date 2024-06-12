@@ -36,6 +36,7 @@
       "blocks": {
         "cc19003e-188e-4f3a-a092-71a303ff5987": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "banner_position": 3,
             "image": "shopify:\/\/shop_images\/1_84d249e5-55c0-4d12-bbac-39459a348234.jpg",
@@ -57,6 +58,7 @@
         },
         "3fca5cef-72fc-4b52-a001-50044316c114": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "banner_position": 6,
             "image": "shopify:\/\/shop_images\/2_1fb17b71-d746-436e-b083-660f2e076db4.jpg",
