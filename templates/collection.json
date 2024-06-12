@@ -93,7 +93,7 @@
         "breadcrumb_padding_bottom": 60,
         "heading_size": "default",
         "heading_margin_bottom": 24,
-        "description_size": "xxx-large",
+        "description_size": "medium",
         "text_margin_bottom": 72,
         "content_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "content_use_custom_color": false,
