@@ -692,3 +692,8 @@
   }]
 }
 {% endschema %}
+
+{% comment %} Hide missing product videos {% endcomment %}
+<script>
+  var productVideo = '{{ product.metafields.custom.video }}';
+</script>
