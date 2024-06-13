@@ -3595,7 +3595,7 @@ class VideoTemplateOpener extends HTMLElement {
 
     if (!button) return;
     button.addEventListener('click', () => {
-      const video = document.querySelector(this.getAttribute('data-video'));
+      const video = document.querySelector(this.getAttribute('data-video')).find(video);
       console.log('video', video);
       if (video) video.loadVideo();
       button.classList.add('hidden');
