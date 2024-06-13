@@ -3508,7 +3508,7 @@ class VideoTemplate extends HTMLElement {
   }
 
   loadVideo() {
-    if(!this.video && this.video_tag) return;
+    if(!this.video && !this.video_tag) return;
 
     if(this.video){
       this.dispatchEvent(new CustomEvent('loadingStart', { detail: { element: this.video, parent: this }}));
