@@ -3522,7 +3522,6 @@ class VideoTemplate extends HTMLElement {
     }
   
     if(this.video_tag){
-        console.log('play');
         this.video_tag.play(); 
     }
   }
@@ -3598,7 +3597,7 @@ class VideoTemplateOpener extends HTMLElement {
     button.addEventListener('click', () => {
       const video = document.querySelector(this.getAttribute('data-video'));
       if (video) video.loadVideo();
-      button.classList.add('hidden');
+      button.parent().classList.add('hidden');
     });
   }
 }
