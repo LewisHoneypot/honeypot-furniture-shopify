@@ -3510,19 +3510,20 @@ class VideoTemplate extends HTMLElement {
   loadVideo() {
     if(!this.video && this.video_tag) return;
 
-  if(this.video){
-    this.dispatchEvent(new CustomEvent('loadingStart', { detail: { element: this.video, parent: this }}));
-    this.video.setAttribute('src', this.video.getAttribute('data-src'));
-    this.video.addEventListener('load', function() {
-      this.dispatchEvent(new CustomEvent('loadingEnd', { detail: { element: this.video, parent: this }}));
-      this.dataVideoType == 'youtube' && this.video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*")
-    }.bind(this));
-
-    this.isLoaded(true);
-  }
-
-  if(this.video_tag){
-      this.video_tag.play(); 
+    if(this.video){
+      this.dispatchEvent(new CustomEvent('loadingStart', { detail: { element: this.video, parent: this }}));
+      this.video.setAttribute('src', this.video.getAttribute('data-src'));
+      this.video.addEventListener('load', function() {
+        this.dispatchEvent(new CustomEvent('loadingEnd', { detail: { element: this.video, parent: this }}));
+        this.dataVideoType == 'youtube' && this.video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*")
+      }.bind(this));
+  
+      this.isLoaded(true);
+    }
+  
+    if(this.video_tag){
+        console.log('play');
+        this.video_tag.play(); 
     }
   }
 
