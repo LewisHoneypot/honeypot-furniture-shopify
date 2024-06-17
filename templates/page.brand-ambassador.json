@@ -204,11 +204,26 @@
             "color_overlay_opacity": "#000000",
             "desktop_content_position": "bottom-left"
           }
+        },
+        "image_iU33RY": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
         }
       },
       "block_order": [
         "image_QyJVTF",
-        "image_iVDHka"
+        "image_iVDHka",
+        "image_iU33RY"
       ],
       "settings": {
         "section_width": "page-width",
