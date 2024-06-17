@@ -216,6 +216,14 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "7902831097370503076": {
+        "type": "shopify:\/\/apps\/estimated-delivery-date-eta\/blocks\/estimated-delivery-days\/d8155dd1-6598-4174-aaeb-cbcf85a857bc",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
