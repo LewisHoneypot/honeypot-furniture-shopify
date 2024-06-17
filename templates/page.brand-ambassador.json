@@ -207,6 +207,7 @@
         },
         "image_iU33RY": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "heading_image": "Image",
             "heading_size": "default",
