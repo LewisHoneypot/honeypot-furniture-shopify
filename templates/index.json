@@ -688,6 +688,9 @@
         "logos_UcXRFX": {
           "type": "logos",
           "settings": {
+            "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
+            "logo2": "shopify:\/\/shop_images\/klarna-black.webp",
+            "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp"
           }
         },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
