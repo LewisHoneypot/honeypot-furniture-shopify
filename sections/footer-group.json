@@ -103,13 +103,15 @@
           "type": "whatsapp",
           "settings": {
             "heading": "NEED HELP?",
-            "WhatsAppButtonText1": "Available Monday to Saturdays 9am - 5pm",
-            "WhatsAppButtonText2": "Live Chat on WhatsApp",
+            "AvailabilityHeader": "Availability:",
+            "AvailabilityText1": "Monday to Friday 8am - 8pm",
+            "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
+            "WhatsAppButtonText1": "Live Chat on WhatsApp",
             "WhatsAppButtonPhoneNumber": "+447700176055",
-            "WhatsAppButtonIconColour1": "#FFFFFF",
+            "WhatsAppButtonIconColour1": "#ffffff",
             "WhatsAppButtonIconColour2": "#121212",
             "EmailButtonText": "Email Customer Support",
-            "EmailButtonIconColour": "#FFFFFF"
+            "EmailButtonIconColour": "#ffffff"
           }
         }
       },
