@@ -126,7 +126,13 @@
                     </div>
                   {%- endif -%}
                 {%  when 'logos' %}
-                  <div {{ block.shopify_attributes }}>Test</div>
+                  <div {{ block.shopify_attributes }}>Test
+                    <div>{{ block.logo1 }}</div>
+                    <div>{{ block.logo2 }}</div>
+                    <div>{{ block.logo3 }}</div>
+                    <div>{{ block.logo4 }}</div>
+                    <div>{{ block.logo5 }}</div>
+                  </div>
                 {%- when 'buttons' -%}
                   {%- if block.settings.primary_button_label != blank or block.settings.secondary_button_label != blank -%}
                     <div class="banner__buttons break d-flex f-wrap g-gap element-spacing element-spacing-all data__media-hover j-c-{{ section.settings.desktop_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} j-c-{{ section.settings.mobile_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}-xs" data-animate="{{ section.settings.text_animation }}" {{ block.shopify_attributes }}
