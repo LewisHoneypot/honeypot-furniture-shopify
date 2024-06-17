@@ -685,6 +685,11 @@
             "padding_bottom": 30
           }
         },
+        "logos_UcXRFX": {
+          "type": "logos",
+          "settings": {
+          }
+        },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
           "type": "buttons",
           "settings": {
@@ -701,6 +706,7 @@
       "block_order": [
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-0",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-1",
+        "logos_UcXRFX",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2"
       ],
       "settings": {
