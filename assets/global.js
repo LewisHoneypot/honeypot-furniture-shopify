@@ -5736,7 +5736,7 @@ $.ajax({
 // Hide missing product videos
 if (typeof productVideo !== 'undefined' && productVideo === '') {
   if (document.querySelector('[id*="QM4Cg7"]')){
-    $('#shopify-section-template--22691620651295__video_QM4Cg7').css("display", "none");
+    $('[id*="QM4Cg7"]').css("display", "none");
   }
 }
 
