@@ -4968,6 +4968,7 @@ input[type="checkbox"]:checked ~ svg {
 
 #CartDrawer .drawer__inner {
   transform: none;
+  overflow: scroll;
 }
 
 .drawer.active #CartDrawer {
