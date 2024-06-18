@@ -125,6 +125,34 @@
                       </count-down>
                     </div>
                   {%- endif -%}
+                {%  when 'logos' %}
+                  <div {{ block.shopify_attributes }} style="display: inline-flex;">
+                    {%- if block.settings.logo1 != blank -%}
+                      <div>
+                        <img src="{{ block.settings.logo1 | image_url: height: 25 }}" style="margin-right: 15px;">
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.logo2 != blank -%}
+                      <div>
+                        <img src="{{ block.settings.logo2 | image_url: height: 25 }}" style="margin-right: 15px;">
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.logo3 != blank -%}
+                      <div>
+                        <img src="{{ block.settings.logo3 | image_url: height: 25 }}" style="margin-right: 15px;">
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.logo4 != blank -%}
+                      <div>
+                        <img src="{{ block.settings.logo4 | image_url: height: 25 }}" style="margin-right: 15px;">
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.logo5 != blank -%}
+                      <div>
+                        <img src="{{ block.settings.logo5 | image_url: height: 25 }}" style="margin-right: 15px;">
+                      </div>
+                    {%- endif -%}
+                  </div>
                 {%- when 'buttons' -%}
                   {%- if block.settings.primary_button_label != blank or block.settings.secondary_button_label != blank -%}
                     <div class="banner__buttons break d-flex f-wrap g-gap element-spacing element-spacing-all data__media-hover j-c-{{ section.settings.desktop_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} j-c-{{ section.settings.mobile_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}-xs" data-animate="{{ section.settings.text_animation }}" {{ block.shopify_attributes }}
@@ -810,6 +838,38 @@
         "label": "t:sections.all.image.label"
       }
     ]
+  },
+  {
+    "type": "logos",
+    "name": "Logos",
+    "limit": 1,
+    "settings": [      
+      {
+        "type": "image_picker",
+        "id": "logo1",
+        "label": "Logo 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo4",
+        "label": "Logo 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo5",
+        "label": "Logo 5"
+      }      
+    ]
   }],
   "presets": [
   {
@@ -820,6 +880,9 @@
     },
     {
       "type": "text"
+    },
+    {
+      "type": "logos"
     },
     {
       "type": "buttons"

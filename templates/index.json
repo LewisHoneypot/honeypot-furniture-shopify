@@ -289,6 +289,17 @@
         "padding_bottom_mobile": 12
       }
     },
+    "trustpilot_service_reviews_mini_qrrfxa": {
+      "type": "trustpilot-service-reviews-mini",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
       "type": "collection-list",
       "blocks": {
@@ -674,6 +685,14 @@
             "padding_bottom": 30
           }
         },
+        "logos_UcXRFX": {
+          "type": "logos",
+          "settings": {
+            "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
+            "logo2": "shopify:\/\/shop_images\/klarna-black.webp",
+            "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp"
+          }
+        },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
           "type": "buttons",
           "settings": {
@@ -690,6 +709,7 @@
       "block_order": [
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-0",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-1",
+        "logos_UcXRFX",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2"
       ],
       "settings": {
@@ -1158,6 +1178,7 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112",
     "0b6105a9-a3ce-4181-b45b-7a55c709e140",
     "41769cb9-5f5a-4896-9da0-2d3bf33aef1e",
+    "trustpilot_service_reviews_mini_qrrfxa",
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",

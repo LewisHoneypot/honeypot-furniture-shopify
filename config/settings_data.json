@@ -217,8 +217,8 @@
 
     ],
     "blocks": {
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+      "7902831097370503076": {
+        "type": "shopify:\/\/apps\/estimated-delivery-date-eta\/blocks\/estimated-delivery-days\/d8155dd1-6598-4174-aaeb-cbcf85a857bc",
         "disabled": false,
         "settings": {
         }
@@ -400,7 +400,7 @@
           "background": "#b7b0a3",
           "background_gradient": "",
           "button_label": "#ffffff",
-          "button_background": "#121212",
+          "button_background": "#433f3f",
           "button_gradient": "",
           "secondary_button_label": "#000000",
           "secondary_button_background": "#ede9e2",

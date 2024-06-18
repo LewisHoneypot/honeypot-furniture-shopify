@@ -98,6 +98,21 @@
             "padding_bottom_xs": 15,
             "padding_top_xs": 15
           }
+        },
+        "whatsapp_hGmeMU": {
+          "type": "whatsapp",
+          "settings": {
+            "heading": "NEED HELP?",
+            "AvailabilityHeader": "Availability:",
+            "AvailabilityText1": "Monday to Friday 8am - 8pm",
+            "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
+            "WhatsAppButtonText1": "Live Chat on WhatsApp",
+            "WhatsAppButtonPhoneNumber": "+447700176055",
+            "WhatsAppButtonIconColour1": "#ffffff",
+            "WhatsAppButtonIconColour2": "#121212",
+            "EmailButtonText": "Email Customer Support",
+            "EmailButtonIconColour": "#ffffff"
+          }
         }
       },
       "block_order": [
@@ -106,7 +121,8 @@
         "footer-1",
         "3d5e046f-f018-45d1-b98d-d4874a780020",
         "17114992-59f7-4a83-bf27-1f00c171e823",
-        "link_list_mnzbkY"
+        "link_list_mnzbkY",
+        "whatsapp_hGmeMU"
       ],
       "settings": {
         "type_style": "classic",
