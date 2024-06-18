@@ -77,7 +77,7 @@
         </video-template>
         {%- unless section.settings.enable_autoplay -%}
           <video-template-opener data-video="#VIDEO-{{ section.id }}" class="deferred-media__poster-button pos-absolute pos-absolute-c-c z-index-1 b-circle c-pointer gradient gradient-global motion-reduce d-flex a-i-center j-c-center{% if section.blocks.size > 0 %} d-none-md{% endif %}">
-            <button class="t-button b-none c-pointer bg-transparent d-flex a-i-center p-0 color-current" type="button" aria-label="{{ 'sections.video.load_video' | t: description: video_description | escape }}">
+            <button class="t-button b-none c-pointer bg-transparent d-flex a-i-center color-current" type="button" aria-label="{{ 'sections.video.load_video' | t: description: video_description | escape }}" style="padding: 50px;">
               {{ icon_play }}
             </button>
           </video-template-opener>
