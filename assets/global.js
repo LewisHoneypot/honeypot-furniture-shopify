@@ -5785,25 +5785,3 @@ function sclClickPixelFn() {
   }
 }
 sclClickPixelFn();
-
-// START Rakuten Advertising Tracking
-(function (url) {
-  /*Tracking Bootstrap Set Up DataLayer objects/properties here*/
-  window.rakutenDataLayer = false; // Set custom DataLayer name if 'DataLayer' conflicts
-  var dln = window.rakutenDataLayer || "DataLayer";
-  if (!window[dln]) {
-    window[dln] = {};
-  }
-  if (!window[dln].events) {
-    window[dln].events = {};
-  }
-  window[dln].events.SPIVersion = window[dln].events.SPIVersion || "3.4.1";
-
-  var loc,
-    ct = document.createElement("script");
-  ct.type = "text/javascript";
-  ct.async = true;
-  ct.src = url;
-  loc = document.getElementsByTagName("script")[0];
-  loc.parentNode.insertBefore(ct, loc);
-})(document.location.protocol + "//tag.rmp.rakuten.com/124959.ct.js");
