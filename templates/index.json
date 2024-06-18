@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
@@ -689,7 +698,7 @@
           "type": "logos",
           "settings": {
             "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
-            "logo2": "shopify:\/\/shop_images\/klarna-black.webp",
+            "logo2": "shopify:\/\/shop_images\/Klarna_Logo2.png",
             "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp"
           }
         },
