@@ -15,7 +15,7 @@ if (!customElements.get('product-info')) {
       if (!this.input) return;
       this.quantityForm = this.querySelector('.product-form__quantity');
       if (!this.quantityForm) return;
-      this.setQuantityBoundries();  
+      this.setQuantityBoundries();
       if (!this.dataset.originalSection) {
         this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, this.fetchQuantityRules.bind(this));
       }
