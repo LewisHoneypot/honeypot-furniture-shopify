@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -111,7 +120,7 @@
         "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Honeypot Furniture’s purpose is to inspire and empower individuals from diverse backgrounds to create uniquely, personal and prideful spaces by offering high-quality furniture, and a premium shopping experience at accessible prices, ensuring everyone can cultivate a full experience of comfort, cosiness and style in their homes with the help of our essential pieces.<\/p>",
+            "text": "<p>At Honeypot Furniture, we're dedicated to helping you achieve your home goals by offering high-quality, stylish furniture that reflects your unique personality and creativity. To make this a reality, we focus on procuring and providing furniture at competitive prices, with flexible payment options to suit various budgets. Our mission is to bring you beautifully crafted furniture that transforms your house into a home you love. <\/p>",
             "padding_top": 10,
             "padding_bottom": 20
           }
