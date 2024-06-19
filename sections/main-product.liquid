@@ -1490,6 +1490,9 @@
                   {% assign recommended_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}
 
                   {% for recommended in recommended_products %}
+                    <script>
+                      console.log(recommended);
+                    </script>
                     <a href="{{ recommended.url }}">
                       <div class="recommended-product">
                         <div class="img-container">
