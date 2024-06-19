@@ -18624,7 +18624,7 @@ body.multitasking__show .newsletter-popup-opener {
   .section__slideshow .slideshow__width {
     position: relative;
     /* min-height: 45vw; */
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
   .section__slideshow .slideshow__width + .slideshow__image {
