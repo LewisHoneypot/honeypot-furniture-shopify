@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -108,10 +117,10 @@
             "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
             "WhatsAppButtonText1": "Live Chat on WhatsApp",
             "WhatsAppButtonPhoneNumber": "+447700176055",
-            "WhatsAppButtonIconColour1": "#ffffff",
-            "WhatsAppButtonIconColour2": "#121212",
+            "WhatsAppButtonIconColour1": "#45544c",
+            "WhatsAppButtonIconColour2": "#ffffff",
             "EmailButtonText": "Email Customer Support",
-            "EmailButtonIconColour": "#ffffff"
+            "EmailButtonIconColour": "#45544c"
           }
         }
       },
