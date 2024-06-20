@@ -482,6 +482,19 @@
           "type": "marquee",
           "settings": {
             "type_marquee": "text",
+            "text": "<p>5-Year Sofa Frame Guarantee<\/p>",
+            "set_transparent_text": false,
+            "enable_color_underline": false,
+            "colors_underline": "#000",
+            "options_colors_underline": "full",
+            "image_height": 152,
+            "link": ""
+          }
+        },
+        "marquee_qifkPq": {
+          "type": "marquee",
+          "settings": {
+            "type_marquee": "text",
             "text": "<p>Welcome to our store<\/p>",
             "set_transparent_text": false,
             "enable_color_underline": false,
@@ -494,7 +507,8 @@
       },
       "block_order": [
         "marquee_MzRLr4",
-        "marquee_4x3hxG"
+        "marquee_4x3hxG",
+        "marquee_qifkPq"
       ],
       "settings": {
         "section_width": "page-width",
