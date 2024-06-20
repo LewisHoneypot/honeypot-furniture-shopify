@@ -147,7 +147,7 @@
         "colors_background": "",
         "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "layout_mobile": "image_first_mobile",
         "mobile_content_alignment": "left",
