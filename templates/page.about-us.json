@@ -51,6 +51,60 @@
         "padding_bottom_mobile": 0
       }
     },
+    "rich_text_QgCcFa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LaUpiY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Weclome to Honeypot Furniture",
+            "heading_size": "medium",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_Wpgh4r": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_nCxaCh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_LaUpiY",
+        "text_Wpgh4r",
+        "button_nCxaCh"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "bcdfdd92-1560-4fa2-832d-8531cf03526d": {
       "type": "image-with-text",
       "blocks": {
@@ -66,7 +120,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Originating as a modest ecommerce furniture business, we embarked on a mission to pioneer seamless and convenient online furniture services nationwide. After years of hard work and dedication, our dreams came true on Honeypot Lane in Grantham, United Kingdom. This is where Honeypot Furniture was born, and we've been growing and evolving ever since. Today our name reflects our dedication to offering quality furnishings and a premium shopping experience to homes everywhere. <\/p>",
+            "text": "<p>Originating as a small, family-run ecommerce furniture business, we embarked on a mission to pioneer seamless and convenient online furniture services nationwide. After years of hard work and dedication, our dreams came true on Honeypot Lane in Grantham, where Honeypot Furniture was born. Since then, we have continually grown and evolved, offering quality furnishings and a premium shopping experience to homes across the nation.<\/p>",
             "padding_top": 10,
             "padding_bottom": 20
           }
@@ -412,6 +466,7 @@
   "order": [
     "main",
     "f7081c96-4557-48f7-9510-e23627f84c6e",
+    "rich_text_QgCcFa",
     "bcdfdd92-1560-4fa2-832d-8531cf03526d",
     "a1a91792-a4e4-4254-bd04-603f6955212c",
     "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa",
