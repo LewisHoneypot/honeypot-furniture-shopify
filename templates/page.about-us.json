@@ -462,6 +462,62 @@
         "padding_bottom_mobile": 43
       }
     },
+    "marquee_pUTkVy": {
+      "type": "marquee",
+      "blocks": {
+        "marquee_MzRLr4": {
+          "type": "marquee",
+          "settings": {
+            "type_marquee": "text",
+            "text": "<p>1-7 Day Delivery<\/p>",
+            "set_transparent_text": false,
+            "enable_color_underline": false,
+            "colors_underline": "#000",
+            "options_colors_underline": "full",
+            "image_height": 152,
+            "link": ""
+          }
+        },
+        "marquee_4x3hxG": {
+          "type": "marquee",
+          "settings": {
+            "type_marquee": "text",
+            "text": "<p>Welcome to our store<\/p>",
+            "set_transparent_text": false,
+            "enable_color_underline": false,
+            "colors_underline": "#000",
+            "options_colors_underline": "full",
+            "image_height": 152,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "marquee_MzRLr4",
+        "marquee_4x3hxG"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": false,
+        "enable_cursor_hover": false,
+        "duration_speed": 30,
+        "heading_font": "font-heading",
+        "heading_size": "default",
+        "type_separating": "dots",
+        "custom_between": false,
+        "carousel_gap": 30,
+        "color_scheme": "background-1",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    },
     "multicolumn_pqLyqg": {
       "type": "multicolumn",
       "blocks": {
@@ -748,6 +804,7 @@
     "fdad168f-7d9e-4226-9e96-e24307d01253",
     "rich_text_ctUHEi",
     "collapsible_content_H3JgAU",
+    "marquee_pUTkVy",
     "multicolumn_pqLyqg",
     "17f60c09-db31-4fe1-97e5-3d85f1363257",
     "countdown_showcase_hero_LY7hag",
