@@ -403,7 +403,7 @@
         "image_behavior": "none",
         "text_animation": "none",
         "padding_top": 0,
-        "padding_bottom": 50,
+        "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
