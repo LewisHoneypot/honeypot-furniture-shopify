@@ -417,8 +417,9 @@
         },
         "collapsible_row_XgUb4V": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Our Promise",
             "icon": "check_mark",
             "row_content": "",
             "page": ""
@@ -426,6 +427,7 @@
         },
         "collapsible_row_GrjMg9": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
