@@ -535,7 +535,7 @@
         "type_separating": "dots",
         "custom_between": false,
         "carousel_gap": 30,
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
         "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "",
@@ -570,7 +570,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<h3><strong>2,500,000+ DELIVERY MILES <\/strong><\/h3>",
+            "text": "<h3><strong>4.7 STARS ON TRUSTPILOT<\/strong><\/h3>",
             "link_label": "",
             "link": ""
           }
@@ -582,9 +582,9 @@
             "enable_custom_size_icon": false,
             "custom_size_icon": 30,
             "custom_icon_background": "",
-            "heading": "Guarantee heading",
-            "text": "<p>Share information about your products, policies or services.<\/p>",
-            "link_label": "Link label",
+            "heading": "",
+            "text": "<h3><strong>140,000 SQ FT WAREHOUSE<\/strong><\/h3>",
+            "link_label": "",
             "link": ""
           }
         },
@@ -595,9 +595,9 @@
             "enable_custom_size_icon": false,
             "custom_size_icon": 30,
             "custom_icon_background": "",
-            "heading": "Guarantee heading",
-            "text": "<p>Share information about your products, policies or services.<\/p>",
-            "link_label": "Link label",
+            "heading": "",
+            "text": "<h3><strong>FAMILY-RUN<\/strong><\/h3>",
+            "link_label": "",
             "link": ""
           }
         }
