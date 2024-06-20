@@ -1489,12 +1489,11 @@
                 {%- elsif block.settings.content_type == 'pairs_well_with' -%}
                   {% assign recommended_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}
                   <script>
-                    console.log({{recommended_products}});
+                    console.log('recommended_products: ', {{recommended_products | json }});
                   </script>
 
                   {% for recommended in recommended_products %}
                     <script>
-                      console.log('sku: ', {{recommended.sku}});
                       console.log('id: ', {{recommended.id}});
                     </script>
                     <a href="{{ recommended.url }}">
