@@ -535,7 +535,7 @@
         "type_separating": "dots",
         "custom_between": false,
         "carousel_gap": 30,
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "use_custom_color": false,
         "colors_text": "#424242",
         "colors_background": "",
