@@ -546,10 +546,101 @@
         "padding_bottom_mobile": 10
       }
     },
-    "multicolumn_pqLyqg": {
+    "icon_with_text_Y3WbTh": {
+      "type": "icon-with-text",
+      "blocks": {
+        "item_F7bz64": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<h3><strong>50,000+ ORDERS<\/strong><\/h3>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_Yxktz8": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<h3><strong>2,500,000+ DELIVERY MILES <\/strong><\/h3>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_hrJQRV": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "Guarantee heading",
+            "text": "<p>Share information about your products, policies or services.<\/p>",
+            "link_label": "Link label",
+            "link": ""
+          }
+        },
+        "item_NtmAA3": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "Guarantee heading",
+            "text": "<p>Share information about your products, policies or services.<\/p>",
+            "link_label": "Link label",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_F7bz64",
+        "item_Yxktz8",
+        "item_hrJQRV",
+        "item_NtmAA3"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "customized-width",
+        "customize_width": 1200,
+        "heading": "",
+        "heading_size": "default",
+        "text": "",
+        "text_margin_top": 16,
+        "text_alignment": "center",
+        "margin_bottom": 60,
+        "blocks_heading_font": "font-body",
+        "blocks_heading_size": "text-body",
+        "blocks_text_size": "default",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "vertical",
+        "enable_background_icon": true,
+        "type_vertical": "carousel",
+        "arrows_type": "all",
+        "text_animation": "none",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "multicolumn_Tqaf3H": {
       "type": "multicolumn",
       "blocks": {
-        "column_iPmhHi": {
+        "column_rnwWGn": {
           "type": "column",
           "settings": {
             "block_content_max_w": "full",
@@ -567,7 +658,7 @@
             "button_link": ""
           }
         },
-        "column_aCA9Jd": {
+        "column_qAQCf6": {
           "type": "column",
           "settings": {
             "block_content_max_w": "full",
@@ -585,7 +676,7 @@
             "button_link": ""
           }
         },
-        "column_hneWA4": {
+        "column_qmC8KV": {
           "type": "column",
           "settings": {
             "block_content_max_w": "full",
@@ -605,9 +696,9 @@
         }
       },
       "block_order": [
-        "column_iPmhHi",
-        "column_aCA9Jd",
-        "column_hneWA4"
+        "column_rnwWGn",
+        "column_qAQCf6",
+        "column_qmC8KV"
       ],
       "settings": {
         "content_inside_image": false,
@@ -833,7 +924,8 @@
     "rich_text_ctUHEi",
     "collapsible_content_H3JgAU",
     "marquee_pUTkVy",
-    "multicolumn_pqLyqg",
+    "icon_with_text_Y3WbTh",
+    "multicolumn_Tqaf3H",
     "17f60c09-db31-4fe1-97e5-3d85f1363257",
     "countdown_showcase_hero_LY7hag",
     "map_6R6T8c",
