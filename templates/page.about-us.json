@@ -394,6 +394,72 @@
         "padding_bottom_mobile": 20
       }
     },
+    "collapsible_content_H3JgAU": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_rHyJtr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Our Products",
+            "icon": "check_mark",
+            "row_content": "<p>Having worked closely with well-known UK retailers to design, source, and supply popular sofas and sofa beds, we truly understand what British homes love. Our close relationships with European manufacturers allow us to bring you high-quality, fairly-priced furniture. As a trusted distributor and retailer, we’re passionate about using our insights to keep our collections fresh and exciting, regularly updating our styles, fabrics, colours, and materials to fit your home perfectly. Thanks to our extensive network of European furniture manufacturers, if you’re looking for something specific and don’t see it on our site, just let us know! We’ll likely be able to source it for you.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cUf7f7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_XgUb4V": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_GrjMg9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_rHyJtr",
+        "collapsible_row_cUf7f7",
+        "collapsible_row_XgUb4V",
+        "collapsible_row_GrjMg9"
+      ],
+      "settings": {
+        "heading": "",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "top_subheading": "",
+        "top_text": "",
+        "top_icon_1": "chat_buble",
+        "top_heading_1": "",
+        "top_icon_2": "mail",
+        "top_heading_2": "",
+        "bottom_text": "",
+        "bottom_button_label": "",
+        "bottom_button_link": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
     "17f60c09-db31-4fe1-97e5-3d85f1363257": {
       "type": "image-banner",
       "blocks": {
@@ -621,6 +687,7 @@
     "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa",
     "fdad168f-7d9e-4226-9e96-e24307d01253",
     "rich_text_ctUHEi",
+    "collapsible_content_H3JgAU",
     "17f60c09-db31-4fe1-97e5-3d85f1363257",
     "featured_blog_mGz4UF",
     "multicolumn_pqLyqg"
