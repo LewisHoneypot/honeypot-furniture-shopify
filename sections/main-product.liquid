@@ -1497,8 +1497,8 @@
                   {% for recommended in recommended_products %}
                     <script>
                       console.log('id: ', {{recommended.id}});
-                      console.log('variants id: ', {{recommended.variants.id}});
-                      console.log('variants sku: ', {{recommended.variants.sku}});
+                      console.log('variants id: ', {{recommended[0].variants[0].id}});
+                      console.log('variants sku: ', {{recommended[0].variants[0].id}});
                     </script>
                     <a href="{{ recommended.url }}">
                       <div class="recommended-product">
