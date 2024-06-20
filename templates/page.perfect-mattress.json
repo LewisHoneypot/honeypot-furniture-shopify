@@ -1,1 +1,499 @@
-{"sections":{"main":{"type":"main-page","settings":{"section_width":"customized-width","customize_width":1400,"padding_top":30,"padding_bottom":60,"padding_top_mobile":10,"padding_bottom_mobile":30}},"custom_liquid_T7RRLB":{"type":"custom-liquid","settings":{"custom_liquid":"","padding_top":30,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"rich_text_td8pGf":{"type":"rich-text","blocks":{"heading_bUwEki":{"type":"heading","disabled":true,"settings":{"heading":"Talk about your brand","heading_size":"default","padding_top":10,"padding_bottom":10}},"text_WCRAzf":{"type":"text","disabled":true,"settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_rwEiMr":{"type":"button","settings":{"primary_button_label":"Show Me All Mattresses","primary_button_link":"","primary_button_type":"default","secondary_button_label":"Help Me Find The Perfect Mattress","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["heading_bUwEki","text_WCRAzf","button_rwEiMr"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"collection_list_6jFjYz":{"type":"collection-list","blocks":{"collection_yUe9Hw":{"type":"collection","settings":{"collection":""}},"collection_Hnx9d8":{"type":"collection","settings":{"collection":""}},"collection_Xzgpjp":{"type":"collection","settings":{"collection":""}}},"block_order":["collection_yUe9Hw","collection_Hnx9d8","collection_Xzgpjp"],"settings":{"type_style":"classic","heading":"Mattress By Size","heading_size":"medium","heading_margin_bottom":30,"show_view_all":false,"text_view_all":"","button_transparent":"transparent","show_line_separator":true,"header_alignment":"left","image_width":"full","image_ratio":"adapt","height_odd_image":150,"height_even_image":100,"blocks_heading_size":"text-body","font_transform":"uppercase","text_alignment":"center","color_scheme":"","use_custom_color":false,"colors_background":"","gradient_background":"","enable_carousel":false,"carousel_gap":25,"arrows_type":"all","carousel_infinite_scroll":false,"columns_desktop":3,"columns_mobile":"1","image_animation":"none","text_animation":"none","padding_top":70,"padding_bottom":70,"padding_top_mobile":35,"padding_bottom_mobile":43}},"rich_text_UFAaYt":{"type":"rich-text","blocks":{"heading_nanrjj":{"type":"heading","settings":{"heading":"Choosing The Perfect Mattress","heading_size":"default","padding_top":10,"padding_bottom":10}},"text_bYNLQ7":{"type":"text","settings":{"text":"<p>Selecting the perfect mattress is pivotal to your overall health and wellbeing. It’s far more than just a sleeping surface; it’s a sanctuary where your body rejuvenates, repairs, and revitalises after a long day. An ill-suited mattress can lead to discomfort, sleep deprivation, and long-term health issues like chronic back pain. Thus, taking the time to choose the right mattress that aligns with your sleep style, comfort preferences, and budget is essential to secure quality sleep and promote optimal health. It’s not simply about sleeping well, but living well.<\/p>","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_NL96g6":{"type":"button","settings":{"primary_button_label":"Soft","primary_button_link":"","primary_button_type":"default","secondary_button_label":"Medium","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}},"button_Er43r3":{"type":"button","settings":{"primary_button_label":"Firm","primary_button_link":"","primary_button_type":"default","secondary_button_label":"","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["heading_nanrjj","text_bYNLQ7","button_NL96g6","button_Er43r3"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"image_with_text_eTPbtY":{"type":"image-with-text","blocks":{"heading_MGWkzi":{"type":"heading","settings":{"heading":"<h2>Soft Mattresses: Embrace The Plush Comfort<\/h2>","heading_size":"h1","padding_top":10,"padding_bottom":10}},"text_QdUjeq":{"type":"text","settings":{"text":"<p>If you enjoy the feeling of sinking into your mattress at the end of the day, soft mattresses will fit the bill perfectly. They are well-padded, offering a gentle cushion that cradles your body in a soothing embrace. These mattresses are ideal for individuals of a lighter build, side sleepers, or those who experience joint sensitivity, as the plush surface helps alleviate pressure points, providing a pain-free slumber. However, it’s worth remembering that even a soft mattress needs to offer enough support to maintain a healthy spine alignment and prevent potential back discomfort.<\/p><p><strong>Best for:<\/strong> <em>Lighter individuals, side sleepers, those with joint sensitivity or pain.<\/em><\/p>","padding_top":10,"padding_bottom":10}},"link_Qy8CaR":{"type":"link","disabled":true,"settings":{"show_view_all":"link","link_label":"Link label","link":"","button_transparent":"transparent","padding_top":10,"padding_bottom":10}}},"block_order":["heading_MGWkzi","text_QdUjeq","link_Qy8CaR"],"settings":{"type_style":"classic","section_width":"page-width","customize_width":1800,"color_scheme":"","heading":"","heading_size":"default","link_label":"","link":"","colors_heading":"#FFFFFF","show_top_line_separator":false,"show_bot_line_separator":false,"background_for_box":false,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","layout_mobile":"image_first_mobile","mobile_content_alignment":"left","image_animation":"none","text_animation":"none","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"image_with_text_Ug7D3P":{"type":"image-with-text","blocks":{"heading_Ytr6cn":{"type":"heading","settings":{"heading":"<h2>Medium Mattresses: Balancing Comfort And Support<\/h2>","heading_size":"h1","padding_top":10,"padding_bottom":10}},"text_apfC3Y":{"type":"text","settings":{"text":"<p>Medium mattresses are often the preferred choice for many, providing a balance between soft comfort and firm support. These versatile mattresses are suitable for most body types and sleep positions, offering a well-rounded balance of comfort, support, and pressure relief. If you’re someone who changes positions frequently during the night, or if you share the bed with a partner who has different comfort preferences, a medium mattress could be the ideal solution, ensuring a peaceful sleep for all.<\/p><p><strong>Best for:<\/strong> <em>Combination sleepers, couples with different comfort preferences, people seeking balanced comfort and support.<\/em><\/p>","padding_top":10,"padding_bottom":10}},"link_UMVPL9":{"type":"link","disabled":true,"settings":{"show_view_all":"link","link_label":"Link label","link":"","button_transparent":"transparent","padding_top":10,"padding_bottom":10}}},"block_order":["heading_Ytr6cn","text_apfC3Y","link_UMVPL9"],"settings":{"type_style":"classic","section_width":"page-width","customize_width":1800,"color_scheme":"","heading":"","heading_size":"default","link_label":"","link":"","colors_heading":"#FFFFFF","show_top_line_separator":false,"show_bot_line_separator":false,"background_for_box":false,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","layout_mobile":"image_first_mobile","mobile_content_alignment":"left","image_animation":"none","text_animation":"none","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"image_with_text_VpXbTN":{"type":"image-with-text","blocks":{"heading_UX4knK":{"type":"heading","settings":{"heading":"<h2>Firm Mattresses: Solid Support For Sound Sleep<\/h2>","heading_size":"h1","padding_top":10,"padding_bottom":10}},"text_aPXPd8":{"type":"text","settings":{"text":"<p>For those who favour a sturdy sleeping surface, firm mattresses are a great option. They offer robust support, helping to maintain a neutral spine position and reduce the risk of waking up with aches and pains. These mattresses are particularly beneficial for back or stomach sleepers, and heavier individuals, as they prevent excessive sinkage which can disrupt the alignment of the spine. While firm mattresses may feel a touch less ‘cushy’ to some, the benefits of excellent support and alignment they provide are considerable for promoting a healthier, more restful sleep.<\/p><p><strong>Best for:<\/strong> <em>Back or stomach sleepers, heavier individuals, those seeking robust support.<\/em><\/p>","padding_top":10,"padding_bottom":10}},"link_AmmKVd":{"type":"link","disabled":true,"settings":{"show_view_all":"link","link_label":"Link label","link":"","button_transparent":"transparent","padding_top":10,"padding_bottom":10}}},"block_order":["heading_UX4knK","text_aPXPd8","link_AmmKVd"],"settings":{"type_style":"classic","section_width":"page-width","customize_width":1800,"color_scheme":"","heading":"","heading_size":"default","link_label":"","link":"","colors_heading":"#FFFFFF","show_top_line_separator":false,"show_bot_line_separator":false,"background_for_box":false,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","layout_mobile":"image_first_mobile","mobile_content_alignment":"left","image_animation":"none","text_animation":"none","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"rich_text_9VyY6P":{"type":"rich-text","blocks":{"text_KiiDpF":{"type":"text","settings":{"text":"","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_Nn3NR6":{"type":"button","settings":{"primary_button_label":"Show Me All Mattresses","primary_button_link":"","primary_button_type":"default","secondary_button_label":"","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["text_KiiDpF","button_Nn3NR6"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}}},"order":["main","custom_liquid_T7RRLB","rich_text_td8pGf","collection_list_6jFjYz","rich_text_UFAaYt","image_with_text_eTPbtY","image_with_text_Ug7D3P","image_with_text_VpXbTN","rich_text_9VyY6P"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "custom_liquid_T7RRLB": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_td8pGf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bUwEki": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_WCRAzf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_rwEiMr": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Show Me All Mattresses",
+            "primary_button_link": "shopify:\/\/collections\/mattresses",
+            "primary_button_type": "default",
+            "secondary_button_label": "Help Me Find The Perfect Mattress",
+            "secondary_button_link": "#shopify-section-template--22448440049951__rich_text_UFAaYt",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_bUwEki",
+        "text_WCRAzf",
+        "button_rwEiMr"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collection_list_6jFjYz": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_yUe9Hw": {
+          "type": "collection",
+          "settings": {
+            "collection": "double-mattresses"
+          }
+        },
+        "collection_Hnx9d8": {
+          "type": "collection",
+          "settings": {
+            "collection": "king-size-mattresses"
+          }
+        },
+        "collection_cW7wyG": {
+          "type": "collection",
+          "settings": {
+            "collection": "super-king-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "collection_yUe9Hw",
+        "collection_Hnx9d8",
+        "collection_cW7wyG"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Mattress By Size",
+        "heading_size": "medium",
+        "heading_margin_bottom": 30,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "collection_list_cCR4Nj": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_PHNaYq": {
+          "type": "collection",
+          "settings": {
+            "collection": "soft"
+          }
+        },
+        "collection_PRcYJ6": {
+          "type": "collection",
+          "settings": {
+            "collection": "medium"
+          }
+        },
+        "collection_EWnfLd": {
+          "type": "collection",
+          "settings": {
+            "collection": "firm"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PHNaYq",
+        "collection_PRcYJ6",
+        "collection_EWnfLd"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Mattress By Comfort",
+        "heading_size": "medium",
+        "heading_margin_bottom": 30,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "rich_text_UFAaYt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nanrjj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Choosing The Perfect Mattress",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_bYNLQ7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Selecting the perfect mattress is pivotal to your overall health and wellbeing. It’s far more than just a sleeping surface; it’s a sanctuary where your body rejuvenates, repairs, and revitalises after a long day. An ill-suited mattress can lead to discomfort, sleep deprivation, and long-term health issues like chronic back pain. Thus, taking the time to choose the right mattress that aligns with your sleep style, comfort preferences, and budget is essential to secure quality sleep and promote optimal health. It’s not simply about sleeping well, but living well.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_nanrjj",
+        "text_bYNLQ7"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_with_text_eTPbtY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MGWkzi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Soft Mattresses: Embrace The Plush Comfort<\/h2>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_QdUjeq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you enjoy the feeling of sinking into your mattress at the end of the day, soft mattresses will fit the bill perfectly. They are well-padded, offering a gentle cushion that cradles your body in a soothing embrace. These mattresses are ideal for individuals of a lighter build, side sleepers, or those who experience joint sensitivity, as the plush surface helps alleviate pressure points, providing a pain-free slumber. However, it’s worth remembering that even a soft mattress needs to offer enough support to maintain a healthy spine alignment and prevent potential back discomfort.<\/p><p><strong>Best for:<\/strong> <em>Lighter individuals, side sleepers, those with joint sensitivity or pain.<\/em><\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_Qy8CaR": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_MGWkzi",
+        "text_QdUjeq",
+        "link_Qy8CaR"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/9.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_Ug7D3P": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ytr6cn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Medium Mattresses: Balancing Comfort And Support<\/h2>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_apfC3Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Medium mattresses are often the preferred choice for many, providing a balance between soft comfort and firm support. These versatile mattresses are suitable for most body types and sleep positions, offering a well-rounded balance of comfort, support, and pressure relief. If you’re someone who changes positions frequently during the night, or if you share the bed with a partner who has different comfort preferences, a medium mattress could be the ideal solution, ensuring a peaceful sleep for all.<\/p><p><strong>Best for:<\/strong> <em>Combination sleepers, couples with different comfort preferences, people seeking balanced comfort and support.<\/em><\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_UMVPL9": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ytr6cn",
+        "text_apfC3Y",
+        "link_UMVPL9"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/9.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_VpXbTN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UX4knK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Firm Mattresses: Solid Support For Sound Sleep<\/h2>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_aPXPd8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who favour a sturdy sleeping surface, firm mattresses are a great option. They offer robust support, helping to maintain a neutral spine position and reduce the risk of waking up with aches and pains. These mattresses are particularly beneficial for back or stomach sleepers, and heavier individuals, as they prevent excessive sinkage which can disrupt the alignment of the spine. While firm mattresses may feel a touch less ‘cushy’ to some, the benefits of excellent support and alignment they provide are considerable for promoting a healthier, more restful sleep.<\/p><p><strong>Best for:<\/strong> <em>Back or stomach sleepers, heavier individuals, those seeking robust support.<\/em><\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_AmmKVd": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_UX4knK",
+        "text_aPXPd8",
+        "link_AmmKVd"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/7.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_9VyY6P": {
+      "type": "rich-text",
+      "blocks": {
+        "text_KiiDpF": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_Nn3NR6": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Show Me All Mattresses",
+            "primary_button_link": "shopify:\/\/collections\/mattresses",
+            "primary_button_type": "default",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_KiiDpF",
+        "button_Nn3NR6"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_T7RRLB",
+    "rich_text_td8pGf",
+    "collection_list_6jFjYz",
+    "collection_list_cCR4Nj",
+    "rich_text_UFAaYt",
+    "image_with_text_eTPbtY",
+    "image_with_text_Ug7D3P",
+    "image_with_text_VpXbTN",
+    "rich_text_9VyY6P"
+  ]
+}

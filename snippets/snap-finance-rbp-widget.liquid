@@ -1,0 +1,27 @@
+<div id="snap-uk-widgets-product-rbp" style= padding-top:10px;padding-bottom:5px; ></div>
+
+{% assign product_price = product.price | money_without_currency %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var productPrice = +{{ product_price | replace: "£", "" | replace: ",", "" | split: " " | first }};
+    if (productPrice >= 250) {
+        snapuk.init("fq0hLCzt4Qj1V15ZK78VvjO9K7GUA9zW");
+        snapuk.widgets.productRBP({
+            merchantId: 4816,
+            costOfGoods: productPrice,
+		theme: "LIGHT",
+        
+        });
+    } else {
+  
+        var messageElement = document.createElement('div');
+        messageElement.textContent = "Snap Finance is available on orders over £250";
+        messageElement.style.textAlign = 'center';
+        messageElement.style.marginTop = '10px';
+
+        var widgetContainer = document.getElementById('snap-uk-widgets-product-rbp');
+        widgetContainer.appendChild(messageElement);
+    }
+});
+</script>

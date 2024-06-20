@@ -63,9 +63,9 @@
         "sidebar_type": "popup",
         "color_scheme": "",
         "padding_top": 15,
-        "padding_bottom": 0,
+        "padding_bottom": 100,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 50
       }
     },
     "90e30edb-d999-4112-99f2-c819a560023e": {
@@ -84,7 +84,7 @@
         "button_label": "",
         "heading_alignment": "center",
         "heading_margin_bottom": 60,
-        "blog": "4-excellent-reasons-to-choose-a-corner-sofa",
+        "blog": "blog-demo-3",
         "post_limit": 4,
         "spacing_desktop": 30,
         "spacing_tablet": 30,
@@ -122,113 +122,26 @@
         "padding_bottom_mobile": 50
       }
     },
-    "featured_blog_TJkCQc": {
-      "type": "featured-blog",
-      "settings": {
-        "header_width": "page-width",
-        "content_width": "page-width",
-        "customize_width": 1800,
-        "padding_container_full_w": 0,
-        "show_line_separator": false,
-        "style_layout": "enable_grid",
-        "icon": "none",
-        "heading": "All Blog Posts",
-        "heading_size": "default",
-        "show_view_all": "none",
-        "button_label": "Button label",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 60,
-        "blog": "news",
-        "post_limit": 4,
-        "spacing_desktop": 30,
-        "spacing_tablet": 30,
-        "spacing_mobile": 10,
-        "show_image": true,
-        "image_ratio": "landscape",
-        "show_content": false,
-        "show_date": true,
-        "show_author": false,
-        "show_tags": false,
-        "show_button": true,
-        "button_transparent": "default",
-        "text_per_line": "2",
-        "text_alignment": "left",
-        "title_margin_top": 0,
-        "title_margin_bottom": 10,
-        "content_margin_top": 15,
-        "content_margin_bottom": 0,
-        "grid_number": 3,
-        "grid_number_tablet": 2,
-        "grid_number_mobile": 2,
-        "carousel_number": 5,
-        "carousel_number_tablet": 1.3,
-        "t:sections.featured-blog.settings.heading_3": "1.5",
-        "arrows_type": "all",
-        "enable_pagination_type": "all",
-        "pagination_type": "dots",
-        "color_scheme": "",
-        "image_animation": "none",
-        "heading_animation": "none",
-        "text_animation": "none",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "featured_blog_J4YB7K": {
-      "type": "featured-blog",
+    "ee9acfaf-4628-41f8-95be-902e78f4c4bb": {
+      "type": "featured-blog-post",
       "disabled": true,
       "settings": {
-        "header_width": "page-width",
-        "content_width": "page-width",
-        "customize_width": 1800,
-        "padding_container_full_w": 0,
-        "show_line_separator": false,
-        "style_layout": "enable_carousel",
-        "icon": "none",
-        "heading": "The Design Sheppard",
-        "heading_size": "default",
-        "show_view_all": "none",
-        "button_label": "Button label",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 60,
-        "blog": "news",
-        "post_limit": 3,
-        "spacing_desktop": 30,
-        "spacing_tablet": 30,
-        "spacing_mobile": 10,
-        "show_image": true,
+        "show_line_separator": true,
+        "article": "blog-new\/liquid-gold-the-transformative-benefits-of-oil-serums-in-skincare-regimens",
         "image_ratio": "adapt",
-        "show_content": false,
         "show_date": true,
         "show_author": true,
-        "show_tags": false,
-        "show_button": true,
-        "button_transparent": "default",
-        "text_per_line": "2",
-        "text_alignment": "left",
-        "title_margin_top": 0,
-        "title_margin_bottom": 10,
-        "content_margin_top": 15,
-        "content_margin_bottom": 0,
-        "grid_number": 3,
-        "grid_number_tablet": 2,
-        "grid_number_mobile": 2,
-        "carousel_number": 3,
-        "carousel_number_tablet": 1.3,
-        "t:sections.featured-blog.settings.heading_3": "1.2",
-        "arrows_type": "all",
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
         "color_scheme": "",
-        "image_animation": "none",
-        "heading_animation": "fade-up",
-        "text_animation": "none",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "heading": "Related product",
+        "collection": "related-blog-posts",
+        "product_color_scheme": "",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar_vertical",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "57970167-ee8a-406a-ad95-e7939540df43": {
@@ -288,7 +201,6 @@
     },
     "all-article-tags": {
       "type": "all-article-tags",
-      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1600,
@@ -296,15 +208,161 @@
         "padding_bottom": 100
       }
     },
-    "newsletter_MYj8AL": {
+    "featured_blog_Ekhzdj": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1800,
+        "padding_container_full_w": 0,
+        "show_line_separator": false,
+        "style_layout": "enable_carousel",
+        "icon": "none",
+        "heading": "All Blog Posts",
+        "heading_size": "default",
+        "show_view_all": "none",
+        "button_label": "Button label",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "4-excellent-reasons-to-choose-a-corner-sofa",
+        "post_limit": 3,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_content": false,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": false,
+        "show_button": true,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 3,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 2,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "fade-up",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_9iBKDN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CzaBqV": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Design Sheppard",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_36FpBA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stacey Sheppard brings her keen eye for design and deep industry insights to her guest blog posts. With a focus on interior design trends, tips, and expert advice, Stacey offers readers fresh perspectives on creating stylish and functional spaces. Her approachable writing style and extensive knowledge make her posts a must-read for anyone looking to elevate their home. Dive into Stacey's articles for inspiration and practical design solutions.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzaBqV",
+        "text_36FpBA"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "featured_blog_Gx3JKd": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1800,
+        "padding_container_full_w": 0,
+        "show_line_separator": false,
+        "style_layout": "enable_carousel",
+        "icon": "none",
+        "heading": "",
+        "heading_size": "default",
+        "show_view_all": "none",
+        "button_label": "Button label",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "news",
+        "post_limit": 3,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_content": false,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": false,
+        "show_button": true,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 3,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 2,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "fade-up",
+        "heading_animation": "none",
+        "text_animation": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "newsletter_rxaBWF": {
       "type": "newsletter",
       "blocks": {
-        "heading_WeiFFe": {
+        "heading_XNJpUn": {
           "type": "heading",
           "settings": {
             "show_line_separator_top": false,
-            "heading": "Subscribe to our emails to receieve regular content, exclusive offers and much more!",
-            "heading_size": "small",
+            "heading": "Subscribe to our emails",
+            "heading_size": "default",
             "heading_margin_bottom": 0,
             "description": "",
             "description_size": "medium",
@@ -315,7 +373,7 @@
             "padding_bottom": 10
           }
         },
-        "email_form_epLxEX": {
+        "email_form_WK9964": {
           "type": "email_form",
           "settings": {
             "description": "",
@@ -329,8 +387,8 @@
         }
       },
       "block_order": [
-        "heading_WeiFFe",
-        "email_form_epLxEX"
+        "heading_XNJpUn",
+        "email_form_WK9964"
       ],
       "settings": {
         "type_style": "classic",
@@ -339,14 +397,14 @@
         "custom_rouded": false,
         "custom_block_rouded": 0,
         "full_width": true,
-        "text_alignment": "center",
+        "text_alignment": "left",
         "text_alignment_mobile": "center",
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
-        "color_scheme": "background-2",
-        "use_custom_color": false,
+        "color_scheme": "",
+        "use_custom_color": true,
         "colors_text": "#424242",
-        "colors_background": "#d0e9e9",
+        "colors_background": "#f6eee3",
         "gradient_background": "",
         "padding_top": 30,
         "padding_bottom": 30,
@@ -358,10 +416,12 @@
   "order": [
     "main",
     "90e30edb-d999-4112-99f2-c819a560023e",
-    "featured_blog_TJkCQc",
-    "featured_blog_J4YB7K",
+    "ee9acfaf-4628-41f8-95be-902e78f4c4bb",
     "57970167-ee8a-406a-ad95-e7939540df43",
     "all-article-tags",
-    "newsletter_MYj8AL"
+    "featured_blog_Ekhzdj",
+    "rich_text_9iBKDN",
+    "featured_blog_Gx3JKd",
+    "newsletter_rxaBWF"
   ]
 }

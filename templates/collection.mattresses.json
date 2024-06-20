@@ -91,9 +91,9 @@
         "show_collection_image": false,
         "breadcrumb_size": "medium",
         "breadcrumb_padding_bottom": 60,
-        "heading_size": "small",
-        "heading_margin_bottom": 50,
-        "description_size": "medium",
+        "heading_size": "default",
+        "heading_margin_bottom": 24,
+        "description_size": "xxx-large",
         "text_margin_bottom": 72,
         "content_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "content_use_custom_color": false,
@@ -199,7 +199,7 @@
         "collection_WA4Xwj": {
           "type": "collection",
           "settings": {
-            "collection": "bundles-1"
+            "collection": ""
           }
         }
       },

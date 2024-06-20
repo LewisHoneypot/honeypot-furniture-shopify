@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "link_type": "line",
@@ -116,6 +125,7 @@
     "sign_in_button_transparent": "transparent",
     "create_account_color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
     "create_account_button_transparent": "default",
+    "show_multitasking_bar": false,
     "multitasking_show_search": true,
     "multitasking_style": "classic",
     "multitasking_collapse": true,
@@ -216,6 +226,14 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "7902831097370503076": {
+        "type": "shopify:\/\/apps\/estimated-delivery-date-eta\/blocks\/estimated-delivery-days\/d8155dd1-6598-4174-aaeb-cbcf85a857bc",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
@@ -368,7 +386,7 @@
         "settings": {
           "text": "#2d2d2d",
           "text_link": "#2a6876",
-          "background": "#f6f6f6",
+          "background": "#ffffff",
           "background_gradient": "",
           "button_label": "#000000",
           "button_background": "#121212",
@@ -392,7 +410,7 @@
           "background": "#b7b0a3",
           "background_gradient": "",
           "button_label": "#ffffff",
-          "button_background": "#121212",
+          "button_background": "#433f3f",
           "button_gradient": "",
           "secondary_button_label": "#000000",
           "secondary_button_background": "#ede9e2",
@@ -431,13 +449,13 @@
         "settings": {
           "text": "#ffffff",
           "text_link": "#988c8b",
-          "background": "#5b5751",
+          "background": "#45544c",
           "background_gradient": "",
-          "button_label": "#ffffff",
-          "button_background": "#121212",
+          "button_label": "#45544c",
+          "button_background": "#ffffff",
           "button_gradient": "",
-          "secondary_button_label": "#ffffff",
-          "secondary_button_background": "#000000",
+          "secondary_button_label": "#45544c",
+          "secondary_button_background": "#d4d4d4",
           "secondary_button_gradient": "",
           "arrow": "#121212",
           "arrow_background": "#ffffff",
@@ -497,9 +515,9 @@
           "background": "#000000",
           "background_gradient": "",
           "button_label": "#ffffff",
-          "button_background": "#121212",
+          "button_background": "#ffffff",
           "button_gradient": "",
-          "secondary_button_label": "#ede9e2",
+          "secondary_button_label": "#45544c",
           "secondary_button_background": "#ede9e2",
           "secondary_button_gradient": "",
           "arrow": "#121212",

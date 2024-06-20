@@ -1,0 +1,27 @@
+<div id="snap-uk-widgets-product-bnpl" style= padding-bottom:10px ></div>
+
+{% assign product_price = product.price | money_without_currency %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var productPrice = +{{ product_price | replace: "£", "" | replace: ",", "" | split: " " | first }};
+    if (productPrice >= 250) {
+        snapuk.init("fq0hLCzt4Qj1V15ZK78VvjO9K7GUA9zW");
+        snapuk.widgets.productBNPL({
+            merchantId: 4816,
+            costOfGoods: productPrice,
+		theme: "LIGHT",
+        
+        });
+    } else {
+  
+        var messageElement = document.createElement('div');
+        messageElement.textContent = "";
+        messageElement.style.textAlign = 'center';
+        messageElement.style.marginTop = '10px';
+
+        var widgetContainer = document.getElementById('snap-uk-widgets-product-bnpl');
+        widgetContainer.appendChild(messageElement);
+    }
+});
+</script>

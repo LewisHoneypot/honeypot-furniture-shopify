@@ -57,7 +57,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_3_1.webp",
+        "image": "shopify:\/\/shop_images\/Ambassador-Program.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -107,7 +107,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "Contact us",
-            "primary_button_link": "",
+            "primary_button_link": "mailto:sophie.hales@honeypotfurniture.co.uk",
             "primary_button_type": "default",
             "secondary_button_label": "",
             "secondary_button_link": "",
@@ -204,11 +204,27 @@
             "color_overlay_opacity": "#000000",
             "desktop_content_position": "bottom-left"
           }
+        },
+        "image_iU33RY": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading_image": "Image",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "Button label",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
         }
       },
       "block_order": [
         "image_QyJVTF",
-        "image_iVDHka"
+        "image_iVDHka",
+        "image_iU33RY"
       ],
       "settings": {
         "section_width": "page-width",

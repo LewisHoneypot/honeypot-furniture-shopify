@@ -202,7 +202,7 @@
         "text_67qjMj": {
           "type": "text",
           "settings": {
-            "text": "<p>Stools and benches are extremely versatile pieces of furniture that can be used in multiples rooms around the house and for various functions. They are great additions to the family home and can provide additional seating, storage or surface areas. <\/p><p>What makes stools and benches so flexible is the fact that they are portable and extremely easy to move around, whether that is within one room or between rooms. They can be moved to wherever extra seating or surfaces are needed at the time. <\/p><p>In this post, we will explore how you can use stools and benches in every room in the home. <\/p>",
+            "text": "<p>A <a href=\"https:\/\/honeypotfurniture.co.uk\/living-room\/coffee-tables\/\"><span style=\"text-decoration:underline\">coffee table<\/span><\/a> is generally considered to be an integral part of any living room. As with the sofa, it is one of those pieces of furniture that we have come to expect to see in the room. For many families, the coffee table is a multi-functional piece of furniture that serves many purposes. But do we really give enough thought to our coffee table when it comes to choosing this important piece of living room furniture?<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -211,7 +211,7 @@
         "text_AxW9Ln": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>In the Living Room<\/strong><\/p><p>There are many ways to use stools and benches in the living room. They can be used as extra seating for larger gatherings when friends and family come to visit. You can use them in addition to your sofas and armchairs so that everybody has a seat during social gatherings.<\/p><p>Alternatively, stools and benches can be used instead of a coffee table. Benches work particularly well as they are low and long. They provide plenty of surface area for placing things you need to keep close to hand.<\/p><p>In small spaces, a foot stool can double up as a coffee table. For upholstered stools, try placing a tray on top to protect the fabric and create a flat surface for drinks, vases or trinkets. A small stool can also be placed next to an armchair or sofa to act as a side table.  <\/p><p>Stools with storage are also a great addition to the living room. Not only can they act as additional seating or as a coffee or side table, but they allow you to store belongings inside too. Perhaps you can use them to store blankets or extra cushions, or maybe you can store magazines inside.<\/p>",
+            "text": "<p><strong>What are coffee tables used for? <\/strong><\/p><p>The purpose of a coffee table is partly in the name. It is somewhere to place your coffee or other drinks to keep them close to hand while you relax on the sofa. However, it is also used as somewhere to home the remote control and other devices you have in the living room. It can be used as somewhere to display your coffee table books or a vase of flowers or other trinkets. It might also be somewhere you play board games as a family or where the children do their colouring in or drawing. Or perhaps it’s where you gather for a laid-back meal at the weekend in front of a movie? <\/p><p>You see, didn’t we say that a coffee table is a multi-functional piece of furniture? Given how many functions it can serve, is it necessary to have a coffee table in the living room? <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -258,67 +258,47 @@
         "padding_bottom_mobile": 20
       }
     },
-    "collage_nJHnwn": {
-      "type": "collage",
+    "carousel_images_pby3Bk": {
+      "type": "carousel-images",
       "blocks": {
-        "image_EXqLBC": {
-          "type": "image",
+        "slide_PbeUzd": {
+          "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_2.jpg",
-            "heading_image": "",
-            "heading_size": "default",
-            "button_transparent": "transparent",
-            "button_type": "standard",
+            "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
+            "content_margin_negative_top_desktop": 75,
+            "content_margin_negative_top_tablet": 60,
+            "content_margin_negative_top_mobile": 45,
+            "subheading": "",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading": "",
+            "heading_size": "large",
+            "description": "",
+            "description_size": "medium",
+            "button_style": "default",
             "button_label": "",
-            "link": "",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
-          }
-        },
-        "image_HKTfQP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Astrid_Sofa_Grey_Footstool_Lifestyle_Low_Res_1.jpg",
-            "heading_image": "",
-            "heading_size": "default",
-            "button_transparent": "transparent",
-            "button_type": "standard",
-            "button_label": "",
-            "link": "",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "desktop_content_position": "top-left"
+            "button_link": "",
+            "text_alignment": "center"
           }
         }
       },
       "block_order": [
-        "image_EXqLBC",
-        "image_HKTfQP"
+        "slide_PbeUzd"
       ],
       "settings": {
-        "section_width": "page-width",
+        "section_width": "full-width",
         "customize_width": 1800,
-        "enable_full_width": true,
-        "heading": "",
-        "text": "<p>The Astrid Footstool<\/p>",
-        "text_alignment": "center",
-        "heading_margin_bottom": 30,
-        "image_ratio": "adapt",
-        "spacing_desktop": 20,
-        "spacing_tablet": 10,
-        "spacing_mobile": 10,
-        "enable_carousel": true,
-        "enable_pagination_type": "sm",
-        "pagination_type": "progressbar",
+        "show_line_separator": false,
         "color_scheme": "",
-        "image_animation": "none",
-        "image_behavior": "none",
-        "text_animation": "none",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "arrows_type": "all",
+        "carousel_infinite_scroll": true,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 78,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
       }
     },
     "rich_text_f4krkd": {
@@ -327,7 +307,7 @@
         "text_6ibGxD": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>In the Bedroom<\/strong><\/p><p>The bedroom is another room in the home where stools and benches come in handy. Buying a bench for the end of the bed is a great idea as this gives you somewhere to sit when getting dressed and undressed. It is particularly handy when putting on trousers and socks. It also works well for when you want to sit in the bedroom and talk with someone who may be in bed. <\/p><p>Both stools and benches could be used in the bedroom with a dressing table. Having somewhere to get ready in the morning is desirable in a bedroom and dressing stools allow you to sit at the dressing table while getting ready for the day ahead. <\/p><p><strong>In the Hallway<\/strong><\/p><p>If your hallway is wide enough, it is a great idea to use stools and benches to provide seating for when you want to put on and remove your shoes. A bench seat could also be used to place handbags on or to place the mail before you have a chance to go through it. <\/p><p>If you choose a storage bench or storage stool, you can even keep your shoes or other outdoor wear stored neatly away out of sight. <\/p><p><strong>In the Dining Room<\/strong><\/p><p>The dining room is the perfect place to use stools and benches. If you have a large dining table, particularly an extendable dining table, having additional stools or benches that you can use to seat extra guests is a must. <\/p><p>Having a dining table with bench can be preferable to only using chairs. It’s much easier to seat more people on a bench when you need to create extra place settings for larger gatherings. Using a bench for the dining table can also be a great way to save space. Benches will fit nicely underneath the table out of the way, whereas chairs can only be tucked in so far. <\/p><p><strong>In the Kitchen<\/strong><\/p><p>The kitchen is another room where stools and benches come into their own. Investing in stools for the kitchen is a great idea if you have high cupboards that you cannot reach very well. A stool will give you that added height to be able to reach even the highest shelves. <\/p><p>You may want to invest in stools for a breakfast bar. Being able to sit at this raised counter for light meals, snacks or completing quick admin tasks can be very useful. A popular choice is often bar stools for the kitchen.<\/p><p><strong>In the Bathroom<\/strong><\/p><p>The bathroom is probably the most unexpected room in the home to use stools and benches, but due to their practicality and flexibility they work extremely well in bathrooms too. A stool can be used to provide seating so you can sit down while you watch the kids who are enjoying their bath time. Or it can act as a perch for your partner so you can share details about your day while they sit beside you while you soak.<\/p><p>A small stool could also be used as a surface to place your toiletries on next to the bath, making it easier to reach the products that you need while you bathe. If you’re trying to create a spa-like vibe you could also place rolled up towels on stools and benches. <\/p><p>A bench is also a useful addition for placing your clothes on once you have undressed ready to take a bath or shower.<\/p><p>Stools and benches can have many uses around the home. These flexible and versatile pieces of furniture are a great investment. <\/p><p>If you’ve bought stools or benches from Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #BuzzingWithStyle.<\/p>",
+            "text": "<p><strong>Set your budget<\/strong><\/p><p>First things first, think about your budget. How much do you have available to spend on a coffee table. Knowing the budget will help you narrow down your options when it comes to the other choices that you will have to make.<\/p><p><strong>How big should a coffee table be?<\/strong><\/p><p>According to style guru <a href=\"https:\/\/stylebyemilyhenderson.com\/\"><span style=\"text-decoration:underline\">Emily Henderson<\/span><\/a>, a coffee table should be at least half the length of your sofa but no more than two thirds the length. This is to make sure that the proportions are right between the two pieces of furniture. <\/p><p>However, if your sofa has a chaise, Henderson says that the ½ to 2\/3rds rule applies only to the length of the horizontal seat and not the length of the whole sofa. <\/p><p><strong>How tall should a coffee table be? <\/strong><\/p><p>The generally accepted rule is that the coffee table should be no taller than the height of the sofa seat, although it can be a little lower. If you want something higher than that, maybe because bending, stretching, or reaching is difficult for you, it might be better to consider a side table which can be taller. <\/p><p><strong>Where to put a coffee table?<\/strong><\/p><p>A coffee table should be placed with enough room around it so that it is easy for people to navigate around it. When it comes to clearance, we suggest you position your coffee table roughly 30-45cm away from the sofa. You will want to leave at least double this distance from any other furniture in the room such as your TV stand, the sideboard or even the fireplace.  <\/p><p><strong>What shape coffee table?<\/strong><\/p><p>Once you know whether you need a coffee table, how big it should be and where you need to position it, it’s time to decide what shape it should be. A rectangle coffee table is a good option in a narrow space with minimal clearance room, whereas a square coffee table is a good choice if your seating is positioned well for conversations, for example a sofa and two chairs. <\/p><p>You might want to consider a round coffee table if you have a small living room and\/or a chaise sofa. An oval coffee table has the same benefits as a rectangular one but due to the curved edges it allows more flow in the room and there are no sharp edges which could be good if you have children.  <\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -348,6 +328,168 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
+    },
+    "collage_9MPxtz": {
+      "type": "collage",
+      "blocks": {
+        "image_mWEtpC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_3LFg7c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T113923.474.png",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_mWEtpC",
+        "image_3LFg7c"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "<p>Share information about your brand with your customers.<\/p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_gallery_x6hHp4": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_BLkcPr": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112510.745.png",
+            "image_link": ""
+          }
+        },
+        "image_A7wreJ": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112634.763.png",
+            "image_link": ""
+          }
+        },
+        "image_jqRxxQ": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T112934.744.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_BLkcPr",
+        "image_A7wreJ",
+        "image_jqRxxQ"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": true,
+        "heading": "",
+        "heading_size": "default",
+        "font_transform": "uppercase",
+        "heading_margin_bottom": 16,
+        "content": "",
+        "text_margin_bottom": 16,
+        "button_label": "",
+        "button_link": "",
+        "button_margin_bottom": 16,
+        "text_alignment": "center",
+        "cart_label": "Shop",
+        "display_viewmore": false,
+        "viewmore_label": "Button label",
+        "viewmore_size": "default",
+        "viewmore_link": "",
+        "margin_top_viewmore": 16,
+        "button_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "carousel_gap": 10,
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_nNtQMW": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ipVTCD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>What material?<\/strong><\/p><p>Next up you should think about the material you want your coffee table to be made from. At this point, consider the other furniture pieces in the room and the materials that they are made of. Also think about the people who live in your home and will be using the room. This will help you decide how durable the material should be. You may not want a glass topped coffee table if you have small children for example, but this would be a great option in a small room that already has a lot of furniture as glass takes up less visual space. With children you may opt for clear acrylic instead of glass. <\/p><p><strong>Think about the features<\/strong><\/p><p>If you want your coffee table to work hard for the money, consider one that can perform many functions. Perhaps you need extra storage so a coffee table with storage shelves or drawers could be a good choice. Or perhaps a trunk or ottoman coffee table.<\/p><p>Maybe you need flexibility in the room so opting for a coffee table on wheels could be a good move. If you like working on the sofa or eating at the coffee table, perhaps a coffee table with a lift top is most appropriate. <\/p><p>Choosing a coffee table is no easy task. It adds so much to the room and depending on the size, shape, style and material, it can completely change the feel of the room. Luckily, we have a <a href=\"https:\/\/honeypotfurniture.co.uk\/living-room\/coffee-tables\/\"><span style=\"text-decoration:underline\">great selection of coffee tables<\/span><\/a> on offer so you are bound to find something that meets your budget and will work well in your living room. <\/p><p>If you already have a Honeypot Furniture coffee table in your home, please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive so we can see.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_ipVTCD"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
@@ -356,7 +498,10 @@
     "slideshow_kET49Q",
     "rich_text_VQxCPE",
     "rich_text_GyRE9A",
-    "collage_nJHnwn",
-    "rich_text_f4krkd"
+    "carousel_images_pby3Bk",
+    "rich_text_f4krkd",
+    "collage_9MPxtz",
+    "image_gallery_x6hHp4",
+    "rich_text_nNtQMW"
   ]
 }

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "banner": {
@@ -36,7 +45,6 @@
       "blocks": {
         "cc19003e-188e-4f3a-a092-71a303ff5987": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "banner_position": 3,
             "image": "shopify:\/\/shop_images\/1_84d249e5-55c0-4d12-bbac-39459a348234.jpg",
@@ -58,7 +66,6 @@
         },
         "3fca5cef-72fc-4b52-a001-50044316c114": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "banner_position": 6,
             "image": "shopify:\/\/shop_images\/2_1fb17b71-d746-436e-b083-660f2e076db4.jpg",
@@ -85,15 +92,15 @@
       ],
       "settings": {
         "products_per_row": 3,
-        "products_per_page": 15,
+        "products_per_page": 16,
         "columns_mobile": "2",
         "show_collection_description": true,
         "show_collection_image": false,
         "breadcrumb_size": "medium",
         "breadcrumb_padding_bottom": 60,
-        "heading_size": "small",
-        "heading_margin_bottom": 50,
-        "description_size": "medium",
+        "heading_size": "default",
+        "heading_margin_bottom": 24,
+        "description_size": "xxx-large",
         "text_margin_bottom": 72,
         "content_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "content_use_custom_color": false,

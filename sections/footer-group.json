@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -98,6 +107,21 @@
             "padding_bottom_xs": 15,
             "padding_top_xs": 15
           }
+        },
+        "whatsapp_hGmeMU": {
+          "type": "whatsapp",
+          "settings": {
+            "heading": "NEED HELP?",
+            "AvailabilityHeader": "Availability:",
+            "AvailabilityText1": "Monday to Friday 8am - 8pm",
+            "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
+            "WhatsAppButtonText1": "Live Chat on WhatsApp",
+            "WhatsAppButtonPhoneNumber": "+447700176055",
+            "WhatsAppButtonIconColour1": "#45544c",
+            "WhatsAppButtonIconColour2": "#ffffff",
+            "EmailButtonText": "Email Customer Support",
+            "EmailButtonIconColour": "#45544c"
+          }
         }
       },
       "block_order": [
@@ -106,7 +130,8 @@
         "footer-1",
         "3d5e046f-f018-45d1-b98d-d4874a780020",
         "17114992-59f7-4a83-bf27-1f00c171e823",
-        "link_list_mnzbkY"
+        "link_list_mnzbkY",
+        "whatsapp_hGmeMU"
       ],
       "settings": {
         "type_style": "classic",
@@ -123,7 +148,7 @@
         "footer_top_padding_bottom": 65,
         "footer_top_padding_top_mobile": 40,
         "footer_top_padding_bottom_mobile": 40,
-        "footer_top_color_scheme": "accent-1",
+        "footer_top_color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
         "footer_bot_show_line_separator": false,
         "footer_bottom_padding_top": 26,
         "footer_bottom_padding_bottom": 26,

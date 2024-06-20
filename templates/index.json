@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
@@ -6,20 +15,20 @@
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner_1_for_ben.webp",
-            "mobile_image": "shopify:\/\/shop_images\/BANNER_3_mob_for_ben.webp",
+            "image": "shopify:\/\/shop_images\/HP_Banner3.png",
+            "mobile_image": "shopify:\/\/shop_images\/HP_Banner.png",
             "content_max_width": 400,
             "heading_font": "font-heading",
             "heading": "A Sofa For Every Home",
-            "heading_size": "medium",
+            "heading_size": "small",
             "heading_margin_bottom": 23,
             "subheading": "",
             "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
+            "subheading_margin_bottom": 50,
             "box_align": "bottom-left",
             "text_alignment": "left",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
+            "image_overlay_opacity": 0,
+            "color_overlay_opacity": "#ffffff",
             "primary_button_label": "Shop Sofas",
             "primary_button_link": "shopify:\/\/collections\/sofas",
             "secondary_button_label": "",
@@ -112,9 +121,9 @@
       "settings": {
         "section_width": "page-width",
         "customize_width": 1600,
-        "image_ratio": "adapt-image",
-        "image_ratio_mobile": "650px",
-        "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
+        "image_ratio": "750px",
+        "image_ratio_mobile": "adapt-image",
+        "color_scheme": "scheme-e478b9c9-3edc-41c0-a269-635cbe8ed918",
         "arrows_type": "lg",
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
@@ -168,12 +177,26 @@
             "image_height": 152,
             "link": ""
           }
+        },
+        "marquee_kD9cM4": {
+          "type": "marquee",
+          "settings": {
+            "type_marquee": "text",
+            "text": "<p>Sofas Assembled In Any Room of Choice<\/p>",
+            "set_transparent_text": false,
+            "enable_color_underline": false,
+            "colors_underline": "#000000",
+            "options_colors_underline": "full",
+            "image_height": 152,
+            "link": ""
+          }
         }
       },
       "block_order": [
         "marquee_6FBeq9",
         "marquee_aGCjeG",
-        "marquee_JxL8Kw"
+        "marquee_JxL8Kw",
+        "marquee_kD9cM4"
       ],
       "settings": {
         "section_width": "full-width",
@@ -289,6 +312,17 @@
         "padding_bottom_mobile": 12
       }
     },
+    "trustpilot_service_reviews_mini_qrrfxa": {
+      "type": "trustpilot-service-reviews-mini",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
       "type": "collection-list",
       "blocks": {
@@ -347,8 +381,8 @@
       "settings": {
         "type_style": "classic",
         "heading": "Shop Sofas by Size",
-        "heading_size": "medium",
-        "heading_margin_bottom": 25,
+        "heading_size": "small",
+        "heading_margin_bottom": 30,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -415,9 +449,9 @@
       ],
       "settings": {
         "type_style": "classic",
-        "heading": "Collections",
-        "heading_size": "medium",
-        "heading_margin_bottom": 0,
+        "heading": "Shop By Collection",
+        "heading_size": "small",
+        "heading_margin_bottom": 30,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -524,7 +558,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/INSPO_HOME_PAGE_1_1.webp",
-            "product_1": "verona-fullback-sofa-grey-3-seater",
+            "product_1": "azzuro-sofabed-cream-universal-corner",
             "horizontal_1": 46,
             "vertical_1": 77,
             "product_2": "light-grey-chair-and-pillow-from-annies-house",
@@ -572,7 +606,7 @@
         "text": "<p>Real Customers, Real Homes - Shop The Look<\/p>",
         "button_label": "Get More Inspiration",
         "button_link": "shopify:\/\/pages\/inspiration",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
@@ -674,6 +708,14 @@
             "padding_bottom": 30
           }
         },
+        "logos_UcXRFX": {
+          "type": "logos",
+          "settings": {
+            "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
+            "logo2": "shopify:\/\/shop_images\/Klarna_Logo2.png",
+            "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp"
+          }
+        },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
           "type": "buttons",
           "settings": {
@@ -690,14 +732,15 @@
       "block_order": [
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-0",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-1",
+        "logos_UcXRFX",
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2"
       ],
       "settings": {
         "section_width": "full-width",
-        "customize_width": 1800,
+        "customize_width": 1500,
         "custom_rouded": false,
         "custom_block_rouded": 0,
-        "image": "shopify:\/\/shop_images\/TucanoHP1.jpg",
+        "image": "shopify:\/\/shop_images\/Homepage_Banner_For_Payment_and_Finance.jpg",
         "content_inside_image_mobile": true,
         "mobile_row_height": 42,
         "desktop_content_position": "middle-left",
@@ -857,7 +900,7 @@
         "text_alignment_mobile": "center",
         "use_custom_colors_background_content": true,
         "colors_background_content": "",
-        "color_scheme": "background-2",
+        "color_scheme": "scheme-89b6d850-7344-4b60-8a06-5b847e8e19a0",
         "use_custom_color": false,
         "colors_text": "#ffffff",
         "colors_background": "#006eac",
@@ -985,7 +1028,7 @@
         "arrows_type": "all",
         "enable_pagination_type": "all",
         "pagination_type": "progressbar",
-        "color_scheme": "",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "image_animation": "none",
         "heading_animation": "fade-up",
         "text_animation": "fade-up",
@@ -1158,6 +1201,7 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112",
     "0b6105a9-a3ce-4181-b45b-7a55c709e140",
     "41769cb9-5f5a-4896-9da0-2d3bf33aef1e",
+    "trustpilot_service_reviews_mini_qrrfxa",
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
