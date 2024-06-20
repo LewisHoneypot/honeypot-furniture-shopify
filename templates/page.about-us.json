@@ -409,9 +409,9 @@
         "collapsible_row_cUf7f7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Our Service",
+            "icon": "star",
+            "row_content": "<p>At Honeypot Furniture, we take pride in delivering not just high-quality furniture but also an exceptional customer experience. From our 140,000 sq ft warehouse and headquarters, we offer fast and reliable delivery to your home, ensuring every detail is managed with care and precision. Here’s what you can expect from our service:<\/p><ul><li><strong>Fast Delivery<\/strong>: We dispatch from our extensive 140,000 sq ft warehouse, ensuring your furniture reaches you quickly.<\/li><li><strong>Two-Person Delivery Team<\/strong>: Our experienced, professional team deliver your furniture with care and precision. Most of our delivery team have been delivering heavy and bulky items for years - you're in safe hands!<\/li><li><strong>Assembly Service<\/strong>: Sofas are assembled exactly where you want them, making your experience hassle-free.<\/li><li><strong>Live Tracking Link<\/strong>: Receive a live tracking link on the day of delivery, with regular ETA updates to keep you informed.<\/li><li><strong>Doesn't Fit?<\/strong>: If your sofa doesn’t fit through your door, we'll return it to our HQ at no charge. Our team will recommend alternative products that will fit, and there are no additional delivery costs for an alternative sofa on a different date.<\/li><\/ul>",
             "page": ""
           }
         },
