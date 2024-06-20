@@ -289,13 +289,27 @@
             "padding_top_mobile": 8,
             "padding_bottom_mobile": 8
           }
+        },
+        "text_cyhtBD": {
+          "type": "text",
+          "settings": {
+            "heading": "Custom row",
+            "content_type": "custom",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "page": "",
+            "padding_top": 61,
+            "padding_bottom": 61,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
         }
       },
       "block_order": [
         "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1",
         "f60f2026-c9cc-48be-8ca4-8ea08ef8fa85",
         "70fd5937-6811-49a4-ac9a-dd5dd5cf99af",
-        "text_XHxTG4"
+        "text_XHxTG4",
+        "text_cyhtBD"
       ],
       "settings": {
         "section_width": "page-width",
