@@ -336,13 +336,13 @@
         "logos_yqCP74"
       ],
       "settings": {
-        "section_width": "full-width",
+        "section_width": "customized-width",
         "customize_width": 1800,
         "custom_rouded": false,
         "custom_block_rouded": 0,
         "image": "shopify:\/\/shop_images\/RUGS_DIMENSIONS_IMAGE.jpg",
         "content_inside_image_mobile": false,
-        "mobile_row_height": 42,
+        "mobile_row_height": 70,
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
