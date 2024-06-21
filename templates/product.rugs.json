@@ -244,6 +244,7 @@
             "heading": "Delivery",
             "content_type": "custom",
             "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "dimensions": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -252,10 +253,12 @@
         },
         "f60f2026-c9cc-48be-8ca4-8ea08ef8fa85": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
             "content": "<p>Metafield<\/p>",
+            "dimensions": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -269,6 +272,7 @@
             "heading": "Reviews",
             "content_type": "description",
             "content": "",
+            "dimensions": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -281,6 +285,7 @@
             "heading": "Features",
             "content_type": "custom",
             "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "dimensions": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -293,6 +298,7 @@
             "heading": "Description",
             "content_type": "description",
             "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "dimensions": "",
             "padding_top": 61,
             "padding_bottom": 61,
             "padding_top_mobile": 8,
@@ -315,6 +321,46 @@
         "padding_bottom": 50,
         "padding_top_mobile": 5,
         "padding_bottom_mobile": 20
+      }
+    },
+    "image_banner_XBKDbx": {
+      "type": "image-banner",
+      "blocks": {
+        "logos_yqCP74": {
+          "type": "logos",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "logos_yqCP74"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "image": "shopify:\/\/shop_images\/RUGS_DIMENSIONS_IMAGE.jpg",
+        "content_inside_image_mobile": false,
+        "mobile_row_height": 42,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "custom_content_max_width": false,
+        "content_max_width": 500,
+        "mobile_color_scheme": "custom",
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "",
+        "color_scheme": "",
+        "image_overlay_opacity": 30,
+        "color_overlay_opacity": "#000000",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "trustpilot_product_revewis_Eb8Cd6": {
@@ -581,6 +627,7 @@
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
+    "image_banner_XBKDbx",
     "trustpilot_product_revewis_Eb8Cd6",
     "video_QM4Cg7",
     "lookbook_pGUge4",
