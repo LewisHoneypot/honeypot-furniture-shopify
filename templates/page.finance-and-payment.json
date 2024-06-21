@@ -370,7 +370,7 @@
         "text_PDHQmL": {
           "type": "text",
           "settings": {
-            "text": "<p>Shopify's payment solution allows you to checkout with credit  card, debit card or use digital wallets<\/p>",
+            "text": "<p>Shopify's payment solution allows you to checkout with credit  card, debit card or use digital wallets including ApplePay and GooglePay. <br\/><br\/>If you've used ShopPay before, it's easy to check out using your saved details. <br\/><br\/>Simply choose a digital wallet solution or pay by card at checkout. <\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
