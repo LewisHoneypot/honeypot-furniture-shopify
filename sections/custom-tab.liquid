@@ -216,7 +216,7 @@
                   </li>
                 </ul>
                 <div
-                  class="custom__tab-text o-h{% if forloop.first == true %} active{% endif %}"
+                  class="custom__tab-dimensions o-h{% if forloop.first == true %} active{% endif %}"
                   id="Custom-tab-{{ block.id }}"
                   data-tab-id="Custom-tab-{{ block.id }}"
                 >
@@ -232,9 +232,11 @@
                     {%- if block.settings.content_type == 'dimensions' -%}
                       {{ block.settings.page.content }}
                       <p>TEST 1</p>
+                      {{ product.metafields.custom.dimension_image_file | img_tag }}
                     {%- else -%}
                       {{ block.settings.content }}
                       <p>TEST 2</p>
+                      {{ product.metafields.custom.dimension_image_file | img_tag }}
                     {%- endif -%}
                   </div>
                 </div>
@@ -360,15 +362,11 @@
               "label": "t:sections.all.select_content.options__3"
             },
             {
-              "value": "dimensions",
-              "label": "Dimensions"
-            },
-            {
               "value": "custom",
               "label": "t:sections.all.select_content.options__2"
             }
           ],
-          "default": "dimensions",
+          "default": "custom",
           "info": "t:sections.all.select_content.info"
         },
         {
@@ -453,12 +451,16 @@
               "label": "t:sections.all.select_content.options__3"
             },
             {
+              "value": "file_reference",
+              "label": "Dimensions"
+            },
+            {
               "value": "custom",
               "label": "t:sections.all.select_content.options__2"
             }
           ],
-          "default": "custom",
-          "info": "t:sections.all.select_content.info"
+          "default": "file_reference",
+          "info": "Dimensions"
         },
         {
           "type": "richtext",
