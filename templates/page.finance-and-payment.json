@@ -241,12 +241,24 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "link_t8C6cQ": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Find Out More",
+            "link": "shopify:\/\/pages\/clearpay",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
         "heading_f3Y3i4",
         "text_3q4qg9",
-        "navigation_PKJnMQ"
+        "navigation_PKJnMQ",
+        "link_t8C6cQ"
       ],
       "settings": {
         "type_style": "classic",
