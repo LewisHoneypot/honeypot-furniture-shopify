@@ -160,7 +160,7 @@
             "text": "<p>Welcome to our store<\/p>",
             "set_transparent_text": false,
             "enable_color_underline": false,
-            "colors_underline": "#000",
+            "colors_underline": "#000000",
             "options_colors_underline": "full",
             "image_height": 152,
             "link": ""
@@ -736,7 +736,7 @@
           "settings": {
             "button_transparent": "transparent",
             "primary_button_label": "Find Out More",
-            "primary_button_link": "shopify:\/\/collections\/living-room",
+            "primary_button_link": "shopify:\/\/pages\/finance-and-payment",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "padding_top": 19,
