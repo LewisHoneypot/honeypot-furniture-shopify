@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1400,
@@ -20,11 +21,106 @@
         "padding_bottom_mobile": 30
       }
     },
-    "custom_liquid_T7RRLB": {
-      "type": "custom-liquid",
+    "rich_text_a7rG46": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jHaWEe": {
+          "type": "heading",
+          "settings": {
+            "heading": "A selection of finance and payment solutions to suit all!",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_Mb8Gpn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We've worked closely with our finance partners to ensure our customers have a wide selection of easy-to-manage payment options. <\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_jHaWEe",
+        "text_Mb8Gpn"
+      ],
       "settings": {
-        "custom_liquid": "",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
         "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_with_text_WJtzah": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9J4gBF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Image with text<\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_4LzAJB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_dV739Y": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_9J4gBF",
+        "text_4LzAJB",
+        "link_dV739Y"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Snap_Logo_Finance_and_Payment.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
@@ -33,6 +129,7 @@
   },
   "order": [
     "main",
-    "custom_liquid_T7RRLB"
+    "rich_text_a7rG46",
+    "image_with_text_WJtzah"
   ]
 }
