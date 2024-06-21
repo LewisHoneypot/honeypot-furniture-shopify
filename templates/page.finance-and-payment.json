@@ -27,7 +27,7 @@
         "heading_jHaWEe": {
           "type": "heading",
           "settings": {
-            "heading": "A selection of finance and payment solutions to suit all!",
+            "heading": "Buying made easy with a  selection of finance and payment solutions.",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -87,19 +87,96 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "link_gfnnkG": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Find Out More",
+            "link": "shopify:\/\/pages\/finance",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
         "heading_9J4gBF",
         "text_4LzAJB",
-        "navigation_Ea4iVL"
+        "navigation_Ea4iVL",
+        "link_gfnnkG"
       ],
       "settings": {
         "type_style": "classic",
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Snap_Logo_Finance_and_Payment_6d8095f6-b3ba-4715-a77e-2361286744b7.png",
+        "image": "shopify:\/\/shop_images\/1_3d092416-52bd-4dd1-96c3-06a008f6b166.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "Find Out More",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_rRcgak": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xzR8rr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Image with text<\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_Qt7jNQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "navigation_WW96Nb": {
+          "type": "navigation",
+          "settings": {
+            "menu": "",
+            "text_size": "medium",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_xzR8rr",
+        "text_Qt7jNQ",
+        "navigation_WW96Nb"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/2_88899f6c-3902-4f89-a0ec-d03dc8bd73f7.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -123,11 +200,78 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
+    },
+    "image_with_text_zEBYt3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_f3Y3i4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Image with text<\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_3q4qg9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "navigation_PKJnMQ": {
+          "type": "navigation",
+          "settings": {
+            "menu": "",
+            "text_size": "medium",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_f3Y3i4",
+        "text_3q4qg9",
+        "navigation_PKJnMQ"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/3_7bae4ac7-4ae0-45d0-93e6-27f22eb0fbfa.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
     }
   },
   "order": [
     "main",
     "rich_text_a7rG46",
-    "image_with_text_WJtzah"
+    "image_with_text_WJtzah",
+    "image_with_text_rRcgak",
+    "image_with_text_zEBYt3"
   ]
 }
