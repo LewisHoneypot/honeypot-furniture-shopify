@@ -164,12 +164,24 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "link_9hKAHw": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Find Out More",
+            "link": "shopify:\/\/pages\/klarna",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
         "heading_xzR8rr",
         "text_Qt7jNQ",
-        "navigation_WW96Nb"
+        "navigation_WW96Nb",
+        "link_9hKAHw"
       ],
       "settings": {
         "type_style": "classic",
