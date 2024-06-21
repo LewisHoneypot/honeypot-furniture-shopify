@@ -65,7 +65,7 @@
         "heading_9J4gBF": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Image with text<\/p>",
+            "heading": "<p>Snap Finance<\/p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -74,7 +74,7 @@
         "text_4LzAJB": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>We've worked closely with Snap Finance for a number of years and as a long-term flagship retailer, they have listened to what our customers want. With a 12-month 0% finance option and a range of interest-bearing options over linger terms, Snap Finance have adapted to their products to make buying from us easy!<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -116,7 +116,7 @@
         "heading_size": "default",
         "link_label": "Find Out More",
         "link": "shopify:\/\/pages\/finance",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -193,7 +193,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "shopify:\/\/pages\/klarna",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -270,7 +270,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "shopify:\/\/pages\/clearpay",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -335,7 +335,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "shopify:\/\/pages\/klarna",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -400,7 +400,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "shopify:\/\/pages\/clearpay",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
