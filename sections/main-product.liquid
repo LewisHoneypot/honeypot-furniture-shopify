@@ -835,7 +835,7 @@
                     </a>
                   {%- endif -%}
                 </div>
-                
+
               {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products d-block element-spacing-all no-js-hidden{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -1452,7 +1452,7 @@
       </div>
     </side-drawer>
   {%- endfor -%}
-  
+
   {% render 'staingard-drawer' SeatingCapacity %}
 
   {%- for block in drawers -%}
@@ -1489,21 +1489,35 @@
                 {%- if block.settings.content_type == 'description' -%}
                   {{ product.description }}
                 {%- elsif block.settings.content_type == 'pairs_well_with' -%}
-                  {% assign recommended_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}
-                  <script>
-                    console.log('recommended_products: ', {{recommended_products | json }});
-                  </script>
+
+                  {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
+                  {% assign final_tag_list = '' | split: ',' %}
 
                   {% for recommended in recommended_products %}
-                    <script>
-                      console.log('id: ', {{recommended.id}});
-                      console.log('variant id: ', {{recommended.variants[0].id}});
-                      console.log('variant sku: ', "{{recommended.variants[0].sku}}");
-                    </script>
+                    {% assign product_handle = recommended.handle %}
+                    {% assign colour_list_products = all_products[product_handle].metafields.custom.product_colour_list.value %}
+
+                    {% assign new_tag_list = '' %}
+                    {% for colour_list_product in colour_list_products %}
+                      {% comment %} <p>colour_list_product id: {{ colour_list_product.id }}</p> {% endcomment %}
+                      {% paginate collections.all.products by 1000 %}
+                        {% assign product_id = colour_list_product.id | times: 1 %}
+                        {% assign products_obj = collections.all.products | where: 'id', product_id %}
+                        {% assign product_test = products_obj[0] %}
+                      {% endpaginate %}
+                      {% assign new_tag_list = new_tag_list | append: ',' | append: product_test.variants[0].sku %}
+                      {% comment %} <p>Other Colour SKUs: {{ product_test.variants[0].sku }}</p> {% endcomment %}
+                    {% endfor %}
+
+                    {% assign new_tag_list = new_tag_list | remove_first: ',' | split: ',' %}
+                    {% assign final_tag_list = final_tag_list | concat: new_tag_list %}
+
+                    {% assign final_tag_list = final_tag_list | uniq %}
+
                     <a href="{{ recommended.url }}">
                       <div class="recommended-product">
                         <div class="img-container">
-                          <img srcset="{{ recommended.images[0] | image_url }}" height="40" width="100"/>
+                          <img srcset="{{ recommended.images[0] | image_url }}" height="40" width="100">
                         </div>
                         <div class="info">
                           <p class="title">{{ recommended.title }}</p>
@@ -1512,7 +1526,9 @@
                       </div>
                     </a>
                   {% endfor %}
-                
+
+                  <p>trustpilot_array: {{ finalTaglist | json }}</p>
+
                 {%- else -%}
                   {{ block.settings.content }}
                   {{ block.settings.page.content }}
@@ -5024,11 +5040,13 @@
       display: block !important;
     }
     .drawer__wrapper {
-      margin-top:30px;
+      margin-top: 30px;
       .drawer__wrapper-details {
-        a, a:hover, a:visited {
-        text-decoration: none;
-        color: rgba(var(--color-foreground), 1)
+        a,
+        a:hover,
+        a:visited {
+          text-decoration: none;
+          color: rgba(var(--color-foreground), 1);
         }
         .recommended-product {
           display: flex;
@@ -5057,8 +5075,6 @@
     }
   }
 
-
-
   #reviews {
     video {
       max-width: 100%;
@@ -5067,13 +5083,14 @@
       min-width: 26px;
     }
     .innerDiv {
-      border-bottom: solid 1px #F2F2F2;
+      border-bottom: solid 1px #f2f2f2;
       .review-wrapper {
         .customerInfo {
           width: -webkit-fill-available;
         }
-        .attributeNames, .attributeStars {
-          float:left;
+        .attributeNames,
+        .attributeStars {
+          float: left;
           @media screen and (min-width: 768px) {
             margin: 44px 0;
           }
@@ -5100,10 +5117,10 @@
     position: relative;
     transform: rotate(-45deg);
     width: 5px;
-    transition: transform .2s;
+    transition: transform 0.2s;
     display: inline-block;
     cursor: pointer;
-    opacity: .6;
+    opacity: 0.6;
   }
 {% endstylesheet %}
 
