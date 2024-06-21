@@ -79,13 +79,11 @@
             "padding_bottom": 10
           }
         },
-        "link_dV739Y": {
-          "type": "link",
+        "navigation_Ea4iVL": {
+          "type": "navigation",
           "settings": {
-            "show_view_all": "link",
-            "link_label": "Link label",
-            "link": "",
-            "button_transparent": "transparent",
+            "menu": "",
+            "text_size": "medium",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -94,14 +92,14 @@
       "block_order": [
         "heading_9J4gBF",
         "text_4LzAJB",
-        "link_dV739Y"
+        "navigation_Ea4iVL"
       ],
       "settings": {
         "type_style": "classic",
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Snap_Logo_Finance_and_Payment.png",
+        "image": "shopify:\/\/shop_images\/Snap_Logo_Finance_and_Payment_6d8095f6-b3ba-4715-a77e-2361286744b7.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
