@@ -158,9 +158,9 @@
                           {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag }}
                         </div>
                         <div class="col-12 col-lg-4">
-                          <ol>
+                          <ol style="list-style-position: inside;">
                             {%- if product.metafields.Dimensions.Length1 -%}
-                              <li>{{ product.metafields.Dimensions.Length1 }}</li>
+                              <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', 'cm' }}</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.Depth -%}
                               <li>{{ product.metafields.Dimensions.Depth }}</li>
