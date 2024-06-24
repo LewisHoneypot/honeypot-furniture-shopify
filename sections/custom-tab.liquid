@@ -159,12 +159,24 @@
                         </div>
                         <div class="col-12 col-lg-4">
                           <ol>
-                            <li>{{ product.metafields.Dimensions.Length1 }}</li>
-                            <li>{{ product.metafields.Dimensions.Depth }}</li>
-                            <li>{{ product.metafields.Dimensions.Height }}</li>
-                            <li>{{ product.metafields.Dimensions.FloortoSeatHeight }}</li>
-                            <li>{{ product.metafields.Dimensions.BackrestHeight }}</li>
-                            <li>{{ product.metafields.Dimensions.Length2 }}</li>
+                            {%- if product.metafields.Dimensions.Length1 -%}
+                              <li>{{ product.metafields.Dimensions.Length1 }}</li>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.Depth -%}
+                              <li>{{ product.metafields.Dimensions.Depth }}</li>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.Height -%}
+                              <li>{{ product.metafields.Dimensions.Height }}</li>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.FloortoSeatHeight -%}
+                              <li>{{ product.metafields.Dimensions.FloortoSeatHeight }}</li>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.BackrestHeight -%}
+                              <li>{{ product.metafields.Dimensions.BackrestHeight }}</li>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.Length2 -%}
+                              <li>{{ product.metafields.Dimensions.Length2 }}</li>
+                            {%- endif -%}
                           </ol>
                           {{ block.settings.content }}
                         </div>
