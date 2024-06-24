@@ -259,8 +259,8 @@
         "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
         "padding_top": 50,
         "padding_bottom": 50,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     },
     "fdad168f-7d9e-4226-9e96-e24307d01253": {
