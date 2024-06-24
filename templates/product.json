@@ -305,79 +305,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "image_banner_UjNKDD": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_rrnEwh": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_kEN6bx": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": "medium",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "logos_ERTq3x": {
-          "type": "logos",
-          "settings": {
-          }
-        },
-        "buttons_Y8GkRq": {
-          "type": "buttons",
-          "settings": {
-            "button_transparent": "transparent",
-            "primary_button_label": "",
-            "primary_button_link": "",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_rrnEwh",
-        "text_kEN6bx",
-        "logos_ERTq3x",
-        "buttons_Y8GkRq"
-      ],
-      "settings": {
-        "section_width": "full-width",
-        "customize_width": 1800,
-        "custom_rouded": false,
-        "custom_block_rouded": 0,
-        "image": "{{ product.metafields.custom.dimension_image_file.value }}",
-        "content_inside_image_mobile": false,
-        "mobile_row_height": 42,
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "custom_content_max_width": false,
-        "content_max_width": 500,
-        "mobile_color_scheme": "custom",
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "color_scheme": "",
-        "image_overlay_opacity": 30,
-        "color_overlay_opacity": "#000000",
-        "image_behavior": "none",
-        "text_animation": "none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "video_QM4Cg7": {
       "type": "video",
       "settings": {
@@ -658,7 +585,6 @@
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
-    "image_banner_UjNKDD",
     "video_QM4Cg7",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "lookbook_pGUge4",
