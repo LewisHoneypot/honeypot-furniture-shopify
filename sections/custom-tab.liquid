@@ -160,22 +160,22 @@
                         <div class="col-12 col-lg-4">
                           <ol style="list-style-position: inside;">
                             {%- if product.metafields.Dimensions.Length1 -%}
-                              <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', 'cm' }}</li>
+                              <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.Depth -%}
-                              <li>{{ product.metafields.Dimensions.Depth | replace: '.0', 'cm' }} }}</li>
+                              <li>{{ product.metafields.Dimensions.Depth | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.Height -%}
-                              <li>{{ product.metafields.Dimensions.Height | replace: '.0', 'cm' }} }}</li>
+                              <li>{{ product.metafields.Dimensions.Height | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.FloortoSeatHeight -%}
-                              <li>{{ product.metafields.Dimensions.FloortoSeatHeight | replace: '.0', 'cm' }} }}</li>
+                              <li>{{ product.metafields.Dimensions.FloortoSeatHeight | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.BackrestHeight -%}
-                              <li>{{ product.metafields.Dimensions.BackrestHeight | replace: '.0', 'cm' }} }}</li>
+                              <li>{{ product.metafields.Dimensions.BackrestHeight | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                             {%- if product.metafields.Dimensions.Length2 -%}
-                              <li>{{ product.metafields.Dimensions.Length2 | replace: '.0', 'cm' }} }}</li>
+                              <li>{{ product.metafields.Dimensions.Length2 | replace: '.0', '' }}cm</li>
                             {%- endif -%}
                           </ol>
                           {{ block.settings.content }}
