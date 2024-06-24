@@ -21,90 +21,6 @@
         {%- for block in section.blocks -%}
           {%- if request.page_type == 'product' -%}
             {%- if block.settings.content_type == 'dimensions' -%}
-              <li
-                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
-                {{ block.shopify_attributes }}
-                role="listitem"
-              >
-                <button
-                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
-                  type="button"
-                  aria-haspopup="dialog"
-                  aria-label="{{ block.settings.heading | escape }}"
-                  data-tabs-title
-                  data-tab="#Custom-tab-{{ block.id }}"
-                >
-                  {{ block.settings.heading | escape }}
-                </button>
-                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
-                  <a
-                    href="{{ block.settings.page.url }}"
-                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
-                  >
-                    {{ block.settings.heading | escape }}
-                  </a>
-                {%- endif -%}
-              </li>
-            {%- else -%}
-              <li
-                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
-                {{ block.shopify_attributes }}
-                role="listitem"
-              >
-                <button
-                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
-                  type="button"
-                  aria-haspopup="dialog"
-                  aria-label="{{ block.settings.heading | escape }}"
-                  data-tabs-title
-                  data-tab="#Custom-tab-{{ block.id }}"
-                >
-                  {{ block.settings.heading | escape }}
-                </button>
-                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
-                  <a
-                    href="{{ block.settings.page.url }}"
-                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
-                  >
-                    {{ block.settings.heading | escape }}
-                  </a>
-                {%- endif -%}
-              </li>
-            {%- endif -%}
-          {%- else -%}
-            {%- if block.settings.content_type != 'description' -%}
-              <li
-                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
-                {{ block.shopify_attributes }}
-                role="listitem"
-              >
-                <button
-                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
-                  type="button"
-                  aria-haspopup="dialog"
-                  aria-label="{{ block.settings.heading | escape }}"
-                  data-tabs-title
-                  data-tab="#Custom-tab-{{ block.id }}"
-                >
-                  {{ block.settings.heading | escape }}
-                </button>
-                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
-                  <a
-                    href="{{ block.settings.page.url }}"
-                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
-                  >
-                    {{ block.settings.heading | escape }}
-                  </a>
-                {%- endif -%}
-              </li>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-      <div class="custom__tab-item w-100">
-        {%- for block in section.blocks -%}
-          {%- if request.page_type == 'product' -%}
-            {%- if block.settings.content_type == 'dimensions' -%}
               <div class="custom__tab-content b-bottom-mobile">
                 <ul class="custom__tab-mobile d-none list-unstyled" role="list">
                   <li
@@ -182,6 +98,65 @@
                 </div>
               </div>
             {%- else -%}
+              <li
+                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
+                {{ block.shopify_attributes }}
+                role="listitem"
+              >
+                <button
+                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label="{{ block.settings.heading | escape }}"
+                  data-tabs-title
+                  data-tab="#Custom-tab-{{ block.id }}"
+                >
+                  {{ block.settings.heading | escape }}
+                </button>
+                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                  <a
+                    href="{{ block.settings.page.url }}"
+                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
+                  >
+                    {{ block.settings.heading | escape }}
+                  </a>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- else -%}
+            {%- if block.settings.content_type != 'description' -%}
+              <li
+                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
+                {{ block.shopify_attributes }}
+                role="listitem"
+              >
+                <button
+                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label="{{ block.settings.heading | escape }}"
+                  data-tabs-title
+                  data-tab="#Custom-tab-{{ block.id }}"
+                >
+                  {{ block.settings.heading | escape }}
+                </button>
+                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                  <a
+                    href="{{ block.settings.page.url }}"
+                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
+                  >
+                    {{ block.settings.heading | escape }}
+                  </a>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      <div class="custom__tab-item w-100">
+        {%- for block in section.blocks -%}
+          {%- if request.page_type == 'product' -%}
+            {%- if block.settings.content_type != 'dimensions' -%}
               <div class="custom__tab-content b-bottom-mobile">
                 <ul class="custom__tab-mobile d-none list-unstyled" role="list">
                   <li
@@ -494,14 +469,6 @@
             {
               "value": "dimensions",
               "label": "Dimensions"
-            },
-            {
-              "value": "page",
-              "label": "t:sections.all.select_content.options__3"
-            },
-            {
-              "value": "custom",
-              "label": "t:sections.all.select_content.options__2"
             }
           ],
           "default": "dimensions",
