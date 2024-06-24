@@ -221,12 +221,12 @@
         "template--16836918247663__352c83e3-c7c0-4e6c-bd9c-91dea026b0fa-1680141926578b9a3c-0": {
           "type": "slide",
           "settings": {
-            "block_content_max_w": "full",
+            "block_content_max_w": "customize",
             "custom_content_max_w": 650,
             "text": "“At our core, we believe your home deserves the best: exceptional design and top-notch quality, all without breaking the bank. We're committed to bringing joy into your home with carefully selected, high-quality pieces of furniture\"",
             "heading_font": "font-heading",
             "text_size": "h2",
-            "text_margin_bottom": 16,
+            "text_margin_bottom": 23,
             "use_custom_size_avatar": false,
             "custom_size_avatar": 40,
             "info": "<p>Yusuf Peerbhai - Director<\/p>",
