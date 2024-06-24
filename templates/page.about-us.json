@@ -644,6 +644,7 @@
       "blocks": {
         "column_rnwWGn": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
@@ -703,6 +704,7 @@
         "column_qAQCf6",
         "column_qmC8KV"
       ],
+      "disabled": true,
       "settings": {
         "content_inside_image": false,
         "heading": "Meet The Team",
@@ -799,6 +801,7 @@
         "column_339Y8p",
         "column_x3bwtC"
       ],
+      "disabled": true,
       "settings": {
         "content_inside_image": false,
         "heading": "",
@@ -895,6 +898,7 @@
         "column_WpVExF",
         "column_qkwCdJ"
       ],
+      "disabled": true,
       "settings": {
         "content_inside_image": false,
         "heading": "",
@@ -992,6 +996,7 @@
         "column_c9qmrN",
         "column_BwKiwh"
       ],
+      "disabled": true,
       "settings": {
         "content_inside_image": false,
         "heading": "",
@@ -1077,11 +1082,11 @@
         "mobile_content_alignment": "center",
         "custom_content_max_width": false,
         "content_max_width": 500,
-        "mobile_color_scheme": "custom",
+        "mobile_color_scheme": "default",
         "colors_text": "#ffffff",
         "colors_background": "",
         "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "color_scheme": "accent-1",
+        "color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#ffffff",
         "image_behavior": "none",
