@@ -392,7 +392,7 @@
         "color_scheme": "",
         "padding_top": 30,
         "padding_bottom": 30,
-        "padding_top_mobile": 20,
+        "padding_top_mobile": 30,
         "padding_bottom_mobile": 20
       }
     },
@@ -1076,7 +1076,7 @@
         "custom_block_rouded": 0,
         "image": "shopify:\/\/shop_images\/Community.png",
         "content_inside_image_mobile": false,
-        "mobile_row_height": 42,
+        "mobile_row_height": 50,
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
@@ -1094,7 +1094,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 30
       }
     },
     "countdown_showcase_hero_LY7hag": {
