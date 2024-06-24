@@ -255,7 +255,7 @@
           "type": "dimensions",
           "settings": {
             "heading": "Dimensions",
-            "content_type": "custom",
+            "content_type": "dimensions",
             "padding_top": 61,
             "padding_bottom": 61,
             "padding_top_mobile": 8,
