@@ -490,7 +490,7 @@
         "columns_desktop": 4,
         "columns_mobile": "2",
         "image_animation": "fade-down",
-        "text_animation": "none",
+        "text_animation": "fade-up",
         "padding_top": 70,
         "padding_bottom": 70,
         "padding_top_mobile": 35,
