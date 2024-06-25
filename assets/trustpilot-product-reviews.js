@@ -1,6 +1,6 @@
 // TrustPilot Reviews
-var moreColoursKlevuArray = [];
 var productRangeArray = [];
+var trustpilot_skus_array = [];
 
 // check if live or staging
 var environment = "";
@@ -18,35 +18,31 @@ const phpEndpoint =
   environment +
   "/trustpilot/product-reviews.php";
 
-// console.log(productSku);
-var productId = "viva_sofabed_grey_2_seater";
+var productId = productSku;
 
 // Trustpilot Product Reviews
-// This gets populated by Klevu More Colours widget
 
-// add current product to additional colours products
-moreColoursKlevuArray.push(productSku);
 // add current product to full range
 productRangeArray.push(productSku);
+// add current product to full range
+trustpilot_skus_array.push(trustpilot_skus);
 
 // convert array to string for url
-var moreColoursKlevuArrayString = moreColoursKlevuArray.toString();
 var productRangeArrayString = productRangeArray.toString();
+var trustpilot_skus_array_string = trustpilot_skus_array.toString();
 
 // Set up the URLs for the requests
 // current product only
 const urlCurrentProduct = `${phpEndpoint}?type=reviews&sku=${productId}&perPage=100`;
-// current product with additional colours
-const urlCurrentProductWithColourRange = `${phpEndpoint}?type=reviews&sku=${moreColoursKlevuArrayString}&perPage=100`;
 // current product with full range
 const urlCurrentProductWithFullRange = `${phpEndpoint}?type=reviews&sku=${productRangeArrayString}&perPage=100`;
+// current product with full range
+const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${trustpilot_skus_array_string}&perPage=100`;
 
 // GET request reviews
-fetch(urlCurrentProductWithFullRange)
+fetch(urlCurrentProductWithFullRangeTrustPilot)
   .then((response) => response.json())
   .then((data) => {
-    // console.log('data: ', data)
-
     // Target the element with the ID "reviews"
     var reviewsContainer = $("#reviews");
 
@@ -73,7 +69,9 @@ fetch(urlCurrentProductWithFullRange)
           .addClass("reviewSectionHeader pb-sm-3 d-inline-flex")
           .appendTo(reviewSection);
         var attributeSection = $("<div>")
-          .addClass("attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5")
+          .addClass(
+            "attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5"
+          )
           .appendTo(reviewWrapper);
         var attributeSectionWrapper = $("<div>")
           .addClass("attributeSectionWrapper col-12 p-0")
@@ -188,12 +186,9 @@ fetch(urlCurrentProductWithFullRange)
             roundedRating
           );
 
-          // console.log('attribute.rating', attribute.rating)
-          // console.log('roundedRating', roundedRating)
           if (attribute.attributeName == "Value for money") {
             attribute.attributeName = "Value";
           }
-          // console.log('attribute.attributeName', attribute.attributeName)
 
           attributeNames
             .append(
@@ -211,13 +206,18 @@ fetch(urlCurrentProductWithFullRange)
         );
         reviewSection.append(buttonWrapper);
 
-        var toggleButton = $("<button>")
-        .addClass("button button--style-" + button_style + " mi-w color-" + primary_button_color_scheme + "");
+        var toggleButton = $("<button>").addClass(
+          "button button--style-" +
+            button_style +
+            " mi-w color-" +
+            primary_button_color_scheme +
+            ""
+        );
         buttonWrapper.append(toggleButton);
 
         var buttonSpan = $("<span>")
-        .addClass("text")
-        .text(primary_button_label);
+          .addClass("text")
+          .text(primary_button_label);
         toggleButton.append(buttonSpan);
 
         // Additional content to toggle (e.g., more details about the review)
@@ -256,7 +256,9 @@ function getReviewTrustpilotImage(rating, roundedRatingImage) {
     $(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
-      "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
+      "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
+      roundedRatingImage +
+      ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
     // Return an image tag
     return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating"><span> ${rating} out of 5</span>`;
@@ -269,7 +271,9 @@ function getTrustpilotAnchorImage(rating, roundedRatingImage) {
     $(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
-      "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
+      "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
+      roundedRatingImage +
+      ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
     // Return an image tag
     return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating">`;
@@ -283,18 +287,11 @@ const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
 // Target the element with the class "trustpilot-mini-widget"
 var trustPilotContainer = $(".trustpilot-mini-widget");
 
-var rangeType = 2;
+var skuList = trustpilot_skus_array;
 
-if (rangeType === 0) {
-  var skuList = moreColoursKlevuArray;
-} else if (rangeType === 1) {
-  var skuList = moreColoursKlevuArray;
-} else if (rangeType === 2) {
-  var skuList = productRangeArray;
-}
 // Prepare data for POST request
 var postData = {
-  skus: skuList,
+  skus: trustpilot_skus
 };
 
 // GET request
@@ -352,23 +349,9 @@ fetch(urlCurrentProductRange, {
 
       let fiveStarFill = (amountOfFiveStarReviews / totalCombinedReviews) * 100;
       let fourStarFill = (amountOfFourStarReviews / totalCombinedReviews) * 100;
-      let threeStarFill =
-        (amountOfThreeStarReviews / totalCombinedReviews) * 100;
+      let threeStarFill = (amountOfThreeStarReviews / totalCombinedReviews) * 100;
       let twoStarFill = (amountOfTwoStarReviews / totalCombinedReviews) * 100;
       let oneStarFill = (amountOfOneStarReviews / totalCombinedReviews) * 100;
-
-      // console.log(fiveStarFill.toFixed(0));
-      // console.log(fourStarFill.toFixed(0));
-      // console.log(threeStarFill.toFixed(0));
-      // console.log(twoStarFill.toFixed(0));
-      // console.log(oneStarFill.toFixed(0));
-
-      // console.log('data.summaries: ', data.summaries);
-      // console.log('amountOfOneStarReviews: ', amountOfOneStarReviews);
-      // console.log('amountOfTwoStarReviews: ', amountOfTwoStarReviews);
-      // console.log('amountOfThreeStarReviews: ', amountOfThreeStarReviews);
-      // console.log('amountOfFourStarReviews: ', amountOfFourStarReviews);
-      // console.log('amountOfFiveStarReviews: ', amountOfFiveStarReviews);
 
       totalStarsAverage = totalStars / data.summaries.length;
 
@@ -384,11 +367,6 @@ fetch(urlCurrentProductRange, {
       }
 
       totalStarsAverage = totalStarsAverage.toFixed(1);
-
-      // console.log('amountOfReviews: ', amountOfReviews);
-      // console.log('totalStars: ', totalStars);
-      // console.log('data.summaries.length: ', data.summaries.length);
-      // console.log('totalStarsAverage: ', totalStarsAverage);
 
       var roundedRating = Math.round(totalStarsAverage * 2) / 2; // Round to the nearest 0.5
       var trustpilotImage = getTrustpilotAnchorImage(
