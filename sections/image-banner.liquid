@@ -129,37 +129,57 @@
                   <div {{ block.shopify_attributes }} class="banner-logo-container">
                     {%- if block.settings.logo1 != blank -%}
                       <div>
-                        <a href="{{ block.settings.image_picker_link1 }}">
+                        {%- if block.settings.image_picker_link1 != blank -%}
+                          <a href="{{ block.settings.image_picker_link1 }}">
+                        {%- endif -%}
                           <img src="{{ block.settings.logo1 | image_url: height: 25 }}" style="margin-right: 15px;">
-                        </a>
+                        {%- if block.settings.image_picker_link1 != blank -%}
+                          </a>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo2 != blank -%}
                       <div>
-                        <a href="{{ block.settings.image_picker_link2 }}">
+                        {%- if block.settings.image_picker_link2 != blank -%}
+                          <a href="{{ block.settings.image_picker_link2 }}">
+                        {%- endif -%}
                           <img src="{{ block.settings.logo2 | image_url: height: 25 }}" style="margin-right: 15px;">
-                        </a>
+                        {%- if block.settings.image_picker_link2 != blank -%}
+                          </a>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo3 != blank -%}
                       <div>
-                        <a href="{{ block.settings.image_picker_link3 }}">
+                        {%- if block.settings.image_picker_link3 != blank -%}
+                          <a href="{{ block.settings.image_picker_link3 }}">
+                        {%- endif -%}
                           <img src="{{ block.settings.logo3 | image_url: height: 25 }}" style="margin-right: 15px;">
-                        </a>
+                        {%- if block.settings.image_picker_link3 != blank -%}
+                          </a>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo4 != blank -%}
                       <div>
-                        <a href="{{ block.settings.image_picker_link4 }}">
+                        {%- if block.settings.image_picker_link4 != blank -%}
+                          <a href="{{ block.settings.image_picker_link4 }}">
+                        {%- endif -%}
                           <img src="{{ block.settings.logo4 | image_url: height: 25 }}" style="margin-right: 15px;">
-                        </a>
+                        {%- if block.settings.image_picker_link4 != blank -%}
+                          </a>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo5 != blank -%}
                       <div>
-                        <a href="{{ block.settings.image_picker_link5 }}">
+                        {%- if block.settings.image_picker_link5 != blank -%}
+                          <a href="{{ block.settings.image_picker_link5 }}">
+                        {%- endif -%}
                           <img src="{{ block.settings.logo5 | image_url: height: 25 }}">
-                        </a>
+                        {%- if block.settings.image_picker_link5 != blank -%}
+                          </a>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                   </div>
