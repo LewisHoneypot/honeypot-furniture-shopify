@@ -1,0 +1,23 @@
+.contact {
+  .contact__button {
+    justify-content: center;
+    display: flex;
+  }
+  .button {
+    display: inline-block;
+    max-width: 25rem;
+  }
+  @media screen and (min-width: 750px) {
+    .postcode-checker-input {
+      max-width: 25rem;
+      float: right;
+    }
+    .contact__button {
+      display: block;
+    }
+  }
+
+  #postcode-form .field__input::placeholder {
+    opacity: 1;
+  }
+}
