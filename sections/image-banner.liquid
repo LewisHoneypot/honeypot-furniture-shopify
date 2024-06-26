@@ -129,27 +129,37 @@
                   <div {{ block.shopify_attributes }} class="banner-logo-container">
                     {%- if block.settings.logo1 != blank -%}
                       <div>
-                        <img src="{{ block.settings.logo1 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        <a href="{{ block.settings.image_picker_link1 }}">
+                          <img src="{{ block.settings.logo1 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        </a>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo2 != blank -%}
                       <div>
-                        <img src="{{ block.settings.logo2 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        <a href="{{ block.settings.image_picker_link2 }}">
+                          <img src="{{ block.settings.logo2 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        </a>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo3 != blank -%}
                       <div>
-                        <img src="{{ block.settings.logo3 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        <a href="{{ block.settings.image_picker_link3 }}">
+                          <img src="{{ block.settings.logo3 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        </a>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo4 != blank -%}
                       <div>
-                        <img src="{{ block.settings.logo4 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        <a href="{{ block.settings.image_picker_link4 }}">
+                          <img src="{{ block.settings.logo4 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        </a>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.logo5 != blank -%}
                       <div>
-                        <img src="{{ block.settings.logo5 | image_url: height: 25 }}" style="margin-right: 15px;">
+                        <a href="{{ block.settings.image_picker_link5 }}">
+                          <img src="{{ block.settings.logo5 | image_url: height: 25 }}">
+                        </a>
                       </div>
                     {%- endif -%}
                   </div>
@@ -850,9 +860,19 @@
         "label": "Logo 1"
       },
       {
+        "type": "url",
+        "id": "image_picker_link1",
+        "label": "t:sections.all.secondary_button_link.label"
+      },
+      {
         "type": "image_picker",
         "id": "logo2",
         "label": "Logo 2"
+      },
+      {
+        "type": "url",
+        "id": "image_picker_link2",
+        "label": "t:sections.all.secondary_button_link.label"
       },
       {
         "type": "image_picker",
@@ -860,14 +880,29 @@
         "label": "Logo 3"
       },
       {
+        "type": "url",
+        "id": "image_picker_link3",
+        "label": "t:sections.all.secondary_button_link.label"
+      },
+      {
         "type": "image_picker",
         "id": "logo4",
         "label": "Logo 4"
       },
       {
+        "type": "url",
+        "id": "image_picker_link4",
+        "label": "t:sections.all.secondary_button_link.label"
+      },
+      {
         "type": "image_picker",
         "id": "logo5",
         "label": "Logo 5"
+      },
+      {
+        "type": "url",
+        "id": "image_picker_link5",
+        "label": "t:sections.all.secondary_button_link.label"
       }      
     ]
   }],
