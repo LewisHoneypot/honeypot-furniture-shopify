@@ -334,10 +334,7 @@ fetch(urlCurrentProductRange, {
 
       // hide reviews icon if none exist
       if (amountOfReviews == 0) {
-        $("#reviews-button2").hide();
-        $(".anchor-icons > .row > div:nth-child(2)").hide();
-        $(".anchor-icons > .row > div").removeClass("col-4");
-        $(".anchor-icons > .row > div").addClass("col-6");
+        $("[id*='trustpilot_product_reviews_collapsible']").hide();
       }
 
       let totalCombinedReviews =
