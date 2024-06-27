@@ -70,7 +70,7 @@
         "show_author": true,
         "show_excerpts": false,
         "button_transparent": "default",
-        "sidebar_type": "default",
+        "sidebar_type": "popup",
         "color_scheme": "",
         "padding_top": 15,
         "padding_bottom": 100,
