@@ -423,6 +423,68 @@
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 12
       }
+    },
+    "collection_list_wQTMzk": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_GPywwg": {
+          "type": "collection",
+          "settings": {
+            "collection": "beds"
+          }
+        },
+        "collection_4nGAaV": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_CBH8dM": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_GPywwg",
+        "collection_4nGAaV",
+        "collection_CBH8dM"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Collections",
+        "heading_size": "medium",
+        "heading_margin_bottom": 30,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
     }
   },
   "order": [
@@ -434,6 +496,7 @@
     "featured_blog_Ekhzdj",
     "rich_text_9iBKDN",
     "featured_blog_Gx3JKd",
-    "newsletter_rxaBWF"
+    "newsletter_rxaBWF",
+    "collection_list_wQTMzk"
   ]
 }
