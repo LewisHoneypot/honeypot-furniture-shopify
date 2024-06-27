@@ -44,6 +44,7 @@
         },
         "448a8077-c0df-4fd4-a54a-4799279db8cb": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Custom Block",
             "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
