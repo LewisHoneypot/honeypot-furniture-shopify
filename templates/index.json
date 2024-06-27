@@ -727,8 +727,13 @@
           "type": "logos",
           "settings": {
             "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
+            "image_picker_link1": "shopify:\/\/pages\/finance",
             "logo2": "shopify:\/\/shop_images\/Klarna_Logo2.png",
-            "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp"
+            "image_picker_link2": "shopify:\/\/pages\/klarna",
+            "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp",
+            "image_picker_link3": "shopify:\/\/pages\/clearpay",
+            "image_picker_link4": "",
+            "image_picker_link5": ""
           }
         },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
