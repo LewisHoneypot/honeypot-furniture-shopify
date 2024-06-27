@@ -15,7 +15,7 @@
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HP_Banner3.png",
+            "image": "shopify:\/\/shop_images\/miel_shopify.png",
             "mobile_image": "shopify:\/\/shop_images\/HP_Banner1.png",
             "content_max_width": 400,
             "heading_font": "font-heading",
@@ -70,12 +70,12 @@
         "lookbook_m7Girj": {
           "type": "lookbook",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner_2_for_ben.webp",
+            "image": "shopify:\/\/shop_images\/mary_website.png",
             "mobile_image": "shopify:\/\/shop_images\/BANNER_2_mob_for_ben_..webp",
             "content_max_width": 400,
             "icon": "check_mark",
             "heading_font": "font-heading",
-            "heading": "New Arrivals",
+            "heading": "New Sofas Lines Added",
             "heading_size": "default",
             "heading_margin_bottom": 20,
             "subheading": "",
