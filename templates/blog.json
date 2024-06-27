@@ -63,10 +63,10 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "type_style": "special",
-        "articles_per_page": 2,
+        "articles_per_page": 4,
         "show_line_separator": true,
         "show_image": true,
-        "show_date": true,
+        "show_date": false,
         "show_author": true,
         "show_excerpts": false,
         "button_transparent": "default",
@@ -80,6 +80,7 @@
     },
     "90e30edb-d999-4112-99f2-c819a560023e": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "header_width": "page-width",
         "content_width": "page-width",
@@ -220,6 +221,7 @@
     },
     "featured_blog_Ekhzdj": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "header_width": "page-width",
         "content_width": "page-width",
