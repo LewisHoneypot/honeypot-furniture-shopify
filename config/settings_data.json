@@ -477,7 +477,7 @@
           "button_gradient": "",
           "secondary_button_label": "#ffffff",
           "secondary_button_background": "#000000",
-          "secondary_button_gradient": "linear-gradient(133deg, rgba(12, 12, 11, 1) 10%, rgba(81, 100, 82, 1) 49%, rgba(0, 0, 0, 1) 87%)",
+          "secondary_button_gradient": "linear-gradient(33deg, rgba(12, 12, 11, 1) 10%, rgba(81, 100, 82, 1) 49%, rgba(0, 0, 0, 1) 80%)",
           "arrow": "#121212",
           "arrow_background": "#ffffff",
           "arrow_gradient": "",
