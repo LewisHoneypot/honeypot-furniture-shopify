@@ -115,12 +115,13 @@
             "AvailabilityHeader": "Availability:",
             "AvailabilityText1": "Monday to Friday 8am - 8pm",
             "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
+            "button_transparent": "transparent",
             "WhatsAppButtonText1": "Live Chat on WhatsApp",
             "WhatsAppButtonPhoneNumber": "+447700176055",
             "WhatsAppButtonIconColour1": "#45544c",
             "WhatsAppButtonIconColour2": "#ffffff",
             "EmailButtonText": "Email Customer Support",
-            "EmailButtonIconColour": "#45544c"
+            "EmailButtonIconColour": "#ffffff"
           }
         }
       },
