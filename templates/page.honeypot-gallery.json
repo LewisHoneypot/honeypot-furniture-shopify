@@ -321,6 +321,25 @@
     "multicolumn_UAxhwx": {
       "type": "multicolumn",
       "blocks": {
+        "column_fwh67H": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-28T152646.872.png",
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Miel",
+            "heading_size": "h1",
+            "text": "<p>Bringing a combination of rustic and nature into the home with our Miel sofabed. A blank canvas sofa that allows your home's personality to shine through.<\/p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
         "column_ghArzt": {
           "type": "column",
           "settings": {
@@ -333,25 +352,7 @@
             "subheading_size": "medium",
             "heading": "The Tucano",
             "heading_size": "h1",
-            "text": "<p>This modular sofa in Ivory looks great when styled with airy and neutral tones. <\/p>",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "column_fwh67H": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>This modular sofa in Ivory looks great when styled with airy and neutral tones. Creating tranquil escapism in your home.<\/p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -378,8 +379,8 @@
         }
       },
       "block_order": [
-        "column_ghArzt",
         "column_fwh67H",
+        "column_ghArzt",
         "column_aqkFaQ"
       ],
       "settings": {
