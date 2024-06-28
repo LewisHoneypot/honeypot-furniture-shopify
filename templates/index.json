@@ -15,7 +15,7 @@
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/miel_shopify.png",
+            "image": "shopify:\/\/shop_images\/HP_Banner3.png",
             "mobile_image": "shopify:\/\/shop_images\/HP_Banner1.png",
             "content_max_width": 400,
             "heading_font": "font-heading",
@@ -111,12 +111,39 @@
             "padding_top_bottom": 0,
             "padding_left_right": 0
           }
+        },
+        "slide_MVHYjL": {
+          "type": "slide",
+          "settings": {
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "Image slide",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "Tell your brand's story through images",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
         }
       },
       "block_order": [
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
-        "lookbook_m7Girj"
+        "lookbook_m7Girj",
+        "slide_MVHYjL"
       ],
       "settings": {
         "section_width": "page-width",
