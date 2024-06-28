@@ -10355,23 +10355,10 @@ menu-drawer > details[open] > summary::before {
 }
 
 .whatsApp svg {
-  fill: red;
+  fill: var(--gradient-background);
 }
 .whatsApp:hover svg {
-  fill: green;
-}
-/* .whatsApp {
-  width: 47.63px;
-  height: 47.63px;
-  border: none;
-  background: none;
-  padding: 0;
-} */
-.whatsApp svg {
-  fill: red;
-}
-.whatsApp:hover svg {
-  fill: green;
+  fill: rgba(var(--button-color-text), 1);
 }
 
 /* double-banner */
