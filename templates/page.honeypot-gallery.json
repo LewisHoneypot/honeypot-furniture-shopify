@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -107,7 +116,7 @@
         "text_LN9yJz": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>We think corner sofas are one of the greatest sofa creations there are. They allow you to make more of your space and when you get the right one, they can look as though they were made to perfectly slot right into your home.<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -139,7 +148,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -149,7 +158,7 @@
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
+        "layout_mobile": "text_first_mobile",
         "mobile_content_alignment": "left",
         "image_animation": "none",
         "text_animation": "none",
@@ -322,9 +331,9 @@
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
-            "heading": "Column",
+            "heading": "The Tucano",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>This modular sofa in Ivory looks great when styled with airy and neutral tones. <\/p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -375,7 +384,7 @@
       ],
       "settings": {
         "content_inside_image": false,
-        "heading": "More inspo from us!",
+        "heading": "Struggling for inspo? Check out how we've styled these sofas",
         "link_label": "Shop Sofas",
         "link": "",
         "image_ratio": "landscape",
