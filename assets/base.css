@@ -10334,6 +10334,46 @@ menu-drawer > details[open] > summary::before {
   margin-top: 0;
 }
 
+/* footer block whatsapp */
+@media only screen and (min-width: 1400px) {
+  .whatsApp {
+    width: calc(20% - var(--grid-h-md)* 4 / 5);
+    max-width: calc(20% - var(--grid-h-md)* 4 / 5);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .whatsApp {
+    width: calc(25% - var(--grid-h-md)* 3 / 4);
+    max-width: calc(25% - var(--grid-h-md)* 3 / 4);
+  }
+}
+@media only screen and (min-width: 750px) {
+  .whatsApp {
+    width: calc(33.33% - var(--grid-h-md)* 2 / 3);
+    max-width: calc(33.33% - var(--grid-h-md)* 2 / 3);
+  }
+}
+
+.whatsApp svg {
+  fill: red;
+}
+.whatsApp:hover svg {
+  fill: green;
+}
+/* .whatsApp {
+  width: 47.63px;
+  height: 47.63px;
+  border: none;
+  background: none;
+  padding: 0;
+} */
+.whatsApp svg {
+  fill: red;
+}
+.whatsApp:hover svg {
+  fill: green;
+}
+
 /* double-banner */
 .db-banner__item {
   width: 50%;
