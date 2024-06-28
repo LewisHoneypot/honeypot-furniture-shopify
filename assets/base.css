@@ -10354,10 +10354,10 @@ menu-drawer > details[open] > summary::before {
   }
 }
 
-.whatsApp svg {
+.whatsapp-button svg {
   fill: var(--gradient-background);
 }
-.whatsApp:hover svg {
+.whatsapp-button:hover svg {
   fill: rgba(var(--button-color-text), 1);
 }
 
