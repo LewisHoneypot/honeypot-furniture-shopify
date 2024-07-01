@@ -337,8 +337,8 @@
           "type": "link",
           "settings": {
             "show_view_all": "link",
-            "link_label": "Link label",
-            "link": "",
+            "link_label": "The Design Sheppard",
+            "link": "https:\/\/www.thedesignsheppard.com\/",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -360,7 +360,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
