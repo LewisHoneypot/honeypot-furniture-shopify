@@ -321,6 +321,25 @@
     "multicolumn_UAxhwx": {
       "type": "multicolumn",
       "blocks": {
+        "column_aqkFaQ": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-07-01T104715.451.png",
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "The Mary",
+            "heading_size": "h1",
+            "text": "<p>Want to make your lounge feel bright and airy, creating a sense of space without removing any furniture? Then a main neutral colour scheme built around a beige sofa is the perfect way of doing just that. Beige is a calming and reflective tone that encourages a sense of tranquillity and light. Styled with a bold red to bring a pop of colour and life to your home.<\/p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
         "column_fwh67H": {
           "type": "column",
           "settings": {
@@ -358,30 +377,12 @@
             "button_label": "",
             "button_link": ""
           }
-        },
-        "column_aqkFaQ": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
+        "column_aqkFaQ",
         "column_fwh67H",
-        "column_ghArzt",
-        "column_aqkFaQ"
+        "column_ghArzt"
       ],
       "settings": {
         "content_inside_image": false,
