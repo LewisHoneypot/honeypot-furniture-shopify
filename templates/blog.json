@@ -63,7 +63,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "type_style": "special",
-        "articles_per_page": 2,
+        "articles_per_page": 4,
         "show_line_separator": true,
         "show_image": true,
         "show_date": false,
