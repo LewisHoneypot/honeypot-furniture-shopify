@@ -63,7 +63,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "type_style": "special",
-        "articles_per_page": 4,
+        "articles_per_page": 2,
         "show_line_separator": true,
         "show_image": true,
         "show_date": false,
@@ -300,6 +300,7 @@
         "heading_CzaBqV",
         "text_36FpBA"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -310,6 +311,73 @@
         "padding_bottom": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
+      }
+    },
+    "image_with_text_EkRNmC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QD3wJy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Design Sheppard<\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_T4EA6Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stacey Sheppard brings her keen eye for design and deep industry insights to her guest blog posts. With a focus on interior design trends, tips, and expert advice, Stacey offers readers fresh perspectives on creating stylish and functional spaces. <\/p><p>Her approachable writing style and extensive knowledge make her posts a must-read for anyone looking to elevate their home. Dive into Stacey's articles for inspiration and practical design solutions.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_XCzDPW": {
+          "type": "link",
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "Link label",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_QD3wJy",
+        "text_T4EA6Y",
+        "link_XCzDPW"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Stacey_Sheppard_large_b751d3b7-d307-42a4-9f1b-86f7235ecca9.webp",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "featured_blog_Gx3JKd": {
@@ -334,14 +402,14 @@
         "spacing_tablet": 30,
         "spacing_mobile": 10,
         "show_image": true,
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "show_content": false,
         "show_date": true,
         "show_author": true,
         "show_tags": false,
         "show_button": true,
         "button_transparent": "default",
-        "text_per_line": "none",
+        "text_per_line": "2",
         "text_alignment": "left",
         "title_margin_top": 0,
         "title_margin_bottom": 10,
@@ -495,6 +563,7 @@
     "all-article-tags",
     "featured_blog_Ekhzdj",
     "rich_text_9iBKDN",
+    "image_with_text_EkRNmC",
     "featured_blog_Gx3JKd",
     "newsletter_rxaBWF",
     "collection_list_wQTMzk"
