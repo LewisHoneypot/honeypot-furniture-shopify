@@ -61,7 +61,7 @@
       ],
       "settings": {
         "section_width": "customized-width",
-        "customize_width": 1600,
+        "customize_width": 1100,
         "type_style": "special",
         "articles_per_page": 4,
         "show_line_separator": true,
@@ -419,7 +419,7 @@
         "grid_number_tablet": 2,
         "grid_number_mobile": 2,
         "carousel_number": 3,
-        "carousel_number_tablet": 1.3,
+        "carousel_number_tablet": 2,
         "t:sections.featured-blog.settings.heading_3": "1.2",
         "arrows_type": "all",
         "enable_pagination_type": "all",
