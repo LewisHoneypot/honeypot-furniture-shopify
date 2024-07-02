@@ -12,33 +12,6 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
-        "slide_MVHYjL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Colbee-10_3.jpg",
-            "content_max_width": 910,
-            "heading_font": "font-heading",
-            "heading": "Interest FREE credit - 0% for 11 months",
-            "heading_size": "large",
-            "heading_margin_bottom": 37,
-            "subheading": "OR spread the cost - representative 29.9% APR",
-            "subheading_size": "large",
-            "subheading_margin_bottom": 50,
-            "box_align": "top-left",
-            "text_alignment": "right",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Find out more",
-            "primary_button_link": "",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
@@ -65,6 +38,33 @@
             "buttons_direction": "vertical",
             "padding_top_bottom": 100,
             "padding_left_right": 88
+          }
+        },
+        "slide_MVHYjL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Colbee-10_3.jpg",
+            "content_max_width": 910,
+            "heading_font": "font-heading",
+            "heading": "Interest FREE credit - 0% for 11 months",
+            "heading_size": "large",
+            "heading_margin_bottom": 37,
+            "subheading": "OR spread the cost - representative 29.9% APR",
+            "subheading_size": "large",
+            "subheading_margin_bottom": 50,
+            "box_align": "top-left",
+            "text_alignment": "right",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Find out more",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
           }
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
@@ -141,8 +141,8 @@
         }
       },
       "block_order": [
-        "slide_MVHYjL",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
+        "slide_MVHYjL",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "lookbook_m7Girj"
       ],
