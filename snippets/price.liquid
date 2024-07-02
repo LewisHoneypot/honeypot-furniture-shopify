@@ -31,7 +31,8 @@
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           {%- if compare_at_price != blank %} price-after--sale{%- endif -%}
         {%- endunless -%}
-        "
+        " 
+        style="min-height:30px;"
       >
         {{ money_price }}
       </span>
