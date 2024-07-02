@@ -656,7 +656,7 @@
                         class="d-block product-drawer__opener no-js-hidden"
                         data-side-drawer="#Drawer-{{ block.id }}"
                         {{ block.shopify_attributes }}
-                      >
+                      style="min-height:58px;">
                         <button
                           class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left"
                           type="button"
@@ -687,7 +687,7 @@
                 {%- if product.metafields.custom.product_colour_list != blank -%}
                   <div
                     class="product__variant {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                    style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px;"
+                    style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px; min-height:85px;"
                     {{ block.shopify_attributes }}
                   >
                     <p>{{ block.settings.available_colours }}:</p>
