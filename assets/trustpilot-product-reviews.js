@@ -141,7 +141,7 @@ fetch(urlCurrentProductWithFullRangeTrustPilot)
               if (processedFiles.dimension == "360pxWide") {
                 reviewSection.append(
                   $('<span class="d-block">').html(
-                    '<img src="' + processedFiles.url + '">'
+                    '<img src="' + processedFiles.url + '" loading="lazy">'
                   )
                 );
               }
@@ -261,7 +261,7 @@ function getReviewTrustpilotImage(rating, roundedRatingImage) {
       ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
     // Return an image tag
-    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating"><span> ${rating} out of 5</span>`;
+    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128"><span> ${rating} out of 5</span>`;
   }
 }
 
@@ -276,7 +276,7 @@ function getTrustpilotAnchorImage(rating, roundedRatingImage) {
       ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
     // Return an image tag
-    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating">`;
+    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128">`;
   }
 }
 
@@ -379,7 +379,7 @@ fetch(urlCurrentProductRange, {
         '<a href="#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
       ).append(
         $(
-          "<span>" +
+          "<span style='min-height:24px;'>" +
             trustpilotImage +
             '<span class="ammount-of-reviews"> ' +
             amountOfReviews +
