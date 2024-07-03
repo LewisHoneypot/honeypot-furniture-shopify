@@ -284,7 +284,7 @@
                         <div class="col-12">
                           {%- if product.metafields.custom.features_v2 -%}
                             <p>
-                              <span>{{ product.metafields.custom.features_v2 }}</span>
+                              <span>{{ product.metafields.custom.features_v2.value }}</span>
                             </p>
                           {%- endif -%}
                           {{ block.settings.content }}
