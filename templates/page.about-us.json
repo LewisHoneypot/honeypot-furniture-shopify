@@ -1056,7 +1056,7 @@
           "settings": {
             "button_transparent": "default",
             "primary_button_label": "Find Out More",
-            "primary_button_link": "shopify:\/\/collections",
+            "primary_button_link": "shopify:\/\/pages\/become-an-ambassador",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "padding_top": 15,
