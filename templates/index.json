@@ -957,7 +957,7 @@
             "button_transparent": "transparent",
             "show_email": false,
             "padding_top": 6,
-            "padding_bottom": 6
+            "padding_bottom": 20
           }
         }
       },
