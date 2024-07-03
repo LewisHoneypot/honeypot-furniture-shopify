@@ -1069,6 +1069,7 @@
         "template--16836918247663__17f60c09-db31-4fe1-97e5-3d85f1363257-1680144247cd10e1e7-1",
         "template--16836918247663__17f60c09-db31-4fe1-97e5-3d85f1363257-1680144247cd10e1e7-2"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
