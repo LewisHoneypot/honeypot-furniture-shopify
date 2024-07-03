@@ -251,6 +251,17 @@
             "padding_bottom_mobile": 0
           }
         },
+        "features_cKP6N9": {
+          "type": "features",
+          "settings": {
+            "heading": "Features",
+            "content_type": "features",
+            "padding_top": 61,
+            "padding_bottom": 61,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        },
         "dimensions_MmNA4J": {
           "type": "dimensions",
           "settings": {
@@ -260,19 +271,6 @@
             "padding_bottom": 61,
             "padding_top_mobile": 8,
             "padding_bottom_mobile": 8
-          }
-        },
-        "70fd5937-6811-49a4-ac9a-dd5dd5cf99af": {
-          "type": "text",
-          "settings": {
-            "heading": "Features",
-            "content_type": "custom",
-            "content": "{{ product.metafields.custom.features_v2 | metafield_tag }}",
-            "page": "",
-            "padding_top": 30,
-            "padding_bottom": 68,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 0
           }
         },
         "text_XHxTG4": {
@@ -291,8 +289,8 @@
       },
       "block_order": [
         "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1",
+        "features_cKP6N9",
         "dimensions_MmNA4J",
-        "70fd5937-6811-49a4-ac9a-dd5dd5cf99af",
         "text_XHxTG4"
       ],
       "settings": {
