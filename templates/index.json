@@ -514,13 +514,27 @@
           "settings": {
             "collection": "bundles-1"
           }
+        },
+        "collection_LA3XCq": {
+          "type": "collection",
+          "settings": {
+            "collection": "living-room"
+          }
+        },
+        "collection_3HMabm": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
         }
       },
       "block_order": [
         "collection_C3hGgh",
         "collection_ezwFEi",
         "collection_VW4dHF",
-        "collection_7KV883"
+        "collection_7KV883",
+        "collection_LA3XCq",
+        "collection_3HMabm"
       ],
       "settings": {
         "type_style": "classic",
