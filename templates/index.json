@@ -70,6 +70,7 @@
         },
         "slide_MVHYjL": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/miel_updated.png",
             "content_max_width": 910,
