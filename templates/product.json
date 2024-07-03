@@ -267,7 +267,7 @@
           "settings": {
             "heading": "Features",
             "content_type": "custom",
-            "content": "<p>{{ product.metafields.custom.sofa_features | metafield_tag }}<\/p>",
+            "content": "{{ product.metafields.custom.features_v2 | metafield_tag }}",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
