@@ -524,9 +524,9 @@
       ],
       "settings": {
         "type_style": "classic",
-        "heading": "Shop By Collection",
+        "heading": "",
         "heading_size": "small",
-        "heading_margin_bottom": 10,
+        "heading_margin_bottom": 0,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
