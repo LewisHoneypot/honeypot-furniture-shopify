@@ -231,6 +231,108 @@
                   </div>
                 </div>
               </div>
+            {%- elsif block.settings.content_type == 'features' -%}
+              <div class="custom__tab-content b-bottom-mobile">
+                <ul class="custom__tab-mobile d-none list-unstyled" role="list">
+                  <li
+                    class="custom__tab-list-item icon-effect{% if forloop.first == true %} active{% endif %}"
+                    role="listitem"
+                    {{ block.shopify_attributes }}
+                    data-tab-mobile="#Custom-tab-{{ block.id }}"
+                  >
+                    <button
+                      class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-label="{{ block.settings.heading | escape }}"
+                      data-tabs-title
+                      data-tab="#Custom-tab-{{ block.id }}"
+                    >
+                      {{ block.settings.heading | escape }}
+                      <span class="i-plus-effect"> </span>
+                    </button>
+                    {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                      <a
+                        href="{{ block.settings.page.url }}"
+                        class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
+                      >
+                        {{ block.settings.heading | escape }}
+                      </a>
+                    {%- endif -%}
+                  </li>
+                </ul>
+                <div
+                  class="custom__tab-text o-h{% if forloop.first == true %} active{% endif %}"
+                  id="Custom-tab-{{ block.id }}"
+                  data-tab-id="Custom-tab-{{ block.id }}"
+                >
+                  <div
+                    class="item item__description spacing spacing-xs"
+                    style="
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      --padding-top-xs: {{ block.settings.padding_top_mobile }}px;
+                      --padding-bottom-xs: {{ block.settings.padding_bottom_mobile }}px;
+                    "
+                  >
+                    {%- if block.settings.content_type == 'description' -%}
+                      {{ product.description }}
+                    {%- elsif block.settings.content_type == 'page' -%}
+                      {{ block.settings.page.content }}
+                    {%- else -%}
+                      <div class="row">
+                        {%- if product.metafields.custom.dimension_image_file == blank -%}
+                          <div class="col-12">
+                            {%- if product.metafields.Dimensions.Height -%}
+                              <p>
+                                Height: <span>{{ product.metafields.Dimensions.Height | replace: '.0', '' }}cm</span>
+                              </p>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.Length1 -%}
+                              <p>
+                                Width: <span>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</span>
+                              </p>
+                            {%- endif -%}
+                            {%- if product.metafields.Dimensions.Depth -%}
+                              <p>
+                                Depth: <span>{{ product.metafields.Dimensions.Depth | replace: '.0', '' }}cm</span>
+                              </p>
+                            {%- endif -%}
+                            {{ block.settings.content }}
+                          </div>
+                        {%- else -%}
+                          <div class="col-12 col-lg-8">
+                            {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag }}
+                          </div>
+                          <div class="col-12 col-lg-4">
+                            <ol style="list-style-position: inside;">
+                              {%- if product.metafields.Dimensions.Length1 -%}
+                                <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                              {%- if product.metafields.Dimensions.Depth -%}
+                                <li>{{ product.metafields.Dimensions.Depth | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                              {%- if product.metafields.Dimensions.Height -%}
+                                <li>{{ product.metafields.Dimensions.Height | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                              {%- if product.metafields.Dimensions.FloortoSeatHeight -%}
+                                <li>{{ product.metafields.Dimensions.FloortoSeatHeight | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                              {%- if product.metafields.Dimensions.BackrestHeight -%}
+                                <li>{{ product.metafields.Dimensions.BackrestHeight | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                              {%- if product.metafields.Dimensions.Length2 -%}
+                                <li>{{ product.metafields.Dimensions.Length2 | replace: '.0', '' }}cm</li>
+                              {%- endif -%}
+                            </ol>
+                            {{ block.settings.content }}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
             {%- else -%}
               <div class="custom__tab-content b-bottom-mobile">
                 <ul class="custom__tab-mobile d-none list-unstyled" role="list">
