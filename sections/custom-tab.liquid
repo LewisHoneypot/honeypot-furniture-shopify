@@ -45,6 +45,31 @@
                   </a>
                 {%- endif -%}
               </li>
+            {%- elsif block.settings.content_type == 'features' -%}
+              <li
+                class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
+                {{ block.shopify_attributes }}
+                role="listitem"
+              >
+                <button
+                  class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label="{{ block.settings.heading | escape }}"
+                  data-tabs-title
+                  data-tab="#Custom-tab-{{ block.id }}"
+                >
+                  {{ block.settings.heading | escape }}
+                </button>
+                {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                  <a
+                    href="{{ block.settings.page.url }}"
+                    class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none no-js"
+                  >
+                    {{ block.settings.heading | escape }}
+                  </a>
+                {%- endif -%}
+              </li>
             {%- else -%}
               <li
                 class="custom__tab-list-item{% if forloop.first == true %} active{% endif %}"
@@ -523,6 +548,77 @@
           ],
           "default": "dimensions",
           "info": "Dimensions"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.block_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 61
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 61
+        },
+        {
+          "type": "range",
+          "id": "padding_top_mobile",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top_mobile",
+          "default": 8
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_mobile",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom_mobile",
+          "default": 8
+        }
+      ]
+    },
+    {
+      "type": "features",
+      "name": "Features",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Features",
+          "label": "Selected Content",
+          "info": "t:sections.all.heading.info__1"
+        },
+        {
+          "type": "select",
+          "id": "content_type",
+          "label": "t:sections.all.select_content.label",
+          "options": [
+            {
+              "value": "features",
+              "label": "Features"
+            }
+          ],
+          "default": "features",
+          "info": "Features"
         },
         {
           "type": "header",
