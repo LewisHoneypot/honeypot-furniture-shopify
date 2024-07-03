@@ -282,9 +282,9 @@
                     {%- else -%}
                       <div class="row">
                         <div class="col-12">
-                          {%- if product.metafields.custom.features -%}
+                          {%- if product.metafields.custom.features_v3 -%}
                             <p>
-                              <span>{{ product.metafields.custom.features | metafield_tag }}</span>
+                              <span>{{ product.metafields.custom.features_v3 | metafield_tag }}</span>
                             </p>
                           {%- endif -%}
                           {{ block.settings.content }}
