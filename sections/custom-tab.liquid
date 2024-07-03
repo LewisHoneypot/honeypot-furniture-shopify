@@ -281,53 +281,14 @@
                       {{ block.settings.page.content }}
                     {%- else -%}
                       <div class="row">
-                        {%- if product.metafields.custom.dimension_image_file == blank -%}
-                          <div class="col-12">
-                            {%- if product.metafields.Dimensions.Height -%}
-                              <p>
-                                Height: <span>{{ product.metafields.Dimensions.Height | replace: '.0', '' }}cm</span>
-                              </p>
-                            {%- endif -%}
-                            {%- if product.metafields.Dimensions.Length1 -%}
-                              <p>
-                                Width: <span>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</span>
-                              </p>
-                            {%- endif -%}
-                            {%- if product.metafields.Dimensions.Depth -%}
-                              <p>
-                                Depth: <span>{{ product.metafields.Dimensions.Depth | replace: '.0', '' }}cm</span>
-                              </p>
-                            {%- endif -%}
-                            {{ block.settings.content }}
-                          </div>
-                        {%- else -%}
-                          <div class="col-12 col-lg-8">
-                            {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag }}
-                          </div>
-                          <div class="col-12 col-lg-4">
-                            <ol style="list-style-position: inside;">
-                              {%- if product.metafields.Dimensions.Length1 -%}
-                                <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                              {%- if product.metafields.Dimensions.Depth -%}
-                                <li>{{ product.metafields.Dimensions.Depth | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                              {%- if product.metafields.Dimensions.Height -%}
-                                <li>{{ product.metafields.Dimensions.Height | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                              {%- if product.metafields.Dimensions.FloortoSeatHeight -%}
-                                <li>{{ product.metafields.Dimensions.FloortoSeatHeight | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                              {%- if product.metafields.Dimensions.BackrestHeight -%}
-                                <li>{{ product.metafields.Dimensions.BackrestHeight | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                              {%- if product.metafields.Dimensions.Length2 -%}
-                                <li>{{ product.metafields.Dimensions.Length2 | replace: '.0', '' }}cm</li>
-                              {%- endif -%}
-                            </ol>
-                            {{ block.settings.content }}
-                          </div>
-                        {%- endif -%}
+                        <div class="col-12">
+                          {%- if product.metafields.custom.features_v2 -%}
+                            <p>
+                              <span>{{ product.metafields.custom.features_v2 }}</span>
+                            </p>
+                          {%- endif -%}
+                          {{ block.settings.content }}
+                        </div>
                       </div>
                     {%- endif -%}
                   </div>
