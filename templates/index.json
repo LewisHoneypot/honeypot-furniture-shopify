@@ -386,17 +386,6 @@
         "padding_bottom_mobile": 12
       }
     },
-    "trustpilot_service_reviews_mini_qrrfxa": {
-      "type": "trustpilot-service-reviews-mini",
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
       "type": "collection-list",
       "blocks": {
@@ -485,6 +474,17 @@
         "padding_bottom": 70,
         "padding_top_mobile": 35,
         "padding_bottom_mobile": 43
+      }
+    },
+    "trustpilot_service_reviews_mini_qrrfxa": {
+      "type": "trustpilot-service-reviews-mini",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "collection_list_NKqtYJ": {
@@ -1280,8 +1280,8 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112",
     "0b6105a9-a3ce-4181-b45b-7a55c709e140",
     "41769cb9-5f5a-4896-9da0-2d3bf33aef1e",
-    "trustpilot_service_reviews_mini_qrrfxa",
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
+    "trustpilot_service_reviews_mini_qrrfxa",
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
     "3d277f0b-f31b-482d-996e-089de61f3e90",
