@@ -267,7 +267,7 @@
           "settings": {
             "heading": "Features",
             "content_type": "custom",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>{{ product.metafields.custom.sofa_features | metafield_tag }}<\/p>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
