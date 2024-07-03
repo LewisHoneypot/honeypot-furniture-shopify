@@ -90,7 +90,7 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-      <div class="product__info-wrapper w-100 f-grow f-shrink product-view-{{ section.settings.type_style }}{% if section.settings.type_style == 'special' %} pos-relative{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <div class="product__info-wrapper w-100 f-grow f-shrink product-view-{{ section.settings.type_style }}{% if section.settings.type_style == 'special' %} pos-relative{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="min-height:747px;">
         <product-info
           id="ProductInfo-{{ section.id }}"
           data-section="{{ section.id }}"
