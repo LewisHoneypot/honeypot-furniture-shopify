@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -271,6 +280,7 @@
         },
         "70fd5937-6811-49a4-ac9a-dd5dd5cf99af": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "content_type": "custom",
