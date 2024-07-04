@@ -98,7 +98,6 @@
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/RoasBedLifestyle.jpg",
             "content_max_width": 600,
@@ -126,9 +125,7 @@
         },
         "lookbook_m7Girj": {
           "type": "lookbook",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/mary_website.png",
             "mobile_image": "shopify:\/\/shop_images\/BANNER_2_mob_for_ben_..webp",
             "content_max_width": 400,
             "icon": "check_mark",
