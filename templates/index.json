@@ -53,7 +53,7 @@
             "subheading": "",
             "subheading_size": "medium",
             "subheading_margin_bottom": 50,
-            "box_align": "bottom-left",
+            "box_align": "middle-left",
             "text_alignment": "left",
             "image_overlay_opacity": 90,
             "color_overlay_opacity": "#ffffff",
@@ -64,8 +64,8 @@
             "button_transparent": "transparent",
             "button_spacing_between": 10,
             "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
+            "padding_top_bottom": 100,
+            "padding_left_right": 88
           }
         },
         "slide_MVHYjL": {
