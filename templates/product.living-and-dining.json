@@ -280,6 +280,7 @@
         },
         "70fd5937-6811-49a4-ac9a-dd5dd5cf99af": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "content_type": "custom",
