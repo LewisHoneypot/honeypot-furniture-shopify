@@ -63,7 +63,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch": "Color",
+            "swatch": "Colour",
             "padding_top": 5,
             "padding_bottom": 5
           }
