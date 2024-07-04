@@ -1502,22 +1502,52 @@
                 {%- elsif block.settings.content_type == 'pairs_well_with' -%}
 
                   {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
+
+                  {% comment %} <script>
+                    console.log('recommended_products', {{ recommended_products | json }})
+                  </script> {% endcomment %}
+
                   {% assign final_tag_list = '' | split: ',' %}
 
                   {% for recommended in recommended_products %}
                     {% assign product_handle = recommended.handle %}
                     {% assign colour_list_products = all_products[product_handle].metafields.custom.product_colour_list.value %}
 
+                    {% comment %} <script>
+                      console.log('colour_list_products', {{ colour_list_products | json }})
+                    </script>   {% endcomment %}
+
                     {% assign new_tag_list = '' %}
                     {% for colour_list_product in colour_list_products %}
-                      {% comment %} <p>colour_list_product id: {{ colour_list_product.id }}</p> {% endcomment %}
+
+                      {% comment %} <script>
+                        console.log('colour_list_product.id', {{ colour_list_product.id }})
+                      </script> {% endcomment %}
+  
                       {% paginate collections.all.products by 1000 %}
                         {% assign product_id = colour_list_product.id | times: 1 %}
+
+                        {% comment %} <script>
+                          console.log('product_id', {{ product_id }})
+                        </script> {% endcomment %}
+  
                         {% assign products_obj = collections.all.products | where: 'id', product_id %}
+
+                        {% comment %} <script>
+                          console.log('products_obj', {{ products_obj | json }})
+                        </script> {% endcomment %}
+
                         {% assign product_test = products_obj[0] %}
                       {% endpaginate %}
+                      
                       {% assign new_tag_list = new_tag_list | append: ',' | append: product_test.variants[0].sku %}
-                      {% comment %} <p>Other Colour SKUs: {{ product_test.variants[0].sku }}</p> {% endcomment %}
+
+                      {% comment %} <script>
+                        console.log('product_test.variants[0].sku', {{ product_test.variants[0].sku }})
+                      </script> {% endcomment %}
+
+                      <p>Other Colour SKUs: {{ product_test.variants[0].sku }}</p>
+
                     {% endfor %}
 
                     {% assign new_tag_list = new_tag_list | remove_first: ',' | split: ',' %}
@@ -1539,6 +1569,10 @@
                   {% endfor %}
 
                   {% assign trustpilot_skus = final_tag_list | json %}
+
+                  {% comment %} <script>
+                    console.log("trustpilot_skus", {{ trustpilot_skus }});
+                  </script> {% endcomment %}
 
                 {%- else -%}
                   {{ block.settings.content }}
@@ -5138,5 +5172,7 @@
 <script>
   var productSku = "{{ product.variants[0].sku }}";
   {% comment %} console.log("current_variant", productSku); {% endcomment %}
+
   var trustpilot_skus = {{ trustpilot_skus }};
+  {% comment %} console.log("trustpilot_skus", trustpilot_skus); {% endcomment %}
 </script>
