@@ -1,0 +1,598 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "padding_top": 12,
+            "padding_bottom": 12,
+            "heading_size": "default"
+          }
+        },
+        "trustpilot_mini_TB9jLy": {
+          "type": "trustpilot_mini",
+          "settings": {
+            "title": "Trustpilot Mini",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "color_swatch_bWwLRJ": {
+          "type": "color_swatch",
+          "settings": {
+            "available_colours": "Available Colours",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes": false,
+            "show_shipping": false,
+            "use_custom_color": false,
+            "colors_text": "#424242",
+            "padding_top": 12,
+            "padding_bottom": 12
+          }
+        },
+        "size_chart_kqc3gt": {
+          "type": "size_chart",
+          "disabled": true,
+          "settings": {
+            "size_chart_size": "small",
+            "size_chart_type": "custom_image",
+            "size_chart_image_type": "jpg",
+            "color_size_chart_scheme": "background-2",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_wishlist_product": false,
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_colors_text": "#ede9e2",
+            "add_to_cart_colors_background": "#3c3c3b",
+            "add_to_cart_gradient_background": "",
+            "add_to_cart_colors_text_hover": "#3c3c3b",
+            "add_to_cart_colors_background_hover": "#ede9e2",
+            "add_to_cart_gradient_background_hover": "",
+            "buy_it_now_colors_text": "#3c3c3b",
+            "buy_it_now_colors_background": "#ede9e2",
+            "buy_it_now_gradient_background": "",
+            "buy_it_now_colors_text_hover": "#ede9e2",
+            "buy_it_now_colors_background_hover": "#3c3c3b",
+            "buy_it_now_gradient_background_hover": "",
+            "wishlist_colors_text": "#000000",
+            "wishlist_colors_background": "#000000",
+            "wishlist_colors_text_hover": "#eb9c9c",
+            "wishlist_colors_background_hover": "#eb9c9c",
+            "padding_top": 10,
+            "padding_bottom": 5
+          }
+        },
+        "drawer_j3bNWd": {
+          "type": "drawer",
+          "settings": {
+            "heading": "More Sizes",
+            "content_type": "pairs_well_with",
+            "content": "",
+            "page": ""
+          }
+        },
+        "staingard_drawer_iWbVLW": {
+          "type": "staingard_drawer",
+          "settings": {
+            "title": "Staingard",
+            "text1": "<p>Staingard offers a care plan for your Viva Sofabed and helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "text2": "Add 5 Years Accidental Damage Cover For Just:",
+            "seat-price": "40",
+            "tick-1-text": "5-year fabric upholstery care plan",
+            "tick-2-text": "Covers accidental damage",
+            "tick-3-text": "Covers accidental staining",
+            "tick-4-text": "'Clean, Repair or Replace' policy",
+            "tick-5-text": "At home professional cleaning",
+            "button-1-text": "Protect From Accidental Damage",
+            "button-2-text": "Return To Cart"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "trustpilot_mini_TB9jLy",
+        "color_swatch_bWwLRJ",
+        "price",
+        "size_chart_kqc3gt",
+        "buy_buttons",
+        "drawer_j3bNWd",
+        "staingard_drawer_iWbVLW"
+      ],
+      "settings": {
+        "enable_sticky_add_to_cart": true,
+        "show_product_badges": true,
+        "enable_share": true,
+        "type_style": "classic",
+        "media_size": "small",
+        "gallery_layout": "slider_thumbnail",
+        "image_zoom": "lightbox",
+        "enable_video_looping": false,
+        "image_ratio": "adapt",
+        "carousel_direction": "vertical",
+        "carousel_gap_desktop": 16,
+        "carousel_gap_tablet": 8,
+        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "d429c49f-e09d-426d-a360-6ab92fc46930": {
+      "type": "icon-with-text",
+      "blocks": {
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0": {
+          "type": "item",
+          "settings": {
+            "icon": "return-2",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<p>Free return within 15 days<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck-2",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<p>Free shipping on orders over 49$<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
+          "type": "item",
+          "settings": {
+            "icon": "vegan",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<p>No harmful chemicals<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
+          "type": "item",
+          "settings": {
+            "icon": "liquid",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "",
+            "text": "<p>Fresh and clean product<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2",
+        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "type_style": "classic",
+        "section_width": "customized-width",
+        "customize_width": 1300,
+        "heading": "",
+        "heading_size": "default",
+        "text": "",
+        "text_margin_top": 16,
+        "text_alignment": "center",
+        "margin_bottom": 60,
+        "blocks_heading_font": "font-body",
+        "blocks_heading_size": "text-body",
+        "blocks_text_size": "x-large",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#2d2d2d",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "vertical",
+        "enable_background_icon": false,
+        "type_vertical": "scroll",
+        "arrows_type": "all",
+        "text_animation": "none",
+        "padding_top": 100,
+        "padding_bottom": 69,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
+      "type": "custom-tab",
+      "blocks": {
+        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Delivery",
+            "content_type": "custom",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "page": "description",
+            "padding_top": 30,
+            "padding_bottom": 68,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "f60f2026-c9cc-48be-8ca4-8ea08ef8fa85": {
+          "type": "text",
+          "settings": {
+            "heading": "Dimensions",
+            "content_type": "custom",
+            "content": "<p>Metafield<\/p>",
+            "page": "",
+            "padding_top": 30,
+            "padding_bottom": 68,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "db60014a-6639-4c1a-9039-36607ca2a130": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Reviews",
+            "content_type": "description",
+            "content": "",
+            "page": "privacy-policy",
+            "padding_top": 30,
+            "padding_bottom": 68,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "70fd5937-6811-49a4-ac9a-dd5dd5cf99af": {
+          "type": "text",
+          "settings": {
+            "heading": "Features",
+            "content_type": "custom",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "page": "",
+            "padding_top": 30,
+            "padding_bottom": 68,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "text_XHxTG4": {
+          "type": "text",
+          "settings": {
+            "heading": "Description",
+            "content_type": "description",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "page": "",
+            "padding_top": 61,
+            "padding_bottom": 61,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        }
+      },
+      "block_order": [
+        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1",
+        "f60f2026-c9cc-48be-8ca4-8ea08ef8fa85",
+        "db60014a-6639-4c1a-9039-36607ca2a130",
+        "70fd5937-6811-49a4-ac9a-dd5dd5cf99af",
+        "text_XHxTG4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "background-1",
+        "padding_top": 19,
+        "padding_bottom": 50,
+        "padding_top_mobile": 5,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "trustpilot_product_revewis_Eb8Cd6": {
+      "type": "trustpilot-product-revewis",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "primary_button_label": "Rating Breakdown",
+        "primary_button_color_scheme": "",
+        "secondary_button_label": "Hide Breakdown",
+        "secondary_button_color_scheme": ""
+      }
+    },
+    "video_QM4Cg7": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "video": "{{ product.metafields.custom.video_file.value }}",
+        "video_url": "",
+        "description": "",
+        "enable_autoplay": false,
+        "enable_video_looping": true,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "mobile_color_scheme": "custom",
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "color_scheme": "",
+        "image_overlay_opacity": 30,
+        "color_overlay_opacity": "#000000",
+        "below_text": "",
+        "below_link_text": "",
+        "below_link": "",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "lookbook_pGUge4": {
+      "type": "lookbook",
+      "blocks": {
+        "image_L4QhHh": {
+          "type": "image",
+          "settings": {
+            "product_1": "inga-fullback-sofa-beige-u-shape-corner",
+            "horizontal_1": 32,
+            "vertical_1": 26,
+            "product_2": "verona-fullback-sofa-black-3-seater",
+            "horizontal_2": 19,
+            "vertical_2": 60,
+            "product_3": "verona-fullback-sofa-black-armchair",
+            "horizontal_3": 58,
+            "vertical_3": 44,
+            "product_4": "ankara-sofa",
+            "horizontal_4": 53,
+            "vertical_4": 75,
+            "product_5": "verona-fullback-sofa-grey-armchair",
+            "horizontal_5": 50,
+            "vertical_5": 50
+          }
+        }
+      },
+      "block_order": [
+        "image_L4QhHh"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Shop The Look",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image_ratio": "adapt",
+        "color_scheme": "",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "featured_collection_RD8KMd": {
+      "type": "featured-collection",
+      "blocks": {
+        "heading_z3PBJz": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Shop The Look",
+            "heading_size": "default",
+            "label_view_all": "",
+            "show_view_all": "link",
+            "text_view_all": "",
+            "text_view_all_size": "medium",
+            "text_alignment": "left",
+            "padding_top": 0,
+            "padding_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "heading_z3PBJz"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator_top": false,
+        "show_line_separator_bottom": false,
+        "collection": "",
+        "product_list": [
+          "inga-fullback-sofa-beige-u-shape-corner",
+          "inga-fullback-sofa-grey-u-shape-corner",
+          "verona-fullback-sofa-black-2-seater",
+          "verona-fullback-sofa-black-3-seater"
+        ],
+        "products_to_show": 5,
+        "carousel_number": 4,
+        "carousel_number_tablet": 3,
+        "carousel_number_mobile": "2",
+        "spacing_desktop": 10,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "use_background_gradient": false,
+        "colors_background_special": "",
+        "gradient_background_special": "linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)",
+        "text_animation": "none",
+        "padding_top": 78,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "products_to_show": 5,
+        "color_scheme": "accent-2",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "carousel_number": 3,
+        "enable_pagination_type": "all",
+        "pagination_type": "none",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
+      }
+    },
+    "recently-products": {
+      "type": "recently-products",
+      "settings": {
+        "heading": "Recently Viewed Products",
+        "heading_margin_bottom": 32,
+        "color_scheme": "background-1",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "spacing_desktop": 24,
+        "spacing_tablet": 20,
+        "spacing_mobile": 8,
+        "arrows_type": "lg",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "1679044770251ee1c2": {
+      "type": "apps",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "background-1",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 68,
+        "padding_bottom": 70,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "newsletter_Lkdri8": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_YPHcci": {
+          "type": "heading",
+          "settings": {
+            "show_line_separator_top": false,
+            "heading": "Subscribe to our emails for exclusive offers, rewards and much more!",
+            "heading_size": "small",
+            "heading_margin_bottom": 0,
+            "description": "",
+            "description_size": "medium",
+            "text_margin_bottom": 0,
+            "text_link": "",
+            "primary_text_link": "",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "email_form_cKwJab": {
+          "type": "email_form",
+          "settings": {
+            "description": "",
+            "description_size": "medium",
+            "text": "Sign up for our newsletter",
+            "button_transparent": "transparent",
+            "show_email": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_YPHcci",
+        "email_form_cKwJab"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "full_width": true,
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "use_custom_colors_background_content": true,
+        "colors_background_content": "",
+        "color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "#f6eee3",
+        "gradient_background": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d429c49f-e09d-426d-a360-6ab92fc46930",
+    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
+    "trustpilot_product_revewis_Eb8Cd6",
+    "video_QM4Cg7",
+    "lookbook_pGUge4",
+    "featured_collection_RD8KMd",
+    "related-products",
+    "recently-products",
+    "1679044770251ee1c2",
+    "newsletter_Lkdri8"
+  ]
+}
