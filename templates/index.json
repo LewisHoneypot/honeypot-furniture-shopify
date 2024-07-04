@@ -23,7 +23,7 @@
             "heading_size": "large",
             "heading_margin_bottom": 0,
             "subheading": "Put your feet up and relax with our flash sale!",
-            "subheading_size": "medium",
+            "subheading_size": "large",
             "subheading_margin_bottom": 16,
             "box_align": "bottom-right",
             "text_alignment": "left",
@@ -70,9 +70,9 @@
         },
         "slide_MVHYjL": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/miel_updated.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template_16.png",
             "content_max_width": 910,
             "heading_font": "font-heading",
             "heading": "Flexible Finance Options",
