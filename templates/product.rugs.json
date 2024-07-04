@@ -59,6 +59,15 @@
             "padding_bottom": 5
           }
         },
+        "variant_picker_yaEEGK": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -119,6 +128,7 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
+        "variant_picker_yaEEGK",
         "buy_buttons",
         "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
@@ -244,7 +254,7 @@
             "heading": "Delivery",
             "content_type": "custom",
             "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
-            "dimensions": "",
+            "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -258,7 +268,7 @@
             "heading": "Dimensions",
             "content_type": "custom",
             "content": "<p>Metafield<\/p>",
-            "dimensions": "",
+            "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -272,7 +282,7 @@
             "heading": "Reviews",
             "content_type": "description",
             "content": "",
-            "dimensions": "",
+            "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -285,7 +295,7 @@
             "heading": "Features",
             "content_type": "custom",
             "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-            "dimensions": "",
+            "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
             "padding_top_mobile": 8,
@@ -298,7 +308,7 @@
             "heading": "Description",
             "content_type": "description",
             "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-            "dimensions": "",
+            "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
             "padding_top_mobile": 8,
@@ -329,6 +339,11 @@
         "logos_yqCP74": {
           "type": "logos",
           "settings": {
+            "image_picker_link1": "",
+            "image_picker_link2": "",
+            "image_picker_link3": "",
+            "image_picker_link4": "",
+            "image_picker_link5": ""
           }
         }
       },
