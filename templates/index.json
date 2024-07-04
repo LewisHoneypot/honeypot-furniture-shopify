@@ -58,7 +58,7 @@
             "image_overlay_opacity": 90,
             "color_overlay_opacity": "#ffffff",
             "primary_button_label": "Shop Sale",
-            "primary_button_link": "",
+            "primary_button_link": "shopify:\/\/collections\/recliner-sofas",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
