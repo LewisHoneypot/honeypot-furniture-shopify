@@ -16,8 +16,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/relciner_darker.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template_13_b389a237-dbc8-4cbb-a05f-aee331096327.png",
-            "content_max_width": 460,
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template15.png",
+            "content_max_width": 1200,
             "heading_font": "font-heading",
             "heading": "5% off Recliners",
             "heading_size": "large",
