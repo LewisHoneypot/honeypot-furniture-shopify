@@ -1546,8 +1546,6 @@
                         console.log('product_test.variants[0].sku', {{ product_test.variants[0].sku }})
                       </script> {% endcomment %}
 
-                      <p>Other Colour SKUs: {{ product_test.variants[0].sku }}</p>
-
                     {% endfor %}
 
                     {% assign new_tag_list = new_tag_list | remove_first: ',' | split: ',' %}
