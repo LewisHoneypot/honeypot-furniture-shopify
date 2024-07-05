@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -265,6 +274,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_3.jpg",
+            "video_url": "",
             "content_margin_negative_top_desktop": 75,
             "content_margin_negative_top_tablet": 60,
             "content_margin_negative_top_mobile": 45,
@@ -286,8 +296,8 @@
         "slide_PbeUzd"
       ],
       "settings": {
-        "section_width": "full-width",
-        "customize_width": 1800,
+        "section_width": "customized-width",
+        "customize_width": 1350,
         "show_line_separator": false,
         "color_scheme": "",
         "arrows_type": "all",
