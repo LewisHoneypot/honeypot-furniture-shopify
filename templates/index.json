@@ -125,6 +125,7 @@
         },
         "lookbook_m7Girj": {
           "type": "lookbook",
+          "disabled": true,
           "settings": {
             "mobile_image": "shopify:\/\/shop_images\/BANNER_2_mob_for_ben_..webp",
             "content_max_width": 400,
