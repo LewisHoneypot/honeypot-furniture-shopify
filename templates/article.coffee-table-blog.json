@@ -166,7 +166,7 @@
         "type_style": "special",
         "color_scheme": "",
         "padding_top": 17,
-        "padding_bottom": 58,
+        "padding_bottom": 0,
         "padding_top_mobile": 17,
         "padding_bottom_mobile": 0
       }
@@ -247,9 +247,9 @@
         "show_line_separator": false,
         "text_alignment": "left",
         "color_scheme": "",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
+        "padding_top": 5,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 20
       }
     },
