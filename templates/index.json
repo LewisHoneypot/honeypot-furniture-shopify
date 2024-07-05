@@ -12,34 +12,6 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
-        "slide_dN3rVP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Recliner-Banner-Image.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template15.png",
-            "content_max_width": 1200,
-            "heading_font": "font-heading",
-            "heading": "5% off Recliners",
-            "heading_size": "large",
-            "heading_margin_bottom": 0,
-            "subheading": "Put your feet up and relax with our flash sale!",
-            "subheading_size": "large",
-            "subheading_margin_bottom": 16,
-            "box_align": "bottom-right",
-            "text_alignment": "left",
-            "image_overlay_opacity": 90,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Shop Sale",
-            "primary_button_link": "",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
@@ -86,6 +58,34 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Find out more",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_dN3rVP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Recliner-Banner-Image.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template15.png",
+            "content_max_width": 1200,
+            "heading_font": "font-heading",
+            "heading": "5% off Recliners",
+            "heading_size": "large",
+            "heading_margin_bottom": 0,
+            "subheading": "Put your feet up and relax with our flash sale!",
+            "subheading_size": "large",
+            "subheading_margin_bottom": 16,
+            "box_align": "bottom-right",
+            "text_alignment": "left",
+            "image_overlay_opacity": 90,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Shop Sale",
             "primary_button_link": "",
             "secondary_button_label": "",
             "secondary_button_link": "",
@@ -170,9 +170,9 @@
         }
       },
       "block_order": [
-        "slide_dN3rVP",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
         "slide_MVHYjL",
+        "slide_dN3rVP",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "lookbook_m7Girj"
       ],
