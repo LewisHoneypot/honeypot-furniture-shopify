@@ -28,7 +28,7 @@
           "type": "featured_image",
           "settings": {
             "padding_top": 14,
-            "padding_bottom": 50
+            "padding_bottom": 0
           }
         },
         "bc2e5eb0-2d12-4acb-9a16-36775ca5787e": {
