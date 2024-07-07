@@ -351,6 +351,7 @@
       "block_order": [
         "logos_yqCP74"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
