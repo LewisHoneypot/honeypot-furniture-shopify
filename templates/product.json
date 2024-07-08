@@ -126,7 +126,7 @@
       "settings": {
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
-        "enable_share": true,
+        "enable_share": false,
         "type_style": "classic",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
