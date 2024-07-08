@@ -781,7 +781,7 @@
           "type": "heading",
           "settings": {
             "heading": "A Variety of Payment and Finance Options",
-            "heading_size": "medium",
+            "heading_size": "small",
             "padding_top": 31,
             "padding_bottom": 15
           }
@@ -1087,7 +1087,7 @@
         "style_layout": "enable_carousel",
         "icon": "none",
         "heading": "Blog posts",
-        "heading_size": "default",
+        "heading_size": "small",
         "show_view_all": "none",
         "button_label": "Button label",
         "heading_alignment": "center",
