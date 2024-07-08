@@ -746,7 +746,7 @@
         "heading": "Shop Collections",
         "heading_size": "small",
         "heading_margin_bottom": 30,
-        "heading_margin_bottom_mobile": 0,
+        "heading_margin_bottom_mobile": 21,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
