@@ -117,7 +117,17 @@
       {%- endif -%}
         {%- if section.settings.heading != blank -%}
           <div class="p-w__header m-spacing{% if section.settings.type_style == 'classic' %} m-spacing-xs p-r p-r-xxl{% endif %}"
-            style="{% if section.settings.type_style == 'classic' %}--m-spacing-b: -{{ header_margin_bottom }};--m-spacing-b-xs: {{ heading_margin_bottom | times: 0.75 }}rem; --p-r: {{ carousel_controls_width }}rem;--p-r-xxl: {{ header_padding-right }};{% else %}--m-spacing-b: {{ section.settings.heading_margin_bottom }}px;{% endif %}"
+            style="
+            {% if section.settings.type_style == 'classic' %}
+              --m-spacing-b: -{{ header_margin_bottom }};
+              --p-r: {{ carousel_controls_width }}rem;
+              --p-r-xxl: {{ header_padding-right }};
+
+              --m-spacing-b-xs: {{ section.settings.header_margin_bottom_mobile }}px;
+
+            {% else %}
+               --m-spacing-b: {{ section.settings.heading_margin_bottom }}px;
+            {% endif %}"
           >
             <div class="p-w__header--wrapper {{ section.settings.header_alignment }}">
               <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
