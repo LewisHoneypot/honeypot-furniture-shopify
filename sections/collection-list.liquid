@@ -120,11 +120,10 @@
             style="
             {% if section.settings.type_style == 'classic' %}
               --m-spacing-b: -{{ header_margin_bottom }};
-              --m-spacing-b-xs: {{ heading_margin_bottom | times: 0.75 }}rem;
               --p-r: {{ carousel_controls_width }}rem;
               --p-r-xxl: {{ header_padding-right }};
 
-              --margin-bottom-xs: {{ section.settings.header_margin_bottom_mobile }}px;
+              --m-spacing-b-xs: {{ section.settings.header_margin_bottom_mobile }}px;
 
             {% else %}
                --m-spacing-b: {{ section.settings.heading_margin_bottom }}px;
