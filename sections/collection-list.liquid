@@ -60,7 +60,8 @@
     endcapture
 
     if section.settings.type_style == 'classic'
-      assign heading_margin_bottom = section.settings.heading_margin_bottom | divided_by: 10
+    assign heading_margin_bottom = section.settings.heading_margin_bottom | divided_by: 10
+    assign heading_margin_bottom_mobile = section.settings.heading_margin_bottom_mobile | divided_by: 10
     
       if settings.arrow_style == 'special'
         assign button_arrow_width = 6
@@ -123,7 +124,7 @@
               --p-r: {{ carousel_controls_width }}rem;
               --p-r-xxl: {{ header_padding-right }};
 
-              --m-spacing-b-xs: {{ section.settings.heading_margin_bottom_mobile }};
+              --m-spacing-b-xs: -{{ heading_margin_bottom_mobile }};
 
             {% else %}
                --m-spacing-b: {{ section.settings.heading_margin_bottom }}px;
