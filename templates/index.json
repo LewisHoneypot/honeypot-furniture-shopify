@@ -445,6 +445,7 @@
         "heading": "Shop Sofas by Size",
         "heading_size": "small",
         "heading_margin_bottom": 30,
+        "heading_margin_bottom_mobile": 0,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -539,6 +540,7 @@
         "heading": "",
         "heading_size": "small",
         "heading_margin_bottom": 0,
+        "heading_margin_bottom_mobile": 0,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -742,8 +744,9 @@
       "settings": {
         "type_style": "classic",
         "heading": "Shop Collections",
-        "heading_size": "medium",
-        "heading_margin_bottom": 0,
+        "heading_size": "small",
+        "heading_margin_bottom": 30,
+        "heading_margin_bottom_mobile": 0,
         "show_view_all": false,
         "text_view_all": "",
         "button_transparent": "transparent",
@@ -781,7 +784,7 @@
           "type": "heading",
           "settings": {
             "heading": "A Variety of Payment and Finance Options",
-            "heading_size": "medium",
+            "heading_size": "small",
             "padding_top": 31,
             "padding_bottom": 15
           }
@@ -1087,7 +1090,7 @@
         "style_layout": "enable_carousel",
         "icon": "none",
         "heading": "Blog posts",
-        "heading_size": "default",
+        "heading_size": "small",
         "show_view_all": "none",
         "button_label": "Button label",
         "heading_alignment": "center",
