@@ -51,7 +51,15 @@
         </div>
       {%- endif -%}
       <div class="p-w__content">
-        <slider-component class="carousel{% if item_full_width %} carousel--full{% endif %} d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" data-space-between="10" data-type-pagination="{{ section.settings.pagination_type }}" data-item-to-show-desktop="1.215" data-item-to-show-tablet="1" data-item-to-show-mobile="1">
+        <slider-component class="
+          carousel{% if item_full_width %} carousel--full{% endif %} 
+          d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" 
+          data-space-between="10" 
+          data-type-pagination="{{ section.settings.pagination_type }}" 
+          data-item-to-show-desktop="1.215" 
+          data-item-to-show-tablet="1" 
+          data-item-to-show-mobile="1" 
+          style="max-width: {{ section.settings.lookbook_max_height }}px;">
           <div class="swiper grid-scroll d-block pos-relative no-js-overflow-x"> 
             <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Lookbook" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1.25;">
               {%- for block in section.blocks -%}
@@ -282,6 +290,16 @@
       }],
     "default": "adapt",
     "label": "t:sections.all.image_ratio.label"
+  },
+  {
+    "type": "range",
+    "id": "lookbook_max_height",
+    "min": 500,
+    "max": 1500,
+    "step": 1,
+    "unit": "px",
+    "label": "Max height",
+    "default": 950
   },
   {
     "type": "color_scheme",
