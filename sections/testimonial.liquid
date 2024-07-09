@@ -90,7 +90,8 @@
                         {%- if block.settings.heading != blank -%}
                           <h2 class="banner__heading u-u{% if section.settings.type_style == 'special' %} pos-relative heading-size-medium{% else %} h4{% endif %}"
                             data-animate="fade-down"
-                            style="--a-delay: 0.4s;"
+                            style="--a-delay: 0.4s; margin-bottom: {{ block.settings.heading_margin_bottom }}px;" 
+                            {% comment %} add margin bottom schema {% endcomment %}
                           >
                             {{ block.settings.heading | escape }}
                           </h2>
@@ -479,6 +480,16 @@
       "id": "heading",
       "default": "Heading",
       "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.spacing.heading_margin_bottom",
+      "default": 25
     },
     {
       "type": "richtext",
