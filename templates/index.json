@@ -44,11 +44,11 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Banner-Miel-Sofa.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template_16.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_Banner_Template_16_copy_618a6e70-ba6a-4cbc-96ab-6504150bedab.png",
             "content_max_width": 910,
             "heading_font": "font-heading",
             "heading": "Flexible Finance Options",
-            "heading_size": "large",
+            "heading_size": "small",
             "heading_margin_bottom": 15,
             "subheading": "",
             "subheading_size": "large",
