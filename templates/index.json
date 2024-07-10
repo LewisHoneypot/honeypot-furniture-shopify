@@ -705,7 +705,7 @@
         "arrows_type": "lg",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "xs",
-        "pagination_type": "fraction",
+        "pagination_type": "dots",
         "padding_top": 40,
         "padding_bottom": 100,
         "padding_top_mobile": 20,
