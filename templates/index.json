@@ -704,7 +704,7 @@
         "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
         "arrows_type": "lg",
         "carousel_infinite_scroll": false,
-        "enable_pagination_type": "all",
+        "enable_pagination_type": "xs",
         "pagination_type": "fraction",
         "padding_top": 40,
         "padding_bottom": 100,
