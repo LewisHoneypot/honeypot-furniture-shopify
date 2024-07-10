@@ -318,7 +318,9 @@ class RecentlyViewedProducts extends HTMLElement {
                   });
                 })
             } else {
-              if (shownSection < 3 && blockRecently != null){
+              if (shownSection < 1 && blockRecently != null){
+                item.querySelector('.recently__list-product')?.classList.add('d-none');
+              } else if (shownSection < 3 && blockRecently != null){
                 item.querySelector('.recently__list-product')?.classList.add('j-c-center');
                 setTimeout(() => {item.querySelector(`.recently__list-product .recently__item:last-child`)?.classList.add('m-0-i')});
               }
