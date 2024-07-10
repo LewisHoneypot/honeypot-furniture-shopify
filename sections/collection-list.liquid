@@ -156,7 +156,7 @@
               data-item-md="{{ column_md }}" 
               data-item-sm="{{ column_sm }}"
             {% endif %}
-            {% if section.settings.type_style == 'classic' %} style="--button-control-top: -{{ carousel_controls_top }}rem;--button-control-top-mb: -{{ carousel_controls_top_mb }}rem;--p-t: {{ carousel_controls_top }}rem;--p-t-xs: {{ carousel_controls_top_mb }}rem;"{% endif %}
+            {% if section.settings.type_style == 'classic' %} style="--button-control-top: -{{ carousel_controls_top }}rem;--button-control-top-mb: -{{ carousel_controls_top_mb }}rem;--p-t: {{ carousel_controls_top }}rem;--p-t-xs: {{ carousel_controls_top_mb }}rem; padding-bottom: 65px;"{% endif %}
           >
             {%- if section.settings.enable_carousel -%}
               <div class="swiper d-block pos-relative no-js-overflow-x{% if section.settings.type_style == 'masonry' %} grid-scroll{% endif %}{% if section.settings.type_style != 'masonry' %} o-v{% endif %}">
@@ -266,12 +266,20 @@
                 {%- endfor -%}
               </div>
               {%- if section.blocks.size > 1 -%}
-                <div class="carousel__controls arrow-style-{{ settings.arrow_style }}{% if section.settings.type_style != 'default' %} carousel__controls--inner{% endif %}{% if section.settings.arrows_type == 'none' or section.settings.enable_carousel == false %} hidden{% endif %} no-js-hidden" style="--padding: 0px;{% if section.settings.type_style == 'classic' %}--carousel_controls_width: {{ carousel_controls_width }}rem;--carousel_controls_height: {{ carousel_controls_height }};--carousel_controls_height_mb: {{ carousel_controls_height_mb }}rem;{% endif %}">
+                <div class="carousel__controls arrow-style-{{ settings.arrow_style }}{% if section.settings.type_style != 'default' %} carousel__controls--inner{% endif %}{% if section.settings.arrows_type == 'none' or section.settings.enable_carousel == false %} hidden{% endif %} no-js-hidden" 
+                  style="--padding: 0px;
+                  {% if section.settings.type_style == 'classic' %} 
+                    --carousel_controls_width: {{ carousel_controls_width }}rem; 
+                    --carousel_controls_height: {{ carousel_controls_height }}; 
+                    --carousel_controls_height_mb: {{ carousel_controls_height_mb }}rem;
+                  {% endif %} 
+                  width: 100%;
+                  top: {{ section.settings.arrow_position }}px;">
                   {% if section.settings.enable_carousel and section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' %}
                     <div class="arrow-wrap d-flex top-0 right-0 z-index-2 pos-absolute swiper-screen__{{ section.settings.arrows_type }}">
                   {% endif %}
                     <button type="button" data-step="1" class="button-slider button-slider__prev{% if settings.arrow_style != 'modern-plus' %} swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous" 
-                            style="{% if section.settings.type_style == 'classic' %}--carousel_controls_prev_right: {{ carousel_controls_prev_right }};--carousel_controls_prev_right_mb: {{ carousel_controls_prev_right_mb }}{% endif %}">
+                            style="{% if section.settings.type_style == 'classic' %}--carousel_controls_prev_right: {{ carousel_controls_prev_right }};--carousel_controls_prev_right_mb: {{ carousel_controls_prev_right_mb }}{% endif %}; left:0;">
                       {{ icon_arrow_list }}
                     </button>
                     <button type="button" data-step="1" class="button-slider button-slider__next{% if settings.arrow_style != 'modern-plus' %} swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
@@ -420,6 +428,16 @@
     "default": 0,
     "unit": "rem",
     "label": "t:sections.all.spacing.heading_margin_bottom_mobile"
+  },
+  {
+    "type": "range",
+    "id": "arrow_position",
+    "min": 0,
+    "max": 185,
+    "step": 5,
+    "default": 0,
+    "unit": "px",
+    "label": "Arrow Position"
   },
   {
     "type": "checkbox",
