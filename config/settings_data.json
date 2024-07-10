@@ -64,6 +64,7 @@
     "show_swatch": true,
     "show_vendor_mobile": false,
     "show_rating_mobile": false,
+    "enable_quick_add_mobile": false,
     "show_swatch_mobile": true,
     "show_product_discounts": true,
     "discounts_colors_text": "#B30E13",
