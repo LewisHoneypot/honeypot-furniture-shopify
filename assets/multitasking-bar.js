@@ -279,6 +279,7 @@ class RecentlyViewedProducts extends HTMLElement {
                     throw error;
                   }
 
+                  console.log('Test:', response);
                   return response.text();
                 })
                 .then((response) => {
