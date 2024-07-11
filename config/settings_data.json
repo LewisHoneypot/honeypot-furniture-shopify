@@ -768,8 +768,7 @@
     "custom_css": [
       ".color-list {display: flex;}",
       ".color-list a {margin-right: 1rem;}",
-      ".color-item {display: block !important;}",
-      ".section_image-gallery .swiper .swiper-slide {opacity: 1;}"
+      ".color-item {display: block !important;}"
     ]
   }
 }
