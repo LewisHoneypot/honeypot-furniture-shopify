@@ -2953,12 +2953,6 @@ class SliderComponent extends HTMLElement {
                 ? this.dataset.spaceBetweenDesktop
                 : setspaceBetween,
             },
-            1900: {
-              slidesPerView: this.dataset.itemXxl,
-              spaceBetween: this.dataset.spaceBetweenDesktop
-                ? this.dataset.spaceBetweenDesktop
-                : setspaceBetween,
-            },
           },
           on: {
             init: function () {
