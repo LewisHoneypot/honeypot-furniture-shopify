@@ -6575,7 +6575,7 @@ slideshow-component .swiper-pagination-bullet:not(.cus-bullet) {
 }
 
 .image-gallery .swiper-slide {
-  opacity: 1;
+  opacity: 0;
   transition: var(--duration-default);
 }
 
