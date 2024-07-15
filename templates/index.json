@@ -475,8 +475,8 @@
         "text_animation": "fade-up",
         "padding_top": 70,
         "padding_bottom": 70,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0
       }
     },
     "trustpilot_service_reviews_mini_qrrfxa": {
