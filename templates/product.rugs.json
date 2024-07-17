@@ -187,8 +187,8 @@
         "slide_rWKqPE": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6_2bd568d4-d352-47fb-b78c-42328962897e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/6_f80cc34e-b3bd-46fe-ba94-2a13b8ce10b3.jpg",
+            "image": "{{ product.metafields.custom.rugs_image_2.value }}",
+            "mobile_image": "{{ product.metafields.custom.rugs_image_mobile_2.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "",
