@@ -329,6 +329,7 @@
         "slide_e36EtB": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_1500_x_500_px.jpg",
             "mobile_image": "shopify:\/\/shop_images\/5_474076aa-3489-4053-be2c-bc983162da0b.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
