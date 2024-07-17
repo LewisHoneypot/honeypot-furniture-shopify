@@ -323,6 +323,142 @@
         "padding_bottom_mobile": 0
       }
     },
+    "slideshow_Gx6AXC": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_e36EtB": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/5_474076aa-3489-4053-be2c-bc983162da0b.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "default",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_rWKqPE": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/6_f80cc34e-b3bd-46fe-ba94-2a13b8ce10b3.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "Image slide",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "Tell your brand's story through images",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_74AhAh": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/7_0462f95b-d828-46ad-91a9-8b3c4a678bae.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "Image slide",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "Tell your brand's story through images",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_UCEadp": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/8_0a93e399-5608-484d-b299-990b6c7536f3.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "Image slide",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "Tell your brand's story through images",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_e36EtB",
+        "slide_rWKqPE",
+        "slide_74AhAh",
+        "slide_UCEadp"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "image_ratio": "adapt-image",
+        "image_ratio_mobile": "550px",
+        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "arrows_type": "all",
+        "arrows_position": "middle-center",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": false,
+        "color_autoplay": "#FFFFFF",
+        "change_slides_speed": 5,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "image_behavior": "none",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
       "type": "custom-tab",
       "blocks": {
@@ -723,6 +859,7 @@
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "image_banner_QfJQwx",
+    "slideshow_Gx6AXC",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "image_banner_XBKDbx",
     "trustpilot_product_revewis_Eb8Cd6",
