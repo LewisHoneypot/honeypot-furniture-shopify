@@ -243,8 +243,8 @@
         "slide_UCEadp": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/8_a45acb27-6b1f-4ca5-bec3-9c290b3e99f1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/8_0a93e399-5608-484d-b299-990b6c7536f3.jpg",
+            "image": "{{ product.metafields.custom.rugs_image_4.value }}",
+            "mobile_image": "{{ product.metafields.custom.rugs_image_mobile_4.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "Image slide",
@@ -267,40 +267,13 @@
             "padding_top_bottom": 0,
             "padding_left_right": 0
           }
-        },
-        "slide_AXACwY": {
-          "type": "slide",
-          "settings": {
-            "content_max_width": 440,
-            "heading_font": "font-heading",
-            "heading": "Image slide",
-            "heading_size": "default",
-            "heading_margin_bottom": 20,
-            "subheading": "Tell your brand's story through images",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
-            "box_align": "middle-left",
-            "text_alignment": "center",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Button label",
-            "primary_button_link": "",
-            "secondary_button_label": "Button label",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
         }
       },
       "block_order": [
         "slide_e36EtB",
         "slide_rWKqPE",
         "slide_74AhAh",
-        "slide_UCEadp",
-        "slide_AXACwY"
+        "slide_UCEadp"
       ],
       "settings": {
         "section_width": "page-width",
