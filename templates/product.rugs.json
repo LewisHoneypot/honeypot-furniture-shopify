@@ -215,8 +215,8 @@
         "slide_74AhAh": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7_061b4e05-77fc-487e-8983-1b0cd52f7802.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/7_0462f95b-d828-46ad-91a9-8b3c4a678bae.jpg",
+            "image": "{{ product.metafields.custom.rugs_image_3.value }}",
+            "mobile_image": "{{ product.metafields.custom.rugs_image_mobile_3.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "",
