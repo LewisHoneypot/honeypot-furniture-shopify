@@ -459,7 +459,7 @@
         "color_autoplay": "#FFFFFF",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
-        "pagination_type": "number",
+        "pagination_type": "dots",
         "image_behavior": "none",
         "accessibility_info": "Slideshow about our brand"
       }
