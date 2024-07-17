@@ -295,6 +295,7 @@
         "logos_N9UHNq",
         "buttons_ptFHaB"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
@@ -357,6 +358,7 @@
         "slide_rWKqPE": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/6_2bd568d4-d352-47fb-b78c-42328962897e.jpg",
             "mobile_image": "shopify:\/\/shop_images\/6_f80cc34e-b3bd-46fe-ba94-2a13b8ce10b3.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
@@ -384,6 +386,7 @@
         "slide_74AhAh": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/7_061b4e05-77fc-487e-8983-1b0cd52f7802.jpg",
             "mobile_image": "shopify:\/\/shop_images\/7_0462f95b-d828-46ad-91a9-8b3c4a678bae.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
@@ -411,6 +414,7 @@
         "slide_UCEadp": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/8_a45acb27-6b1f-4ca5-bec3-9c290b3e99f1.jpg",
             "mobile_image": "shopify:\/\/shop_images\/8_0a93e399-5608-484d-b299-990b6c7536f3.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
