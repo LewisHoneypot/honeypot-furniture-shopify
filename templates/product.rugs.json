@@ -300,6 +300,7 @@
         "customize_width": 1800,
         "custom_rouded": false,
         "custom_block_rouded": 0,
+        "image": "{{ product.metafields.custom.rugs_image.value }}",
         "content_inside_image_mobile": false,
         "mobile_row_height": 42,
         "desktop_content_position": "middle-center",
