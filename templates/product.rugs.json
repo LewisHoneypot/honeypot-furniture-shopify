@@ -245,6 +245,83 @@
         "padding_bottom_mobile": 40
       }
     },
+    "image_banner_QfJQwx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_wbWBTp": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_U4rczx": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "medium",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "logos_N9UHNq": {
+          "type": "logos",
+          "settings": {
+            "image_picker_link1": "",
+            "image_picker_link2": "",
+            "image_picker_link3": "",
+            "image_picker_link4": "",
+            "image_picker_link5": ""
+          }
+        },
+        "buttons_ptFHaB": {
+          "type": "buttons",
+          "settings": {
+            "button_transparent": "transparent",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_wbWBTp",
+        "text_U4rczx",
+        "logos_N9UHNq",
+        "buttons_ptFHaB"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "content_inside_image_mobile": false,
+        "mobile_row_height": 42,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "custom_content_max_width": false,
+        "content_max_width": 500,
+        "mobile_color_scheme": "custom",
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "color_scheme": "",
+        "image_overlay_opacity": 30,
+        "color_overlay_opacity": "#000000",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
       "type": "custom-tab",
       "blocks": {
@@ -458,6 +535,7 @@
         "button_label": "",
         "button_link": "",
         "image_ratio": "adapt",
+        "lookbook_max_height": 950,
         "color_scheme": "",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
@@ -643,6 +721,7 @@
   "order": [
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
+    "image_banner_QfJQwx",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "image_banner_XBKDbx",
     "trustpilot_product_revewis_Eb8Cd6",
