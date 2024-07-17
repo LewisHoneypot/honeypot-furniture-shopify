@@ -295,7 +295,6 @@
         "logos_N9UHNq",
         "buttons_ptFHaB"
       ],
-      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
@@ -446,6 +445,7 @@
         "slide_74AhAh",
         "slide_UCEadp"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
