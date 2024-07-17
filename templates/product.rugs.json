@@ -160,7 +160,7 @@
           "type": "slide",
           "settings": {
             "image": "{{ product.metafields.custom.rugs_image.value }}",
-            "mobile_image": "shopify:\/\/shop_images\/5_474076aa-3489-4053-be2c-bc983162da0b.jpg",
+            "mobile_image": "{{ product.metafields.custom.rugs_image_mobile.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "",
