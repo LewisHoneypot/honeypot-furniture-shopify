@@ -187,7 +187,7 @@
         "arrows_type": "lg",
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
-        "enable_autoplay": false,
+        "enable_autoplay": true,
         "color_autoplay": "#ffffff",
         "change_slides_speed": 9,
         "enable_pagination_type": "all",
