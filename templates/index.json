@@ -36,8 +36,8 @@
             "button_transparent": "transparent",
             "button_spacing_between": 10,
             "buttons_direction": "vertical",
-            "padding_top_bottom": 100,
-            "padding_left_right": 88
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
           }
         },
         "slide_MVHYjL": {
