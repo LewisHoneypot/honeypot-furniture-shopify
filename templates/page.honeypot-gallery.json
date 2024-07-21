@@ -126,7 +126,7 @@
           "settings": {
             "show_view_all": "link",
             "link_label": "Shop all corners",
-            "link": "",
+            "link": "shopify:\/\/collections\/corner-sofas",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
