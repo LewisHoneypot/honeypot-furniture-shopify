@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -73,7 +82,7 @@
         "content": "<p>Mention <strong>@honeypotfurniture<\/strong> in your Instagram photos for the chance to be featured in our gallery.<\/p>",
         "text_margin_bottom": 0,
         "button_label": "Follow Us",
-        "button_link": "",
+        "button_link": "https:\/\/www.instagram.com\/honeypotfurniture",
         "button_margin_bottom": 20,
         "text_alignment": "center",
         "cart_label": "",
