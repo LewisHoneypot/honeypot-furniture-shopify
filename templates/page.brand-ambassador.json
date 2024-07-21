@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -231,7 +240,7 @@
         "customize_width": 1800,
         "enable_full_width": false,
         "heading": "Meet our Ambassadors",
-        "text": "<p>Introducing our brand ambassadors. Explore the homes of influencers representing Honeypot and discover their unique style!<\/p>",
+        "text": "<p>Introducing our brand ambassadors. Explore the homes of influencers representing Honeypot and discover their unique style!<\/p><p><\/p>",
         "text_alignment": "center",
         "heading_margin_bottom": 30,
         "image_ratio": "portrait",
