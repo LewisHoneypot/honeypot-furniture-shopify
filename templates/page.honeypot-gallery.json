@@ -273,14 +273,14 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_1_15f94ac2-e576-43fe-9feb-77ffcf67a599.jpg",
-            "link": "shopify:\/\/products\/belgravia-sofa-slate-u-shape-corner"
+            "link": "shopify:\/\/collections\/belgravia-range"
           }
         },
         "image_fFAb3N": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T163956.274.png",
-            "link": ""
+            "link": "shopify:\/\/collections\/inga-range"
           }
         }
       },
