@@ -2666,11 +2666,9 @@ summary::-webkit-details-marker {
   padding: 0 var(--padding);
 }
 
-[aria-label="Lookbook"] {
-  .grid-scroll {
-    @media screen and (min-width: 750px){
-      overflow: visible;
-    }
+@media screen and (min-width: 750px) {
+  [aria-label="Lookbook"] .grid-scroll {
+    overflow: visible;
   }
 }
 
