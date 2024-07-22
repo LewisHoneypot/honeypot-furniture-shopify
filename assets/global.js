@@ -1141,31 +1141,53 @@ class CustomTab extends HTMLElement {
     event.preventDefault();
     event.stopPropagation();
 
-    if (!event.currentTarget.classList.contains("active")) {
-      const curTab = event.currentTarget;
-      const curTabContent = this.querySelector(curTab.getAttribute("data-tab"));
-      const _target = curTab.closest("li");
+    const curTab = event.currentTarget;
+    const curTabContent = this.querySelector(curTab.getAttribute("data-tab"));
+    const _target = curTab.closest("li");
+
+    // Check if the clicked tab is currently active
+    if (_target.classList.contains("active")) {
+      // If the clicked tab is already active, deactivate it
+      _target.classList.remove("active");
+      curTabContent.classList.remove("active");
+      curTabContent.style.maxHeight = null;
+    } else {
+      // If the clicked tab is not active, activate it
       const _active = this.querySelector(`li.active`);
       const _activeTab = this.querySelector(`.custom__tab-text.active`);
 
-      _active?.classList.remove("active");
-      _activeTab?.classList.remove("active");
+      if (_active) {
+        _active.classList.remove("active");
+      }
+      if (_activeTab) {
+        _activeTab.classList.remove("active");
+        _activeTab.style.maxHeight = null;
+      }
+
       _target.classList.add("active");
       curTabContent.classList.add("active");
-
-      _activeTab.style.maxHeight = null;
       curTabContent.style.maxHeight = `${curTabContent.scrollHeight}px`;
-
-      this.querySelectorAll(`[data-tabs-title]`).forEach((iconTab) => {
-        const _targetMobile = iconTab.closest("li");
-        curTab.getAttribute("data-tab") === iconTab.getAttribute("data-tab")
-          ? _targetMobile.classList.add("active")
-          : _targetMobile.classList.remove("active");
-      });
     }
+
+    // Ensure that all tabs with the same data-tab attribute are in sync
+    this.querySelectorAll(`[data-tabs-title]`).forEach((iconTab) => {
+      const _targetMobile = iconTab.closest("li");
+      if (curTab.getAttribute("data-tab") === iconTab.getAttribute("data-tab")) {
+        if (_target.classList.contains("active")) {
+          _targetMobile.classList.add("active");
+        } else {
+          _targetMobile.classList.remove("active");
+        }
+      } else {
+        _targetMobile.classList.remove("active");
+      }
+    });
   }
 }
+
 customElements.define("custom-tab", CustomTab);
+
+
 
 class DeferredMedia extends HTMLElement {
   constructor() {
