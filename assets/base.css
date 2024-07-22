@@ -2664,6 +2664,7 @@ summary::-webkit-details-marker {
   scroll-padding-left: var(--padding);
   margin: 0 calc(var(--padding) * -1);
   padding: 0 var(--padding);
+  overflow: visible;
 }
 
 .grid-scroll--full {
