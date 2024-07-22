@@ -700,7 +700,7 @@
         "button_label": "Get More Inspiration",
         "button_link": "shopify:\/\/pages\/inspiration",
         "image_ratio": "landscape",
-        "lookbook_max_height": 1500,
+        "lookbook_max_height": 1000,
         "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
         "arrows_type": "lg",
         "carousel_infinite_scroll": false,
