@@ -19,7 +19,7 @@
           "settings": {
             "heading": "",
             "heading_font": "f-bold",
-            "subtext": "<p><strong>Showroom <br\/><\/strong>Honeypot Lane, Colesterworth<br\/>NG33 5LY<strong><br\/>Opening Hours<\/strong><br\/>Mon-Fri: 9am-5pm<br\/>Sat: 10am-3pm<br\/>Sun: Closed<\/p><p><\/p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 589446<\/a><\/p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.co.uk<\/a><\/p>",
+            "subtext": "<p>Office Hours<br\/>Mon-Fri: 8am-8pm<\/p><p>Sat-Sun: 10am-3pm<\/p><p><\/p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 589446<\/a><\/p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.co.uk<\/a><\/p>",
             "subtext_size": "medium",
             "image_width": 180,
             "show_social": true,
@@ -112,9 +112,9 @@
           "type": "whatsapp",
           "settings": {
             "heading": "Need Help?",
-            "AvailabilityHeader": "Availability:",
-            "AvailabilityText1": "Monday to Friday 8am - 8pm",
-            "AvailabilityText2": "Saturday to Sunday 10am - 3pm",
+            "AvailabilityHeader": "",
+            "AvailabilityText1": "",
+            "AvailabilityText2": "",
             "button_transparent": "transparent",
             "WhatsAppButtonText1": "Live Chat on WhatsApp",
             "WhatsAppButtonPhoneNumber": "+447700176055",
