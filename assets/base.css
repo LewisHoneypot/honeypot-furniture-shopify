@@ -2664,7 +2664,9 @@ summary::-webkit-details-marker {
   scroll-padding-left: var(--padding);
   margin: 0 calc(var(--padding) * -1);
   padding: 0 var(--padding);
-  overflow: visible;
+  @media screen and (min-width: 750px;){
+    overflow: visible;
+  }
 }
 
 .grid-scroll--full {
