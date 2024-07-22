@@ -256,7 +256,7 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
-            "content": "<p>Metafield<\/p>",
+            "content": "",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -401,6 +401,7 @@
         "button_label": "",
         "button_link": "",
         "image_ratio": "adapt",
+        "lookbook_max_height": 950,
         "color_scheme": "",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
