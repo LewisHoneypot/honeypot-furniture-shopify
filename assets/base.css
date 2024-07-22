@@ -2664,8 +2664,13 @@ summary::-webkit-details-marker {
   scroll-padding-left: var(--padding);
   margin: 0 calc(var(--padding) * -1);
   padding: 0 var(--padding);
-  @media screen and (min-width: 750px){
-    overflow: visible;
+}
+
+[aria-label="Lookbook"] {
+  .grid-scroll {
+    @media screen and (min-width: 750px){
+      overflow: visible;
+    }
   }
 }
 
