@@ -266,6 +266,7 @@
         },
         "dimensions_MmNA4J": {
           "type": "dimensions",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "content_type": "dimensions",
@@ -277,6 +278,7 @@
         },
         "text_XHxTG4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Description",
             "content_type": "description",
