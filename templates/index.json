@@ -757,7 +757,7 @@
         "text_view_all": "",
         "button_transparent": "transparent",
         "show_line_separator": true,
-        "header_alignment": "left",
+        "header_alignment": "center",
         "image_width": "full",
         "image_ratio": "adapt",
         "height_odd_image": 150,
