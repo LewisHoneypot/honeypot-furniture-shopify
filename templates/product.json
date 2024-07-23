@@ -344,7 +344,7 @@
             "padding_top_mobile": 0,
             "padding_bottom_mobile": 0,
             "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "accent-2",
+            "primary_button_color_scheme": "background-1",
             "secondary_button_label": "Hide Breakdown",
             "secondary_button_color_scheme": ""
           }
