@@ -75,6 +75,7 @@
           -%}
           {% render 'product-discounts', product: card_product, class_discount: class_discount %}
         </div>
+
         {%- if product_cards_style == 'card' or product_cards_style == 'advanced-card' or product_cards_style == 'standard-plus' -%}
           <div class="card__badge pos-absolute z-index-1 d-flex f-column {{ settings.badge_position }} {{ settings.badge_transform }}"
             style="--badge-font-size: {{ settings.badge_font_size }}px;"
@@ -97,6 +98,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+
         {%- if product_cards_style == 'default' or product_cards_style == 'card' or product_cards_style == 'standard' or product_cards_style == 'standard-plus' or product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
           <div class="card__wishlist effect--{{ settings.product_cards_style }} pos-absolute z-index-2 d-flex f-column {{ settings.badge_position | replace: 'top left', 'right' | replace: 'top right', 'left' }}{% if product_cards_style == 'card' %} d-none-mw-md{% endif %}">
             {%- if show_wishlist or show_wishlist_mobile -%}
@@ -117,6 +119,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+        
         {%- if show_quick_add or show_swatch or show_quick_add_mobile or show_swatch_mobile -%}
           {%- unless product_cards_style == 'default' or product_cards_style == 'advanced-default' or product_cards_style == 'advanced-card' or card_style_popup == 'advanced-default' -%}
             <div class="card__quickadd quick-add no-js-hidden pos-absolute{% unless product_cards_style == 'card' or product_cards_style == 'advanced-card' %} pos-relative-ixl{% endunless %} z-index-2 w-100 bottom-0 left-0
@@ -404,6 +407,25 @@
           </div>
         {%- endif -%}
       </div>
+
+      {% comment %} Colour Swatches {% endcomment %}
+      {%- if card_product.metafields.custom.product_colour_list != blank -%}
+        <div
+          class="product__variant {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          style="padding-top: 0px;"
+          {{ block.shopify_attributes }}
+        >
+          <div class="color-list">
+            {% for p in card_product.metafields.custom.product_colour_list.value %}
+              <div
+                class="color-item"
+                style="background-color: {{ p.metafields.custom.color.value }}; aspect-ratio: 1; height: 3.5rem; width: 3.5rem; display: block !important; margin-right: 5px; margin-top: 15px;"
+              ></div>
+            {% endfor %}
+          </div>
+        </div>
+      {%- endif -%}              
+      
       <div class="card__content w-100{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} pos-absolute top-0 left-0 h-100 e-none{% else %} d-grid{% endif %}{% unless show_swatch_mobile %} hide-q-add-mobile{% endunless %}">
         <div class="card__information{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} h-100{% if product_cards_style == 'advanced-card' %} d-grid f-row j-c-between a-i-end{% else %} d-flex f-column{% endif %}{% endif %}"
           {%- if settings.use_custom_color %}
