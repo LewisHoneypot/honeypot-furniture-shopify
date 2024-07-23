@@ -279,7 +279,7 @@
         "enable_full_width": true,
         "enable_cursor_hover": false,
         "duration_speed": 75,
-        "heading_font": "font-heading",
+        "heading_font": "font-body",
         "heading_size": "small",
         "type_separating": "dots",
         "custom_between": false,
