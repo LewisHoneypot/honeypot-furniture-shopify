@@ -94,7 +94,7 @@
       ],
       "settings": {
         "products_per_row": 3,
-        "products_per_page": 16,
+        "products_per_page": 18,
         "columns_mobile": "1",
         "show_collection_description": false,
         "show_collection_image": false,
