@@ -1,4 +1,4 @@
-Test <div
+<div
   class="section__m-page spacing spacing-xs gradient"
   style="
     --padding-top: {{ section.settings.padding_top }}px;
@@ -6,18 +6,17 @@ Test <div
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
   "
->  Test 
+>
   <div
     class="{{ section.settings.section_width }} m-auto"
     {% if section.settings.section_width == 'customized-width' %}
       style="--page-width: {{ section.settings.customize_width }}px;"
     {% endif %}
-    >Test 1
+    >
       <div id="reviews"></div>
-      Test 2
-  </div>Test 
-</div>Test 
-Test 
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Product Reviews",
