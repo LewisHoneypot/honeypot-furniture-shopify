@@ -3633,6 +3633,12 @@ summary::-webkit-details-marker {
   background: transparent;
 }
 
+#product-grid > li > div > div {
+  border: solid 1px #d1d1d1;
+  padding: 10px;
+}
+
+
 .style-product-standard-plus .card__heading {
   font-size: clamp(1.2rem, calc(var(--font-body-size) + 0.4rem), 2rem);
   font-weight: var(--font-body-weight);
