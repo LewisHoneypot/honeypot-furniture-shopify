@@ -6,7 +6,7 @@
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
   "
->  
+>
   <div
     class="{{ section.settings.section_width }} m-auto"
     {% if section.settings.section_width == 'customized-width' %}
@@ -146,6 +146,9 @@
 
 <script>
   var primary_button_label = "{{section.settings.primary_button_label}}";
+
+  console.log('primary_button_label: ', primary_button_label);
+
   var secondary_button_label = "{{section.settings.secondary_button_label}}";
   var button_style = "{{settings.button_style}}";
   var primary_button_color_scheme = "{{section.settings.primary_button_color_scheme}}";

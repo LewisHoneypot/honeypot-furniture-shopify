@@ -66,10 +66,10 @@
                         {{ section.settings.top_heading_2 }}
                       </div>
                     {%- endif -%}
-                  </div>
+                  </div>Test 1
                 {%- endif -%}
-              </div>
-            </div>
+              </div>Test 2
+            </div>Test 3
           {%- endif -%}
           <div class="collapsible-content__item collapsible-content__itemRight w-100">
             {%- for block in section.blocks -%}
@@ -101,10 +101,10 @@
                         id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
                         role="region"
                         aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
-                      >
+                      >Test Inside
                         <div id="reviews"></div>
                       </div>
-                    </details>
+                    </details>Test Outside
                   </div>
               {%- endcase -%}
             {%- endfor -%}
@@ -354,9 +354,9 @@
 {% endschema %}
 
 <script>
-  var primary_button_label = '{{section.blocks.settings.primary_button_label}}';
-  var secondary_button_label = '{{section.blocks.settings.secondary_button_label}}';
-  var button_style = '{{settings.button_style}}';
-  var primary_button_color_scheme = '{{section.blocks.settings.primary_button_color_scheme}}';
-  var secondary_button_color_scheme = '{{section.blocks.settings.secondary_button_color_scheme}}';
+  var primary_button_label = '{{ section.blocks[0].settings.primary_button_label }}';
+  var secondary_button_label = '{{ section.blocks[0].settings.secondary_button_label }}';
+  var primary_button_color_scheme = '{{ section.blocks[0].settings.primary_button_color_scheme }}';
+  var secondary_button_color_scheme = '{{ section.blocks[0].settings.secondary_button_color_scheme }}';
+  var button_style = '{{ settings.button_style }}';
 </script>
