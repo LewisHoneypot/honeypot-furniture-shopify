@@ -571,7 +571,7 @@
         "text_animation": "fade-up",
         "padding_top": 20,
         "padding_bottom": 20,
-        "padding_top_mobile": 35,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
       }
     },
@@ -709,7 +709,7 @@
         "padding_top": 40,
         "padding_bottom": 100,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 10
       }
     },
     "collection_list_GDamp9": {
