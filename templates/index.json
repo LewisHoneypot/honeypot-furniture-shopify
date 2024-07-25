@@ -779,8 +779,8 @@
         "text_animation": "none",
         "padding_top": 70,
         "padding_bottom": 70,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 0
       }
     },
     "496e3ccd-49a7-4461-951f-0d3c7a67bf86": {
