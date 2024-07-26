@@ -5188,7 +5188,32 @@
 <script>
   var productSku = "{{ product.variants[0].sku }}";
   {% comment %} console.log("current_variant", productSku); {% endcomment %}
-
   var trustpilot_skus = {{ trustpilot_skus }};
   {% comment %} console.log("trustpilot_skus", trustpilot_skus); {% endcomment %}
+
+  // shop pay button test
+  document.addEventListener('DOMContentLoaded', function() {
+    function attachClickListener() {
+      var shopifyPayButton = document.querySelector('[data-testid="ShopifyPay-button"]');
+      if (shopifyPayButton) {
+        shopifyPayButton.addEventListener('click', function() {
+          gtag('event', 'shopify_pay_pdp_click', {
+            event_category: 'engagement',
+            event_label: 'ShopifyPay Button PDP',
+            value: 1
+          });
+        });
+        observer.disconnect();
+      }
+    }
+
+    var observer = new MutationObserver(attachClickListener);
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    attachClickListener();
+  });    
 </script>
