@@ -507,6 +507,7 @@
     },
     "1679044770251ee1c2": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
