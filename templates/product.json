@@ -59,6 +59,15 @@
             "padding_bottom": 5
           }
         },
+        "drawer_j3bNWd": {
+          "type": "drawer",
+          "settings": {
+            "heading": "More Sizes",
+            "content_type": "pairs_well_with",
+            "content": "",
+            "page": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -87,15 +96,6 @@
             "padding_bottom": 5
           }
         },
-        "drawer_j3bNWd": {
-          "type": "drawer",
-          "settings": {
-            "heading": "More Sizes",
-            "content_type": "pairs_well_with",
-            "content": "",
-            "page": ""
-          }
-        },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
           "settings": {
@@ -120,8 +120,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "buy_buttons",
         "drawer_j3bNWd",
+        "buy_buttons",
         "staingard_drawer_iWbVLW"
       ],
       "settings": {
