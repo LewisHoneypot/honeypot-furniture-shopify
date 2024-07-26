@@ -644,42 +644,7 @@
                     {{- block.settings.text -}}
                   </a>
                 {%- endif -%}
-              {%- when 'drawer' -%}
-
-                {%- if block.settings.content_type == 'pairs_well_with' -%}
-                  {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
-                  {%- if recommended_products == blank -%}
-                    {% comment %} Do nothing {% endcomment %}
-                  {%- else -%}
-                    {%- if block.settings.heading != blank -%}
-                      <side-drawer-opener
-                        class="d-block product-drawer__opener no-js-hidden"
-                        data-side-drawer="#Drawer-{{ block.id }}"
-                        {{ block.shopify_attributes }}
-                      style="min-height:58px;">
-                        <button
-                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left"
-                          type="button"
-                          aria-haspopup="dialog"
-                          aria-label="{{ block.settings.heading | escape }}"
-                        >
-                          {{ block.settings.heading | escape }}
-                          {{ icon_caret }}
-                        </button>
-                      </side-drawer-opener>
-                      {%- if block.settings.page != blank and block.settings.page.url != blank -%}
-                        <a
-                          href="{{ block.settings.page.url }}"
-                          class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none b-bottom no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                        >
-                          {{ block.settings.heading | escape }}
-                        </a>
-                      {%- endif -%}
-                    {%- endif -%}
-                  {%- endif -%}
-
-                {%- endif -%}                  
-
+              
               {%- when 'trustpilot_mini' -%}
                 {% render 'product-trustpilot-mini' %}
 
@@ -733,6 +698,59 @@
                     product_form_id: product_form_id
                   %}
                 </div>
+
+              {%- when 'drawer' -%}
+                <div class="element-spacing-all{{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    style="
+                      --animation-order: {{ forloop.index }};
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      margin-top:10px !important;
+                    "
+                  {% else %}
+                    style="
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      margin-top:10px !important;
+                    "
+                  {% endif %}
+                >
+                  {%- if block.settings.content_type == 'pairs_well_with' -%}
+                    {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
+                    {%- if recommended_products == blank -%}
+                      {% comment %} Do nothing {% endcomment %}
+                    {%- else -%}
+                      {%- if block.settings.heading != blank -%}
+                        <side-drawer-opener
+                          class="d-block product-drawer__opener no-js-hidden"
+                          data-side-drawer="#Drawer-{{ block.id }}"
+                          {{ block.shopify_attributes }}
+                        style="min-height:58px;">
+                          <button
+                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left"
+                            type="button"
+                            aria-haspopup="dialog"
+                            aria-label="{{ block.settings.heading | escape }}"
+                          >
+                            {{ block.settings.heading | escape }}
+                            {{ icon_caret }}
+                          </button>
+                        </side-drawer-opener>
+                        {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                          <a
+                            href="{{ block.settings.page.url }}"
+                            class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none b-bottom no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                          >
+                            {{ block.settings.heading | escape }}
+                          </a>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+
               {%- when 'buy_buttons' -%}
                 <div
                   class="product__action element-spacing-all {{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
