@@ -10374,6 +10374,18 @@ menu-drawer > details[open] > summary::before {
   fill: rgba(var(--button-color-text), 1);
 }
 
+/* Sticky WhatsApp */
+.fixed-container {
+  position: fixed;
+  bottom: 130px;
+  right: 0;
+  height:100px;
+  width: 100px; /* Full width to stay at the top */
+  z-index: 1000; /* Ensure the fixed div stays above other content */
+  background-color: transparent;
+  padding: 10px; /* Padding around your content */
+}
+
 /* double-banner */
 .db-banner__item {
   width: 50%;
@@ -26186,3 +26198,4 @@ body.multitasking__show .newsletter-popup-opener {
 .deliverydate.sb_delivery span {
   font-weight: 600;
 }
+
