@@ -121,7 +121,8 @@
             "WhatsAppButtonIconColour1": "#45544c",
             "WhatsAppButtonIconColour2": "#ffffff",
             "EmailButtonText": "Email Customer Support",
-            "EmailButtonIconColour": "#ffffff"
+            "EmailButtonIconColour": "#ffffff",
+            "use_sticky": true
           }
         }
       },
