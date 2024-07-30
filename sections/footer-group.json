@@ -116,13 +116,13 @@
             "AvailabilityText1": "",
             "AvailabilityText2": "",
             "button_transparent": "transparent",
-            "WhatsAppButtonText1": "Live Chat on WhatsApp",
-            "WhatsAppButtonPhoneNumber": "+447700176055",
+            "WhatsAppButtonText1": "Chat on WhatsApp",
+            "WhatsAppButtonPhoneNumber": "+447933456297",
             "WhatsAppButtonIconColour1": "#45544c",
             "WhatsAppButtonIconColour2": "#ffffff",
             "EmailButtonText": "Email Customer Support",
             "EmailButtonIconColour": "#ffffff",
-            "use_sticky": true
+            "use_sticky": false
           }
         }
       },
