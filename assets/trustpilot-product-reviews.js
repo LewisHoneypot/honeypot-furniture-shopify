@@ -374,12 +374,9 @@ fetch(urlCurrentProductRange, {
       // Select widget div
       var outerDiv = $(".trustpilot-mini-widget"); // Replace with the actual ID or selector of your outer div
 
-      // Get the current URL
-      var currentUrl = window.location.href.split('#')[0];
-
       // Create the link with a span inside
       var reviewsLink = $(
-        '<a href="'+currentUrl+'#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
+        '<div></div>'
       ).append(
         $(
           "<span style='min-height:24px;'>" +
