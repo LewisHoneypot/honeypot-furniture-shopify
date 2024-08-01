@@ -70,7 +70,7 @@ fetch($productRequest)
   .then((response) => response.json())
   .then((data) => {
     // Target the element with the ID "reviews"
-    var reviewsContainer = $("#reviews");
+    var reviewsContainer = $j("#reviews");
 
     // Check if the target element exists
     if (reviewsContainer.length === 0) {
@@ -79,39 +79,39 @@ fetch($productRequest)
     }
 
     // Create the outermost div
-    var outerDiv = $("<div>").attr("id", "outerDiv").appendTo(reviewsContainer);
+    var outerDiv = $j("<div>").attr("id", "outerDiv").appendTo(reviewsContainer);
 
     if (Array.isArray(data.productReviews)) {
       // If productReviews is an array (array of reviews)
       data.productReviews.forEach((review, i) => {
-        var innerDiv = $("<div>").addClass("innerDiv").appendTo(outerDiv);
-        var reviewWrapper = $("<div>")
+        var innerDiv = $j("<div>").addClass("innerDiv").appendTo(outerDiv);
+        var reviewWrapper = $j("<div>")
           .addClass("review-wrapper row mt-5")
           .appendTo(innerDiv);
-        var reviewSection = $("<div>")
+        var reviewSection = $j("<div>")
           .addClass("reviewSection pb-sm-3 col-12 col-lg-7 order-1")
           .appendTo(reviewWrapper);
-        var reviewSectionHeader = $("<div>")
+        var reviewSectionHeader = $j("<div>")
           .addClass("reviewSectionHeader pb-sm-3 d-inline-flex")
           .appendTo(reviewSection);
-        var attributeSection = $("<div>")
+        var attributeSection = $j("<div>")
           .addClass(
             "attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5"
           )
           .appendTo(reviewWrapper);
-        var attributeSectionWrapper = $("<div>")
+        var attributeSectionWrapper = $j("<div>")
           .addClass("attributeSectionWrapper col-12 p-0")
           .appendTo(attributeSection);
-        var attributeNames = $("<div>")
+        var attributeNames = $j("<div>")
           .addClass("col-4 p-0 attributeNames")
           .appendTo(attributeSectionWrapper);
-        var attributeStars = $("<div>")
+        var attributeStars = $j("<div>")
           .addClass("col-8 p-0 attributeStars text-right text-lg-left")
           .appendTo(attributeSectionWrapper);
-        var userIcon = $("<div>")
+        var userIcon = $j("<div>")
           .addClass("userIcon userIcon pt-2")
           .appendTo(reviewSectionHeader);
-        var customerInfo = $("<div>")
+        var customerInfo = $j("<div>")
           .addClass("customerInfo pl-2")
           .appendTo(reviewSectionHeader);
 
@@ -131,7 +131,7 @@ fetch($productRequest)
             `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp" class="pb-1" height="24" width="24">`
           );
           customerInfo.append(
-            $('<span class="p-0">').html(
+            $j('<span class="p-0">').html(
               `<strong> ${review.consumer.displayName}</strong>` +
                 ", " +
                 formattedDate
@@ -144,14 +144,14 @@ fetch($productRequest)
           );
         }
         customerInfo.append(
-          $('<span class="d-block mb-2">')
+          $j('<span class="d-block mb-2">')
             .html(getReviewTrustpilotImage(review.stars, review.stars))
-            .append($("<br>"))
+            .append($j("<br>"))
         );
         reviewSection.append(
-          $('<p class="d-block mb-0 py-2">')
+          $j('<p class="d-block mb-0 py-2">')
             .text('"' + review.content.trim() + '"')
-            .append($("<br>"))
+            .append($j("<br>"))
         );
 
         if (review.attachments) {
@@ -159,14 +159,14 @@ fetch($productRequest)
             attachment.processedFiles.forEach((processedFiles, i) => {
               if (processedFiles.mimeType == "video/mp4") {
                 reviewSection.append(
-                  $('<span class="d-block">').html(
+                  $j('<span class="d-block">').html(
                     '<video src="' + processedFiles.url + '" controls>'
                   )
                 );
               }
               if (processedFiles.dimension == "360pxWide") {
                 reviewSection.append(
-                  $('<span class="d-block">').html(
+                  $j('<span class="d-block">').html(
                     '<img src="' + processedFiles.url + '" loading="lazy">'
                   )
                 );
@@ -189,18 +189,18 @@ fetch($productRequest)
           });
 
           reviewSection.append(
-            $('<span class="customerInfo d-block ml-3 mt-3">')
+            $j('<span class="customerInfo d-block ml-3 mt-3">')
               .html(
                 `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> <strong>Honeypot Furniture</strong>` +
                   ", " +
                   formattedDate
               )
-              .append($("<br>"))
+              .append($j("<br>"))
           );
           reviewSection.append(
-            $('<p class="ml-3 mb-0 py-2">')
+            $j('<p class="ml-3 mb-0 py-2">')
               .text('"' + review.firstCompanyComment.comment.trim() + '"')
-              .append($("<br>"))
+              .append($j("<br>"))
           );
         }
 
@@ -218,21 +218,21 @@ fetch($productRequest)
 
           attributeNames
             .append(
-              $("<span>").html(`<strong>${attribute.attributeName}:</strong>`)
+              $j("<span>").html(`<strong>${attribute.attributeName}:</strong>`)
             )
-            .append($("<br>"));
+            .append($j("<br>"));
           attributeStars
-            .append($("<span>").html(`${trustpilotImage}`))
-            .append($("<br>"));
+            .append($j("<span>").html(`${trustpilotImage}`))
+            .append($j("<br>"));
         });
 
         // Create a button to toggle additional content
-        var buttonWrapper = $("<div>").addClass(
+        var buttonWrapper = $j("<div>").addClass(
           "buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item"
         );
         reviewSection.append(buttonWrapper);
 
-        var toggleButton = $("<button>").addClass(
+        var toggleButton = $j("<button>").addClass(
           "button button--style-" +
             button_style +
             " mi-w color-" +
@@ -241,13 +241,13 @@ fetch($productRequest)
         );
         buttonWrapper.append(toggleButton);
 
-        var buttonSpan = $("<span>")
+        var buttonSpan = $j("<span>")
           .addClass("text")
           .text(primary_button_label);
         toggleButton.append(buttonSpan);
 
         // Additional content to toggle (e.g., more details about the review)
-        var additionalContent = $("<div>")
+        var additionalContent = $j("<div>")
           .addClass("additional-content d-lg-block")
           .hide();
         attributeSection.append(additionalContent);
@@ -341,7 +341,7 @@ fetch(urlCurrentProductRange, {
   .then((data) => {
     // console.log(data);
     // create div
-    var outerDiv = $('<div class="main-trustpilot">').appendTo(
+    var outerDiv = $j('<div class="main-trustpilot">').appendTo(
       trustPilotContainer
     );
 
@@ -368,7 +368,7 @@ fetch(urlCurrentProductRange, {
 
       // hide reviews icon if none exist
       if (amountOfReviews == 0) {
-        $("[id*='trustpilot_product_reviews_collapsible']").hide();
+        $j("[id*='trustpilot_product_reviews_collapsible']").hide();
       }
 
       let totalCombinedReviews =
@@ -409,10 +409,10 @@ fetch(urlCurrentProductRange, {
       var outerDiv = $j(".trustpilot-mini-widget");
 
       // Create the link with a span inside
-      var reviewsLink = $(
+      var reviewsLink = $j(
         '<a href="#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
       ).append(
-        $(
+        $j(
           "<span style='min-height:24px;'>" +
             trustpilotImage +
             '<span class="ammount-of-reviews"> ' +
@@ -422,49 +422,49 @@ fetch(urlCurrentProductRange, {
       );
 
       if (amountOfReviews == "0") {
-        // $(".reviews-accordion").css("display", "none");
+        // j(".reviews-accordion").css("display", "none");
         $j(".trustpilot-mini-widget").removeClass("d-lg-block");
         $j(".trustpilot-mini-widget").addClass("d-lg-none");
       }
 
-      var toolTip = $('<span class="tooltip-content"></span>');
-      var toolTipHeader = $(
+      var toolTip = $j('<span class="tooltip-content"></span>');
+      var toolTipHeader = $j(
         '<div class="tooltip-header col-12 px-0 pt-1 pb-3"></div>'
       );
-      var toolTipHeaderText = $(
+      var toolTipHeaderText = $j(
         "<div>Rated " + outOfFive + " out of 5 stars</div>"
       );
 
       // score rows
-      var toolTipFiveStar = $(
+      var toolTipFiveStar = $j(
         '<div class="row"><div class="col-3 py-1">5 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
           fiveStarFill +
           '%"></div></div></div><div class="col-2 py-1 px-0">(' +
           amountOfFiveStarReviews +
           ")</div></div>"
       );
-      var toolTipFourStar = $(
+      var toolTipFourStar = $j(
         '<div class="row"><div class="col-3 py-1">4 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
           fourStarFill +
           '%"></div></div></div><div class="col-2 py-1 px-0">(' +
           amountOfFourStarReviews +
           ")</div></span>"
       );
-      var toolTipThreeStar = $(
+      var toolTipThreeStar = $j(
         '<div class="row"><div class="col-3 py-1">3 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
           threeStarFill +
           '%"></div></div></div><div class="col-2 py-1 px-0">(' +
           amountOfThreeStarReviews +
           ")</div></span>"
       );
-      var toolTipTwoStar = $(
+      var toolTipTwoStar = $j(
         '<div class="row"><div class="col-3 py-1">2 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
           twoStarFill +
           '%"></div></div></div><div class="col-2 py-1 px-0">(' +
           amountOfTwoStarReviews +
           ")</div></span>"
       );
-      var toolTipOneStar = $(
+      var toolTipOneStar = $j(
         '<div class="row"><div class="col-3 py-1">1 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
           oneStarFill +
           '%"></div></div></div><div class="col-2 py-1 px-0">(' +
