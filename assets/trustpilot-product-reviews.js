@@ -2,6 +2,9 @@
 var productRangeArray = [];
 var trustpilot_skus_array = [];
 
+// console.log('productRangeArray', productRangeArray);
+// console.log('trustpilot_skus_array', trustpilot_skus_array);
+
 // check if live or staging
 var environment = "";
 if (
@@ -20,6 +23,9 @@ const phpEndpoint =
 
 var productId = productSku;
 
+// console.log('phpEndpoint', phpEndpoint);
+// console.log('productId', productId);
+
 // Trustpilot Product Reviews
 
 // add current product to full range
@@ -27,9 +33,16 @@ productRangeArray.push(productSku);
 // add current product to full range
 trustpilot_skus_array.push(trustpilot_skus);
 
+// console.log('productRangeArray', productRangeArray);
+// console.log('trustpilot_skus_array', trustpilot_skus_array);
+// console.log('trustpilot_skus', trustpilot_skus);
+
 // convert array to string for url
 var productRangeArrayString = productRangeArray.toString();
 var trustpilot_skus_array_string = trustpilot_skus_array.toString();
+
+// console.log('productRangeArrayString', productRangeArrayString)
+// console.log('trustpilot_skus_array_string', trustpilot_skus_array_string)
 
 // Set up the URLs for the requests
 // current product only
@@ -39,8 +52,19 @@ const urlCurrentProductWithFullRange = `${phpEndpoint}?type=reviews&sku=${produc
 // current product with full range
 const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${trustpilot_skus_array_string}&perPage=100`;
 
+// choose whether to use single product or product range
+var $productRequest = '';
+
+if (!trustpilot_skus_array_string){
+  $productRequest = urlCurrentProduct;
+  // console.log('productRequest', $productRequest);
+} else {
+  $productRequest = urlCurrentProductWithFullRangeTrustPilot;
+  // console.log('productRequest', $productRequest);
+}
+
 // GET request reviews
-fetch(urlCurrentProductWithFullRangeTrustPilot)
+fetch($productRequest) 
   .then((response) => response.json())
   .then((data) => {
     // Target the element with the ID "reviews"
@@ -284,15 +308,22 @@ function getTrustpilotAnchorImage(rating, roundedRatingImage) {
 // Set up the URL for the request
 const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
 
+// console.log('urlCurrentProductRange', urlCurrentProductRange);
+
 // Target the element with the class "trustpilot-mini-widget"
 var trustPilotContainer = $(".trustpilot-mini-widget");
 
 var skuList = trustpilot_skus_array;
 
+// console.log('trustpilot_skus_array', trustpilot_skus_array);
+// console.log('skuList', skuList);
+
 // Prepare data for POST request
 var postData = {
   skus: trustpilot_skus
 };
+
+// console.log('postData', postData);
 
 // GET request
 fetch(urlCurrentProductRange, {
@@ -306,6 +337,7 @@ fetch(urlCurrentProductRange, {
 })
   .then((response) => response.json())
   .then((data) => {
+    // console.log(data);
     // create div
     var outerDiv = $('<div class="main-trustpilot">').appendTo(
       trustPilotContainer
