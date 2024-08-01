@@ -1172,7 +1172,9 @@ class CustomTab extends HTMLElement {
     // Ensure that all tabs with the same data-tab attribute are in sync
     this.querySelectorAll(`[data-tabs-title]`).forEach((iconTab) => {
       const _targetMobile = iconTab.closest("li");
-      if (curTab.getAttribute("data-tab") === iconTab.getAttribute("data-tab")) {
+      if (
+        curTab.getAttribute("data-tab") === iconTab.getAttribute("data-tab")
+      ) {
         if (_target.classList.contains("active")) {
           _targetMobile.classList.add("active");
         } else {
@@ -1186,8 +1188,6 @@ class CustomTab extends HTMLElement {
 }
 
 customElements.define("custom-tab", CustomTab);
-
-
 
 class DeferredMedia extends HTMLElement {
   constructor() {
@@ -5737,29 +5737,39 @@ const serviceStarsUrl =
   environment +
   `/trustpilot/service-stars.php`;
 
-// Make the GET request using jQuery
-var $j = jQuery.noConflict();
-$j.ajax({
-  url: serviceStarsUrl,
-  method: "GET",
-  success: function (serviceStarsWord) {
-    let serviceStars = $j.parseJSON(serviceStarsWord);
-    $j(".serviceStarsWord").text((serviceStars ? serviceStars.string : ''));
-    $j(".numberOfReviewsImage").html(
-      '<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_' +
-      (serviceStars ? serviceStars.stars : '') +
-        '.png" class="stars-image pb-1" alt="Trustpilot Stars">'
-    );
-  },
-  error: function (error) {
+// Fetch data using the Fetch API
+fetch(serviceStarsUrl)
+  .then((response) => response.json())
+  .then((serviceStars) => {
+    const serviceStarsWordElement = document.querySelector(".serviceStarsWord");
+    const numberOfReviewsImageElement = document.querySelector(".numberOfReviewsImage");
+
+    if (serviceStarsWordElement) {
+      serviceStarsWordElement.textContent = serviceStars ? serviceStars.string : "";
+    }
+
+    if (numberOfReviewsImageElement) {
+      numberOfReviewsImageElement.innerHTML = serviceStars
+        ? `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${serviceStars.stars}.png" class="stars-image pb-1" alt="Trustpilot Stars">`
+        : "";
+    }
+  })
+  .catch((error) => {
     console.error("Error fetching data:", error);
-  },
-});
+  });
 
 // Hide missing product videos
-if (typeof productVideo !== 'undefined' && productVideo === '') {
-  if (document.querySelector('[id*="QM4Cg7"]')){
-    $j('[id*="QM4Cg7"]').css("display", "none");
+if (typeof productVideo !== "undefined" && productVideo === "") {
+  let productVideoElement = document.querySelector('[id*="QM4Cg7"]');
+  if (productVideoElement) {
+    productVideoElement.style.display = "none";
+  }
+}
+
+// Hide missing product videos
+if (typeof productVideo !== "undefined" && productVideo === "") {
+  if (document.querySelector('[id*="QM4Cg7"]')) {
+    document.querySelector('[id*="QM4Cg7"]').css("display", "none");
   }
 }
 
