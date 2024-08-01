@@ -378,8 +378,6 @@ fetch(urlCurrentProductRange, {
       var currentUrl = window.location.href.split('#')[0];
 
       // Create the link with a span inside
-      // console.log('currentUrl', currentUrl);
-      var currentUrl = 'https://www.honeypotfurniture.co.uk/products/cimiano-sofabed-grey-left-hand-facing-corner'
       var reviewsLink = $(
         '<a href="'+currentUrl+'#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
       ).append(
