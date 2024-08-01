@@ -466,6 +466,8 @@ function goToAnchorTag() {
         console.log('click review');
         var targetElement = $('#reviews');
         if (targetElement.length) {
+            console.log('click review 2');
+            
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: targetElement.offset().top
@@ -473,6 +475,4 @@ function goToAnchorTag() {
         }
     });
 }
-
-// goToAnchorTag();
 
