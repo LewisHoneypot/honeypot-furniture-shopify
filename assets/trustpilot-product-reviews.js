@@ -467,7 +467,7 @@ function goToAnchorTag() {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: targetElement.offset().top
-            }, 800); // thời gian cuộn mượt (800ms)
+            }, 800);
         }
     });
 }
