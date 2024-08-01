@@ -380,7 +380,7 @@ fetch(urlCurrentProductRange, {
       // Create the link with a span inside
       console.log('currentUrl', currentUrl);
       var reviewsLink = $(
-        '<a href="'+currentUrl+'#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
+        '<a href="'+currentUrl+'#reviews" target="_top" id="reviews-button" class="trustpilotTooltip"></a>'
       ).append(
         $(
           "<span style='min-height:24px;'>" +
