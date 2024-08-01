@@ -458,16 +458,15 @@ fetch(urlCurrentProductRange, {
     console.error("Error fetching data from Trustpilot API:", error);
   });
 
-function goToAnchorTag(params) {
-    document.querySelector('#reviews-button').addEventListener('click', function(event) {
+function goToAnchorTag() {
+    $('#reviews-button').on('click', function(event) {
         console.log('click review');
-        var targetElement = document.getElementById('reviews');
-        if (targetElement) {
+        var targetElement = $('#reviews');
+        if (targetElement.length) {
             event.preventDefault();
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top
+            }, 800); // thời gian cuộn mượt (800ms)
         }
     });
 }
