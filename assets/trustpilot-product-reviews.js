@@ -461,9 +461,7 @@ fetch(urlCurrentProductRange, {
   });
 
 function goToAnchorTag() {
-    console.log('abc');
     $('#reviews-button').on('click', function(event) {
-        console.log('click review');
         var targetElement = $('#reviews');
         if (targetElement.length) {
             console.log('click review 2');
@@ -471,6 +469,13 @@ function goToAnchorTag() {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: targetElement.offset().top
+            }, 800);
+
+            setTimeout(function() {
+                window.scrollTo({
+                    top: targetElement.offset().top,
+                    behavior: 'smooth'
+                });
             }, 800);
         }
     });
