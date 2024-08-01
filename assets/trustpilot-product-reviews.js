@@ -462,7 +462,7 @@ fetch(urlCurrentProductRange, {
 
 function goToAnchorTag() {
     console.log('abc');
-    $('#reviews-button').on.off('click', function(event) {
+    $('#reviews-button').on('click', function(event) {
         console.log('click review');
         var targetElement = $('#reviews');
         if (targetElement.length) {
