@@ -457,3 +457,19 @@ fetch(urlCurrentProductRange, {
   .catch((error) => {
     console.error("Error fetching data from Trustpilot API:", error);
   });
+
+function goToAnchorTag(params) {
+    document.querySelector('#reviews-button').addEventListener('click', function(event) {
+        var targetElement = document.getElementById('reviews');
+        if (targetElement) {
+            event.preventDefault();
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+}
+
+goToAnchorTag();
+
