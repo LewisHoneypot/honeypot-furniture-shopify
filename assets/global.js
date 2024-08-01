@@ -5743,10 +5743,10 @@ $.ajax({
   method: "GET",
   success: function (serviceStarsWord) {
     let serviceStars = jQuery.parseJSON(serviceStarsWord);
-    $(".serviceStarsWord").text(serviceStars.string);
+    $(".serviceStarsWord").text((serviceStars ? serviceStars.string : ''));
     $(".numberOfReviewsImage").html(
       '<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_' +
-        serviceStars.stars +
+      (serviceStars ? serviceStars.stars : '') +
         '.png" class="stars-image pb-1" alt="Trustpilot Stars">'
     );
   },
