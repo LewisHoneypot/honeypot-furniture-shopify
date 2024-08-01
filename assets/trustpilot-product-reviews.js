@@ -452,32 +452,8 @@ fetch(urlCurrentProductRange, {
 
       // Append the anchor link to the outer div
       outerDiv.append(reviewsLink);
-
-      // goToAnchorTag();
     }
   })
   .catch((error) => {
     console.error("Error fetching data from Trustpilot API:", error);
   });
-
-function goToAnchorTag() {
-    $('#reviews-button').on('click', function(event) {
-        var targetElement = $('#reviews');
-        if (targetElement.length) {
-            console.log('click review 2');
-            
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: targetElement.offset().top
-            }, 800);
-
-            setTimeout(function() {
-                window.scrollTo({
-                    top: targetElement.offset().top,
-                    behavior: 'smooth'
-                });
-            }, 800);
-        }
-    });
-}
-
