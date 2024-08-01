@@ -452,6 +452,8 @@ fetch(urlCurrentProductRange, {
 
       // Append the anchor link to the outer div
       outerDiv.append(reviewsLink);
+
+      goToAnchorTag();
     }
   })
   .catch((error) => {
@@ -460,7 +462,7 @@ fetch(urlCurrentProductRange, {
 
 function goToAnchorTag() {
     console.log('abc');
-    $('#reviews-button').on('click', function(event) {
+    $('#reviews-button').on.off('click', function(event) {
         console.log('click review');
         var targetElement = $('#reviews');
         if (targetElement.length) {
@@ -472,5 +474,5 @@ function goToAnchorTag() {
     });
 }
 
-goToAnchorTag();
+// goToAnchorTag();
 
