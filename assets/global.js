@@ -5738,13 +5738,14 @@ const serviceStarsUrl =
   `/trustpilot/service-stars.php`;
 
 // Make the GET request using jQuery
-$.ajax({
+var $j = jQuery.noConflict();
+$j.ajax({
   url: serviceStarsUrl,
   method: "GET",
   success: function (serviceStarsWord) {
-    let serviceStars = jQuery.parseJSON(serviceStarsWord);
-    $(".serviceStarsWord").text((serviceStars ? serviceStars.string : ''));
-    $(".numberOfReviewsImage").html(
+    let serviceStars = $j.parseJSON(serviceStarsWord);
+    $j(".serviceStarsWord").text((serviceStars ? serviceStars.string : ''));
+    $j(".numberOfReviewsImage").html(
       '<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_' +
       (serviceStars ? serviceStars.stars : '') +
         '.png" class="stars-image pb-1" alt="Trustpilot Stars">'
@@ -5758,7 +5759,7 @@ $.ajax({
 // Hide missing product videos
 if (typeof productVideo !== 'undefined' && productVideo === '') {
   if (document.querySelector('[id*="QM4Cg7"]')){
-    $('[id*="QM4Cg7"]').css("display", "none");
+    $j('[id*="QM4Cg7"]').css("display", "none");
   }
 }
 
