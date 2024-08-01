@@ -5768,8 +5768,9 @@ if (typeof productVideo !== "undefined" && productVideo === "") {
 
 // Hide missing product videos
 if (typeof productVideo !== "undefined" && productVideo === "") {
-  if (document.querySelector('[id*="QM4Cg7"]')) {
-    document.querySelector('[id*="QM4Cg7"]').css("display", "none");
+  var element = document.querySelector('[id*="QM4Cg7"]');
+  if (element) {
+    element.style.display = "none";
   }
 }
 
