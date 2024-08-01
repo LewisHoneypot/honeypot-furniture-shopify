@@ -1,4 +1,6 @@
 // TrustPilot Reviews
+var $j = jQuery.noConflict();
+
 var productRangeArray = [];
 var trustpilot_skus_array = [];
 
@@ -277,7 +279,7 @@ fetch($productRequest)
 // Function to get Trustpilot image based on rating
 function getReviewTrustpilotImage(rating, roundedRatingImage) {
   if (rating == "NaN") {
-    $(".trustpilot-mini-widget").addClass("d-none");
+    $j(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
       "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
@@ -292,7 +294,7 @@ function getReviewTrustpilotImage(rating, roundedRatingImage) {
 // Function to get Trustpilot image based on rating
 function getTrustpilotAnchorImage(rating, roundedRatingImage) {
   if (rating == "NaN") {
-    $(".trustpilot-mini-widget").addClass("d-none");
+    $j(".trustpilot-mini-widget").addClass("d-none");
   } else {
     var imageUrl =
       "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
@@ -311,7 +313,7 @@ const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
 // console.log('urlCurrentProductRange', urlCurrentProductRange);
 
 // Target the element with the class "trustpilot-mini-widget"
-var trustPilotContainer = $(".trustpilot-mini-widget");
+var trustPilotContainer = $j(".trustpilot-mini-widget");
 
 var skuList = trustpilot_skus_array;
 
@@ -404,7 +406,7 @@ fetch(urlCurrentProductRange, {
       );
 
       // Select widget div
-      var outerDiv = $(".trustpilot-mini-widget"); // Replace with the actual ID or selector of your outer div
+      var outerDiv = $j(".trustpilot-mini-widget");
 
       // Create the link with a span inside
       var reviewsLink = $(
@@ -421,8 +423,8 @@ fetch(urlCurrentProductRange, {
 
       if (amountOfReviews == "0") {
         // $(".reviews-accordion").css("display", "none");
-        $(".trustpilot-mini-widget").removeClass("d-lg-block");
-        $(".trustpilot-mini-widget").addClass("d-lg-none");
+        $j(".trustpilot-mini-widget").removeClass("d-lg-block");
+        $j(".trustpilot-mini-widget").addClass("d-lg-none");
       }
 
       var toolTip = $('<span class="tooltip-content"></span>');
