@@ -460,6 +460,7 @@ fetch(urlCurrentProductRange, {
 
 function goToAnchorTag(params) {
     document.querySelector('#reviews-button').addEventListener('click', function(event) {
+        console.log('click review');
         var targetElement = document.getElementById('reviews');
         if (targetElement) {
             event.preventDefault();
