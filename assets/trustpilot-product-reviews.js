@@ -459,6 +459,7 @@ fetch(urlCurrentProductRange, {
   });
 
 function goToAnchorTag() {
+    console.log('abc');
     $('#reviews-button').on('click', function(event) {
         console.log('click review');
         var targetElement = $('#reviews');
