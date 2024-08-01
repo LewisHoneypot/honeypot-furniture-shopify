@@ -379,7 +379,7 @@ fetch(urlCurrentProductRange, {
 
       // Create the link with a span inside
       var reviewsLink = $(
-        '<a href="'+currentUrl+'#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
+        '<a href="'+currentUrl+'/#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
       ).append(
         $(
           "<span style='min-height:24px;'>" +
@@ -453,7 +453,7 @@ fetch(urlCurrentProductRange, {
       // Append the anchor link to the outer div
       outerDiv.append(reviewsLink);
 
-      goToAnchorTag();
+      // goToAnchorTag();
     }
   })
   .catch((error) => {
