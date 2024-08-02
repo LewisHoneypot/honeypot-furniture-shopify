@@ -264,13 +264,13 @@
         </div>
       {%- endif -%}
     </{%- if gallery_layout == 'slider_thumbnail' %}div{%  else %}slider-component{% endif -%}>
-    {%- if first_3d_model -%}
+    {%- if first_threed_model -%}
       <button
         class="button {{ settings.button_style | prepend: 'button--style-' }} product__xr-button"
         type="button"
         aria-label="{{ 'products.product.xr_button_label' | t }}"
         data-shopify-xr
-        data-shopify-model3d-id="{{ first_3d_model.id }}"
+        data-shopify-model3d-id="{{ first_threed_model.id }}"
         data-shopify-title="{{ product.title | escape }}"
         data-shopify-xr-hidden
       >

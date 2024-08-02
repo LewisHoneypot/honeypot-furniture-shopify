@@ -140,9 +140,9 @@
                         if swatch contains option_name
                           assign is_swatch = true
                           assign option_size = option.values | size
-                          assign variants_option1_arr = card_product.variants | map: 'option1'
-                          assign variants_option2_arr = card_product.variants | map: 'option2'
-                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                          assign variants_option_one_arr = card_product.variants | map: 'option1'
+                          assign variants_option_two_arr = card_product.variants | map: 'option2'
+                          assign variants_option_three_arr = card_product.variants | map: 'option3'
                         endif
                       -%}
                       {%- if is_swatch -%}
@@ -154,17 +154,17 @@
                                 for variant in card_product.variants
                                   case option.position
                                     when 1
-                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_one_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 2
-                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_two_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 3
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
@@ -477,9 +477,9 @@
                         if swatch contains option_name
                           assign is_swatch = true
                           assign option_size = option.values | size
-                          assign variants_option1_arr = card_product.variants | map: 'option1'
-                          assign variants_option2_arr = card_product.variants | map: 'option2'
-                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                          assign variants_option_one_arr = card_product.variants | map: 'option1'
+                          assign variants_option_two_arr = card_product.variants | map: 'option2'
+                          assign variants_option_three_arr = card_product.variants | map: 'option3'
                         endif
                       -%}
                       {%- if is_swatch -%}
@@ -491,17 +491,17 @@
                                 for variant in card_product.variants
                                   case option.position
                                     when 1
-                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_one_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 2
-                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_two_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 3
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
@@ -840,9 +840,9 @@
                         if swatch contains option_name
                           assign is_swatch = true
                           assign option_size = option.values | size
-                          assign variants_option1_arr = card_product.variants | map: 'option1'
-                          assign variants_option2_arr = card_product.variants | map: 'option2'
-                          assign variants_option3_arr = card_product.variants | map: 'option3'
+                          assign variants_option_one_arr = card_product.variants | map: 'option1'
+                          assign variants_option_two_arr = card_product.variants | map: 'option2'
+                          assign variants_option_three_arr = card_product.variants | map: 'option3'
                         endif
                       -%}
                       {%- if is_swatch -%}
@@ -861,17 +861,17 @@
                                 for variant in card_product.variants
                                   case option.position
                                     when 1
-                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_one_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 2
-                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_two_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 3
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
@@ -954,9 +954,9 @@
                       if swatch contains option_name
                         assign is_swatch = true
                         assign option_size = option.values | size
-                        assign variants_option1_arr = card_product.variants | map: 'option1'
-                        assign variants_option2_arr = card_product.variants | map: 'option2'
-                        assign variants_option3_arr = card_product.variants | map: 'option3'
+                        assign variants_option_one_arr = card_product.variants | map: 'option1'
+                        assign variants_option_two_arr = card_product.variants | map: 'option2'
+                        assign variants_option_three_arr = card_product.variants | map: 'option3'
                       endif
                     -%}
                     {%- if is_swatch -%}
@@ -969,17 +969,17 @@
                                 for variant in card_product.variants
                                   case option.position
                                     when 1
-                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_one_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 2
-                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_two_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 3
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
@@ -1040,22 +1040,22 @@
                                 for variant in card_product.variants
                                   case option.position
                                     when 1
-                                      if variants_option1_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_one_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 2
-                                      if variants_option2_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_two_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 3
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif
                                     when 4
-                                      if variants_option3_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
+                                      if variants_option_three_arr[forloop.index0] == value and card_product.variants[forloop.index0].image
                                         assign variant_image = card_product.variants[forloop.index0].image
                                         break
                                       endif

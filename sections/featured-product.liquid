@@ -9,13 +9,13 @@
 >
   {%- liquid
     assign product = section.settings.product
-    assign first_3d_model = product.media | where: 'media_type', 'model' | first
+    assign first_threed_model = product.media | where: 'media_type', 'model' | first
     capture icon_arrow_list
       render 'icon-arrow-list'
     endcapture
   -%}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-  {%- if first_3d_model -%}
+  {%- if first_threed_model -%}
     <link
       id="ModelViewerStyle"
       rel="stylesheet"
@@ -822,7 +822,7 @@
       </div>
     </div>
     {% render 'product-media-modal' %}
-    {%- if first_3d_model -%}
+    {%- if first_threed_model -%}
       <script type="application/json" id="ProductJSON-{{ product.id }}">
         {{ product.media | where: 'media_type', 'model' | json }}
       </script>
@@ -832,7 +832,7 @@
       if product.media.size > 0
         assign files = files | append: ', media-gallery.js'
       endif
-      if first_3d_model
+      if first_threed_model
         assign files = files | append: ', product-model.js'
       endif
       if section.settings.enable_sticky_add_to_cart
@@ -921,7 +921,7 @@
     </script>
   </div>
 </section>
-{%- if first_3d_model -%}
+{%- if first_threed_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
     {{ product.media | where: 'media_type', 'model' | json }}
   </script>
@@ -931,7 +931,7 @@
   if product.media.size > 0
     assign files = files | append: ', media-gallery.js'
   endif
-  if first_3d_model
+  if first_threed_model
     assign files = files | append: ', product-model.js'
   endif
   if request.design_mode
