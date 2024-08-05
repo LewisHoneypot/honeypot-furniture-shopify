@@ -410,10 +410,10 @@
 
       {% comment %} Dimensions {% endcomment %}
       {%- if section.settings.collection_dimensions_toggle == true -%}
-        {%- if card_product.metafields.Dimensions.Length1 -%}
+        {%- if card_product.metafields.Dimensions.TotalLength -%}
           <div class="collection-dimensions {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
             <span class="arrow left-arrow"></span>
-            <span>{{ card_product.metafields.Dimensions.Length1 | floor }}cm</span>
+            <span>{{ card_product.metafields.Dimensions.TotalLength | floor }}cm</span>
             <span class="arrow right-arrow"></span>
           </div>
         {%- endif -%}
