@@ -408,6 +408,17 @@
         {%- endif -%}
       </div>
 
+      {% comment %} Dimensions {% endcomment %}
+      {%- if section.settings.collection_dimensions_toggle == true -%}
+        {%- if card_product.metafields.Dimensions.Length1 -%}
+          <div class="collection-dimensions {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+            <span class="arrow left-arrow"></span>
+            <span>{{ card_product.metafields.Dimensions.Length1 | floor }}cm</span>
+            <span class="arrow right-arrow"></span>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+
       {% comment %} Colour Swatches {% endcomment %}
       {%- if card_product.metafields.custom.product_colour_list != blank -%}
         <div
