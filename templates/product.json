@@ -28,6 +28,15 @@
             "padding_bottom": 5
           }
         },
+        "variant_picker_WnfGcU": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "settings": {
@@ -117,6 +126,7 @@
       "block_order": [
         "title",
         "trustpilot_mini_TB9jLy",
+        "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
