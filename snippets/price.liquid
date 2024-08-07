@@ -1,3 +1,9 @@
+{% assign snap_apr = 29.9 %}
+{% assign snap_years = 4 %}
+{% assign snap_months = 12 | times: snap_years %}
+{% assign snap_weeks = 52 | times: snap_years %}
+{% assign snap_deposit = 1000 %}
+
 {%- liquid
   if use_variant
     assign target = product.selected_or_first_available_variant
@@ -8,6 +14,10 @@
   assign price = target.price | default: 1999
   assign available = target.available | default: false
   assign money_price = price | money
+
+  assign unformatted_price = price 
+  assign amount_of_credit = unformatted_price | minus: snap_deposit | divided_by: 100
+
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
@@ -23,7 +33,7 @@
   {%- if compare_at_price > price %} price--on-sale{% endif -%}
   {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}"
 >
-  <div class="price__container d-inline-block v-a-top">
+  <div class="price__container d-flex v-a-top">
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span 
@@ -81,5 +91,75 @@
         </div>
       {%- endif -%}
     {%- endif -%}
+
+    {%- unless template == 'product' -%}
+      {%- if price > 25000 -%}  
+        <div class="ml-2">
+          <div class="monthly-payment" data-amount-of-credit="{{ amount_of_credit | json }}" data-snap-apr="{{ snap_apr | json }}" data-snap-months="{{ snap_months | json }}" data-snap-weeks="{{ snap_weeks | json }}">Calculating...</div>
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
   </div>
+
+  {%- unless template == 'product' -%}
+    {%- if price > 25000 -%}      
+      <div class="monthly-payment-description">Over {{ snap_years }} years £1 deposit {{ snap_apr }}% apr</div>
+    {%- endif -%}
+  {%- endunless -%}
 </div>
+
+{%- unless template == 'product' -%}
+  {%- if price > 25000 -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var monthlyPaymentElements = document.querySelectorAll('.monthly-payment');
+        
+        monthlyPaymentElements.forEach(function(element) {
+          var amountOfCredit = parseFloat(element.getAttribute('data-amount-of-credit'));
+          var snapAPR = parseFloat(element.getAttribute('data-snap-apr'));
+          var snapMonths = parseInt(element.getAttribute('data-snap-months'));
+          var snapWeeks = parseInt(element.getAttribute('data-snap-weeks'));
+
+          // Calculate the number of weekly payments
+          var totalWeeks = snapWeeks; // Average weeks per month
+
+          // Calculate weekly interest rate
+          var weeklyInterestRate = snapAPR / 100 / 52; // Convert APR to a weekly rate
+
+          // Calculate weekly payment using the formula
+          var numerator = amountOfCredit * weeklyInterestRate * Math.pow(1 + weeklyInterestRate, totalWeeks);
+          var denominator = Math.pow(1 + weeklyInterestRate, totalWeeks) - 1;
+          var weeklyPayment = numerator / denominator;
+
+          // Convert weekly payment to monthly payment
+          var monthlyPayment = weeklyPayment * snapWeeks / snapMonths;
+
+          // Round to two decimal places
+          monthlyPayment = Math.round(monthlyPayment * 100) / 100;
+
+          // Update the HTML content with the calculated monthly payment
+          element.innerText = ' / £' + monthlyPayment.toFixed(2) + " per month";
+        });
+      });
+    </script>
+  {%- endif -%}
+{%- endunless -%}
+
+<style>
+  .swiper-wrapper .monthly-payment, .swiper-wrapper .monthly-payment-description {
+    display: none;
+  }
+  .monthly-payment {
+    font-size:16px;
+  }
+  .monthly-payment-description {
+    font-weight: 300;
+    font-size:12px;
+    margin-top:-5px;
+  }
+  .price__container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 30px;
+  }
+</style>
