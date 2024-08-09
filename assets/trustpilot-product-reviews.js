@@ -418,7 +418,7 @@ function initializeTrustPilot() {
         );
 
       // Create the link with a span inside
-      var reviewsLink = $(
+      var reviewsLink = $j(
         '<div></div>'
       ).append(
         $(
