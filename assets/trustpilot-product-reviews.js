@@ -421,7 +421,7 @@ function initializeTrustPilot() {
       var reviewsLink = $j(
         '<div></div>'
       ).append(
-        $(
+        $j(
           "<span style='min-height:24px;'>" +
             trustpilotImage +
             '<span class="ammount-of-reviews"> ' +
