@@ -285,6 +285,7 @@ function initializeTrustPilot() {
 
   // Function to get Trustpilot image based on rating
   function getReviewTrustpilotImage(rating, roundedRatingImage) {
+  var outOf= "";
     if (rating == "NaN") {
       $j(".trustpilot-mini-widget").addClass("d-none");
     } else {
@@ -293,8 +294,8 @@ function initializeTrustPilot() {
         roundedRatingImage +
         ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
-      const outOf = window.matchMedia('(max-width: 750px)').matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
-
+      outOf = window.matchMedia('(max-width: 750px)').matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
+    }
     // Return an image tag
     return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128"><span> ${rating} ${outOf} 5</span>`;
   }
