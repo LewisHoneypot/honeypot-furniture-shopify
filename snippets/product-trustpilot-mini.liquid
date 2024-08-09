@@ -22,8 +22,31 @@
           "
         {% endif %}
       >
-        <div class="col-12 trustpilot-mini-widget m-0 p-0" style="min-height:25px;"></div>
-
+        <div id="reviews-button" class="trustpilotTooltip">
+          <div class="col-12 trustpilot-mini-widget m-0 p-0" style="min-height:25px;"></div>
+        </div>
       </div>
   {%- endcase -%}
 {%- endfor -%}
+
+<script>
+  document.getElementById('reviews-button').addEventListener('click', function () {
+    // Simulate a click on the collapsible content element
+    const collapsible = document.querySelector('.trustpilot-accordion');
+    if (collapsible) {
+      collapsible.click();
+    }
+  
+    // Smoothly scroll to the element with the ID "reviews"
+    document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
+    console.log('Scrolled');
+  
+    // Determine scroll offset based on screen size
+    const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
+  
+    // Adjust the scroll position slightly above the target
+    setTimeout(function () {
+      window.scrollBy(0, -offset); // Use the offset value based on the device
+    }, 500); // Delay to allow smooth scroll to finish
+  });
+  </script>

@@ -293,9 +293,10 @@ function initializeTrustPilot() {
         roundedRatingImage +
         ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
-      // Return an image tag
-      return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128"><span> ${rating} out of 5</span>`;
-    }
+      const outOf = window.matchMedia('(max-width: 750px)').matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
+
+    // Return an image tag
+    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128"><span> ${rating} ${outOf} 5</span>`;
   }
 
   // Function to get Trustpilot image based on rating
@@ -415,15 +416,12 @@ function initializeTrustPilot() {
           roundedRating
         );
 
-        // Select widget div
-        var outerDiv = $j(".trustpilot-mini-widget");
-
-        // Create the link with a span inside
-        var reviewsLink = $j(
-          '<a href="#reviews" id="reviews-button" class="trustpilotTooltip"></a>'
-        ).append(
-          $j(
-            "<span style='min-height:24px;'>" +
+      // Create the link with a span inside
+      var reviewsLink = $(
+        '<div></div>'
+      ).append(
+        $(
+          "<span style='min-height:24px;'>" +
             trustpilotImage +
             '<span class="ammount-of-reviews"> ' +
             amountOfReviews +
