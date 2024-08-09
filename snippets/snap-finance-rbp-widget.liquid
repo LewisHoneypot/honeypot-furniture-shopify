@@ -61,39 +61,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Wait until the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Select the shadow host element
-  const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
-  
-  // Access the shadow root
-  const shadowRoot = shadowHost.shadowRoot;
-  
-  // Create a style element
-  const style = document.createElement('style');
-  
-  // Add CSS rules to the style element
-  style.textContent = `
-    .injected-product-widget {
-      background-color: #fff !important;
-      border: 0.1rem solid rgba(var(--color-foreground),.8) !important;
-      border-radius: 0 !important;
-      min-height:58px !important;
-      min-width: 100%;
-      padding: 0 !important;
-      cursor: pointer;
-    }
-    .injected-product-widget .injected-product-widget__grid__text p {
-      align-items: center !important;
-      font-size: clamp(11px, 3.5cqw, 14px) !important;
-      gap: 0 !important;
-    }
-    .icon-caret {
-      width: 1.6rem !important;
-      height: 1.6rem !important;
-      transform: rotate(-90deg);
-    }
-  `;
-  
-  // Append the style element to the shadow root
-  shadowRoot.appendChild(style);
+  var productPrice = +{{ product_price | replace: "£", "" | replace: ",", "" | split: " " | first }};
+    if (productPrice >= 250) {
+
+    // Select the shadow host element
+    const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
+    
+    // Access the shadow root
+    const shadowRoot = shadowHost.shadowRoot;
+    
+    // Create a style element
+    const style = document.createElement('style');
+    
+    // Add CSS rules to the style element
+    style.textContent = `
+      .injected-product-widget {
+        background-color: #fff !important;
+        border: 0.1rem solid rgba(var(--color-foreground),.8) !important;
+        border-radius: 0 !important;
+        min-height:58px !important;
+        min-width: 100%;
+        padding: 0 !important;
+        cursor: pointer;
+      }
+      .injected-product-widget .injected-product-widget__grid__text p {
+        align-items: center !important;
+        font-size: clamp(11px, 3.5cqw, 14px) !important;
+        gap: 0 !important;
+      }
+      .icon-caret {
+        width: 1.6rem !important;
+        height: 1.6rem !important;
+        transform: rotate(-90deg);
+      }
+    `;
+    
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+  };
 });
 </script>

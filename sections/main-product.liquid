@@ -10,13 +10,13 @@
   "
 >
   {%- liquid
-    assign first_3d_model = product.media | where: 'media_type', 'model' | first
+    assign first_threed_model = product.media | where: 'media_type', 'model' | first
     capture icon_caret
       render 'icon-caret'
     endcapture
   -%}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-  {%- if first_3d_model -%}
+  {%- if first_threed_model -%}
     <link
       id="ModelViewerStyle"
       rel="stylesheet"
@@ -917,7 +917,7 @@
                                   {% if number_of_slides > 1 %}
                                     aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
                                     aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                  {% endif %}
+                                  {% endif %} 
                                 >
                                   <ul class="d-flex f-column list-unstyled grid" role="list">
                                     {%- for product in recommendations.products
@@ -1005,9 +1005,9 @@
                                                     if swatch contains option_name
                                                       assign is_swatch = true
                                                       assign option_size = option.values | size
-                                                      assign variants_option1_arr = product.variants | map: 'option1'
-                                                      assign variants_option2_arr = product.variants | map: 'option2'
-                                                      assign variants_option3_arr = product.variants | map: 'option3'
+                                                      assign variants_option_one_arr = product.variants | map: 'option1'
+                                                      assign variants_option_two_arr = product.variants | map: 'option2'
+                                                      assign variants_option_three_arr = product.variants | map: 'option3'
                                                     endif
                                                   -%}
                                                   {%- if is_swatch -%}
@@ -1019,17 +1019,17 @@
                                                             for variant in product.variants
                                                               case option.position
                                                                 when 1
-                                                                  if variants_option1_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                                  if variants_option_one_arr[forloop.index0] == value and product.variants[forloop.index0].image
                                                                     assign variant_image = product.variants[forloop.index0].image
                                                                     break
                                                                   endif
                                                                 when 2
-                                                                  if variants_option2_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                                  if variants_option_two_arr[forloop.index0] == value and product.variants[forloop.index0].image
                                                                     assign variant_image = product.variants[forloop.index0].image
                                                                     break
                                                                   endif
                                                                 when 3
-                                                                  if variants_option3_arr[forloop.index0] == value and product.variants[forloop.index0].image
+                                                                  if variants_option_three_arr[forloop.index0] == value and product.variants[forloop.index0].image
                                                                     assign variant_image = product.variants[forloop.index0].image
                                                                     break
                                                                   endif
@@ -1910,25 +1910,31 @@
                   {% assign img = product.metafields.custom.size_chart %}
                   <img
                     srcset="{{ img }}"
-                    src="{{ img }}"
+                    src="{{ img | asset_url }}"
                     loading="lazy"
                     alt="{{ shop.name | escape }}"
+                    height="100"
+                    width="100"
                   >
                 {%- elsif size_chart_type == 'product_type' -%}
                   {% assign img = size_chart_image | file_url %}
                   <img
                     srcset="{{ img }}"
-                    src="{{ img }}"
+                    src="{{ img | asset_url }}"
                     loading="lazy"
                     alt="{{ shop.name | escape }}"
+                    height="100"
+                    width="100"
                   >
                 {%- elsif size_chart_type == 'product_vendor' -%}
                   {% assign img = size_chart_image | file_url %}
                   <img
                     srcset="{{ img }}"
-                    src="{{ img }}"
+                    src="{{ img | asset_url }}"
                     loading="lazy"
                     alt="{{ shop.name | escape }}"
+                    height="100"
+                    width="100"
                   >
                 {%- elsif size_chart_type == 'custom_image' -%}
                   {% assign img = size_chart_image %}
@@ -1937,6 +1943,8 @@
                     src="{{ img | image_url: 'master' }}"
                     loading="lazy"
                     alt="{{ img.alt | default: shop.name | escape }}"
+                    height="100"
+                    width="100"
                   >
                 {%- endif -%}
               </div>
@@ -1946,7 +1954,7 @@
       </side-drawer>
     {%- endif -%}
   {%- endfor -%}
-  {%- if first_3d_model -%}
+  {%- if first_threed_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
     </script>
@@ -1956,7 +1964,7 @@
     if product.media.size > 0
       assign files = files | append: ', media-gallery.js'
     endif
-    if first_3d_model
+    if first_threed_model
       assign files = files | append: ', product-model.js'
     endif
     if section.settings.enable_sticky_add_to_cart

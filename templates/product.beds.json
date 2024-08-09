@@ -20,22 +20,6 @@
             "heading_size": "default"
           }
         },
-        "trustpilot_mini_TB9jLy": {
-          "type": "trustpilot_mini",
-          "settings": {
-            "title": "Trustpilot Mini",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "color_swatch_bWwLRJ": {
-          "type": "color_swatch",
-          "settings": {
-            "available_colours": "Available Colours",
-            "padding_top": 0,
-            "padding_bottom": 10
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -45,6 +29,15 @@
             "colors_text": "#424242",
             "padding_top": 12,
             "padding_bottom": 12
+          }
+        },
+        "variant_picker_AJEB8c": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
           }
         },
         "size_chart_kqc3gt": {
@@ -87,15 +80,6 @@
             "padding_bottom": 5
           }
         },
-        "drawer_j3bNWd": {
-          "type": "drawer",
-          "settings": {
-            "heading": "More Sizes",
-            "content_type": "pairs_well_with",
-            "content": "",
-            "page": ""
-          }
-        },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
           "settings": {
@@ -115,12 +99,10 @@
       },
       "block_order": [
         "title",
-        "trustpilot_mini_TB9jLy",
-        "color_swatch_bWwLRJ",
         "price",
+        "variant_picker_AJEB8c",
         "size_chart_kqc3gt",
         "buy_buttons",
-        "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
       ],
       "settings": {
@@ -133,7 +115,7 @@
         "image_zoom": "lightbox",
         "enable_video_looping": false,
         "image_ratio": "adapt",
-        "carousel_direction": "vertical",
+        "carousel_direction": "horizontal",
         "carousel_gap_desktop": 16,
         "carousel_gap_tablet": 8,
         "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
