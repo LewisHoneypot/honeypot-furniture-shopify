@@ -118,7 +118,7 @@
   {%- if settings.enable_snap_collections == true %}
     {%- unless template == 'product' -%}
       {%- if price > 25000 -%}
-        <div class="monthly-payment-description">Over {{ snap_years }} years £1 deposit {{ snap_apr }}% apr</div>
+        <div class="monthly-payment-description">Over {{ snap_years }} years £{{ settings.snap_deposit }} deposit {{ snap_apr }}% apr</div>
       {%- endif -%}
     {%- endunless -%}
   {%- endif -%}
