@@ -2536,5 +2536,28 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Snap Finance",
+    "settings": [
+      {
+        "type": "text",
+        "id": "snap_apr",
+        "label": "APR",
+        "default": "29.9"
+      },
+      {
+        "type": "text",
+        "id": "snap_years",
+        "label": "Years",
+        "default": "4"
+      },
+      {
+        "type": "text",
+        "id": "snap_deposit",
+        "label": "Deposit (£)",
+        "default": "1"
+      }
+    ]
   }
 ]

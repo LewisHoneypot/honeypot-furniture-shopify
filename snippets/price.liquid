@@ -1,10 +1,5 @@
-{% assign snap_apr = 29.9 %}
-{% assign snap_years = 4 %}
-{% assign snap_months = 12 | times: snap_years %}
-{% assign snap_weeks = 52 | times: snap_years %}
-{% assign snap_deposit = 1000 %}
-
 {%- liquid
+
   if use_variant
     assign target = product.selected_or_first_available_variant
   else
@@ -14,6 +9,12 @@
   assign price = target.price | default: 1999
   assign available = target.available | default: false
   assign money_price = price | money
+
+  assign snap_apr = settings.snap_apr | times: 1.0
+  assign snap_years = settings.snap_years
+  assign snap_months = 12 | times: snap_years
+  assign snap_weeks = 52 | times: snap_years
+  assign snap_deposit = settings.snap_deposit | times: 1000
 
   assign unformatted_price = price
   assign amount_of_credit = unformatted_price | minus: snap_deposit | divided_by: 100
