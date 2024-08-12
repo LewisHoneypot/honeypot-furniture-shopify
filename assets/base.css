@@ -10380,10 +10380,27 @@ menu-drawer > details[open] > summary::before {
   bottom: 130px;
   right: 0;
   height:100px;
-  width: 100px; /* Full width to stay at the top */
+  width: 75px; /* Full width to stay at the top */
   z-index: 1000; /* Ensure the fixed div stays above other content */
   background-color: transparent;
-  padding: 10px; /* Padding around your content */
+  padding: 10px 0 10px 10px !important; /* Padding around your content */
+}
+
+.fixed-container .button--transparent {
+  border: none;
+  padding-right: 0 !important;
+}
+
+.fixed-container svg {
+  margin-right: 0px !important;
+}
+
+.fixed-container .button {
+  min-width: 0;
+}
+
+.fixed-container .button--main-classic:not(.button--icon-none) {
+  padding: 5px 5px 0px 10px !important;
 }
 
 /* double-banner */
