@@ -5819,3 +5819,6 @@ function sclClickPixelFn() {
   }
 }
 sclClickPixelFn();
+
+// Meta Browser Bug Fix
+window._AutofillCallbackHandler = window._AutofillCallbackHandler || function(){}
