@@ -1364,6 +1364,12 @@
     "name": "WhatsApp",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "always_open",
+        "default": false,
+        "label": "Always Open?"
+      },
+      {
         "type": "text",
         "id": "heading",
         "default": "NEED HELP?",
@@ -1870,8 +1876,10 @@
 }
 {% endschema %}
 
-<script>
-  window.onload = function() {
-    document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
-  };
-</script>
+{%- if always_open = true -%}
+  <script>
+    window.onload = function() {
+      document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
+    };
+  </script>
+{%- endif -%}
