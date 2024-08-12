@@ -330,7 +330,7 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  <details class="footer-block__details">
+                  <details id="whatsApp-Sticky" class="footer-block__details">
                     <summary class="footer-block__summary c-pointer pos-relative" style="
                         --p-t-xs: 15px;
                         --p-b-xs: 15px;
@@ -1869,3 +1869,9 @@
   }
 }
 {% endschema %}
+
+<script>
+  window.onload = function() {
+    document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
+  };
+</script>
