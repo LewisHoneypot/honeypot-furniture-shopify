@@ -132,6 +132,7 @@
     "multitasking_collapse": true,
     "multitasking_secondary_button_background": "#d0e9e9",
     "enable_preloading_screen": true,
+    "enable_snap_collections": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/Primary_Logo.png",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
