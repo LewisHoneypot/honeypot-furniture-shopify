@@ -195,13 +195,23 @@
                 class="product__media-item carousel__item swiper-slide no-js-grid__item no-js-grid__scroll slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full d-flex a-i-center{% endif %}"
                 data-media-id="{{ section.id }}-{{ media.id }}"
               >
-                {%- liquid
-                  assign media_position = media_position | default: 0 | plus: 1
-                  assign lazy_load = false
-                  if media_position > 1
-                    assign lazy_load = true
-                  endif
-                -%}
+                {%- assign media_position = media_position | default: 0 | plus: 1 -%}                  
+                {%- assign lazy_load = false -%}
+                {%- if media_position == 1 -%}
+                  {% comment %} <script>
+                    console.log({{ media | json }});
+                    console.log("{{ media.src | asset_url }}");
+                    console.log("{{ product.featured_image | product_img_url }}");
+                  </script> {% endcomment %}
+
+                  {% comment %} <div class="test1">{{ media | json }}</div>
+                  <div class="test2">{{ media.preview_img | product_img_url }}</div>
+                  <div class="test2">{{ media.preview_img.src | product_img_url }}</div> {% endcomment %}
+
+                  <link rel="preload" fetchpriority="high" as="image" href="{{ media.src | image_url }}&width=1946" type="image/jpg">
+                {%- else -%}
+                  {%- assign lazy_load = true -%}
+                {%- endif -%}
                 {% render 'product-thumbnail',
                     media: media,
                     media_count: media_count,
