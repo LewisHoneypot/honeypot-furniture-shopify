@@ -105,7 +105,7 @@
 </div>
 
 <script src="{{ 'trustpilot-service-reviews.js' | asset_url }}" defer></script>
-<script src="{{ 'trustpilot-service-reviews.css' | asset_url | stylesheet_tag: preload: true }}" defer></script>
+{{ 'trustpilot-service-reviews.css' | asset_url | stylesheet_tag }}
 {% comment %} <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" defer></script> {% endcomment %}
 
 {% schema %}
