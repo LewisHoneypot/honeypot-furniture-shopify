@@ -54,8 +54,8 @@
                 {%- if section.settings.video_url.type == 'youtube' -%}
                   data-src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute=1&autoplay={{ autoplay }}{{ loop }}" 
                 {%- else -%}
-                  src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay }}{{ loop }}
-                {%- endif -%}"    
+                  src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay }}{{ loop }}"
+                {%- endif -%}    
                 class="d-block pos-absolute pos-absolute-c-c w-100 h-100 b-none no-js-hidden {% if section.settings.video_url.type == 'youtube' %}js-youtube{%- else -%}js-video{%- endif -%}"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
