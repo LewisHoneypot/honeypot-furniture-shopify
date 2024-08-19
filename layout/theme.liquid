@@ -29,6 +29,7 @@
     {{ content_for_header }}
     {{ 'vendor.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'collections-arrows.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
