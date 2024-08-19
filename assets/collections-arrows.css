@@ -1,0 +1,53 @@
+/* Collection Dimensions */
+.collection-dimensions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-dimensions .arrow {
+  position: relative;
+  display: block;
+  padding: 1em 3em 1em 1em;
+}
+
+.collection-dimensions .arrow:after,
+.collection-dimensions .arrow:before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.collection-dimensions .arrow:before {
+  top: 20px;
+  width: 0.6em;
+  height: 0.6em;
+  transform-origin: 50% 50%;
+  box-shadow: inset -0.07em 0.07em 0 0 #000;
+}
+
+.collection-dimensions .arrow:after {
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  transform: translate(0, -(0.2em / 2));
+  background-color: #000;
+}
+
+.collection-dimensions .left-arrow:before {
+  left: 1em;
+  transform: translate(0, -0.5em) rotate(225deg);
+}
+
+.collection-dimensions .right-arrow:before {
+  right: 1em;
+  transform: translate(0, -0.5em) rotate(45deg);
+}
+
+.collection-dimensions .left-arrow:after {
+  left: 1em;
+}
+
+.collection-dimensions .right-arrow:after {
+  right: 1em;
+}
