@@ -37,7 +37,6 @@
     {%- endif -%}
 
     {% render 'global-script' %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer="defer"></script>
     <script src="https://shopoe.net/app.js" defer="defer"></script>
     <script src="https://sdk.snapfinance.co.uk/v1/snapuk.min.js" defer="defer"></script>
     {% comment %} <script type="text/javascript">
@@ -80,6 +79,8 @@
 
     {% comment %} GLOBAL SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'global.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer="defer"></script>
 
     <script src="{{ 'global1.js' | asset_url }}" defer="defer"></script>
 
