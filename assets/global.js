@@ -5751,6 +5751,3 @@ fetch(serviceStarsUrl)
   .catch((error) => {
     console.error("Error fetching data:", error);
   });
-
-// Meta Browser Bug Fix
-window._AutofillCallbackHandler = window._AutofillCallbackHandler || function () { }
