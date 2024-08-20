@@ -1046,8 +1046,8 @@ class CountDownSpecial extends HTMLElement {
 
   logoOnScroll() {
     let event = this.closest(
-      ".shopify-section-group-header-group"
-    ).querySelector(".block-logo"),
+        ".shopify-section-group-header-group"
+      ).querySelector(".block-logo"),
       ctn = event.closest(".section__countdown-s-hero"),
       hItem = event.offsetHeight,
       hCtn = ctn.offsetHeight,
@@ -1093,8 +1093,8 @@ class CountDownSpecial extends HTMLElement {
     // blocks-content animation
     if (this.querySelector(".banner__logo")) {
       let event = this.closest(
-        ".shopify-section-group-header-group"
-      ).querySelector(".blocks-content"),
+          ".shopify-section-group-header-group"
+        ).querySelector(".blocks-content"),
         spacingLogo = hCtn - (hItem + 126),
         hcontent = hCtn + (spacingLogo + hItem + 32) * -1,
         contentTl = gsap.timeline({
@@ -1455,9 +1455,9 @@ class MenuDrawer extends HTMLElement {
 
     openDetailsElement === this.mainDetailsToggle
       ? this.closeMenuDrawer(
-        event,
-        this.mainDetailsToggle.querySelector("summary")
-      )
+          event,
+          this.mainDetailsToggle.querySelector("summary")
+        )
       : this.closeSubmenu(openDetailsElement);
   }
 
@@ -1500,9 +1500,9 @@ class MenuDrawer extends HTMLElement {
         !reducedMotion || reducedMotion.matches
           ? addTrapFocus()
           : summaryElement.nextElementSibling.addEventListener(
-            "transitionend",
-            addTrapFocus
-          );
+              "transitionend",
+              addTrapFocus
+            );
       }, 100);
     }
   }
@@ -2057,8 +2057,9 @@ class MapTemplate extends HTMLElement {
   }
 
   setIframeSrc() {
-    let map_src = `https://maps.google.com/maps?z=${this.dataZoom}&t=${this.dataType
-      }&q=${this.dataLocation.replace(/"/g, "")}&ie=UTF8&&output=embed`;
+    let map_src = `https://maps.google.com/maps?z=${this.dataZoom}&t=${
+      this.dataType
+    }&q=${this.dataLocation.replace(/"/g, "")}&ie=UTF8&&output=embed`;
 
     this.map.src = map_src;
     this.map.removeAttribute("srcdoc");
@@ -3960,9 +3961,10 @@ class VariantSelects extends HTMLElement {
       : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection
-        ? this.dataset.originalSection
-        : this.dataset.section
+      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
+        this.dataset.originalSection
+          ? this.dataset.originalSection
+          : this.dataset.section
       }`
     )
       .then((response) => response.text())
@@ -3978,30 +3980,34 @@ class VariantSelects extends HTMLElement {
           `price-sticky-${this.dataset.section}`
         );
         const source = html.getElementById(
-          `price-${this.dataset.originalSection
-            ? this.dataset.originalSection
-            : this.dataset.section
+          `price-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
           }`
         );
         const sourceSticky = html.getElementById(
-          `price-sticky-${this.dataset.originalSection
-            ? this.dataset.originalSection
-            : this.dataset.section
+          `price-sticky-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
           }`
         );
         const skuSource = html.getElementById(
-          `Sku-${this.dataset.originalSection
-            ? this.dataset.originalSection
-            : this.dataset.section
+          `Sku-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
           }`
         );
         const skuDestination = document.getElementById(
           `Sku-${this.dataset.section}`
         );
         const inventorySource = html.getElementById(
-          `Inventory-${this.dataset.originalSection
-            ? this.dataset.originalSection
-            : this.dataset.section
+          `Inventory-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
           }`
         );
         const inventoryDestination = document.getElementById(
@@ -4544,12 +4550,12 @@ class NewsletterForm extends HTMLElement {
   onClickChecked(e) {
     e.target.closest(".form--check").querySelector("input").checked
       ? this.querySelector(".newsletter-form__button").setAttribute(
-        "disabled",
-        true
-      )
+          "disabled",
+          true
+        )
       : this.querySelector(".newsletter-form__button").removeAttribute(
-        "disabled"
-      );
+          "disabled"
+        );
   }
 }
 customElements.define("form-has-check", NewsletterForm);
@@ -4814,3 +4820,1005 @@ class ScrollContainerCenter extends HTMLElement {
   }
 }
 customElements.define("scroll-container-center", ScrollContainerCenter);
+
+// cart tool
+class CartTool extends HTMLElement {
+  constructor() {
+    super();
+    const buttons = this.querySelectorAll(".cartTool-item");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const id = button.dataset.popup;
+        document.getElementById(id).classList.add("show");
+        document.querySelector(".previewCart").classList.add("active-tool");
+      });
+    });
+
+    document
+      .querySelector(`.previewCart .drawer__overlay`)
+      ?.addEventListener("click", (event) => {
+        document
+          .querySelector(".popup-toolDown.show")
+          ?.classList.remove("show");
+        document.querySelector(".previewCart").classList.remove("active-tool");
+      });
+  }
+}
+customElements.define("cart-item-tool", CartTool);
+
+class CartCancel extends HTMLElement {
+  constructor() {
+    super();
+
+    this.querySelector("button").addEventListener("click", (event) => {
+      document.querySelector(".popup-toolDown.show")?.classList.remove("show");
+      document.querySelector(".previewCart").classList.remove("active-tool");
+    });
+  }
+}
+customElements.define("cart-cancel-popup", CartCancel);
+
+class ShippingCalculator extends HTMLElement {
+  constructor() {
+    super();
+
+    this.setupCountries();
+
+    this.errors = this.querySelector("#ShippingCalculatorErrors");
+    this.success = this.querySelector("#ShippingCalculatorSuccess");
+    this.zip = this.querySelector("#address_zip");
+    this.country = this.querySelector("#address_country");
+    this.province = this.querySelector("#address_province");
+    this.button = this.querySelector("#get-rates-submit");
+
+    this.button.addEventListener("click", this.onSubmitHandler.bind(this));
+  }
+
+  setupCountries() {
+    if (Shopify && Shopify.CountryProvinceSelector) {
+      // eslint-disable-next-line no-new
+      new Shopify.CountryProvinceSelector(
+        "address_country",
+        "address_province",
+        {
+          hideElement: "address_province_container",
+        }
+      );
+    }
+  }
+
+  onSubmitHandler(event) {
+    event.preventDefault();
+
+    this.errors.classList.add("hidden");
+    this.success.classList.add("hidden");
+    this.zip.classList.remove("invalid");
+    this.country.classList.remove("invalid");
+    this.province.classList.remove("invalid");
+    this.button.classList.add("loading");
+    this.button.setAttribute("disabled", true);
+
+    const body = JSON.stringify({
+      shipping_address: {
+        zip: this.zip.value,
+        country: this.country.value,
+        province: this.province.value,
+      },
+    });
+    let sectionUrl = `${routes.cart_url}/shipping_rates.json`;
+
+    // remove double `/` in case shop might have /en or language in URL
+    sectionUrl = sectionUrl.replace("//", "/");
+
+    fetch(sectionUrl, { ...fetchConfig("javascript"), body })
+      .then((response) => response.json())
+      .then((parsedState) => {
+        if (parsedState.shipping_rates) {
+          this.success.classList.remove("hidden");
+          this.success.innerHTML = "";
+
+          parsedState.shipping_rates.forEach((rate) => {
+            const child = document.createElement("p");
+            child.innerHTML = `${rate.name}: ${rate.price} ${Shopify.currency.active}`;
+            this.success.appendChild(child);
+          });
+        } else {
+          let errors = [];
+          Object.entries(parsedState).forEach(([attribute, messages]) => {
+            errors.push(`${messages[0]}`);
+          });
+
+          this.errors.classList.remove("hidden");
+          this.errors.querySelector(".errors").innerHTML = errors.join("; ");
+        }
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+      .finally(() => {
+        this.button.classList.remove("loading");
+        this.button.removeAttribute("disabled");
+      });
+  }
+}
+customElements.define("shipping-calculator", ShippingCalculator);
+
+class CardWishlist extends HTMLElement {
+  constructor() {
+    super();
+    this.button = this.querySelector("button");
+    this.handle = this.button.dataset.wishlistHandle;
+    this.button.addEventListener("click", this.onButtonClick.bind(this));
+    this.countBubble = document.querySelectorAll(".wishlist-count-bubble");
+    this.check();
+  }
+
+  check() {
+    let check = false;
+    JSON.parse(localStorage.getItem("_wishlist"))?.map((handle) => {
+      if (this.handle == handle) check = true;
+    });
+    if (check) this.add(false);
+  }
+
+  onButtonClick() {
+    this.wishlist = localStorage.getItem("_wishlist");
+    this.button.matches(".added")
+      ? this.remove(this.wishlist)
+      : this.add(true, this.wishlist);
+  }
+
+  add(set, wishlist) {
+    this.button.classList.add("added");
+    if (set) {
+      let list = wishlist ? JSON.parse(wishlist) : [];
+      list.push(this.handle);
+      localStorage.setItem("_wishlist", JSON.stringify(list));
+      this.setCountBubble();
+    }
+  }
+
+  remove(wishlist) {
+    const list = JSON.parse(wishlist).filter(
+      (handle) => handle !== this.handle
+    );
+    list.length == 0
+      ? localStorage.removeItem("_wishlist")
+      : localStorage.setItem("_wishlist", JSON.stringify(list));
+    this.button.classList.remove("added");
+    this.setCountBubble();
+  }
+
+  setCountBubble() {
+    const count = localStorage.getItem("_wishlist")
+      ? JSON.parse(localStorage.getItem("_wishlist")).length
+      : 0;
+    this.countBubble?.forEach((element) => {
+      const text = element.querySelector(".visually-hidden");
+      text.innerHTML = `${count} ${text.dataset.text}`;
+      element.querySelector(".number").innerHTML = count;
+    });
+  }
+}
+customElements.define("card-wishlist", CardWishlist);
+
+class WishlistDrawer extends HTMLElement {
+  constructor() {
+    super();
+    this.grid = this.querySelector(".wisthlist-grid");
+    this.gridEmpty = document.querySelector(".wisthlist-grid__empty");
+    this.countBubble = document.querySelectorAll(".wishlist-count-bubble");
+    document
+      .querySelectorAll('[data-side-drawer="#Drawer-Wishlist"]')
+      ?.forEach((element) => {
+        element.addEventListener("click", this.loadWishList.bind(this));
+      });
+    this.setCountBubble();
+  }
+
+  loadWishList() {
+    const wishlist = localStorage.getItem("_wishlist");
+    if (!wishlist) return;
+    this.grid.innerHTML = "";
+    this.gridEmpty?.classList.add("hidden");
+    JSON.parse(wishlist)?.forEach((handle) => {
+      fetch(
+        window.Shopify.routes.root + `products/${handle}?view=wishlist-card`
+      )
+        .then((response) => response.text())
+        .then((product) => {
+          const productHTML = new DOMParser()
+            .parseFromString(product, "text/html")
+            .querySelector(".wishlist__item");
+          if (productHTML != null) this.grid.append(productHTML);
+          this.querySelector(
+            `[data-wishlist-handle="${handle}"]`
+          ).addEventListener("click", this.onButtonClick.bind(this));
+        });
+    });
+  }
+
+  onButtonClick(event) {
+    const $target = event.currentTarget;
+    const productHandle = $target.dataset.wishlistHandle;
+    const list = JSON.parse(localStorage.getItem("_wishlist")).filter(
+      (handle) => handle !== productHandle
+    );
+    list.length == 0
+      ? localStorage.removeItem("_wishlist")
+      : localStorage.setItem("_wishlist", JSON.stringify(list));
+    document
+      .querySelectorAll(`[data-wishlist-handle="${productHandle}"]`)
+      .forEach((element) => {
+        element.classList.remove("added");
+      });
+    $target.closest(".wishlist__item").remove();
+    if (this.grid.innerHTML == "") this.gridEmpty?.classList.remove("hidden");
+    this.setCountBubble();
+  }
+
+  setCountBubble() {
+    const count = localStorage.getItem("_wishlist")
+      ? JSON.parse(localStorage.getItem("_wishlist")).length
+      : 0;
+    this.countBubble?.forEach((element) => {
+      const text = element.querySelector(".visually-hidden");
+      text.innerHTML = `${count} ${text.dataset.text}`;
+      element.querySelector(".number").innerHTML = count;
+    });
+  }
+}
+customElements.define("wishlist-drawer", WishlistDrawer);
+
+class CursorFixed extends HTMLElement {
+  constructor() {
+    super();
+
+    this.pos = { x: 0, y: 0 };
+    this.ratio = 0.65;
+
+    this.isStuck = false;
+    this.mouse = {
+      x: -100,
+      y: -100,
+    };
+
+    this.cursorOuter = this.querySelector(".cursor--large");
+    this.cursorInner = this.querySelector(".cursor--small");
+
+    this.cursorOuterOriginalState = {
+      width: this.cursorOuter.getBoundingClientRect().width,
+      height: this.cursorOuter.getBoundingClientRect().height,
+    };
+  }
+
+  connectedCallback() {
+    window.shareFunctionAnimation = {
+      onEnterButton: this.onEnterButton.bind(this),
+      onLeaveButton: this.onLeaveButton.bind(this),
+    };
+
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+      this.init();
+      this.onEnterButton();
+      this.onLeaveButton();
+      this.onEnterMedia();
+      this.onLeaveMedia();
+      this.parallaxTargetMove();
+      this.parallaxTargetEnter();
+      this.parallaxTargetLeave();
+      this.onEnterDrawerOverlay();
+      this.onLeaveDrawerOverlay();
+      this.onHideCursor();
+      this.onLeaveHideCursor();
+    }
+
+    window.matchMedia("(min-width: 1200px)").onchange = (event) => {
+      if (event.matches) {
+        this.init();
+        this.onEnterButton();
+        this.onLeaveButton();
+        this.onEnterMedia();
+        this.onLeaveMedia();
+        this.parallaxTargetMove();
+        this.parallaxTargetEnter();
+        this.parallaxTargetLeave();
+        this.onEnterDrawerOverlay();
+        this.onLeaveDrawerOverlay();
+        this.onHideCursor();
+        this.onLeaveHideCursor();
+      }
+    };
+  }
+
+  init() {
+    document.addEventListener("pointermove", this.moveOnSite.bind(this));
+    document.addEventListener("pointerenter", this.moveOnSite.bind(this));
+    document.addEventListener("pointerleave", this.moveOutSite.bind(this));
+    document.addEventListener("pointerout", this.moveOutSite.bind(this));
+
+    document.addEventListener(
+      "pointermove",
+      this.updateCursorPosition.bind(this)
+    );
+    document.addEventListener("pointerdown", this.pointerDown.bind(this));
+    document.addEventListener("pointerup", this.pointerUp.bind(this));
+  }
+
+  moveOutSite() {
+    gsap.to(this, 0.15, {
+      opacity: 0,
+    });
+  }
+
+  moveOnSite() {
+    gsap.to(this, 0.15, {
+      opacity: 1,
+    });
+  }
+
+  pointerDown() {
+    if (!this.classList.contains("on-overlay")) {
+      gsap.to(this.cursorInner, 0.15, {
+        scale: 2,
+      });
+
+      gsap.to(this.cursorOuter, 0.15, {
+        scale: 2,
+      });
+    }
+  }
+
+  pointerUp() {
+    gsap.to(this.cursorInner, 0.15, {
+      scale: 1,
+    });
+
+    gsap.to(this.cursorOuter, 0.15, {
+      scale: 1,
+    });
+
+    if (this.classList.contains("on-overlay"))
+      this.classList.remove("on-overlay");
+  }
+
+  parallaxTargetMove() {
+    const parallaxItems = document.querySelectorAll(
+      ".cursor-fixed__parallax-target"
+    );
+
+    parallaxItems.forEach((item) => {
+      item.addEventListener("pointermove", (e) => {
+        this.callParallax(e, item, item);
+      });
+    });
+
+    const dots = document.querySelectorAll(
+      ".swiper-pagination-bullets:not(.swiper-pagination-dashed) .swiper-pagination-bullet"
+    );
+
+    dots.forEach((item) => {
+      item.addEventListener("pointermove", (e) => {
+        this.callParallax(e, item, item);
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 0,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 2,
+        });
+      });
+    });
+
+    const nextPrevButtons = document.querySelectorAll(".button-slider");
+
+    nextPrevButtons.forEach((button) => {
+      button.addEventListener("pointermove", (e) => {
+        if (!button.classList.contains("preventParallax"))
+          this.callParallax(e, button, button);
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 0,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 2,
+        });
+      });
+    });
+  }
+
+  parallaxTargetEnter() {
+    const parallaxItems = document.querySelectorAll(
+      ".cursor-fixed__parallax-target"
+    );
+
+    parallaxItems.forEach((item) => {
+      item.addEventListener("pointerenter", (e) => {
+        const a_link = item.querySelector("a.button");
+        if (a_link) item.classList.add("has-link");
+
+        item.classList.add("on-hover");
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 0,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 2,
+        });
+      });
+    });
+
+    const nextPrevButtons = document.querySelectorAll(".button-slider");
+
+    nextPrevButtons.forEach((button) => {
+      button.addEventListener("pointerenter", (e) => {
+        button.classList.add("on-hover");
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 0,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 2,
+        });
+      });
+    });
+  }
+
+  parallaxTargetLeave() {
+    const parallaxItems = document.querySelectorAll(
+      ".cursor-fixed__parallax-target"
+    );
+
+    parallaxItems.forEach((item) => {
+      item.addEventListener("pointerleave", (e) => {
+        const a_link = item.querySelector("a.button");
+        if (a_link) item.classList.remove("has-link");
+
+        item.classList.remove("on-hover");
+
+        gsap.to(item, { duration: 0.3, x: 0, y: 0 });
+
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 1,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 1,
+        });
+      });
+    });
+
+    const dots = document.querySelectorAll(".swiper-pagination-bullet");
+
+    dots.forEach((item) => {
+      item.addEventListener("pointerleave", (e) => {
+        item.classList.remove("on-hover");
+
+        gsap.to(item, { duration: 0.3, x: 0, y: 0 });
+
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 1,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 1,
+        });
+      });
+    });
+
+    const nextPrevButtons = document.querySelectorAll(".button-slider");
+
+    nextPrevButtons.forEach((button) => {
+      button.addEventListener("pointerleave", (e) => {
+        button.classList.remove("on-hover");
+
+        gsap.to(button, { duration: 0.3, x: 0, y: 0 });
+
+        gsap.to(this.cursorInner, 0.15, {
+          opacity: 1,
+        });
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 1,
+        });
+      });
+    });
+  }
+
+  onHideCursor() {
+    const hideCs = document.querySelectorAll(".hide-cursor");
+    hideCs.forEach((e) => {
+      e.addEventListener("pointerenter", () => {
+        gsap.to(this.querySelector(".cursor-fixed__wrap"), 0.15, {
+          opacity: 0,
+        });
+      });
+      e.addEventListener("pointermove", () => {
+        gsap.to(this.querySelector(".cursor-fixed__wrap"), 0.15, {
+          opacity: 0,
+        });
+      });
+    });
+  }
+
+  onLeaveHideCursor() {
+    const hideCs = document.querySelectorAll(".hide-cursor");
+    hideCs.forEach((e) => {
+      e.addEventListener("pointerout", () => {
+        gsap.to(this.querySelector(".cursor-fixed__wrap"), 0.15, {
+          opacity: 1,
+        });
+      });
+    });
+  }
+
+  onEnterDefault() {
+    gsap.to(this.cursorInner, 0.15, {
+      opacity: 0,
+    });
+
+    gsap.to(this.cursorOuter, 0.15, {
+      scale: 2,
+    });
+  }
+
+  onLeaveDefault() {
+    gsap.to(this.cursorInner, 0.15, {
+      opacity: 1,
+    });
+
+    gsap.to(this.cursorOuter, 0.15, {
+      scale: 1,
+    });
+  }
+
+  onEnterMedia() {
+    const media = document.querySelectorAll("a.media");
+
+    media.forEach((item) => {
+      item.addEventListener("pointerenter", (e) => {
+        this.onEnterDefault();
+      });
+    });
+  }
+
+  onLeaveMedia() {
+    const media = document.querySelectorAll("a.media");
+
+    media.forEach((item) => {
+      item.addEventListener("pointerout", (e) => {
+        this.onLeaveDefault();
+      });
+    });
+  }
+
+  onEnterButton() {
+    const buttons = document.querySelectorAll(".button, .button *");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("pointerenter", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onEnterDefault();
+        }
+      });
+    });
+
+    const buttonsTag = document.querySelectorAll("button");
+
+    buttonsTag.forEach((btn) => {
+      btn.addEventListener("pointerenter", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onEnterDefault();
+        }
+      });
+    });
+
+    const tButtons = document.querySelectorAll(".t-button, .t-button *");
+
+    tButtons.forEach((btn) => {
+      btn.addEventListener("pointerenter", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onEnterDefault();
+        }
+      });
+    });
+
+    const linksTag = document.querySelectorAll("a");
+
+    linksTag.forEach((link) => {
+      link.addEventListener("pointerenter", (e) => {
+        if (
+          !link.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onEnterDefault();
+        }
+      });
+    });
+
+    const selectsTag = document.querySelectorAll("select");
+    selectsTag.forEach((select) => {
+      select.addEventListener("pointerenter", (e) => {
+        if (
+          !select.parentElement.classList.contains(
+            "cursor-fixed__parallax-inner"
+          )
+        ) {
+          this.onEnterDefault();
+        }
+      });
+    });
+
+    const links = document.querySelectorAll(".link, .link *");
+
+    links.forEach((link) => {
+      link.addEventListener("pointerenter", (e) => {
+        this.onEnterDefault();
+      });
+    });
+
+    const openers = document.querySelectorAll(
+      "side-drawer-opener, side-drawer-opener *"
+    );
+
+    openers.forEach((open) => {
+      open.addEventListener("pointerenter", (e) => {
+        this.onEnterDefault();
+      });
+    });
+
+    const linkCovers = document.querySelectorAll(
+      "a.link-cover, a.link-cover *"
+    );
+
+    linkCovers.forEach((open) => {
+      open.addEventListener("pointerenter", (e) => {
+        this.onEnterDefault();
+      });
+    });
+
+    const btnRipple = document.querySelectorAll(".button--style-ripple");
+    btnRipple.forEach((btn) => {
+      btn.addEventListener("pointerenter", () => {
+        gsap.to(this.cursorInner, 0.15, { opacity: 0 });
+
+        gsap.to(this.cursorOuter, 0.15, { opacity: 0 });
+      });
+    });
+  }
+
+  onLeaveButton() {
+    const buttons = document.querySelectorAll(".button");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("pointerout", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onLeaveDefault();
+        }
+      });
+    });
+
+    const buttonsTag = document.querySelectorAll("button");
+
+    buttonsTag.forEach((btn) => {
+      btn.addEventListener("pointerout", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onLeaveDefault();
+        }
+      });
+    });
+
+    const tButtons = document.querySelectorAll(".t-button, .t-button *");
+
+    tButtons.forEach((btn) => {
+      btn.addEventListener("pointerout", (e) => {
+        if (
+          !btn.parentElement.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onLeaveDefault();
+        }
+      });
+    });
+
+    const linksTag = document.querySelectorAll("a");
+
+    linksTag.forEach((link) => {
+      link.addEventListener("pointerout", (e) => {
+        if (
+          !link.parentElement.classList.contains(
+            "cursor-fixed__parallax-inner"
+          ) &&
+          !link.classList.contains("cursor-fixed__parallax-target")
+        ) {
+          this.onLeaveDefault();
+        }
+      });
+    });
+
+    const selectsTag = document.querySelectorAll("select");
+    selectsTag.forEach((select) => {
+      select.addEventListener("pointerout", (e) => {
+        if (
+          !select.parentElement.classList.contains(
+            "cursor-fixed__parallax-inner"
+          ) &&
+          !select.classList.contains("cursor-fixed__parallax-inner")
+        ) {
+          this.onLeaveDefault();
+        }
+      });
+    });
+
+    const links = document.querySelectorAll(".link, .link *");
+
+    links.forEach((link) => {
+      link.addEventListener("pointerout", (e) => {
+        this.onLeaveDefault();
+      });
+    });
+
+    const openers = document.querySelectorAll(
+      "side-drawer-opener, side-drawer-opener *"
+    );
+
+    openers.forEach((link) => {
+      link.addEventListener("pointerout", (e) => {
+        this.onLeaveDefault();
+      });
+    });
+
+    const linkCovers = document.querySelectorAll(
+      "a.link-cover, a.link-cover *"
+    );
+
+    linkCovers.forEach((link) => {
+      link.addEventListener("pointerout", (e) => {
+        this.onLeaveDefault();
+      });
+    });
+
+    const btnRipple = document.querySelectorAll(".button--style-ripple");
+    btnRipple.forEach((btn) => {
+      btn.addEventListener("pointerout", () => {
+        gsap.to(this.cursorInner, 0.15, { opacity: 1 });
+
+        gsap.to(this.cursorOuter, 0.15, { opacity: 1 });
+      });
+    });
+  }
+
+  onEnterDrawerOverlay() {
+    const overlays = document.querySelectorAll(".drawer__overlay:empty");
+
+    overlays.forEach((ovl) => {
+      ovl.addEventListener("pointermove", () => {
+        this.classList.add("on-overlay");
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 2,
+        });
+      });
+    });
+  }
+
+  onLeaveDrawerOverlay() {
+    const overlays = document.querySelectorAll(".drawer__overlay:empty");
+
+    overlays.forEach((ovl) => {
+      ovl.addEventListener("pointerout", () => {
+        this.classList.remove("on-overlay");
+
+        gsap.to(this.cursorOuter, 0.15, {
+          scale: 1,
+        });
+      });
+    });
+  }
+
+  callParallax(e, parent) {
+    this.parallaxIt(e, parent, 20);
+  }
+
+  parallaxIt(e, parent, movement) {
+    const rect = parent.getBoundingClientRect();
+
+    this.mouse.x = e.clientX - rect.left;
+    this.mouse.y = e.clientY - rect.top;
+
+    gsap.to(parent, 0.3, {
+      x: ((this.mouse.x - rect.width / 2) / rect.width) * movement,
+      y: ((this.mouse.y - rect.height / 2) / rect.height) * movement,
+      ease: "Power2.easeOut",
+    });
+  }
+
+  updateCursorPosition(e) {
+    this.mouse.x = e.clientX;
+    this.mouse.y = e.clientY;
+
+    this.pos.x += (this.mouse.x - this.pos.x) * this.ratio;
+    this.pos.y += (this.mouse.y - this.pos.y) * this.ratio;
+
+    gsap.to(this.cursorInner, {
+      duration: 0.1,
+      x: this.pos.x,
+      y: this.pos.y,
+      xPercent: -50,
+      yPercent: -50,
+      ease: "Power2.easeOut",
+    });
+
+    gsap.to(this.cursorOuter, {
+      duration: 0.4,
+      x: this.pos.x,
+      y: this.pos.y,
+      xPercent: -50,
+      yPercent: -50,
+    });
+  }
+}
+
+customElements.define("cursor-fixed", CursorFixed);
+
+class CursorBlur extends HTMLElement {
+  constructor() {
+    super();
+
+    this.pos = { x: 0, y: 0 };
+    this.ratio = 0.65;
+
+    this.isStuck = false;
+    this.mouse = {
+      x: -100,
+      y: -100,
+    };
+
+    this.cursorBlur = this.querySelector(".cursor--blur");
+  }
+
+  connectedCallback() {
+    this.init();
+  }
+
+  init() {
+    document.addEventListener(
+      "pointermove",
+      this.updateCursorPosition.bind(this)
+    );
+  }
+
+  getRandomInt(min, max) {
+    return Math.round(Math.random() * (max - min + 1)) + min;
+  }
+
+  updateCursorPosition(e) {
+    this.mouse.x = e.clientX;
+    this.mouse.y = e.clientY;
+
+    this.pos.x += (this.mouse.x - this.pos.x) * this.ratio;
+    this.pos.y += (this.mouse.y - this.pos.y) * this.ratio;
+
+    gsap.to(this.cursorBlur, {
+      duration: 0.15,
+      x: this.pos.x,
+      y: this.pos.y,
+      xPercent: -50,
+      yPercent: -50,
+    });
+  }
+}
+
+customElements.define("cursor-blur", CursorBlur);
+
+if (!document.querySelector(".header--top-center-special")) {
+  document.addEventListener("DOMContentLoaded", () => {
+    window.scrollTo(0, 1);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 300);
+  });
+}
+
+// TrustPilot Service Reviews
+// url for word
+var environment = "live";
+
+const serviceStarsUrl =
+  `https://honeypot-trade.co.uk/` +
+  environment +
+  `/trustpilot/service-stars.php`;
+
+// Fetch data using the Fetch API
+fetch(serviceStarsUrl)
+  .then((response) => response.json())
+  .then((serviceStars) => {
+    const serviceStarsWordElement = document.querySelector(".serviceStarsWord");
+    const numberOfReviewsImageElement = document.querySelector(".numberOfReviewsImage");
+
+    if (serviceStarsWordElement) {
+      serviceStarsWordElement.textContent = serviceStars ? serviceStars.string : "";
+    }
+
+    if (numberOfReviewsImageElement) {
+      numberOfReviewsImageElement.innerHTML = serviceStars
+        ? `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${serviceStars.stars}.png" class="stars-image pb-1" alt="Trustpilot Stars">`
+        : "";
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+
+// Hide missing product videos
+if (typeof productVideo !== "undefined" && productVideo === "") {
+  let productVideoElement = document.querySelector('[id*="QM4Cg7"]');
+  if (productVideoElement) {
+    productVideoElement.style.display = "none";
+  }
+}
+
+// Hide missing product videos
+if (typeof productVideo !== "undefined" && productVideo === "") {
+  var element = document.querySelector('[id*="QM4Cg7"]');
+  if (element) {
+    element.style.display = "none";
+  }
+}
+
+// ufurnish tracking (This only needs to run on product pages)
+function sclClickPixelFn() {
+  const url = new URL(document.location.href).searchParams;
+  if (url.get("a")) {
+    const availableParams = [
+      "aff_click_id",
+      "sub_id1",
+      "sub_id2",
+      "sub_id3",
+      "sub_id4",
+      "sub_id5",
+      "aff_param1",
+      "aff_param2",
+      "aff_param3",
+      "aff_param4",
+      "aff_param5",
+      "idfa",
+      "gaid",
+    ];
+    const t = new URL("https://tracker.ufurnish.com/click");
+    const r = t.searchParams;
+    r.append("a", url.get("a"));
+    r.append("o", "50");
+    r.append("return", "click_id");
+    if (availableParams?.length > 0) {
+      availableParams.forEach((key) => {
+        const value = url.get(key);
+        if (value) {
+          r.append(key, value);
+        }
+      });
+    }
+    fetch(t.href)
+      .then((e) => e.json())
+      .then((e) => {
+        const c = e.click_id;
+        if (c) {
+          const expiration = 864e5 * 365;
+          const o = new Date(Date.now() + expiration);
+          document.cookie = "click_id=" + c + ";expires=" + o;
+        }
+      });
+  }
+}
+sclClickPixelFn();
+
+// Meta Browser Bug Fix
+window._AutofillCallbackHandler = window._AutofillCallbackHandler || function(){}
