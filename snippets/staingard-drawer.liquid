@@ -64,11 +64,11 @@
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
-                    {% comment %} <script>console.log('SeatingCapacity', {{ item.grams }});</script> {% endcomment %}
+                    <script>console.log('SeatingCapacity', {{ item.grams }});</script>
 
                     {% assign NewSeatingCapacity = item.grams | times: item.quantity %}
 
-                    {% comment %} <script>console.log('NewSeatingCapacity', {{ NewSeatingCapacity }});</script> {% endcomment %}
+                    <script>console.log('NewSeatingCapacity', {{ NewSeatingCapacity }});</script>
 
                     {% assign SeatingCapacity = SeatingCapacity | plus: NewSeatingCapacity %}
 
