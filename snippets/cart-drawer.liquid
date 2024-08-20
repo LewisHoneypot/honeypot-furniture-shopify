@@ -892,8 +892,8 @@
 <script>
   function refreshStaingardPrice() {
     jQuery.getJSON('/cart.js', function(cart) {
-      $('#staingard-price').load(location.href + " #staingard-price");
-      $('#staingard-add-to-cart').load(location.href + " #staingard-add-to-cart");
+      document.querySelector('#staingard-price').load(location.href + " #staingard-price");
+      document.querySelector('#staingard-add-to-cart').load(location.href + " #staingard-add-to-cart");
     });
   }
 </script>
