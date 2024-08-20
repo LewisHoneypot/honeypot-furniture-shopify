@@ -67,7 +67,14 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-    <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'ScrollTrigger.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'splitting.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'lightgallery1.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'lightgallery2.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'lightgallery3.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
