@@ -59,43 +59,43 @@
               <p>{{ block.settings.text1 }}</p>
               <p>{{ block.settings.text2 }}</p>
 
-              {% assign SeatingCapacity = 0 %}
+              {% assign seating_capacity = 0 %}
 
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
-                    <script>console.log('SeatingCapacity', {{ item.grams }});</script>
+                    <script>console.log('seating_capacity', {{ item.grams }});</script>
 
-                    {% assign NewSeatingCapacity = item.grams | divided_by: 1000 %}
+                    {% assign newseating_capacity = item.grams | divided_by: 1000 %}
 
-                    {% assign NewSeatingCapacity = NewSeatingCapacity | times: item.quantity %}
+                    {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
 
-                    <script>console.log('NewSeatingCapacity', {{ NewSeatingCapacity }});</script>
+                    <script>console.log('newseating_capacity', {{ newseating_capacity }});</script>
 
-                    {% assign SeatingCapacity = SeatingCapacity | plus: NewSeatingCapacity %}
+                    {% assign seating_capacity = seating_capacity | plus: newseating_capacity %}
 
-                    {% if SeatingCapacity > 6 %}
-                      {% assign SeatingCapacity = 6 %}
+                    {% if seating_capacity > 6 %}
+                      {% assign seating_capacity = 6 %}
                     {% endif %}
 
-                    {% if SeatingCapacity == 1 %}
+                    {% if seating_capacity == 1 %}
                       {% comment %} £40 {% endcomment %}
-                      {% assign StaingardId = 48612272898335 %}
-                    {% elsif SeatingCapacity == 2 %}
+                      {% assign staingard_id = 48612272898335 %}
+                    {% elsif seating_capacity == 2 %}
                       {% comment %} £80 {% endcomment %}
-                      {% assign StaingardId = 48612274700575 %}
-                    {% elsif SeatingCapacity == 3 %}
+                      {% assign staingard_id = 48612274700575 %}
+                    {% elsif seating_capacity == 3 %}
                       {% comment %} £120 {% endcomment %}
-                      {% assign StaingardId = 48626777522463 %}
-                    {% elsif SeatingCapacity == 4 %}
+                      {% assign staingard_id = 48626777522463 %}
+                    {% elsif seating_capacity == 4 %}
                       {% comment %} £160 {% endcomment %}
-                      {% assign StaingardId = 48626778505503 %}
-                    {% elsif SeatingCapacity == 5 %}
+                      {% assign staingard_id = 48626778505503 %}
+                    {% elsif seating_capacity == 5 %}
                       {% comment %} £200 {% endcomment %}
-                      {% assign StaingardId = 48626778964255 %}
-                    {% elsif SeatingCapacity >= 6 %}
+                      {% assign staingard_id = 48626778964255 %}
+                    {% elsif seating_capacity >= 6 %}
                       {% comment %} £240 {% endcomment %}
-                      {% assign StaingardId = 48626779390239 %}
+                      {% assign staingard_id = 48626779390239 %}
                     {% endif %}
 
                   {% else %}
@@ -111,10 +111,10 @@
                 {% endif %}
               {% endfor %}
 
-              {% comment %} <script>console.log("CombinedSeatingCapacity:", {{ SeatingCapacity }});</script> {% endcomment %}
+              {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
               <p>
-                <strong id="staingard-price">£{{ SeatingCapacity | times: block.settings['seat-price'] }}</strong>
+                <strong id="staingard-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
               </p>
               <p class="left" style="display: inline-block;">
                 {%- if block.settings.tick_image == null -%}
@@ -268,7 +268,7 @@
 
               <div
                 id="staingard-add-to-cart"
-                onclick="customAddToCart({{StaingardId}}); this.closest('side-drawer').close()"
+                onclick="customAddToCart({{staingard_id}}); this.closest('side-drawer').close()"
                 class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
               >
                 <span>{{ block.settings['button-1-text'] }}</span>
@@ -289,11 +289,11 @@
 {%- endfor -%}
 
 <script>
-  function customAddToCart(StaingardId) {
+  function customAddToCart(staingard_id) {
     let formData = {
       items: [
         {
-          id: StaingardId,
+          id: staingard_id,
           quantity: 1,
         },
       ],
