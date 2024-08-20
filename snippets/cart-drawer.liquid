@@ -600,10 +600,10 @@
                           {% assign StaingardId = 9224344437023 %}
                         {% endif %}
                       {% else %}
-                        <script>console.log('Doesn\'t contain seating capacity');</script>
+                        {% comment %} <script>console.log('Doesn\'t contain seating capacity');</script> {% endcomment %}
                       {% endif %}
                     {% else %}
-                      <script>console.log('Doesn\'t contain a sofa');</script>
+                      {% comment %} <script>console.log('Doesn\'t contain a sofa');</script> {% endcomment %}
                     {% endif %}
                   {% endfor %}
 
