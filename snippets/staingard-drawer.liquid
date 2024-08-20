@@ -80,22 +80,22 @@
 
                     {% if seating_capacity == 1 %}
                       {% comment %} £40 {% endcomment %}
-                      {% assign staingard_id = 48612272898335 %}
+                      {% assign StaingardId = 48612272898335 %}
                     {% elsif seating_capacity == 2 %}
                       {% comment %} £80 {% endcomment %}
-                      {% assign staingard_id = 48612274700575 %}
+                      {% assign StaingardId = 48612274700575 %}
                     {% elsif seating_capacity == 3 %}
                       {% comment %} £120 {% endcomment %}
-                      {% assign staingard_id = 48626777522463 %}
+                      {% assign StaingardId = 48626777522463 %}
                     {% elsif seating_capacity == 4 %}
                       {% comment %} £160 {% endcomment %}
-                      {% assign staingard_id = 48626778505503 %}
+                      {% assign StaingardId = 48626778505503 %}
                     {% elsif seating_capacity == 5 %}
                       {% comment %} £200 {% endcomment %}
-                      {% assign staingard_id = 48626778964255 %}
+                      {% assign StaingardId = 48626778964255 %}
                     {% elsif seating_capacity >= 6 %}
                       {% comment %} £240 {% endcomment %}
-                      {% assign staingard_id = 48626779390239 %}
+                      {% assign StaingardId = 48626779390239 %}
                     {% endif %}
 
                   {% else %}
@@ -268,7 +268,7 @@
 
               <div
                 id="staingard-add-to-cart"
-                onclick="customAddToCart({{staingard_id}}); this.closest('side-drawer').close()"
+                onclick="customAddToCart({{StaingardId}}); this.closest('side-drawer').close()"
                 class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
               >
                 <span>{{ block.settings['button-1-text'] }}</span>
@@ -289,11 +289,11 @@
 {%- endfor -%}
 
 <script>
-  function customAddToCart(staingard_id) {
+  function customAddToCart(StaingardId) {
     let formData = {
       items: [
         {
-          id: staingard_id,
+          id: StaingardId,
           quantity: 1,
         },
       ],
