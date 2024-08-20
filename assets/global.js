@@ -1046,8 +1046,8 @@ class CountDownSpecial extends HTMLElement {
 
   logoOnScroll() {
     let event = this.closest(
-        ".shopify-section-group-header-group"
-      ).querySelector(".block-logo"),
+      ".shopify-section-group-header-group"
+    ).querySelector(".block-logo"),
       ctn = event.closest(".section__countdown-s-hero"),
       hItem = event.offsetHeight,
       hCtn = ctn.offsetHeight,
@@ -1093,8 +1093,8 @@ class CountDownSpecial extends HTMLElement {
     // blocks-content animation
     if (this.querySelector(".banner__logo")) {
       let event = this.closest(
-          ".shopify-section-group-header-group"
-        ).querySelector(".blocks-content"),
+        ".shopify-section-group-header-group"
+      ).querySelector(".blocks-content"),
         spacingLogo = hCtn - (hItem + 126),
         hcontent = hCtn + (spacingLogo + hItem + 32) * -1,
         contentTl = gsap.timeline({
@@ -1455,9 +1455,9 @@ class MenuDrawer extends HTMLElement {
 
     openDetailsElement === this.mainDetailsToggle
       ? this.closeMenuDrawer(
-          event,
-          this.mainDetailsToggle.querySelector("summary")
-        )
+        event,
+        this.mainDetailsToggle.querySelector("summary")
+      )
       : this.closeSubmenu(openDetailsElement);
   }
 
@@ -1500,9 +1500,9 @@ class MenuDrawer extends HTMLElement {
         !reducedMotion || reducedMotion.matches
           ? addTrapFocus()
           : summaryElement.nextElementSibling.addEventListener(
-              "transitionend",
-              addTrapFocus
-            );
+            "transitionend",
+            addTrapFocus
+          );
       }, 100);
     }
   }
@@ -2057,9 +2057,8 @@ class MapTemplate extends HTMLElement {
   }
 
   setIframeSrc() {
-    let map_src = `https://maps.google.com/maps?z=${this.dataZoom}&t=${
-      this.dataType
-    }&q=${this.dataLocation.replace(/"/g, "")}&ie=UTF8&&output=embed`;
+    let map_src = `https://maps.google.com/maps?z=${this.dataZoom}&t=${this.dataType
+      }&q=${this.dataLocation.replace(/"/g, "")}&ie=UTF8&&output=embed`;
 
     this.map.src = map_src;
     this.map.removeAttribute("srcdoc");
@@ -3961,10 +3960,9 @@ class VariantSelects extends HTMLElement {
       : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-        this.dataset.originalSection
-          ? this.dataset.originalSection
-          : this.dataset.section
+      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection
+        ? this.dataset.originalSection
+        : this.dataset.section
       }`
     )
       .then((response) => response.text())
@@ -3980,34 +3978,30 @@ class VariantSelects extends HTMLElement {
           `price-sticky-${this.dataset.section}`
         );
         const source = html.getElementById(
-          `price-${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `price-${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           }`
         );
         const sourceSticky = html.getElementById(
-          `price-sticky-${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `price-sticky-${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           }`
         );
         const skuSource = html.getElementById(
-          `Sku-${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Sku-${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           }`
         );
         const skuDestination = document.getElementById(
           `Sku-${this.dataset.section}`
         );
         const inventorySource = html.getElementById(
-          `Inventory-${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Inventory-${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           }`
         );
         const inventoryDestination = document.getElementById(
@@ -4550,12 +4544,12 @@ class NewsletterForm extends HTMLElement {
   onClickChecked(e) {
     e.target.closest(".form--check").querySelector("input").checked
       ? this.querySelector(".newsletter-form__button").setAttribute(
-          "disabled",
-          true
-        )
+        "disabled",
+        true
+      )
       : this.querySelector(".newsletter-form__button").removeAttribute(
-          "disabled"
-        );
+        "disabled"
+      );
   }
 }
 customElements.define("form-has-check", NewsletterForm);
@@ -5758,21 +5752,5 @@ fetch(serviceStarsUrl)
     console.error("Error fetching data:", error);
   });
 
-// Hide missing product videos
-if (typeof productVideo !== "undefined" && productVideo === "") {
-  let productVideoElement = document.querySelector('[id*="QM4Cg7"]');
-  if (productVideoElement) {
-    productVideoElement.style.display = "none";
-  }
-}
-
-// Hide missing product videos
-if (typeof productVideo !== "undefined" && productVideo === "") {
-  var element = document.querySelector('[id*="QM4Cg7"]');
-  if (element) {
-    element.style.display = "none";
-  }
-}
-
 // Meta Browser Bug Fix
-window._AutofillCallbackHandler = window._AutofillCallbackHandler || function(){}
+window._AutofillCallbackHandler = window._AutofillCallbackHandler || function () { }
