@@ -5663,56 +5663,6 @@ class CursorFixed extends HTMLElement {
 
 customElements.define("cursor-fixed", CursorFixed);
 
-class CursorBlur extends HTMLElement {
-  constructor() {
-    super();
-
-    this.pos = { x: 0, y: 0 };
-    this.ratio = 0.65;
-
-    this.isStuck = false;
-    this.mouse = {
-      x: -100,
-      y: -100,
-    };
-
-    this.cursorBlur = this.querySelector(".cursor--blur");
-  }
-
-  connectedCallback() {
-    this.init();
-  }
-
-  init() {
-    document.addEventListener(
-      "pointermove",
-      this.updateCursorPosition.bind(this)
-    );
-  }
-
-  getRandomInt(min, max) {
-    return Math.round(Math.random() * (max - min + 1)) + min;
-  }
-
-  updateCursorPosition(e) {
-    this.mouse.x = e.clientX;
-    this.mouse.y = e.clientY;
-
-    this.pos.x += (this.mouse.x - this.pos.x) * this.ratio;
-    this.pos.y += (this.mouse.y - this.pos.y) * this.ratio;
-
-    gsap.to(this.cursorBlur, {
-      duration: 0.15,
-      x: this.pos.x,
-      y: this.pos.y,
-      xPercent: -50,
-      yPercent: -50,
-    });
-  }
-}
-
-customElements.define("cursor-blur", CursorBlur);
-
 if (!document.querySelector(".header--top-center-special")) {
   document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(0, 1);
@@ -5721,33 +5671,3 @@ if (!document.querySelector(".header--top-center-special")) {
     }, 300);
   });
 }
-
-// TrustPilot Service Reviews
-// url for word
-var environment = "live";
-
-const serviceStarsUrl =
-  `https://honeypot-trade.co.uk/` +
-  environment +
-  `/trustpilot/service-stars.php`;
-
-// Fetch data using the Fetch API
-fetch(serviceStarsUrl)
-  .then((response) => response.json())
-  .then((serviceStars) => {
-    const serviceStarsWordElement = document.querySelector(".serviceStarsWord");
-    const numberOfReviewsImageElement = document.querySelector(".numberOfReviewsImage");
-
-    if (serviceStarsWordElement) {
-      serviceStarsWordElement.textContent = serviceStars ? serviceStars.string : "";
-    }
-
-    if (numberOfReviewsImageElement) {
-      numberOfReviewsImageElement.innerHTML = serviceStars
-        ? `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${serviceStars.stars}.png" class="stars-image pb-1" alt="Trustpilot Stars">`
-        : "";
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
-  });
