@@ -891,10 +891,38 @@
 
 <script>
   function refreshStaingardPrice() {
-    jQuery.getJSON('/cart.js', function(cart) {
-      document.querySelector('#staingard-price').load(location.href + " #staingard-price");
-      document.querySelector('#staingard-add-to-cart').load(location.href + " #staingard-add-to-cart");
-    });
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        const staingardPrice = document.querySelector('#staingard-price');
+        const staingardAddToCart = document.querySelector('#staingard-add-to-cart');
+
+        if (staingardPrice) {
+          fetch(location.href)
+            .then(response => response.text())
+            .then(html => {
+              const tempDoc = document.createElement('div');
+              tempDoc.innerHTML = html;
+              const newStaingardPrice = tempDoc.querySelector('#staingard-price');
+              if (newStaingardPrice) {
+                staingardPrice.innerHTML = newStaingardPrice.innerHTML;
+              }
+            });
+        }
+
+        if (staingardAddToCart) {
+          fetch(location.href)
+            .then(response => response.text())
+            .then(html => {
+              const tempDoc = document.createElement('div');
+              tempDoc.innerHTML = html;
+              const newStaingardAddToCart = tempDoc.querySelector('#staingard-add-to-cart');
+              if (newStaingardAddToCart) {
+                staingardAddToCart.innerHTML = newStaingardAddToCart.innerHTML;
+              }
+            });
+        }
+      });
   }
 </script>
 
