@@ -72,26 +72,26 @@
 
                     {% assign SeatingCapacity = SeatingCapacity | plus: NewSeatingCapacity %}
 
-                    {% if SeatingCapacity > 6 %}
-                      {% assign SeatingCapacity = 6 %}
+                    {% if SeatingCapacity > 6000 %}
+                      {% assign SeatingCapacity = 6000 %}
                     {% endif %}
 
-                    {% if SeatingCapacity == 1 %}
+                    {% if SeatingCapacity == 1000 %}
                       {% comment %} £40 {% endcomment %}
                       {% assign StaingardId = 48612272898335 %}
-                    {% elsif SeatingCapacity == 2 %}
+                    {% elsif SeatingCapacity == 2000 %}
                       {% comment %} £80 {% endcomment %}
                       {% assign StaingardId = 48612274700575 %}
-                    {% elsif SeatingCapacity == 3 %}
+                    {% elsif SeatingCapacity == 3000 %}
                       {% comment %} £120 {% endcomment %}
                       {% assign StaingardId = 48626777522463 %}
-                    {% elsif SeatingCapacity == 4 %}
+                    {% elsif SeatingCapacity == 4000 %}
                       {% comment %} £160 {% endcomment %}
                       {% assign StaingardId = 48626778505503 %}
-                    {% elsif SeatingCapacity == 5 %}
+                    {% elsif SeatingCapacity == 5000 %}
                       {% comment %} £200 {% endcomment %}
                       {% assign StaingardId = 48626778964255 %}
-                    {% elsif SeatingCapacity >= 6 %}
+                    {% elsif SeatingCapacity >= 6000 %}
                       {% comment %} £240 {% endcomment %}
                       {% assign StaingardId = 48626779390239 %}
                     {% endif %}
