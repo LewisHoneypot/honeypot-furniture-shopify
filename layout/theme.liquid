@@ -81,6 +81,9 @@
     {% comment %} GOLBAL SCRIPTS {% endcomment %}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
+    <script src="{{ 'cursorBlur.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'trustpilotServiceReviewStars.js' | asset_url }}" defer="defer"></script>
+
     {%- unless template != 'product' -%}
       <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
