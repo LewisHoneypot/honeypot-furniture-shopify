@@ -67,6 +67,8 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
+
+    {% comment %} VENDOR SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script> {% endcomment %}
@@ -75,7 +77,14 @@
     {% comment %} <script src="{{ 'lightgallery1.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'lightgallery2.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'lightgallery3.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+
+    {% comment %} GOLBAL SCRIPTS {% endcomment %}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+    {%- unless template == 'product' -%}
+      <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
