@@ -64,13 +64,13 @@
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
-                    <script>console.log('seating_capacity', {{ item.grams }});</script>
+                    {% comment %} <script>console.log('seating_capacity', {{ item.grams }});</script> {% endcomment %}
 
                     {% assign newseating_capacity = item.grams | divided_by: 1000 %}
 
                     {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
 
-                    <script>console.log('newseating_capacity', {{ newseating_capacity }});</script>
+                    {% comment %} <script>console.log('newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
 
                     {% assign seating_capacity = seating_capacity | plus: newseating_capacity %}
 
@@ -100,13 +100,13 @@
 
                   {% else %}
                     <script>
-                      console.log("Doesn't contain seating capacity");
+                      {% comment %} console.log("Doesn't contain seating capacity"); {% endcomment %}
                     </script>
                   {% endif %}
 
                 {% else %}
                   <script>
-                    console.log("Doesn't contain a sofa");
+                    {% comment %} console.log("Doesn't contain a sofa"); {% endcomment %}
                   </script>
                 {% endif %}
               {% endfor %}
