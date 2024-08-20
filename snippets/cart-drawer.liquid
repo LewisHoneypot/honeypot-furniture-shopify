@@ -563,12 +563,12 @@
                   {% comment %} Check if sofa product is in cart {% endcomment %}
                   {% if item.product.type == 'Sofas' %}
                     {% assign containsSofa = true %}
-                    {% comment %} <script>console.log('Contains sofa TRUE');</script> {% endcomment %}
+                    <script>console.log('Contains sofa TRUE');</script>
                   {% endif %}
                   {% comment %} Check if staingard product is in cart {% endcomment %}
                   {% if item.product.type == 'Staingard' %}
                     {% assign containsStaingard = true %}
-                    {% comment %} <script>console.log('Contains staingard TRUE');</script> {% endcomment %}
+                    <script>console.log('Contains staingard TRUE');</script>
                   {% endif %}
                 {% endfor %}
 
@@ -578,7 +578,7 @@
                     {% if item.product.type == 'Sofas' %}
                       {% if item.grams %}
                         {% assign SeatingCapacity = item.grams %}
-                        {% comment %} <script>console.log({{ SeatingCapacity }});</script> {% endcomment %}
+                        <script>console.log({{ SeatingCapacity }});</script>
 
                         {% if SeatingCapacity == 1 %}
                           {% comment %} £40 {% endcomment %}
