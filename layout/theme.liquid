@@ -72,9 +72,9 @@
     {% comment %} <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'ScrollTrigger.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'splitting.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'lightgallery1.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'lightgallery2.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'lightgallery3.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'lightgallery1.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {% comment %} <script src="{{ 'lightgallery2.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {% comment %} <script src="{{ 'lightgallery3.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
