@@ -66,7 +66,9 @@
                   {% if item.grams %}
                     <script>console.log('SeatingCapacity', {{ item.grams }});</script>
 
-                    {% assign NewSeatingCapacity = item.grams | times: item.quantity %}
+                    {% assign NewSeatingCapacity = item.grams | divided_by: 1000 %}
+
+                    {% assign NewSeatingCapacity = NewSeatingCapacity | times: item.quantity %}
 
                     <script>console.log('NewSeatingCapacity', {{ NewSeatingCapacity }});</script>
 
