@@ -81,7 +81,7 @@
     {% comment %} GOLBAL SCRIPTS {% endcomment %}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
-    {%- unless template == 'product' -%}
+    {%- unless template != 'product' -%}
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
 
