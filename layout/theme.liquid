@@ -69,7 +69,10 @@
 
     {% comment %} VENDOR SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+    {%- unless template == 'collection' -%}
+      <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
+
     {% comment %} <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'ScrollTrigger.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'splitting.js' | asset_url }}" defer="defer"></script> {% endcomment %}
