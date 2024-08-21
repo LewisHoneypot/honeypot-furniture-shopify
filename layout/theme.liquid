@@ -74,7 +74,7 @@
     <script>
       console.log({{ template_type }});
     </script>
-    {%- unless template == 'collection' -%}
+    {%- unless template contains == 'collection' -%}
       <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
 
