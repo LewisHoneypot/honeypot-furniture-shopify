@@ -70,11 +70,7 @@
     {% comment %} VENDOR SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 
-    {%- assign template_type = template -%}
-    <script>
-      console.log({{ template_type }});
-    </script>
-    {%- unless template contains == 'collection' -%}
+    {%- unless template contains 'collection' -%}
       <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
 
