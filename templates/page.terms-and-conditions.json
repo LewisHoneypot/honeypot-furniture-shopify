@@ -1,1 +1,524 @@
-{"sections":{"main":{"type":"main-page","settings":{"section_width":"customized-width","customize_width":1400,"padding_top":30,"padding_bottom":0,"padding_top_mobile":10,"padding_bottom_mobile":30}},"rich_text_JPy3zj":{"type":"rich-text","blocks":{"heading_8y68yx":{"type":"heading","disabled":true,"settings":{"heading":"Talk about your brand","heading_size":"default","padding_top":10,"padding_bottom":10}},"text_Unt4Kk":{"type":"text","settings":{"text":"","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_UnD4pF":{"type":"button","disabled":true,"settings":{"primary_button_label":"Button label","primary_button_link":"","primary_button_type":"default","secondary_button_label":"Button label","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["heading_8y68yx","text_Unt4Kk","button_UnD4pF"],"disabled":true,"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"custom_liquid_T7RRLB":{"type":"custom-liquid","disabled":true,"settings":{"custom_liquid":"","padding_top":30,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"icon_with_text_ngUGpR":{"type":"icon-with-text","blocks":{"item_gTgaLm":{"type":"item","settings":{"icon":"price_tag","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"","heading":"Place Your Order","text":"<p>Find your favourite items and checkout using a variety of payment and finance options.<\/p>","link_label":"","link":""}},"item_MC4MKd":{"type":"item","settings":{"icon":"stopwatch","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"","heading":"Await Confirmation","text":"<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.<\/p>","link_label":"","link":""}},"item_6CGCFb":{"type":"item","disabled":true,"settings":{"icon":"box","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"#c66969","heading":"Guarantee heading","text":"<p>Share information about your products, policies or services.<\/p>","link_label":"","link":""}},"item_xrTYWQ":{"type":"item","settings":{"icon":"truck","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"","heading":"The Day Of Delivery","text":"<p>You'll receieve a live tracking link and our two-person team will deliver your items. <\/p>","link_label":"","link":""}},"item_ypLzVb":{"type":"item","settings":{"icon":"heart","enable_custom_size_icon":false,"custom_size_icon":30,"custom_icon_background":"","heading":"Enjoy Your New Furniture","text":"<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.<\/p>","link_label":"","link":""}}},"block_order":["item_gTgaLm","item_MC4MKd","item_6CGCFb","item_xrTYWQ","item_ypLzVb"],"disabled":true,"custom_css":[],"settings":{"type_style":"classic","section_width":"customized-width","customize_width":1200,"heading":"What To Expect","heading_size":"default","text":"","text_margin_top":16,"text_alignment":"center","margin_bottom":60,"blocks_heading_font":"font-body","blocks_heading_size":"text-body","blocks_text_size":"default","color_scheme":"scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21","use_custom_color":true,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(237, 233, 226, 1), rgba(247, 231, 223, 1) 66%)","layout":"vertical","enable_background_icon":true,"type_vertical":"carousel","arrows_type":"all","text_animation":"none","padding_top":50,"padding_bottom":50,"padding_top_mobile":40,"padding_bottom_mobile":40}},"custom_liquid_PEbtxe":{"type":"custom-liquid","settings":{"custom_liquid":"","padding_top":30,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"image_with_text_zJhwhJ":{"type":"image-with-text","blocks":{"heading_FtzRWC":{"type":"heading","settings":{"heading":"<h3>Live Delivery Tracking<\/h3>","heading_size":"h1","padding_top":10,"padding_bottom":10}},"text_hB8Ee3":{"type":"text","settings":{"text":"<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br\/><br\/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br\/><br\/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.<\/p>","padding_top":10,"padding_bottom":10}}},"block_order":["heading_FtzRWC","text_hB8Ee3"],"disabled":true,"settings":{"type_style":"classic","section_width":"page-width","customize_width":1800,"color_scheme":"scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21","image":"shopify:\/\/shop_images\/Screenshot_2024-04-16_at_09.19.16.png","heading":"","heading_size":"default","link_label":"","link":"","colors_heading":"#ffffff","show_top_line_separator":false,"show_bot_line_separator":false,"background_for_box":false,"colors_text":"#424242","colors_background":"","gradient_background":"linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","layout_mobile":"image_first_mobile","mobile_content_alignment":"left","image_animation":"none","text_animation":"none","padding_top":0,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"custom_liquid_bBkwGJ":{"type":"custom-liquid","settings":{"custom_liquid":"","padding_top":30,"padding_bottom":0,"padding_top_mobile":0,"padding_bottom_mobile":0}},"collapsible_content_4F8ffL":{"type":"collapsible-content","blocks":{"collapsible_row_cxfHjW":{"type":"collapsible_row","settings":{"heading":"Company Details","icon":"none","row_content":"<p>We are DYP Ltd T\/A Honeypot Furniture, and we operate honeypotfurniture.co.uk. We are a limited company registered in England and Wales (registration number: 15439739) and our registered office is 109 Coleman Road, Leicester, England, LE5 4LE.<br\/><\/p><p>1.1 In order to contact us, please use the details on our Contact Us page.<br\/><\/p><p>1.2 If we have to contact you, we will do so by telephone, text message or by writing to you at the email address or postal address you have provided to us in your order.<\/p>","page":""}},"collapsible_row_RwtpbP":{"type":"collapsible_row","settings":{"heading":"Terms","icon":"none","row_content":"<p>2.1 Please note that by ordering our products, you agree to be bound by these terms and conditions.<\/p><p>2.2 Before you submit your order with us, please carefully read through these terms and conditions. These terms tell you who we are, how we will provide products to you, how you and we may change or end the contract and what to do if there is a problem. If you think that there is a mistake in these terms, please contact us in order to discuss. We may amend these terms from time to time without notice.<\/p>","page":""}},"collapsible_row_gLEjmt":{"type":"collapsible_row","settings":{"heading":"Our Contact With You","icon":"none","row_content":"<p>3.1 All orders made through our website are subject to our acceptance.. We will confirm your order has been placed successfully via email, at which point a contract will come into existence between you and us.<\/p><p>3.2 If we are unable to accept your order, we will inform you of this and will not charge you for the product(s). This might be due to stock issues or because we have identified an error in the price or description of the product.<\/p><p>3.3 Our website is solely for the promotion of our products to certain areas of the UK. Please see our Delivery Page for more information about where we deliver. Please read the page before placing your order as your delivery address may be in an exclusion zone or incur an extra charge.<\/p>","page":""}},"collapsible_row_89tqT6":{"type":"collapsible_row","settings":{"heading":"Your Rights To Amend","icon":"none","row_content":"<p>4.1 If you wish to amend your order please contact us at least 48 hours before your delivery is due. We will advise you if the change is possible. If there are any changes to your order due to the requested change, such as the price of the goods or delivery lead time, we will inform you and confirm you still want to go ahead with the requested change. Once confirmed, we will email you a confirmation of the changes you have made.<\/p>","page":""}},"collapsible_row_bzrhWP":{"type":"collapsible_row","settings":{"heading":"Products","icon":"none","row_content":"<p>5.1 The images of the products on our website are for illustrative purposes only. Although we have made every effort to display the product’s colours accurately, we cannot guarantee that your device will display the colours accurately relative to the colour of the product. Your product may vary slightly from the displayed images. Your monitor and screen settings can heavily affect how the colours of our products may appear for you on our website.<\/p><p>5.2 Although we make every effort to be as accurate as possible, our products are handmade and as such, there may be slight variations in the dimensions we display on our website.<\/p><p>5.3 If you buy the same products at different times we cannot guarantee they will match in colour and size due to variations between production batches.<\/p><p>5.4 Whilst every care is taken to ensure the dimensions on our website are correct, we do operate a 3% tolerance of the dimensions advertised.<\/p>","page":""}},"collapsible_row_qV97M9":{"type":"collapsible_row","settings":{"heading":"Delivery","icon":"none","row_content":"<p>6.1 Deliveries to England and Wales incur a cost of £49, selected Scotland postcodes incur a cost of £99 and deliveries to Northern Ireland incur a cost of £125. The delivery charge is non-refundable once the item has been despatched from our warehouse. If you miss a delivery, you will have to pay the delivery fee again. If you return your item for a refund, your delivery fee cannot be refunded, additionally, if you reject the delivery the delivery fee cannot be refunded in this instance also. You can find more information about delivery and charges on our delivery page.<\/p><p>6.2 We will contact you to agree a delivery date for your product(s) once you have placed your order and it is confirmed. Our delivery vans visit certain areas on specific days of the week, so your delivery will be arranged for the first available day when we deliver in your area. Please use our postcode checker to find the delivery day for your area. If the product you ordered is out of stock, we will arrange delivery for the next possible delivery day in your area depending on the arrival date of your product.<\/p><p>6.3 We advertise that we are able to deliver to customers between 1-7 working days, however this is not possible in certain postcode areas. The postcode areas exempt from this service and we advise deliveries will take between 1-14 working days for are:<\/p><p>AB, DD1-11, DG, EH, FK, G, IV1-63, KA1-26, KW1-14, KY, ML, PA1-38, PA80, PH1-50, NE19, NE48-49, NE61-71, TD, CA, LA, LL15-16, LL20-78, SY17-20, SY23-25, TN 19 -TN 22, TN 28 -TN 29, TN31 - TN40, EX, PL, TQ, TR1-20, TR26-27, BT<\/p><p>   • We are unfortunately unable to deliver to certain postcodes within the United Kingdom. A full list of these postcodes are: HS, KA27-28, KW15-17, PA41-78, PH41-44,PO30-41, TR21-25, ZE<\/p><p>6.4 Deliveries usually take place between 7am and 7pm and the drivers will attempt to call you approximately one hour before arrival. We always endeavour to deliver within the agreed time frame and date, however, there are rare occasions when factors outside of our control hinder our ability to do so. These factors include but are not limited to vehicle breakdowns and traffic issues. There may be occasions when our delivery team will therefore arrive earlier or later than the expected time. If rare occurrences like this take place, we will always endeavour to keep you informed.<\/p><p>6.5 We hold no responsibility for delays outside of our control. If unforeseen circumstances do arise, we will contact you to explain the situation. In the event of long delays, you have the right to cancel your order and receive a full refund for any products paid for and not yet received. In rare circumstances, we may have to cancel your order entirely, in which case we will refund you in full.<\/p><p>6.6 The buyer will inspect the goods upon delivery and will notify the seller immediately of any damages or shortages. Any damage to the goods should be notified to the seller immediately and signed as damaged on the courier’s paperwork. No claims can be made for any goods signed for as received in good condition. If you, the buyer, fail to comply with this clause the seller will not be held legally liable in any respect of complaint which should have been brought to our attention within the time period stated above.<\/p><p>6.7 For sofa orders delivered to England, Wales and Scotland, as part of the paid delivery service, we offer assembly at the point of use and this will be carried out by our two-person delivery team. Please choose your room before the delivery team arrives, as they are not contractually bound to move the sofa to another location once the sofa is set up. Please also create a clear path from the entrance to the room of choice to allow our delivery team to operate safely and reduce the chance of damage to the sofa. Our delivery team have been trained to handle and transport furniture carefully, safely and efficiently; and on rare occasions, they hold the right to refuse this service where safety to them or the products are deemed to be at risk.<\/p><p>6.8 The vast majority of the time we are able to deliver through any standard UK door, however, depending on the product or access route, the product may not fit through an entrance. When this occurs, we will usually take the product back to our warehouse and a member of the sales team will contact you and advise on a product that will be more likely to fit through your entrance. You have the right to accept delivery if the product will not fit through the entrance however, when accepted, we are not liable for any damage caused thereafter to the property or product.<\/p><p>6.9 LIMITS ON DELIVERY<\/p><ul><li>6.9.1 A responsible adult (18+) must be available to supervise and accept delivery.<\/li><li>6.9.2 We will only deliver to ground floor residences, or to first floor where access is easy, or to higher floors where there is an adequate and working lift. If delivery is required to higher floors and there is no lift or the lift is not big enough to take the items, we will deliver to the ground floor only and ask that you get help in taking the products upstairs.<\/li><li>6.9.3 Your property must be within 100m of a road or hard-surfaced track.<\/li><li>6.9.4 You must ensure it is safe for the order to be delivered to the relevant room in your house.<\/li><li>6.9.5 Changes to your order, including your delivery details, must be requested at least 2 working days before your scheduled delivery date. We cannot guarantee that any changes requested after this time can be honoured, and this may affect your delivery date.<\/li><li>6.9.6 Only sofas and sofa beds will be delivered to the point of use within your property, provided there is safe and suitable access as per clause 6.9.2. Our delivery personnel will not be responsible for any disassembly or removal of existing furniture.<\/li><li>6.9.7 Flatpack items will only be delivered to the ground floor and will not be assembled or taken to the point of use within your property. It is your responsibility to transport and assemble the flatpack items to the desired location.<\/li><\/ul><p><\/p><p>6.10 A £100 re-delivery fee may apply if:<\/p><p><\/p><ul><li>6.10.1 Nobody is present at your delivery address to accept delivery during your agreed delivery window.<\/li><li>6.10.2 You cancel or re-arrange the delivery date within 48 hours of the agreed delivery date.<\/li><li>6.10.3 There is no safe means of access to the place of delivery or we are otherwise unable to deliver because of the limits in 6.7<\/li><\/ul><p><\/p><p>6.11 If you have employed a third-party to collect your order from us and deliver to you, or you are collecting the products yourself, we will not be liable for any damage to the product once it leaves our warehouse. You can contact us to arrange collection from our premises during working hours.<\/p><p>6.12 We hold the right to cancel your order if you are in breach of the contract as stipulated below:<\/p><p>6.12.1 If you do not provide us with the necessary information that enables us to deliver the products to you.<\/p><p>6.12.2 If you do not make payment by the due date.<\/p><p>6.12.3 If you do not agree to a delivery date within a reasonable period of time from the date of placing your order.<\/p><p>6.12.4 As part of our paid delivery service, we deliver and set up your sofa inside the property. In the unlikely event that your property does receive any damage, we are unable to reimburse any costs to repair or replace any item. If you would prefer, our team can deliver to your doorstep instead.<\/p>","page":""}},"collapsible_row_Bpmcny":{"type":"collapsible_row","settings":{"heading":"Returns and Exchanges","icon":"none","row_content":"<p>7.1 You have a right to cancel your order within 14 days of receiving it. All returns must be approved by us within 14 days of delivery and subsequently returned to us within 14 days to our warehouse. We will not process any returns after 14 days.<br\/><\/p><p>7.2 Please request your return by calling our team on 01476 589 446 and asking for the Customer Service team. All returns must be delivered to our warehouse at your own expense, where they will be inspected. Any returned items must be in an unused, brand-new condition and wrapped in sufficient packaging. 7.3 If you place an incorrect order and would like to exchange the item for a different colour or variation, you will also have to follow the above procedure. Please request your exchange via the form on the Returns & Exchanges page. All returns must be delivered to our warehouse at your own expense, where they will be inspected. Any returned items must be in an unused, brand-new condition and wrapped in sufficient packaging.<\/p><p>7.4 Any damages to the product must be reported within 48 hours of delivery or Honeypot Furniture Outlet Ltd will not be held liable.<\/p><p>7.5 If an item is sent back damaged or used, we have the right to only refund back the resale value. This can be up to 100% if it is deemed unsellable, so please be careful and cautious when returning.<\/p><p>7.6 A refund can only be given when the items have been returned to our warehouse where they will be inspected for any damage or signs of use. Refunds will be processed after the items have been returned to us and may take up to 14 working days. The return address is: DYP Ltd T\/A Honeypot Furniture, HoneyPot Lane, Colsterworth, Grantham, NG33 5LY<\/p><p>7.7 Please note our returns and refunds policy does not apply to business customers. It is the responsibility of the business to ensure that the products purchased meet the standards required for the environment in which they will be used.<\/p>","page":""}},"collapsible_row_DB6XBe":{"type":"collapsible_row","settings":{"heading":"If There's a Problem With The Product","icon":"none","row_content":"<p>8.1 If there is a problem with your product(s) and you let us know about it:<\/p><p>8.1.1 Within 30 days of delivery, and it was recorded on delivery - you are entitled to a collection with refund, or a replacement. This doesn't constitute for partial deliveries or if any parts are missing, they will instead be sent to you as a matter of priority. If within 30 days of delivery and a fault was not recorded on delivery we may need to investigate further. For example sending a technician to investigate, before we can offer a resolution.<\/p><p>8.1.2 within the first 6 months from delivery, we will attempt to repair the item or organise a replacement; and any damage will be assessed by a third party furniture servicing and repair company to ascertain the cause and extent of the damage.<\/p><p>8.1.3 after the first 6 months, it’s your responsibility to prove that it’s faulty and that any problems are a manufacturer fault.<\/p><p>8.2 If you let us know about a fault with your order, we may need you to provide evidence of the fault, and we may need to carry out an inspection of the goods at your property, using an independent third party to determine the cause of the fault. We will also review the fault against any evidence regarding what condition your order was in at the point of delivery.<\/p><p>8.3 We are under a legal duty to supply products that comply with our contract with you. Nothing in these terms will affect your legal rights.<\/p><p>8.4 All our products come with a 1-year manufacturer’s guarantee excluding ex-display models, unless otherwise stated. The guarantee starts from the date of delivery and offers cover against manufacturing defects or any defects which may arise, under normal use, through faulty factory workmanship, including sofa bed and recliner mechanisms. For more detail see our Warranty Page. This does not affect your legal rights.<\/p><p>8.5 If a faulty product needs to be returned, and is proven to be a manufacturer fault, then there will be no additional charges for delivery.<\/p><p>8.6 Ex display models are not subject to our manufacturer’s guarantee unless specifically stated, as they will have been used for some time. These models may have some damage which is taken into account in the price. You should carefully inspect any ex display models to ensure you are aware of any issues. This does not affect your legal rights.<\/p><p>8.7 In the event of a complaint from a sale where finance was the payment method we will work to resolve this in-house with you and in line with the Financial Conduct Authority (https:\/\/www.fca.org.uk\/) & Financial Ombudsman Service (https:\/\/www.financial-ombudsman.org.uk\/) requirements.<\/p><p>8.8 Deductions can be made to your refund for excessive wear and tear or non - manufacturing related damage. In the rare instance that this happens, we would get in touch with you to advise of the deduction once the returned product has been thoroughly inspected.<\/p><p>8.9 As a furniture company, we take the Consumer Rights Act of 2015 very seriously. We understand that our customers have the right to expect their furniture to be of satisfactory quality, fit for purpose, and as described. If any of our products are faulty, we encourage our customers to exercise their right to reject the item and request a refund or replacement. We will always aim to resolve any issues as quickly and efficiently as possible, and we are committed to upholding our obligations under the Consumer Rights Act to ensure that our customers receive the high-quality products they expect and deserve.<\/p>","page":""}},"collapsible_row_LLkWWX":{"type":"collapsible_row","settings":{"heading":"Guarantee","icon":"none","row_content":"<p>9.1 The guarantee starts from the delivery date of the original product and offers cover against manufacturing defects on the construction of the frame and frame springs for 1 year.<\/p><p>9.2 There are some things that aren’t covered by your guarantee. For example, deliberate damage – like treating it roughly or not using the right products to maintain it. It also doesn’t cover your sofa for use in a workplace or business – only for use in your home.<\/p><p>9.3 Your 1-year guarantee only belongs to you. So, if you sell or give away your sofa, the warranty ends.<\/p><p>9.4 Please be advised your 1 year guarantee only includes 1 exchange where required\/necessary. If your item is replaced\/exchanged the new item will not hold a guarantee. This does not affect your statutory rights.<\/p><p>9.5 As a consumer you have certain rights regarding defective goods and this guarantee is given in addition to and not in substitution of your statutory rights. This guarantee applies to mainland UK only.<\/p><p>9.6 The guarantee is subject to the following conditions: The furniture has been installed by Honeypot Furniture in the U.K. You have properly cared for and used the goods and followed any instructions provided by us, particularly in the case of gloss and high sheen furniture. The furniture has been used for normal domestic purposes only. The guarantee is personal to you and is not transferable. The furniture has not been altered, or interfered with, by any other persons not authorised to do so by Honeypot Furniture. Any repair work must be undertaken by Honeypot Furniture or our appointed agent. This does not include the fitting\/replacement of the items listed below which are not covered under our guarantee. Any parts removed during repair works that are subsequently replaced become the property of DYP Ltd T\/A Honeypot Furniture.<\/p><p>9.7 The guarantee does not cover: Any damage caused by wear and tear – this includes flat or saggy cushions. Natural colour fading caused by prolonged exposure to direct sunlight. Movement of wardrobe infill or worktop caused by the natural movement of the house’s structure for installations over 30 days old. This also includes the settlement of furniture if fitted on top of the carpet. Fitting of any small item replacements, for example, handles, hanging rails, etc. Electrical and light fittings, bulbs, mirrors, and glass. Door and drawer adjustments and caulking, refitting of drawers removed from drawer runners. Accidental damage caused as a result of unexpected and non-deliberate action. If the furniture is required to be removed from the room’s structure the warranty does not cover re-decoration or damage to flooring. This will be the responsibility of the consumer to make good. All consumables required to replace faulty parts will be charged for; these include, but are not limited to, screws, filler, brackets, etc. Any fitting issues reported outside of 30 days from original installation date<\/p><p>9.8 Please note: We shall at our discretion repair, replace or reinstall parts as required. Due to natural colour fading on your existing furniture there may be a slight colour variation or plumper cushions in any items replaced which is out of Honeypot Furniture's control.<\/p><p>9.9 5 Year Structural Frame Guarantee. All our hardwood sofa frames are guaranteed against manufacturing defects when notified to us within 5 years from the day of delivery. The defects must be an inherent manufacturing defect in the structural hardwood framework of the sofa and this will be ascertained by an independent body such as Castelan or Homeserve. Inherent manufacturing defects do not include boards, springs, padding, mechanisms, mattresses or upholstery. The guarantee does not cover general wear and tear and we will not accept any liability for damage caused by accidental damage or improper use. You can make a claim via the guarantee Claim Form on the guarantee page. AS A CONSUMER YOU HAVE STATUTORY PROTECTION REGARDING FAULTY OR MISDESCRIBED GOODS OR INADEQUATE SERVICES SUCH AS INSTALLATION. THESE TERMS DO NOT AFFECT THOSE RIGHTS. If you have any questions, please feel free to contact us directly by email at cs@honeypotfurniture.co.uk<\/p>","page":""}},"collapsible_row_ajVkUc":{"type":"collapsible_row","settings":{"heading":"Pricing and Payments","icon":"check_mark","row_content":"<p>10.1 All prices listed are inclusive of VAT.<\/p><p>10.2 We endeavour to provide the correct pricing in product listings on all platforms we operate, including the website.<\/p><p>10.3 The price displayed at the time of your order will be the price you receive and is secured when payment is made. If pricing changes after you’ve secured your order, this will not affect the price you have received.<\/p><p>10.4 If you are securing a price through our finance provider then this occurs when paying your deposit and will not be affected by any price increases thereafter.<\/p><p>10.5 If a price was displayed in error, we will contact you to inform you, cancel the order and issue a full refund.<\/p><p>10.6 We only accept payments in UK Pounds Sterling (GBP)<\/p><p>10.7 We reserve the right to reject payments made by credit or debit cards that aren’t registered to the delivery address. This is in accordance with the anti-fraud rules employed by the payment systems we use, as well as the finance provider we partner with.<\/p><p>10.8 If utilising the finance provider’s services your contract is with them and not DYP Ltd T\/A Honeypot Furniture, therefore, all queries relating to that contract should be directed to them and not us.<\/p>","page":""}}},"block_order":["collapsible_row_cxfHjW","collapsible_row_RwtpbP","collapsible_row_gLEjmt","collapsible_row_89tqT6","collapsible_row_bzrhWP","collapsible_row_qV97M9","collapsible_row_Bpmcny","collapsible_row_DB6XBe","collapsible_row_LLkWWX","collapsible_row_ajVkUc"],"settings":{"heading":"","section_width":"customized-width","customize_width":1400,"top_subheading":"","top_text":"","top_icon_1":"chat_buble","top_heading_1":"","top_icon_2":"mail","top_heading_2":"","bottom_text":"","bottom_button_label":"","bottom_button_link":"","color_scheme":"scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b","padding_top":36,"padding_bottom":36,"padding_top_mobile":35,"padding_bottom_mobile":43}},"rich_text_KmMN7n":{"type":"rich-text","blocks":{"text_6WQKqH":{"type":"text","settings":{"text":"","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_wiCNHR":{"type":"button","settings":{"primary_button_label":"Download Returns Label","primary_button_link":"https:\/\/cdn.shopify.com\/s\/files\/1\/0857\/1358\/4415\/files\/Returns-Label_1.pdf?v=1713341863","primary_button_type":"default","secondary_button_label":"","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["text_6WQKqH","button_wiCNHR"],"disabled":true,"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"background-1","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"rich_text_VJNk4X":{"type":"rich-text","blocks":{"heading_WzGjnp":{"type":"heading","settings":{"heading":"Have An Unanswered Question?","heading_size":"default","padding_top":10,"padding_bottom":10}},"text_VRVjpj":{"type":"text","settings":{"text":"<p>If our Terms and Conditions haven't answered all of your questions,please state your query below.<\/p>","show_line_separator":false,"padding_top":10,"padding_bottom":10}},"button_K66LFe":{"type":"button","disabled":true,"settings":{"primary_button_label":"Button label","primary_button_link":"","primary_button_type":"default","secondary_button_label":"Button label","secondary_button_link":"","secondary_button_type":"default","padding_top":10,"padding_bottom":10}}},"block_order":["heading_WzGjnp","text_VRVjpj","button_K66LFe"],"settings":{"section_width":"page-width","customize_width":1800,"show_line_separator":false,"text_alignment":"left","color_scheme":"","padding_top":30,"padding_bottom":30,"padding_top_mobile":20,"padding_bottom_mobile":20}},"contact_form_T3V7XG":{"type":"contact-form","settings":{"section_width":"customized-width","customize_width":1400,"heading":"Contact form","color_scheme":"","padding_top":36,"padding_bottom":36,"padding_top_mobile":0,"padding_bottom_mobile":30}}},"order":["main","rich_text_JPy3zj","custom_liquid_T7RRLB","icon_with_text_ngUGpR","custom_liquid_PEbtxe","image_with_text_zJhwhJ","custom_liquid_bBkwGJ","collapsible_content_4F8ffL","rich_text_KmMN7n","rich_text_VJNk4X","contact_form_T3V7XG"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "rich_text_JPy3zj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8y68yx": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_Unt4Kk": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_UnD4pF": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_8y68yx",
+        "text_Unt4Kk",
+        "button_UnD4pF"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "custom_liquid_T7RRLB": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "icon_with_text_ngUGpR": {
+      "type": "icon-with-text",
+      "blocks": {
+        "item_gTgaLm": {
+          "type": "item",
+          "settings": {
+            "icon": "price_tag",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "Place Your Order",
+            "text": "<p>Find your favourite items and checkout using a variety of payment and finance options.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_MC4MKd": {
+          "type": "item",
+          "settings": {
+            "icon": "stopwatch",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "Await Confirmation",
+            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_6CGCFb": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "box",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "#c66969",
+            "heading": "Guarantee heading",
+            "text": "<p>Share information about your products, policies or services.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_xrTYWQ": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "The Day Of Delivery",
+            "text": "<p>You'll receieve a live tracking link and our two-person team will deliver your items. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "item_ypLzVb": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "enable_custom_size_icon": false,
+            "custom_size_icon": 30,
+            "custom_icon_background": "",
+            "heading": "Enjoy Your New Furniture",
+            "text": "<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_gTgaLm",
+        "item_MC4MKd",
+        "item_6CGCFb",
+        "item_xrTYWQ",
+        "item_ypLzVb"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "customized-width",
+        "customize_width": 1200,
+        "heading": "What To Expect",
+        "heading_size": "default",
+        "text": "",
+        "text_margin_top": 16,
+        "text_alignment": "center",
+        "margin_bottom": 60,
+        "blocks_heading_font": "font-body",
+        "blocks_heading_size": "text-body",
+        "blocks_text_size": "default",
+        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "use_custom_color": true,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(237, 233, 226, 1), rgba(247, 231, 223, 1) 66%)",
+        "layout": "vertical",
+        "enable_background_icon": true,
+        "type_vertical": "carousel",
+        "arrows_type": "all",
+        "text_animation": "none",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "custom_liquid_PEbtxe": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_zJhwhJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FtzRWC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>Live Delivery Tracking<\/h3>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_hB8Ee3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br\/><br\/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br\/><br\/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_FtzRWC",
+        "text_hB8Ee3"
+      ],
+      "disabled": true,
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "image": "shopify:\/\/shop_images\/Screenshot_2024-04-16_at_09.19.16.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "custom_liquid_bBkwGJ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collapsible_content_4F8ffL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_cxfHjW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Company Details",
+            "icon": "none",
+            "row_content": "<p>We are DYP Ltd T\/A Honeypot Furniture, and we operate honeypotfurniture.co.uk. We are a limited company registered in England and Wales (registration number: 15439739) and our registered office is 109 Coleman Road, Leicester, England, LE5 4LE.<br\/><\/p><p>1.1 In order to contact us, please use the details on our Contact Us page.<br\/><\/p><p>1.2 If we have to contact you, we will do so by telephone, text message or by writing to you at the email address or postal address you have provided to us in your order.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RwtpbP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Terms",
+            "icon": "none",
+            "row_content": "<p>2.1 Please note that by ordering our products, you agree to be bound by these terms and conditions.<\/p><p>2.2 Before you submit your order with us, please carefully read through these terms and conditions. These terms tell you who we are, how we will provide products to you, how you and we may change or end the contract and what to do if there is a problem. If you think that there is a mistake in these terms, please contact us in order to discuss. We may amend these terms from time to time without notice.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gLEjmt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Our Contact With You",
+            "icon": "none",
+            "row_content": "<p>3.1 All orders made through our website are subject to our acceptance.. We will confirm your order has been placed successfully via email, at which point a contract will come into existence between you and us.<\/p><p>3.2 If we are unable to accept your order, we will inform you of this and will not charge you for the product(s). This might be due to stock issues or because we have identified an error in the price or description of the product.<\/p><p>3.3 Our website is solely for the promotion of our products to certain areas of the UK. Please see our Delivery Page for more information about where we deliver. Please read the page before placing your order as your delivery address may be in an exclusion zone or incur an extra charge.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_89tqT6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Your Rights To Amend",
+            "icon": "none",
+            "row_content": "<p>4.1 If you wish to amend your order please contact us at least 48 hours before your delivery is due. We will advise you if the change is possible. If there are any changes to your order due to the requested change, such as the price of the goods or delivery lead time, we will inform you and confirm you still want to go ahead with the requested change. Once confirmed, we will email you a confirmation of the changes you have made.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bzrhWP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Products",
+            "icon": "none",
+            "row_content": "<p>5.1 The images of the products on our website are for illustrative purposes only. Although we have made every effort to display the product’s colours accurately, we cannot guarantee that your device will display the colours accurately relative to the colour of the product. Your product may vary slightly from the displayed images. Your monitor and screen settings can heavily affect how the colours of our products may appear for you on our website.<\/p><p>5.2 Although we make every effort to be as accurate as possible, our products are handmade and as such, there may be slight variations in the dimensions we display on our website.<\/p><p>5.3 If you buy the same products at different times we cannot guarantee they will match in colour and size due to variations between production batches.<\/p><p>5.4 Whilst every care is taken to ensure the dimensions on our website are correct, we do operate a 3% tolerance of the dimensions advertised.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qV97M9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Delivery",
+            "icon": "none",
+            "row_content": "<p>6.1 Deliveries to England and Wales incur a cost of £49, selected Scotland postcodes incur a cost of £99 and deliveries to Northern Ireland incur a cost of £125. The delivery charge is non-refundable once the item has been despatched from our warehouse. If you miss a delivery, you will have to pay the delivery fee again. If you return your item for a refund, your delivery fee cannot be refunded, additionally, if you reject the delivery the delivery fee cannot be refunded in this instance also. You can find more information about delivery and charges on our delivery page.<\/p><p>6.2 We will contact you to agree a delivery date for your product(s) once you have placed your order and it is confirmed. Our delivery vans visit certain areas on specific days of the week, so your delivery will be arranged for the first available day when we deliver in your area. Please use our postcode checker to find the delivery day for your area. If the product you ordered is out of stock, we will arrange delivery for the next possible delivery day in your area depending on the arrival date of your product.<\/p><p>6.3 We advertise that we are able to deliver to customers between 1-7 working days, however this is not possible in certain postcode areas. The postcode areas exempt from this service and we advise deliveries will take between 1-14 working days for are:<\/p><p>AB, DD1-11, DG, EH, FK, G, IV1-63, KA1-26, KW1-14, KY, ML, PA1-38, PA80, PH1-50, NE19, NE48-49, NE61-71, TD, CA, LA, LL15-16, LL20-78, SY17-20, SY23-25, TN 19 -TN 22, TN 28 -TN 29, TN31 - TN40, EX, PL, TQ, TR1-20, TR26-27, BT<\/p><p>   • We are unfortunately unable to deliver to certain postcodes within the United Kingdom. A full list of these postcodes are: HS, KA27-28, KW15-17, PA41-78, PH41-44,PO30-41, TR21-25, ZE<\/p><p>6.4 Deliveries usually take place between 7am and 7pm and the drivers will attempt to call you approximately one hour before arrival. We always endeavour to deliver within the agreed time frame and date, however, there are rare occasions when factors outside of our control hinder our ability to do so. These factors include but are not limited to vehicle breakdowns and traffic issues. There may be occasions when our delivery team will therefore arrive earlier or later than the expected time. If rare occurrences like this take place, we will always endeavour to keep you informed.<\/p><p>6.5 We hold no responsibility for delays outside of our control. If unforeseen circumstances do arise, we will contact you to explain the situation. In the event of long delays, you have the right to cancel your order and receive a full refund for any products paid for and not yet received. In rare circumstances, we may have to cancel your order entirely, in which case we will refund you in full.<\/p><p>6.6 The buyer will inspect the goods upon delivery and will notify the seller immediately of any damages or shortages. Any damage to the goods should be notified to the seller immediately and signed as damaged on the courier’s paperwork. No claims can be made for any goods signed for as received in good condition. If you, the buyer, fail to comply with this clause the seller will not be held legally liable in any respect of complaint which should have been brought to our attention within the time period stated above.<\/p><p>6.7 For sofa orders delivered to England, Wales and Scotland, as part of the paid delivery service, we offer assembly at the point of use and this will be carried out by our two-person delivery team. Please choose your room before the delivery team arrives, as they are not contractually bound to move the sofa to another location once the sofa is set up. Please also create a clear path from the entrance to the room of choice to allow our delivery team to operate safely and reduce the chance of damage to the sofa. Our delivery team have been trained to handle and transport furniture carefully, safely and efficiently; and on rare occasions, they hold the right to refuse this service where safety to them or the products are deemed to be at risk.<\/p><p>6.8 The vast majority of the time we are able to deliver through any standard UK door, however, depending on the product or access route, the product may not fit through an entrance. When this occurs, we will usually take the product back to our warehouse and a member of the sales team will contact you and advise on a product that will be more likely to fit through your entrance. You have the right to accept delivery if the product will not fit through the entrance however, when accepted, we are not liable for any damage caused thereafter to the property or product.<\/p><p>6.9 LIMITS ON DELIVERY<\/p><ul><li>6.9.1 A responsible adult (18+) must be available to supervise and accept delivery.<\/li><li>6.9.2 We will only deliver to ground floor residences, or to first floor where access is easy, or to higher floors where there is an adequate and working lift. If delivery is required to higher floors and there is no lift or the lift is not big enough to take the items, we will deliver to the ground floor only and ask that you get help in taking the products upstairs.<\/li><li>6.9.3 Your property must be within 100m of a road or hard-surfaced track.<\/li><li>6.9.4 You must ensure it is safe for the order to be delivered to the relevant room in your house.<\/li><li>6.9.5 Changes to your order, including your delivery details, must be requested at least 2 working days before your scheduled delivery date. We cannot guarantee that any changes requested after this time can be honoured, and this may affect your delivery date.<\/li><li>6.9.6 Only sofas and sofa beds will be delivered to the point of use within your property, provided there is safe and suitable access as per clause 6.9.2. Our delivery personnel will not be responsible for any disassembly or removal of existing furniture.<\/li><li>6.9.7 Flatpack items will only be delivered to the ground floor and will not be assembled or taken to the point of use within your property. It is your responsibility to transport and assemble the flatpack items to the desired location.<\/li><\/ul><p><\/p><p>6.10 A £100 re-delivery fee may apply if:<\/p><p><\/p><ul><li>6.10.1 Nobody is present at your delivery address to accept delivery during your agreed delivery window.<\/li><li>6.10.2 You cancel or re-arrange the delivery date within 48 hours of the agreed delivery date.<\/li><li>6.10.3 There is no safe means of access to the place of delivery or we are otherwise unable to deliver because of the limits in 6.7<\/li><\/ul><p><\/p><p>6.11 If you have employed a third-party to collect your order from us and deliver to you, or you are collecting the products yourself, we will not be liable for any damage to the product once it leaves our warehouse. You can contact us to arrange collection from our premises during working hours.<\/p><p>6.12 We hold the right to cancel your order if you are in breach of the contract as stipulated below:<\/p><p>6.12.1 If you do not provide us with the necessary information that enables us to deliver the products to you.<\/p><p>6.12.2 If you do not make payment by the due date.<\/p><p>6.12.3 If you do not agree to a delivery date within a reasonable period of time from the date of placing your order.<\/p><p>6.12.4 As part of our paid delivery service, we deliver and set up your sofa inside the property. In the unlikely event that your property does receive any damage, we are unable to reimburse any costs to repair or replace any item. If you would prefer, our team can deliver to your doorstep instead.<br\/><br\/>6.13 Satisfaction Guarantee and Immediate Return Policy<\/p><p>At Honeypot Furniture, we are committed to ensuring our customers are completely satisfied with their purchases. Therefore, we offer an exclusive opportunity for customers to return a sofa with our delivery drivers if they are not fully satisfied at the time of delivery.<\/p><p>Key Points of this Policy:<\/p><p>Immediate Return: Customers have the option to return the sofa with our delivery drivers at no additional charge and receive a full refund, provided the return is initiated while the drivers are still on the premises.<\/p><p>Final Decision: Once the delivery drivers have left the premises, this immediate return option is no longer available. Any subsequent returns will be subject to our standard return policy and may incur additional fees.<\/p><p>This policy is designed to give our customers peace of mind during the delivery process and ensure that you are entirely happy with your purchase from Honeypot Furniture.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Bpmcny": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Returns and Exchanges",
+            "icon": "none",
+            "row_content": "<p>7.1 You have a right to cancel your order within 14 days of receiving it. All returns must be approved by us within 14 days of delivery and subsequently returned to us within 14 days to our warehouse. We will not process any returns after 14 days.<br\/><\/p><p>7.2 Please request your return by calling our team on 01476 589 446 and asking for the Customer Service team. All returns must be delivered to our warehouse at your own expense, where they will be inspected. Any returned items must be in an unused, brand-new condition and wrapped in sufficient packaging. 7.3 If you place an incorrect order and would like to exchange the item for a different colour or variation, you will also have to follow the above procedure. Please request your exchange via the form on the Returns & Exchanges page. All returns must be delivered to our warehouse at your own expense, where they will be inspected. Any returned items must be in an unused, brand-new condition and wrapped in sufficient packaging.<\/p><p>7.4 Any damages to the product must be reported within 48 hours of delivery or Honeypot Furniture Outlet Ltd will not be held liable.<\/p><p>7.5 If an item is sent back damaged or used, we have the right to only refund back the resale value. This can be up to 100% if it is deemed unsellable, so please be careful and cautious when returning.<\/p><p>7.6 A refund can only be given when the items have been returned to our warehouse where they will be inspected for any damage or signs of use. Refunds will be processed after the items have been returned to us and may take up to 14 working days. The return address is: DYP Ltd T\/A Honeypot Furniture, HoneyPot Lane, Colsterworth, Grantham, NG33 5LY<\/p><p>7.7 Please note our returns and refunds policy does not apply to business customers. It is the responsibility of the business to ensure that the products purchased meet the standards required for the environment in which they will be used.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DB6XBe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "If There's a Problem With The Product",
+            "icon": "none",
+            "row_content": "<p>8.1 If there is a problem with your product(s) and you let us know about it:<\/p><p>8.1.1 Within 30 days of delivery, and it was recorded on delivery - you are entitled to a collection with refund, or a replacement. This doesn't constitute for partial deliveries or if any parts are missing, they will instead be sent to you as a matter of priority. If within 30 days of delivery and a fault was not recorded on delivery we may need to investigate further. For example sending a technician to investigate, before we can offer a resolution.<\/p><p>8.1.2 within the first 6 months from delivery, we will attempt to repair the item or organise a replacement; and any damage will be assessed by a third party furniture servicing and repair company to ascertain the cause and extent of the damage.<\/p><p>8.1.3 after the first 6 months, it’s your responsibility to prove that it’s faulty and that any problems are a manufacturer fault.<\/p><p>8.2 If you let us know about a fault with your order, we may need you to provide evidence of the fault, and we may need to carry out an inspection of the goods at your property, using an independent third party to determine the cause of the fault. We will also review the fault against any evidence regarding what condition your order was in at the point of delivery.<\/p><p>8.3 We are under a legal duty to supply products that comply with our contract with you. Nothing in these terms will affect your legal rights.<\/p><p>8.4 All our products come with a 1-year manufacturer’s guarantee excluding ex-display models, unless otherwise stated. The guarantee starts from the date of delivery and offers cover against manufacturing defects or any defects which may arise, under normal use, through faulty factory workmanship, including sofa bed and recliner mechanisms. For more detail see our Warranty Page. This does not affect your legal rights.<\/p><p>8.5 If a faulty product needs to be returned, and is proven to be a manufacturer fault, then there will be no additional charges for delivery.<\/p><p>8.6 Ex display models are not subject to our manufacturer’s guarantee unless specifically stated, as they will have been used for some time. These models may have some damage which is taken into account in the price. You should carefully inspect any ex display models to ensure you are aware of any issues. This does not affect your legal rights.<\/p><p>8.7 In the event of a complaint from a sale where finance was the payment method we will work to resolve this in-house with you and in line with the Financial Conduct Authority (https:\/\/www.fca.org.uk\/) & Financial Ombudsman Service (https:\/\/www.financial-ombudsman.org.uk\/) requirements.<\/p><p>8.8 Deductions can be made to your refund for excessive wear and tear or non - manufacturing related damage. In the rare instance that this happens, we would get in touch with you to advise of the deduction once the returned product has been thoroughly inspected.<\/p><p>8.9 As a furniture company, we take the Consumer Rights Act of 2015 very seriously. We understand that our customers have the right to expect their furniture to be of satisfactory quality, fit for purpose, and as described. If any of our products are faulty, we encourage our customers to exercise their right to reject the item and request a refund or replacement. We will always aim to resolve any issues as quickly and efficiently as possible, and we are committed to upholding our obligations under the Consumer Rights Act to ensure that our customers receive the high-quality products they expect and deserve.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LLkWWX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Guarantee",
+            "icon": "none",
+            "row_content": "<p>9.1 The guarantee starts from the delivery date of the original product and offers cover against manufacturing defects on the construction of the frame and frame springs for 1 year.<\/p><p>9.2 There are some things that aren’t covered by your guarantee. For example, deliberate damage – like treating it roughly or not using the right products to maintain it. It also doesn’t cover your sofa for use in a workplace or business – only for use in your home.<\/p><p>9.3 Your 1-year guarantee only belongs to you. So, if you sell or give away your sofa, the warranty ends.<\/p><p>9.4 Please be advised your 1 year guarantee only includes 1 exchange where required\/necessary. If your item is replaced\/exchanged the new item will not hold a guarantee. This does not affect your statutory rights.<\/p><p>9.5 As a consumer you have certain rights regarding defective goods and this guarantee is given in addition to and not in substitution of your statutory rights. This guarantee applies to mainland UK only.<\/p><p>9.6 The guarantee is subject to the following conditions: The furniture has been installed by Honeypot Furniture in the U.K. You have properly cared for and used the goods and followed any instructions provided by us, particularly in the case of gloss and high sheen furniture. The furniture has been used for normal domestic purposes only. The guarantee is personal to you and is not transferable. The furniture has not been altered, or interfered with, by any other persons not authorised to do so by Honeypot Furniture. Any repair work must be undertaken by Honeypot Furniture or our appointed agent. This does not include the fitting\/replacement of the items listed below which are not covered under our guarantee. Any parts removed during repair works that are subsequently replaced become the property of DYP Ltd T\/A Honeypot Furniture.<\/p><p>9.7 The guarantee does not cover: Any damage caused by wear and tear – this includes flat or saggy cushions. Natural colour fading caused by prolonged exposure to direct sunlight. Movement of wardrobe infill or worktop caused by the natural movement of the house’s structure for installations over 30 days old. This also includes the settlement of furniture if fitted on top of the carpet. Fitting of any small item replacements, for example, handles, hanging rails, etc. Electrical and light fittings, bulbs, mirrors, and glass. Door and drawer adjustments and caulking, refitting of drawers removed from drawer runners. Accidental damage caused as a result of unexpected and non-deliberate action. If the furniture is required to be removed from the room’s structure the warranty does not cover re-decoration or damage to flooring. This will be the responsibility of the consumer to make good. All consumables required to replace faulty parts will be charged for; these include, but are not limited to, screws, filler, brackets, etc. Any fitting issues reported outside of 30 days from original installation date<\/p><p>9.8 Please note: We shall at our discretion repair, replace or reinstall parts as required. Due to natural colour fading on your existing furniture there may be a slight colour variation or plumper cushions in any items replaced which is out of Honeypot Furniture's control.<\/p><p>9.9 5 Year Structural Frame Guarantee. All our hardwood sofa frames are guaranteed against manufacturing defects when notified to us within 5 years from the day of delivery. The defects must be an inherent manufacturing defect in the structural hardwood framework of the sofa and this will be ascertained by an independent body such as Castelan or Homeserve. Inherent manufacturing defects do not include boards, springs, padding, mechanisms, mattresses or upholstery. The guarantee does not cover general wear and tear and we will not accept any liability for damage caused by accidental damage or improper use. You can make a claim via the guarantee Claim Form on the guarantee page. AS A CONSUMER YOU HAVE STATUTORY PROTECTION REGARDING FAULTY OR MISDESCRIBED GOODS OR INADEQUATE SERVICES SUCH AS INSTALLATION. THESE TERMS DO NOT AFFECT THOSE RIGHTS. If you have any questions, please feel free to contact us directly by email at cs@honeypotfurniture.co.uk<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ajVkUc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Pricing and Payments",
+            "icon": "check_mark",
+            "row_content": "<p>10.1 All prices listed are inclusive of VAT.<\/p><p>10.2 We endeavour to provide the correct pricing in product listings on all platforms we operate, including the website.<\/p><p>10.3 The price displayed at the time of your order will be the price you receive and is secured when payment is made. If pricing changes after you’ve secured your order, this will not affect the price you have received.<\/p><p>10.4 If you are securing a price through our finance provider then this occurs when paying your deposit and will not be affected by any price increases thereafter.<\/p><p>10.5 If a price was displayed in error, we will contact you to inform you, cancel the order and issue a full refund.<\/p><p>10.6 We only accept payments in UK Pounds Sterling (GBP)<\/p><p>10.7 We reserve the right to reject payments made by credit or debit cards that aren’t registered to the delivery address. This is in accordance with the anti-fraud rules employed by the payment systems we use, as well as the finance provider we partner with.<\/p><p>10.8 If utilising the finance provider’s services your contract is with them and not DYP Ltd T\/A Honeypot Furniture, therefore, all queries relating to that contract should be directed to them and not us.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_cxfHjW",
+        "collapsible_row_RwtpbP",
+        "collapsible_row_gLEjmt",
+        "collapsible_row_89tqT6",
+        "collapsible_row_bzrhWP",
+        "collapsible_row_qV97M9",
+        "collapsible_row_Bpmcny",
+        "collapsible_row_DB6XBe",
+        "collapsible_row_LLkWWX",
+        "collapsible_row_ajVkUc"
+      ],
+      "settings": {
+        "heading": "",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "top_subheading": "",
+        "top_text": "",
+        "top_icon_1": "chat_buble",
+        "top_heading_1": "",
+        "top_icon_2": "mail",
+        "top_heading_2": "",
+        "bottom_text": "",
+        "bottom_button_label": "",
+        "bottom_button_link": "",
+        "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "rich_text_KmMN7n": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6WQKqH": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_wiCNHR": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "Download Returns Label",
+            "primary_button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0857\/1358\/4415\/files\/Returns-Label_1.pdf?v=1713341863",
+            "primary_button_type": "default",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_6WQKqH",
+        "button_wiCNHR"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "background-1",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_VJNk4X": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WzGjnp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have An Unanswered Question?",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_VRVjpj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If our Terms and Conditions haven't answered all of your questions,please state your query below.<\/p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_K66LFe": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "primary_button_type": "default",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_type": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_WzGjnp",
+        "text_VRVjpj",
+        "button_K66LFe"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "contact_form_T3V7XG": {
+      "type": "contact-form",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "heading": "Contact form",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_JPy3zj",
+    "custom_liquid_T7RRLB",
+    "icon_with_text_ngUGpR",
+    "custom_liquid_PEbtxe",
+    "image_with_text_zJhwhJ",
+    "custom_liquid_bBkwGJ",
+    "collapsible_content_4F8ffL",
+    "rich_text_KmMN7n",
+    "rich_text_VJNk4X",
+    "contact_form_T3V7XG"
+  ]
+}
