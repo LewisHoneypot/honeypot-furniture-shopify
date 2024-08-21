@@ -118,7 +118,9 @@
     <script src="{{ 'ShowMoreButton.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'DrawerOpeners.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'PreloadScreen.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'collection' -%}
+      <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     <script src="{{ 'SliderComponentProduct.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'CategorySlide.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'AnchorTarget.js' | asset_url }}" defer="defer"></script>
