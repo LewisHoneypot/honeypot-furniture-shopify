@@ -322,27 +322,7 @@
                     </div>
                   {%- endif -%}
                 </{% if block.settings.show_appstore == true %}div{% else %}footer-collapse{% endif %}>
-              {%- when 'whatsapp' -%}
-
-                <script>
-                  console.log('always_open?', {{ section.blocks.always_open }});
-                </script>
-
-                {%- if section.blocks.always_open == true -%}
-                  <script>
-                    console.log('always_open?', {{ section.blocks.always_open }});
-                    document.addEventListener("DOMContentLoaded", function() {
-                      var stickyElement = document.getElementById("whatsApp-Sticky");
-                      if (stickyElement) {
-                        stickyElement.setAttribute("open", "true");
-                        console.log('open attribute added');
-                      } else {
-                        console.log('Element not found');
-                      }
-                    });
-                  </script>
-                {%- endif -%}
-                
+              {%- when 'whatsapp' -%}                
                 <footer-collapse class="footer-block whatsApp footer-block--{{ block.type }} d-block w-100 {% if section.settings.type_style == 'classy' %} spacing{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {{ block.shopify_attributes }}
                   {% if settings.animations_reveal_on_scroll %}
@@ -387,6 +367,26 @@
                         </svg>
                       </span>
                       <span class="text">{{ block.settings.EmailButtonText }}</span>
+
+                      <script>
+                        console.log('always_open?', {{ section.blocks.always_open }});
+                      </script>
+      
+                      {%- if section.blocks.always_open == true -%}
+                        <script>
+                          console.log('always_open?', {{ section.blocks.always_open }});
+                          document.addEventListener("DOMContentLoaded", function() {
+                            var stickyElement = document.getElementById("whatsApp-Sticky");
+                            if (stickyElement) {
+                              stickyElement.setAttribute("open", "true");
+                              console.log('open attribute added');
+                            } else {
+                              console.log('Element not found');
+                            }
+                          });
+                        </script>
+                      {%- endif -%}
+      
                       <div class="button-main main-arrow-classic d-flex z-index-2 p-l" style="--p-l: 3rem; margin-left:auto;">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
