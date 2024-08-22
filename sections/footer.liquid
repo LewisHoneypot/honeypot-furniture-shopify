@@ -550,7 +550,7 @@
   </div>
 </footer>
 
-{%- if blocks.always_open == true -%}
+{%- if blocks.always_open = true -%}
   <script>
     console.log('always_open?', {{ blocks.always_open }});
     document.addEventListener("DOMContentLoaded", function() {
