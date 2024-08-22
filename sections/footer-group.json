@@ -111,7 +111,7 @@
         "whatsapp_hGmeMU": {
           "type": "whatsapp",
           "settings": {
-            "always_open": false,
+            "always_open": true,
             "heading": "Need Help?",
             "AvailabilityHeader": "",
             "AvailabilityText1": "",
