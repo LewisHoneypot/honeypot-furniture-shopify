@@ -319,7 +319,7 @@
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
-        "description": "",
+        "description": "{{ product.title }}",
         "enable_autoplay": false,
         "enable_video_looping": true,
         "desktop_content_position": "middle-center",
@@ -407,6 +407,8 @@
         "text": "",
         "button_label": "",
         "button_link": "",
+        "mobile_button_alignment": "mx-auto",
+        "desktop_button_alignment": "mx-sm-auto",
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
