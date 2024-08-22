@@ -369,12 +369,12 @@
                       <span class="text">{{ block.settings.EmailButtonText }}</span>
 
                       <script>
-                        console.log('always_open?', {{ section.blocks.always_open }});
+                        console.log('always_open?', {{ block.settings.always_open }});
                       </script>
       
-                      {%- if section.blocks.always_open == true -%}
+                      {%- if block.settings.always_open == true -%}
                         <script>
-                          console.log('always_open?', {{ section.blocks.always_open }});
+                          console.log('always_open?', {{ block.settings.always_open }});
                           document.addEventListener("DOMContentLoaded", function() {
                             var stickyElement = document.getElementById("whatsApp-Sticky");
                             if (stickyElement) {
