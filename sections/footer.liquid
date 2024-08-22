@@ -550,6 +550,14 @@
   </div>
 </footer>
 
+{%- if always_open == true -%}
+  <script>
+    window.onload = function() {
+      document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
+    };
+  </script>
+{%- endif -%}
+
 {% schema %}
 {
   "name": "t:sections.footer.name",
@@ -1875,11 +1883,3 @@
   }
 }
 {% endschema %}
-
-{%- if always_open == true -%}
-  <script>
-    window.onload = function() {
-      document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
-    };
-  </script>
-{%- endif -%}
