@@ -40,8 +40,8 @@
               </div>
             {%- endif -%}
             {%- if section.settings.button_label != blank -%}
-              <div class="p-w__header--item">
-                <a {% if section.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }}  button--transparent mi-w" aria-label="{{ section.settings.link_label | escape }}" style="--mi-w: 24rem;">
+              <div class="p-w__header--item w-100 d-flex">
+                <a {% if section.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} button--transparent mi-w {{ section.settings.desktop_button_alignment }} {{ section.settings.mobile_button_alignment }}" aria-label="{{ section.settings.link_label | escape }}" style="--mi-w: 24rem;">
                   <span class="text">{{ section.settings.button_label | escape }}</span>
                   {% render 'button-main-style' %}
                 </a>
@@ -263,6 +263,44 @@
     "type": "url",
     "id": "button_link",
     "label": "t:sections.all.button_link.label"
+  },
+  {
+    "type": "select",
+    "id": "mobile_button_alignment",
+    "options": [
+    {
+      "value": "mr-auto ml-1",
+      "label": "t:sections.all.mobile_button_alignment.options__1"
+    },
+    {
+      "value": "mx-auto",
+      "label": "t:sections.all.mobile_button_alignment.options__2"
+    },
+    {
+      "value": "ml-auto mr-1",
+      "label": "t:sections.all.mobile_button_alignment.options__3"
+    }],
+    "default": "mx-auto",
+    "label": "t:sections.all.mobile_button_alignment.label"
+  },
+  {
+    "type": "select",
+    "id": "desktop_button_alignment",
+    "options": [
+    {
+      "value": "mr-sm-auto ml-sm-1",
+      "label": "t:sections.all.desktop_button_alignment.options__1"
+    },
+    {
+      "value": "mx-sm-auto",
+      "label": "t:sections.all.desktop_button_alignment.options__2"
+    },
+    {
+      "value": "ml-sm-auto mr-sm-1",
+      "label": "t:sections.all.desktop_button_alignment.options__3"
+    }],
+    "default": "mx-sm-auto",
+    "label": "t:sections.all.desktop_button_alignment.label"
   },
   {
     "type": "select",

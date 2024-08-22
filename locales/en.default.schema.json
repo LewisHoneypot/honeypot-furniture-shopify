@@ -876,6 +876,12 @@
         "options__3": "Right",
         "label": "Desktop content alignment"
       },
+      "desktop_button_alignment": {
+        "options__1": "Left",
+        "options__2": "Center",
+        "options__3": "Right",
+        "label": "Desktop button alignment"
+      },
       "desktop_content_position": {
         "options__1": "Top left",
         "options__2": "Top center",
@@ -1101,6 +1107,12 @@
         "options__2": "Center",
         "options__3": "Right",
         "label": "Mobile content alignment"
+      },
+      "mobile_button_alignment": {
+        "options__1": "Left",
+        "options__2": "Center",
+        "options__3": "Right",
+        "label": "Mobile button alignment"
       },
       "mobile_image": {
         "label": "Mobile image"
