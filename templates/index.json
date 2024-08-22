@@ -811,11 +811,16 @@
           "settings": {
             "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
             "image_picker_link1": "shopify:\/\/pages\/finance",
+            "image_picker_alt1": "Snap Finance",
             "image_picker_link2": "shopify:\/\/pages\/klarna",
+            "image_picker_alt2": "",
             "logo3": "shopify:\/\/shop_images\/clearpay-logo-grey.webp",
             "image_picker_link3": "shopify:\/\/pages\/clearpay",
+            "image_picker_alt3": "Clearpay",
             "image_picker_link4": "",
-            "image_picker_link5": ""
+            "image_picker_alt4": "",
+            "image_picker_link5": "",
+            "image_picker_alt5": ""
           }
         },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-2": {
