@@ -59,7 +59,6 @@
                 class="d-block pos-absolute pos-absolute-c-c w-100 h-100 b-none no-js-hidden {% if section.settings.video_url.type == 'youtube' %}js-youtube{%- else -%}js-video{%- endif -%}"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
-                alt="test"
                 title="{{ section.settings.video_description | default: shop.name | escape }}"
             ></iframe>
           {%- else -%}
@@ -71,6 +70,7 @@
                   loop: section.settings.enable_video_looping,
                   controls: true,
                   muted: false,
+                  alt: "test",
                   class: 'pos-absolute top-0 left-0 w-100 h-100'
           }}
           {%- endif -%}
