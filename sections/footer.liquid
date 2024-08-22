@@ -323,8 +323,12 @@
                   {%- endif -%}
                 </{% if block.settings.show_appstore == true %}div{% else %}footer-collapse{% endif %}>
               {%- when 'whatsapp' -%}
-                
-                {%- if section.blocks.always_open = true -%}
+
+                <script>
+                  console.log('always_open?', {{ section.blocks.always_open }});
+                </script>
+
+                {%- if section.blocks.always_open == true -%}
                   <script>
                     console.log('always_open?', {{ section.blocks.always_open }});
                     document.addEventListener("DOMContentLoaded", function() {
