@@ -552,10 +552,16 @@
 
 {%- if always_open == true -%}
   <script>
-    console.log('always_open?', always_open);
-    window.onload = function() {
-      document.getElementById("whatsApp-Sticky").setAttribute("open", "true");
-    };
+    console.log('always_open?', {{ always_open }});
+    document.addEventListener("DOMContentLoaded", function() {
+      var stickyElement = document.getElementById("whatsApp-Sticky");
+      if (stickyElement) {
+        stickyElement.setAttribute("open", "true");
+        console.log('open attribute added');
+      } else {
+        console.log('Element not found');
+      }
+    });
   </script>
 {%- endif -%}
 
