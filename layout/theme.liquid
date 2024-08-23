@@ -30,6 +30,7 @@
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'clickslice.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
