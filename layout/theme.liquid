@@ -153,6 +153,9 @@
     <script src="{{ 'pageLoadScrollFix.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'trustpilotServiceReviewStars.js' | asset_url }}" defer="defer"></script>
 
+    {% comment %} Insider {% endcomment %}
+    <script src="{{ 'insider-sw-sdk.js' | asset_url }}" defer="defer"></script>
+
     {%- unless template != 'product' -%}
       <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
