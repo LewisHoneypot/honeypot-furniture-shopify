@@ -1,0 +1,48 @@
+{% if collection.metafields.custom.bottom_faq_heading  %}
+<section class="custom-faqs-wrapper clickslice-faq-wrapper">
+  <div class="section">
+    <div class="container">
+      <div class="bottom-faq-tabs">
+          <div class="faq-main-heading-wrapper">
+          {% if collection.metafields.custom.bottom_faq_heading  != blank %}
+          <h2 class="faqmain-heading">{{ collection.metafields.custom.bottom_faq_heading }}</h2>
+            {% endif %}
+          </div>
+        {% assign title = collection.metafields.custom.bottom_faq_title.value %}
+        {% assign title_content = collection.metafields.custom.bottom_faq_contents.value %}
+          <div class="faqtabs">
+             {% for titles in title %}
+            <div class="faqtab">
+              <input type="checkbox" id="chck{{ forloop.index }}" class="faqinput">
+              <label class="faqtab-label" for="chck{{ forloop.index }}"><h2>{{ titles }}</h2></label>
+              <div class="faqtab-content">
+               <p>{{ title_content[forloop.index0] }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.querySelectorAll('.clickslice-faq-wrapper .faqtab-label').forEach(label => {
+    label.addEventListener('click', function(event) {
+        event.preventDefault();
+        let input = document.getElementById(this.getAttribute('for'));
+        input.checked = !input.checked;
+    });
+});
+</script>
+{% endif %}
+{% schema %}
+  {
+    "name": "Bottom Collapsible tabs",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Bottom Collapsible tabs"
+      }
+    ]
+  }
+{% endschema %}
