@@ -1,0 +1,20 @@
+{% if collection.metafields.custom.bottom_description != blank %}
+<section class="section clickslice-section">
+  <div class="container">
+    <div class="collection-bottom-section">
+        {{  collection.metafields.custom.bottom_description }}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% schema %}
+  {
+    "name": "Bottom Description",
+    "settings": [],
+    "presets":[
+      {
+        "name":"Bottom Description"
+      }
+    ]
+  }
+{% endschema %}
