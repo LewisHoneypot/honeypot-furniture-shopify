@@ -132,6 +132,11 @@
           >
             {{ collection.title | escape }}
           </h1>
+          {% if collection.metafields.custom.top_description != blank %}
+            <div class="clickslice-top-description">
+              {{ collection.metafields.custom.top_description }}
+            </div>
+          {% endif %}
           {%- if section.settings.show_collection_description -%}
             <div class="p-w__description rte {{ section.settings.description_size | prepend: 'text-size text-size-' }} m-spacing"
               style="--m-spacing-b: {{ section.settings.text_margin_bottom | plus: 23 }}px;"
