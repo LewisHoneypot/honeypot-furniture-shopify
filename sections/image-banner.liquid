@@ -132,7 +132,7 @@
                         {%- if block.settings.image_picker_link1 != blank -%}
                           <a href="{{ block.settings.image_picker_link1 }}">
                         {%- endif -%}
-                          <img src="{{ block.settings.logo1 | image_url: height: 25 }}" style="margin-right: 15px;">
+                          <img src="{{ block.settings.logo1 | image_url: height: 25 }}" alt="{{ block.settings.image_picker_alt1 }}" style="margin-right: 15px;">
                         {%- if block.settings.image_picker_link1 != blank -%}
                           </a>
                         {%- endif -%}
@@ -143,7 +143,7 @@
                         {%- if block.settings.image_picker_link2 != blank -%}
                           <a href="{{ block.settings.image_picker_link2 }}">
                         {%- endif -%}
-                          <img src="{{ block.settings.logo2 | image_url: height: 25 }}" style="margin-right: 15px;">
+                          <img src="{{ block.settings.logo2 | image_url: height: 25 }}" alt="{{ block.settings.image_picker_alt2 }}" style="margin-right: 15px;">
                         {%- if block.settings.image_picker_link2 != blank -%}
                           </a>
                         {%- endif -%}
@@ -154,7 +154,7 @@
                         {%- if block.settings.image_picker_link3 != blank -%}
                           <a href="{{ block.settings.image_picker_link3 }}">
                         {%- endif -%}
-                          <img src="{{ block.settings.logo3 | image_url: height: 25 }}" style="margin-right: 15px;">
+                          <img src="{{ block.settings.logo3 | image_url: height: 25 }}" alt="{{ block.settings.image_picker_alt3 }}" style="margin-right: 15px;">
                         {%- if block.settings.image_picker_link3 != blank -%}
                           </a>
                         {%- endif -%}
@@ -165,7 +165,7 @@
                         {%- if block.settings.image_picker_link4 != blank -%}
                           <a href="{{ block.settings.image_picker_link4 }}">
                         {%- endif -%}
-                          <img src="{{ block.settings.logo4 | image_url: height: 25 }}" style="margin-right: 15px;">
+                          <img src="{{ block.settings.logo4 | image_url: height: 25 }}" alt="{{ block.settings.image_picker_alt4 }}" style="margin-right: 15px;">
                         {%- if block.settings.image_picker_link4 != blank -%}
                           </a>
                         {%- endif -%}
@@ -176,7 +176,7 @@
                         {%- if block.settings.image_picker_link5 != blank -%}
                           <a href="{{ block.settings.image_picker_link5 }}">
                         {%- endif -%}
-                          <img src="{{ block.settings.logo5 | image_url: height: 25 }}">
+                          <img src="{{ block.settings.logo5 | image_url: height: 25 }}" alt="{{ block.settings.image_picker_alt5 }}">
                         {%- if block.settings.image_picker_link5 != blank -%}
                           </a>
                         {%- endif -%}
@@ -885,6 +885,11 @@
         "label": "Logo 1 Link"
       },
       {
+        "type": "text",
+        "id": "image_picker_alt1",
+        "label": "Logo 1 Alt Tag"
+      },
+      {
         "type": "image_picker",
         "id": "logo2",
         "label": "Logo 2"
@@ -893,6 +898,11 @@
         "type": "url",
         "id": "image_picker_link2",
         "label": "Logo 2 Link"
+      },
+      {
+        "type": "text",
+        "id": "image_picker_alt2",
+        "label": "Logo 2 Alt Tag"
       },
       {
         "type": "image_picker",
@@ -905,6 +915,11 @@
         "label": "Logo 3 Link"
       },
       {
+        "type": "text",
+        "id": "image_picker_alt3",
+        "label": "Logo 3 Alt Tag"
+      },
+      {
         "type": "image_picker",
         "id": "logo4",
         "label": "Logo 4"
@@ -915,6 +930,11 @@
         "label": "Logo 4 Link"
       },
       {
+        "type": "text",
+        "id": "image_picker_alt4",
+        "label": "Logo 4 Alt Tag"
+      },
+      {
         "type": "image_picker",
         "id": "logo5",
         "label": "Logo 5"
@@ -923,7 +943,12 @@
         "type": "url",
         "id": "image_picker_link5",
         "label": "Logo 5 Link"
-      }      
+      },
+      {
+        "type": "text",
+        "id": "image_picker_alt5",
+        "label": "Logo 5 Alt Tag"
+      }
     ]
   }],
   "presets": [

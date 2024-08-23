@@ -102,7 +102,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
-    "favicon": "shopify:\/\/shop_images\/FaviconBee.png",
+    "favicon": "shopify:\/\/shop_images\/Honeypot_Furniture_Favicon_3.png",
     "currency_code_enabled": false,
     "cart_style": "special",
     "cart_type": "drawer",
@@ -245,6 +245,14 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "497739090016974244": {
+        "type": "shopify:\/\/apps\/insider\/blocks\/app-embed\/c7b01eeb-6b78-48a3-a1bb-28dbc584bd41",
+        "disabled": false,
+        "settings": {
+          "insider_object": true,
+          "insider_tag": true
         }
       }
     },
