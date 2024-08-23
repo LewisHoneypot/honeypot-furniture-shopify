@@ -39,21 +39,65 @@
     {% render 'global-script' %}
     <script src="https://shopoe.net/app.js" defer="defer"></script>
 
-    {%- unless template contains 'index' or template contains 'collection' or template contains 'blog' or template contains 'page' -%}
+    {%- unless template contains 'index'
+      or template contains 'collection'
+      or template contains 'blog'
+      or template contains 'page'
+    -%}
       <script src="https://sdk.snapfinance.co.uk/v1/snapuk.min.js" defer="defer"></script>
     {%- endunless -%}
 
-    {% comment %}<script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "g4fmvmhh6m");
-    </script> {% endcomment %}
+    {% comment %} Insider Scripts {% endcomment %}
+    {%- if template == 'index' -%}
+      <script>
+        window.insider_object = window.insider_object || {};
+        window.insider_object.page = {
+          type: 'Home',
+        };
+      </script>
+    {%- endif -%}
+
+    {%- if template contains 'collection' -%}
+      <script>
+        window.insider_object = window.insider_object || {};
+        window.insider_object.page = {
+          type: 'Category',
+        };
+      </script>
+    {%- endif -%}
+
+    {%- if template == 'product' -%}
+      <script>
+        window.insider_object = window.insider_object || {};
+        window.insider_object.page = {
+          type: 'Product',
+        };
+      </script>
+    {%- endif -%}
+
+    {%- if template == 'cart' -%}
+      <script>
+        window.insider_object = window.insider_object || {};
+        window.insider_object.page = {
+          type: 'Basket',
+        };
+      </script>
+    {%- endif -%}
+
+    {% comment %} Clarity Script {% endcomment %}
+    {% comment %}
+      <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "g4fmvmhh6m");
+      </script>
+    {% endcomment %}
   </head>
   <body class="page-{{ request.page_type | replace: 'customers/', '' }} gradient {{ settings.text_size | prepend: 'text-size main-text-' }} {{ settings.heading_size | prepend: 'heading-size main-heading-' }}{% if settings.enable_animated_cursor and settings.animated_cursor_style == 'following' %} cursor-fixed__show{% endif %}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
     {% render 'preload-screen' %}
     {%- if settings.enable_animated_cursor -%}
@@ -91,7 +135,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer="defer"></script>
 
     <script src="{{ 'GlobalBasics.js' | asset_url }}" defer="defer"></script>
-        
+
     <script src="{{ 'Common.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'AnimateElement.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'AnnouncementBar.js' | asset_url }}" defer="defer"></script>
