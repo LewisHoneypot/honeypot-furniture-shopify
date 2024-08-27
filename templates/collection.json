@@ -275,6 +275,16 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 50
       }
+    },
+    "clickslice_bottom_description_n9Yg4N": {
+      "type": "clickslice-bottom-description",
+      "settings": {
+      }
+    },
+    "clickslice_bottom_collapsible_tabs_igpGt9": {
+      "type": "clickslice-bottom-collapsible-tabs",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -282,6 +292,8 @@
     "product-grid",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "collection_list_ig8tXp",
-    "recently-products"
+    "recently-products",
+    "clickslice_bottom_description_n9Yg4N",
+    "clickslice_bottom_collapsible_tabs_igpGt9"
   ]
 }
