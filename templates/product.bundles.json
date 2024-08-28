@@ -309,6 +309,7 @@
     },
     "video_QM4Cg7": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
@@ -400,6 +401,8 @@
         "text": "",
         "button_label": "",
         "button_link": "",
+        "mobile_button_alignment": "mx-auto",
+        "desktop_button_alignment": "mx-sm-auto",
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
