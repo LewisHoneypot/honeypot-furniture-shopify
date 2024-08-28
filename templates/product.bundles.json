@@ -266,7 +266,6 @@
         },
         "dimensions_MmNA4J": {
           "type": "dimensions",
-          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "content_type": "dimensions",
