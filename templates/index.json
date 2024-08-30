@@ -808,6 +808,7 @@
         },
         "logos_UcXRFX": {
           "type": "logos",
+          "disabled": true,
           "settings": {
             "logo1": "shopify:\/\/shop_images\/snap-finance.webp",
             "image_picker_link1": "shopify:\/\/pages\/finance",
