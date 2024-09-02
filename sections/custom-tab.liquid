@@ -199,18 +199,44 @@
                             {{ block.settings.content }}
                           </div>
                         {%- else -%}
-                          <div class="col-12 col-lg-7">
+                          {% comment %} Set dimensions data exists to false {% endcomment %}
+                          {%- assign dimensions_data = false -%}
+
+                          {% comment %} Check if dimensions data exists {% endcomment %}
+                          {%- if product.metafields.Dimensions.Length1 -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          {%- if product.metafields.Dimensions.Depth -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          {%- if product.metafields.Dimensions.Height -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          {%- if product.metafields.Dimensions.FloortoSeatHeight -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          {%- if product.metafields.Dimensions.BackrestHeight -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          {%- if product.metafields.Dimensions.Length2 -%}
+                            {%- assign dimensions_data = true -%}
+                          {%- endif -%}
+                          
+                          <div class="col-12 {% if dimensions_data == true %}col-lg-7{% endif %} center">
                             {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag }}
                           </div>
-                          <div class="col-12 col-lg-4" style="align-self: center;">
-                            <ol style="list-style-position: inside;
-                              -moz-column-count: 2;
-                              -moz-column-gap: 20px;
-                              -webkit-column-count: 2;
-                              -webkit-column-gap: 20px;
-                              column-count: 2;
-                              column-gap: 20px;
-                              ">
+                          <div class="col-12 {% if dimensions_data == true %}col-lg-4{% endif %}" style="align-self: center;">
+                            <ol
+                              style="
+                                list-style-position: inside;
+                                -moz-column-count: 2;
+                                -moz-column-gap: 20px;
+                                -webkit-column-count: 2;
+                                -webkit-column-gap: 20px;
+                                column-count: 2;
+                                column-gap: 20px;
+                              "
+                            >
                               {%- if product.metafields.Dimensions.Length1 -%}
                                 <li>{{ product.metafields.Dimensions.Length1 | replace: '.0', '' }}cm</li>
                               {%- endif -%}
