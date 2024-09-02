@@ -2,8 +2,6 @@
 
 // Function to run your main code
 function initializeTrustPilot() {
-  var $j = jQuery.noConflict();
-
   var productRangeArray = [];
   var trustpilot_skus_array = [];
 
@@ -73,7 +71,7 @@ function initializeTrustPilot() {
     .then((response) => response.json())
     .then((data) => {
       // Target the element with the ID "reviews"
-      var reviewsContainer = $j("#reviews");
+      var reviewsContainer = document.querySelector("#reviews");
 
       // Check if the target element exists
       if (reviewsContainer.length === 0) {
@@ -82,49 +80,57 @@ function initializeTrustPilot() {
       }
 
       // Create the outermost div
-      var outerDiv = $j("<div>")
-        .attr("id", "outerDiv")
-        .appendTo(reviewsContainer);
+      var outerDiv = document.createElement("div");
+      outerDiv.id = "outerDiv";
+      reviewsContainer.appendChild(outerDiv);
 
       if (Array.isArray(data.productReviews)) {
         // If productReviews is an array (array of reviews)
         data.productReviews.forEach((review, i) => {
-          var innerDiv = $j("<div>").addClass("innerDiv").appendTo(outerDiv);
-          var reviewWrapper = $j("<div>")
-            .addClass("review-wrapper row mt-5")
-            .appendTo(innerDiv);
-          var reviewSection = $j("<div>")
-            .addClass("reviewSection pb-sm-3 col-12 col-lg-7 order-1")
-            .appendTo(reviewWrapper);
-          var reviewSectionHeader = $j("<div>")
-            .addClass("reviewSectionHeader pb-sm-3 d-inline-flex")
-            .appendTo(reviewSection);
-          var attributeSection = $j("<div>")
-            .addClass(
-              "attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5"
-            )
-            .appendTo(reviewWrapper);
-          var attributeSectionWrapper = $j("<div>")
-            .addClass("attributeSectionWrapper col-12 p-0")
-            .appendTo(attributeSection);
-          var attributeNames = $j("<div>")
-            .addClass("col-4 p-0 attributeNames")
-            .appendTo(attributeSectionWrapper);
-          var attributeStars = $j("<div>")
-            .addClass("col-8 p-0 attributeStars text-right text-lg-left")
-            .appendTo(attributeSectionWrapper);
-          var userIcon = $j("<div>")
-            .addClass("userIcon userIcon pt-2")
-            .appendTo(reviewSectionHeader);
-          var customerInfo = $j("<div>")
-            .addClass("customerInfo pl-2")
-            .appendTo(reviewSectionHeader);
+          var innerDiv = document.createElement("div");
+          innerDiv.classList.add("innerDiv");
+          outerDiv.appendChild(innerDiv);
 
-          // Check if review.consumer.createdAt exists and is a string
+          var reviewWrapper = document.createElement("div");
+          reviewWrapper.classList.add("review-wrapper", "row", "mt-5");
+          innerDiv.appendChild(reviewWrapper);
+
+          var reviewSection = document.createElement("div");
+          reviewSection.classList.add("reviewSection", "pb-sm-3", "col-12", "col-lg-7", "order-1");
+          reviewWrapper.appendChild(reviewSection);
+
+          var reviewSectionHeader = document.createElement("div");
+          reviewSectionHeader.classList.add("reviewSectionHeader", "pb-sm-3", "d-inline-flex");
+          reviewSection.appendChild(reviewSectionHeader);
+
+          var attributeSection = document.createElement("div");
+          attributeSection.classList.add("attribute-section", "col-12", "col-lg-5", "order-2", "pr-lg-0", "pb-5", "mt-5");
+          reviewWrapper.appendChild(attributeSection);
+
+          var attributeSectionWrapper = document.createElement("div");
+          attributeSectionWrapper.classList.add("attributeSectionWrapper", "col-12", "p-0");
+          attributeSection.appendChild(attributeSectionWrapper);
+
+          var attributeNames = document.createElement("div");
+          attributeNames.classList.add("col-4", "p-0", "attributeNames");
+          attributeSectionWrapper.appendChild(attributeNames);
+
+          var attributeStars = document.createElement("div");
+          attributeStars.classList.add("col-8", "p-0", "attributeStars", "text-right", "text-lg-left");
+          attributeSectionWrapper.appendChild(attributeStars);
+
+          var userIcon = document.createElement("div");
+          userIcon.classList.add("userIcon", "userIcon", "pt-2");
+          reviewSectionHeader.appendChild(userIcon);
+
+          var customerInfo = document.createElement("div");
+          customerInfo.classList.add("customerInfo", "pl-2");
+          reviewSectionHeader.appendChild(customerInfo);
+
+          // Check if review.createdAt exists and is a string
           if (review.createdAt && typeof review.createdAt === "string") {
             // Remove milliseconds and parse the date
-            var dateStringWithoutMilliseconds =
-              review.createdAt.split(".")[0] + "Z";
+            var dateStringWithoutMilliseconds = review.createdAt.split(".")[0] + "Z";
             var reviewDate = new Date(dateStringWithoutMilliseconds);
             var formattedDate = reviewDate.toLocaleDateString("en-US", {
               year: "numeric",
@@ -132,49 +138,57 @@ function initializeTrustPilot() {
               day: "numeric",
             });
 
-            userIcon.html(
-              `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp" class="pb-1" height="24" width="24">`
-            );
-            customerInfo.append(
-              $j('<span class="p-0">').html(
-                `<strong> ${review.consumer.displayName}</strong>` +
-                ", " +
-                formattedDate
-              )
-            );
+            var userIconImage = document.createElement("img");
+            userIconImage.src = "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp";
+            userIconImage.classList.add("pb-1");
+            userIconImage.height = 24;
+            userIconImage.width = 24;
+
+            userIcon.appendChild(userIconImage);
+
+            var customerInfoSpan = document.createElement("span");
+            customerInfoSpan.className = "p-0";
+            customerInfoSpan.innerHTML = `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`;
+            customerInfo.appendChild(customerInfoSpan);
           } else {
-            console.error(
-              "Invalid or missing review date:",
-              review.consumer.createdAt
-            );
+            console.error("Invalid or missing review date:", review.createdAt);
           }
-          customerInfo.append(
-            $j('<span class="d-block mb-2">')
-              .html(getReviewTrustpilotImage(review.stars, review.stars))
-              .append($j("<br>"))
-          );
-          reviewSection.append(
-            $j('<p class="d-block mb-0 py-2">')
-              .text('"' + review.content.trim() + '"')
-              .append($j("<br>"))
-          );
+
+          var trustpilotImageSpan = document.createElement("span");
+          trustpilotImageSpan.className = "d-block mb-2";
+          trustpilotImageSpan.innerHTML = getReviewTrustpilotImage(review.stars, review.stars);
+          trustpilotImageSpan.appendChild(document.createElement("br"));
+          customerInfo.appendChild(trustpilotImageSpan);
+
+          var reviewContentParagraph = document.createElement("p");
+          reviewContentParagraph.className = "d-block mb-0 py-2";
+          reviewContentParagraph.textContent = `"${review.content.trim()}"`;
+          reviewContentParagraph.appendChild(document.createElement("br"));
+          reviewSection.appendChild(reviewContentParagraph);
 
           if (review.attachments) {
-            review.attachments.forEach((attachment, i) => {
-              attachment.processedFiles.forEach((processedFiles, i) => {
-                if (processedFiles.mimeType == "video/mp4") {
-                  reviewSection.append(
-                    $j('<span class="d-block">').html(
-                      '<video src="' + processedFiles.url + '" controls>'
-                    )
-                  );
+            review.attachments.forEach((attachment) => {
+              attachment.processedFiles.forEach((processedFiles) => {
+                if (processedFiles.mimeType === "video/mp4") {
+                  // Create and append video element
+                  var videoSpan = document.createElement("span");
+                  videoSpan.className = "d-block";
+                  var video = document.createElement("video");
+                  video.src = processedFiles.url;
+                  video.controls = true;
+                  videoSpan.appendChild(video);
+                  reviewSection.appendChild(videoSpan);
                 }
-                if (processedFiles.dimension == "360pxWide") {
-                  reviewSection.append(
-                    $j('<span class="d-block">').html(
-                      '<img src="' + processedFiles.url + '" loading="lazy">'
-                    )
-                  );
+
+                if (processedFiles.dimension === "360pxWide") {
+                  // Create and append image element
+                  var imageSpan = document.createElement("span");
+                  imageSpan.className = "d-block";
+                  var img = document.createElement("img");
+                  img.src = processedFiles.url;
+                  img.loading = "lazy";
+                  imageSpan.appendChild(img);
+                  reviewSection.appendChild(imageSpan);
                 }
               });
             });
@@ -184,8 +198,7 @@ function initializeTrustPilot() {
 
           // if honeypot replied
           if (review.firstCompanyComment) {
-            var dateStringWithoutMilliseconds =
-              review.firstCompanyComment.createdAt.split(".")[0] + "Z";
+            var dateStringWithoutMilliseconds = review.firstCompanyComment.createdAt.split(".")[0] + "Z";
             var reviewDate = new Date(dateStringWithoutMilliseconds);
             var formattedDate = reviewDate.toLocaleDateString("en-US", {
               year: "numeric",
@@ -193,84 +206,80 @@ function initializeTrustPilot() {
               day: "numeric",
             });
 
-            reviewSection.append(
-              $j('<span class="customerInfo d-block ml-3 mt-3">')
-                .html(
-                  `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> <strong>Honeypot Furniture</strong>` +
-                  ", " +
-                  formattedDate
-                )
-                .append($j("<br>"))
-            );
-            reviewSection.append(
-              $j('<p class="ml-3 mb-0 py-2">')
-                .text('"' + review.firstCompanyComment.comment.trim() + '"')
-                .append($j("<br>"))
-            );
+            // Create and append the customer info span
+            var customerInfoSpan = document.createElement("span");
+            customerInfoSpan.className = "customerInfo d-block ml-3 mt-3";
+            customerInfoSpan.innerHTML = `
+    <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> 
+    <strong>Honeypot Furniture</strong>, ${formattedDate}
+  `;
+            customerInfoSpan.appendChild(document.createElement("br"));
+            reviewSection.appendChild(customerInfoSpan);
+
+            // Create and append the comment paragraph
+            var commentParagraph = document.createElement("p");
+            commentParagraph.className = "ml-3 mb-0 py-2";
+            commentParagraph.textContent = '"' + review.firstCompanyComment.comment.trim() + '"';
+            commentParagraph.appendChild(document.createElement("br"));
+            reviewSection.appendChild(commentParagraph);
           }
 
           // Display Trustpilot image for each attribute rating
           review.attributeRatings.forEach((attribute) => {
-            var roundedRating = Math.round(attribute.rating * 2) / 2; // Round to the nearest 0.5
-            var trustpilotImage = getReviewTrustpilotImage(
-              roundedRating,
-              roundedRating
-            );
+            var roundedRating = Math.round(attribute.rating * 2) / 2;
+            var trustpilotImage = getReviewTrustpilotImage(roundedRating, roundedRating);
 
-            if (attribute.attributeName == "Value for money") {
+            if (attribute.attributeName === "Value for money") {
               attribute.attributeName = "Value";
             }
 
-            attributeNames
-              .append(
-                $j("<span>").html(
-                  `<strong>${attribute.attributeName}:</strong>`
-                )
-              )
-              .append($j("<br>"));
-            attributeStars
-              .append($j("<span>").html(`${trustpilotImage}`))
-              .append($j("<br>"));
+            var attributeNameSpan = document.createElement("span");
+            attributeNameSpan.innerHTML = `<strong>${attribute.attributeName}:</strong>`;
+            attributeNames.appendChild(attributeNameSpan);
+
+            var lineBreak1 = document.createElement("br");
+            attributeNames.appendChild(lineBreak1);
+
+            var attributeStarsSpan = document.createElement("span");
+            attributeStarsSpan.innerHTML = trustpilotImage;
+            attributeStars.appendChild(attributeStarsSpan);
+
+            var lineBreak2 = document.createElement("br");
+            attributeStars.appendChild(lineBreak2);
           });
 
           // Create a button to toggle additional content
-          var buttonWrapper = $j("<div>").addClass(
-            "buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item"
-          );
-          reviewSection.append(buttonWrapper);
+          var buttonWrapper = document.createElement("div");
+          buttonWrapper.className = "buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item";
+          reviewSection.appendChild(buttonWrapper);
 
-          var toggleButton = $j("<button>").addClass(
-            "button button--style-" +
-            button_style +
-            " mi-w color-" +
-            primary_button_color_scheme +
-            ""
-          );
-          buttonWrapper.append(toggleButton);
+          var toggleButton = document.createElement("button");
+          toggleButton.className = `button button--style-${button_style} mi-w color-${primary_button_color_scheme}`;
+          buttonWrapper.appendChild(toggleButton);
 
-          var buttonSpan = $j("<span>")
-            .addClass("text")
-            .text(primary_button_label);
-          toggleButton.append(buttonSpan);
+          var buttonSpan = document.createElement("span");
+          buttonSpan.className = "text";
+          buttonSpan.textContent = primary_button_label;
+          toggleButton.appendChild(buttonSpan);
 
           // Additional content to toggle (e.g., more details about the review)
-          var additionalContent = $j("<div>")
-            .addClass("additional-content d-lg-block")
-            .hide();
-          attributeSection.append(additionalContent);
+          var additionalContent = document.createElement("div");
+          additionalContent.className = "additional-content d-lg-block";
+          additionalContent.style.display = "none";
+          attributeSection.appendChild(additionalContent);
 
           // Move attribute-section div into additional content
-          attributeSectionWrapper.appendTo(additionalContent);
+          additionalContent.appendChild(attributeSectionWrapper);
 
           // Toggle button click event
-          toggleButton.on("click", function () {
+          toggleButton.addEventListener("click", function () {
             // Toggle visibility of additional content
-            additionalContent.toggle();
-            // Change button text based on visibility
-            if (additionalContent.is(":visible")) {
-              buttonSpan.text("Hide Breakdown");
+            if (additionalContent.style.display === "none") {
+              additionalContent.style.display = "block";
+              buttonSpan.textContent = "Hide Breakdown";
             } else {
-              buttonSpan.text("Rating Breakdown");
+              additionalContent.style.display = "none";
+              buttonSpan.textContent = "Rating Breakdown";
             }
           });
         });
@@ -285,33 +294,48 @@ function initializeTrustPilot() {
 
   // Function to get Trustpilot image based on rating
   function getReviewTrustpilotImage(rating, roundedRatingImage) {
-  var outOf= "";
-    if (rating == "NaN") {
-      $j(".trustpilot-mini-widget").addClass("d-none");
+    var outOf = "";
+    if (isNaN(rating)) {
+      document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
     } else {
-      var imageUrl =
-        "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
-        roundedRatingImage +
-        ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
+      var imageUrl = "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
-      outOf = window.matchMedia('(max-width: 750px)').matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
+      outOf = window.matchMedia("(max-width: 750px)").matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
     }
-    // Return an image tag
-    return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128"><span> ${rating} ${outOf} 5</span>`;
+
+    // Create an image element
+    var img = document.createElement("img");
+    img.src = imageUrl;
+    img.className = "stars-image";
+    img.alt = "Trustpilot Rating";
+    img.height = 24;
+    img.width = 128;
+
+    // Create a span element
+    var span = document.createElement("span");
+    span.textContent = `${rating} ${outOf} 5`;
+
+    // Return the HTML string
+    return img.outerHTML + span.outerHTML;
   }
 
   // Function to get Trustpilot image based on rating
   function getTrustpilotAnchorImage(rating, roundedRatingImage) {
-    if (rating == "NaN") {
-      $j(".trustpilot-mini-widget").addClass("d-none");
+    if (isNaN(rating)) {
+      document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
     } else {
-      var imageUrl =
-        "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
-        roundedRatingImage +
-        ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
+      var imageUrl = "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
-      // Return an image tag
-      return `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128">`;
+      // Create an image element
+      var img = document.createElement("img");
+      img.src = imageUrl;
+      img.className = "stars-image";
+      img.alt = "Trustpilot Rating";
+      img.height = 24;
+      img.width = 128;
+
+      // Return the HTML string
+      return img.outerHTML;
     }
   }
 
@@ -322,7 +346,7 @@ function initializeTrustPilot() {
   // console.log('urlCurrentProductRange', urlCurrentProductRange);
 
   // Target the element with the class "trustpilot-mini-widget"
-  var trustPilotContainer = $j(".trustpilot-mini-widget");
+  var trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
 
   var skuList = trustpilot_skus_array;
 
@@ -350,9 +374,9 @@ function initializeTrustPilot() {
     .then((data) => {
       // console.log(data);
       // create div
-      var outerDiv = $j('<div class="main-trustpilot">').appendTo(
-        trustPilotContainer
-      );
+      var outerDiv = document.createElement("div");
+      outerDiv.className = "main-trustpilot";
+      trustPilotContainer.appendChild(outerDiv);
 
       //check for data
       if (Array.isArray(data.summaries)) {
@@ -376,8 +400,11 @@ function initializeTrustPilot() {
         });
 
         // hide reviews icon if none exist
-        if (amountOfReviews == 0) {
-          $j("[id*='trustpilot_product_reviews_collapsible']").hide();
+        if (amountOfReviews === 0) {
+          var elements = document.querySelectorAll("[id*='trustpilot_product_reviews_collapsible']");
+          elements.forEach(function (element) {
+            element.style.display = 'none';
+          });
         }
 
         let totalCombinedReviews =
@@ -417,81 +444,90 @@ function initializeTrustPilot() {
           roundedRating
         );
 
-      // Create the link with a span inside
-      var reviewsLink = $j(
-        '<div></div>'
-      ).append(
-        $j(
-          "<span style='min-height:24px;'>" +
-            trustpilotImage +
-            '<span class="ammount-of-reviews"> ' +
-            amountOfReviews +
-            ' Reviews</span> <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>'
-          )
-        );
+        // Create the link with a span inside
+        var reviewsLink = document.createElement("div");
+        reviewsLink.innerHTML = `
+  <span style='min-height:24px;'>
+    ${trustpilotImage}
+    <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
+    <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
+  </span>
+`;
 
-        if (amountOfReviews == "0") {
-          // j(".reviews-accordion").css("display", "none");
-          $j(".trustpilot-mini-widget").removeClass("d-lg-block");
-          $j(".trustpilot-mini-widget").addClass("d-lg-none");
+        // Append the reviewsLink to the desired parent element
+        // Example: parentElement.appendChild(reviewsLink);
+
+        // Hide the reviews section if amountOfReviews is "0"
+        if (amountOfReviews === "0") {
+          var trustpilotMiniWidget = document.querySelector(".trustpilot-mini-widget");
+          if (trustpilotMiniWidget) {
+            trustpilotMiniWidget.classList.remove("d-lg-block");
+            trustpilotMiniWidget.classList.add("d-lg-none");
+          }
         }
 
-        var toolTip = $j('<span class="tooltip-content"></span>');
-        var toolTipHeader = $j(
-          '<div class="tooltip-header col-12 px-0 pt-1 pb-3"></div>'
-        );
-        var toolTipHeaderText = $j(
-          "<div>Rated " + outOfFive + " out of 5 stars</div>"
-        );
+        // Create tooltip elements
+        var toolTip = document.createElement('span');
+        toolTip.className = 'tooltip-content';
 
-        // score rows
-        var toolTipFiveStar = $j(
-          '<div class="row"><div class="col-3 py-1">5 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
-          fiveStarFill +
-          '%"></div></div></div><div class="col-2 py-1 px-0">(' +
-          amountOfFiveStarReviews +
-          ")</div></div>"
-        );
-        var toolTipFourStar = $j(
-          '<div class="row"><div class="col-3 py-1">4 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
-          fourStarFill +
-          '%"></div></div></div><div class="col-2 py-1 px-0">(' +
-          amountOfFourStarReviews +
-          ")</div></span>"
-        );
-        var toolTipThreeStar = $j(
-          '<div class="row"><div class="col-3 py-1">3 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
-          threeStarFill +
-          '%"></div></div></div><div class="col-2 py-1 px-0">(' +
-          amountOfThreeStarReviews +
-          ")</div></span>"
-        );
-        var toolTipTwoStar = $j(
-          '<div class="row"><div class="col-3 py-1">2 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
-          twoStarFill +
-          '%"></div></div></div><div class="col-2 py-1 px-0">(' +
-          amountOfTwoStarReviews +
-          ")</div></span>"
-        );
-        var toolTipOneStar = $j(
-          '<div class="row"><div class="col-3 py-1">1 stars</div><div class="col-7 py-1"><div class="score-bar mt-2"><div class="score-bar-fill" style="width: ' +
-          oneStarFill +
-          '%"></div></div></div><div class="col-2 py-1 px-0">(' +
-          amountOfOneStarReviews +
-          ")</div></span>"
-        );
+        var toolTipHeader = document.createElement('div');
+        toolTipHeader.className = 'tooltip-header col-12 px-0 pt-1 pb-3';
 
-        reviewsLink.append(toolTip);
-        toolTip.append(toolTipHeader);
-        toolTipHeader.append(toolTipHeaderText);
-        toolTip.append(toolTipFiveStar);
-        toolTip.append(toolTipFourStar);
-        toolTip.append(toolTipThreeStar);
-        toolTip.append(toolTipTwoStar);
-        toolTip.append(toolTipOneStar);
+        var toolTipHeaderText = document.createElement('div');
+        toolTipHeaderText.innerHTML = `Rated ${outOfFive} out of 5 stars`;
 
-        // Append the anchor link to the outer div
-        outerDiv.append(reviewsLink);
+        // Append the header text to the header
+        toolTipHeader.appendChild(toolTipHeaderText);
+
+        // Create and append the score rows
+        var createScoreRow = function (stars, fill, amount) {
+          var row = document.createElement('div');
+          row.className = 'row';
+
+          var starLabel = document.createElement('div');
+          starLabel.className = 'col-3 py-1';
+          starLabel.textContent = `${stars} stars`;
+
+          var scoreBarWrapper = document.createElement('div');
+          scoreBarWrapper.className = 'col-7 py-1';
+
+          var scoreBar = document.createElement('div');
+          scoreBar.className = 'score-bar mt-2';
+
+          var scoreBarFill = document.createElement('div');
+          scoreBarFill.className = 'score-bar-fill';
+          scoreBarFill.style.width = `${fill}%`;
+
+          scoreBar.appendChild(scoreBarFill);
+          scoreBarWrapper.appendChild(scoreBar);
+
+          var amountLabel = document.createElement('div');
+          amountLabel.className = 'col-2 py-1 px-0';
+          amountLabel.textContent = `(${amount})`;
+
+          row.appendChild(starLabel);
+          row.appendChild(scoreBarWrapper);
+          row.appendChild(amountLabel);
+
+          return row;
+        };
+
+        // Create and append each star rating row
+        toolTip.appendChild(createScoreRow('5', fiveStarFill, amountOfFiveStarReviews));
+        toolTip.appendChild(createScoreRow('4', fourStarFill, amountOfFourStarReviews));
+        toolTip.appendChild(createScoreRow('3', threeStarFill, amountOfThreeStarReviews));
+        toolTip.appendChild(createScoreRow('2', twoStarFill, amountOfTwoStarReviews));
+        toolTip.appendChild(createScoreRow('1', oneStarFill, amountOfOneStarReviews));
+
+        // Append tooltip header to the tooltip
+        toolTip.appendChild(toolTipHeader);
+
+        // Append the tooltip to the reviews link
+        reviewsLink.appendChild(toolTip);
+
+        // Append the reviews link to the outer div
+        outerDiv.appendChild(reviewsLink);
+
       }
     })
     .catch((error) => {
@@ -499,14 +535,4 @@ function initializeTrustPilot() {
     });
 }
 
-// Wait until jQuery is loaded
-function waitForJQuery() {
-  if (window.jQuery) {
-    initializeTrustPilot();
-  } else {
-    setTimeout(waitForJQuery, 50);
-  }
-}
-
-// Start checking for jQuery
-waitForJQuery();
+initializeTrustPilot();
