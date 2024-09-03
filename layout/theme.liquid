@@ -29,8 +29,21 @@
     {{ content_for_header }}
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'clickslice.css' | asset_url | stylesheet_tag }}
+
+    {% comment %} tempalte type {% endcomment %}
+    {%- assign template_log = template | json -%}
+    <script>
+      console.log({{ template_log }});
+    </script>
+
+    {%- if template contains 'collection' or template contains 'search' or template contains 'product' -%}
+      {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- endif -%}
+
+    {%- if template == 'blog' or template contains 'collection' -%}
+      {{ 'clickslice.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
