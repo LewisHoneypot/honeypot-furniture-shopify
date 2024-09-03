@@ -66,6 +66,8 @@ function initializeTrustPilot() {
     // console.log('productRequest', $productRequest);
   }
 
+  var i = 1;
+
   // GET request reviews
   fetch($productRequest)
     .then((response) => response.json())
@@ -167,8 +169,10 @@ function initializeTrustPilot() {
           reviewSection.appendChild(reviewContentParagraph);
 
           if (review.attachments) {
+
             review.attachments.forEach((attachment) => {
               attachment.processedFiles.forEach((processedFiles) => {
+
                 if (processedFiles.mimeType === "video/mp4") {
                   // Create and append video element
                   var videoSpan = document.createElement("span");
@@ -176,8 +180,13 @@ function initializeTrustPilot() {
                   var video = document.createElement("video");
                   video.src = processedFiles.url;
                   video.controls = true;
+                  video.height = 360;
+                  video.width = 640;
+                  video.alt = "customer-video-"+i;
                   videoSpan.appendChild(video);
                   reviewSection.appendChild(videoSpan);
+                  
+                  i++;
                 }
 
                 if (processedFiles.dimension === "360pxWide") {
@@ -187,8 +196,13 @@ function initializeTrustPilot() {
                   var img = document.createElement("img");
                   img.src = processedFiles.url;
                   img.loading = "lazy";
+                  img.height = 360;
+                  img.width = 640;
+                  img.alt = "customer-photo-"+i;
                   imageSpan.appendChild(img);
                   reviewSection.appendChild(imageSpan);
+
+                  i++;
                 }
               });
             });
