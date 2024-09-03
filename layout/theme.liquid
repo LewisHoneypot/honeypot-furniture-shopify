@@ -31,10 +31,10 @@
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 
     {% comment %} tempalte type {% endcomment %}
-    {%- assign template_log = template | json -%}
+    {% comment %} {%- assign template_log = template | json -%}
     <script>
       console.log({{ template_log }});
-    </script>
+    </script> {% endcomment %}
 
     {%- if template contains 'collection' or template == 'search' or template == 'product' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
