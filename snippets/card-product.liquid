@@ -33,6 +33,7 @@
       assign product_cards_style = settings.product_cards_style
     endif
   -%}
+
   <div class="product-card-wrapper card-wrapper{% if card_style_popup != nil %} style-popup-{{ card_style_popup }}{% else %} style-product-{{ product_cards_style }}{% if settings.use_custom_color %} cus-bg-color{% endif %}{% endif %}{{ secondary_image_class }}{% if check_p_tab %} card--block-tab{% endif %} pos-relative h-100"
     {%- if settings.use_custom_color %}
       style="
@@ -54,8 +55,15 @@
               style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
             {% endif -%}
           >
+            
             {%- if card_product.featured_media -%}
-              {{ product_image | replace: "src=", 'loading="lazy" decoding="async" src=' }}
+              
+              {%- if loading == 'eager' -%}
+                {{ product_image | replace: "src=", 'decoding="async" src=' }}
+              {%- else -%}
+                {{ product_image | replace: "src=", 'loading="lazy" decoding="async" src=' }}
+              {%- endif -%}
+
               {{ product_image_second | replace: "src=", 'loading="lazy" decoding="async" src=' }}
             {%- else -%}
               {%- liquid
