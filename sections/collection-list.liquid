@@ -224,43 +224,48 @@
                           {%- endif -%}
                         </div>
                       </{% if block.settings.collection != blank %}a{% else %}div{% endif %}>
-                      <div class="item__content {{ section.settings.text_alignment }}">
-                        <h3 class="d-inline-block pos-relative{% if section.settings.blocks_heading_size == 'text-body' %} text-body{% else %} text-body {{ section.settings.blocks_heading_size | prepend: 'heading-size-' }}{% endif %} {{ section.settings.font_transform }} m-0 f-bold" data-animate="{{ section.settings.text_animation }}" style="--a-delay: {{ '0.05' | times: forloop.index }}s;">
-                          {%- if section.settings.type_style == 'default' -%}
-                            {{ block.settings.collection.title | default: 'Collection heading' }}
-                          {%- else -%}
-                            <span class="link-style">
-                              {%- if section.settings.type_style != 'masonry' -%}
-                                <strong>
+
+                      <{% if block.settings.collection != blank %}a{% else %}div{% endif %} 
+                        class="color-foreground"
+                      {% if block.settings.collection != blank %}href="{{ block.settings.collection.url }}"{% endif %}>
+                        <div class="item__content {{ section.settings.text_alignment }}">
+                          <h3 class="d-inline-block pos-relative{% if section.settings.blocks_heading_size == 'text-body' %} text-body{% else %} text-body {{ section.settings.blocks_heading_size | prepend: 'heading-size-' }}{% endif %} {{ section.settings.font_transform }} m-0 f-bold" data-animate="{{ section.settings.text_animation }}" style="--a-delay: {{ '0.05' | times: forloop.index }}s;">
+                            {%- if section.settings.type_style == 'default' -%}
+                              {{ block.settings.collection.title | default: 'Collection heading' }}
+                            {%- else -%}
+                              <span class="link-style">
+                                {%- if section.settings.type_style != 'masonry' -%}
+                                  <strong>
+                                {%- endif -%}
+                                  {{ block.settings.collection.title | default: 'Collection heading' }}
+                                {%- if section.settings.type_style != 'masonry' -%}
+                                  </strong>
+                                {%- endif -%}
+                              </span>
+                              {%- if block.settings.collection.title != blank and section.settings.type_style != 'masonry' -%}
+                                {% render 'icon-caret' %}
                               {%- endif -%}
-                                {{ block.settings.collection.title | default: 'Collection heading' }}
-                              {%- if section.settings.type_style != 'masonry' -%}
-                                </strong>
-                              {%- endif -%}
-                            </span>
-                            {%- if block.settings.collection.title != blank and section.settings.type_style != 'masonry' -%}
-                              {% render 'icon-caret' %}
                             {%- endif -%}
-                          {%- endif -%}
-                        </h3>
-                        {%- if section.settings.type_style == 'default' -%}
-                          {%- if block.settings.collection.description != blank -%}
-                            <div class="item-content__desc text-size-x-small rte">
-                                {{ block.settings.collection.description }}
+                          </h3>
+                          {%- if section.settings.type_style == 'default' -%}
+                            {%- if block.settings.collection.description != blank -%}
+                              <div class="item-content__desc text-size-x-small rte">
+                                  {{ block.settings.collection.description }}
+                              </div>
+                            {%- endif -%}
+                            <div class="item-content__button">
+                                <a href="{{ block.settings.collection.url }}"
+                                    class="link u-link {{ settings.link_type | prepend: "link--style-" }}"
+                                    aria-label="Shop Collection"
+                                >
+                                    <span class="text link-style">
+                                      Shop Collection
+                                    </span>
+                                </a>
                             </div>
                           {%- endif -%}
-                          <div class="item-content__button">
-                              <a href="{{ block.settings.collection.url }}"
-                                  class="link u-link {{ settings.link_type | prepend: "link--style-" }}"
-                                  aria-label="Shop Collection"
-                              >
-                                  <span class="text link-style">
-                                    Shop Collection
-                                  </span>
-                              </a>
-                          </div>
-                        {%- endif -%}
-                      </div>
+                        </div>
+                      </a>
                     </animate-element>
                   </div>
                 {%- endfor -%}
