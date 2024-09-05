@@ -702,10 +702,10 @@
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
 
-                  {% comment %} {%- assign product_log = product -%}
+                  {%- assign product_log = product -%}
                   <script>
                     console.log({{ product_log | json }})
-                  </script> {% endcomment %}
+                  </script>
 
                   {% comment %} Check if in stock {% endcomment %}
                   {% assign current_variant = product.selected_or_first_available_variant %}
@@ -724,9 +724,9 @@
                     {%- endunless -%}
                   {%- endfor -%}
                 
-                  {% comment %} <script>
+                  <script>
                     console.log('{{ collection_titles | json }}');
-                  </script> {% endcomment %}
+                  </script>
                 
                   {%- assign date_1 = 0 -%}
                   {%- assign date_2 = 0 -%}
