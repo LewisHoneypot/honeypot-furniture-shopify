@@ -195,9 +195,9 @@
     <script src="{{ 'CollapseCollection.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'SplittingAnimate.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'Gallery.js' | asset_url }}" defer="defer"></script>
-    {%- unless template == 'index' or template == 'product' -%}
+    {%- if template == 'index' or template == 'product' -%}
       <script src="{{ 'NewsletterForm.js' | asset_url }}" defer="defer"></script>
-    {%- endunless -%}
+    {%- endif -%}
     <script src="{{ 'ButtonRipple.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'BundleTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'ScrollContainerCenter.js' | asset_url }}" defer="defer"></script>
