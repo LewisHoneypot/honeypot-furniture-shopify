@@ -160,7 +160,9 @@
       <script src="{{ 'CustomTab.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'DeferredMedia.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'DetailsDisclosure.js' | asset_url }}" defer="defer"></script>
+    {%- if template == 'index' or template == 'product' -%}
+      <script src="{{ 'DetailsDisclosure.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <script src="{{ 'HeaderTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'FooterCollapse.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'LocalizationForm.js' | asset_url }}" defer="defer"></script> {% endcomment %}
