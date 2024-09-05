@@ -51,7 +51,7 @@
     {%- endif -%}
 
     {% render 'global-script' %}
-    <script src="https://shopoe.net/app.js" defer="defer"></script>
+    {% comment %} <script src="https://shopoe.net/app.js" defer="defer"></script> {% endcomment %}
 
     {%- unless template contains 'index'
       or template contains 'collection'
