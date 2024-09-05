@@ -36,7 +36,7 @@
       console.log({{ template_log }});
     </script> {% endcomment %}
 
-    {%- if template contains 'collection' or template == 'search' or template == 'product' -%}
+    {%- if template contains 'collection' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
 
