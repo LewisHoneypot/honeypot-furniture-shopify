@@ -59,6 +59,13 @@
             "padding_bottom": 5
           }
         },
+        "expected_delivery_8DGkii": {
+          "type": "expected_delivery",
+          "settings": {
+            "heading": "Expected Delivery",
+            "enable_expected_delivery": true
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -119,6 +126,7 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
+        "expected_delivery_8DGkii",
         "buy_buttons",
         "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
@@ -398,6 +406,8 @@
         "text": "",
         "button_label": "",
         "button_link": "",
+        "mobile_button_alignment": "mx-auto",
+        "desktop_button_alignment": "mx-sm-auto",
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
