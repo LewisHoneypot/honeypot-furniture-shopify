@@ -153,7 +153,9 @@
     {% comment %} <script src="{{ 'AnnouncementBar.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'AZBrands.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'AZLayout.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    <script src="{{ 'BeforeAfterCursor.js' | asset_url }}" defer="defer"></script>
+    {%- if template contains "honeypot-gallery" -%}
+      <script src="{{ 'BeforeAfterCursor.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     {% comment %} <script src="{{ 'CountDown.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'CountDownSpecial.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {%- if template == 'product' -%}
