@@ -156,7 +156,9 @@
     <script src="{{ 'BeforeAfterCursor.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'CountDown.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'CountDownSpecial.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'CustomTab.js' | asset_url }}" defer="defer"></script>
+    {%- if template == 'product' -%}
+      <script src="{{ 'CustomTab.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <script src="{{ 'DeferredMedia.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'DetailsDisclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'HeaderTools.js' | asset_url }}" defer="defer"></script>
