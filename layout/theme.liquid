@@ -171,7 +171,9 @@
     <script src="{{ 'ImageReveal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'HoverChangeImage.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'LookbookPoint.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'MapTemplate.js' | asset_url }}" defer="defer"></script>
+    {%- if template contains "about-us" -%}
+      <script src="{{ 'MapTemplate.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <script src="{{ 'ModalTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'PageDrawer.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'ProductRecommendations.js' | asset_url }}" defer="defer"></script>
