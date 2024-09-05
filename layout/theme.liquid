@@ -35,12 +35,12 @@
     <script>
       console.log({{ template_log }});
     </script>
-    
+
     {%- if template contains 'collection' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
 
-    {%- if template == 'blog' or template contains 'collection' -%}
+    {%- if template == 'blog' or template == 'article' or template contains 'collection' -%}
       {{ 'clickslice.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
@@ -56,6 +56,7 @@
     {%- unless template contains 'index'
       or template contains 'collection'
       or template contains 'blog'
+      or template contains 'article'
       or template contains 'page'
     -%}
       <script src="https://sdk.snapfinance.co.uk/v1/snapuk.min.js" defer="defer"></script>
@@ -190,7 +191,9 @@
     <script src="{{ 'VariantTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'VideoTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'ProductCustomerViewing.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'WriteComment.js' | asset_url }}" defer="defer"></script>
+    {%- if template contains 'article' -%}
+      <script src="{{ 'WriteComment.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <script src="{{ 'Parallax.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'CollapseCollection.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'SplittingAnimate.js' | asset_url }}" defer="defer"></script>
