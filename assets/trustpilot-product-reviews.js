@@ -320,11 +320,11 @@ function initializeTrustPilot() {
     // Create an image element
     var img = document.createElement("img");
     img.src = imageUrl;
-    img.className = "stars-image";
+    img.className = "stars-image mr-2";
     img.alt = "Trustpilot Rating";
     img.height = 24;
     img.width = 128;
-
+    
     // Create a span element
     var span = document.createElement("span");
     span.textContent = `${rating} ${outOf} 5`;
