@@ -8,16 +8,8 @@ function initializeTrustPilot() {
   // console.log('productRangeArray', productRangeArray);
   // console.log('trustpilot_skus_array', trustpilot_skus_array);
 
-  // check if live or staging
-  var environment = "";
-  if (
-    window.location.href.indexOf("localhost:3") > -1 ||
-    window.location.href.indexOf("honeypotfurnitureimages") > -1
-  ) {
-    var environment = "staging";
-  } else {
-    var environment = "live";
-  }
+  // set live or staging
+  var environment = "live";
 
   const phpEndpoint =
     "https://honeypot-trade.co.uk/" +
@@ -320,6 +312,7 @@ function initializeTrustPilot() {
     // Create an image element
     var img = document.createElement("img");
     img.src = imageUrl;
+    img.loading = "lazy";
     img.className = "stars-image mr-2";
     img.alt = "Trustpilot Rating";
     img.height = 24;
@@ -343,6 +336,7 @@ function initializeTrustPilot() {
       // Create an image element
       var img = document.createElement("img");
       img.src = imageUrl;
+      img.loading = "lazy";
       img.className = "stars-image";
       img.alt = "Trustpilot Rating";
       img.height = 24;
