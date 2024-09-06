@@ -1,25 +1,23 @@
 // TrustPilot Reviews
 
+// Helper function to create and append elements
+function createElement(type, classNames = [], attributes = {}, innerHTML = '') {
+  const element = document.createElement(type);
+  classNames.forEach(className => element.classList.add(className));
+  Object.keys(attributes).forEach(attr => element.setAttribute(attr, attributes[attr]));
+  element.innerHTML = innerHTML;
+  return element;
+}
+
 // Function to run your main code
 function initializeTrustPilot() {
-  var productRangeArray = [];
-  var trustpilot_skus_array = [];
+  var productRangeArray = [productSku];
+  var trustpilot_skus_array = [trustpilot_skus];
 
-  // console.log('productRangeArray', productRangeArray);
-  // console.log('trustpilot_skus_array', trustpilot_skus_array);
-
-  // set live or staging
   var environment = "live";
-
-  const phpEndpoint =
-    "https://honeypot-trade.co.uk/" +
-    environment +
-    "/trustpilot/product-reviews.php";
+  const phpEndpoint = `https://honeypot-trade.co.uk/${environment}/trustpilot/product-reviews.php`;
 
   var productId = productSku;
-
-  // console.log('phpEndpoint', phpEndpoint);
-  // console.log('productId', productId);
 
   // Trustpilot Product Reviews
 
@@ -28,16 +26,9 @@ function initializeTrustPilot() {
   // add current product to full range
   trustpilot_skus_array.push(trustpilot_skus);
 
-  // console.log('productRangeArray', productRangeArray);
-  // console.log('trustpilot_skus_array', trustpilot_skus_array);
-  // console.log('trustpilot_skus', trustpilot_skus);
-
   // convert array to string for url
   var productRangeArrayString = productRangeArray.toString();
   var trustpilot_skus_array_string = trustpilot_skus_array.toString();
-
-  // console.log('productRangeArrayString', productRangeArrayString)
-  // console.log('trustpilot_skus_array_string', trustpilot_skus_array_string)
 
   // Set up the URLs for the requests
   // current product only
@@ -52,10 +43,8 @@ function initializeTrustPilot() {
 
   if (!trustpilot_skus_array_string) {
     $productRequest = urlCurrentProduct;
-    // console.log('productRequest', $productRequest);
   } else {
     $productRequest = urlCurrentProductWithFullRangeTrustPilot;
-    // console.log('productRequest', $productRequest);
   }
 
   var i = 1;
@@ -381,22 +370,15 @@ function initializeTrustPilot() {
   // Set up the URL for the request
   const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
 
-  // console.log('urlCurrentProductRange', urlCurrentProductRange);
-
   // Target the element with the class "trustpilot-mini-widget"
   var trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
 
   var skuList = trustpilot_skus_array;
 
-  // console.log('trustpilot_skus_array', trustpilot_skus_array);
-  // console.log('skuList', skuList);
-
   // Prepare data for POST request
   var postData = {
     skus: trustpilot_skus,
   };
-
-  // console.log('postData', postData);
 
   // GET request
   fetch(urlCurrentProductRange, {
@@ -410,7 +392,6 @@ function initializeTrustPilot() {
   })
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
       // create div
       var outerDiv = document.createElement("div");
       outerDiv.className = "main-trustpilot";
