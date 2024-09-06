@@ -123,30 +123,36 @@ function initializeTrustPilot() {
 
           // Check if review.createdAt exists and is a string
           if (review.createdAt && typeof review.createdAt === "string") {
-            // Remove milliseconds and parse the date
-            var dateStringWithoutMilliseconds = review.createdAt.split(".")[0] + "Z";
-            var reviewDate = new Date(dateStringWithoutMilliseconds);
-            var formattedDate = reviewDate.toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
-
-            var userIconImage = document.createElement("img");
-            userIconImage.src = "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp";
-            userIconImage.classList.add("pb-1");
-            userIconImage.height = 24;
-            userIconImage.width = 24;
-
-            userIcon.appendChild(userIconImage);
-
-            var customerInfoSpan = document.createElement("span");
-            customerInfoSpan.className = "p-0";
-            customerInfoSpan.innerHTML = `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`;
-            customerInfo.appendChild(customerInfoSpan);
+            // Use Date's built-in parsing for better handling of various date formats
+            var reviewDate = new Date(review.createdAt);
+          
+            // Only proceed if the date is valid
+            if (!isNaN(reviewDate.getTime())) {
+              var formattedDate = reviewDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+          
+              var userIconImage = document.createElement("img");
+              userIconImage.src = "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp";
+              userIconImage.classList.add("pb-1");
+              userIconImage.height = 24;
+              userIconImage.width = 24;
+              userIconImage.loading = "lazy";
+              
+              userIcon.appendChild(userIconImage);
+          
+              var customerInfoSpan = document.createElement("span");
+              customerInfoSpan.className = "p-0";
+              customerInfoSpan.innerHTML = `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`;
+              customerInfo.appendChild(customerInfoSpan);
+            } else {
+              console.error("Invalid date format:", review.createdAt);
+            }
           } else {
             console.error("Invalid or missing review date:", review.createdAt);
-          }
+          }          
 
           var trustpilotImageSpan = document.createElement("span");
           trustpilotImageSpan.className = "d-block mb-2";
@@ -161,46 +167,70 @@ function initializeTrustPilot() {
           reviewSection.appendChild(reviewContentParagraph);
 
           if (review.attachments) {
-
             review.attachments.forEach((attachment) => {
               attachment.processedFiles.forEach((processedFiles) => {
-
+          
                 if (processedFiles.mimeType === "video/mp4") {
-                  // Create and append video element
+                  // Create and append video element with Intersection Observer for lazy loading
                   var videoSpan = document.createElement("span");
                   videoSpan.className = "d-block";
+          
                   var video = document.createElement("video");
-                  video.src = processedFiles.url;
+                  video.dataset.src = processedFiles.url; // Store the URL in a data attribute
                   video.controls = true;
                   video.height = 360;
                   video.width = 640;
-                  video.alt = "customer-video-"+i;
+                  video.alt = "customer-video-" + i;
+          
+                  // Use a placeholder image as a poster
+                  video.poster = "//example.com/path/to/placeholder-image.jpg";
+          
                   videoSpan.appendChild(video);
                   reviewSection.appendChild(videoSpan);
-                  
+          
+                  // Intersection Observer setup
+                  function loadVideo(entries, observer) {
+                    entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                        var video = entry.target;
+                        video.src = video.dataset.src; // Set the video URL
+                        observer.unobserve(video); // Stop observing
+                      }
+                    });
+                  }
+          
+                  var observer = new IntersectionObserver(loadVideo, {
+                    rootMargin: '0px',
+                    threshold: 0.1
+                  });
+          
+                  observer.observe(video);
+          
                   i++;
                 }
-
+          
                 if (processedFiles.dimension === "360pxWide") {
-                  // Create and append image element
+                  // Create and append image element with lazy loading
                   var imageSpan = document.createElement("span");
                   imageSpan.className = "d-block";
+          
                   var img = document.createElement("img");
                   img.src = processedFiles.url;
-                  img.loading = "lazy";
+                  img.loading = "lazy"; // Lazy load the image
                   img.height = 360;
                   img.width = 640;
-                  img.alt = "customer-photo-"+i;
+                  img.alt = "customer-photo-" + i;
+          
                   imageSpan.appendChild(img);
                   reviewSection.appendChild(imageSpan);
-
+          
                   i++;
                 }
               });
             });
           } else {
             console.log("No processedFiles");
-          }
+          }          
 
           // if honeypot replied
           if (review.firstCompanyComment) {
