@@ -215,6 +215,61 @@
         "padding_bottom_mobile": 25
       }
     },
+    "image_with_text_mD473n": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jLiWzw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>We’re All For You…<\/strong><\/p>",
+            "heading_size": "h1",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_6tPXCa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We truly feel that everyone deserves to experience the luxury of being in love with the spaces they build and the interiors they create, hence why we want to help provide that for as many home-owners as possible.<\/p><p><br\/><\/p><p>By bringing you a variety of pieces with different styles, functions and price-points, there is truly something for everyone. Additionally, our finance options make it a breeze to indulge in the \"Honeypot Experience\" on your own terms.<\/p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_jLiWzw",
+        "text_6tPXCa"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "customized-width",
+        "customize_width": 1600,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/About_Us_Naples_Sofa_Beige_Corner.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 50,
+        "padding_bottom": 51,
+        "padding_top_mobile": 25,
+        "padding_bottom_mobile": 25
+      }
+    },
     "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa": {
       "type": "quotes",
       "blocks": {
@@ -1217,6 +1272,7 @@
     "rich_text_QgCcFa",
     "bcdfdd92-1560-4fa2-832d-8531cf03526d",
     "a1a91792-a4e4-4254-bd04-603f6955212c",
+    "image_with_text_mD473n",
     "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa",
     "fdad168f-7d9e-4226-9e96-e24307d01253",
     "rich_text_ctUHEi",
