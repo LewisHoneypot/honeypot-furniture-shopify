@@ -70,7 +70,7 @@ function initializeTrustPilot() {
       // Check if the target element exists
       if (reviewsContainer.length === 0) {
         console.error('Element with id="reviews" not found.');
-        // return; // Stop execution if the target element is not found
+        return; // Stop execution if the target element is not found
       }
 
       // Create the outermost div
