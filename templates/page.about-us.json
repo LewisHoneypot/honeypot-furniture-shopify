@@ -222,7 +222,7 @@
           "type": "heading",
           "settings": {
             "heading": "<p><strong>We’re All For You…<\/strong><\/p>",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "padding_top": 10,
             "padding_bottom": 10
           }
