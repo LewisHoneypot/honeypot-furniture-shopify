@@ -111,7 +111,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Our Story<\/p>",
+            "heading": "<p><strong>We’re All About The Sofa Experience…<\/strong><\/p>",
             "heading_size": "h2",
             "padding_top": 0,
             "padding_bottom": 8
@@ -120,7 +120,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Originating as a small, family-run ecommerce furniture business, we embarked on a mission to pioneer seamless and convenient online furniture services nationwide. After years of hard work and dedication, our dreams came true on Honeypot Lane in Grantham, where Honeypot Furniture was born. Since then, we have continually grown and evolved, offering quality furnishings and a premium shopping experience to homes across the nation.<\/p>",
+            "text": "<p>We believe that one's true appreciation for a good piece of furniture is found in the moments of comfort, joy, and contentment that are experienced at home and in the company of loved ones.<br\/><br\/><\/p><p>We aim to elevate this experience for our customers through our high-quality pieces and to be a part of creating unforgettable memories, undeniable connections, and a true sense of home pride.<\/p>",
             "padding_top": 10,
             "padding_bottom": 20
           }
@@ -135,7 +135,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify:\/\/shop_images\/About_Us.jpg",
+        "image": "shopify:\/\/shop_images\/About_Us_Rupert_Sofa_Beige_Sofa_Experience_Image.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -166,7 +166,7 @@
         "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Our Mission<\/p>",
+            "heading": "<p><strong>We Keep it All At Home…<\/strong><\/p>",
             "heading_size": "h2",
             "padding_top": 0,
             "padding_bottom": 8
@@ -175,7 +175,7 @@
         "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Honeypot Furniture, we're dedicated to helping you achieve your home goals by offering high-quality, stylish furniture that reflects your unique personality and creativity. To make this a reality, we focus on procuring and providing furniture at competitive prices, with flexible payment options to suit various budgets. Our mission is to bring you beautifully crafted furniture that transforms your house into a home you love. <\/p>",
+            "text": "<p>We take pride in how far we've grown and evolved from our humble beginnings while keeping all of our activities a hundred percent home-grown.<\/p><p><br\/><\/p><p>Determined to maintain our exceptional level of quality while keeping costs down, we've ensured that every aspect of the Honeypot experience remains in-house, including our own land, warehouses, and fulfilment services. Every detail is run by the Honeypot family through a very hands-on approach that has helped us keep our brand as true to its roots as possible.<\/p>",
             "padding_top": 10,
             "padding_bottom": 20
           }
@@ -190,7 +190,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify:\/\/shop_images\/About_Us_1.jpg",
+        "image": "shopify:\/\/shop_images\/About_Us_Azzuro_U_Shape_Sofa.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
