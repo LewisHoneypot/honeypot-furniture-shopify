@@ -1,10 +1,12 @@
 // TrustPilot Reviews
 
 // Helper function to create and append elements
-function createElement(type, classNames = [], attributes = {}, innerHTML = '') {
+function createElement(type, classNames = [], attributes = {}, innerHTML = "") {
   const element = document.createElement(type);
-  classNames.forEach(className => element.classList.add(className));
-  Object.keys(attributes).forEach(attr => element.setAttribute(attr, attributes[attr]));
+  classNames.forEach((className) => element.classList.add(className));
+  Object.keys(attributes).forEach((attr) =>
+    element.setAttribute(attr, attributes[attr])
+  );
   element.innerHTML = innerHTML;
   return element;
 }
@@ -57,64 +59,89 @@ function initializeTrustPilot() {
       var reviewsContainer = document.querySelector("#reviews");
 
       // Check if the target element exists
-      if (reviewsContainer.length === 0) {
+      if (!reviewsContainer) {
         console.error('Element with id="reviews" not found.');
-        return; // Stop execution if the target element is not found
+        return;
       }
 
       // Create the outermost div
-      var outerDiv = document.createElement("div");
-      outerDiv.id = "outerDiv";
+      var outerDiv = createElement("div", ["outerDiv"]);
       reviewsContainer.appendChild(outerDiv);
 
       if (Array.isArray(data.productReviews)) {
         // If productReviews is an array (array of reviews)
         data.productReviews.forEach((review, i) => {
-          var innerDiv = document.createElement("div");
-          innerDiv.classList.add("innerDiv");
+          var innerDiv = createElement("div", ["innerDiv"]);
           outerDiv.appendChild(innerDiv);
 
-          var reviewWrapper = document.createElement("div");
-          reviewWrapper.classList.add("review-wrapper", "row", "mt-5");
+          var reviewWrapper = createElement("div", [
+            "review-wrapper",
+            "row",
+            "mt-5",
+          ]);
           innerDiv.appendChild(reviewWrapper);
 
-          var reviewSection = document.createElement("div");
-          reviewSection.classList.add("reviewSection", "pb-sm-3", "col-12", "col-lg-7", "order-1");
+          var reviewSection = createElement("div", [
+            "reviewSection",
+            "pb-sm-3",
+            "col-12",
+            "col-lg-7",
+            "order-1",
+          ]);
           reviewWrapper.appendChild(reviewSection);
 
-          var reviewSectionHeader = document.createElement("div");
-          reviewSectionHeader.classList.add("reviewSectionHeader", "pb-sm-3", "d-inline-flex");
-          reviewSection.appendChild(reviewSectionHeader);
-
-          var attributeSection = document.createElement("div");
-          attributeSection.classList.add("attribute-section", "col-12", "col-lg-5", "order-2", "pr-lg-0", "pb-5", "mt-5");
+          var attributeSection = createElement("div", [
+            "attribute-section",
+            "col-12",
+            "col-lg-5",
+            "order-2",
+            "pr-lg-0",
+            "pb-5",
+            "mt-5",
+          ]);
           reviewWrapper.appendChild(attributeSection);
 
-          var attributeSectionWrapper = document.createElement("div");
-          attributeSectionWrapper.classList.add("attributeSectionWrapper", "col-12", "p-0");
+          var attributeSectionWrapper = createElement("div", [
+            "attributeSectionWrapper",
+            "col-12",
+            "p-0",
+          ]);
           attributeSection.appendChild(attributeSectionWrapper);
 
-          var attributeNames = document.createElement("div");
-          attributeNames.classList.add("col-4", "p-0", "attributeNames");
+          var attributeNames = createElement("div", [
+            "col-4",
+            "p-0",
+            "attributeNames",
+          ]);
           attributeSectionWrapper.appendChild(attributeNames);
 
-          var attributeStars = document.createElement("div");
-          attributeStars.classList.add("col-8", "p-0", "attributeStars", "text-right", "text-lg-left");
+          var attributeStars = createElement("div", [
+            "col-8",
+            "p-0",
+            "attributeStars",
+            "text-right",
+            "text-lg-left",
+          ]);
           attributeSectionWrapper.appendChild(attributeStars);
 
-          var userIcon = document.createElement("div");
-          userIcon.classList.add("userIcon", "userIcon", "pt-2");
+          var reviewSectionHeader = createElement("div", [
+            "reviewSectionHeader",
+            "pb-sm-3",
+            "d-inline-flex",
+          ]);
+          reviewSection.appendChild(reviewSectionHeader);
+
+          var userIcon = createElement("div", ["userIcon", "pt-2"]);
           reviewSectionHeader.appendChild(userIcon);
 
-          var customerInfo = document.createElement("div");
-          customerInfo.classList.add("customerInfo", "pl-2");
+          var customerInfo = createElement("div", ["customerInfo", "pl-2"]);
           reviewSectionHeader.appendChild(customerInfo);
 
           // Check if review.createdAt exists and is a string
           if (review.createdAt && typeof review.createdAt === "string") {
             // Use Date's built-in parsing for better handling of various date formats
             var reviewDate = new Date(review.createdAt);
-          
+
             // Only proceed if the date is valid
             if (!isNaN(reviewDate.getTime())) {
               var formattedDate = reviewDate.toLocaleDateString("en-US", {
@@ -122,108 +149,107 @@ function initializeTrustPilot() {
                 month: "long",
                 day: "numeric",
               });
-          
-              var userIconImage = document.createElement("img");
-              userIconImage.src = "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp";
-              userIconImage.classList.add("pb-1");
-              userIconImage.height = 24;
-              userIconImage.width = 24;
-              userIconImage.loading = "lazy";
-              
+
+              var userIconImage = createElement("img", [], {
+                src: "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp",
+                class: "pb-1",
+                height: 24,
+                width: 24,
+                loading: "lazy",
+              });
+
               userIcon.appendChild(userIconImage);
-          
-              var customerInfoSpan = document.createElement("span");
-              customerInfoSpan.className = "p-0";
-              customerInfoSpan.innerHTML = `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`;
+
+              var customerInfoSpan = createElement(
+                "span",
+                ["p-0"],
+                {},
+                `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`
+              );
               customerInfo.appendChild(customerInfoSpan);
             } else {
               console.error("Invalid date format:", review.createdAt);
             }
           } else {
             console.error("Invalid or missing review date:", review.createdAt);
-          }          
+          }
 
-          var trustpilotImageSpan = document.createElement("span");
-          trustpilotImageSpan.className = "d-block mb-2";
-          trustpilotImageSpan.innerHTML = getReviewTrustpilotImage(review.stars, review.stars);
-          trustpilotImageSpan.appendChild(document.createElement("br"));
+          var trustpilotImageSpan = createElement(
+            "span",
+            ["d-block", "mb-2"],
+            {},
+            getReviewTrustpilotImage(review.stars)
+          );
           customerInfo.appendChild(trustpilotImageSpan);
 
-          var reviewContentParagraph = document.createElement("p");
-          reviewContentParagraph.className = "d-block mb-0 py-2";
-          reviewContentParagraph.textContent = `"${review.content.trim()}"`;
-          reviewContentParagraph.appendChild(document.createElement("br"));
+          var reviewContentParagraph = createElement(
+            "p",
+            ["d-block", "mb-0", "py-2"],
+            {},
+            `"${review.content.trim()}"`
+          );
           reviewSection.appendChild(reviewContentParagraph);
 
           if (review.attachments) {
             review.attachments.forEach((attachment) => {
               attachment.processedFiles.forEach((processedFiles) => {
-          
                 if (processedFiles.mimeType === "video/mp4") {
                   // Create and append video element with Intersection Observer for lazy loading
-                  var videoSpan = document.createElement("span");
-                  videoSpan.className = "d-block";
-          
-                  var video = document.createElement("video");
-                  video.dataset.src = processedFiles.url; // Store the URL in a data attribute
-                  video.controls = true;
-                  video.height = 360;
-                  video.width = 640;
-                  video.alt = "customer-video-" + i;
-          
-                  // Use a placeholder image as a poster
-                  video.poster = "//example.com/path/to/placeholder-image.jpg";
-          
+                  var videoSpan = createElement("span", ["d-block"]);
+                  var video = createElement("video", [], {
+                    "data-src": processedFiles.url,
+                    controls: true,
+                    height: 360,
+                    width: 640,
+                    alt: `customer-video-${i}`,
+                    poster: "//example.com/path/to/placeholder-image.jpg",
+                  });
+
                   videoSpan.appendChild(video);
                   reviewSection.appendChild(videoSpan);
-          
-                  // Intersection Observer setup
-                  function loadVideo(entries, observer) {
-                    entries.forEach(entry => {
-                      if (entry.isIntersecting) {
-                        var video = entry.target;
-                        video.src = video.dataset.src; // Set the video URL
-                        observer.unobserve(video); // Stop observing
-                      }
-                    });
-                  }
-          
-                  var observer = new IntersectionObserver(loadVideo, {
-                    rootMargin: '0px',
-                    threshold: 0.1
-                  });
-          
+
+                  // Video Observer setup
+                  var observer = new IntersectionObserver(
+                    (entries, observer) => {
+                      entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                          var video = entry.target;
+                          video.src = video.dataset.src;
+                          observer.unobserve(video);
+                        }
+                      });
+                    },
+                    { rootMargin: "0px", threshold: 0.1 }
+                  );
+
                   observer.observe(video);
-          
                   i++;
                 }
-          
+
                 if (processedFiles.dimension === "360pxWide") {
                   // Create and append image element with lazy loading
-                  var imageSpan = document.createElement("span");
-                  imageSpan.className = "d-block";
-          
-                  var img = document.createElement("img");
-                  img.src = processedFiles.url;
-                  img.loading = "lazy"; // Lazy load the image
-                  img.height = 360;
-                  img.width = 640;
-                  img.alt = "customer-photo-" + i;
-          
+                  var imageSpan = createElement("span", ["d-block"]);
+                  var img = createElement("img", [], {
+                    src: processedFiles.url,
+                    loading: "lazy",
+                    height: 360,
+                    width: 640,
+                    alt: `customer-photo-${i}`,
+                  });
                   imageSpan.appendChild(img);
                   reviewSection.appendChild(imageSpan);
-          
                   i++;
                 }
               });
             });
           } else {
             console.log("No processedFiles");
-          }          
+          }
 
           // if honeypot replied
           if (review.firstCompanyComment) {
-            var dateStringWithoutMilliseconds = review.firstCompanyComment.createdAt.split(".")[0] + "Z";
+            var dateStringWithoutMilliseconds =
+              review.firstCompanyComment.createdAt.split(".")[0] + "Z";
             var reviewDate = new Date(dateStringWithoutMilliseconds);
             var formattedDate = reviewDate.toLocaleDateString("en-US", {
               year: "numeric",
@@ -232,65 +258,96 @@ function initializeTrustPilot() {
             });
 
             // Create and append the customer info span
-            var customerInfoSpan = document.createElement("span");
-            customerInfoSpan.className = "customerInfo d-block ml-3 mt-3";
-            customerInfoSpan.innerHTML = `
-    <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> 
-    <strong>Honeypot Furniture</strong>, ${formattedDate}
-  `;
-            customerInfoSpan.appendChild(document.createElement("br"));
+            var customerInfoSpan = createElement(
+              "span",
+              ["customerInfo", "d-block", "ml-3", "mt-3"],
+              {},
+              `
+              <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> 
+              <strong>Honeypot Furniture</strong>, ${formattedDate}
+            `
+            );
+
             reviewSection.appendChild(customerInfoSpan);
 
-            // Create and append the comment paragraph
-            var commentParagraph = document.createElement("p");
-            commentParagraph.className = "ml-3 mb-0 py-2";
-            commentParagraph.textContent = '"' + review.firstCompanyComment.comment.trim() + '"';
-            commentParagraph.appendChild(document.createElement("br"));
+            var commentParagraph = createElement(
+              "p",
+              ["ml-3", "mb-0", "py-2"],
+              {},
+              `"${review.firstCompanyComment.comment.trim()}"`
+            );
             reviewSection.appendChild(commentParagraph);
           }
 
           // Display Trustpilot image for each attribute rating
           review.attributeRatings.forEach((attribute) => {
             var roundedRating = Math.round(attribute.rating * 2) / 2;
-            var trustpilotImage = getReviewTrustpilotImage(roundedRating, roundedRating);
+            var trustpilotImage = getReviewTrustpilotImage(
+              roundedRating,
+              roundedRating
+            );
 
             if (attribute.attributeName === "Value for money") {
               attribute.attributeName = "Value";
             }
 
-            var attributeNameSpan = document.createElement("span");
-            attributeNameSpan.innerHTML = `<strong>${attribute.attributeName}:</strong>`;
+            var attributeNameSpan = createElement(
+              "span",
+              [],
+              {},
+              `<strong>${attribute.attributeName}:</strong>`
+            );
             attributeNames.appendChild(attributeNameSpan);
 
-            var lineBreak1 = document.createElement("br");
+            var lineBreak1 = createElement("br");
             attributeNames.appendChild(lineBreak1);
 
-            var attributeStarsSpan = document.createElement("span");
-            attributeStarsSpan.innerHTML = trustpilotImage;
+            var attributeStarsSpan = createElement(
+              "span",
+              [],
+              {},
+              trustpilotImage
+            );
             attributeStars.appendChild(attributeStarsSpan);
 
-            var lineBreak2 = document.createElement("br");
+            var lineBreak2 = createElement("br");
             attributeStars.appendChild(lineBreak2);
           });
 
           // Create a button to toggle additional content
-          var buttonWrapper = document.createElement("div");
-          buttonWrapper.className = "buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item";
+          var buttonWrapper = createElement("div", [
+            "buttonWrapper",
+            "text-center",
+            "pt-4",
+            "px-4",
+            "d-lg-none",
+            "field__action",
+            "contact__button",
+            "pos-relative",
+            "m-t",
+            "m-b",
+            "grid__item",
+          ]);
           reviewSection.appendChild(buttonWrapper);
 
-          var toggleButton = document.createElement("button");
-          toggleButton.className = `button button--style-${button_style} mi-w color-${primary_button_color_scheme}`;
+          var toggleButton = createElement("button", [
+            `button`,
+            `button--style-${button_style}`,
+            `mi-w`,
+            `color-${primary_button_color_scheme}`,
+          ]);
           buttonWrapper.appendChild(toggleButton);
 
-          var buttonSpan = document.createElement("span");
-          buttonSpan.className = "text";
-          buttonSpan.textContent = primary_button_label;
+          var buttonSpan = createElement(
+            "span",
+            ["text"],
+            {},
+            primary_button_label
+          );
           toggleButton.appendChild(buttonSpan);
 
           // Additional content to toggle (e.g., more details about the review)
-          var additionalContent = document.createElement("div");
-          additionalContent.className = "additional-content d-lg-block";
-          additionalContent.style.display = "none";
+          var additionalContent = createElement("div", ["additional-content", "d-lg-block"], { style: "display: none" });
           attributeSection.appendChild(additionalContent);
 
           // Move attribute-section div into additional content
@@ -317,18 +374,24 @@ function initializeTrustPilot() {
       console.error("Error fetching data from Trustpilot API:", error);
     });
 
-  // Function to get Trustpilot image based on rating
-  function getReviewTrustpilotImage(rating, roundedRatingImage) {
-    var outOf = "";
-    if (isNaN(rating)) {
+  // Function to get TrustPilot image based on rating
+  function getReviewTrustpilotImage(rating) {
+    // Ensure rating is a valid number
+    if (isNaN(rating) || rating < 0 || rating > 5) {
       document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
-    } else {
-      var imageUrl = "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
-
-      outOf = window.matchMedia("(max-width: 750px)").matches ? "/" : "out of"; // 20px for mobile, 50px for desktop
+      return ""; // No image to return if rating is invalid
     }
 
-    // Create an image element
+    // Map the rating to the appropriate image file
+    var roundedRatingImage = rating; // Format rating for image file name
+    var imageUrl = `//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${roundedRatingImage}.png`; // Construct the image URL
+
+    // Determine the display text
+    var outOf = window.matchMedia("(max-width: 750px)").matches
+      ? "/"
+      : "out of"; // Adapt text based on screen size
+
+    // Create image and text elements
     var img = document.createElement("img");
     img.src = imageUrl;
     img.loading = "lazy";
@@ -336,8 +399,7 @@ function initializeTrustPilot() {
     img.alt = "Trustpilot Rating";
     img.height = 24;
     img.width = 128;
-    
-    // Create a span element
+
     var span = document.createElement("span");
     span.textContent = `${rating} ${outOf} 5`;
 
@@ -350,7 +412,10 @@ function initializeTrustPilot() {
     if (isNaN(rating)) {
       document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
     } else {
-      var imageUrl = "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" + roundedRatingImage + ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
+      var imageUrl =
+        "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
+        roundedRatingImage +
+        ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
 
       // Create an image element
       var img = document.createElement("img");
@@ -393,8 +458,7 @@ function initializeTrustPilot() {
     .then((response) => response.json())
     .then((data) => {
       // create div
-      var outerDiv = document.createElement("div");
-      outerDiv.className = "main-trustpilot";
+      var outerDiv = createElement("div", ["main-trustpilot"]);
       trustPilotContainer.appendChild(outerDiv);
 
       //check for data
@@ -420,9 +484,11 @@ function initializeTrustPilot() {
 
         // hide reviews icon if none exist
         if (amountOfReviews === 0) {
-          var elements = document.querySelectorAll("[id*='trustpilot_product_reviews_collapsible']");
+          var elements = document.querySelectorAll(
+            "[id*='trustpilot_product_reviews_collapsible']"
+          );
           elements.forEach(function (element) {
-            element.style.display = 'none';
+            element.style.display = "none";
           });
         }
 
@@ -478,7 +544,9 @@ function initializeTrustPilot() {
 
         // Hide the reviews section if amountOfReviews is "0"
         if (amountOfReviews === "0") {
-          var trustpilotMiniWidget = document.querySelector(".trustpilot-mini-widget");
+          var trustpilotMiniWidget = document.querySelector(
+            ".trustpilot-mini-widget"
+          );
           if (trustpilotMiniWidget) {
             trustpilotMiniWidget.classList.remove("d-lg-block");
             trustpilotMiniWidget.classList.add("d-lg-none");
@@ -486,13 +554,13 @@ function initializeTrustPilot() {
         }
 
         // Create tooltip elements
-        var toolTip = document.createElement('span');
-        toolTip.className = 'tooltip-content';
+        var toolTip = document.createElement("span");
+        toolTip.className = "tooltip-content";
 
-        var toolTipHeader = document.createElement('div');
-        toolTipHeader.className = 'tooltip-header col-12 px-0 pt-1 pb-3';
+        var toolTipHeader = document.createElement("div");
+        toolTipHeader.className = "tooltip-header col-12 px-0 pt-1 pb-3";
 
-        var toolTipHeaderText = document.createElement('div');
+        var toolTipHeaderText = document.createElement("div");
         toolTipHeaderText.innerHTML = `Rated ${outOfFive} out of 5 stars`;
 
         // Append the header text to the header
@@ -500,28 +568,28 @@ function initializeTrustPilot() {
 
         // Create and append the score rows
         var createScoreRow = function (stars, fill, amount) {
-          var row = document.createElement('div');
-          row.className = 'row';
+          var row = document.createElement("div");
+          row.className = "row";
 
-          var starLabel = document.createElement('div');
-          starLabel.className = 'col-3 py-1';
+          var starLabel = document.createElement("div");
+          starLabel.className = "col-3 py-1";
           starLabel.textContent = `${stars} stars`;
 
-          var scoreBarWrapper = document.createElement('div');
-          scoreBarWrapper.className = 'col-7 py-1';
+          var scoreBarWrapper = document.createElement("div");
+          scoreBarWrapper.className = "col-7 py-1";
 
-          var scoreBar = document.createElement('div');
-          scoreBar.className = 'score-bar mt-2';
+          var scoreBar = document.createElement("div");
+          scoreBar.className = "score-bar mt-2";
 
-          var scoreBarFill = document.createElement('div');
-          scoreBarFill.className = 'score-bar-fill';
+          var scoreBarFill = document.createElement("div");
+          scoreBarFill.className = "score-bar-fill";
           scoreBarFill.style.width = `${fill}%`;
 
           scoreBar.appendChild(scoreBarFill);
           scoreBarWrapper.appendChild(scoreBar);
 
-          var amountLabel = document.createElement('div');
-          amountLabel.className = 'col-2 py-1 px-0';
+          var amountLabel = document.createElement("div");
+          amountLabel.className = "col-2 py-1 px-0";
           amountLabel.textContent = `(${amount})`;
 
           row.appendChild(starLabel);
@@ -532,11 +600,21 @@ function initializeTrustPilot() {
         };
 
         // Create and append each star rating row
-        toolTip.appendChild(createScoreRow('5', fiveStarFill, amountOfFiveStarReviews));
-        toolTip.appendChild(createScoreRow('4', fourStarFill, amountOfFourStarReviews));
-        toolTip.appendChild(createScoreRow('3', threeStarFill, amountOfThreeStarReviews));
-        toolTip.appendChild(createScoreRow('2', twoStarFill, amountOfTwoStarReviews));
-        toolTip.appendChild(createScoreRow('1', oneStarFill, amountOfOneStarReviews));
+        toolTip.appendChild(
+          createScoreRow("5", fiveStarFill, amountOfFiveStarReviews)
+        );
+        toolTip.appendChild(
+          createScoreRow("4", fourStarFill, amountOfFourStarReviews)
+        );
+        toolTip.appendChild(
+          createScoreRow("3", threeStarFill, amountOfThreeStarReviews)
+        );
+        toolTip.appendChild(
+          createScoreRow("2", twoStarFill, amountOfTwoStarReviews)
+        );
+        toolTip.appendChild(
+          createScoreRow("1", oneStarFill, amountOfOneStarReviews)
+        );
 
         // Append tooltip header to the tooltip
         toolTip.appendChild(toolTipHeader);
@@ -546,7 +624,6 @@ function initializeTrustPilot() {
 
         // Append the reviews link to the outer div
         outerDiv.appendChild(reviewsLink);
-
       }
     })
     .catch((error) => {
