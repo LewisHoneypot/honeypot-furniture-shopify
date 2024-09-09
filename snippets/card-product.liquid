@@ -754,6 +754,106 @@
                 <div class="card__price{% if product_cards_style == 'card' %} m-l{% endif %}{% if product_cards_style == 'advanced-card' %} right{% endif %}"{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} style="--color-default-price: 0,0,0; --m-l:auto;"{% endif %}>
                   {% render 'price', product: card_product, price_class: '' %}
                 </div>
+
+                {% comment %} Delivery ETAs {% endcomment %}                 
+                {%- if section.settings.collection_delivery_eta_toggle == true -%}  
+                  {% comment %} Check if in stock {% endcomment %}
+                  {% assign current_variant = card_product.selected_or_first_available_variant %}
+                  {% if current_variant.available and current_variant.inventory_quantity > 0 %}
+                    {%- assign in_stock = true -%}
+                  {% else %}
+                    {%- assign in_stock = false -%}
+                  {% endif %}                
+                  {% comment %} Check which collections product is in {% endcomment %}
+                  {%- assign collection_titles = '' -%}
+                  {%- for collection in card_product.collections -%}
+                    {%- assign collection_titles = collection_titles | append: collection.title -%}
+                    {%- unless forloop.last -%}
+                      {%- assign collection_titles = collection_titles | append: ', ' -%}
+                    {%- endunless -%}
+                  {%- endfor -%}
+                                
+                  {%- assign date_1 = 0 -%}
+                  {%- assign date_2 = 0 -%}
+                
+                  {%- if collection_titles contains 'Sofas' -%}
+                    {%- if card_product.available and in_stock == true -%}
+                      {%- assign date_1 = 1 -%}
+                      {%- assign date_2 = 7 -%}
+                    {%- else -%}
+                      {%- assign date_1 = 28 -%}
+                      {%- assign date_2 = 42 -%}
+                    {%- endif -%}
+                  {%- elsif collection_titles contains 'rugs' or card_product.tags contains 'LL' or card_product.tags contains 'JB' -%}
+                    {%- if card_product.available and in_stock == true -%}
+                      {%- assign date_1 = 1 -%}
+                      {%- assign date_2 = 7 -%}
+                    {%- else -%}
+                      {%- assign date_1 = 7 -%}
+                      {%- assign date_2 = 10 -%}
+                    {%- endif -%}
+                  {%- elsif card_product.tags contains 'SD' -%}
+                    {%- assign date_1 = 7 -%}
+                    {%- assign date_2 = 21 -%}
+                  {%- elsif collection_titles contains 'Mattresses' -%}
+                    {%- if card_product.available and in_stock == true -%}
+                      {%- assign date_1 = 1 -%}
+                      {%- assign date_2 = 7 -%}
+                    {%- else -%}
+                      {%- assign date_1 = 8 -%}
+                      {%- assign date_2 = 14 -%}
+                    {%- endif -%}
+                  {%- elsif collection_titles contains 'Living Room' or collection_titles contains 'Dining Room' or collection_titles contains 'Wardrobes' or collection_titles contains 'Chest of Drawers' or collection_titles contains 'Bedside Tables' or collection_titles contains 'Sideboards' -%}
+                    {%- assign date_1 = 7 -%}
+                    {%- assign date_2 = 10 -%}
+                  {%- endif -%}
+                
+                  {%- assign today_1 = 'now' | date: '%s' -%}
+                  {%- assign today_2 = 'now' | date: '%s' -%}
+                  {%- assign seconds_1 = date_1 | times: 24 | times: 60 | times: 60 -%}
+                  {%- assign seconds_2 = date_2 | times: 24 | times: 60 | times: 60 -%}
+                  
+                  {%- assign delivery_date_timestamp_1 = today_1 | plus: seconds_1 -%}
+                  {%- assign delivery_date_timestamp_2 = today_2 | plus: seconds_2 -%}
+                  
+                  {%- assign delivery_day_1 = delivery_date_timestamp_1 | date: "%e" -%}
+                  {%- assign delivery_day_2 = delivery_date_timestamp_2 | date: "%e" -%}
+                
+                  {%- assign delivery_date_suffix_1 = '' -%}
+                  {%- assign delivery_date_suffix_2 = '' -%}
+                
+                  {%- case delivery_day_1 | modulo: 10 -%}
+                    {%- when 1 -%} {%- assign delivery_date_suffix_1 = 'st' -%}
+                    {%- when 2 -%} {%- assign delivery_date_suffix_1 = 'nd' -%}
+                    {%- when 3 -%} {%- assign delivery_date_suffix_1 = 'rd' -%}
+                    {%- else -%} {%- assign delivery_date_suffix_1 = 'th' -%}
+                  {%- endcase -%}
+                
+                  {%- case delivery_day_2 | modulo: 10 -%}
+                    {%- when 1 -%} {%- assign delivery_date_suffix_2 = 'st' -%}
+                    {%- when 2 -%} {%- assign delivery_date_suffix_2 = 'nd' -%}
+                    {%- when 3 -%} {%- assign delivery_date_suffix_2 = 'rd' -%}
+                    {%- else -%} {%- assign delivery_date_suffix_2 = 'th' -%}
+                  {%- endcase -%}
+                
+                  {%- assign formatted_date_1 = delivery_date_timestamp_1 | date: "%b " | append: delivery_day_1 | append: delivery_date_suffix_1 -%}
+                  {%- assign formatted_date_2 = delivery_date_timestamp_2 | date: "%b " | append: delivery_day_2 | append: delivery_date_suffix_2 -%}
+                
+                  <div class="d-inline-flex" style="font-size: 14px;">
+                    <svg class="icon icon-fast-truck" height="16" aria-hidden="true" focusable="false" role="presentation" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="margin-top: 2px;">
+                      <path d="M280 192c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240zm352 192h-24V275.9c0-16.8-6.8-33.3-18.8-45.2l-83.9-83.9c-11.8-12-28.3-18.8-45.2-18.8H416V78.6c0-25.7-22.2-46.6-49.4-46.6H113.4C86.2 32 64 52.9 64 78.6V96H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H96V78.6c0-8.1 7.8-14.6 17.4-14.6h253.2c9.6 0 17.4 6.5 17.4 14.6V384H207.6C193 364.7 170 352 144 352c-18.1 0-34.6 6.2-48 16.4V288H64v144c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16h195.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H632c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm-488 96c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm272-320h44.1c8.4 0 16.7 3.4 22.6 9.4l83.9 83.9c.8.8 1.1 1.9 1.8 2.8H416V160zm80 320c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-96h-16.4C545 364.7 522 352 496 352s-49 12.7-63.6 32H416v-96h160v96zM256 248v-16c0-4.4-3.6-8-8-8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8z"></path>
+                    </svg>
+                    {%- if section.settings.collection_delivery_eta_heading != blank -%}
+                      <div class="ml-2">
+                        {{ section.settings.collection_delivery_eta_heading | escape }}: 
+                        <strong>{{ formatted_date_1 }}</strong> 
+                        to 
+                        <strong>{{ formatted_date_2 }}</strong>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+
               {%- if product_cards_style == 'advanced-default' or card_style_popup == 'advanced-default' -%}
                   {%- if show_quick_add or show_quick_add_mobile -%}
                     {%- liquid

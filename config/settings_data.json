@@ -229,12 +229,6 @@
 
     ],
     "blocks": {
-      "7902831097370503076": {
-        "type": "shopify:\/\/apps\/estimated-delivery-date-eta\/blocks\/estimated-delivery-days\/d8155dd1-6598-4174-aaeb-cbcf85a857bc",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "17428600031447253342": {
         "type": "shopify:\/\/apps\/attentive\/blocks\/attn-tag\/8df62c72-8fe4-407e-a5b3-72132be30a0d",
         "disabled": false,
