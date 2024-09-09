@@ -1201,6 +1201,7 @@
     },
     "map_6R6T8c": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "map_address": "Honeypot Furniture, HoneyP",
         "section_width": "full-width",
