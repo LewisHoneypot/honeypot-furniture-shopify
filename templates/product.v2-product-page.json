@@ -721,7 +721,7 @@
         "brand_tKc3gk": {
           "type": "brand",
           "settings": {
-            "image": "shopify:\/\/shop_images\/CountryLiving_Logo_copy.png",
+            "image": "shopify:\/\/shop_images\/1_d5758214-c826-444c-bafd-07857f6f5020.png",
             "link": ""
           }
         },
@@ -760,9 +760,9 @@
         "button_transparent": "transparent",
         "button_margin_top": 31,
         "type_display": "scroll",
-        "enable_pagination_type": "all",
+        "enable_pagination_type": "lg",
         "pagination_type": "dots",
-        "pagination_spacing_top": 50,
+        "pagination_spacing_top": 20,
         "carousel_number": 3,
         "carousel_number_tablet": 3,
         "carousel_number_mobile": 1,
@@ -771,8 +771,8 @@
         "colors_background": "",
         "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
         "image_animation": "none",
-        "padding_top": 70,
-        "padding_bottom": 70,
+        "padding_top": 19,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
         "padding_bottom_mobile": 43
       }
