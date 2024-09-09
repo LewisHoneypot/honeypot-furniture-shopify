@@ -158,7 +158,7 @@
     {%- endif -%}
     {% comment %} <script src="{{ 'CountDown.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'CountDownSpecial.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    {%- if template == 'product' -%}
+    {%- if template contains 'product' -%}
       <script src="{{ 'CustomTab.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'DeferredMedia.js' | asset_url }}" defer="defer"></script>
