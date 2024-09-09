@@ -530,14 +530,13 @@ function initializeTrustPilot() {
         );
 
         // Create the link with a span inside
-        var reviewsLink = document.createElement("div");
-        reviewsLink.innerHTML = `
-  <span style='min-height:24px;'>
-    ${trustpilotImage}
-    <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
-    <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
-  </span>
-`;
+        var reviewsLink = createElement("div", [], {}, `
+          <span style='min-height:24px;'>
+            ${trustpilotImage}
+            <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
+            <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
+          </span>
+        `);
 
         // Append the reviewsLink to the desired parent element
         // Example: parentElement.appendChild(reviewsLink);
@@ -554,43 +553,37 @@ function initializeTrustPilot() {
         }
 
         // Create tooltip elements
-        var toolTip = document.createElement("span");
-        toolTip.className = "tooltip-content";
+        var toolTip = createElement("span", ["tooltip-content"]);
 
-        var toolTipHeader = document.createElement("div");
-        toolTipHeader.className = "tooltip-header col-12 px-0 pt-1 pb-3";
+        var toolTipHeader = createElement("div", [
+          "tooltip-header",
+          "col-12",
+          "px-0",
+          "pt-1",
+          "pb-3"
+        ]);
 
-        var toolTipHeaderText = document.createElement("div");
-        toolTipHeaderText.innerHTML = `Rated ${outOfFive} out of 5 stars`;
+        var toolTipHeaderText = createElement("div", [], {}, `Rated ${outOfFive} out of 5 stars`);
 
         // Append the header text to the header
         toolTipHeader.appendChild(toolTipHeaderText);
 
         // Create and append the score rows
         var createScoreRow = function (stars, fill, amount) {
-          var row = document.createElement("div");
-          row.className = "row";
+          var row = createElement("div", ["row"]);
 
-          var starLabel = document.createElement("div");
-          starLabel.className = "col-3 py-1";
-          starLabel.textContent = `${stars} stars`;
+          var starLabel = createElement("div", ["col-3", "py-1"], {}, `${stars} stars`);
 
-          var scoreBarWrapper = document.createElement("div");
-          scoreBarWrapper.className = "col-7 py-1";
+          var scoreBarWrapper = createElement("div", ["col-7", "py-1"]);
 
-          var scoreBar = document.createElement("div");
-          scoreBar.className = "score-bar mt-2";
+          var scoreBar = createElement("div", ["score-bar", "mt-2"]);
 
-          var scoreBarFill = document.createElement("div");
-          scoreBarFill.className = "score-bar-fill";
-          scoreBarFill.style.width = `${fill}%`;
+          var scoreBarFill = createElement("div", ["score-bar-fill"], { style: `width: ${fill}%` });
 
           scoreBar.appendChild(scoreBarFill);
           scoreBarWrapper.appendChild(scoreBar);
 
-          var amountLabel = document.createElement("div");
-          amountLabel.className = "col-2 py-1 px-0";
-          amountLabel.textContent = `(${amount})`;
+          var amountLabel = createElement("div", ["col-2", "py-1", "px-0"], {}, `(${amount})`);
 
           row.appendChild(starLabel);
           row.appendChild(scoreBarWrapper);
