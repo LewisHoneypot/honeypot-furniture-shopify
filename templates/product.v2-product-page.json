@@ -56,6 +56,16 @@
             "padding_bottom": 12
           }
         },
+        "description_jp6iRK": {
+          "type": "description",
+          "settings": {
+            "description_type": "product_desc",
+            "number": 17,
+            "text": "",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "size_chart_kqc3gt": {
           "type": "size_chart",
           "disabled": true,
@@ -136,6 +146,7 @@
         "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
         "price",
+        "description_jp6iRK",
         "size_chart_kqc3gt",
         "expected_delivery_TKcTdt",
         "drawer_j3bNWd",
@@ -600,6 +611,171 @@
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 12
       }
+    },
+    "multicolumn_CNwqta": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pFatXt": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Column",
+            "heading_size": "h1",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_4cEfPh": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Column",
+            "heading_size": "h1",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_BYwthb": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Column",
+            "heading_size": "h1",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pFatXt",
+        "column_4cEfPh",
+        "column_BYwthb"
+      ],
+      "settings": {
+        "content_inside_image": false,
+        "heading": "Why We Love This Range",
+        "link_label": "Link label",
+        "link": "",
+        "image_ratio": "adapt",
+        "text_alignment": "left",
+        "button_transparent": "transparent",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "carousel_gap": 10,
+        "carousel_gap_tablet": 10,
+        "carousel_gap_mobile": 10,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.2,
+        "carousel_number_mobile": "1",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "image_animation": "none",
+        "text_animation": "none",
+        "margin_top": 40,
+        "margin_bottom": 40,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "brand_list_4ky6mF": {
+      "type": "brand-list",
+      "blocks": {
+        "brand_dR6BNb": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/As_Seen_In.png",
+            "link": ""
+          }
+        },
+        "brand_tKc3gk": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CountryLiving_Logo_copy.png",
+            "link": ""
+          }
+        },
+        "brand_EPeMTD": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+            "link": ""
+          }
+        },
+        "brand_cDxeB6": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_dR6BNb",
+        "brand_tKc3gk",
+        "brand_EPeMTD",
+        "brand_cDxeB6"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "title": "",
+        "title_size": "xx-small",
+        "colors_title": "#666666",
+        "content": "",
+        "content_size": "xx-small",
+        "content_margin_bottom": 29,
+        "text_view_all": "",
+        "primary_text_link": "",
+        "button_transparent": "transparent",
+        "button_margin_top": 31,
+        "type_display": "scroll",
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "pagination_spacing_top": 50,
+        "carousel_number": 3,
+        "carousel_number_tablet": 3,
+        "carousel_number_mobile": 1,
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "image_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
     }
   },
   "order": [
@@ -613,6 +789,8 @@
     "related-products",
     "recently-products",
     "1679044770251ee1c2",
-    "newsletter_Lkdri8"
+    "newsletter_Lkdri8",
+    "multicolumn_CNwqta",
+    "brand_list_4ky6mF"
   ]
 }
