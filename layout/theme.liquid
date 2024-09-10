@@ -41,7 +41,7 @@
       {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {%- if template contains 'collection' -%}
+    {%- if template contains 'collection' or template == "search" -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
 
