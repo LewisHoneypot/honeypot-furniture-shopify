@@ -5,23 +5,14 @@
       {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
 
       <div
-        class="break element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+        class="break element-spacing-all"
         {{ block.shopify_attributes }}
-        {% if settings.animations_reveal_on_scroll %}
-          style="
-            --animation-order: {{ forloop.index }};
-            --padding-top: {{ block.settings.padding_top }}px;
-            --padding-bottom: {{ block.settings.padding_bottom }}px;
-            position: inherit;
-            z-index: 1;
-          "
-        {% else %}
-          style="
-            --padding-top: {{ block.settings.padding_top }}px;
-            --padding-bottom: {{ block.settings.padding_bottom }}px;
-          "
-        {% endif %}
-      >
+        style="
+          --padding-top: {{ block.settings.padding_top }}px;
+          --padding-bottom: {{ block.settings.padding_bottom }}px;
+          max-height: 35px;
+        "
+        >
         <div id="reviews-button" class="trustpilotTooltip">
           <div class="col-12 trustpilot-mini-widget m-0 p-0" style="min-height:25px;"></div>
         </div>
