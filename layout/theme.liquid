@@ -36,6 +36,11 @@
       console.log({{ template_log }});
     </script>
 
+    {%- if template contains "product" -%}
+      <link rel="preload" href="{{ 'trustpilot-product-reviews.js' | asset_url }}" as="script">
+      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
     {%- if template contains 'collection' or template == "search" -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
@@ -230,11 +235,6 @@
       <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
-
-    {%- if template contains "product" -%}
-      <link rel="preload" href="{{ 'trustpilot-product-reviews.js' | asset_url }}" as="script">
-      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
