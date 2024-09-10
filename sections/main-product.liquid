@@ -90,7 +90,7 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-      <div class="product__info-wrapper w-100 f-grow f-shrink product-view-{{ section.settings.type_style }}{% if section.settings.type_style == 'special' %} pos-relative{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <div class="product__info-wrapper w-100 f-grow f-shrink product-view-{{ section.settings.type_style }}{% if section.settings.type_style == 'special' %} pos-relative{% endif %}">
         <product-info
           id="ProductInfo-{{ section.id }}"
           data-section="{{ section.id }}"
@@ -134,20 +134,12 @@
                 </p>
               {%- when 'title' -%}
                 <div
-                  class="product__title break element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                  class="product__title break element-spacing-all"
                   {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    style="
-                      --animation-order: {{ forloop.index }};
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                    "
-                  {% else %}
-                    style="
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                    "
-                  {% endif %}
+                  style="
+                    --padding-top: {{ block.settings.padding_top }}px;
+                    --padding-bottom: {{ block.settings.padding_bottom }}px;
+                  "
                 >
                   <h1 class="{% if block.settings.heading_size == 'h1' or block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }}{%  else %}p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %} m-0">
                     {{ product.title | escape }}
@@ -179,22 +171,14 @@
                 </div>
               {%- when 'price' -%}
                 <div
-                  class="product__price element-spacing-all no-js-hidden{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                  class="product__price element-spacing-all no-js-hidden"
                   {{ block.shopify_attributes }}
                   id="price-{{ section.id }}"
                   role="status"
-                  {% if settings.animations_reveal_on_scroll %}
-                    style="
-                      --animation-order: {{ forloop.index }};
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                    "
-                  {% else %}
-                    style="
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                    "
-                  {% endif %}
+                  style="
+                    --padding-top: {{ block.settings.padding_top }}px;
+                    --padding-bottom: {{ block.settings.padding_bottom }}px;
+                  "
                 >
                   {%- liquid
                     if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
@@ -651,7 +635,7 @@
               {%- when 'color_swatch' -%}
                 {%- if product.metafields.custom.product_colour_list != blank -%}
                   <div
-                    class="product__variant {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                    class="product__variant"
                     style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px; min-height:85px;"
                     {{ block.shopify_attributes }}
                   >
