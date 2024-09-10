@@ -36,11 +36,6 @@
       console.log({{ template_log }});
     </script>
 
-    {%- if template contains "product" -%}
-      <link rel="preload" href="{{ 'trustpilot-product-reviews.js' | asset_url }}" as="script">
-      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
-
     {%- if template contains 'collection' or template == "search" -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
