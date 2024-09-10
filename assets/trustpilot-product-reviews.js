@@ -128,14 +128,17 @@ function initializeTrustPilot() {
           `;
 
           reviewHTML += `
+
+            </div>
+
             <div class="rating-breakdown col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5">
               <div class="buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item">
                 <button class="toggle-button button button--style-diagonal-swipe mi-w color-background-1" data-target="breakdown-${i}">
                   <span class="text">Rating Breakdown</span>
                 </button>
               </div>
-              <div id="breakdown-${i}" class="additional-content hidden">
-                <div class="attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5">
+              <div id="breakdown-${i}" class="additional-content d-none d-lg-block">
+                <div class="attribute-section col-12 order-2 pr-lg-0 pb-5 mt-5">
                   ${attributeHTML}
                 </div>
               </div>
@@ -152,8 +155,8 @@ function initializeTrustPilot() {
           const targetId = this.getAttribute("data-target");
           const content = document.querySelector(`#${targetId}`);
           if (content) {
-            content.classList.toggle("hidden");
-            this.querySelector(".text").textContent = content.classList.contains("hidden") ? "Rating Breakdown" : "Hide Breakdown";
+            content.classList.toggle("d-none");
+            this.querySelector(".text").textContent = content.classList.contains("d-none") ? "Rating Breakdown" : "Hide Breakdown";
           }
         });
       });
