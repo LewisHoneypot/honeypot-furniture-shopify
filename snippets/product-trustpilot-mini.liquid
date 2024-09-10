@@ -1,9 +1,6 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
     {%- when 'trustpilot_mini' -%}
-      <script src="{{ 'trustpilot-product-reviews.js' | asset_url }}" async></script>
-      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
-
       <div
         class="break element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
         {{ block.shopify_attributes }}
