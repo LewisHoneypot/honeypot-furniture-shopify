@@ -231,6 +231,11 @@
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
 
+    {%- if template contains "product" -%}
+      <script src="{{ 'trustpilot-product-reviews.js' | asset_url }}" async></script>
+      {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+    
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
