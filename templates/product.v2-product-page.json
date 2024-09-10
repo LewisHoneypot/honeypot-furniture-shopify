@@ -95,6 +95,23 @@
             "page": ""
           }
         },
+        "icon_with_text_8UqWad": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify:\/\/shop_images\/1_78ce58a0-2ee8-40ef-ac6e-1dde348a028a.png",
+            "heading_1": "Buy With Confidence",
+            "icon_2": "none",
+            "image_2": "shopify:\/\/shop_images\/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
+            "heading_2": "Product Dimenions",
+            "icon_3": "truck",
+            "image_3": "shopify:\/\/shop_images\/3_24d33efb-6a47-4b06-b4dc-40b7314b4008.png",
+            "heading_3": "Speak To Us Today",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -139,23 +156,6 @@
             "button-1-text": "Protect From Accidental Damage",
             "button-2-text": "Return To Cart"
           }
-        },
-        "icon_with_text_8UqWad": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "none",
-            "image_1": "shopify:\/\/shop_images\/1_78ce58a0-2ee8-40ef-ac6e-1dde348a028a.png",
-            "heading_1": "Buy With Confidence",
-            "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
-            "heading_2": "Product Dimenions",
-            "icon_3": "truck",
-            "image_3": "shopify:\/\/shop_images\/3_24d33efb-6a47-4b06-b4dc-40b7314b4008.png",
-            "heading_3": "Speak To Us Today",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
         }
       },
       "block_order": [
@@ -168,9 +168,9 @@
         "size_chart_kqc3gt",
         "expected_delivery_TKcTdt",
         "drawer_j3bNWd",
+        "icon_with_text_8UqWad",
         "buy_buttons",
-        "staingard_drawer_iWbVLW",
-        "icon_with_text_8UqWad"
+        "staingard_drawer_iWbVLW"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
