@@ -57,7 +57,7 @@
         "heading_LaUpiY": {
           "type": "heading",
           "settings": {
-            "heading": "Weclome to Honeypot Furniture",
+            "heading": "Welcome to Honeypot Furniture",
             "heading_size": "small",
             "padding_top": 10,
             "padding_bottom": 10
@@ -1201,6 +1201,7 @@
     },
     "map_6R6T8c": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "map_address": "Honeypot Furniture, HoneyP",
         "section_width": "full-width",
