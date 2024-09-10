@@ -232,7 +232,7 @@
     {%- endunless -%}
 
     {%- if template contains "product" -%}
-      {{ 'trustpilot-product-reviews.js' | asset_url | preload_tag: as: 'script' }}
+      <link rel="preload" href="{{ 'trustpilot-product-reviews.js' | asset_url }}" as="script">
       {{ 'trustpilot-product-reviews.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
