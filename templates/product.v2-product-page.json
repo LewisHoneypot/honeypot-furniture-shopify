@@ -58,6 +58,7 @@
         },
         "description_jp6iRK": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "description_type": "product_desc",
             "number": 17,
@@ -148,7 +149,7 @@
             "heading_1": "Love-It Guarantee",
             "icon_2": "none",
             "image_2": "shopify:\/\/shop_images\/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
-            "heading_2": "Dimenions",
+            "heading_2": "Product Dimenions",
             "icon_3": "truck",
             "image_3": "shopify:\/\/shop_images\/3_24d33efb-6a47-4b06-b4dc-40b7314b4008.png",
             "heading_3": "Contact us",
@@ -459,10 +460,21 @@
             "padding_top": 10,
             "padding_bottom": 10
           }
+        },
+        "heading_FPJFcb": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
         }
       },
       "block_order": [
-        "text_6HRWyk"
+        "text_6HRWyk",
+        "heading_FPJFcb"
       ],
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
@@ -480,7 +492,7 @@
         "color_scheme": "",
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#000000",
-        "below_text": "",
+        "below_text": "<p>lhbklbjkl<\/p>",
         "below_link_text": "",
         "below_link": "",
         "text_animation": "none",
@@ -496,7 +508,7 @@
         "text_CbtKj9": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>{{ product.metafields.Dimensions.Length1.value }} dimensions metafields here<\/p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -504,7 +516,7 @@
         "subheading_McaVmR": {
           "type": "subheading",
           "settings": {
-            "subheading": "Tell your brand's story through images",
+            "subheading": "{{ product.metafields.custom.features.value }} metafiled here.",
             "subheading_size": "medium",
             "subheading_font": "f-w-600",
             "padding_top": 10,
@@ -526,7 +538,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
@@ -621,7 +633,7 @@
         "text_Lrjtfr": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<ul><li>Estimated Delivery (ETA Code)<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -640,7 +652,7 @@
         "heading_size": "default",
         "link_label": "",
         "link": "",
-        "colors_heading": "#FFFFFF",
+        "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
         "background_for_box": false,
