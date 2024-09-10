@@ -10,7 +10,10 @@
   {
     "name": "t:settings_schema.general.name",
     "settings": [
-      { "type": "header", "content": "t:settings_schema.link.settings.name" },
+      { 
+        "type": "header",
+        "content": "t:settings_schema.link.settings.name"
+      },
       {
         "type": "select",
         "id": "link_type",
@@ -2545,6 +2548,10 @@
         "id": "enable_snap_collections",
         "label": "Use snap on Collections",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Snap"
       },
       {
         "type": "text",

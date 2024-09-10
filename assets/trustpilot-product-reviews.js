@@ -1,627 +1,238 @@
-// TrustPilot Reviews
+// Consolidated TrustPilot Image Helper
+function getTrustpilotImage(rating, isAnchorImage = false) {
+  if (isNaN(rating) || rating < 0 || rating > 5) return "";
+
+  const roundedRating = Math.round(rating * 2) / 2;
+  const imageUrl = `//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${roundedRating}.png`;
+  const isMobile = window.matchMedia("(max-width: 750px)").matches;
+  const ratingText = isMobile ? `${rating} / 5` : `${rating} out of 5`;
+
+  return isAnchorImage
+    ? `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128">`
+    : `<img src="${imageUrl}" class="stars-image mr-2" alt="Trustpilot Rating" height="24" width="128"><span>${ratingText}</span>`;
+}
 
 // Helper function to create and append elements
 function createElement(type, classNames = [], attributes = {}, innerHTML = "") {
   const element = document.createElement(type);
-  classNames.forEach((className) => element.classList.add(className));
-  Object.keys(attributes).forEach((attr) =>
-    element.setAttribute(attr, attributes[attr])
-  );
+  if (classNames.length) element.className = classNames.join(' ');
+  Object.assign(element, attributes);
   element.innerHTML = innerHTML;
   return element;
 }
 
-// Function to run your main code
+// Tooltip Creation Helper
+function createScoreRow(stars, fill, amount) {
+  return `
+    <div class="row">
+      <div class="col-3 py-1">${stars} stars</div>
+      <div class="col-7 py-1">
+        <div class="score-bar mt-2">
+          <div class="score-bar-fill" style="width: ${fill}%"></div>
+        </div>
+      </div>
+      <div class="col-2 py-1 px-0">(${amount})</div>
+    </div>
+  `;
+}
+
+// Main Function
 function initializeTrustPilot() {
-  var productRangeArray = [productSku];
-  var trustpilot_skus_array = [trustpilot_skus];
+  const productId = productSku;
+  const phpEndpoint = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php`;
 
-  var environment = "live";
-  const phpEndpoint = `https://honeypot-trade.co.uk/${environment}/trustpilot/product-reviews.php`;
-
-  var productId = productSku;
-
-  // Trustpilot Product Reviews
-
-  // add current product to full range
-  productRangeArray.push(productSku);
-  // add current product to full range
-  trustpilot_skus_array.push(trustpilot_skus);
-
-  // convert array to string for url
-  var productRangeArrayString = productRangeArray.toString();
-  var trustpilot_skus_array_string = trustpilot_skus_array.toString();
-
-  // Set up the URLs for the requests
-  // current product only
   const urlCurrentProduct = `${phpEndpoint}?type=reviews&sku=${productId}&perPage=100`;
-  // current product with full range
-  const urlCurrentProductWithFullRange = `${phpEndpoint}?type=reviews&sku=${productRangeArrayString}&perPage=100`;
-  // current product with full range
-  const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${trustpilot_skus_array_string}&perPage=100`;
+  const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${[trustpilot_skus].toString()}&perPage=100`;
 
-  // choose whether to use single product or product range
-  var $productRequest = "";
+  const productRequest = [trustpilot_skus].length ? urlCurrentProductWithFullRangeTrustPilot : urlCurrentProduct;
 
-  if (!trustpilot_skus_array_string) {
-    $productRequest = urlCurrentProduct;
-  } else {
-    $productRequest = urlCurrentProductWithFullRangeTrustPilot;
-  }
+  fetch(productRequest)
+    .then(response => response.json())
+    .then(data => {
+      const reviewsContainer = document.querySelector("#reviews");
+      if (!reviewsContainer) return;
 
-  var i = 1;
-
-  // GET request reviews
-  fetch($productRequest)
-    .then((response) => response.json())
-    .then((data) => {
-      // Target the element with the ID "reviews"
-      var reviewsContainer = document.querySelector("#reviews");
-
-      // Check if the target element exists
-      if (!reviewsContainer) {
-        console.error('Element with id="reviews" not found.');
-        return;
-      }
-
-      // Create the outermost div
-      var outerDiv = createElement("div", ["outerDiv"]);
+      const outerDiv = createElement("div", ["outerDiv"]);
       reviewsContainer.appendChild(outerDiv);
 
-      if (Array.isArray(data.productReviews)) {
-        // If productReviews is an array (array of reviews)
-        data.productReviews.forEach((review, i) => {
-          var innerDiv = createElement("div", ["innerDiv"]);
-          outerDiv.appendChild(innerDiv);
+      data.productReviews.forEach((review, i) => {
+        const reviewDate = new Date(review.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
-          var reviewWrapper = createElement("div", [
-            "review-wrapper",
-            "row",
-            "mt-5",
-          ]);
-          innerDiv.appendChild(reviewWrapper);
+        let reviewHTML = `
+          <div class="review-wrapper row mt-5">
+            <div class="reviewSection pb-sm-3 col-12 col-lg-7 order-1">
+              <div class="reviewSectionHeader pb-sm-3 d-inline-flex">
+                <div class="userIcon pt-2">
+                  <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp" class="pb-1" height="24" width="24" loading="lazy">
+                </div>
+                <div class="customerInfo pl-2">
+                  <strong>${review.consumer.displayName}</strong>, ${reviewDate}
+                  <span class="d-block mb-2">${getTrustpilotImage(review.stars)}</span>
+                </div>
+              </div>
+              <p class="d-block mb-0 py-2">"${review.content.trim()}"</p>
+        `;
 
-          var reviewSection = createElement("div", [
-            "reviewSection",
-            "pb-sm-3",
-            "col-12",
-            "col-lg-7",
-            "order-1",
-          ]);
-          reviewWrapper.appendChild(reviewSection);
-
-          var attributeSection = createElement("div", [
-            "attribute-section",
-            "col-12",
-            "col-lg-5",
-            "order-2",
-            "pr-lg-0",
-            "pb-5",
-            "mt-5",
-          ]);
-          reviewWrapper.appendChild(attributeSection);
-
-          var attributeSectionWrapper = createElement("div", [
-            "attributeSectionWrapper",
-            "col-12",
-            "p-0",
-          ]);
-          attributeSection.appendChild(attributeSectionWrapper);
-
-          var attributeNames = createElement("div", [
-            "col-4",
-            "p-0",
-            "attributeNames",
-          ]);
-          attributeSectionWrapper.appendChild(attributeNames);
-
-          var attributeStars = createElement("div", [
-            "col-8",
-            "p-0",
-            "attributeStars",
-            "text-right",
-            "text-lg-left",
-          ]);
-          attributeSectionWrapper.appendChild(attributeStars);
-
-          var reviewSectionHeader = createElement("div", [
-            "reviewSectionHeader",
-            "pb-sm-3",
-            "d-inline-flex",
-          ]);
-          reviewSection.appendChild(reviewSectionHeader);
-
-          var userIcon = createElement("div", ["userIcon", "pt-2"]);
-          reviewSectionHeader.appendChild(userIcon);
-
-          var customerInfo = createElement("div", ["customerInfo", "pl-2"]);
-          reviewSectionHeader.appendChild(customerInfo);
-
-          // Check if review.createdAt exists and is a string
-          if (review.createdAt && typeof review.createdAt === "string") {
-            // Use Date's built-in parsing for better handling of various date formats
-            var reviewDate = new Date(review.createdAt);
-
-            // Only proceed if the date is valid
-            if (!isNaN(reviewDate.getTime())) {
-              var formattedDate = reviewDate.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              });
-
-              var userIconImage = createElement("img", [], {
-                src: "//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp",
-                class: "pb-1",
-                height: 24,
-                width: 24,
-                loading: "lazy",
-              });
-
-              userIcon.appendChild(userIconImage);
-
-              var customerInfoSpan = createElement(
-                "span",
-                ["p-0"],
-                {},
-                `<strong>${review.consumer.displayName}</strong>, ${formattedDate}`
-              );
-              customerInfo.appendChild(customerInfoSpan);
-            } else {
-              console.error("Invalid date format:", review.createdAt);
-            }
-          } else {
-            console.error("Invalid or missing review date:", review.createdAt);
-          }
-
-          var trustpilotImageSpan = createElement(
-            "span",
-            ["d-block", "mb-2"],
-            {},
-            getReviewTrustpilotImage(review.stars)
-          );
-          customerInfo.appendChild(trustpilotImageSpan);
-
-          var reviewContentParagraph = createElement(
-            "p",
-            ["d-block", "mb-0", "py-2"],
-            {},
-            `"${review.content.trim()}"`
-          );
-          reviewSection.appendChild(reviewContentParagraph);
-
-          if (review.attachments) {
-            review.attachments.forEach((attachment) => {
-              attachment.processedFiles.forEach((processedFiles) => {
-                if (processedFiles.mimeType === "video/mp4") {
-                  // Create and append video element with Intersection Observer for lazy loading
-                  var videoSpan = createElement("span", ["d-block"]);
-                  var video = createElement("video", [], {
-                    "data-src": processedFiles.url,
-                    controls: true,
-                    height: 360,
-                    width: 640,
-                    alt: `customer-video-${i}`,
-                    poster: "//example.com/path/to/placeholder-image.jpg",
-                  });
-
-                  videoSpan.appendChild(video);
-                  reviewSection.appendChild(videoSpan);
-
-                  // Video Observer setup
-                  var observer = new IntersectionObserver(
-                    (entries, observer) => {
-                      entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                          var video = entry.target;
-                          video.src = video.dataset.src;
-                          observer.unobserve(video);
-                        }
-                      });
-                    },
-                    { rootMargin: "0px", threshold: 0.1 }
-                  );
-
-                  observer.observe(video);
-                  i++;
-                }
-
-                if (processedFiles.dimension === "360pxWide") {
-                  // Create and append image element with lazy loading
-                  var imageSpan = createElement("span", ["d-block"]);
-                  var img = createElement("img", [], {
-                    src: processedFiles.url,
-                    loading: "lazy",
-                    height: 360,
-                    width: 640,
-                    alt: `customer-photo-${i}`,
-                  });
-                  imageSpan.appendChild(img);
-                  reviewSection.appendChild(imageSpan);
-                  i++;
-                }
-              });
+        if (review.attachments) {
+          review.attachments.forEach(attachment => {
+            attachment.processedFiles.forEach(file => {
+              if (file.mimeType === "video/mp4") {
+                reviewHTML += `
+                  <div class="media-wrapper mt-3">
+                    <video controls height="360" width="640" poster="//example.com/path/to/placeholder-image.jpg" loading="lazy">
+                      <source src="${file.url}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                `;
+              } else if (file.dimension === "360pxWide") {
+                reviewHTML += `
+                  <div class="media-wrapper mt-3">
+                    <img src="${file.url}" loading="lazy" height="360" width="640" alt="customer-photo-${i}">
+                  </div>
+                `;
+              }
             });
-          } else {
-            console.log("No processedFiles");
-          }
-
-          // if honeypot replied
-          if (review.firstCompanyComment) {
-            var dateStringWithoutMilliseconds =
-              review.firstCompanyComment.createdAt.split(".")[0] + "Z";
-            var reviewDate = new Date(dateStringWithoutMilliseconds);
-            var formattedDate = reviewDate.toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
-
-            // Create and append the customer info span
-            var customerInfoSpan = createElement(
-              "span",
-              ["customerInfo", "d-block", "ml-3", "mt-3"],
-              {},
-              `
-              <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24"> 
-              <strong>Honeypot Furniture</strong>, ${formattedDate}
-            `
-            );
-
-            reviewSection.appendChild(customerInfoSpan);
-
-            var commentParagraph = createElement(
-              "p",
-              ["ml-3", "mb-0", "py-2"],
-              {},
-              `"${review.firstCompanyComment.comment.trim()}"`
-            );
-            reviewSection.appendChild(commentParagraph);
-          }
-
-          // Display Trustpilot image for each attribute rating
-          review.attributeRatings.forEach((attribute) => {
-            var roundedRating = Math.round(attribute.rating * 2) / 2;
-            var trustpilotImage = getReviewTrustpilotImage(
-              roundedRating,
-              roundedRating
-            );
-
-            if (attribute.attributeName === "Value for money") {
-              attribute.attributeName = "Value";
-            }
-
-            var attributeNameSpan = createElement(
-              "span",
-              [],
-              {},
-              `<strong>${attribute.attributeName}:</strong>`
-            );
-            attributeNames.appendChild(attributeNameSpan);
-
-            var lineBreak1 = createElement("br");
-            attributeNames.appendChild(lineBreak1);
-
-            var attributeStarsSpan = createElement(
-              "span",
-              [],
-              {},
-              trustpilotImage
-            );
-            attributeStars.appendChild(attributeStarsSpan);
-
-            var lineBreak2 = createElement("br");
-            attributeStars.appendChild(lineBreak2);
           });
+        }
 
-          // Create a button to toggle additional content
-          var buttonWrapper = createElement("div", [
-            "buttonWrapper",
-            "text-center",
-            "pt-4",
-            "px-4",
-            "d-lg-none",
-            "field__action",
-            "contact__button",
-            "pos-relative",
-            "m-t",
-            "m-b",
-            "grid__item",
-          ]);
-          reviewSection.appendChild(buttonWrapper);
+        if (review.firstCompanyComment) {
+          const companyReplyDate = new Date(review.firstCompanyComment.createdAt.split(".")[0] + "Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+          reviewHTML += `
+            <div class="company-reply ml-3 mt-3">
+              <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/bee-32x32.png" class="pb-1" height="24" width="24">
+              <strong>Honeypot Furniture</strong>, ${companyReplyDate}
+              <p class="ml-3 mb-0 py-2">"${review.firstCompanyComment.comment.trim()}"</p>
+            </div>
+          `;
+        }
 
-          var toggleButton = createElement("button", [
-            `button`,
-            `button--style-${button_style}`,
-            `mi-w`,
-            `color-${primary_button_color_scheme}`,
-          ]);
-          buttonWrapper.appendChild(toggleButton);
+        if (review.attributeRatings && review.attributeRatings.length) {
+          const attributeHTML = `
+            <div class="row attributeSectionWrapper col-12 p-0">
+              <div class="col-4 p-0 attributeNames">
+                ${review.attributeRatings.map(attribute => `
+                  <span><strong>${attribute.attributeName === "Value for money" ? "Value" : attribute.attributeName}:</strong></span><br>
+                `).join('')}
+              </div>
+              <div class="col-8 p-0 attributeStars text-right text-lg-left">
+                ${review.attributeRatings.map(attribute => {
+                  const roundedRating = Math.round(attribute.rating * 2) / 2;
+                  const trustpilotImage = getTrustpilotImage(roundedRating);
+                  return `
+                    <span>${trustpilotImage}</span><br>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `;
 
-          var buttonSpan = createElement(
-            "span",
-            ["text"],
-            {},
-            primary_button_label
-          );
-          toggleButton.appendChild(buttonSpan);
+          reviewHTML += `
+            <div class="rating-breakdown col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5">
+              <div class="buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item">
+                <button class="toggle-button button button--style-diagonal-swipe mi-w color-background-1" data-target="breakdown-${i}">
+                  <span class="text">Rating Breakdown</span>
+                </button>
+              </div>
+              <div id="breakdown-${i}" class="additional-content hidden">
+                <div class="attribute-section col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5">
+                  ${attributeHTML}
+                </div>
+              </div>
+            </div>
+          `;
+        }
 
-          // Additional content to toggle (e.g., more details about the review)
-          var additionalContent = createElement("div", ["additional-content", "d-lg-block"], { style: "display: none" });
-          attributeSection.appendChild(additionalContent);
+        reviewHTML += `</div></div>`;
+        outerDiv.innerHTML += reviewHTML;
+      });
 
-          // Move attribute-section div into additional content
-          additionalContent.appendChild(attributeSectionWrapper);
-
-          // Toggle button click event
-          toggleButton.addEventListener("click", function () {
-            // Toggle visibility of additional content
-            if (additionalContent.style.display === "none") {
-              additionalContent.style.display = "block";
-              buttonSpan.textContent = "Hide Breakdown";
-            } else {
-              additionalContent.style.display = "none";
-              buttonSpan.textContent = "Rating Breakdown";
-            }
-          });
+      document.querySelectorAll(".toggle-button").forEach(button => {
+        button.addEventListener("click", function () {
+          const targetId = this.getAttribute("data-target");
+          const content = document.querySelector(`#${targetId}`);
+          if (content) {
+            content.classList.toggle("hidden");
+            this.querySelector(".text").textContent = content.classList.contains("hidden") ? "Rating Breakdown" : "Hide Breakdown";
+          }
         });
-      } else {
-        // If productReviews is not an array (handle differently or log an error)
-        console.error("productReviews is not an array:", data.productReviews);
-      }
+      });
     })
-    .catch((error) => {
-      console.error("Error fetching data from Trustpilot API:", error);
-    });
+    .catch(error => console.error("Error fetching data from Trustpilot API:", error));
 
-  // Function to get TrustPilot image based on rating
-  function getReviewTrustpilotImage(rating) {
-    // Ensure rating is a valid number
-    if (isNaN(rating) || rating < 0 || rating > 5) {
-      document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
-      return ""; // No image to return if rating is invalid
-    }
-
-    // Map the rating to the appropriate image file
-    var roundedRatingImage = rating; // Format rating for image file name
-    var imageUrl = `//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${roundedRatingImage}.png`; // Construct the image URL
-
-    // Determine the display text
-    var outOf = window.matchMedia("(max-width: 750px)").matches
-      ? "/"
-      : "out of"; // Adapt text based on screen size
-
-    // Create image and text elements
-    var img = document.createElement("img");
-    img.src = imageUrl;
-    img.loading = "lazy";
-    img.className = "stars-image mr-2";
-    img.alt = "Trustpilot Rating";
-    img.height = 24;
-    img.width = 128;
-
-    var span = document.createElement("span");
-    span.textContent = `${rating} ${outOf} 5`;
-
-    // Return the HTML string
-    return img.outerHTML + span.outerHTML;
-  }
-
-  // Function to get Trustpilot image based on rating
-  function getTrustpilotAnchorImage(rating, roundedRatingImage) {
-    if (isNaN(rating)) {
-      document.querySelector(".trustpilot-mini-widget").classList.add("d-none");
-    } else {
-      var imageUrl =
-        "//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_" +
-        roundedRatingImage +
-        ".png"; // Provide the URL for the Trustpilot image corresponding to the rating
-
-      // Create an image element
-      var img = document.createElement("img");
-      img.src = imageUrl;
-      img.loading = "lazy";
-      img.className = "stars-image";
-      img.alt = "Trustpilot Rating";
-      img.height = 24;
-      img.width = 128;
-
-      // Return the HTML string
-      return img.outerHTML;
-    }
-  }
-
-  ////////////////////// AVERAGE RATINGS
-  // Set up the URL for the request
+  // AVERAGE RATINGS
   const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
+  const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
+  const postData = { skus: trustpilot_skus };
 
-  // Target the element with the class "trustpilot-mini-widget"
-  var trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
-
-  var skuList = trustpilot_skus_array;
-
-  // Prepare data for POST request
-  var postData = {
-    skus: trustpilot_skus,
-  };
-
-  // GET request
   fetch(urlCurrentProductRange, {
     method: "POST",
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer {{ settings.storefront_api.token }}", // use auto-generated token
+      Authorization: "Bearer {{ settings.storefront_api.token }}",
     },
     body: JSON.stringify(postData),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      // create div
-      var outerDiv = createElement("div", ["main-trustpilot"]);
-      trustPilotContainer.appendChild(outerDiv);
+  .then(response => response.json())
+  .then(data => {
+    if (!Array.isArray(data.summaries)) return;
 
-      //check for data
-      if (Array.isArray(data.summaries)) {
-        let totalStars = 0;
-        let amountOfOneStarReviews = 0;
-        let amountOfTwoStarReviews = 0;
-        let amountOfThreeStarReviews = 0;
-        let amountOfFourStarReviews = 0;
-        let amountOfFiveStarReviews = 0;
-        let totalStarsAverage = 0;
-        let amountOfReviews = 0;
+    const outerDiv = createElement("div", ["main-trustpilot"]);
+    trustPilotContainer.appendChild(outerDiv);
 
-        data.summaries.forEach((summary, i) => {
-          totalStars += summary.starsAverage;
-          amountOfReviews += summary.numberOfReviews.total;
-          amountOfOneStarReviews += summary.numberOfReviews.oneStar;
-          amountOfTwoStarReviews += summary.numberOfReviews.twoStars;
-          amountOfThreeStarReviews += summary.numberOfReviews.threeStars;
-          amountOfFourStarReviews += summary.numberOfReviews.fourStars;
-          amountOfFiveStarReviews += summary.numberOfReviews.fiveStars;
-        });
+    let totalStars = 0, amountOfReviews = 0;
+    const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 
-        // hide reviews icon if none exist
-        if (amountOfReviews === 0) {
-          var elements = document.querySelectorAll(
-            "[id*='trustpilot_product_reviews_collapsible']"
-          );
-          elements.forEach(function (element) {
-            element.style.display = "none";
-          });
-        }
-
-        let totalCombinedReviews =
-          amountOfFiveStarReviews +
-          amountOfFourStarReviews +
-          amountOfThreeStarReviews +
-          amountOfTwoStarReviews +
-          amountOfOneStarReviews;
-
-        let fiveStarFill =
-          (amountOfFiveStarReviews / totalCombinedReviews) * 100;
-        let fourStarFill =
-          (amountOfFourStarReviews / totalCombinedReviews) * 100;
-        let threeStarFill =
-          (amountOfThreeStarReviews / totalCombinedReviews) * 100;
-        let twoStarFill = (amountOfTwoStarReviews / totalCombinedReviews) * 100;
-        let oneStarFill = (amountOfOneStarReviews / totalCombinedReviews) * 100;
-
-        totalStarsAverage = totalStars / data.summaries.length;
-
-        var outOfFive = "";
-
-        // Check if the number is a whole number
-        if (totalStarsAverage % 1 === 0) {
-          // If it is, convert it to a string without decimal places
-          outOfFive = totalStarsAverage.toFixed(0);
-        } else {
-          // If it's not, keep one decimal place
-          outOfFive = totalStarsAverage.toFixed(1);
-        }
-
-        totalStarsAverage = totalStarsAverage.toFixed(1);
-
-        var roundedRating = Math.round(totalStarsAverage * 2) / 2; // Round to the nearest 0.5
-        var trustpilotImage = getTrustpilotAnchorImage(
-          totalStarsAverage,
-          roundedRating
-        );
-
-        // Create the link with a span inside
-        var reviewsLink = createElement("div", [], {}, `
-          <span style='min-height:24px;'>
-            ${trustpilotImage}
-            <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
-            <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
-          </span>
-        `);
-
-        // Append the reviewsLink to the desired parent element
-        // Example: parentElement.appendChild(reviewsLink);
-
-        // Hide the reviews section if amountOfReviews is "0"
-        if (amountOfReviews === "0") {
-          var trustpilotMiniWidget = document.querySelector(
-            ".trustpilot-mini-widget"
-          );
-          if (trustpilotMiniWidget) {
-            trustpilotMiniWidget.classList.remove("d-lg-block");
-            trustpilotMiniWidget.classList.add("d-lg-none");
-          }
-        }
-
-        // Create tooltip elements
-        var toolTip = createElement("span", ["tooltip-content"]);
-
-        var toolTipHeader = createElement("div", [
-          "tooltip-header",
-          "col-12",
-          "px-0",
-          "pt-1",
-          "pb-3"
-        ]);
-
-        var toolTipHeaderText = createElement("div", [], {}, `Rated ${outOfFive} out of 5 stars`);
-
-        // Append the header text to the header
-        toolTipHeader.appendChild(toolTipHeaderText);
-
-        // Create and append the score rows
-        var createScoreRow = function (stars, fill, amount) {
-          var row = createElement("div", ["row"]);
-
-          var starLabel = createElement("div", ["col-3", "py-1"], {}, `${stars} stars`);
-
-          var scoreBarWrapper = createElement("div", ["col-7", "py-1"]);
-
-          var scoreBar = createElement("div", ["score-bar", "mt-2"]);
-
-          var scoreBarFill = createElement("div", ["score-bar-fill"], { style: `width: ${fill}%` });
-
-          scoreBar.appendChild(scoreBarFill);
-          scoreBarWrapper.appendChild(scoreBar);
-
-          var amountLabel = createElement("div", ["col-2", "py-1", "px-0"], {}, `(${amount})`);
-
-          row.appendChild(starLabel);
-          row.appendChild(scoreBarWrapper);
-          row.appendChild(amountLabel);
-
-          return row;
-        };
-
-        // Create and append each star rating row
-        toolTip.appendChild(
-          createScoreRow("5", fiveStarFill, amountOfFiveStarReviews)
-        );
-        toolTip.appendChild(
-          createScoreRow("4", fourStarFill, amountOfFourStarReviews)
-        );
-        toolTip.appendChild(
-          createScoreRow("3", threeStarFill, amountOfThreeStarReviews)
-        );
-        toolTip.appendChild(
-          createScoreRow("2", twoStarFill, amountOfTwoStarReviews)
-        );
-        toolTip.appendChild(
-          createScoreRow("1", oneStarFill, amountOfOneStarReviews)
-        );
-
-        // Append tooltip header to the tooltip
-        toolTip.appendChild(toolTipHeader);
-
-        // Append the tooltip to the reviews link
-        reviewsLink.appendChild(toolTip);
-
-        // Append the reviews link to the outer div
-        outerDiv.appendChild(reviewsLink);
-      }
-    })
-    .catch((error) => {
-      console.error("Error fetching data from Trustpilot API:", error);
+    data.summaries.forEach(summary => {
+      totalStars += summary.starsAverage;
+      amountOfReviews += summary.numberOfReviews.total;
+      reviewCounts[1] += summary.numberOfReviews.oneStar;
+      reviewCounts[2] += summary.numberOfReviews.twoStars;
+      reviewCounts[3] += summary.numberOfReviews.threeStars;
+      reviewCounts[4] += summary.numberOfReviews.fourStars;
+      reviewCounts[5] += summary.numberOfReviews.fiveStars;
     });
+
+    if (amountOfReviews === 0) {
+      document.querySelectorAll("[id*='trustpilot_product_reviews_collapsible']").forEach(el => el.style.display = "none");
+    }
+
+    const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
+    const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
+    const totalStarsAverage = (totalStars / data.summaries.length).toFixed(1);
+    const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
+
+    const reviewsLink = createElement("div", [], {}, `
+      <span style='min-height:24px;'>
+        ${trustpilotImage}
+        <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
+        <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
+      </span>
+    `);
+
+    if (amountOfReviews === 0) {
+      trustPilotContainer.classList.replace("d-lg-block", "d-lg-none");
+    }
+
+    const toolTip = createElement("span", ["tooltip-content"]);
+    const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
+    toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+
+    // Iterate in reverse order and include all rows
+    [5, 4, 3, 2, 1].forEach(stars => {
+      toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
+    });
+
+    toolTip.appendChild(toolTipHeader);
+    reviewsLink.appendChild(toolTip);
+    outerDiv.appendChild(reviewsLink);
+
+    reviewsLink.addEventListener("click", () => {
+      window.scrollTo({ top: document.querySelector("#reviews").offsetTop, behavior: "smooth" });
+    });
+  })
+  .catch(error => console.error("Error fetching data from Trustpilot API:", error));
 }
 
 initializeTrustPilot();
