@@ -209,7 +209,7 @@
                   <div class="test2">{{ media.preview_img | product_img_url }}</div>
                   <div class="test2">{{ media.preview_img.src | product_img_url }}</div> {% endcomment %}
 
-                  <link rel="preload" fetchpriority="high" as="image" href="{{ media.src | image_url }}&width=1946" type="image/jpg">
+                  <link rel="preload" fetchpriority="high" as="image" href="{{ media.src | image_url }}&width=600" type="image/jpg">
                 {%- else -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
