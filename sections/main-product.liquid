@@ -640,9 +640,42 @@
                     {{ block.shopify_attributes }}
                   >
                     <p>{{ block.settings.available_colours }}:</p>
-
+              
+                    {%- assign colour_list = product.metafields.custom.product_colour_list.value -%}
+                    {%- assign p_count = 0 -%} <!-- Initialize the counter -->
+              
+                    <!-- Count the number of colours -->
+                    {% for p in colour_list %}
+                      {%- assign p_count = p_count | plus: 1 -%}
+                    {% endfor %}
+              
+                    <!-- Set columns -->
+                    <style>
+                      .color-list {
+                        {%- if p_count == 5 %}
+                          grid-template-columns: repeat({{ p_count }}, 20%);
+                        {%- elsif p_count == 4 -%}
+                          grid-template-columns: repeat({{ p_count }}, 25%);
+                          max-width: 317px !important;
+                        {%- elsif p_count == 3 -%}
+                          grid-template-columns: repeat({{ p_count }}, 33%);
+                          max-width: 242px !important;
+                        {%- elsif p_count == 2 -%}
+                          grid-template-columns: repeat({{ p_count }}, 50%);
+                          max-width: 160px !important;
+                        {%- elsif p_count == 1 -%}
+                          grid-template-columns: repeat({{ p_count }}, 100%);
+                          max-width: 80px !important;
+                        {%- endif -%}
+                        @media screen and (min-width: 990px){
+                          grid-template-columns: repeat({{ p_count }}, 50px);
+                        }
+                      }
+                    </style>
+              
+                    <!-- Display color items after counting -->
                     <div class="color-list">
-                      {% for p in product.metafields.custom.product_colour_list.value %}
+                      {% for p in colour_list %}
                         <a
                           {% if product.handle == p.handle %}
                             href="#" style="cursor:default; outline:2px solid #000000; outline-offset:2px;"
@@ -657,6 +690,7 @@
                         </a>
                       {% endfor %}
                     </div>
+              
                   </div>
                 {%- endif -%}
 
@@ -5229,16 +5263,20 @@
 {% stylesheet %}
   .page-product {
     .color-list {
-      display: flex;
+      display: grid;
+      max-width: 400px;
+      max-height: 70px;
     }
     .color-list a {
       margin-right: 1rem;
     }
     .color-item {
       aspect-ratio: 1;
-      height: 3.5rem;
-      width: 3.5rem;
       display: block !important;
+      @media screen and (min-width: 990px){
+        max-width: none;
+        max-height: none;
+      }
     }
     .drawer__wrapper {
       margin-top: 30px;

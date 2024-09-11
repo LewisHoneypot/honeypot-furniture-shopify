@@ -434,11 +434,11 @@
           style="padding-top: 0px;"
           {{ block.shopify_attributes }}
         >
-          <div class="color-list">
+          <div class="color-list" style="display: inline-flex !important;">
             {% for p in card_product.metafields.custom.product_colour_list.value %}
               <div
                 class="color-item"
-                style="background-color: {{ p.metafields.custom.color.value }}; aspect-ratio: 1; height: 3.5rem; width: 3.5rem; display: block !important; margin-right: 5px; margin-top: 15px;"
+                style="background-color: {{ p.metafields.custom.color.value }}; height: 3.5rem; width: 3.5rem; margin-right: 5px; margin-top: 15px;"
               ></div>
             {% endfor %}
           </div>
