@@ -1,9 +1,9 @@
-<div id="snap-uk-widgets-product-rbp" style="padding-top:10px;padding-bottom:5px;min-height:63px;"></div>
+<div id="snap-uk-widgets-product-rbp" class="mt-2" style="min-height:63px;"></div>
 
 {% assign product_price = product.price | money_without_currency %}
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var productPrice = +{{ product_price | replace: "£", "" | replace: ",", "" | split: " " | first }};
     if (productPrice >= 250) {
         snapuk.init("fq0hLCzt4Qj1V15ZK78VvjO9K7GUA9zW");
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             theme: "LIGHT",
         });
 
-        // Wait for the widget to be initialized and then replace the "Learn more" text with a chevron
+        // Wait for the widget to be initialized and then remove the "Learn more" button
         setTimeout(function() {
             // Select the shadow host element
             const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
@@ -27,22 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     const learnMoreElement = shadowRoot.querySelector('#rbp-bnpl-learn-more');
 
                     if (learnMoreElement) {
-                        // Replace the "Learn more" text with a chevron icon
-                        learnMoreElement.innerHTML = `
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="rgba(var(--color-foreground),.8)"></path>
-                          </svg>
-                        `;
-
-                        // Add click event listener to the parent element to simulate a click on the chevron
-                        shadowHost.addEventListener('click', function() {
-                            // Find the chevron element
-                            const chevronElement = shadowRoot.querySelector('#rbp-bnpl-learn-more');
-                            if (chevronElement) {
-                                // Simulate a click on the chevron
-                                chevronElement.click();
-                            }
-                        });
+                        // Remove the "Learn more" element from the DOM
+                        learnMoreElement.remove();
                     }
                 }
             }
