@@ -257,6 +257,8 @@ function initializeTrustPilot() {
     } else {
       console.log("Details element not found");
     }
+
+    const reviewsButton = document.querySelector("#reviews-button");
   
     if (reviewsButton) {
       reviewsButton.addEventListener("click", function() {
