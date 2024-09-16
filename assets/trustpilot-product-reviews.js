@@ -171,12 +171,12 @@ function loadReviews() {
 
 // Function to initialize TrustPilot (including the tooltip button)
 function initializeTrustPilot() {
-  const productId = productSku;
+  // const productId = productSku;
   const phpEndpoint = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php`;
 
   const urlCurrentProductRange = `${phpEndpoint}?type=batch-summaries`;
-  const urlCurrentProduct = `${phpEndpoint}?type=reviews&sku=${productId}&perPage=100`;
-  const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${[trustpilot_skus].toString()}&perPage=100`;
+  // const urlCurrentProduct = `${phpEndpoint}?type=reviews&sku=${productId}&perPage=100`;
+  // const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${[trustpilot_skus].toString()}&perPage=100`;
 
   // Fetch batch summaries first for the tooltip
   fetch(urlCurrentProductRange, {

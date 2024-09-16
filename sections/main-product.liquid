@@ -1,3 +1,7 @@
+<script>
+  var productSku = "{{ product.variants[0].sku }}";
+</script>
+
 <section
   id="MainProduct-{{ section.id }}"
   data-section="{{ section.id }}"
@@ -1776,11 +1780,9 @@
 
                   {% assign trustpilot_skus = final_tag_list | json %}
 
-                  {% comment %}
-                    <script>
-                      console.log("trustpilot_skus", {{ trustpilot_skus }});
-                    </script>
-                  {% endcomment %}
+                  <script>
+                    console.log("trustpilot_skus", {{ trustpilot_skus }});
+                  </script>
 
                 {%- else -%}
                   {{ block.settings.content }}
@@ -5410,8 +5412,8 @@
 {% endstylesheet %}
 
 <script>
-  var productSku = "{{ product.variants[0].sku }}";
-  {% comment %} console.log("current_variant", productSku); {% endcomment %}
+  {% comment %} var productSku = "{{ product.variants[0].sku }}"; {% endcomment %}
+  console.log("current_variant", productSku);
 
   {%- if trustpilot_skus %}
     var trustpilot_skus = {{ trustpilot_skus }};
