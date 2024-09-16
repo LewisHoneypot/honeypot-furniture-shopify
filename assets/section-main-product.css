@@ -237,6 +237,7 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  display: none;
 }
 
 .shopify-payment-button__button + .shopify-payment-button__button--hidden {

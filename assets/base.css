@@ -26192,6 +26192,13 @@ body.multitasking__show .newsletter-popup-opener {
   text-align: center !important;
 }
 
+/* Dynamic Text Aligns */
+.text-md-left {
+  @media screen and (min-width:768px){
+    text-align: left !important;
+  }
+}
+
 /* edd custom css */
 .deliverydate.sb_delivery {
   margin: 0 !important;
@@ -26218,10 +26225,8 @@ body.multitasking__show .newsletter-popup-opener {
 
 /* edd custom css replicate */
 .deliverydate-new.sb_delivery-new {
-  min-height: 58px;
-  background-color: #fff !important;
-  display: block !important;
-  padding: 1.2rem !important;
+  display: block;
+  /* padding: 1.2rem !important; */
   line-height: 2;
   /* border: 0.1rem solid rgba(var(--color-foreground), .8) !important; */
   column-gap: 1rem;
@@ -26230,7 +26235,7 @@ body.multitasking__show .newsletter-popup-opener {
   appearance: none;
 }
 .deliverydate-new.sb_delivery-new b {
-  color: rgba(var(--color-foreground), 1) !important;
+  color: rgba(var(--color-foreground), 1);
   font-size: 1.6rem !important;
   font-weight: var(--font-body-weight);
 }
