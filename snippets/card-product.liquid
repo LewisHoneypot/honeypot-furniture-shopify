@@ -436,10 +436,26 @@
         >
           <div class="color-list" style="display: inline-flex !important;">
             {% for p in card_product.metafields.custom.product_colour_list.value %}
-              <div
-                class="color-item"
-                style="background-color: {{ p.metafields.custom.color.value }}; height: 3.5rem; width: 3.5rem; margin-right: 5px; margin-top: 15px;"
-              ></div>
+              {% if p.metafields.custom.color_2.value %}
+                <!-- Two colors with a diagonal split -->
+                <div
+                  class="color-item"
+                  style="
+                    background: linear-gradient(
+                      to bottom right,
+                      {{ p.metafields.custom.color.value }} 50%,
+                      {{ p.metafields.custom.color_2.value }} 50%
+                    );
+                     height: 3.5rem; width: 3.5rem; margin-right: 5px; margin-top: 15px;
+                  "
+                ></div>
+              {% else %}
+                <!-- Only one color -->
+                <div
+                  class="color-item"
+                  style="background-color: {{ p.metafields.custom.color.value }}; height: 3.5rem; width: 3.5rem; margin-right: 5px; margin-top: 15px;"
+                ></div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>

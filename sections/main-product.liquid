@@ -640,15 +640,16 @@
                     {{ block.shopify_attributes }}
                   >
                     <p>{{ block.settings.available_colours }}:</p>
-              
+
                     {%- assign colour_list = product.metafields.custom.product_colour_list.value -%}
-                    {%- assign p_count = 0 -%} <!-- Initialize the counter -->
-              
+                    {%- assign p_count = 0 -%}
+                    <!-- Initialize the counter -->
+
                     <!-- Count the number of colours -->
                     {% for p in colour_list %}
                       {%- assign p_count = p_count | plus: 1 -%}
                     {% endfor %}
-              
+
                     <!-- Set columns -->
                     <style>
                       .color-list {
@@ -672,7 +673,7 @@
                         }
                       }
                     </style>
-              
+
                     <!-- Display color items after counting -->
                     <div class="color-list">
                       {% for p in colour_list %}
@@ -683,14 +684,29 @@
                             href="{{ p.url }}"
                           {% endif %}
                         >
-                          <div
-                            class="color-item"
-                            style="background-color: {{ p.metafields.custom.color.value }};"
-                          ></div>
+                          {% if p.metafields.custom.color_2 %}
+                            <!-- Two colors with a diagonal split -->
+                            <div
+                              class="color-item"
+                              style="
+                                background: linear-gradient(
+                                  to bottom right,
+                                  {{ p.metafields.custom.color.value }} 50%,
+                                  {{ p.metafields.custom.color_2.value }} 50%
+                                );
+                              "
+                            ></div>
+                          {% else %}
+                            <!-- Only one color -->
+                            <div
+                              class="color-item"
+                              style="background-color: {{ p.metafields.custom.color.value }};"
+                            ></div>
+                          {% endif %}
                         </a>
+
                       {% endfor %}
                     </div>
-              
                   </div>
                 {%- endif -%}
 
@@ -719,11 +735,12 @@
 
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
-
-                  {% comment %} {%- assign product_log = product -%}
-                  <script>
-                    console.log({{ product_log | json }})
-                  </script> {% endcomment %}
+                  {% comment %}
+                    {%- assign product_log = product -%}
+                    <script>
+                      console.log({{ product_log | json }})
+                    </script>
+                  {% endcomment %}
 
                   {% comment %} Check if in stock {% endcomment %}
                   {% assign current_variant = product.selected_or_first_available_variant %}
@@ -732,7 +749,7 @@
                   {% else %}
                     {%- assign in_stock = false -%}
                   {% endif %}
-                
+
                   {% comment %} Check which collections product is in {% endcomment %}
                   {%- assign collection_titles = '' -%}
                   {%- for collection in product.collections -%}
@@ -741,14 +758,16 @@
                       {%- assign collection_titles = collection_titles | append: ', ' -%}
                     {%- endunless -%}
                   {%- endfor -%}
-                
-                  {% comment %} <script>
-                    console.log('{{ collection_titles | json }}');
-                  </script> {% endcomment %}
-                
+
+                  {% comment %}
+                    <script>
+                      console.log('{{ collection_titles | json }}');
+                    </script>
+                  {% endcomment %}
+
                   {%- assign date_1 = 0 -%}
                   {%- assign date_2 = 0 -%}
-                
+
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if product.available and in_stock == true -%}
                       {%- assign date_1 = 1 -%}
@@ -757,7 +776,10 @@
                       {%- assign date_1 = 28 -%}
                       {%- assign date_2 = 42 -%}
                     {%- endif -%}
-                  {%- elsif collection_titles contains 'rugs' or product.tags contains 'LL' or product.tags contains 'JB' -%}
+                  {%- elsif collection_titles contains 'rugs'
+                    or product.tags contains 'LL'
+                    or product.tags contains 'JB'
+                  -%}
                     {%- if product.available and in_stock == true -%}
                       {%- assign date_1 = 1 -%}
                       {%- assign date_2 = 7 -%}
@@ -776,42 +798,64 @@
                       {%- assign date_1 = 8 -%}
                       {%- assign date_2 = 14 -%}
                     {%- endif -%}
-                  {%- elsif collection_titles contains 'Living Room' or collection_titles contains 'Dining Room' or collection_titles contains 'Wardrobes' or collection_titles contains 'Chest of Drawers' or collection_titles contains 'Bedside Tables' or collection_titles contains 'Sideboards' -%}
+                  {%- elsif collection_titles contains 'Living Room'
+                    or collection_titles contains 'Dining Room'
+                    or collection_titles contains 'Wardrobes'
+                    or collection_titles contains 'Chest of Drawers'
+                    or collection_titles contains 'Bedside Tables'
+                    or collection_titles contains 'Sideboards'
+                  -%}
                     {%- assign date_1 = 7 -%}
                     {%- assign date_2 = 10 -%}
                   {%- endif -%}
-                
+
                   {%- assign today_1 = 'now' | date: '%s' -%}
                   {%- assign today_2 = 'now' | date: '%s' -%}
                   {%- assign seconds_1 = date_1 | times: 24 | times: 60 | times: 60 -%}
                   {%- assign seconds_2 = date_2 | times: 24 | times: 60 | times: 60 -%}
-                  
+
                   {%- assign delivery_date_timestamp_1 = today_1 | plus: seconds_1 -%}
                   {%- assign delivery_date_timestamp_2 = today_2 | plus: seconds_2 -%}
-                  
-                  {%- assign delivery_day_1 = delivery_date_timestamp_1 | date: "%e" -%}
-                  {%- assign delivery_day_2 = delivery_date_timestamp_2 | date: "%e" -%}
-                
+
+                  {%- assign delivery_day_1 = delivery_date_timestamp_1 | date: '%e' -%}
+                  {%- assign delivery_day_2 = delivery_date_timestamp_2 | date: '%e' -%}
+
                   {%- assign delivery_date_suffix_1 = '' -%}
                   {%- assign delivery_date_suffix_2 = '' -%}
-                
+
                   {%- case delivery_day_1 | modulo: 10 -%}
-                    {%- when 1 -%} {%- assign delivery_date_suffix_1 = 'st' -%}
-                    {%- when 2 -%} {%- assign delivery_date_suffix_1 = 'nd' -%}
-                    {%- when 3 -%} {%- assign delivery_date_suffix_1 = 'rd' -%}
-                    {%- else -%} {%- assign delivery_date_suffix_1 = 'th' -%}
+                    {%- when 1 -%}
+                      {%- assign delivery_date_suffix_1 = 'st' -%}
+                    {%- when 2 -%}
+                      {%- assign delivery_date_suffix_1 = 'nd' -%}
+                    {%- when 3 -%}
+                      {%- assign delivery_date_suffix_1 = 'rd' -%}
+                    {%- else -%}
+                      {%- assign delivery_date_suffix_1 = 'th' -%}
                   {%- endcase -%}
-                
+
                   {%- case delivery_day_2 | modulo: 10 -%}
-                    {%- when 1 -%} {%- assign delivery_date_suffix_2 = 'st' -%}
-                    {%- when 2 -%} {%- assign delivery_date_suffix_2 = 'nd' -%}
-                    {%- when 3 -%} {%- assign delivery_date_suffix_2 = 'rd' -%}
-                    {%- else -%} {%- assign delivery_date_suffix_2 = 'th' -%}
+                    {%- when 1 -%}
+                      {%- assign delivery_date_suffix_2 = 'st' -%}
+                    {%- when 2 -%}
+                      {%- assign delivery_date_suffix_2 = 'nd' -%}
+                    {%- when 3 -%}
+                      {%- assign delivery_date_suffix_2 = 'rd' -%}
+                    {%- else -%}
+                      {%- assign delivery_date_suffix_2 = 'th' -%}
                   {%- endcase -%}
-                
-                  {%- assign formatted_date_1 = delivery_date_timestamp_1 | date: "%b " | append: delivery_day_1 | append: delivery_date_suffix_1 -%}
-                  {%- assign formatted_date_2 = delivery_date_timestamp_2 | date: "%b " | append: delivery_day_2 | append: delivery_date_suffix_2 -%}
-                
+
+                  {%- assign formatted_date_1 = delivery_date_timestamp_1
+                    | date: '%b '
+                    | append: delivery_day_1
+                    | append: delivery_date_suffix_1
+                  -%}
+                  {%- assign formatted_date_2 = delivery_date_timestamp_2
+                    | date: '%b '
+                    | append: delivery_day_2
+                    | append: delivery_date_suffix_2
+                  -%}
+
                   <div
                     class="deliverydate-new sb_delivery-new m-0 mt-1"
                     {{ block.shopify_attributes }}
@@ -819,14 +863,14 @@
                   >
                     {%- if block.settings.heading != blank -%}
                       <div>
-                        {{ block.settings.heading | escape }}: 
-                        <strong>{{ formatted_date_1 }}</strong> 
-                        to 
+                        {{ block.settings.heading | escape }}:
+                        <strong>{{ formatted_date_1 }}</strong>
+                        to
                         <strong>{{ formatted_date_2 }}</strong>
                       </div>
                     {%- endif -%}
                   </div>
-                {%- endif -%}                
+                {%- endif -%}
 
               {%- when 'drawer' -%}
                 <div
@@ -5273,7 +5317,7 @@
     .color-item {
       aspect-ratio: 1;
       display: block !important;
-      @media screen and (min-width: 990px){
+      @media screen and (min-width: 990px) {
         max-width: none;
         max-height: none;
       }
@@ -5373,7 +5417,7 @@
     var trustpilot_skus = {{ trustpilot_skus }};
     {% comment %} console.log("trustpilot_skus", trustpilot_skus); {% endcomment %}
   {%- endif -%}
-  
+
   // shop pay button test
   document.addEventListener('DOMContentLoaded', function() {
     function attachClickListener() {
