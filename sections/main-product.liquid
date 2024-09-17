@@ -1,7 +1,3 @@
-<script>
-  var productSku = "{{ product.variants[0].sku }}";
-</script>
-
 <section
   id="MainProduct-{{ section.id }}"
   data-section="{{ section.id }}"
@@ -739,12 +735,6 @@
 
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
-                  {% comment %}
-                    {%- assign product_log = product -%}
-                    <script>
-                      console.log({{ product_log | json }})
-                    </script>
-                  {% endcomment %}
 
                   {% comment %} Check if in stock {% endcomment %}
                   {% assign current_variant = product.selected_or_first_available_variant %}
@@ -762,12 +752,6 @@
                       {%- assign collection_titles = collection_titles | append: ', ' -%}
                     {%- endunless -%}
                   {%- endfor -%}
-
-                  {% comment %}
-                    <script>
-                      console.log('{{ collection_titles | json }}');
-                    </script>
-                  {% endcomment %}
 
                   {%- assign date_1 = 0 -%}
                   {%- assign date_2 = 0 -%}
@@ -1700,64 +1684,28 @@
                 {%- elsif block.settings.content_type == 'pairs_well_with' -%}
                   {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
 
-                  {% comment %}
-                    <script>
-                      console.log('recommended_products', {{ recommended_products | json }})
-                    </script>
-                  {% endcomment %}
-
                   {% assign final_tag_list = '' | split: ',' %}
 
                   {% for recommended in recommended_products %}
                     {% assign product_handle = recommended.handle %}
                     {% assign colour_list_products = all_products[product_handle].metafields.custom.product_colour_list.value %}
 
-                    {% comment %}
-                      <script>
-                        console.log('colour_list_products', {{ colour_list_products | json }})
-                      </script>
-                    {% endcomment %}
-
                     {% assign new_tag_list = '' %}
                     {% for colour_list_product in colour_list_products %}
-                      {% comment %}
-                        <script>
-                          console.log('colour_list_product.id', {{ colour_list_product.id }})
-                        </script>
-                      {% endcomment %}
 
                       {% paginate collections.all.products by 1000 %}
                         {% assign product_id = colour_list_product.id | times: 1 %}
-
-                        {% comment %}
-                          <script>
-                            console.log('product_id', {{ product_id }})
-                          </script>
-                        {% endcomment %}
-
                         {% assign products_obj = collections.all.products | where: 'id', product_id %}
-
-                        {% comment %}
-                          <script>
-                            console.log('products_obj', {{ products_obj | json }})
-                          </script>
-                        {% endcomment %}
-
                         {% assign product_test = products_obj[0] %}
                       {% endpaginate %}
 
-                      {% assign new_tag_list = new_tag_list | append: ',' | append: product_test.variants[0].sku %}
-
-                      {% comment %}
-                        <script>
-                          console.log('product_test.variants[0].sku', {{ product_test.variants[0].sku }})
-                        </script>
-                      {% endcomment %}
+                      {% assign current_product = product_test.variants[0].sku %}
+                      {% assign new_tag_list = new_tag_list | append: ',' | append: current_product %}
+                       
                     {% endfor %}
 
                     {% assign new_tag_list = new_tag_list | remove_first: ',' | split: ',' %}
                     {% assign final_tag_list = final_tag_list | concat: new_tag_list %}
-
                     {% assign final_tag_list = final_tag_list | uniq %}
 
                     <a href="{{ recommended.url }}">
@@ -1781,7 +1729,108 @@
                   {% assign trustpilot_skus = final_tag_list | json %}
 
                   <script>
-                    console.log("trustpilot_skus", {{ trustpilot_skus }});
+                    // Function to initialize TrustPilot (including the tooltip button)
+                    function initializeTrustPilot() {
+                      const urlCurrentProductRange = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php?type=batch-summaries`;
+                      const requestBody = JSON.stringify({ skus: {{trustpilot_skus}} });
+
+                      // Fetch batch summaries first for the tooltip
+                      fetch(urlCurrentProductRange, {
+                        method: "POST",
+                        credentials: "same-origin",
+                        headers: {
+                          "Content-Type": "application/json",
+                          Authorization: "Bearer {{ settings.storefront_api.token }}",
+                        },
+                        body: requestBody
+                      })
+                      .then(response => response.json())
+                      .then(summariesData => {
+                        // Handle summaries data (average ratings)
+                        const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
+                        if (!Array.isArray(summariesData.summaries)) return;
+
+                        const outerDivSummaries = createElement("div", ["main-trustpilot"]);
+                        trustPilotContainer.appendChild(outerDivSummaries);
+
+                        let totalStars = 0, amountOfReviews = 0;
+                        const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
+                        summariesData.summaries.forEach(summary => {
+                          totalStars += summary.starsAverage;
+                          amountOfReviews += summary.numberOfReviews.total;
+                          reviewCounts[1] += summary.numberOfReviews.oneStar;
+                          reviewCounts[2] += summary.numberOfReviews.twoStars;
+                          reviewCounts[3] += summary.numberOfReviews.threeStars;
+                          reviewCounts[4] += summary.numberOfReviews.fourStars;
+                          reviewCounts[5] += summary.numberOfReviews.fiveStars;
+                        });
+
+                        const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
+                        const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
+                        const totalStarsAverage = (totalStars / summariesData.summaries.length).toFixed(1);
+                        const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
+
+                        const reviewsLink = createElement("div", [], {}, `
+                          <span style='min-height:24px;'>
+                            ${trustpilotImage}
+                            <span class="ammount-of-reviews"> ${amountOfReviews} Reviews</span>
+                            <span class="tp-widget-readmore-arrow" id="readMoreArrow"></span>
+                          </span>
+                        `);
+
+                        if (amountOfReviews === 0) {
+                          trustPilotContainer.classList.replace("d-lg-block", "d-lg-none");
+                        }
+
+                        const toolTip = createElement("span", ["tooltip-content"]);
+                        const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
+                        toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+
+                        // Iterate in reverse order and include all rows
+                        [5, 4, 3, 2, 1].forEach(stars => {
+                          toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
+                        });
+
+                        toolTip.appendChild(toolTipHeader);
+                        reviewsLink.appendChild(toolTip);
+                        outerDivSummaries.appendChild(reviewsLink);
+
+                        reviewsLink.addEventListener("click", () => {
+                          window.scrollTo({ top: document.querySelector("#reviews").offsetTop, behavior: "smooth" });
+                        });
+
+                        // Attach click event listener to the <details> element
+                        const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
+
+                        if (detailsElement) {
+                          detailsElement.addEventListener("click", function() {
+                            // Load reviews only if details element is not open
+                            if (!this.hasAttribute("open") && !reviewsLoaded) {
+                              loadReviews();
+                            }
+                          });
+                        } else {
+                          console.log("Details element not found");
+                        }
+
+                        const reviewsButton = document.querySelector("#reviews-button");
+                      
+                        if (reviewsButton) {
+                          reviewsButton.addEventListener("click", function() {
+                            // Load reviews if the details element is not open
+                            if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
+                              loadReviews();
+                            }
+                          });
+                        } else {
+                          console.log("Reviews button not found");
+                        }
+                      })
+                      .catch(error => console.error("Error fetching batch summaries from Trustpilot API:", error));
+                    }
+
+                    initializeTrustPilot();
                   </script>
 
                 {%- else -%}
@@ -5412,12 +5461,10 @@
 {% endstylesheet %}
 
 <script>
-  {% comment %} var productSku = "{{ product.variants[0].sku }}"; {% endcomment %}
-  console.log("current_variant", productSku);
+  var productSku = "{{ product.variants[0].sku }}";
 
   {%- if trustpilot_skus %}
     var trustpilot_skus = {{ trustpilot_skus }};
-    {% comment %} console.log("trustpilot_skus", trustpilot_skus); {% endcomment %}
   {%- endif -%}
 
   // shop pay button test
