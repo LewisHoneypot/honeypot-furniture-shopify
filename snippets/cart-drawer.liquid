@@ -557,28 +557,32 @@
               {% if settings.use_staingard_drawer == true %}
 
                 {% assign containsSofa = false %}
-                {% assign containsStaingard = false %}
+                {% assign staingardExists = false %}
                 
                 {% for item in cart.items %}
                   {% comment %} Check if sofa product is in cart {% endcomment %}
                   {% if item.product.type == 'Sofas' %}
                     {% assign containsSofa = true %}
-                    {% comment %} <script>console.log('Contains sofa TRUE');</script> {% endcomment %}
+                    {% comment %} <script>console.log('cart Contains sofa TRUE');</script> {% endcomment %}
                   {% endif %}
                   {% comment %} Check if staingard product is in cart {% endcomment %}
                   {% if item.product.type == 'Staingard' %}
-                    {% assign containsStaingard = true %}
-                    {% comment %} <script>console.log('Contains staingard TRUE');</script> {% endcomment %}
+                    {% assign staingardExists = true %}
+                    {% comment %} <script>console.log('cart Contains staingard TRUE');</script> {% endcomment %}
                   {% endif %}
                 {% endfor %}
 
-                {% if containsStaingard == false %}
+                {% comment %} <script>console.log('cart staingardExists: ', {{ staingardExists }});</script> {% endcomment %}
+
+                {% if staingardExists == false %}
 
                   {% for item in cart.items %}
                     {% if item.product.type == 'Sofas' %}
                       {% if item.grams %}
                         {% assign SeatingCapacity = item.grams %}
-                        {% comment %} <script>console.log({{ SeatingCapacity }});</script> {% endcomment %}
+                        {% assign SeatingCapacity = SeatingCapacity | divided_by: 1000 %}
+
+                        {% comment %} <script>console.log('cart SeatingCapacity: ', {{ SeatingCapacity }});</script> {% endcomment %}
 
                         {% if SeatingCapacity == 1 %}
                           {% comment %} £40 {% endcomment %}
@@ -599,6 +603,8 @@
                           {% comment %} £240 {% endcomment %}
                           {% assign StaingardId = 9224344437023 %}
                         {% endif %}
+
+                        {% comment %} <script>console.log('cart StaingardId: ', {{ StaingardId }});</script> {% endcomment %}
                       {% else %}
                         {% comment %} <script>console.log('Doesn\'t contain seating capacity');</script> {% endcomment %}
                       {% endif %}
@@ -616,7 +622,7 @@
                       class="d-block product-drawer__opener no-js-hidden"
                       data-side-drawer="#Drawer-Staingard"
                     >
-                      <button type="submit" id="staingard-button" onclick="refreshStaingardPrice()" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
+                      <button type="submit" id="staingard-button" onclick="refreshStaingardPrice(); refreshCartDrawer(); refreshStaingardDrawer();" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
                         <span>{{ settings.staingard_cart_button_text }}</span>
                       </button>
                     </staingard-drawer-opener>
@@ -892,37 +898,37 @@
 <script>
   function refreshStaingardPrice() {
     fetch('/cart.js')
-      .then(response => response.json())
-      .then(cart => {
-        const staingardPrice = document.querySelector('#staingard-price');
-        const staingardAddToCart = document.querySelector('#staingard-add-to-cart');
+    .then(response => response.json())
+    .then(cart => {
+      const staingardPrice = document.querySelector('#staingard-price');
+      const staingardAddToCart = document.querySelector('#staingard-add-to-cart');
 
-        if (staingardPrice) {
-          fetch(location.href)
-            .then(response => response.text())
-            .then(html => {
-              const tempDoc = document.createElement('div');
-              tempDoc.innerHTML = html;
-              const newStaingardPrice = tempDoc.querySelector('#staingard-price');
-              if (newStaingardPrice) {
-                staingardPrice.innerHTML = newStaingardPrice.innerHTML;
-              }
-            });
-        }
+      if (staingardPrice) {
+        fetch(location.href)
+        .then(response => response.text())
+        .then(html => {
+          const tempDoc = document.createElement('div');
+          tempDoc.innerHTML = html;
+          const newStaingardPrice = tempDoc.querySelector('#staingard-price');
+          if (newStaingardPrice) {
+            staingardPrice.innerHTML = newStaingardPrice.innerHTML;
+          }
+        });
+      }
 
-        if (staingardAddToCart) {
-          fetch(location.href)
-            .then(response => response.text())
-            .then(html => {
-              const tempDoc = document.createElement('div');
-              tempDoc.innerHTML = html;
-              const newStaingardAddToCart = tempDoc.querySelector('#staingard-add-to-cart');
-              if (newStaingardAddToCart) {
-                staingardAddToCart.innerHTML = newStaingardAddToCart.innerHTML;
-              }
-            });
-        }
-      });
+      if (staingardAddToCart) {
+        fetch(location.href)
+        .then(response => response.text())
+        .then(html => {
+          const tempDoc = document.createElement('div');
+          tempDoc.innerHTML = html;
+          const newStaingardAddToCart = tempDoc.querySelector('#staingard-add-to-cart');
+          if (newStaingardAddToCart) {
+            staingardAddToCart.innerHTML = newStaingardAddToCart.innerHTML;
+          }
+        });
+      }
+    });
   }
 </script>
 
