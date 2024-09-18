@@ -1,6 +1,40 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
     {%- when 'staingard_drawer' -%}
+      {% comment %} {%- assign product_log = product.variants[0] | json -%} {% endcomment %}
+      {%- assign page_seating_capacity = product.variants[0].weight | divided_by: 1000 -%}
+
+      <script>
+        {% comment %} console.log('staingard-drawer product_log: ', {{ product_log }}); {% endcomment %}
+        {% comment %} console.log('staingard-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
+      </script>
+
+      {% if page_seating_capacity > 6 %}
+        {% assign page_seating_capacity = 6 %}
+      {% endif %}
+
+      {% if page_seating_capacity == 1 %}
+        {% comment %} £40 {% endcomment %}
+        {% assign staingard_id = 48612272898335 %}
+      {% elsif page_seating_capacity == 2 %}
+        {% comment %} £80 {% endcomment %}
+        {% assign staingard_id = 48612274700575 %}
+      {% elsif page_seating_capacity == 3 %}
+        {% comment %} £120 {% endcomment %}
+        {% assign staingard_id = 48626777522463 %}
+      {% elsif page_seating_capacity == 4 %}
+        {% comment %} £160 {% endcomment %}
+        {% assign staingard_id = 48626778505503 %}
+      {% elsif page_seating_capacity == 5 %}
+        {% comment %} £200 {% endcomment %}
+        {% assign staingard_id = 48626778964255 %}
+      {% elsif page_seating_capacity >= 6 %}
+        {% comment %} £240 {% endcomment %}
+        {% assign staingard_id = 48626779390239 %}
+      {% endif %}
+
+      {% comment %} <script>console.log('staingard-drawer staingard_id: ', {{ staingard_id }});</script> {% endcomment %}
+
       <side-drawer
         class="product__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden animate"
         id="Drawer-Staingard"
@@ -59,57 +93,54 @@
               <p>{{ block.settings.text1 }}</p>
               <p>{{ block.settings.text2 }}</p>
 
-              {% assign seating_capacity = 0 %}
+              {% assign page_seating_capacity = 0 %}
 
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
                   {% if item.grams %}
-                    {% comment %} <script>console.log('seating_capacity', {{ item.grams }});</script> {% endcomment %}
+                    {% comment %} <script>console.log('staingard-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
 
                     {% assign newseating_capacity = item.grams | divided_by: 1000 %}
-
                     {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
 
-                    {% comment %} <script>console.log('newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
+                    {% comment %} <script>console.log('staingard-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
 
-                    {% assign seating_capacity = seating_capacity | plus: newseating_capacity %}
-
-                    {% if seating_capacity > 6 %}
-                      {% assign seating_capacity = 6 %}
-                    {% endif %}
-
-                    {% if seating_capacity == 1 %}
-                      {% comment %} £40 {% endcomment %}
-                      {% assign StaingardId = 48612272898335 %}
-                    {% elsif seating_capacity == 2 %}
-                      {% comment %} £80 {% endcomment %}
-                      {% assign StaingardId = 48612274700575 %}
-                    {% elsif seating_capacity == 3 %}
-                      {% comment %} £120 {% endcomment %}
-                      {% assign StaingardId = 48626777522463 %}
-                    {% elsif seating_capacity == 4 %}
-                      {% comment %} £160 {% endcomment %}
-                      {% assign StaingardId = 48626778505503 %}
-                    {% elsif seating_capacity == 5 %}
-                      {% comment %} £200 {% endcomment %}
-                      {% assign StaingardId = 48626778964255 %}
-                    {% elsif seating_capacity >= 6 %}
-                      {% comment %} £240 {% endcomment %}
-                      {% assign StaingardId = 48626779390239 %}
-                    {% endif %}
-
+                    {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
                   {% else %}
-                    <script>
-                      {% comment %} console.log("Doesn't contain seating capacity"); {% endcomment %}
-                    </script>
+                    {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
                   {% endif %}
-
                 {% else %}
-                  <script>
-                    {% comment %} console.log("Doesn't contain a sofa"); {% endcomment %}
-                  </script>
+                  {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
                 {% endif %}
               {% endfor %}
+
+              {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
+
+              {% assign seating_capacity = page_seating_capacity %}
+
+              {% if seating_capacity > 6 %}
+                {% assign seating_capacity = 6 %}
+              {% endif %}
+
+              {% if seating_capacity == 1 %}
+                {% comment %} £40 {% endcomment %}
+                {% assign staingard_id = 48612272898335 %}
+              {% elsif seating_capacity == 2 %}
+                {% comment %} £80 {% endcomment %}
+                {% assign staingard_id = 48612274700575 %}
+              {% elsif seating_capacity == 3 %}
+                {% comment %} £120 {% endcomment %}
+                {% assign staingard_id = 48626777522463 %}
+              {% elsif seating_capacity == 4 %}
+                {% comment %} £160 {% endcomment %}
+                {% assign staingard_id = 48626778505503 %}
+              {% elsif seating_capacity == 5 %}
+                {% comment %} £200 {% endcomment %}
+                {% assign staingard_id = 48626778964255 %}
+              {% elsif seating_capacity >= 6 %}
+                {% comment %} £240 {% endcomment %}
+                {% assign staingard_id = 48626779390239 %}
+              {% endif %}
 
               {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
@@ -268,7 +299,7 @@
 
               <div
                 id="staingard-add-to-cart"
-                onclick="customAddToCart({{StaingardId}}); this.closest('side-drawer').close()"
+                onclick="customAddToCart({{staingard_id}}); this.closest('side-drawer').close()"
                 class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
               >
                 <span>{{ block.settings['button-1-text'] }}</span>
@@ -289,18 +320,20 @@
 {%- endfor -%}
 
 <script>
-  function customAddToCart(StaingardId) {
+  function customAddToCart(staingard_id) {
+    {% comment %} console.log('staingard-drawer staingard_id: ', staingard_id); {% endcomment %}
+
     let formData = {
       items: [
         {
-          id: StaingardId,
+          id: staingard_id,
           quantity: 1,
         },
       ],
     };
 
     fetch('/cart/add.js', {
-      method: 'post',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -309,14 +342,48 @@
       .then((response) => {
         return response.json();
       })
+      .then(() => {
+        refreshCartDrawer();
+        refreshCartBubble();
+      })
       .catch((error) => {
         console.error('Error:', error);
       });
-    refreshCartDrawer();
-    refreshCartBubble();
+  }
+
+  function refreshStaingardDrawer() {
+    {% comment %} console.log('drawer__wrapper refreshStaingardDrawer'); {% endcomment %}
+
+    // Fetch the current page to update the drawer
+    fetch(location.href)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch the page for refreshing the drawer.');
+        }
+        return response.text();
+      })
+      .then((html) => {
+        const tempDoc = document.createElement('div');
+        tempDoc.innerHTML = html;
+
+        // Get the updated drawer content from the fetched HTML
+        const newCartDrawer = tempDoc.querySelector('#Drawer-Staingard .drawer__wrapper');
+        const cartDrawer = document.querySelector('#Drawer-Staingard .drawer__wrapper');
+
+        if (cartDrawer && newCartDrawer) {
+          cartDrawer.innerHTML = newCartDrawer.innerHTML; // Update the drawer content
+        } else {
+          console.error('Drawer elements not found.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error refreshing the drawer:', error);
+      });
   }
 
   function refreshCartDrawer() {
+    {% comment %} console.log('staingard-drawer refreshCartDrawer'); {% endcomment %}
+
     fetch('/cart.js')
       .then((response) => response.json())
       .then((cart) => {
@@ -336,7 +403,10 @@
         }
       });
   }
+
   function refreshCartBubble() {
+    {% comment %} console.log('staingard-drawer refreshCartBubble'); {% endcomment %}
+
     fetch('/cart.js')
       .then((response) => response.json())
       .then((cart) => {
