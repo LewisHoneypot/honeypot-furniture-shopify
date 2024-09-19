@@ -8,6 +8,56 @@
   endif
 -%}
 
+{%- if section.blocks.size > 0 -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+
+      {%- when 'hr-separator' -%}
+        {%- if block.settings.hr-separator-title != blank -%}
+          <div
+            class="element-spacing element-spacing-all"
+            data-animate="{{ section.settings.text_animation }}"
+            style="
+              --padding-top: {{ block.settings.padding_top }}px;
+              --padding-bottom: {{ block.settings.padding_bottom }}px;
+              --padding-top-xs: {{ block.settings.padding_top_mobile }}px;
+              --padding-bottom-xs: {{ block.settings.padding_bottom_mobile }}px;
+            "
+            {{ block.shopify_attributes }}
+          >
+            <div
+              style="
+                margin-left: {{ block.settings.padding_left_right }}px;
+                margin-right: {{ block.settings.padding_left_right }}px;
+                margin-left-xs: {{ block.settings.padding_left_right_mobile }}px;
+                margin-right-xs: {{ block.settings.padding_left_right_mobile }}px;
+              "
+            >
+              <div class="p-w__content">
+                <hr style="margin:0px;">
+                <div style="
+                  text-align:center;
+                  top:-12px; 
+                  position: relative;
+                  z-index: 2;
+                ">
+                  <span style="
+                    background-color: #fff;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                  ">
+                    {{ block.settings.hr-separator-title | escape }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>            
+      {% endif %}
+
+    {% endcase %}
+  {% endfor %}
+{% endif %}
+
 <div class="section__video-w-text spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
   style="--padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -335,7 +385,81 @@
     "default": 0
   }],
   "blocks": [
-  {
+    {
+      "name": "HR Separator",
+      "type": "hr-separator",
+      "settings": [
+      {
+        "type": "text",
+        "id": "hr-separator-title",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_left_right",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Side margin",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_left_right_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Side margin on mobile",
+        "default": 10
+      }]
+    },
+    {
     "type": "caption",
     "name": "t:sections.video-with-text.blocks.caption.name",
     "settings": [
