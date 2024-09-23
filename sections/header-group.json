@@ -18,14 +18,14 @@
           "type": "announcement",
           "settings": {
             "logo_width": 100,
-            "text": "<p>COVID-19 Updates & Shipment Delays. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"
+            "text": "<p>COVID-19 Updates & Shipment Delays. <a href=\"/collections\" title=\"All collections\">Explore Now</a></p>"
           }
         },
         "d826dfdb-6961-4fc5-906d-23f75f404022": {
           "type": "announcement",
           "settings": {
             "logo_width": 100,
-            "text": "<p>Free Shipping on all orders*. <a href=\"\/collections\" title=\"All collections\">Explore Now<\/a><\/p>"
+            "text": "<p>Free Shipping on all orders*. <a href=\"/collections\" title=\"All collections\">Explore Now</a></p>"
           }
         }
       },
@@ -56,7 +56,7 @@
         "text_TCMy7h": {
           "type": "text",
           "settings": {
-            "text": "<p>Call Us: 01476 338771<\/p>",
+            "text": "<p>Call Us: 01476 338771</p>",
             "background": "",
             "secondary_background": ""
           }
@@ -97,7 +97,7 @@
             "menu_item": "Sofas",
             "section_width": "customized-width",
             "customize_width": 1400,
-            "image_1": "shopify:\/\/shop_images\/1_b460768e-3384-4721-81c0-9fc7384db2cc.png",
+            "image_1": "shopify://shop_images/1_b460768e-3384-4721-81c0-9fc7384db2cc.png",
             "text_image_1": "",
             "link_image_1": "",
             "image_overlay_opacity": 30,
@@ -119,7 +119,7 @@
         "mega_menu_1_NE4a6D": {
           "type": "mega_menu_1",
           "settings": {
-            "menu_item": "Living & Dining",
+            "menu_item": "Living And Dining",
             "section_width": "customized-width",
             "customize_width": 1400,
             "text_image_1": "",
@@ -173,11 +173,11 @@
         "text_size": "medium",
         "font_transform": "capitalize",
         "enable_transparent": true,
-        "logo_transparent": "shopify:\/\/shop_images\/Primary_Logo.png",
+        "logo_transparent": "shopify://shop_images/Primary_Logo.png",
         "color_opacity_1": 100,
         "text_transparent": "#000000",
         "color_opacity_2": 70,
-        "logo": "shopify:\/\/shop_images\/Primary_Logo.png",
+        "logo": "shopify://shop_images/Primary_Logo.png",
         "logo_width": 100,
         "logo_position": "middle-left",
         "logo_alignment_desktop": "start",
