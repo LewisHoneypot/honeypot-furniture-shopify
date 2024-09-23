@@ -70,6 +70,7 @@
         },
         "slide_dN3rVP": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_Hero_Horizontal_1_1.jpg",
             "mobile_image": "shopify://shop_images/Untitled_design_-_2024-09-23T120041.769.png",
