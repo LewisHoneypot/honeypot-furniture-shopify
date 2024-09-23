@@ -16,7 +16,7 @@
         margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
       "
     >
-      <div class="p-w__content">
+      <div class="p-w__content p22-stickley-pro-text">
         <hr style="margin:0px;">
         <div style="
           text-align:center;
@@ -36,6 +36,14 @@
     </div>
   </div>
 {%- endif -%}
+
+{% stylesheet %}
+.p22-stickley-pro-text {
+  font-family: "p22-stickley-pro-text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+{%  endstylesheet %}
 
 {% schema %}
 {
