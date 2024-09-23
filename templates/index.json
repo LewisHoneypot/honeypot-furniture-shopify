@@ -70,9 +70,8 @@
         },
         "slide_dN3rVP": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_Hero_Horizontal_1_1.jpg",
+            "image": "shopify://shop_images/Hp_Banner_-_Dark_mary.png",
             "mobile_image": "shopify://shop_images/Untitled_design_-_2024-09-23T120041.769.png",
             "content_max_width": 1200,
             "heading_font": "font-heading",
@@ -82,7 +81,7 @@
             "subheading": "Use Code: MARY5",
             "subheading_size": "small",
             "subheading_margin_bottom": 16,
-            "box_align": "bottom-right",
+            "box_align": "bottom-left",
             "text_alignment": "left",
             "image_overlay_opacity": 90,
             "color_overlay_opacity": "#000000",
