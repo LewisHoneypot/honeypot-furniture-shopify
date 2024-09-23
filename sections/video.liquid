@@ -16,7 +16,58 @@
       endcapture
     endunless
   -%}
-  <div class="page-width m-auto">
+
+  {%- if section.blocks.size > 0 -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'hr-separator' -%}
+          {%- if block.settings.hr-separator-title != blank -%}
+            <div
+              class="element-spacing element-spacing-all"
+              data-animate="{{ section.settings.text_animation }}"
+              style="
+                --padding-top: {{ block.settings.padding_top }}px;
+                --padding-bottom: {{ block.settings.padding_bottom }}px;
+                --padding-top-xs: {{ block.settings.padding_top_mobile }}px;
+                --padding-bottom-xs: {{ block.settings.padding_bottom_mobile }}px;
+              "
+              {{ block.shopify_attributes }}
+            >
+              <div
+                style="
+                  margin-left: {{ block.settings.padding_left_right }}px;
+                  margin-right: {{ block.settings.padding_left_right }}px;
+                  margin-left-xs: {{ block.settings.padding_left_right_mobile }}px;
+                  margin-right-xs: {{ block.settings.padding_left_right_mobile }}px;
+                "
+              >
+                <div class="p-w__content">
+                  <hr style="margin:0px;">
+                  <div style="
+                    text-align:center;
+                    top:-12px; 
+                    position: relative;
+                    z-index: 2;
+                  ">
+                    <span style="
+                      background-color: #fff;
+                      padding-left: 30px;
+                      padding-right: 30px;
+                    ">
+                      {{ block.settings.hr-separator-title | escape }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>            
+        {% endif %}
+
+      {% endcase %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="page-width m-auto test">
     <div class="banner d-flex f-wrap pos-relative i-padding i-padding-md i-padding-lg gradient color-{{ section.settings.color_scheme }}{% if section.settings.mobile_color_scheme == 'custom' %} gradient-xs{% endif %} banner__media-hover"
       id="Video-{{ section.id }}" 
       style="--i-padding: {% if section.settings.cover_image != blank %}{{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}{% else %}56{% endif %}%;
@@ -90,6 +141,7 @@
           <animate-element class="banner__box d-flex f-column j-c-center w-100 h-100 {{ section.settings.desktop_content_alignment }} {{ section.settings.mobile_content_alignment }}-xs">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
+
                 {%- when 'heading' -%}
                   {%- if block.settings.heading != blank -%}
                     <h2 class="banner__heading {{ block.settings.heading_size | prepend: 'heading-size-' }} element-spacing element-spacing-all data__media-hover" data-animate="{{ section.settings.text_animation }}" {{ block.shopify_attributes }}
@@ -98,6 +150,7 @@
                         --a-delay: {{ '0.2' | times: forloop.index }}s;"
                     >{{ block.settings.heading | escape }}</h2>
                   {%- endif -%}
+
                 {%- when 'text' -%}
                   {%- if block.settings.text != blank -%}
                     <div class="banner__text rte element-spacing element-spacing-all data__media-hover" data-animate="{{ section.settings.text_animation }}" {{ block.shopify_attributes }}
@@ -106,6 +159,7 @@
                         --a-delay: {{ '0.2' | times: forloop.index }}s;"
                     >{{ block.settings.text }}</div>
                   {%- endif -%}
+
                 {%- when 'countdown' -%}
                   {%- if block.settings.time != blank -%}
                     <div class="banner__countdown hidden data__media-hover"
@@ -122,6 +176,7 @@
                       </count-down>
                     </div>
                   {%- endif -%}
+
                 {%- when 'buttons' -%}
                   {%- if block.settings.primary_button_label != blank or block.settings.secondary_button_label != blank -%}
                     <div class="banner__buttons break d-flex f-wrap g-gap element-spacing element-spacing-all data__media-hover j-c-{{ section.settings.desktop_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} j-c-{{ section.settings.mobile_content_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}-xs" data-animate="{{ section.settings.text_animation }}" {{ block.shopify_attributes }}
@@ -144,6 +199,7 @@
                       {%- endif -%}
                     </div>
                   {%- endif -%}
+
               {%- endcase -%}
             {%- endfor -%}
             {%- unless section.settings.enable_autoplay -%}
@@ -458,7 +514,81 @@
     "default": 0
   }],
   "blocks": [
-  {
+    {
+      "name": "HR Separator",
+      "type": "hr-separator",
+      "settings": [
+      {
+        "type": "text",
+        "id": "hr-separator-title",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_left_right",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Side margin",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_left_right_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Side margin on mobile",
+        "default": 10
+      }]
+    },
+    {
     "type": "heading",
     "name": "t:sections.image-banner.blocks.heading.name",
     "limit": 1,

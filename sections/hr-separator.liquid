@@ -1,0 +1,130 @@
+{%- if section.settings.padding_top -%}
+  <div
+    class="spacing spacing-xs gradient"
+    style="
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+      --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+      --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    "
+  >
+    <div
+      style="
+        margin-left: {{ section.settings.padding_left_right }}px;
+        margin-right: {{ section.settings.padding_left_right }}px;
+        margin-left-xs: {{ section.settings.padding_left_right_mobile }}px;
+        margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
+      "
+    >
+      <div class="p-w__content p22-stickley-pro-text">
+        <hr style="margin:0px;">
+        <div style="
+          text-align:center;
+          top:-12px; 
+          position: relative;
+          z-index: 2;
+        ">
+          <span style="
+            background-color: #fff;
+            padding-left: 30px;
+            padding-right: 30px;
+          ">
+            {{ section.settings['hr-separator'] }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+.p22-stickley-pro-text {
+  font-family: "p22-stickley-pro-text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+{%  endstylesheet %}
+
+{% schema %}
+{
+  "name": "HR Separator",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hr-separator",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_left_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Side margin",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_left_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Side margin on mobile",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "HR Separator"
+    }
+  ]
+}
+{% endschema %}

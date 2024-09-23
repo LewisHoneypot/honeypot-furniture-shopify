@@ -195,8 +195,7 @@
                     price_class: 'price--large style-m-price'
                   -%}
                 </div>
-                {% render 'snap-finance-rbp-widget' %}
-                {% render 'snap-finance-bnpl-widget' %}
+
                 {%- if block.settings.show_taxes or block.settings.show_shipping -%}
                   {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                     <div
@@ -641,7 +640,9 @@
                     style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px; min-height:85px;"
                     {{ block.shopify_attributes }}
                   >
-                    <p>{{ block.settings.available_colours }}:</p>
+                    <p style="font: normal normal bold 20px/23px Arial; letter-spacing: 0px;">
+                      {{ block.settings.available_colours }}:
+                    </p>
 
                     {%- assign colour_list = product.metafields.custom.product_colour_list.value -%}
                     {%- assign p_count = 0 -%}
@@ -735,6 +736,62 @@
                   %}
                 </div>
 
+              {%- when 'drawer' -%}
+                <div
+                  class="element-spacing-all{{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    style="
+                      --animation-order: {{ forloop.index }};
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      margin-top:10px !important;
+                    "
+                  {% else %}
+                    style="
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      margin-top:10px !important;
+                    "
+                  {% endif %}
+                >
+                  {% comment %} More Sizes {% endcomment %}
+                  {%- if block.settings.content_type == 'pairs_well_with' -%}
+                    {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
+                    {%- if recommended_products == blank -%}
+                      {% comment %} Do nothing {% endcomment %}
+                    {%- else -%}
+                      {%- if block.settings.heading != blank -%}
+                        <side-drawer-opener
+                          class="d-block product-drawer__opener no-js-hidden"
+                          data-side-drawer="#Drawer-{{ block.id }}"
+                          {{ block.shopify_attributes }}
+                          style="min-height:58px;"
+                        >
+                          <button
+                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left"
+                            type="button"
+                            aria-haspopup="dialog"
+                            aria-label="{{ block.settings.heading | escape }}"
+                          >
+                            {{ block.settings.heading | escape }}
+                            {{ icon_caret }}
+                          </button>
+                        </side-drawer-opener>
+                        {%- if block.settings.page != blank and block.settings.page.url != blank -%}
+                          <a
+                            href="{{ block.settings.page.url }}"
+                            class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none b-bottom no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                          >
+                            {{ block.settings.heading | escape }}
+                          </a>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+
+              {% comment %} Delivery ETA {% endcomment %}
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
 
@@ -847,9 +904,8 @@
                   -%}
 
                   <div
-                    class="deliverydate-new sb_delivery-new m-0 mt-1"
+                    class="deliverydate-new sb_delivery-new m-0 mt-3 text-center text-md-left pt-3 pb-3 pb-lg-0 px-0"
                     {{ block.shopify_attributes }}
-                    style="min-height:58px;"
                   >
                     {%- if block.settings.heading != blank -%}
                       <div>
@@ -862,61 +918,6 @@
                   </div>
                 {%- endif -%}
 
-              {%- when 'drawer' -%}
-                <div
-                  class="element-spacing-all{{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    style="
-                      --animation-order: {{ forloop.index }};
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                      margin-top:10px !important;
-                    "
-                  {% else %}
-                    style="
-                      --padding-top: {{ block.settings.padding_top }}px;
-                      --padding-bottom: {{ block.settings.padding_bottom }}px;
-                      margin-top:10px !important;
-                    "
-                  {% endif %}
-                >
-                  {% comment %} More Sizes {% endcomment %}
-                  {%- if block.settings.content_type == 'pairs_well_with' -%}
-                    {% assign recommended_products = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value %}
-                    {%- if recommended_products == blank -%}
-                      {% comment %} Do nothing {% endcomment %}
-                    {%- else -%}
-                      {%- if block.settings.heading != blank -%}
-                        <side-drawer-opener
-                          class="d-block product-drawer__opener no-js-hidden"
-                          data-side-drawer="#Drawer-{{ block.id }}"
-                          {{ block.shopify_attributes }}
-                          style="min-height:58px;"
-                        >
-                          <button
-                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left"
-                            type="button"
-                            aria-haspopup="dialog"
-                            aria-label="{{ block.settings.heading | escape }}"
-                          >
-                            {{ block.settings.heading | escape }}
-                            {{ icon_caret }}
-                          </button>
-                        </side-drawer-opener>
-                        {%- if block.settings.page != blank and block.settings.page.url != blank -%}
-                          <a
-                            href="{{ block.settings.page.url }}"
-                            class="product-drawer__link link t-button b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between left u-none b-bottom no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                          >
-                            {{ block.settings.heading | escape }}
-                          </a>
-                        {%- endif -%}
-                      {%- endif -%}
-                    {%- endif -%}
-                  {%- endif -%}
-                </div>
-
               {%- when 'buy_buttons' -%}
                 <div
                   class="product__action element-spacing-all {{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -926,13 +927,13 @@
                       --animation-order: {{ forloop.index }};
                       --padding-top: {{ block.settings.padding_top }}px;
                       --padding-bottom: {{ block.settings.padding_bottom }}px;
-                      min-height:187px;
+                      min-height:149px;
                     "
                   {% else %}
                     style="
                       --padding-top: {{ block.settings.padding_top }}px;
                       --padding-bottom: {{ block.settings.padding_bottom }}px;
-                      min-height:187px;
+                      min-height:149px;
                     "
                   {% endif %}
                 >
@@ -948,6 +949,16 @@
                     type_style: section.settings.type_style
                   -%}
                 </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-12 col-xl-6 pr-md-1 pr-lg-4 pr-xl-1">
+                    {% render 'snap-finance-rbp-widget' %}
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-md-1 pl-lg-4 pl-xl-1">
+                    {% render 'snap-finance-bnpl-widget' %}
+                  </div>
+                </div>
+
               {%- when 'rating' -%}
                 <div
                   class="product__rating d-flex a-i-center element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"

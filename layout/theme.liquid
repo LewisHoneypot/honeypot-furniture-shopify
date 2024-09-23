@@ -30,6 +30,10 @@
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 
+    {%- if template == 'product' -%}
+      <link rel="stylesheet" href="https://use.typekit.net/giq0fvg.css">
+    {% endif %}
+
     {% comment %} tempalte type {% endcomment %}
     {%- assign template_log = template | json -%}
     <script>

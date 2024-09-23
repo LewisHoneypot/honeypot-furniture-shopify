@@ -1,4 +1,4 @@
-<div id="snap-uk-widgets-product-rbp" style="padding-top:10px;padding-bottom:5px;min-height:63px;"></div>
+<div id="snap-uk-widgets-product-rbp" class="mt-2" style="min-height:63px;"></div>
 
 {% assign product_price = product.price | money_without_currency %}
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             theme: "LIGHT",
         });
 
-        // Wait for the widget to be initialized and then replace the "Learn more" text with a chevron
+        // Wait for the widget to be initialized
         setTimeout(function() {
             // Select the shadow host element
             const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
@@ -27,21 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     const learnMoreElement = shadowRoot.querySelector('#rbp-bnpl-learn-more');
 
                     if (learnMoreElement) {
-                        // Replace the "Learn more" text with a chevron icon
-                        learnMoreElement.innerHTML = `
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="rgba(var(--color-foreground),.8)"></path>
-                          </svg>
-                        `;
-
-                        // Add click event listener to the parent element to simulate a click on the chevron
+                        // Keep the "Learn more" element functional without modifying it
                         shadowHost.addEventListener('click', function() {
-                            // Find the chevron element
-                            const chevronElement = shadowRoot.querySelector('#rbp-bnpl-learn-more');
-                            if (chevronElement) {
-                                // Simulate a click on the chevron
-                                chevronElement.click();
-                            }
+                            learnMoreElement.click();
                         });
                     }
                 }
@@ -59,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Wait until the DOM is fully loaded
+// Wait until the DOM is fully loaded to apply custom styles
 document.addEventListener('DOMContentLoaded', function() {
   var productPrice = +{{ product_price | replace: "£", "" | replace: ",", "" | split: " " | first }};
-    if (productPrice >= 250) {
+  if (productPrice >= 250) {
 
     // Select the shadow host element
     const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
@@ -83,21 +71,54 @@ document.addEventListener('DOMContentLoaded', function() {
         min-width: 100%;
         padding: 0 !important;
         cursor: pointer;
+        flex-direction: row-reverse;
       }
       .injected-product-widget .injected-product-widget__grid__text p {
-        align-items: center !important;
         font-size: clamp(11px, 3.5cqw, 14px) !important;
         gap: 0 !important;
+        justify-content: flex-end !important;
       }
-      .icon-caret {
-        width: 1.6rem !important;
-        height: 1.6rem !important;
-        transform: rotate(-90deg);
+      #snap-product-widget-container {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .rbp-bnpl-widget .injected-product-widget__grid-logo {
+        min-width: 17%;
+        max-width: 17%;
+        @media screen and (min-width:460px) {
+          min-width: 27%;
+          max-width: 27%;
+        }
+        @media screen and (min-width:768px) {
+          min-width: 15%;
+          max-width: 15%;
+        }
+        @media screen and (min-width:992px) {
+          min-width: 20%;
+          max-width: 20%;
+        }
+        @media screen and (min-width:1455px) {
+          min-width: 15%;
+          max-width: 15%;
+        }
+        align-items: flex-start;
+      }
+      .rbp-bnpl-widget .injected-product-widget__grid__text {
+        text-align: right;
+      }
+      .three-col-holder {
+        {% comment %} min-width: 85%;
+        max-width: 85%; {% endcomment %}
+      }
+      /* Hide the 'Learn more' element */
+      #rbp-bnpl-learn-more {
+        display: none !important;
       }
     `;
     
     // Append the style element to the shadow root
     shadowRoot.appendChild(style);
-  };
+  }
 });
 </script>
