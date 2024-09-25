@@ -205,6 +205,42 @@
         "drawer_xPPTGJ": {
           "type": "drawer",
           "settings": {
+            "heading": "Dimensions",
+            "content_type": "dimensions",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_E7D3tH": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Drawer heading",
+            "content_type": "custom",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_iLchhC": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Drawer heading",
+            "content_type": "custom",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_jJYEYr": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Drawer heading",
+            "content_type": "custom",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_7ge9At": {
+          "type": "drawer",
+          "settings": {
             "heading": "Drawer heading",
             "content_type": "custom",
             "content": "",
@@ -213,7 +249,11 @@
         }
       },
       "block_order": [
-        "drawer_xPPTGJ"
+        "drawer_xPPTGJ",
+        "drawer_E7D3tH",
+        "drawer_iLchhC",
+        "drawer_jJYEYr",
+        "drawer_7ge9At"
       ],
       "settings": {
         "heading": "",
