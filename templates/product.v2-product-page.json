@@ -538,6 +538,7 @@
     },
     "image_with_collection_HHhNkF": {
       "type": "image-with-collection",
+      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
