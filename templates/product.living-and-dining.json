@@ -101,6 +101,11 @@
             "padding_bottom": 5
           }
         },
+        "snap_buttons_wYQaPr": {
+          "type": "snap_buttons",
+          "settings": {
+          }
+        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -135,6 +140,7 @@
         "size_chart_kqc3gt",
         "expected_delivery_8DGkii",
         "buy_buttons",
+        "snap_buttons_wYQaPr",
         "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
       ],
