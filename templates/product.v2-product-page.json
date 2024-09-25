@@ -15,6 +15,7 @@
         "title": {
           "type": "title",
           "settings": {
+            "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
             "heading_size": "default"
@@ -41,6 +42,9 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
+            "font_size": 16,
+            "font_weight": "normal",
+            "font_style": "italic",
             "padding_top": 0,
             "padding_bottom": 10
           }
@@ -137,7 +141,10 @@
           "type": "expected_delivery",
           "settings": {
             "heading": "Expected Delivery",
-            "enable_expected_delivery": true
+            "enable_expected_delivery": true,
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#EDE9E2"
           }
         },
         "staingard_drawer_iWbVLW": {
