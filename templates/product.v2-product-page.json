@@ -104,7 +104,6 @@
         },
         "expected_delivery_TKcTdt": {
           "type": "expected_delivery",
-          "disabled": true,
           "settings": {
             "heading": "Expected Delivery",
             "enable_expected_delivery": true,
