@@ -100,13 +100,13 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "none",
-            "image_1": "shopify:\/\/shop_images\/1_78ce58a0-2ee8-40ef-ac6e-1dde348a028a.png",
+            "image_1": "shopify://shop_images/1_78ce58a0-2ee8-40ef-ac6e-1dde348a028a.png",
             "heading_1": "Buy With Confidence",
             "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
+            "image_2": "shopify://shop_images/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
             "heading_2": "Product Dimenions",
             "icon_3": "truck",
-            "image_3": "shopify:\/\/shop_images\/3_24d33efb-6a47-4b06-b4dc-40b7314b4008.png",
+            "image_3": "shopify://shop_images/3_24d33efb-6a47-4b06-b4dc-40b7314b4008.png",
             "heading_3": "Speak To Us Today",
             "padding_top": 5,
             "padding_bottom": 5
@@ -117,7 +117,7 @@
           "settings": {
             "show_quantity_selector": false,
             "show_wishlist_product": false,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
@@ -144,8 +144,8 @@
           "type": "staingard_drawer",
           "settings": {
             "title": "Staingard",
-            "main_image": "shopify:\/\/shop_images\/StainGard.png",
-            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "main_image": "shopify://shop_images/StainGard.png",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -198,28 +198,28 @@
         "brand_dR6BNb": {
           "type": "brand",
           "settings": {
-            "image": "shopify:\/\/shop_images\/As_Seen_In.png",
+            "image": "shopify://shop_images/As_Seen_In.png",
             "link": ""
           }
         },
         "brand_tKc3gk": {
           "type": "brand",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+            "image": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
             "link": ""
           }
         },
         "brand_EPeMTD": {
           "type": "brand",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+            "image": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
             "link": ""
           }
         },
         "brand_cDxeB6": {
           "type": "brand",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+            "image": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
             "link": ""
           }
         }
@@ -272,9 +272,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free return within 15 days<\/p>",
+            "text": "<p>Free return within 15 days</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
@@ -285,9 +285,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free shipping on orders over 49$<\/p>",
+            "text": "<p>Free shipping on orders over 49$</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
@@ -298,9 +298,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>No harmful chemicals<\/p>",
+            "text": "<p>No harmful chemicals</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
@@ -311,9 +311,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Fresh and clean product<\/p>",
+            "text": "<p>Fresh and clean product</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         }
       },
@@ -367,7 +367,7 @@
             "subheading_size": "medium",
             "heading": "Column",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -385,7 +385,7 @@
             "subheading_size": "medium",
             "heading": "Column",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -403,7 +403,7 @@
             "subheading_size": "medium",
             "heading": "Column",
             "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -456,7 +456,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
+            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -492,7 +492,7 @@
         "color_scheme": "",
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#000000",
-        "below_text": "<p>lhbklbjkl<\/p>",
+        "below_text": "<p>lhbklbjkl</p>",
         "below_link_text": "",
         "below_link": "",
         "text_animation": "none",
@@ -508,7 +508,7 @@
         "text_CbtKj9": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.Dimensions.Length1.value }} dimensions metafields here<\/p>",
+            "text": "<p>{{ product.metafields.Dimensions.Length1.value }} dimensions metafields here</p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -566,7 +566,7 @@
           "settings": {
             "heading": "Delivery",
             "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
             "page": "description",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -601,7 +601,7 @@
           "settings": {
             "heading": "Description",
             "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
@@ -633,7 +633,7 @@
         "text_Lrjtfr": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Estimated Delivery (ETA Code)<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "text": "<ul><li>Estimated Delivery (ETA Code)</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -647,7 +647,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Untitled_design.jpg",
+        "image": "shopify://shop_images/Untitled_design.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
