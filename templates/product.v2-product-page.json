@@ -231,7 +231,7 @@
           "settings": {
             "heading": "Delivery & Returns",
             "content_type": "delivery_and_returns",
-            "content": "",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date. Delivery in 1-7 days for items in stock Assembly in any room of choice included Two-person delivery team Doesn’t fit? We’ll refund you in full including the delivery fee Live tracking with ETA provided on your day of delivery</p>",
             "page": ""
           }
         },
@@ -240,7 +240,7 @@
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "care_and_cleaning",
-            "content": "",
+            "content": "<p>To keep your upholstery looking its best, quick action is essential when spills happen. Use a dry cloth to gently blot any liquid—avoid rubbing or soaking the fabric with water, as this can cause damage. For more tips on maintaining your upholstery, check out our blog article.</p>",
             "page": ""
           }
         },
