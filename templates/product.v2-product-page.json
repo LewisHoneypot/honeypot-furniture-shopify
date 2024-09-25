@@ -52,7 +52,6 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
             "show_taxes": false,
             "show_shipping": false,
@@ -111,6 +110,7 @@
         },
         "snap_buttons_pPFVRj": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
           }
         },
