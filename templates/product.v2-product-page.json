@@ -147,6 +147,11 @@
             "background_colour": "#EDE9E2"
           }
         },
+        "snap_buttons_pPFVRj": {
+          "type": "snap_buttons",
+          "settings": {
+          }
+        },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
           "settings": {
@@ -177,6 +182,7 @@
         "icon_with_text_8UqWad",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "snap_buttons_pPFVRj",
         "staingard_drawer_iWbVLW"
       ],
       "settings": {
