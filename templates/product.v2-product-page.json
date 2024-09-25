@@ -232,8 +232,8 @@
         "drawer_jJYEYr": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
+            "heading": "Care & Cleaning",
+            "content_type": "care_and_cleaning",
             "content": "",
             "page": ""
           }
