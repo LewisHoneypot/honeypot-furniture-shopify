@@ -73,6 +73,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": false,
             "show_wishlist_product": false,
