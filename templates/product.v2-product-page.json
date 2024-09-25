@@ -232,19 +232,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "hr_separator_4YEfP4": {
-      "type": "hr-separator",
-      "disabled": true,
-      "settings": {
-        "hr-separator": "Why We Love This Range",
-        "padding_top": 50,
-        "padding_bottom": 0,
-        "padding_left_right": 50,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_left_right_mobile": 10
-      }
-    },
     "multicolumn_CNwqta": {
       "type": "multicolumn",
       "blocks": {
@@ -361,7 +348,6 @@
       "block_order": [
         "hr_separator_VJJdWd"
       ],
-      "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
@@ -675,7 +661,6 @@
   "order": [
     "main",
     "drawers_MFCe4V",
-    "hr_separator_4YEfP4",
     "multicolumn_CNwqta",
     "video_QM4Cg7",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
