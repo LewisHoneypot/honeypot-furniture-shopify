@@ -223,8 +223,8 @@
         "drawer_iLchhC": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
+            "heading": "Delivery & Returns",
+            "content_type": "delivery_and_returns",
             "content": "",
             "page": ""
           }
