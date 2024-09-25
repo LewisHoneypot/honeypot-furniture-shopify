@@ -241,98 +241,6 @@
         "padding_left_right_mobile": 10
       }
     },
-    "d429c49f-e09d-426d-a360-6ab92fc46930": {
-      "type": "icon-with-text",
-      "blocks": {
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0": {
-          "type": "item",
-          "settings": {
-            "icon": "return-2",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Free return within 15 days</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
-          "type": "item",
-          "settings": {
-            "icon": "truck-2",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Free shipping on orders over 49$</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
-          "type": "item",
-          "settings": {
-            "icon": "vegan",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>No harmful chemicals</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
-          "type": "item",
-          "settings": {
-            "icon": "liquid",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Fresh and clean product</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        }
-      },
-      "block_order": [
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "type_style": "classic",
-        "section_width": "customized-width",
-        "customize_width": 1300,
-        "heading": "",
-        "heading_size": "default",
-        "text": "",
-        "text_margin_top": 16,
-        "text_alignment": "center",
-        "margin_bottom": 60,
-        "blocks_heading_font": "font-body",
-        "blocks_heading_size": "text-body",
-        "blocks_text_size": "x-large",
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#2d2d2d",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "vertical",
-        "enable_background_icon": false,
-        "type_vertical": "scroll",
-        "arrows_type": "all",
-        "text_animation": "none",
-        "padding_top": 100,
-        "padding_bottom": 69,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "multicolumn_CNwqta": {
       "type": "multicolumn",
       "blocks": {
@@ -444,29 +352,21 @@
     "video_QM4Cg7": {
       "type": "video",
       "blocks": {
-        "text_6HRWyk": {
-          "type": "text",
-          "disabled": true,
+        "hr_separator_VJJdWd": {
+          "type": "hr-separator",
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "heading_FPJFcb": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
+            "hr-separator-title": "Video",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 50,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_right_mobile": 10
           }
         }
       },
       "block_order": [
-        "text_6HRWyk",
-        "heading_FPJFcb"
+        "hr_separator_VJJdWd"
       ],
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
@@ -953,7 +853,6 @@
     "main",
     "drawers_MFCe4V",
     "hr_separator_4YEfP4",
-    "d429c49f-e09d-426d-a360-6ab92fc46930",
     "multicolumn_CNwqta",
     "hr_separator_rrDqN7",
     "video_QM4Cg7",
