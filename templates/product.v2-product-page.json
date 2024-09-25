@@ -114,6 +114,7 @@
         },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
+          "disabled": true,
           "settings": {
             "title": "Staingard",
             "main_image": "shopify://shop_images/StainGard.png",
