@@ -644,6 +644,7 @@
         "heading_YPHcci",
         "email_form_cKwJab"
       ],
+      "disabled": true,
       "settings": {
         "type_style": "classic",
         "section_width": "page-width",
