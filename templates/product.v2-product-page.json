@@ -382,62 +382,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "image_with_text_NrCxKi": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_CbtKj9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ product.metafields.Dimensions.Length1.value }} dimensions metafields here</p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "subheading_McaVmR": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "{{ product.metafields.custom.features.value }} metafiled here.",
-            "subheading_size": "medium",
-            "subheading_font": "f-w-600",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_CbtKj9",
-        "subheading_McaVmR"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "{{ product.metafields.custom.dimension_image_file.value }}",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "padding_top_mobile": 61,
-        "padding_bottom_mobile": 0
-      }
-    },
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
       "type": "custom-tab",
       "blocks": {
@@ -505,51 +449,6 @@
         "padding_bottom": 50,
         "padding_top_mobile": 5,
         "padding_bottom_mobile": 20
-      }
-    },
-    "image_with_text_NBJHw9": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_Lrjtfr": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Estimated Delivery (ETA Code)</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_Lrjtfr"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "image": "shopify://shop_images/Untitled_design.jpg",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "padding_top_mobile": 60,
-        "padding_bottom_mobile": 0
       }
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
@@ -843,9 +742,7 @@
     "hr_separator_4YEfP4",
     "multicolumn_CNwqta",
     "video_QM4Cg7",
-    "image_with_text_NrCxKi",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
-    "image_with_text_NBJHw9",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "lookbook_pGUge4",
     "image_with_collection_HHhNkF",
