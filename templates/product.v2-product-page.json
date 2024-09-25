@@ -52,6 +52,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes": false,
             "show_shipping": false,
