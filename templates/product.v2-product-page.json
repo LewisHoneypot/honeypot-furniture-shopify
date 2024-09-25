@@ -62,6 +62,7 @@
         },
         "drawer_j3bNWd": {
           "type": "drawer",
+          "disabled": true,
           "settings": {
             "heading": "More Sizes",
             "content_type": "pairs_well_with",
