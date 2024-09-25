@@ -92,22 +92,6 @@
             "page": ""
           }
         },
-        "icon_with_text_8UqWad": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/1_78ce58a0-2ee8-40ef-ac6e-1dde348a028a.png",
-            "heading_1": "Buy With Confidence",
-            "icon_2": "none",
-            "image_2": "shopify://shop_images/2_ac0959ad-3877-44a4-b3ee-2372d0b23765.png",
-            "heading_2": "Product Dimenions",
-            "icon_3": "truck",
-            "heading_3": "",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -178,7 +162,6 @@
         "description_jp6iRK",
         "size_chart_kqc3gt",
         "drawer_j3bNWd",
-        "icon_with_text_8UqWad",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_pPFVRj",
@@ -268,75 +251,6 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 43
-      }
-    },
-    "brand_list_4ky6mF": {
-      "type": "brand-list",
-      "blocks": {
-        "brand_dR6BNb": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/As_Seen_In.png",
-            "link": ""
-          }
-        },
-        "brand_tKc3gk": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
-            "link": ""
-          }
-        },
-        "brand_EPeMTD": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
-            "link": ""
-          }
-        },
-        "brand_cDxeB6": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "brand_dR6BNb",
-        "brand_tKc3gk",
-        "brand_EPeMTD",
-        "brand_cDxeB6"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "title": "",
-        "title_size": "xx-small",
-        "colors_title": "#666666",
-        "content": "",
-        "content_size": "xx-small",
-        "content_margin_bottom": 29,
-        "text_view_all": "",
-        "primary_text_link": "",
-        "button_transparent": "transparent",
-        "button_margin_top": 31,
-        "type_display": "scroll",
-        "enable_pagination_type": "lg",
-        "pagination_type": "dots",
-        "pagination_spacing_top": 20,
-        "carousel_number": 3,
-        "carousel_number_tablet": 3,
-        "carousel_number_mobile": 1,
-        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "use_custom_color": false,
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "image_animation": "none",
-        "padding_top": 19,
-        "padding_bottom": 0,
-        "padding_top_mobile": 35,
         "padding_bottom_mobile": 43
       }
     },
@@ -1063,7 +977,6 @@
   "order": [
     "main",
     "drawers_MFCe4V",
-    "brand_list_4ky6mF",
     "hr_separator_4YEfP4",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "multicolumn_CNwqta",
