@@ -24,6 +24,7 @@
         },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
@@ -32,6 +33,7 @@
         },
         "variant_picker_WnfGcU": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch": "Color",
@@ -41,6 +43,7 @@
         },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
+          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font_size": 16,
@@ -52,6 +55,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes": false,
             "show_shipping": false,
@@ -72,6 +76,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": false,
             "show_wishlist_product": false,
@@ -100,6 +105,7 @@
         },
         "expected_delivery_TKcTdt": {
           "type": "expected_delivery",
+          "disabled": true,
           "settings": {
             "heading": "Expected Delivery",
             "enable_expected_delivery": true,
@@ -110,11 +116,13 @@
         },
         "snap_buttons_pPFVRj": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
           }
         },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
+          "disabled": true,
           "settings": {
             "title": "Staingard",
             "main_image": "shopify://shop_images/StainGard.png",
