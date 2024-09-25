@@ -373,75 +373,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
-      "type": "custom-tab",
-      "blocks": {
-        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1": {
-          "type": "text",
-          "settings": {
-            "heading": "Delivery",
-            "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
-            "page": "description",
-            "padding_top": 30,
-            "padding_bottom": 68,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 0
-          }
-        },
-        "features_cKP6N9": {
-          "type": "features",
-          "settings": {
-            "heading": "Features",
-            "content_type": "features",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        },
-        "dimensions_MmNA4J": {
-          "type": "dimensions",
-          "settings": {
-            "heading": "Dimensions",
-            "content_type": "dimensions",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        },
-        "text_XHxTG4": {
-          "type": "text",
-          "settings": {
-            "heading": "Description",
-            "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "page": "",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        }
-      },
-      "block_order": [
-        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1",
-        "features_cKP6N9",
-        "dimensions_MmNA4J",
-        "text_XHxTG4"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "background-1",
-        "padding_top": 19,
-        "padding_bottom": 50,
-        "padding_top_mobile": 5,
-        "padding_bottom_mobile": 20
-      }
-    },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
       "blocks": {
@@ -661,7 +592,6 @@
     "drawers_MFCe4V",
     "multicolumn_CNwqta",
     "video_QM4Cg7",
-    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "lookbook_pGUge4",
     "image_with_collection_HHhNkF",
