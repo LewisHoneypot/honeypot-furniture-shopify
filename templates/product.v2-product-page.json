@@ -79,13 +79,6 @@
             "padding_bottom": 5
           }
         },
-        "expected_delivery_TKcTdt": {
-          "type": "expected_delivery",
-          "settings": {
-            "heading": "Expected Delivery",
-            "enable_expected_delivery": true
-          }
-        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -140,6 +133,13 @@
             "padding_bottom": 5
           }
         },
+        "expected_delivery_TKcTdt": {
+          "type": "expected_delivery",
+          "settings": {
+            "heading": "Expected Delivery",
+            "enable_expected_delivery": true
+          }
+        },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
           "settings": {
@@ -166,10 +166,10 @@
         "price",
         "description_jp6iRK",
         "size_chart_kqc3gt",
-        "expected_delivery_TKcTdt",
         "drawer_j3bNWd",
         "icon_with_text_8UqWad",
         "buy_buttons",
+        "expected_delivery_TKcTdt",
         "staingard_drawer_iWbVLW"
       ],
       "settings": {
