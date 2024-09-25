@@ -31,6 +31,7 @@
         },
         "variant_picker_WnfGcU": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch": "Color",
