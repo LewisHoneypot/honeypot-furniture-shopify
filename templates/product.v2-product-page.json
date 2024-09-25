@@ -231,6 +231,12 @@
         "padding_bottom_mobile": 0
       }
     },
+    "as_seen_in_GybwJa": {
+      "type": "as-seen-in",
+      "settings": {
+        "heading": "As Seen In"
+      }
+    },
     "multicolumn_CNwqta": {
       "type": "multicolumn",
       "blocks": {
@@ -587,6 +593,7 @@
   "order": [
     "main",
     "drawers_MFCe4V",
+    "as_seen_in_GybwJa",
     "multicolumn_CNwqta",
     "video_QM4Cg7",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
