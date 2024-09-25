@@ -533,7 +533,6 @@
 .product-drawer__link{
   padding: 1.2rem;
   line-height: 2;
-  border: 0.1rem solid rgba(var(--color-foreground),.8);
   column-gap: 1rem;
 }
 
