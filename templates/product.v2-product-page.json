@@ -24,7 +24,6 @@
         },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
-          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
