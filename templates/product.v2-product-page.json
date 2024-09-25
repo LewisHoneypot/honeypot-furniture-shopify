@@ -241,8 +241,8 @@
         "drawer_7ge9At": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
+            "heading": "Product Description",
+            "content_type": "description",
             "content": "",
             "page": ""
           }
