@@ -476,6 +476,7 @@
       "block_order": [
         "collapsible_row_V9KmDH"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Reviews",
         "section_width": "customized-width",
