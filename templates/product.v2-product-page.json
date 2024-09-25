@@ -134,7 +134,7 @@
             "wishlist_colors_text_hover": "#eb9c9c",
             "wishlist_colors_background_hover": "#eb9c9c",
             "padding_top": 10,
-            "padding_bottom": 5
+            "padding_bottom": 0
           }
         },
         "expected_delivery_TKcTdt": {
@@ -144,7 +144,7 @@
             "enable_expected_delivery": true,
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#EDE9E2"
+            "background_colour": "#ede9e2"
           }
         },
         "snap_buttons_pPFVRj": {
