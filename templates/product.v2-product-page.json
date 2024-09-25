@@ -60,29 +60,6 @@
             "padding_bottom": 12
           }
         },
-        "description_jp6iRK": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "description_type": "product_desc",
-            "number": 17,
-            "text": "",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "size_chart_kqc3gt": {
-          "type": "size_chart",
-          "disabled": true,
-          "settings": {
-            "size_chart_size": "small",
-            "size_chart_type": "custom_image",
-            "size_chart_image_type": "jpg",
-            "color_size_chart_scheme": "background-2",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -159,8 +136,6 @@
         "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
         "price",
-        "description_jp6iRK",
-        "size_chart_kqc3gt",
         "drawer_j3bNWd",
         "buy_buttons",
         "expected_delivery_TKcTdt",
