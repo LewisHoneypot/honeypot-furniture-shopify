@@ -15,6 +15,7 @@
         "title": {
           "type": "title",
           "settings": {
+            "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
             "heading_size": "default"
@@ -32,6 +33,9 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
+            "font_size": 16,
+            "font_weight": "normal",
+            "font_style": "normal",
             "padding_top": 0,
             "padding_bottom": 10
           }
@@ -63,7 +67,10 @@
           "type": "expected_delivery",
           "settings": {
             "heading": "Expected Delivery",
-            "enable_expected_delivery": true
+            "enable_expected_delivery": true,
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ffffff"
           }
         },
         "buy_buttons": {
@@ -107,7 +114,7 @@
           "type": "staingard_drawer",
           "settings": {
             "title": "Staingard",
-            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -162,9 +169,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free return within 15 days<\/p>",
+            "text": "<p>Free return within 15 days</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
@@ -175,9 +182,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free shipping on orders over 49$<\/p>",
+            "text": "<p>Free shipping on orders over 49$</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
@@ -188,9 +195,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>No harmful chemicals<\/p>",
+            "text": "<p>No harmful chemicals</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
@@ -201,9 +208,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Fresh and clean product<\/p>",
+            "text": "<p>Fresh and clean product</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         }
       },
@@ -251,7 +258,7 @@
           "settings": {
             "heading": "Delivery",
             "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
             "page": "description",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -303,7 +310,7 @@
           "settings": {
             "heading": "Description",
             "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
