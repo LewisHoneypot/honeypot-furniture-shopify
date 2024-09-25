@@ -98,7 +98,7 @@
     {%- endif -%}
 
     {%- if settings.enable_snap_collections == true %}
-      {%- unless template == 'product' -%}
+      {%- if template contains 'product' -%}
         {%- if price > 25000 -%}
           <div class="ml-2">
             <div
@@ -110,23 +110,23 @@
             ></div>
           </div>
         {%- endif -%}
-      {%- endunless -%}
+      {%- endif -%}
     {%- endif -%}
 
   </div>
 
   {%- if settings.enable_snap_collections == true %}
-    {%- unless template == 'product' -%}
+    {%- if template contains 'product' -%}
       {%- if price > 25000 -%}
         <div class="monthly-payment-description">Over {{ snap_years }} years £{{ settings.snap_deposit }} deposit {{ snap_apr }}% apr</div>
       {%- endif -%}
-    {%- endunless -%}
+    {%- endif -%}
   {%- endif -%}
 
 </div>
 
 {%- if settings.enable_snap_collections == true %}
-  {%- unless template == 'product' -%}
+  {%- if template contains 'product' -%}
     {%- if price > 25000 -%}
       <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -168,7 +168,7 @@
         });
       </script>    
     {%- endif -%}
-  {%- endunless -%}
+  {%- endif -%}
 {%- endif -%}
 
 <style>
