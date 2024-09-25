@@ -214,8 +214,8 @@
         "drawer_E7D3tH": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
+            "heading": "Additional Information",
+            "content_type": "additional_information",
             "content": "",
             "page": ""
           }
