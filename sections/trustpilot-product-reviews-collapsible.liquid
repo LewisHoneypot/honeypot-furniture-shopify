@@ -22,9 +22,47 @@
       {%- unless section.settings.heading == blank -%}
         <div class="p-w__header">
           <div class="p-w__header--wrapper left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
+            
+            <div
+              class="element-spacing element-spacing-all"
+              data-animate="{{ section.settings.text_animation }}"
+              {{ section.shopify_attributes }}
+            >
+              <div
+                style="
+                  margin-left: {{ section.settings.padding_left_right }}px;
+                  margin-right: {{ section.settings.padding_left_right }}px;
+                  margin-left-xs: {{ section.settings.padding_left_right_mobile }}px;
+                  margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
+                "
+              >
+
+              <div class="p-w__content">
+                <hr style="margin:0px;">
+                <div style="
+                  text-align:center;
+                  top:-12px; 
+                  position: relative;
+                  z-index: 2;
+                ">
+                  <span class="p22-stickley-pro-text" style="
+                    background-color: #fff;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                  ">
+                    {{ section.settings.heading | escape }}
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        
+            {% comment %} Old Heading {% endcomment %}
+            {% comment %} <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
               {{ section.settings.heading | escape }}
-            </h2>
+            </h2> {% endcomment %}
+
           </div>
         </div>
       {%- endunless -%}
@@ -209,6 +247,26 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 43
+    },
+    {
+      "type": "range",
+      "id": "padding_left_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Side margin",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_left_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Side margin on mobile",
+      "default": 10
     }
   ],
   "blocks": [
