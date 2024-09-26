@@ -14,7 +14,6 @@
       "blocks": {
         "title": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "font_weight": "normal",
             "padding_top": 0,
@@ -234,7 +233,11 @@
     "as_seen_in_GybwJa": {
       "type": "as-seen-in",
       "settings": {
-        "heading": "As Seen In"
+        "heading": "As Seen In",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "multicolumn_CNwqta": {
