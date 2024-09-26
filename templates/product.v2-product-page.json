@@ -233,9 +233,9 @@
       "type": "as-seen-in",
       "settings": {
         "heading": "As Seen In",
-        "padding_top": 65,
+        "padding_top": 75,
         "padding_bottom": 50,
-        "padding_top_mobile": 30,
+        "padding_top_mobile": 45,
         "padding_bottom_mobile": 15,
         "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
         "image_picker_link1": "",
