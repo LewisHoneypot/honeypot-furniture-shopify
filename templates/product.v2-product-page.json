@@ -225,7 +225,7 @@
         "color_scheme": "",
         "padding_top": 30,
         "padding_bottom": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 15,
         "padding_bottom_mobile": 0
       }
     },
