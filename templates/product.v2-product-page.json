@@ -234,9 +234,9 @@
       "settings": {
         "heading": "As Seen In",
         "padding_top": 58,
-        "padding_bottom": 0,
+        "padding_bottom": 72,
         "padding_top_mobile": 69,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 65
       }
     },
     "multicolumn_CNwqta": {
