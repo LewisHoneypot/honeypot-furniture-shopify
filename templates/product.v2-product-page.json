@@ -42,7 +42,7 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font_size": 16,
+            "font_size": 13,
             "font_weight": "normal",
             "font_style": "italic",
             "padding_top": 0,
