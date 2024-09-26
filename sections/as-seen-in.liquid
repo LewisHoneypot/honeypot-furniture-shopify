@@ -1,14 +1,51 @@
-<div class="container-fluid"
+<div class="spacing spacing-xs gradient container-fluid"
   style="--padding-top: {{ section.settings.padding_top }}px;
-    --padding-bottom: {{ section.settings.padding_bottom }}px;
-    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
-    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
-">
+  --padding-bottom: {{ section.settings.padding_bottom }}px;
+  --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+  --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+  "
+{{ section.shopify_attributes }}
+>
   <div class="row">
-    <div class="col-12 center p22-stickley-pro-text">As Seen In:</div>
-    <div class="col-4">Image</div>
-    <div class="col-4">Image</div>
-    <div class="col-4">Image</div>
+    <div 
+      class="col-12 col-md-3 center p22-stickley-pro-text" 
+      style="padding-top:15px; padding-bottom:15px;"
+    >
+      As Seen In:
+    </div>
+    {%- if section.settings.logo1 != blank -%}
+      <div class="col-4 col-md-3" style="background-color:#404E2E; padding-top:15px; padding-bottom:15px;">
+        {%- if section.settings.image_picker_link1 != blank -%}
+          <a href="{{ section.settings.image_picker_link1 }}">
+          {%- endif -%}
+            <img src="{{ section.settings.logo1 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt1 }}" style="margin-right: 15px;">
+          {%- if section.settings.image_picker_link1 != blank -%}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.logo2 != blank -%}  
+      <div class="col-4 col-md-3" style="background-color:#404E2E; padding-top:15px; padding-bottom:15px;">        
+        {%- if section.settings.image_picker_link2 != blank -%}
+          <a href="{{ section.settings.image_picker_link2 }}">
+          {%- endif -%}
+            <img src="{{ section.settings.logo2 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt2 }}" style="margin-right: 15px;">
+          {%- if section.settings.image_picker_link2 != blank -%}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.logo3 != blank -%}
+      <div class="col-4 col-md-3" style="background-color:#404E2E; padding-top:15px; padding-bottom:15px;">
+        {%- if section.settings.image_picker_link3 != blank -%}
+          <a href="{{ section.settings.image_picker_link3 }}">
+          {%- endif -%}
+            <img src="{{ section.settings.logo3 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt3 }}" style="margin-right: 15px;">
+          {%- if section.settings.image_picker_link3 != blank -%}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -19,7 +56,7 @@
   "class": "section",
   "disabled_on": {
     "groups": ["header", "footer", "custom.popup"]
-  },  
+  },
   "settings": [
     {
       "type": "text",
@@ -70,73 +107,55 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 0
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "as_seen_in",
-      "name": "t:sections.main-product.blocks.drawer.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Drawer heading",
-          "label": "t:sections.all.heading.label",
-          "info": "t:sections.all.heading.info__1"
-        },
-        {
-          "type": "select",
-          "id": "content_type",
-          "label": "t:sections.all.select_content.label",
-          "options": [
-            {
-              "value": "dimensions",
-              "label": "Dimensions"
-            },
-            {
-              "value": "additional_information",
-              "label": "Additional Information"
-            },
-            {
-              "value": "delivery_and_returns",
-              "label": "Delivery & Returns"
-            },
-            {
-              "value": "care_and_cleaning",
-              "label": "Care & Cleaning"
-            },
-            {
-              "value": "description",
-              "label": "t:sections.all.select_content.options__1"
-            },
-            {
-              "value": "custom",
-              "label": "t:sections.all.select_content.options__2"
-            }
-          ],
-          "default": "custom"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "t:sections.all.content.label"
-        },
-        {
-          "type": "page",
-          "id": "page",
-          "label": "t:sections.all.content_from_page.label"
-        }
-      ]
-    }
-  ],
-  "presets": [
+      "type": "header",
+      "content": "Logos"
+    },
     {
-      "name": "As Seen In",
-      "blocks": [
-        {
-          "type": "as_seen_in"
-        }
-      ]
+      "type": "image_picker",
+      "id": "logo1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "url",
+      "id": "image_picker_link1",
+      "label": "Logo 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "image_picker_alt1",
+      "label": "Logo 1 Alt Tag"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "url",
+      "id": "image_picker_link2",
+      "label": "Logo 2 Link"
+    },
+    {
+      "type": "text",
+      "id": "image_picker_alt2",
+      "label": "Logo 2 Alt Tag"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "url",
+      "id": "image_picker_link3",
+      "label": "Logo 3 Link"
+    },
+    {
+      "type": "text",
+      "id": "image_picker_alt3",
+      "label": "Logo 3 Alt Tag"
     }
   ]
 }
