@@ -236,7 +236,16 @@
         "padding_top": 58,
         "padding_bottom": 72,
         "padding_top_mobile": 69,
-        "padding_bottom_mobile": 65
+        "padding_bottom_mobile": 65,
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link1": "",
+        "image_picker_alt1": "HouseBeautiful",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "image_picker_link2": "",
+        "image_picker_alt2": "interior designer",
+        "logo3": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link3": "",
+        "image_picker_alt3": "COUNTRY LIVING"
       }
     },
     "multicolumn_CNwqta": {
