@@ -417,9 +417,11 @@
         "customize_width": 1400,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43
+        "padding_bottom_mobile": 43,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
       }
     },
     "lookbook_pGUge4": {
