@@ -968,14 +968,14 @@
                 </div>
 
               {%- when 'snap_buttons' -%}
-                <div class="container-fluid p-0">
+                <div class="container-fluid">
                   <div class="row"
                     {{ block.shopify_attributes }}
                   >
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pr-md-1 pr-lg-4 pr-xl-1">
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-0 pr-0 pr-md-1 pr-lg-0 pr-xl-1">
                       {% render 'snap-finance-rbp-widget' %}
                     </div>
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-md-1 pl-lg-4 pl-xl-1">
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-0 pr-0 pl-md-1 pl-lg-0 pl-xl-1">
                       {% render 'snap-finance-bnpl-widget' %}
                     </div>
                   </div>
