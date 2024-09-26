@@ -224,7 +224,7 @@
         "customize_width": 1400,
         "color_scheme": "",
         "padding_top": 75,
-        "padding_bottom": 0,
+        "padding_bottom": 30,
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 0
       }
