@@ -136,11 +136,11 @@
 
                 {%- when 'title' -%}
 
-                  <div class="container p-0">
+                  <div class="container-fluid">
                     <div class="row">
-                      <div class="col-8 col-sm-12">
+                      <div class="col-8 col-lg-12 p-0">
                         <div
-                          class="product__title break element-spacing-all"
+                          class="product__title break element-spacing-all float-left float-lg-none"
                           {{ block.shopify_attributes }}
                           style="
                             --padding-top: {{ block.settings.padding_top }}px;
@@ -155,9 +155,9 @@
                       </div>
                       
                       {% comment %} was when price {% endcomment %}
-                      <div class="col-4 col-sm-12">
+                      <div class="col-4 col-lg-12 p-0">
                         <div
-                          class="product__price element-spacing-all no-js-hidden"
+                          class="product__price element-spacing-all no-js-hidden float-right float-lg-none"
                           {{ block.shopify_attributes }}
                           id="price-{{ section.id }}"
                           role="status"
@@ -926,7 +926,7 @@
                   >
                     {%- if block.settings.heading != blank -%}
                       <div>
-                        {{ block.settings.heading | escape }}:
+                        {{ block.settings.heading | escape }}
                         <strong>{{ formatted_date_1 }}</strong>
                         to
                         <strong>{{ formatted_date_2 }}</strong>
@@ -3823,7 +3823,7 @@
         {
           "type": "text",
           "id": "heading",
-          "default": "Expected Delivery",
+          "default": "Delivery From",
           "label": "Heading"
         },
         {
