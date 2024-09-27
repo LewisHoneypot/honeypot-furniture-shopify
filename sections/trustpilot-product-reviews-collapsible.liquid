@@ -5,7 +5,7 @@
     endcapture
   -%}
   <div
-    class="section__c-content spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    class="section__c-content d-block spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
     style="
       --padding-top: {{ section.settings.padding_top }}px;
       --padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -30,10 +30,10 @@
             >
               <div
                 style="
-                  margin-left: {{ section.settings.padding_left_right }}px;
-                  margin-right: {{ section.settings.padding_left_right }}px;
-                  margin-left-xs: {{ section.settings.padding_left_right_mobile }}px;
-                  margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
+                  --margin-left: {{ section.settings.padding_left_right }}px;
+                  --margin-right: {{ section.settings.padding_left_right }}px;
+                  --margin-left-xs: {{ section.settings.padding_left_right_mobile }}px;
+                  --margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
                 "
               >
 
@@ -216,7 +216,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "default": 15
     },
     {
       "type": "range",
@@ -226,7 +226,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "default": 0
     },
     {
       "type": "range",
@@ -246,7 +246,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
-      "default": 43
+      "default": 15
     },
     {
       "type": "range",
