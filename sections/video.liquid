@@ -136,7 +136,7 @@
           </video-template-opener>
         {%- endunless-%}
       </div>
-      {%- if section.blocks.size > 0 -%}
+      {%- if section.blocks.size > 1 -%}
         <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h">
           <animate-element class="banner__box d-flex f-column j-c-center w-100 h-100 {{ section.settings.desktop_content_alignment }} {{ section.settings.mobile_content_alignment }}-xs">
             {%- for block in section.blocks -%}
