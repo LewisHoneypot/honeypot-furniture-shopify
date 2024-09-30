@@ -147,6 +147,8 @@
         "slide_Bd3zQy"
       ],
       "settings": {
+        "image_first": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_3_2.jpg",
+        "image_second": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_1_2_173f0ef2-e4bd-4bb0-9a7b-335f98de0988.jpg",
         "color_scheme": "",
         "use_custom_color": false,
         "colors_text": "#424242",
