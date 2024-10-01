@@ -658,11 +658,11 @@
                     style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px; min-height:85px;"
                     {{ block.shopify_attributes }}
                   >
-                    <p
-                      {%- if block.settings.font == 'p22-stickley-pro-text' -%}
+                    <p 
+                      {% if block.settings.font == 'p22-stickley-pro-text' %}
                         class="p22-stickley-pro-text"
-                      {%- endif -%}
-                      style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 5px;"
+                      {% endif %}
+                       style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 5px;"
                     >
                       {{ block.settings.available_colours }}:
                     </p>
