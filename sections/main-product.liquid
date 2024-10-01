@@ -791,7 +791,7 @@
                           style="min-height:58px;"
                         >
                           <button
-                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {%- if block.settings.font == 'p22-stickley-pro-text' -%} p22-stickley-pro-text {%- endif -%}"
+                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if block.settings.font == 'p22-stickley-pro-text' %} p22-stickley-pro-text {% endif %}"
                             type="button"
                             aria-haspopup="dialog"
                             aria-label="{{ block.settings.heading | escape }}"
@@ -813,7 +813,7 @@
                   {%- endif -%}
                 </div>
 
-                {% comment %} USP Drawers {% endcomment %}
+              {% comment %} USP Drawers {% endcomment %}
               {%- when 'usp_drawers' -%}
                 <div
                   class="m-0 text-center text-md-left pt-3 pr-3 pl-3"
