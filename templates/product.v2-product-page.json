@@ -64,7 +64,7 @@
           "type": "drawer",
           "settings": {
             "heading": "View The Range",
-            "content_type": "pairs_well_with",
+            "content_type": "view_the_range",
             "content": "",
             "page": ""
           }

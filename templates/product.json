@@ -75,8 +75,8 @@
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
-            "heading": "View The Range",
-            "content_type": "pairs_well_with",
+            "heading": "More Sizes",
+            "content_type": "view_the_range",
             "content": "",
             "page": ""
           }
