@@ -416,8 +416,8 @@
       ],
       "settings": {
         "heading": "Reviews",
-        "use_hr": false,
-        "font": "normal",
+        "use_hr": true,
+        "font": "p22-stickley-pro-text",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
