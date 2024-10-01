@@ -86,7 +86,7 @@
           "type": "drawer",
           "settings": {
             "heading": "More Sizes",
-            "content_type": "pairs_well_with",
+            "content_type": "view_the_range",
             "content": "",
             "page": ""
           }
