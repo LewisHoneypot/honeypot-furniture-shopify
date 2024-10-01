@@ -47,10 +47,7 @@
                         z-index: 2;
                       "
                     >
-                      <span
-                        {%- if section.settings.font == 'p22-stickley-pro-text' -%}
-                          class="p22-stickley-pro-text"
-                        {%- endif -%}
+                      <span {% if section.settings.font == 'p22-stickley-pro-text' %} class="p22-stickley-pro-text" {% endif %} 
                         style="
                           background-color: #fff;
                           padding-left: 30px;
