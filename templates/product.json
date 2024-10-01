@@ -42,7 +42,7 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font_size": 16,
+            "font_size": 13,
             "font_weight": "normal",
             "font_style": "normal",
             "padding_top": 0,
@@ -70,16 +70,6 @@
             "color_size_chart_scheme": "background-2",
             "padding_top": 5,
             "padding_bottom": 5
-          }
-        },
-        "expected_delivery_TKcTdt": {
-          "type": "expected_delivery",
-          "settings": {
-            "heading": "Expected Delivery",
-            "enable_expected_delivery": true,
-            "padding_top": 0,
-            "padding_bottom": 5,
-            "background_colour": "#ffffff"
           }
         },
         "drawer_j3bNWd": {
@@ -119,6 +109,17 @@
             "padding_bottom": 5
           }
         },
+        "expected_delivery_TKcTdt": {
+          "type": "expected_delivery",
+          "settings": {
+            "heading": "Expected Delivery",
+            "enable_expected_delivery": true,
+            "date_type": "accurate",
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ffffff"
+          }
+        },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
@@ -149,9 +150,9 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "expected_delivery_TKcTdt",
         "drawer_j3bNWd",
         "buy_buttons",
+        "expected_delivery_TKcTdt",
         "snap_buttons_HagTqx",
         "staingard_drawer_iWbVLW"
       ],
@@ -392,7 +393,9 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43
+        "padding_bottom_mobile": 43,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
       }
     },
     "lookbook_pGUge4": {
