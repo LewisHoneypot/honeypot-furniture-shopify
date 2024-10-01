@@ -65,7 +65,7 @@
           "type": "drawer",
           "settings": {
             "heading": "View The Range",
-            "font": "normal",
+            "font": "p22-stickley-pro-text",
             "content_type": "view_the_range",
             "content": "",
             "page": ""
