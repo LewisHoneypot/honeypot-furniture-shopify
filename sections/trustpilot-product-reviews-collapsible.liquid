@@ -22,7 +22,6 @@
       {%- unless section.settings.heading == blank -%}
         <div class="p-w__header">
           <div class="p-w__header--wrapper left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            
             <div
               class="element-spacing element-spacing-all"
               data-animate="{{ section.settings.text_animation }}"
@@ -36,32 +35,42 @@
                   --margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
                 "
               >
+                <div class="p-w__content">
 
-              <div class="p-w__content">
-                <hr style="margin:0px;">
-                <div style="
-                  text-align:center;
-                  top:-12px; 
-                  position: relative;
-                  z-index: 2;
-                ">
-                  <span class="p22-stickley-pro-text" style="
-                    background-color: #fff;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                  ">
-                    {{ section.settings.heading | escape }}
-                  </span>
+                  {%- if section.settings.use_hr == true -%}
+                    <hr style="margin:0px;">
+                    <div
+                      style="
+                        text-align:center;
+                        top:-12px;
+                        position: relative;
+                        z-index: 2;
+                      "
+                    >
+                      <span
+                        {%- if section.settings.font == 'p22-stickley-pro-text' -%}
+                          class="p22-stickley-pro-text"
+                        {%- endif -%}
+                        style="
+                          background-color: #fff;
+                          padding-left: 30px;
+                          padding-right: 30px;
+                        "
+                      >
+                        {{ section.settings.heading | escape }}
+                      </span>
+
+                    </div>
+
+                  {%- else -%}
+                    <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
+                      {{ section.settings.heading | escape }}
+                    </h2>      
+                  {%- endif -%}
+
                 </div>
               </div>
-              
             </div>
-          </div>
-        
-            {% comment %} Old Heading {% endcomment %}
-            {% comment %} <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
-              {{ section.settings.heading | escape }}
-            </h2> {% endcomment %}
 
           </div>
         </div>
@@ -104,10 +113,13 @@
                         {{ section.settings.top_heading_2 }}
                       </div>
                     {%- endif -%}
-                  </div>Test 1
+                  </div>
+                  Test 1
                 {%- endif -%}
-              </div>Test 2
-            </div>Test 3
+              </div>
+              Test 2
+            </div>
+            Test 3
           {%- endif -%}
           <div class="collapsible-content__item collapsible-content__itemRight w-100">
             {%- for block in section.blocks -%}
@@ -126,7 +138,13 @@
                         id="Summary-{{ block.id }}-{{ section.id }}"
                         class="c-pointer pos-relative l-h-1 d-flex a-i-center trustpilot-accordion"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 799.89 761" width="25" height="24" class="mr-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 799.89 761"
+                          width="25"
+                          height="24"
+                          class="mr-2"
+                        >
                           <path d="M799.89 290.83H494.44L400.09 0l-94.64 290.83L0 290.54l247.37 179.92L152.72 761l247.37-179.63L647.16 761l-94.35-290.54z" fill="#00b67a"/><path d="M574.04 536.24l-21.23-65.78-152.72 110.91z" fill="#005128"/>
                         </svg>
                         <h3 class="accordion__title h4 break m-0">
@@ -167,6 +185,27 @@
       "id": "heading",
       "label": "t:sections.all.heading.label",
       "default": "Collapsible content"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_hr",
+      "label": "Use HR Separator"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "p22-stickley-pro-text",
+          "label": "P22 Stickley Pro"
+        }
+      ],
+      "default": "normal",
+      "label": "Font"
     },
     {
       "type": "select",
