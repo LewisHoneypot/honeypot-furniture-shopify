@@ -68,7 +68,9 @@
             "font": "p22-stickley-pro-text",
             "content_type": "view_the_range",
             "content": "",
-            "page": ""
+            "page": "",
+            "colors_background": "#f2f2f2",
+            "colors_border": "#707070"
           }
         },
         "buy_buttons": {
@@ -113,6 +115,7 @@
         "snap_buttons_pPFVRj": {
           "type": "snap_buttons",
           "settings": {
+            "colors_background": "#f2f2f2"
           }
         },
         "staingard_drawer_iWbVLW": {
@@ -140,7 +143,6 @@
         "color_swatch_bWwLRJ",
         "price",
         "drawer_j3bNWd",
-        "usp_drawers_hCanhH",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_pPFVRj",
