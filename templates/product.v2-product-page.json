@@ -73,6 +73,24 @@
             "colors_border": "#707070"
           }
         },
+        "usp_drawer_1_R7cbxP": {
+          "type": "usp_drawer_1",
+          "settings": {
+            "heading": "Buy With Confidence",
+            "usp_icon_1": "chat_bubble",
+            "usp_content_type": "usp_content_selector_1",
+            "content": ""
+          }
+        },
+        "usp_drawer_2_fe3jBM": {
+          "type": "usp_drawer_2",
+          "settings": {
+            "heading": "Product Dimensions",
+            "usp_icon_2": "ruler",
+            "usp_content_type": "usp_content_selector_2",
+            "content": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -143,6 +161,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "drawer_j3bNWd",
+        "usp_drawer_1_R7cbxP",
+        "usp_drawer_2_fe3jBM",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_pPFVRj",
