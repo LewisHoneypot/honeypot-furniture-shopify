@@ -75,6 +75,7 @@
         },
         "usp_drawer_1_R7cbxP": {
           "type": "usp_drawer_1",
+          "disabled": true,
           "settings": {
             "heading": "Buy With Confidence",
             "usp_icon_1": "chat_bubble",
@@ -84,6 +85,7 @@
         },
         "usp_drawer_2_fe3jBM": {
           "type": "usp_drawer_2",
+          "disabled": true,
           "settings": {
             "heading": "Product Dimensions",
             "usp_icon_2": "ruler",
