@@ -30,8 +30,20 @@
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 
-    {%- if template contains 'product' -%}
+    {% comment %} {%- if template contains 'product' -%}
       <link rel="stylesheet" href="https://use.typekit.net/giq0fvg.css">
+    {% endif %} {% endcomment %}
+
+    {%- if template contains 'product' -%}
+      <style>
+        @font-face {
+          font-family: 'Anaktoria';
+          src: url('{{ 'Anaktoria.woff2' | asset_url }}') format('woff2'),
+              url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
+      </style>
     {% endif %}
 
     {% comment %} tempalte type {% endcomment %}
@@ -40,7 +52,7 @@
       console.log({{ template_log }});
     </script>
 
-    {%- if template contains 'collection' or template == "search" -%}
+    {%- if template contains 'collection' or template == 'search' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
 
@@ -101,15 +113,17 @@
     {%- endif -%}
 
     {% comment %} Clarity Script {% endcomment %}
-    {% comment %} <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "g4fmvmhh6m");
-    </script> {% endcomment %}
-    
-    <meta name="google-site-verification" content="gLFJD4hFYhNPblJVfCGHocM0W-0EWfTd9gdJ870czFA" />
+    {% comment %}
+      <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "g4fmvmhh6m");
+      </script>
+    {% endcomment %}
+
+    <meta name="google-site-verification" content="gLFJD4hFYhNPblJVfCGHocM0W-0EWfTd9gdJ870czFA">
   </head>
   <body class="page-{{ request.page_type | replace: 'customers/', '' }} gradient {{ settings.text_size | prepend: 'text-size main-text-' }} {{ settings.heading_size | prepend: 'heading-size main-heading-' }}{% if settings.enable_animated_cursor and settings.animated_cursor_style == 'following' %} cursor-fixed__show{% endif %}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -157,7 +171,7 @@
     {% comment %} <script src="{{ 'AnnouncementBar.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'AZBrands.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'AZLayout.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    {%- if template contains "page" -%}
+    {%- if template contains 'page' -%}
       <script src="{{ 'BeforeAfterCursor.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {% comment %} <script src="{{ 'CountDown.js' | asset_url }}" defer="defer"></script> {% endcomment %}
@@ -166,7 +180,7 @@
       <script src="{{ 'CustomTab.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'DeferredMedia.js' | asset_url }}" defer="defer"></script>
-    {%- if template == 'index' or template contains "beds" or template contains "living-and-dining" -%}
+    {%- if template == 'index' or template contains 'beds' or template contains 'living-and-dining' -%}
       <script src="{{ 'DetailsDisclosure.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'HeaderTools.js' | asset_url }}" defer="defer"></script>
@@ -181,7 +195,7 @@
       <script src="{{ 'HoverChangeImage.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'LookbookPoint.js' | asset_url }}" defer="defer"></script>
-    {%- if template contains "about-us" -%}
+    {%- if template contains 'about-us' -%}
       <script src="{{ 'MapTemplate.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'ModalTools.js' | asset_url }}" defer="defer"></script>
