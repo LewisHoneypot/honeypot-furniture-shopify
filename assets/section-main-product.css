@@ -456,8 +456,9 @@
 } 
 
 .product-form__submit{
-  --border-offset: calc(6rem + var(--buttons-border-width) * 2);
-  min-height: calc(5.8rem + var(--buttons-border-width) * 2);
+  --border-offset: calc(8rem + var(--buttons-border-width) * 2);
+  /* min-height: calc(5.8rem + var(--buttons-border-width) * 2); */
+  min-height: 80px;
   border: 0.1rem solid rgba(var(--button-color-text), 1);
 }
 
@@ -532,7 +533,7 @@
 .product-drawer__opener button,
 .product-drawer__link{
   padding: 1.2rem;
-  line-height: 2;
+  /* line-height: 2; */
   column-gap: 1rem;
 }
 

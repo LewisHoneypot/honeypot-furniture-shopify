@@ -795,6 +795,10 @@
                             type="button"
                             aria-haspopup="dialog"
                             aria-label="{{ block.settings.heading | escape }}"
+                            style="
+                              background-color:{{ block.settings.colors_background }};
+                              border: solid 1px {{ block.settings.colors_border }};
+                              min-height: 80px;"
                           >
                             {{ block.settings.heading | escape }}
                             {{ icon_caret }}
@@ -832,7 +836,7 @@
                             data-side-drawer="#Drawer-{{ block.id }}"
                             {{ block.shopify_attributes }}
                           >
-                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none b-bottom left pr-0">
+                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pr-0">
                               <span style="position: relative; top:5px;">
                                 {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
                               </span>
@@ -857,7 +861,7 @@
                         data-side-drawer="#Drawer-{{ block.id }}"
                         {{ block.shopify_attributes }}
                       >
-                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none b-bottom left pl-0">
+                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pl-0">
                           <span style="position: relative; top:5px;">
                             {% render 'icon-accordion', icon: block.settings.usp_icon_2 %}
                           </span>
@@ -985,7 +989,7 @@
                   -%}
 
                   <div
-                    class="deliverydate-new sb_delivery-new m-0 text-center pt-3 pr-3 pb-3 pl-3"
+                    class="deliverydate-new sb_delivery-new m-0 text-center pt-2 pr-3 pb-2 pl-3{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
                     style="background-color:{{ block.settings.background_colour }};"
                     {{ block.shopify_attributes }}
                   >
@@ -1058,16 +1062,18 @@
                 </div>
 
               {%- when 'snap_buttons' -%}
-                <div class="container-fluid">
+                <div class="container-fluid {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
                   <div
                     class="row"
                     {{ block.shopify_attributes }}
                   >
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-0 pr-0 pr-md-1 pr-lg-0 pr-xl-1">
-                      {% render 'snap-finance-rbp-widget' %}
+                    {% assign colors_background = block.settings.colors_background %}
+
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0 pr-xl-1">
+                      {% render 'snap-finance-rbp-widget', colors_background:colors_background %}
                     </div>
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pl-0 pr-0 pl-md-1 pl-lg-0 pl-xl-1">
-                      {% render 'snap-finance-bnpl-widget' %}
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pl-md-1 pl-lg-0 pl-xl-1">
+                      {% render 'snap-finance-bnpl-widget', colors_background:colors_background %}
                     </div>
                   </div>
                 </div>
@@ -3374,7 +3380,7 @@
           "type": "color",
           "id": "colors_background",
           "label": "t:sections.all.colors.colors_background",
-          "default": "#000000"
+          "default": "#F2F2F2"
         },
         {
           "type": "color_background",
@@ -3681,7 +3687,15 @@
     {
       "type": "snap_buttons",
       "name": "Snap Buttons",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color",
+          "id": "colors_background",
+          "label": "t:sections.all.colors.colors_background",
+          "default": "#fff"
+        }
+      ]
     },
     {
       "type": "description",
@@ -4179,6 +4193,18 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.all.content_from_page.label"
+        },
+        {
+          "type": "color",
+          "id": "colors_background",
+          "label": "t:sections.all.colors.colors_background",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "colors_border",
+          "label": "Border",
+          "default": "#707070"
         }
       ]
     },
@@ -4266,7 +4292,7 @@
           "options": [
             {
               "value": "usp_content_selector_2",
-              "label": "USP Content 2"
+              "label": "Dimensions"
             },
             {
               "value": "custom",

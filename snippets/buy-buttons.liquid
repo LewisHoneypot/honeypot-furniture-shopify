@@ -127,7 +127,9 @@
             --button-color-text-hover: {{ block.settings.add_to_cart_colors_text_hover.red }}, {{ block.settings.add_to_cart_colors_text_hover.green }}, {{ block.settings.add_to_cart_colors_text_hover.blue }};
             --button-color-background-hover: {{ block.settings.add_to_cart_colors_background_hover.red }}, {{ block.settings.add_to_cart_colors_background_hover.green }}, {{ block.settings.add_to_cart_colors_background_hover.blue }};
             --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};
-          "
+              font-size: 20px;
+              text-transform: uppercase;
+            "
         >
           <span>
             {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}

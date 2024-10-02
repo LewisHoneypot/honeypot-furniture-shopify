@@ -71,18 +71,6 @@
             "page": ""
           }
         },
-        "usp_drawers_hCanhH": {
-          "type": "usp_drawers",
-          "settings": {
-            "usp_icon_1": "chat_bubble",
-            "usp_text_1": "Buy With Confidence",
-            "usp_content_type": "usp_content_selector_1",
-            "content": "<p>Test 1</p>",
-            "usp_content_1": "Test 2",
-            "usp_icon_2": "ruler",
-            "usp_text_2": "Product Dimensions"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
