@@ -836,8 +836,8 @@
                             data-side-drawer="#Drawer-{{ block.id }}"
                             {{ block.shopify_attributes }}
                           >
-                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pr-0">
-                              <span style="position: relative; top:5px;">
+                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pr-0 usp-button">
+                              <span style="position: relative; top: 3px;">
                                 {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
                               </span>
                               <span style="font-size:13px; text-decoration: underline;">
@@ -861,8 +861,8 @@
                         data-side-drawer="#Drawer-{{ block.id }}"
                         {{ block.shopify_attributes }}
                       >
-                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pl-0">
-                          <span style="position: relative; top:5px;">
+                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pl-0 usp-button">
+                          <span style="position: relative; top: 3px;">
                             {% render 'icon-accordion', icon: block.settings.usp_icon_2 %}
                           </span>
                           <span style="font-size:13px; text-decoration: underline;">
@@ -5999,6 +5999,10 @@
     display: inline-block;
     cursor: pointer;
     opacity: 0.6;
+  }
+
+  .usp-button .icon {
+    transform: none !important;
   }
 {% endstylesheet %}
 
