@@ -1,62 +1,93 @@
-<div class="spacing spacing-xs gradient container-fluid"
-  style="--padding-top: {{ section.settings.padding_top }}px;
-  --padding-bottom: {{ section.settings.padding_bottom }}px;
-  --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
-  --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+<div
+  id="as-seen-in"
+  class="spacing spacing-xs gradient container-fluid"
+  style="
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+    --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
   "
-{{ section.shopify_attributes }}
+  {{ section.shopify_attributes }}
 >
   <div class="row">
-    <div 
-      class="col-12 col-md-3 center p22-stickley-pro-text" 
+    <div
+      class="title col-12 col-md-3 center p22-stickley-pro-text"
       style="
         padding-top:15px;
         padding-bottom:15px;
-        border-top: solid 1px rgba(var(--color-foreground), .2);
-        border-bottom: solid 1px rgba(var(--color-foreground), .2);
-    ">
+      "
+    >
       As Seen In:
     </div>
     {%- if section.settings.logo1 != blank -%}
-      <div class="col-4 col-md-3" 
+      <div
+        class="col-4 col-md-3"
         style="
-          background-color:#404E2E;
+          background-color:{{ section.settings.background_color }};
           padding-top:15px;
           padding-bottom:15px;
-      ">
+        "
+      >
         {%- if section.settings.image_picker_link1 != blank -%}
           <a href="{{ section.settings.image_picker_link1 }}">
-          {%- endif -%}
-            <img src="{{ section.settings.logo1 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt1 }}" style="margin-right: 15px;">
-          {%- if section.settings.image_picker_link1 != blank -%}
+        {%- endif -%}
+        <img
+          src="{{ section.settings.logo1 | image_url: height: 25 }}"
+          alt="{{ section.settings.image_picker_alt1 }}"
+          style="margin-right: 15px;"
+        >
+        {%- if section.settings.image_picker_link1 != blank -%}
           </a>
         {%- endif -%}
       </div>
     {%- endif -%}
-    {%- if section.settings.logo2 != blank -%}  
-      <div class="col-4 col-md-3" style="background-color:#404E2E; padding-top:15px; padding-bottom:15px;">        
+    {%- if section.settings.logo2 != blank -%}
+      <div
+        class="col-4 col-md-3"
+        style="background-color:{{ section.settings.background_color }}; padding-top:15px; padding-bottom:15px;"
+      >
         {%- if section.settings.image_picker_link2 != blank -%}
           <a href="{{ section.settings.image_picker_link2 }}">
-          {%- endif -%}
-            <img src="{{ section.settings.logo2 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt2 }}" style="margin-right: 15px;">
-          {%- if section.settings.image_picker_link2 != blank -%}
+        {%- endif -%}
+        <img
+          src="{{ section.settings.logo2 | image_url: height: 25 }}"
+          alt="{{ section.settings.image_picker_alt2 }}"
+          style="margin-right: 15px;"
+        >
+        {%- if section.settings.image_picker_link2 != blank -%}
           </a>
         {%- endif -%}
       </div>
     {%- endif -%}
     {%- if section.settings.logo3 != blank -%}
-      <div class="col-4 col-md-3" style="background-color:#404E2E; padding-top:15px; padding-bottom:15px;">
+      <div
+        class="col-4 col-md-3"
+        style="background-color:{{ section.settings.background_color }}; padding-top:15px; padding-bottom:15px;"
+      >
         {%- if section.settings.image_picker_link3 != blank -%}
           <a href="{{ section.settings.image_picker_link3 }}">
-          {%- endif -%}
-            <img src="{{ section.settings.logo3 | image_url: height: 25 }}" alt="{{ section.settings.image_picker_alt3 }}" style="margin-right: 15px;">
-          {%- if section.settings.image_picker_link3 != blank -%}
+        {%- endif -%}
+        <img
+          src="{{ section.settings.logo3 | image_url: height: 25 }}"
+          alt="{{ section.settings.image_picker_alt3 }}"
+          style="margin-right: 15px;"
+        >
+        {%- if section.settings.image_picker_link3 != blank -%}
           </a>
         {%- endif -%}
       </div>
     {%- endif -%}
   </div>
 </div>
+
+{% stylesheet %}
+  #as-seen-in .title {
+    @media screen and (min-width: 768px) {
+      color: #fff;
+      background-color: {{ section.settings.background_color }};
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -168,6 +199,12 @@
       "id": "image_picker_alt3",
       "label": "Logo 3 Alt Tag",
       "default": "COUNTRY LIVING"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Colour",
+      "default": "#48544C"
     }
   ]
 }
