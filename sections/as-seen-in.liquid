@@ -10,8 +10,9 @@
   {{ section.shopify_attributes }}
 >
   <div class="row">
+
     <div
-      class="title col-12 col-md-3 center p22-stickley-pro-text"
+      class="col-12 d-md-none center p22-stickley-pro-text"
       style="
         padding-top:15px;
         padding-bottom:15px;
@@ -19,13 +20,26 @@
     >
       As Seen In:
     </div>
+
+    <div
+      class="d-none d-md-block col-md-3 center p22-stickley-pro-text"
+      style="
+        padding-top:15px;
+        padding-bottom:15px;
+        background-color: {{ section.settings.background_color }};
+        color: #fff;
+      "
+    >
+      As Seen In:
+    </div>
+
     {%- if section.settings.logo1 != blank -%}
       <div
         class="col-4 col-md-3"
         style="
-          background-color:{{ section.settings.background_color }};
           padding-top:15px;
           padding-bottom:15px;
+          background-color: {{ section.settings.background_color }};
         "
       >
         {%- if section.settings.image_picker_link1 != blank -%}
@@ -44,7 +58,10 @@
     {%- if section.settings.logo2 != blank -%}
       <div
         class="col-4 col-md-3"
-        style="background-color:{{ section.settings.background_color }}; padding-top:15px; padding-bottom:15px;"
+        style="
+        background-color: {{ section.settings.background_color }};
+        padding-top:15px;
+        padding-bottom:15px;"
       >
         {%- if section.settings.image_picker_link2 != blank -%}
           <a href="{{ section.settings.image_picker_link2 }}">
@@ -62,7 +79,10 @@
     {%- if section.settings.logo3 != blank -%}
       <div
         class="col-4 col-md-3"
-        style="background-color:{{ section.settings.background_color }}; padding-top:15px; padding-bottom:15px;"
+        style="
+        background-color: {{ section.settings.background_color }};
+        padding-top:15px;
+        padding-bottom:15px;"
       >
         {%- if section.settings.image_picker_link3 != blank -%}
           <a href="{{ section.settings.image_picker_link3 }}">
@@ -79,15 +99,6 @@
     {%- endif -%}
   </div>
 </div>
-
-{% stylesheet %}
-  #as-seen-in .title {
-    @media screen and (min-width: 768px) {
-      color: #fff;
-      background-color: {{ section.settings.background_color }};
-    }
-  }
-{% endstylesheet %}
 
 {% schema %}
 {
@@ -116,7 +127,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 75
+      "default": 50
     },
     {
       "type": "range",
@@ -126,7 +137,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 50
+      "default": 15
     },
     {
       "type": "range",
