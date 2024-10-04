@@ -121,7 +121,7 @@
             style="
             {% if section.settings.type_style == 'classic' %}
               --m-spacing-b-md: -{{ header_margin_bottom }};
-              --p-r: {{ carousel_controls_width }}rem;
+              {% comment %} --p-r: {{ carousel_controls_width }}rem; {% endcomment %}
               {% comment %} --p-r-xxl: {{ header_padding-right }}; {% endcomment %}
               --m-spacing-b-xs: -{{ heading_margin_bottom_mobile }}rem;
             {% else %}
