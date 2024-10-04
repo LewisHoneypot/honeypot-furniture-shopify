@@ -361,7 +361,8 @@ body.w-c #comment_form {
   
   .article-style-special .article-template__hero-container {
     width: 100vw;
-    margin-left: calc((100vw - 100%)/-2);
+    /* This was uncentering the image */
+    /* margin-left: calc((100vw - 100%)/-2); */
   }
 
   .article-style-special .article-template__content .column-2 {
