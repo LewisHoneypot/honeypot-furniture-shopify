@@ -46,8 +46,10 @@
           <a href="{{ section.settings.image_picker_link1 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo1 | image_url: height: 25 }}"
+          src="{{ section.settings.logo1 | image_url }}"
           alt="{{ section.settings.image_picker_alt1 }}"
+          height="50"
+          width="200"
           style="margin-right: 15px;"
         >
         {%- if section.settings.image_picker_link1 != blank -%}
@@ -67,8 +69,10 @@
           <a href="{{ section.settings.image_picker_link2 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo2 | image_url: height: 25 }}"
+          src="{{ section.settings.logo2 | image_url }}"
           alt="{{ section.settings.image_picker_alt2 }}"
+          height="50"
+          width="200"
           style="margin-right: 15px;"
         >
         {%- if section.settings.image_picker_link2 != blank -%}
@@ -88,8 +92,10 @@
           <a href="{{ section.settings.image_picker_link3 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo3 | image_url: height: 25 }}"
+          src="{{ section.settings.logo3 | image_url }}"
           alt="{{ section.settings.image_picker_alt3 }}"
+          height="50"
+          width="200"
           style="margin-right: 15px;"
         >
         {%- if section.settings.image_picker_link3 != blank -%}
