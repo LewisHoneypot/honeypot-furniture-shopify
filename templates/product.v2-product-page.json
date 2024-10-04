@@ -77,7 +77,7 @@
           "type": "usp_drawer_1",
           "settings": {
             "heading": "Buy With Confidence",
-            "usp_icon_1": "chat_bubble",
+            "usp_icon_1": "heart",
             "usp_content_type": "custom",
             "content": "<p>At Honeypot our main goal is to introduce homeowners to their dream sofa, but we understand that sometimes it’s not always a perfect match, that’s why we give everyone the chance to return their sofa on the spot with our friendly delivery drivers in case it’s just not right for you !<br/><br/>A couple of things to keep in mind:<br/><br/>1. Immediate Return: We want to be able give you a full refund with no additional cost if you’re not 100% happy, that’s why it’s super important to inform our drivers that you’d like to make the return before they leave your home.<br/><br/>2. Final Decision: Once the Honeypot drivers are on their way we’re afraid that this policy will no longer be an option, but you can still put our standard return policy to use if you change your mind a few days later (please note that our standard return policy may incur additional fees).<br/><br/>It’s essential for us to give Honeypot customers the utmost amount of flexibility and choice when it comes to building their dream home, and our immediate return policy gives you just that, because your happiness and peace-of-mind comes first.</p>"
           }
@@ -86,7 +86,7 @@
           "type": "usp_drawer_2",
           "settings": {
             "heading": "Product Dimensions",
-            "usp_icon_2": "ruler",
+            "usp_icon_2": "dimensions",
             "usp_content_type": "usp_content_selector_2",
             "content": ""
           }
@@ -272,7 +272,7 @@
         "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
         "image_picker_link3": "",
         "image_picker_alt3": "COUNTRY LIVING",
-        "background_color": "#48544C"
+        "background_color": "#48544c"
       }
     },
     "multicolumn_CNwqta": {
