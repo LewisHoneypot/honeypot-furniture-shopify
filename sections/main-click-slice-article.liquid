@@ -101,7 +101,7 @@
                     {%- endif -%}
                   {%- when 'title' -%}
                     <header class="article-title-wrapper d-flex f-wrap a-i-center spacing c-gap{% if section.settings.type_style == 'special' %} m-auto center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" {{ block.shopify_attributes }} style="--padding-top: {{ block.settings.padding_top }}px; --padding-bottom: {{ block.settings.padding_bottom }}px; --c-gap: 1rem;">
-                      <h1 class="article-template__title p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }} h2 m-0{% if block.settings.enable_share %} has-share{% endif %}" itemprop="headline">{{ article.title | escape }}</h1>
+                      <h1 class="article-template__title p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }} h2 w-100 m-0{% if block.settings.enable_share %} has-share{% endif %}" itemprop="headline">{{ article.title | escape }}</h1>
                       {%- if block.settings.enable_share -%}
                         <div class="article-template__share l-h-1">
                         {%- liquid
