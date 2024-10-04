@@ -122,10 +122,8 @@
             {% if section.settings.type_style == 'classic' %}
               --m-spacing-b-md: -{{ header_margin_bottom }};
               --p-r: {{ carousel_controls_width }}rem;
-              --p-r-xxl: {{ header_padding-right }};
-
+              {% comment %} --p-r-xxl: {{ header_padding-right }}; {% endcomment %}
               --m-spacing-b-xs: -{{ heading_margin_bottom_mobile }}rem;
-
             {% else %}
                --m-spacing-b: {{ section.settings.heading_margin_bottom }}px;
             {% endif %}"
