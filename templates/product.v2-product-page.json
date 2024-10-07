@@ -245,7 +245,6 @@
         "drawer_jJYEYr",
         "drawer_7ge9At"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "section_width": "customized-width",
@@ -259,7 +258,6 @@
     },
     "as_seen_in_GybwJa": {
       "type": "as-seen-in",
-      "disabled": true,
       "settings": {
         "heading": "As Seen In",
         "padding_top": 50,
@@ -297,7 +295,6 @@
       "block_order": [
         "hr_separator_VJJdWd"
       ],
-      "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
         "video_url": "",
@@ -387,7 +384,6 @@
         "column_4cEfPh",
         "column_BYwthb"
       ],
-      "disabled": true,
       "settings": {
         "layout": "v2",
         "use_hr": true,
@@ -445,7 +441,6 @@
       "block_order": [
         "collapsible_row_V9KmDH"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Reviews",
         "use_hr": true,
@@ -488,7 +483,6 @@
       "block_order": [
         "image_L4QhHh"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Shop The Look",
         "text": "",
