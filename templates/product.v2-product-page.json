@@ -258,6 +258,7 @@
     },
     "as_seen_in_GybwJa": {
       "type": "as-seen-in",
+      "disabled": true,
       "settings": {
         "heading": "As Seen In",
         "padding_top": 50,
