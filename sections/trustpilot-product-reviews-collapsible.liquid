@@ -56,7 +56,6 @@
                       >
                         {{ section.settings.heading | escape }}
                       </span>
-
                     </div>
 
                   {%- else -%}
@@ -72,6 +71,7 @@
           </div>
         </div>
       {%- endunless -%}
+      
       <div class="p-w__content">
         <div
           class="collapsible-content__wrapper grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"

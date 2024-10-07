@@ -29,11 +29,37 @@
   >
     <div class="page-width m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- unless section.settings.heading == blank -%}
+
         <div class="p-w__header">
+        
           <div class="p-w__header--wrapper{% if section.settings.link_label != blank %} d-flex f-wrap j-c-between a-i-center a-i-end-lg{% else %} {{ section.settings.text_alignment }}{% endif %}" {% if section.settings.link_label != blank %} style="--g-gap: 1.5rem;" {% endif %}>
-            <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-w{% if section.settings.link_label == blank and section.settings.text_alignment == 'center' %} mx-auto{% else %} m-0{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--m-w: 81rem;">
-              {{ section.settings.heading | escape }}
-            </h2>
+            
+            {%- if section.settings.use_hr == true -%}
+              <hr style="margin:0px;">
+              <div
+                style="
+                  text-align:center;
+                  top:-12px;
+                  position: relative;
+                  z-index: 2;
+                "
+              >
+                <span {% if section.settings.font == 'p22-stickley-pro-text' %} class="p22-stickley-pro-text" {% endif %} 
+                  style="
+                    background-color: #fff;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                  "
+                >
+                  {{ section.settings.heading | escape }}
+                </span>    
+              </div>
+            {%- else -%}
+              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-w{% if section.settings.link_label == blank and section.settings.text_alignment == 'center' %} mx-auto{% else %} m-0{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--m-w: 81rem;">
+                {{ section.settings.heading | escape }}
+              </h2>
+            {%- endif -%}
+
             {%- if section.settings.link_label != blank -%}
               <a {% if section.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.link }}"{% endif %} class="link u-link {{ settings.link_type | prepend: "link--style-" }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" aria-label="{{ section.settings.link_label | escape }}">
                 <span class="link-style">{{ section.settings.link_label | escape }}</span>
@@ -43,18 +69,164 @@
         </div>
       {%- endunless -%}
       <div class="p-w__content">
-        <slider-component class="carousel d-block pos-relative swiper-more-item{% if section.settings.carousel_infinite_scroll %}{% if section.blocks.size > section.settings.carousel_number %} infinite-scroll{% endif %}{% endif %}"
-            data-space-between="{{ section.settings.carousel_gap_mobile }}" 
-            data-space-between-tablet="{{ section.settings.carousel_gap_tablet }}" 
-            data-space-between-desktop="{{ section.settings.carousel_gap }}"
-            data-type-pagination="{{ section.settings.pagination_type }}" 
-            data-item-xxl="{{ section.settings.carousel_number }}"
-            data-item-xl="{{ section.settings.carousel_number }}" 
-            data-item-lg="{{ section.settings.carousel_number_tablet }}" 
-            data-item-md="{{ section.settings.carousel_number_tablet }}" 
-            data-item-sm="{{ section.settings.carousel_number_mobile }}" 
-            data-item-xs="{{ section.settings.carousel_number_mobile }}"
-          >
+
+        {%- if section.settings.layout == "v2" -%}
+
+          <div class="row">
+
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'column' -%}
+                  <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="col-12 col-md-4 carousel__item carousel__item--{{ block.type }} swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="item h-100 pos-relative{% if block.settings.set_border %} border{% endif %}{% if section.settings.content_inside_image %} content-inside-image{% endif %}"
+                      style="{% if block.settings.set_border %}--border-alpha: 1;{% endif %}"  
+                    >
+                      <{% if block.settings.button_link != blank %}a{% else %}div{% endif %} class="item__media d-block color-foreground link-cover" {% if block.settings.button_link != blank %}href="{{ block.settings.button_link }}" aria-label="link"{% endif %}>
+                        <animate-element class="d-block gradient-global o-h rounded" background>
+                          <div class="media media--transparent media--{{ section.settings.image_ratio }} media--zoom pos-relative o-h d-block"
+                            {% if section.settings.image_ratio == 'adapt' %}
+                              {% if block.settings.image != blank %}
+                                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+                              {% else %}
+                                style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                              {% endif %}
+                            {% endif %}
+                            data-animate="{{ section.settings.image_animation }}"
+                          >
+                            {%- if block.settings.image != blank -%}
+                              {%- capture sizes -%}
+                                (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width:
+                                750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)
+                              {%- endcapture -%}
+                              {{ block.settings.image | image_url: width: 1420 | image_tag:
+                                loading: 'lazy',
+                                sizes: sizes,
+                                widths: '275, 550, 710, 1420',
+                                class: 'motion-reduce',
+                                data-swiper-parallax: '10%'
+                              }}
+                            {%- else -%}
+                              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {%- endif -%}
+                          </div>
+                        </animate-element>
+                      </{% if block.settings.button_link != blank %}a{% else %}div{% endif %}>
+                      {%- if block.settings.heading != blank or block.settings.text != blank or block.settings.button_label != blank -%}
+                        <animate-element class="item__content d-block {{ section.settings.text_alignment }}{% if section.settings.content_inside_image %} pos-absolute w-100 content--{{ block.settings.content_position }}{% endif %}">
+                          <div class="d-block{% if settings.enable_animated_cursor == false %} o-h{% endif %}{% if block.settings.block_content_max_w == 'customize' %} m-w mx-auto{% endif %}" data-animate="{{ section.settings.text_animation }}" 
+                            style="--a-delay: {{ '0.2' | times: forloop.index }}s;{% if block.settings.block_content_max_w == 'customize' %}--m-w: {{ block.settings.custom_content_max_w }}px;{% endif %}"
+                          >
+                            {%- if block.settings.subheading != blank -%}
+                              <div class="subheading {{ block.settings.subheading_size | prepend: 'text-size-' }} u-u">
+                                {{ block.settings.subheading | escape }}
+                              </div>
+                            {%- endif -%}
+                            {%- if block.settings.heading != blank -%}
+                              <h3 class="heading{% if block.settings.heading_size == 'h1' %} h1{% else %} {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %}">
+                                {{ block.settings.heading | escape }}
+                              </h3>
+                            {%- endif -%}
+                            {%- if block.settings.text != blank -%}
+                              <div class="rte {{ block.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                            {%- endif -%}
+                            {%- if block.settings.button_label != blank -%}
+                              {%- if settings.enable_animated_cursor -%}
+                                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %} class="cursor-fixed__parallax-target d-inline-block pos-relative {{ block.settings.button_type | prepend: 'button--' }}">
+                                  <span class="cursor-fixed__parallax-inner d-inline-block">
+                              {%- endif -%}
+                                    <{% if settings.enable_animated_cursor %}span{% else %}a {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}{% endif %} class="button {{ block.settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %}"
+                                      aria-label="{{ block.settings.button_label | escape }}"
+                                    >
+                                      <span class="text">{{ block.settings.button_label | escape }}</span>
+                                      {% render 'button-main-style' %}
+                                    </{% if settings.enable_animated_cursor %}span{% else %}a{% endif %}>
+                              {%- if settings.enable_animated_cursor -%}
+                                  </span>
+                                </a>
+                              {%- endif -%}
+                            {%- endif -%}
+                          </div>
+                        </animate-element>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- when 'column-text' -%}
+                  <div 
+                    role="listitem" 
+                    id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                    class="carousel__item carousel__item--{{ block.type }} swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if block.settings.use_custom_color %} color-{{ block.settings.color_scheme }} gradient{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="item h-100 pos-relative{% if block.settings.set_border %} border{% endif %} not-image"
+                      style="{% if block.settings.set_border %}--border-alpha: 1;{% endif %}"  
+                    >
+                      {%- if block.settings.heading != blank or block.settings.text != blank or block.settings.button_label != blank -%}
+                        <animate-element class="item__content d-block {{ section.settings.text_alignment }} pos-absolute w-100 content--center">
+                          <div class="d-block o-h{% if block.settings.block_content_max_w == 'customize' %} m-w mx-auto{% endif %}" data-animate="{{ section.settings.text_animation }}" 
+                            style="--a-delay: {{ '0.2' | times: forloop.index }}s;{% if block.settings.block_content_max_w == 'customize' %}--m-w: {{ block.settings.custom_content_max_w }}px;{% endif %}"
+                          >
+                            {%- if block.settings.subheading != blank -%}
+                              <div class="subheading {{ block.settings.subheading_size | prepend: 'text-size-' }} u-u">
+                                {{ block.settings.subheading | escape }}
+                              </div>
+                            {%- endif -%}
+                            {%- if block.settings.heading != blank -%}
+                              <h3 class="heading{% if block.settings.heading_size == 'h1' %} h1{% else %} {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %}">
+                                {{ block.settings.heading | escape }}
+                              </h3>
+                            {%- endif -%}
+                            {%- if block.settings.text != blank -%}
+                              <div class="rte {{ block.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                            {%- endif -%}
+                            {%- if block.settings.button_label != blank -%}
+                              {%- if settings.enable_animated_cursor -%}
+                                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %} class="cursor-fixed__parallax-target d-inline-block pos-relative {{ block.settings.button_type | prepend: 'button--' }}">
+                                  <span class="cursor-fixed__parallax-inner d-inline-block">
+                              {%- endif -%}
+                                <{% if settings.enable_animated_cursor %}span{% else %}a {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}{% endif %}  class="button {{ block.settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %}"
+                                  aria-label="{{ block.settings.button_label | escape }}"
+                                >
+                                  <span class="text">{{ block.settings.button_label | escape }}</span>
+                                  {% render 'button-main-style' %}
+                                </{% if settings.enable_animated_cursor %}span{% else %}a{% endif %}>
+                              {%- if settings.enable_animated_cursor -%}
+                                  </span>
+                                </a>
+                              {%- endif -%}
+                            {%- endif -%}
+                          </div>
+                        </animate-element>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+
+          </div>
+
+        {%- else -%}
+
+          <slider-component class="carousel d-block pos-relative swiper-more-item{% if section.settings.carousel_infinite_scroll %}{% if section.blocks.size > section.settings.carousel_number %} infinite-scroll{% endif %}{% endif %}"
+              data-space-between="{{ section.settings.carousel_gap_mobile }}" 
+              data-space-between-tablet="{{ section.settings.carousel_gap_tablet }}" 
+              data-space-between-desktop="{{ section.settings.carousel_gap }}"
+              data-type-pagination="{{ section.settings.pagination_type }}" 
+              data-item-xxl="{{ section.settings.carousel_number }}"
+              data-item-xl="{{ section.settings.carousel_number }}" 
+              data-item-lg="{{ section.settings.carousel_number_tablet }}" 
+              data-item-md="{{ section.settings.carousel_number_tablet }}" 
+              data-item-sm="{{ section.settings.carousel_number_mobile }}" 
+              data-item-xs="{{ section.settings.carousel_number_mobile }}"
+            >
             <div class="swiper grid-scroll d-block pos-relative no-js-overflow-x">
               <div class="carousel__items swiper-wrapper f-nowrap d-flex" id="Slider-{{ section.id }}" aria-label="Multicolumn">
                 {%- for block in section.blocks -%}
@@ -190,24 +362,25 @@
                           {%- endif -%}
                         </div>
                       </div>
-                  {%- endcase -%}
-                {%- endfor -%}
-              </div>
-              {%- if section.blocks.size > 1 -%}
-                <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
-                  {%- if section.settings.arrows_type != 'none' -%}
-                    <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
-                      {{ icon_arrow_list }}
-                    </button>
-                    <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
-                      {{ icon_arrow_list }}
-                    </button>
-                  {%- endif -%}
-                  <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative pos-relative-xs"></div>
+                    {%- endcase -%}
+                  {%- endfor -%}
                 </div>
-              {%- endif -%}
-            </div>
-          </slider-component>
+                {%- if section.blocks.size > 1 -%}
+                  <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                    {%- if section.settings.arrows_type != 'none' -%}
+                      <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                        {{ icon_arrow_list }}
+                      </button>
+                      <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                        {{ icon_arrow_list }}
+                      </button>
+                    {%- endif -%}
+                    <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative pos-relative-xs"></div>
+                  </div>
+                {%- endif -%}
+              </div>
+            </slider-component>
+          {%- endif -%}
         </div>
     </div>
   </div>
@@ -222,7 +395,46 @@
     "groups": ["header", "footer", "custom.popup"]
   },
   "settings": [
-    {
+  {
+    "type": "select",
+    "id": "layout",
+    "label": "Layout",
+    "options": [
+      {
+        "value": "default",
+        "label": "Default"
+      },
+      {
+        "value": "v2",
+        "label": "V2"
+      }
+    ],
+    "default": "default",
+    "label": "Default"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_hr",
+    "default": false,
+    "label": "Enable HR Separator"
+  },
+  {
+    "type": "select",
+    "id": "font",
+    "options": [
+      {
+        "value": "normal",
+        "label": "Normal"
+      },
+      {
+        "value": "p22-stickley-pro-text",
+        "label": "P22 Stickley Pro"
+      }
+    ],
+    "default": "normal",
+    "label": "Font"
+  },
+  {
     "type": "checkbox",
     "id": "content_inside_image",
     "default": false,
