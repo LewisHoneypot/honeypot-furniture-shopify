@@ -75,6 +75,7 @@
         },
         "usp_drawer_1_R7cbxP": {
           "type": "usp_drawer_1",
+          "disabled": true,
           "settings": {
             "heading": "Buy With Confidence",
             "usp_icon_1": "heart",
