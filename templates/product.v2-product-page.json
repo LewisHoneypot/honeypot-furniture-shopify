@@ -79,7 +79,7 @@
             "heading": "Buy With Confidence",
             "usp_icon_1": "heart",
             "usp_content_type": "custom",
-            "content": "<p>At Honeypot our main goal is to introduce homeowners to their dream sofa, but we understand that sometimes it’s not always a perfect match, that’s why we give everyone the chance to return their sofa on the spot with our friendly delivery drivers in case it’s just not right for you !<br/><br/>A couple of things to keep in mind:<br/><br/>1. Immediate Return: We want to be able give you a full refund with no additional cost if you’re not 100% happy, that’s why it’s super important to inform our drivers that you’d like to make the return before they leave your home.<br/><br/>2. Final Decision: Once the Honeypot drivers are on their way we’re afraid that this policy will no longer be an option, but you can still put our standard return policy to use if you change your mind a few days later (please note that our standard return policy may incur additional fees).<br/><br/>It’s essential for us to give Honeypot customers the utmost amount of flexibility and choice when it comes to building their dream home, and our immediate return policy gives you just that, because your happiness and peace-of-mind comes first.</p>"
+            "content": "<p>At Honeypot, we want you to find your perfect sofa. If you're not 100% satisfied for any reason and want to return it, no problem! We offer an on-the-spot return option with our friendly delivery drivers. Here’s how it works:</p><ul><li><strong>Try it out:</strong> Once the drivers unpack the sofa, feel free to sit, relax, and make sure it's right for you before deciding.</li><li><strong>Immediate Return:</strong> If you're not 100% satisfied for any reason and want to return the sofa, simply let our drivers know before they leave, and we'll either arrange a full refund or an exchange. </li><li><strong>Final Decision:</strong> Once the drivers leave, this option expires, but you can still use our standard return policy (additional fees may apply).</li></ul><p>Your satisfaction is our priority, and we’re committed to giving you the flexibility to create your dream home!</p>"
           }
         },
         "usp_drawer_2_fe3jBM": {
@@ -275,103 +275,6 @@
         "background_color": "#48544c"
       }
     },
-    "multicolumn_CNwqta": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_pFatXt": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "column_4cEfPh": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "column_BYwthb": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_pFatXt",
-        "column_4cEfPh",
-        "column_BYwthb"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_inside_image": false,
-        "heading": "",
-        "link_label": "",
-        "link": "",
-        "image_ratio": "adapt",
-        "text_alignment": "left",
-        "button_transparent": "transparent",
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "carousel_gap": 10,
-        "carousel_gap_tablet": 10,
-        "carousel_gap_mobile": 10,
-        "carousel_number": 3,
-        "carousel_number_tablet": 1.2,
-        "carousel_number_mobile": "1",
-        "arrows_type": "all",
-        "carousel_infinite_scroll": false,
-        "enable_pagination_type": "all",
-        "pagination_type": "none",
-        "image_animation": "none",
-        "text_animation": "none",
-        "margin_top": 0,
-        "margin_bottom": 40,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
     "video_QM4Cg7": {
       "type": "video",
       "blocks": {
@@ -415,6 +318,105 @@
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
+      }
+    },
+    "multicolumn_CNwqta": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pFatXt": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Soft Bouclé Fabric",
+            "heading_size": "x-small",
+            "text": "<p>something about boucle fabric and how it will save your life.</p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_4cEfPh": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Removable Cushion Covers",
+            "heading_size": "x-small",
+            "text": "<p>something about a zip and how awesome it is.</p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_BYwthb": {
+          "type": "column",
+          "settings": {
+            "block_content_max_w": "full",
+            "custom_content_max_w": 250,
+            "set_border": false,
+            "content_position": "center",
+            "subheading": "",
+            "subheading_size": "medium",
+            "heading": "Moveable Footstools",
+            "heading_size": "x-small",
+            "text": "<p>Revolutionary footstool blurb goes here.</p>",
+            "text_size": "medium",
+            "button_type": "standard",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pFatXt",
+        "column_4cEfPh",
+        "column_BYwthb"
+      ],
+      "settings": {
+        "layout": "v2",
+        "use_hr": true,
+        "font": "p22-stickley-pro-text",
+        "content_inside_image": false,
+        "heading": "Why We Love This Range",
+        "link_label": "",
+        "link": "",
+        "image_ratio": "adapt",
+        "text_alignment": "center",
+        "button_transparent": "transparent",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "carousel_gap": 10,
+        "carousel_gap_tablet": 10,
+        "carousel_gap_mobile": 10,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.2,
+        "carousel_number_mobile": "1",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "none",
+        "image_animation": "none",
+        "text_animation": "none",
+        "margin_top": 0,
+        "margin_bottom": 40,
+        "padding_top": 75,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
@@ -636,8 +638,8 @@
     "main",
     "drawers_MFCe4V",
     "as_seen_in_GybwJa",
-    "multicolumn_CNwqta",
     "video_QM4Cg7",
+    "multicolumn_CNwqta",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "lookbook_pGUge4",
     "image_with_collection_HHhNkF",
