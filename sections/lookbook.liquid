@@ -25,15 +25,39 @@
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
   >
-    <div class="page-width m-auto">
+    <div class="page-width m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if section.settings.heading != blank or section.settings.text != blank -%}
         <div class="p-w__header">
-          <div class="p-w__header--wrapper d-flex f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
+          <div class="p-w__header--wrapper f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
             {%- if section.settings.heading != blank or section.settings.text != blank -%}
               <div class="p-w__header--item">
+
                 {%- if section.settings.heading != blank -%}
-                  <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
+                  {%- if section.settings.use_hr == true -%}
+                    <hr style="margin:0px;">
+                    <div
+                      style="
+                        text-align:center;
+                        top:-12px;
+                        position: relative;
+                        z-index: 2;
+                      "
+                    >
+                      <span {% if section.settings.font == 'p22-stickley-pro-text' %} class="p22-stickley-pro-text" {% endif %} 
+                        style="
+                          background-color: #fff;
+                          padding-left: 30px;
+                          padding-right: 30px;
+                        "
+                      >
+                        {{ section.settings.heading | escape }}
+                      </span>    
+                    </div>
+                  {%- else -%}
+                    <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
+                  {%- endif-%}
                 {%- endif-%}
+
                 {%- if section.settings.text != blank -%}
                   <div class="p-w__text rte m-t" style="--m-t: 1rem;">{{ section.settings.text }}</div>
                 {%- endif-%}
@@ -241,6 +265,28 @@
     "groups": ["header", "footer", "custom.popup"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_hr",
+      "default": false,
+      "label": "Enable HR Separator"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "p22-stickley-pro-text",
+          "label": "P22 Stickley Pro"
+        }
+      ],
+      "default": "normal",
+      "label": "Font"
+    },
   {
     "type": "text",
     "id": "heading",
