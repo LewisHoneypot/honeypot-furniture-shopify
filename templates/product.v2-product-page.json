@@ -43,7 +43,7 @@
           "settings": {
             "available_colours": "Available Colours",
             "font_size": 13,
-            "font": "Anaktoria",
+            "font": "Garamond",
             "font_weight": "normal",
             "font_style": "italic",
             "padding_top": 0,
@@ -65,7 +65,7 @@
           "type": "drawer",
           "settings": {
             "heading": "View The Range",
-            "font": "Anaktoria",
+            "font": "Garamond",
             "content_type": "view_the_range",
             "content": "",
             "page": "",
