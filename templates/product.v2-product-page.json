@@ -389,7 +389,7 @@
       "settings": {
         "layout": "v2",
         "use_hr": true,
-        "font": "Anaktoria",
+        "font": "Garamond",
         "content_inside_image": false,
         "heading": "Why We Love This Range",
         "link_label": "",
@@ -446,7 +446,7 @@
       "settings": {
         "heading": "Reviews",
         "use_hr": true,
-        "font": "Anaktoria",
+        "font": "Garamond",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
