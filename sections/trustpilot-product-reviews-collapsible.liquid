@@ -13,12 +13,7 @@
       --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
     "
   >
-    <div
-      class="collapsible-content {{ section.settings.section_width }} m-auto"
-      {% if section.settings.section_width == 'customized-width' %}
-        style="--page-width: {{ section.settings.customize_width }}px;"
-      {% endif %}
-    >
+    <div class="collapsible-content {{ section.settings.section_width }} m-auto">
       {%- unless section.settings.heading == blank -%}
         <div class="p-w__header">
           <div class="p-w__header--wrapper left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -73,9 +68,9 @@
       {%- endunless -%}
       
       <div class="p-w__content">
-        <div
-          class="collapsible-content__wrapper grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          style="--grid-v-xs: 3rem; --grid-v-md: 3rem;"
+        <div 
+          class="collapsible-content__wrapper customized-width grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          style="--grid-v-xs: 3rem; --grid-v-md: 3rem;{% if section.settings.section_width == 'customized-width' %} --page-width: {{ section.settings.customize_width }}px;{% endif %}"
         >
           {%- if section.settings.top_subheading != blank
             or section.settings.top_text != blank
