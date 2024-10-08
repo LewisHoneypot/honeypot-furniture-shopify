@@ -661,7 +661,9 @@
                     <p
                       {% if block.settings.font == 'Anaktoria' %}
                         class="Anaktoria"
-                      {% endif %}
+                      {% elsif block.settings.font == 'Garamond' %}
+                        class="Garamond"
+                      {% endif %} 
                       style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 10px;"
                     >
                       {{ block.settings.available_colours }}:
@@ -791,7 +793,12 @@
                           style="min-height:58px;"
                         >
                           <button
-                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if block.settings.font == 'Anaktoria' %} Anaktoria {% endif %}"
+                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left
+                            {% if block.settings.font == 'Anaktoria' %}
+                              Anaktoria
+                            {% elsif block.settings.font == 'Garamond' %}
+                              Garamond
+                            {% endif %}"
                             type="button"
                             aria-haspopup="dialog"
                             aria-label="{{ block.settings.heading | escape }}"
