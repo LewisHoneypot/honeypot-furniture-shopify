@@ -52,12 +52,16 @@
                     z-index: 2;
                   ">
                     <span 
-                    class="Garamond"
-                    style="
-                      background-color: #fff;
-                      padding-left: 30px;
-                      padding-right: 30px;
-                    ">
+                    {% if block.settings.font == 'Anaktoria' %}
+                      class="Anaktoria"
+                    {% elsif block.settings.font == 'Garamond' %}
+                      class="Garamond"
+                    {% endif %} 
+                      style="
+                        background-color: #fff;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                      ">
                       {{ block.settings.hr-separator-title | escape }}
                     </span>
                   </div>
@@ -241,290 +245,312 @@
     "groups": ["header", "footer", "custom.popup"]
   },
   "settings": [
-  {
-    "type": "image_picker",
-    "id": "cover_image",
-    "label": "t:sections.video.settings.cover_image.label"
-  },
-  {
-    "type": "header",
-    "content": "t:sections.collection-video.blocks.settings.header__1"
-  },
-  {
-    "type": "video",
-    "id": "video",
-    "label": "t:sections.collection-video.blocks.settings.label__1"
-  },
-  {
-    "type": "video_url",
-    "id": "video_url",
-    "accept": ["youtube", "vimeo"],
-    "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-    "label": "t:sections.video.settings.video_url.label",
-    "placeholder": "t:sections.video.settings.video_url.placeholder",
-    "info": "t:sections.video.settings.video_url.info"
-  },
-  {
-    "type": "text",
-    "id": "description",
-    "label": "t:sections.video.settings.description.label",
-    "info": "t:sections.video.settings.description.info"
-  },
-  {
-    "type": "checkbox",
-    "id": "enable_autoplay",
-    "default": true,
-    "label": "t:sections.video.settings.enable_autoplay.label"
-  },
-  {
-    "type": "checkbox",
-    "id": "enable_video_looping",
-    "label": "t:sections.video.settings.enable_video_looping.label",
-    "default": false
-  },
-  {
-    "type": "select",
-    "id": "desktop_content_position",
-    "options": [
     {
-      "value": "top-left",
-      "label": "t:sections.all.desktop_content_position.options__1"
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "t:sections.video.settings.cover_image.label"
     },
     {
-      "value": "top-center",
-      "label": "t:sections.all.desktop_content_position.options__2"
+      "type": "header",
+      "content": "t:sections.collection-video.blocks.settings.header__1"
     },
     {
-      "value": "top-right",
-      "label": "t:sections.all.desktop_content_position.options__3"
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.collection-video.blocks.settings.label__1"
     },
     {
-      "value": "middle-left",
-      "label": "t:sections.all.desktop_content_position.options__4"
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "label": "t:sections.video.settings.video_url.label",
+      "placeholder": "t:sections.video.settings.video_url.placeholder",
+      "info": "t:sections.video.settings.video_url.info"
     },
     {
-      "value": "middle-center",
-      "label": "t:sections.all.desktop_content_position.options__5"
+      "type": "text",
+      "id": "description",
+      "label": "t:sections.video.settings.description.label",
+      "info": "t:sections.video.settings.description.info"
     },
     {
-      "value": "middle-right",
-      "label": "t:sections.all.desktop_content_position.options__6"
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "default": true,
+      "label": "t:sections.video.settings.enable_autoplay.label"
     },
     {
-      "value": "bottom-left",
-      "label": "t:sections.all.desktop_content_position.options__7"
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "t:sections.video.settings.enable_video_looping.label",
+      "default": false
     },
     {
-      "value": "bottom-center",
-      "label": "t:sections.all.desktop_content_position.options__8"
-    },
-    {
-      "value": "bottom-right",
-      "label": "t:sections.all.desktop_content_position.options__9"
-    }],
-    "default": "middle-center",
-    "label": "t:sections.all.desktop_content_position.label",
-    "info": "t:sections.all.desktop_content_position.info"
-  },
-  {
-    "type": "select",
-    "id": "desktop_content_alignment",
-    "options": [
-    {
-      "value": "left",
-      "label": "t:sections.all.desktop_content_alignment.options__1"
-    },
-    {
-      "value": "center",
-      "label": "t:sections.all.desktop_content_alignment.options__2"
-    },
-    {
-      "value": "right",
-      "label": "t:sections.all.desktop_content_alignment.options__3"
-    }],
-    "default": "center",
-    "label": "t:sections.all.desktop_content_alignment.label"
-  },
-  {
-    "type": "select",
-    "id": "mobile_content_alignment",
-    "options": [
-    {
-      "value": "left",
-      "label": "t:sections.all.mobile_content_alignment.options__1"
-    },
-    {
-      "value": "center",
-      "label": "t:sections.all.mobile_content_alignment.options__2"
-    },
-    {
-      "value": "right",
-      "label": "t:sections.all.mobile_content_alignment.options__3"
-    }],
-    "default": "center",
-    "label": "t:sections.all.mobile_content_alignment.label"
-  },
-  {
-    "type": "select",
-    "id": "mobile_color_scheme",
-    "default": "custom",
-    "label": "t:sections.all.mobile_color_scheme.label",
-    "info": "t:sections.all.mobile_color_scheme.info",
-    "options": [
-    {
-      "value": "default",
-      "label": "t:sections.all.mobile_color_scheme.options__1"
-    },
-    {
-      "value": "custom",
-      "label": "t:sections.all.mobile_color_scheme.options__2"
-    }]
-  },
-  {
-    "type": "color",
-    "id": "colors_text",
-    "default": "#424242",
-    "label": "t:sections.all.colors.colors_text"
-  },
-  {
-    "type": "color",
-    "id": "colors_background",
-    "label": "t:sections.all.colors.colors_background"
-  },
-  {
-    "type": "color_background",
-    "id": "gradient_background",
-    "default": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-    "label": "t:sections.all.colors.gradient_background"
-  },
-  {
-    "type": "color_scheme",
-    "id": "color_scheme",
-    "label": "t:sections.all.colors.label",
-    "default": "background-1"
-  },
-  {
-    "type": "range",
-    "id": "image_overlay_opacity",
-    "min": 0,
-    "max": 100,
-    "step": 10,
-    "unit": "%",
-    "label": "t:sections.all.image_overlay_opacity.label",
-    "default": 30
-  },
-  {
-    "type": "color",
-    "id": "color_overlay_opacity",
-    "label": "t:sections.all.colors.colors_background",
-    "default": "#000000"
-  },
-  {
-    "type": "header",
-    "content": "t:sections.video.settings.header__3.content"
-  },
-  {
-    "type": "richtext",
-    "id": "below_text",
-    "label": "t:sections.all.text.label",
-    "default": "<p>End of Season. </p>"
-  },
-  {
-    "type": "text",
-    "id": "below_link_text",
-    "label": "t:sections.all.link_label.label",
-    "default": "Save 50% off Decorative"
-  },
-  {
-    "type": "url",
-    "id": "below_link",
-    "label": "t:sections.all.link_url.label"
-  },
-  {
-    "type": "header",
-    "content": "t:sections.all.animation.content"
-  },
-  {
-    "type": "select",
-    "id": "text_animation",
-    "options": [
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
       {
-        "value": "none",
-        "label": "t:sections.all.animation.set_animation.options__1.label"
+        "value": "top-left",
+        "label": "t:sections.all.desktop_content_position.options__1"
       },
       {
-        "value": "fade-up",
-        "label": "t:sections.all.animation.set_animation.options__2.label"
+        "value": "top-center",
+        "label": "t:sections.all.desktop_content_position.options__2"
       },
       {
-        "value": "fade-down",
-        "label": "t:sections.all.animation.set_animation.options__3.label"
+        "value": "top-right",
+        "label": "t:sections.all.desktop_content_position.options__3"
       },
       {
-        "value": "zoom-in",
-        "label": "t:sections.all.animation.set_animation.options__4.label"
+        "value": "middle-left",
+        "label": "t:sections.all.desktop_content_position.options__4"
       },
       {
-        "value": "zoom-out",
-        "label": "t:sections.all.animation.set_animation.options__5.label"
-      }
-    ],
-    "default": "none",
-    "label": "t:sections.all.animation.set_animation.label__2"
-  },
-  {
-    "type": "header",
-    "content": "t:sections.all.padding.section_padding_heading"
-  },
-  {
-    "type": "range",
-    "id": "padding_top",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "label": "t:sections.all.padding.padding_top",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "padding_bottom",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "label": "t:sections.all.padding.padding_bottom",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "padding_top_mobile",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "label": "t:sections.all.padding.padding_top_mobile",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "padding_bottom_mobile",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "px",
-    "label": "t:sections.all.padding.padding_bottom_mobile",
-    "default": 0
-  }],
+        "value": "middle-center",
+        "label": "t:sections.all.desktop_content_position.options__5"
+      },
+      {
+        "value": "middle-right",
+        "label": "t:sections.all.desktop_content_position.options__6"
+      },
+      {
+        "value": "bottom-left",
+        "label": "t:sections.all.desktop_content_position.options__7"
+      },
+      {
+        "value": "bottom-center",
+        "label": "t:sections.all.desktop_content_position.options__8"
+      },
+      {
+        "value": "bottom-right",
+        "label": "t:sections.all.desktop_content_position.options__9"
+      }],
+      "default": "middle-center",
+      "label": "t:sections.all.desktop_content_position.label",
+      "info": "t:sections.all.desktop_content_position.info"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "t:sections.all.desktop_content_alignment.options__1"
+      },
+      {
+        "value": "center",
+        "label": "t:sections.all.desktop_content_alignment.options__2"
+      },
+      {
+        "value": "right",
+        "label": "t:sections.all.desktop_content_alignment.options__3"
+      }],
+      "default": "center",
+      "label": "t:sections.all.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "t:sections.all.mobile_content_alignment.options__1"
+      },
+      {
+        "value": "center",
+        "label": "t:sections.all.mobile_content_alignment.options__2"
+      },
+      {
+        "value": "right",
+        "label": "t:sections.all.mobile_content_alignment.options__3"
+      }],
+      "default": "center",
+      "label": "t:sections.all.mobile_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "mobile_color_scheme",
+      "default": "custom",
+      "label": "t:sections.all.mobile_color_scheme.label",
+      "info": "t:sections.all.mobile_color_scheme.info",
+      "options": [
+      {
+        "value": "default",
+        "label": "t:sections.all.mobile_color_scheme.options__1"
+      },
+      {
+        "value": "custom",
+        "label": "t:sections.all.mobile_color_scheme.options__2"
+      }]
+    },
+    {
+      "type": "color",
+      "id": "colors_text",
+      "default": "#424242",
+      "label": "t:sections.all.colors.colors_text"
+    },
+    {
+      "type": "color",
+      "id": "colors_background",
+      "label": "t:sections.all.colors.colors_background"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "default": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+      "label": "t:sections.all.colors.gradient_background"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.all.image_overlay_opacity.label",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "color_overlay_opacity",
+      "label": "t:sections.all.colors.colors_background",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.video.settings.header__3.content"
+    },
+    {
+      "type": "richtext",
+      "id": "below_text",
+      "label": "t:sections.all.text.label",
+      "default": "<p>End of Season. </p>"
+    },
+    {
+      "type": "text",
+      "id": "below_link_text",
+      "label": "t:sections.all.link_label.label",
+      "default": "Save 50% off Decorative"
+    },
+    {
+      "type": "url",
+      "id": "below_link",
+      "label": "t:sections.all.link_url.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.animation.content"
+    },
+    {
+      "type": "select",
+      "id": "text_animation",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.animation.set_animation.options__1.label"
+        },
+        {
+          "value": "fade-up",
+          "label": "t:sections.all.animation.set_animation.options__2.label"
+        },
+        {
+          "value": "fade-down",
+          "label": "t:sections.all.animation.set_animation.options__3.label"
+        },
+        {
+          "value": "zoom-in",
+          "label": "t:sections.all.animation.set_animation.options__4.label"
+        },
+        {
+          "value": "zoom-out",
+          "label": "t:sections.all.animation.set_animation.options__5.label"
+        }
+      ],
+      "default": "none",
+      "label": "t:sections.all.animation.set_animation.label__2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 0
+    }
+  ],
   "blocks": [
     {
       "name": "HR Separator",
       "type": "hr-separator",
       "settings": [
+      
       {
         "type": "text",
         "id": "hr-separator-title",
         "label": "Title"
+      },
+      {
+        "type": "select",
+        "id": "font",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "Anaktoria",
+            "label": "Anaktoria"
+          },
+          {
+            "value": "Garamond",
+            "label": "Garamond"
+          }
+        ],
+        "default": "normal",
+        "label": "Font"
       },
       {
         "type": "header",

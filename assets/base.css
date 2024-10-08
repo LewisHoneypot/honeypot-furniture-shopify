@@ -26237,3 +26237,15 @@ body.multitasking__show .newsletter-popup-opener {
   font-size: 1.6rem !important;
   font-weight: var(--font-body-weight);
 }
+
+/* FONTS */
+.Anaktoria {
+  font-family: "Anaktoria", serif !important;
+  font-weight: 400;
+  font-style: italic;
+}
+.Garamond {
+  font-family: "Garamond", serif !important;
+  font-weight: 400;
+  font-style: italic;
+}
