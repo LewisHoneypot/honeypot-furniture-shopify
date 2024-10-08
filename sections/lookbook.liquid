@@ -74,7 +74,7 @@
           </div>
         </div>
       {%- endif -%}
-      <div class="p-w__content">
+      <div class="p-w__content" {% if item_full_width %}style="text-align: -webkit-center;"{% endif %}>
         <slider-component class="
           carousel{% if item_full_width %} carousel--full{% endif %} 
           d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" 
