@@ -329,6 +329,7 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
+            "image": "shopify://shop_images/7d7bd46e-cb68-4290-8f93-7fdee8ff9c77.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
@@ -347,6 +348,7 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
+            "image": "shopify://shop_images/2ebdc840-78d9-4be6-9df8-872c59aec153.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
@@ -365,6 +367,7 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
+            "image": "shopify://shop_images/62c27366-b98f-4865-83f1-58c11146ff5e.jpg",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
@@ -461,6 +464,7 @@
         "image_L4QhHh": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Bishop-Scatterback-Sofa-Platinum-U-Shape-Corner-2.jpg",
             "product_1": "inga-fullback-sofa-beige-u-shape-corner",
             "horizontal_1": 32,
             "vertical_1": 26,
@@ -483,6 +487,8 @@
         "image_L4QhHh"
       ],
       "settings": {
+        "use_hr": false,
+        "font": "normal",
         "heading": "Shop The Look",
         "text": "",
         "button_label": "",
