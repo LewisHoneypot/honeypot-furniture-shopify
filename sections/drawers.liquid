@@ -104,7 +104,12 @@
                         style="min-height:58px;"
                       >
                         <button
-                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left Garamond"
+                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if section.settings.font == 'Anaktoria' %}
+                            Anaktoria
+                          {% elsif section.settings.font == 'Garamond' %}
+                            Garamond
+                          {% endif %}
+                          "
                           type="button"
                           aria-haspopup="dialog"
                           aria-label="{{ block.settings.heading | escape }}"
@@ -296,6 +301,26 @@
     "groups": ["header", "footer", "custom.popup"]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "font",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "Anaktoria",
+          "label": "Anaktoria"
+        },
+        {
+          "value": "Garamond",
+          "label": "Garamond"
+        }
+      ],
+      "default": "normal",
+      "label": "Font"
+    },
     {
       "type": "text",
       "id": "heading",

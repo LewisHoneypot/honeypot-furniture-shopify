@@ -16,7 +16,13 @@
         margin-right-xs: {{ section.settings.padding_left_right_mobile }}px;
       "
     >
-      <div class="p-w__content Garamond">
+      <div class="p-w__content 
+        {% if section.settings.font == 'Anaktoria' %}
+          Anaktoria
+        {% elsif section.settings.font == 'Garamond' %}
+          Garamond
+        {% endif %}"
+      >
         <hr style="margin:0px;">
         <div style="
           text-align:center;
@@ -37,19 +43,6 @@
   </div>
 {%- endif -%}
 
-{% stylesheet %}
-.Anaktoria {
-  font-family: "Anaktoria", serif !important;
-  font-weight: 400;
-  font-style: italic;
-}
-.Garamond {
-  font-family: "Garamond", serif !important;
-  font-weight: 400;
-  font-style: italic;
-}
-{%  endstylesheet %}
-
 {% schema %}
 {
   "name": "HR Separator",
@@ -60,6 +53,26 @@
       "type": "text",
       "id": "hr-separator",
       "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "Anaktoria",
+          "label": "Anaktoria"
+        },
+        {
+          "value": "Garamond",
+          "label": "Garamond"
+        }
+      ],
+      "default": "normal",
+      "label": "Font"
     },
     {
       "type": "header",
