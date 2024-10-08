@@ -30,18 +30,36 @@
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 
-    {% comment %} {%- if template contains 'product' -%}
-      <link rel="stylesheet" href="https://use.typekit.net/giq0fvg.css">
-    {% endif %} {% endcomment %}
+    {% comment %}
+      {%- if template contains 'product' -%}
+        <link rel="stylesheet" href="https://use.typekit.net/giq0fvg.css">
+      {% endif %}
+    {% endcomment %}
 
     {%- if template contains 'product' -%}
       <style>
+          @font-face {
+            font-family: 'Anaktoria';
+            src: url('{{ 'Anaktoria.woff2' | asset_url }}') format('woff2'),
+                 url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
+            font-weight: normal;
+            font-style: normal;
+          }
+        /* Italic Variable Font */
         @font-face {
-          font-family: 'Anaktoria';
-          src: url('{{ 'Anaktoria.woff2' | asset_url }}') format('woff2'),
-              url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
-          font-weight: normal;
-          font-style: normal;
+          font-family: 'Garamond';
+          src: url('{{ 'EBGaramond-Italic-VariableFont_wght.woff2' | asset_url }}') format('woff2'),
+                url('{{ 'EBGaramond-Italic-VariableFont_wght.woff' | asset_url }}') format('woff');
+          font-weight: 100 900; /* Range of weights for italic */
+          font-style: italic; /* Italic style */
+        }
+        /* Regular Variable Font */
+        @font-face {
+          font-family: 'Garamond';
+          src: url('{{ 'EBGaramond-VariableFont_wght.woff2' | asset_url }}') format('woff2'),
+               url('{{ 'EBGaramond-VariableFont_wght.woff' | asset_url }}') format('woff');
+          font-weight: 100 900; /* Range of weights for normal */
+          font-style: normal; /* Normal (non-italic) style */
         }
       </style>
     {% endif %}
