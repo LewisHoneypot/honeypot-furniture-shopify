@@ -31,7 +31,6 @@
       {%- unless section.settings.heading == blank -%}
 
         <div class="p-w__header">
-        
           <div class="p-w__header--wrapper{% if section.settings.link_label != blank %} d-flex f-wrap j-c-between a-i-center a-i-end-lg{% else %} {{ section.settings.text_alignment }}{% endif %}" {% if section.settings.link_label != blank %} style="--g-gap: 1.5rem;" {% endif %}>
             
             {%- if section.settings.use_hr == true -%}
@@ -65,9 +64,12 @@
                 <span class="link-style">{{ section.settings.link_label | escape }}</span>
               </a>
             {%- endif -%}
+
           </div>
         </div>
+
       {%- endunless -%}
+      
       <div class="p-w__content container">
 
         {%- if section.settings.layout == "v2" -%}
@@ -814,7 +816,7 @@
     "step": 1,
     "unit": "px",
     "label": "t:sections.all.padding.padding_top_mobile",
-    "default": 20
+    "default": 45
   },
   {
     "type": "range",
