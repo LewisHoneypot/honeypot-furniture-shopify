@@ -26272,7 +26272,7 @@ body.multitasking__show .newsletter-popup-opener {
 }
 
 /* Small devices (sm): 50/50 split with centered content */
-@media (min-width: 417px) {
+@media (min-width: 360px) {
   .custom-col {
     flex: 1 1 50%; /* Equal width columns */
   }
