@@ -827,40 +827,30 @@
               {% comment %} USP Drawers {% endcomment %}
 
               {% comment %} USP Drawer 1 {% endcomment %}
-
                 {%- when 'usp_drawer_1' -%}
-                  <div class="container-fluid p-0" style="padding-left: 5px !important; padding-right: 5px !important;">
-                    <div class="row">
-    
-                      <div class="col-6 col-sm-5 col-md-4 col-lg-5 col-xl-4 float-sm-left p-1 pl-0 pr-0">
-                        <div
-                          class="m-0 text-center text-md-left pt-3 pr-0 pl-0"
-                          style="background-color:{{ block.settings.background_colour }};"
-                          {{ block.shopify_attributes }}
-                        >                    
-                          <side-drawer-opener
-                            class="d-block product-drawer__opener no-js-hidden"
-                            data-side-drawer="#Drawer-{{ block.id }}"
-                            {{ block.shopify_attributes }}
-                          >
-                            <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pr-0 usp-button">
-                              <span style="position: relative; top: 3px;">
-                                {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
-                              </span>
-                              <span style="font-size:13px; text-decoration: underline;">
-                                {{ block.settings.heading | escape }}
-                              </span>
-                            </button>
-                          </side-drawer-opener>
-                        </div>
-                      </div>
+                  <div class="custom-row">
+                    <div class="custom-col custom-first-col"
+                      {{ block.shopify_attributes }}
+                    >                    
+                      <side-drawer-opener
+                        class="d-block product-drawer__opener no-js-hidden"
+                        data-side-drawer="#Drawer-{{ block.id }}"
+                        {{ block.shopify_attributes }}
+                      >
+                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
+                          <span style="position: relative; top: 3px;">
+                            {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
+                          </span>
+                          <span style="font-size:13px; text-decoration: underline;">
+                            {{ block.settings.heading | escape }}
+                          </span>
+                        </button>
+                      </side-drawer-opener>
+                    </div>
 
                 {% comment %} USP Drawer 2 {% endcomment %}
-                {%- when 'usp_drawer_2' -%}
-                  <div class="col-6 col-sm-7 col-md-8 col-lg-7 col-xl-8 float-sm-left p-1 pl-0">
-                    <div
-                      class="m-0 text-center text-md-left pt-3 pr-3 pl-0 pr-0"
-                      style="background-color:{{ block.settings.background_colour }};"
+                  {%- when 'usp_drawer_2' -%}
+                    <div class="custom-col custom-second-col"
                       {{ block.shopify_attributes }}
                     >
                       <side-drawer-opener
@@ -868,7 +858,7 @@
                         data-side-drawer="#Drawer-{{ block.id }}"
                         {{ block.shopify_attributes }}
                       >
-                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center u-none left pl-0 pr-0 usp-button">
+                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
                           <span style="position: relative; top: 3px;">
                             {% render 'icon-accordion', icon: block.settings.usp_icon_2 %}
                           </span>
@@ -880,8 +870,6 @@
                     </div>
                   </div>
                   
-                </div>
-              </div>
 
               {% comment %} Delivery ETA {% endcomment %}
               {%- when 'expected_delivery' -%}

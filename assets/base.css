@@ -26249,3 +26249,75 @@ body.multitasking__show .newsletter-popup-opener {
   font-weight: 400;
   font-style: italic;
 }
+
+
+
+/* custom bootstrap test */
+
+
+/* General row styles */
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Default (xs and up) */
+.custom-col {
+  flex: 1 1 100%; /* Full width by default */
+  display: flex;
+  justify-content: center; /* Center content by default */
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Small devices (sm): 50/50 split with centered content */
+@media (min-width: 417px) {
+  .custom-col {
+    flex: 1 1 50%; /* Equal width columns */
+  }
+}
+
+/* Medium devices (md): First col based on content width, second col fills the rest */
+@media (min-width: 500px) {
+  .custom-first-col {
+    flex: 0 0 auto; /* Width based on content */
+    justify-content: center; /* Center content within the column */
+  }
+  
+  .custom-second-col {
+    flex: 1; /* Fills the remaining space */
+    justify-content: flex-start; /* Align content to the left */
+    text-align: left; /* Ensure text is left-aligned */
+  }
+  
+  .custom-row {
+    justify-content: flex-start; /* Align items to the left */
+  }
+}
+
+/* Large devices (lg): Equal width columns centered */
+@media (min-width: 992px) {
+  .custom-col {
+    flex: 1 1 50%; /* Equal width columns */
+    justify-content: center; /* Center content */
+  }
+}
+
+/* Extra Large devices (xl): First col based on content width, second col fills the rest */
+@media (min-width: 1200px) {
+  .custom-first-col {
+    flex: 0 0 auto; /* Width based on content */
+    justify-content: center; /* Center content within the column */
+  }
+  
+  .custom-second-col {
+    flex: 1; /* Fills the remaining space */
+    justify-content: flex-start; /* Align content to the left */
+    text-align: left; /* Ensure text is left-aligned */
+  }
+  
+  .custom-row {
+    justify-content: flex-start; /* Align items to the left */
+  }
+}
