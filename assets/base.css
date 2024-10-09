@@ -26296,6 +26296,10 @@ body.multitasking__show .newsletter-popup-opener {
   .custom-row {
     justify-content: flex-start; /* Align items to the left */
   }
+
+  .custom-col {
+    padding: 15px;
+  }
 }
 
 /* Large devices (lg): Equal width columns centered */
