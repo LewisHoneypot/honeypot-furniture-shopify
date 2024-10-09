@@ -1866,7 +1866,7 @@
                     {%- endif -%}
                     
                     <div class="col-12 center">
-                      {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag }}
+                      {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag: loading: "lazy" }}
                     </div>
                     <div class="col-12" style="align-self: center;">
                       <ol
