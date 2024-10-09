@@ -58,6 +58,7 @@
           "settings": {
             "heading": "Expected Delivery",
             "enable_expected_delivery": true,
+            "date_type": "accurate",
             "padding_top": 0,
             "padding_bottom": 5,
             "background_colour": "#ffffff"
@@ -94,6 +95,7 @@
         "snap_buttons_rnjz4z": {
           "type": "snap_buttons",
           "settings": {
+            "colors_background": "#fff"
           }
         },
         "staingard_drawer_iWbVLW": {
@@ -394,6 +396,8 @@
       ],
       "disabled": true,
       "settings": {
+        "use_hr": false,
+        "font": "normal",
         "heading": "Shop The Look",
         "text": "",
         "button_label": "",
@@ -472,6 +476,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "products_to_show": 5,
