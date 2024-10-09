@@ -26268,7 +26268,9 @@ body.multitasking__show .newsletter-popup-opener {
   justify-content: center; /* Center content by default */
   align-items: center;
   text-align: center;
-  padding: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
 /* Small devices (sm): 50/50 split with centered content */
