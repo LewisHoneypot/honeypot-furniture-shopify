@@ -31,7 +31,6 @@
                 "
               >
                 <div class="p-w__content">
-
                   {%- if section.settings.use_hr == true -%}
                     <hr style="margin:0px;">
                     <div
@@ -43,11 +42,11 @@
                       "
                     >
                       <span
-                      {% if section.settings.font == 'Anaktoria' %}
-                        class="Anaktoria"
-                      {% elsif section.settings.font == 'Garamond' %}
-                        class="Garamond"
-                      {% endif %}
+                        {% if section.settings.font == 'Anaktoria' %}
+                          class="Anaktoria"
+                        {% elsif section.settings.font == 'Garamond' %}
+                          class="Garamond"
+                        {% endif %}
                         style="
                           background-color: #fff;
                           padding-left: 30px;
@@ -61,21 +60,21 @@
                   {%- else -%}
                     <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">
                       {{ section.settings.heading | escape }}
-                    </h2>      
+                    </h2>
                   {%- endif -%}
-
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       {%- endunless -%}
-      
+
       <div class="p-w__content">
-        <div 
+        <div
           class="collapsible-content__wrapper customized-width grid d-flex f-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          style="--grid-v-xs: 3rem; --grid-v-md: 3rem;{% if section.settings.section_width == 'customized-width' %} --page-width: {{ section.settings.customize_width }}px;{% endif %}"
+          style="
+            --grid-v-xs: 3rem; --grid-v-md: 3rem;{% if section.settings.section_width == 'customized-width' %} --page-width: {{ section.settings.customize_width }}px;{% endif %} margin-left: auto; margin-right: auto;
+          "
         >
           {%- if section.settings.top_subheading != blank
             or section.settings.top_text != blank
