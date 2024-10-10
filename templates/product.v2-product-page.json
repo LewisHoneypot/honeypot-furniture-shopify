@@ -456,7 +456,7 @@
         "color_scheme": "",
         "padding_top": 45,
         "padding_bottom": 0,
-        "padding_top_mobile": 35,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
