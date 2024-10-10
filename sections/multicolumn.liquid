@@ -75,7 +75,7 @@
 
       {%- endunless -%}
       
-      <div class="p-w__content container">
+      <div class="p-w__content container why-we-love-this-range">
 
         {%- if section.settings.layout == "v2" -%}
 
@@ -392,6 +392,12 @@
     </div>
   </div>
 {%- endif -%}
+
+{% stylesheet %}
+.why-we-love-this-range p {
+  padding-bottom: 15px;
+}
+{% endstylesheet %}
 
 {% schema %}
 {
