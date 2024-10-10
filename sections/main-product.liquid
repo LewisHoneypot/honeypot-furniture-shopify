@@ -145,12 +145,17 @@
                           --padding-bottom: {{ block.settings.padding_bottom }}px;
                         "
                       >
-
                         {% comment %} Check Product title display type {% endcomment %}
-                        {%- if block.settings.layout == "v2" -%}
+                        {%- if block.settings.layout == 'v2' -%}
                           {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
-                            <h1>{{ product.metafields.custom.range_name }}</h1>                          
-                            <span>{{ product.metafields.custom.colour_and_model }}</span>
+                            <h1
+                              class="{% if block.settings.heading_size == 'h1' or block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }}{%  else %}p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %} m-0"
+                              style="font-weight: {{ block.settings.font_weight }} !important; font-size: 20pt;"
+                            >
+                              {{ product.metafields.custom.range_name }}
+                              <br>
+                              <span style="font-size: 14pt; font-weight: 500;">{{ product.metafields.custom.colour_and_model }}</span>
+                            </h1>
                           {%- endif -%}
                         {%- else -%}
                           <h1
@@ -160,7 +165,6 @@
                             {{ product.title | escape }}
                           </h1>
                         {%- endif -%}
-
                       </div>
                     </div>
 
@@ -673,7 +677,7 @@
                         class="Anaktoria"
                       {% elsif block.settings.font == 'Garamond' %}
                         class="Garamond"
-                      {% endif %} 
+                      {% endif %}
                       style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 10px;"
                     >
                       {{ block.settings.available_colours }}:
@@ -803,19 +807,22 @@
                           style="min-height:58px;"
                         >
                           <button
-                            class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left
-                            {% if block.settings.font == 'Anaktoria' %}
-                              Anaktoria
-                            {% elsif block.settings.font == 'Garamond' %}
-                              Garamond
-                            {% endif %}"
+                            class="
+                              t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left
+                              {% if block.settings.font == 'Anaktoria' %}
+                                Anaktoria
+                              {% elsif block.settings.font == 'Garamond' %}
+                                Garamond
+                              {% endif %}
+                            "
                             type="button"
                             aria-haspopup="dialog"
                             aria-label="{{ block.settings.heading | escape }}"
                             style="
                               background-color:{{ block.settings.colors_background }};
                               border: solid 1px {{ block.settings.colors_border }};
-                              min-height: 80px;"
+                              min-height: 80px;
+                            "
                           >
                             {{ block.settings.heading | escape }}
                             {{ icon_caret }}
@@ -834,54 +841,55 @@
                   {%- endif -%}
                 </div>
 
-              {% comment %} USP Drawers {% endcomment %}
+                {% comment %} USP Drawers {% endcomment %}
 
-              {% comment %} USP Drawer 1 {% endcomment %}
-                {%- when 'usp_drawer_1' -%}
-                  <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-                    <div class="custom-col custom-first-col"
-                      {{ block.shopify_attributes }}
-                    >                    
-                      <side-drawer-opener
-                        class="d-block product-drawer__opener no-js-hidden"
-                        data-side-drawer="#Drawer-{{ block.id }}"
-                        {{ block.shopify_attributes }}
-                      >
-                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
-                          <span style="position: relative; top: 3px;">
-                            {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
-                          </span>
-                          <span style="font-size:13px; text-decoration: underline;">
-                            {{ block.settings.heading | escape }}
-                          </span>
-                        </button>
-                      </side-drawer-opener>
-                    </div>
-
-                {% comment %} USP Drawer 2 {% endcomment %}
-                  {%- when 'usp_drawer_2' -%}
-                    <div class="custom-col custom-second-col"
+                {% comment %} USP Drawer 1 {% endcomment %}
+              {%- when 'usp_drawer_1' -%}
+                <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+                  <div
+                    class="custom-col custom-first-col"
+                    {{ block.shopify_attributes }}
+                  >
+                    <side-drawer-opener
+                      class="d-block product-drawer__opener no-js-hidden"
+                      data-side-drawer="#Drawer-{{ block.id }}"
                       {{ block.shopify_attributes }}
                     >
-                      <side-drawer-opener
-                        class="d-block product-drawer__opener no-js-hidden"
-                        data-side-drawer="#Drawer-{{ block.id }}"
-                        {{ block.shopify_attributes }}
-                      >
-                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
-                          <span style="position: relative; top: 3px;">
-                            {% render 'icon-accordion', icon: block.settings.usp_icon_2 %}
-                          </span>
-                          <span style="font-size:13px; text-decoration: underline;">
-                            {{ block.settings.heading | escape }}
-                          </span>
-                        </button>
-                      </side-drawer-opener>
-                    </div>
+                      <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
+                        <span style="position: relative; top: 3px;">
+                          {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
+                        </span>
+                        <span style="font-size:13px; text-decoration: underline;">
+                          {{ block.settings.heading | escape }}
+                        </span>
+                      </button>
+                    </side-drawer-opener>
                   </div>
-                  
 
-              {% comment %} Delivery ETA {% endcomment %}
+                  {% comment %} USP Drawer 2 {% endcomment %}
+              {%- when 'usp_drawer_2' -%}
+                <div
+                  class="custom-col custom-second-col"
+                  {{ block.shopify_attributes }}
+                >
+                  <side-drawer-opener
+                    class="d-block product-drawer__opener no-js-hidden"
+                    data-side-drawer="#Drawer-{{ block.id }}"
+                    {{ block.shopify_attributes }}
+                  >
+                    <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
+                      <span style="position: relative; top: 3px;">
+                        {% render 'icon-accordion', icon: block.settings.usp_icon_2 %}
+                      </span>
+                      <span style="font-size:13px; text-decoration: underline;">
+                        {{ block.settings.heading | escape }}
+                      </span>
+                    </button>
+                  </side-drawer-opener>
+                </div>
+                </div>
+
+                {% comment %} Delivery ETA {% endcomment %}
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
                   {% comment %} Check if in stock {% endcomment %}
@@ -1075,10 +1083,10 @@
                     {% assign colors_background = block.settings.colors_background %}
 
                     <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0 pr-xl-1">
-                      {% render 'snap-finance-rbp-widget', colors_background:colors_background %}
+                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
                     </div>
                     <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pl-md-1 pl-lg-0 pl-xl-1">
-                      {% render 'snap-finance-bnpl-widget', colors_background:colors_background %}
+                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
                     </div>
                   </div>
                 </div>
@@ -1874,9 +1882,13 @@
                     {%- if product.metafields.Dimensions.Length2 -%}
                       {%- assign dimensions_data = true -%}
                     {%- endif -%}
-                    
+
                     <div class="col-12 center">
-                      {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag: loading: "lazy" }}
+                      {{
+                        product.metafields.custom.dimension_image_file
+                        | image_url: width: 1000
+                        | image_tag: loading: 'lazy'
+                      }}
                     </div>
                     <div class="col-12" style="align-self: center;">
                       <ol
@@ -2863,7 +2875,7 @@
               "label": "v2"
             }
           ],
-          "default": "default",
+          "default": "default"
         },
         {
           "type": "select",
