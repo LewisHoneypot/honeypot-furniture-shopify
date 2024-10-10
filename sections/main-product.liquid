@@ -151,6 +151,13 @@
                         >
                           {{ product.title | escape }}
                         </h1>
+
+                        {%- if block.settings.layout == "v2" -%}
+                          {%- if product.metafields.custom.colour_and_model -%}
+                            <span>{{ product.metafields.custom.colour_and_model }}</span>
+                          {%- endif -%}
+                        {%- endif -%}
+
                       </div>
                     </div>
 
@@ -2839,6 +2846,22 @@
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "v2",
+              "label": "v2"
+            }
+          ],
+          "default": "default",
+        },
         {
           "type": "select",
           "id": "font_weight",
