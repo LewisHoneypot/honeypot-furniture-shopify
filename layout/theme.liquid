@@ -44,14 +44,16 @@
                  url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
             font-weight: 100 900;
             font-style: normal;
+            font-display: swap;
           }
         /* Italic Variable Font */
         @font-face {
           font-family: 'Garamond';
           src: url('{{ 'EBGaramond-Italic-VariableFont_wght.woff2' | asset_url }}') format('woff2'),
-                url('{{ 'EBGaramond-Italic-VariableFont_wght.woff' | asset_url }}') format('woff');
+               url('{{ 'EBGaramond-Italic-VariableFont_wght.woff' | asset_url }}') format('woff');
           font-weight: 100 900; /* Range of weights for italic */
           font-style: italic; /* Italic style */
+          font-display: swap;
         }
         /* Regular Variable Font */
         @font-face {
@@ -60,6 +62,7 @@
                url('{{ 'EBGaramond-VariableFont_wght.woff' | asset_url }}') format('woff');
           font-weight: 100 900; /* Range of weights for normal */
           font-style: normal; /* Normal (non-italic) style */
+          font-display: swap;
         }
       </style>
     {% endif %}
