@@ -73,7 +73,7 @@
     {% endfor %}
   {% endif %}
 
-  <div class="page-width m-auto test">
+  <div class="page-width m-auto product-video">
     <div class="banner d-flex f-wrap pos-relative i-padding i-padding-md i-padding-lg gradient color-{{ section.settings.color_scheme }}{% if section.settings.mobile_color_scheme == 'custom' %} gradient-xs{% endif %} banner__media-hover"
       id="Video-{{ section.id }}" 
       style="--i-padding: {% if section.settings.cover_image != blank %}{{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}{% else %}56{% endif %}%;
