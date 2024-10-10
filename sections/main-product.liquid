@@ -6019,18 +6019,27 @@
     .userIcon {
       min-width: 26px;
     }
-    .innerDiv {
+    .outerDiv {
       border-bottom: solid 1px #f2f2f2;
       .review-wrapper {
+        border-radius: 15px;
+        padding-top: 40px;
+        box-shadow: 0 1.5rem 2rem rgba(var(--color-foreground), .08);
         .customerInfo {
           width: -webkit-fill-available;
         }
         .attributeNames,
         .attributeStars {
           float: left;
-          @media screen and (min-width: 768px) {
-            margin: 44px 0;
+          img {
+            height: 20px;
+            width: 100px;
           }
+        }
+      }
+      .attributeSectionWrapper {
+        @media screen and (min-width: 992px) {
+          text-align-last: start;
         }
       }
     }

@@ -68,7 +68,7 @@ function loadReviews() {
 
         let reviewHTML = `
           <div class="review-wrapper row mt-5">
-            <div class="reviewSection pb-sm-3 col-12 col-lg-7 order-1">
+            <div class="reviewSection pb-sm-3 pb-md-5 col-12 col-lg-7 order-1">
               <div class="reviewSectionHeader pb-sm-3 d-inline-flex">
                 <div class="userIcon pt-2">
                   <img src="//honeypot-furniture.myshopify.com/cdn/shop/files/user-72x72.webp" class="pb-1" height="24" width="24" loading="lazy">
@@ -87,7 +87,7 @@ function loadReviews() {
               if (file.mimeType === "video/mp4") {
                 reviewHTML += `
                   <div class="media-wrapper mt-3">
-                    <video controls height="360" width="640" poster="//example.com/path/to/placeholder-image.jpg" loading="lazy">
+                    <video controls height="360" width="640" loading="lazy">
                       <source src="${file.url}" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
@@ -118,7 +118,7 @@ function loadReviews() {
         if (review.attributeRatings && review.attributeRatings.length) {
           const attributeHTML = `
             <div class="row attributeSectionWrapper col-12 p-0">
-              <div class="col-4 p-0 attributeNames">
+              <div class="col-4 attributeNames">
                 ${review.attributeRatings.map(attribute => ` 
                   <span><strong>${attribute.attributeName === "Value for money" ? "Value" : attribute.attributeName}:</strong></span><br>
                 `).join('')}
