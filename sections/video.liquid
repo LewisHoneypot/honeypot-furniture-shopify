@@ -113,7 +113,7 @@
                 {%- else -%}
                   src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay }}{{ loop }}"
                 {%- endif -%}    
-                class="d-block pos-absolute pos-absolute-c-c w-100 h-100 b-none no-js-hidden {% if section.settings.video_url.type == 'youtube' %}js-youtube{%- else -%}js-video{%- endif -%}"
+                class="d-block pos-absolute pos-absolute-c-c w-100 h-100 b-none no-js-hidden {% if section.settings.video_url.type == 'youtube' %}js-youtube{%- else -%}js-video{%- endif -%} lazy-llazy-oad"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
                 title="{{ section.settings.video_description | default: shop.name | escape }}"
@@ -856,4 +856,40 @@
 {% comment %} Hide missing product videos {% endcomment %}
 <script>
   var productVideo = '{{ product.metafields.custom.video_file }}';
+</script>
+
+{% comment %} Lazyload youtube video {% endcomment %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const lazyLoadVideos = document.querySelectorAll('.lazy-load'); // Select all iframes with class lazy-load
+  
+    // Function to load iframe src when in view
+    const loadIframe = (iframe) => {
+      const src = iframe.getAttribute('data-src');
+      if (!src) return; // No data-src, return early
+      iframe.setAttribute('src', src); // Set the iframe's src to data-src
+      iframe.classList.remove('lazy-load'); // Remove lazy-load class after loading
+    };
+  
+    // Check if IntersectionObserver is supported by the browser
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loadIframe(entry.target); // Load iframe when it is in view
+            observer.unobserve(entry.target); // Stop observing after loading
+          }
+        });
+      });
+  
+      lazyLoadVideos.forEach(iframe => {
+        observer.observe(iframe); // Start observing each lazy-load iframe
+      });
+    } else {
+      // Fallback: Load all iframes immediately if IntersectionObserver is not supported
+      lazyLoadVideos.forEach(iframe => {
+        loadIframe(iframe);
+      });
+    }
+  });
 </script>
