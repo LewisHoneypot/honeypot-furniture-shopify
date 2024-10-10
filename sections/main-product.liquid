@@ -145,17 +145,20 @@
                           --padding-bottom: {{ block.settings.padding_bottom }}px;
                         "
                       >
-                        <h1
-                          class="{% if block.settings.heading_size == 'h1' or block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }}{%  else %}p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %} m-0"
-                          style="font-weight: {{ block.settings.font_weight }} !important;"
-                        >
-                          {{ product.title | escape }}
-                        </h1>
 
+                        {% comment %} Check Product title display type {% endcomment %}
                         {%- if block.settings.layout == "v2" -%}
-                          {%- if product.metafields.custom.colour_and_model -%}
+                          {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
+                            <h1>{{ product.metafields.custom.range_name }}</h1>                          
                             <span>{{ product.metafields.custom.colour_and_model }}</span>
                           {%- endif -%}
+                        {%- else -%}
+                          <h1
+                            class="{% if block.settings.heading_size == 'h1' or block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }}{%  else %}p-w__heading {{ block.settings.heading_size | prepend: 'heading-size-' }}{% endif %} m-0"
+                            style="font-weight: {{ block.settings.font_weight }} !important;"
+                          >
+                            {{ product.title | escape }}
+                          </h1>
                         {%- endif -%}
 
                       </div>
