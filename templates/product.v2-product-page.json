@@ -16,7 +16,7 @@
           "type": "title",
           "settings": {
             "layout": "v2",
-            "font_weight": "normal",
+            "font_weight": "bold",
             "padding_top": 0,
             "padding_bottom": 12,
             "heading_size": "small"
