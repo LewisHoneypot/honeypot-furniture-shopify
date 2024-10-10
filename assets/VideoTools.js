@@ -4,25 +4,11 @@ class VideoTemplate extends HTMLElement {
 
     this.video = this.querySelector("iframe");
     this.video_tag = this.querySelector("video");
-    this.previewImage = this.querySelector(".product-video img"); // Select the preview image
     this.isMouseenter = false;
-  }
-
-  loadPreviewImage() {
-    if (this.previewImage && !this.previewImage.getAttribute("src")) {
-      // If the preview image exists and hasn't been loaded yet
-      const dataSrc = this.previewImage.getAttribute("data-src");
-      if (dataSrc) {
-        this.previewImage.setAttribute("src", dataSrc); // Set the image src
-        this.previewImage.removeAttribute("data-src"); // Remove the data-src once loaded
-      }
-    }
   }
 
   loadVideo() {
     if (!this.video && !this.video_tag) return;
-
-    this.loadPreviewImage(); // Ensure the preview image is loaded
 
     if (this.video) {
       this.dispatchEvent(
