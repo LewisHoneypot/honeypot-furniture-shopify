@@ -136,14 +136,14 @@ function loadReviews() {
           `;
 
           reviewHTML += `</div>
-            <div class="rating-breakdown col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5">
+            <div class="rating-breakdown col-12 col-lg-5 order-2 pr-lg-0 pb-5 mt-5 mt-lg-0">
               <div class="buttonWrapper text-center pt-4 px-4 d-lg-none field__action contact__button pos-relative m-t m-b grid__item">
                 <button class="toggle-button button button--style-diagonal-swipe mi-w color-background-1" data-target="breakdown-${i}">
                   <span class="text">Rating Breakdown</span>
                 </button>
               </div>
               <div id="breakdown-${i}" class="additional-content d-none d-lg-block">
-                <div class="attribute-section col-12 order-2 pr-lg-0 pb-5 mt-5">
+                <div class="attribute-section col-12 order-2 pr-lg-0 mt-5 mt-lg-0">
                   ${attributeHTML}
                 </div>
               </div>
