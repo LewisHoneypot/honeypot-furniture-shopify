@@ -1,7 +1,6 @@
 class VideoTemplate extends HTMLElement {
   constructor() {
     super();
-
     this.video = this.querySelector("iframe");
     this.video_tag = this.querySelector("video");
     this.isMouseenter = false;
@@ -107,14 +106,20 @@ class VideoTemplate extends HTMLElement {
 
   connectedCallback() {
     this.init();
+    
+    // Add loading="lazy" to the <img> inside <video>
+    const imgElement = this.video_tag.querySelector("img");
+    if (imgElement) {
+      imgElement.setAttribute("loading", "lazy");
+    }
   }
 }
+
 customElements.define("video-template", VideoTemplate);
 
 class VideoTemplateOpener extends HTMLElement {
   constructor() {
     super();
-
     const button = this.querySelector("button");
 
     if (!button) return;
@@ -125,4 +130,5 @@ class VideoTemplateOpener extends HTMLElement {
     });
   }
 }
+
 customElements.define("video-template-opener", VideoTemplateOpener);
