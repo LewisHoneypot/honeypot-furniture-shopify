@@ -1,48 +1,56 @@
 /* Tooltip container */
 .trustpilotTooltip {
-    position: relative;
-    display: inline-block;
-  }
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.trustpilotTooltip .tooltip-content {
+  visibility: hidden;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  left: -44px;
+  top: 50px;
   
-  /* Tooltip text */
-  .trustpilotTooltip .tooltip-content {
-    visibility: hidden;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 6px;
-    left: -44px;
-    top: 50px;
-   
-    border: 1px solid rgba(151,151,151,.18);
-    box-shadow: 2px 2px 7px 0 rgba(0,0,0,.1);
-    min-width: 345px;
-    padding: 16px;
+  border: 1px solid rgba(151,151,151,.18);
+  box-shadow: 2px 2px 7px 0 rgba(0,0,0,.1);
+  min-width: 345px;
+  padding: 16px;
 
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.trustpilotTooltip:hover .tooltip-content {
+  visibility: hidden;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+@media screen and (min-width:750px) {
   .trustpilotTooltip:hover .tooltip-content {
-    visibility: hidden;
+    visibility: visible;
   }
+}
 
-  /* Show the tooltip text when you mouse over the tooltip container */
-  @media screen and (min-width:750px) {
-    .trustpilotTooltip:hover .tooltip-content {
-      visibility: visible;
-    }
+.score-bar {
+  background-color: #d6d6d6;
+  border-radius: 2px;
+  height: 4px;
+  margin: 0 12px 0 0;
+  width: 100%;
+  .score-bar-fill {
+    background-color: #00b67a;
+    height: 100%;
+    display: block;
   }
+}
 
-  .score-bar {
-    background-color: #d6d6d6;
-    border-radius: 2px;
-    height: 4px;
-    margin: 0 12px 0 0;
-    width: 100%;
-    .score-bar-fill {
-      background-color: #00b67a;
-      height: 100%;
-      display: block;
-    }
+@media screen and (min-width:991px) {
+  .additional-content {
+    float: right;
+    min-width: 300px;
+    margin-right: 15px;
   }
+}
