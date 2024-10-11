@@ -18008,7 +18008,7 @@ body.multitasking__show .newsletter-popup-opener {
   .header--middle-left,
   .header--middle-left.disable-icons__desktop:not(.disable-icons__mobile) {
     grid-template-areas: "heading navigation icons";
-    grid-template-columns: 2fr 8fr auto;
+    grid-template-columns: auto 8fr auto;
     column-gap: 2rem;
   }
 
