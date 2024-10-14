@@ -2076,7 +2076,10 @@
                           `);
 
                           if (amountOfReviews === 0) {
-                            trustPilotContainer.classList.replace("d-lg-block", "d-lg-none");
+                            var trustpilotProductMini = document.querySelector(".trustpilot-mini-widget");
+                            var trustpilotProductCollapsible = document.querySelector('[id*="trustpilot_product_reviews_collapsible"]');
+                            trustpilotProductMini.classList.add("d-none");
+                            trustpilotProductCollapsible.classList.add("d-none");
                           }
 
                           const toolTip = createElement("span", ["tooltip-content"]);
