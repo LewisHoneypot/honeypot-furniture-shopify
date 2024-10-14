@@ -107,10 +107,12 @@ class VideoTemplate extends HTMLElement {
   connectedCallback() {
     this.init();
     
-    // Add loading="lazy" to the <img> inside <video>
-    const imgElement = this.video_tag.querySelector("img");
-    if (imgElement) {
-      imgElement.setAttribute("loading", "lazy");
+    // Ensure video_tag exists before querying for the <img> inside it
+    if (this.video_tag) {
+      const imgElement = this.video_tag.querySelector("img");
+      if (imgElement) {
+        imgElement.setAttribute("loading", "lazy");
+      }
     }
   }
 }
