@@ -77,8 +77,8 @@
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
-            "heading": "More Sizes",
-            "font": "normal",
+            "heading": "View The Range",
+            "font": "Garamond",
             "content_type": "view_the_range",
             "content": "",
             "page": "",
