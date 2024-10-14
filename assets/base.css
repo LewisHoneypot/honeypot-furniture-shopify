@@ -982,7 +982,7 @@ li.active .link--style-dot .link-style:before,
 }
 
 .d-none {
-  display: none !important;
+  display: none;
 }
 
 .d-inline {
