@@ -1,46 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
-        "slide_dN3rVP": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Hp_Banner_-_Dark_mary.png",
-            "mobile_image": "shopify://shop_images/Untitled_design_-_2024-09-23T120041.769.png",
-            "content_max_width": 1200,
-            "heading_font": "font-heading",
-            "heading": "5% off the Mary",
-            "heading_size": "medium",
-            "heading_margin_bottom": 0,
-            "subheading": "Use Code: MARY5",
-            "subheading_size": "small",
-            "subheading_margin_bottom": 16,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 90,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Sale ends 6th Oct",
-            "primary_button_link": "shopify://collections/mary-sofas",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
@@ -93,6 +64,34 @@
             "button_transparent": "transparent",
             "button_spacing_between": 10,
             "buttons_direction": "vertical",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_dN3rVP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Jacob_Left_Hand_Facing_Sofa_Horizontal_Black_1_67d0adee-40e4-4c78-9961-741beae4c1c1.jpg",
+            "mobile_image": "shopify://shop_images/Jacob_Right_Hand_Facing_Sofa_Horizontal_Black_2_High_Res_1.jpg",
+            "content_max_width": 1200,
+            "heading_font": "font-heading",
+            "heading": "Just dropped: The Jacob",
+            "heading_size": "medium",
+            "heading_margin_bottom": 0,
+            "subheading": "Giving your home that WOW factor",
+            "subheading_size": "small",
+            "subheading_margin_bottom": 16,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 90,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Shop the range",
+            "primary_button_link": "shopify://collections/mary-sofas",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
             "padding_top_bottom": 0,
             "padding_left_right": 0
           }
@@ -172,9 +171,9 @@
         }
       },
       "block_order": [
-        "slide_dN3rVP",
         "slide_MVHYjL",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
+        "slide_dN3rVP",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "lookbook_m7Girj"
       ],
@@ -695,6 +694,8 @@
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-1"
       ],
       "settings": {
+        "use_hr": false,
+        "font": "normal",
         "heading": "",
         "text": "<p>Real Customers, Real Homes - Shop The Look</p>",
         "button_label": "Get More Inspiration",
