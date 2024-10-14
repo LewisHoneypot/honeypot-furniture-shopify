@@ -482,8 +482,8 @@
       ],
       "settings": {
         "heading": "Reviews",
-        "use_hr": false,
-        "font": "normal",
+        "use_hr": true,
+        "font": "Garamond",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
