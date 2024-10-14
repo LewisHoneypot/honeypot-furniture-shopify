@@ -15,6 +15,7 @@
         "title": {
           "type": "title",
           "settings": {
+            "layout": "v2",
             "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
@@ -81,7 +82,7 @@
             "content_type": "view_the_range",
             "content": "",
             "page": "",
-            "colors_background": "#fff",
+            "colors_background": "#ffffff",
             "colors_border": "#707070"
           }
         },
@@ -118,7 +119,7 @@
           "settings": {
             "heading": "Expected Delivery",
             "enable_expected_delivery": true,
-            "date_type": "accurate",
+            "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
             "background_colour": "#ffffff"
@@ -127,7 +128,7 @@
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#fff"
+            "colors_background": "#ffffff"
           }
         },
         "staingard_drawer_iWbVLW": {
@@ -273,6 +274,74 @@
         "padding_bottom_mobile": 40
       }
     },
+    "drawers_Ut99DD": {
+      "type": "drawers",
+      "blocks": {
+        "drawer_nfiTCK": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Dimensions",
+            "content_type": "dimensions",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_EkDrRn": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Additional Information",
+            "content_type": "additional_information",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_9K8JiB": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Delivery & Returns",
+            "content_type": "delivery_and_returns",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_r9twij": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Care & Cleaning",
+            "content_type": "care_and_cleaning",
+            "content": "",
+            "page": ""
+          }
+        },
+        "drawer_aNBQEa": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Description",
+            "content_type": "description",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "drawer_nfiTCK",
+        "drawer_EkDrRn",
+        "drawer_9K8JiB",
+        "drawer_r9twij",
+        "drawer_aNBQEa"
+      ],
+      "settings": {
+        "font": "Garamond",
+        "heading": "",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 75,
+        "padding_bottom": 30,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 0
+      }
+    },
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
       "type": "custom-tab",
       "blocks": {
@@ -331,6 +400,7 @@
         "dimensions_MmNA4J",
         "text_XHxTG4"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -631,6 +701,7 @@
   "order": [
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
+    "drawers_Ut99DD",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "video_QM4Cg7",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
