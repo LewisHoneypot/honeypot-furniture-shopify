@@ -88,7 +88,7 @@
           "settings": {
             "show_quantity_selector": false,
             "show_wishlist_product": false,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
