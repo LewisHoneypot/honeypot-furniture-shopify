@@ -270,7 +270,7 @@
         "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
         "image_picker_link3": "",
         "image_picker_alt3": "COUNTRY LIVING",
-        "background_color": "#48544C"
+        "background_color": "#48544c"
       }
     },
     "video_FxQj6U": {
@@ -421,6 +421,7 @@
         "column_CXnQL3",
         "column_eYGjdt"
       ],
+      "disabled": true,
       "settings": {
         "layout": "v2",
         "use_hr": true,
