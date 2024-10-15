@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "link_type": "line",
@@ -236,18 +236,18 @@
         "settings": {
         }
       },
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "497739090016974244": {
         "type": "shopify://apps/insider/blocks/app-embed/c7b01eeb-6b78-48a3-a1bb-28dbc584bd41",
         "disabled": false,
         "settings": {
           "insider_object": true,
           "insider_tag": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": true,
+        "settings": {
         }
       }
     },
@@ -304,7 +304,7 @@
           "button_background": "#ede9e2",
           "button_gradient": "",
           "secondary_button_label": "#ffffff",
-          "secondary_button_background": "#2D2D2D",
+          "secondary_button_background": "#2d2d2d",
           "secondary_button_gradient": "",
           "arrow": "#121212",
           "arrow_background": "#ffffff",
