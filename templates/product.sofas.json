@@ -305,7 +305,7 @@
         "mobile_color_scheme": "custom",
         "colors_text": "#424242",
         "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "gradient_background": "",
         "color_scheme": "",
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#000000",
