@@ -22,10 +22,6 @@
     {%- endif -%}
   {%- endfor -%}
 
-  <script>
-    console.log({{ image_heading_blocks_count }});
-  </script>
-
   {%- if image_heading_blocks_count == 3 -%}
     <div class="section__multicolumn m-spacing spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
       style="--padding-top: {{ section.settings.padding_top }}px;
