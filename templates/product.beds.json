@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,6 +15,7 @@
         "title": {
           "type": "title",
           "settings": {
+            "layout": "default",
             "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
@@ -58,7 +59,7 @@
           "settings": {
             "heading": "Expected Delivery",
             "enable_expected_delivery": true,
-            "date_type": "accurate",
+            "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
             "background_colour": "#ffffff"
@@ -95,7 +96,7 @@
         "snap_buttons_rnjz4z": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#fff"
+            "colors_background": "#ffffff"
           }
         },
         "staingard_drawer_iWbVLW": {
