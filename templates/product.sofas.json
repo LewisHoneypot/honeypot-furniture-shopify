@@ -582,24 +582,6 @@
         "padding_bottom_mobile": 50
       }
     },
-    "1679044770251ee1c2": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "background-1",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 68,
-        "padding_bottom": 70,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 50
-      }
-    },
     "newsletter_Lkdri8": {
       "type": "newsletter",
       "blocks": {
@@ -769,7 +751,6 @@
     "featured_collection_RD8KMd",
     "related-products",
     "recently-products",
-    "1679044770251ee1c2",
     "newsletter_Lkdri8",
     "multicolumn_UJ8zHX"
   ]
