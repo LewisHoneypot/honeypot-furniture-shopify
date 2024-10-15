@@ -62,10 +62,10 @@
     {% endif %}
 
     {% comment %} tempalte type {% endcomment %}
-    {% comment %} {%- assign template_log = template | json -%}
+    {%- assign template_log = template | json -%}
     <script>
       console.log({{ template_log }});
-    </script> {% endcomment %}
+    </script>
 
     {%- if template contains 'collection' or template == 'search' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
