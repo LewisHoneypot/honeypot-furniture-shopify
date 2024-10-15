@@ -30,15 +30,6 @@
             "padding_bottom": 5
           }
         },
-        "variant_picker_WnfGcU": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch": "Color",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "settings": {
@@ -60,18 +51,6 @@
             "colors_text": "#424242",
             "padding_top": 12,
             "padding_bottom": 12
-          }
-        },
-        "size_chart_kqc3gt": {
-          "type": "size_chart",
-          "disabled": true,
-          "settings": {
-            "size_chart_size": "small",
-            "size_chart_type": "custom_image",
-            "size_chart_image_type": "jpg",
-            "color_size_chart_scheme": "background-2",
-            "padding_top": 5,
-            "padding_bottom": 5
           }
         },
         "drawer_j3bNWd": {
@@ -109,7 +88,7 @@
           "settings": {
             "show_quantity_selector": false,
             "show_wishlist_product": false,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
@@ -128,8 +107,8 @@
             "wishlist_colors_background": "#000000",
             "wishlist_colors_text_hover": "#eb9c9c",
             "wishlist_colors_background_hover": "#eb9c9c",
-            "padding_top": 10,
-            "padding_bottom": 5
+            "padding_top": 0,
+            "padding_bottom": 0
           }
         },
         "expected_delivery_TKcTdt": {
@@ -170,10 +149,8 @@
       "block_order": [
         "title",
         "trustpilot_mini_TB9jLy",
-        "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
         "price",
-        "size_chart_kqc3gt",
         "drawer_j3bNWd",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
@@ -302,7 +279,8 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "dimensions",
-            "content": "",
+            "content1": "",
+            "content2": "",
             "page": ""
           }
         },
@@ -311,7 +289,8 @@
           "settings": {
             "heading": "Additional Information",
             "content_type": "additional_information",
-            "content": "",
+            "content1": "",
+            "content2": "",
             "page": ""
           }
         },
@@ -320,7 +299,8 @@
           "settings": {
             "heading": "Delivery & Returns",
             "content_type": "delivery_and_returns",
-            "content": "<h2><strong>Delivery</strong></h2><p><strong>Fast and Reliable</strong></p><p>Enjoy <strong>1-7 day delivery</strong> on all in-stock furniture. Our two-person delivery team will carefully assemble your sofa in any room of choice - all part of the service. </p><p><strong>Real-Time Tracking</strong></p><p>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.</p><h2><strong>Returns</strong></h2><p><strong>Hassle-Free Returns</strong></p><p>We offer a <strong>14-day cooling-off period</strong> for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong></p><p>Contact our friendly customer service team for any questions or concerns on: 01476 338771<br/><br/>Office Hours:<br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p><p>hello@honeypotfurniture.co.uk</p>",
+            "content1": "",
+            "content2": "",
             "page": ""
           }
         },
@@ -329,7 +309,8 @@
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "care_and_cleaning",
-            "content": "<p>{{ product.metafields.custom.care_information | metafield_tag }}</p>",
+            "content1": "",
+            "content2": "",
             "page": ""
           }
         },
@@ -338,7 +319,8 @@
           "settings": {
             "heading": "Description",
             "content_type": "description",
-            "content": "",
+            "content1": "",
+            "content2": "",
             "page": ""
           }
         }
