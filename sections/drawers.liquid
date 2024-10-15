@@ -276,7 +276,8 @@
 
                 {%- elsif block.settings.content_type == 'delivery_and_returns' -%}
                   {{ block.settings.content1 }}
-                  {{ block.settings.page.content2 }}
+                  {{ block.settings.content2 }}
+                  {{ block.settings.page.content }}
 
                 {%- elsif block.settings.content_type == 'care_and_cleaning' -%}
                   {% if product.metafields.Material.PrimaryMaterial == 'Faux Leather' %}
