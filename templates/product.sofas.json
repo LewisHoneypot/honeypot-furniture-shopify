@@ -118,7 +118,7 @@
             "enable_expected_delivery": true,
             "date_type": "vague",
             "padding_top": 0,
-            "padding_bottom": 5,
+            "padding_bottom": 0,
             "background_colour": "#ffffff"
           }
         },
