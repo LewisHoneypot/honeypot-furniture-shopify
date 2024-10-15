@@ -253,7 +253,8 @@
                             <li>{{ product.metafields.Dimensions.Length2 | replace: '.0', '' }}cm</li>
                           {%- endif -%}
                         </ol>
-                        {{ block.settings.content }}
+                        {{ block.settings.content1 }}
+                        {{ block.settings.content2 }}
                         {{ block.settings.page.content }}
                       </div>
                     {%- endif -%}
@@ -267,14 +268,15 @@
                           <span>{{ product.metafields.custom.features.value }}</span>
                         </p>
                       {%- endif -%}
-                      {{ block.settings.content }}
+                      {{ block.settings.content1 }}
+                      {{ block.settings.content2 }}
                     </div>
                   </div>
-                  {{ block.settings.content }}
                   {{ block.settings.page.content }}
 
                 {%- elsif block.settings.content_type == 'delivery_and_returns' -%}
-                  {{ block.settings.content }}
+                  {{ block.settings.content1 }}
+                  {{ block.settings.content2 }}
                   {{ block.settings.page.content }}
 
                 {%- elsif block.settings.content_type == 'care_and_cleaning' -%}
@@ -283,13 +285,13 @@
                   {%- elsif product.metafields.Material.PrimaryMaterial == 'Fabric' -%}
                     {{ block.settings.content2 }}
                   {%- endif -%}
-                  {{ block.settings.content }}
                   {{ block.settings.page.content }}
 
                 {%- elsif block.settings.content_type == 'description' -%}
                   {{ product.description }}
                 {%- else -%}
-                  {{ block.settings.content }}
+                  {{ block.settings.content1 }}
+                  {{ block.settings.content2 }}
                   {{ block.settings.page.content }}
                 {%- endif -%}
               </div>
