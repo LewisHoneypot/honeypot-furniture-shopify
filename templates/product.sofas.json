@@ -179,98 +179,6 @@
         "padding_bottom_mobile": 30
       }
     },
-    "d429c49f-e09d-426d-a360-6ab92fc46930": {
-      "type": "icon-with-text",
-      "blocks": {
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0": {
-          "type": "item",
-          "settings": {
-            "icon": "return-2",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Free return within 15 days</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
-          "type": "item",
-          "settings": {
-            "icon": "truck-2",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Free shipping on orders over 49$</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
-          "type": "item",
-          "settings": {
-            "icon": "vegan",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>No harmful chemicals</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        },
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
-          "type": "item",
-          "settings": {
-            "icon": "liquid",
-            "enable_custom_size_icon": false,
-            "custom_size_icon": 30,
-            "custom_icon_background": "",
-            "heading": "",
-            "text": "<p>Fresh and clean product</p>",
-            "link_label": "",
-            "link": "shopify://collections"
-          }
-        }
-      },
-      "block_order": [
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-0",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2",
-        "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "type_style": "classic",
-        "section_width": "customized-width",
-        "customize_width": 1300,
-        "heading": "",
-        "heading_size": "default",
-        "text": "",
-        "text_margin_top": 16,
-        "text_alignment": "center",
-        "margin_bottom": 60,
-        "blocks_heading_font": "font-body",
-        "blocks_heading_size": "text-body",
-        "blocks_text_size": "x-large",
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#2d2d2d",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "vertical",
-        "enable_background_icon": false,
-        "type_vertical": "scroll",
-        "arrows_type": "all",
-        "text_animation": "none",
-        "padding_top": 100,
-        "padding_bottom": 69,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "drawers_Ut99DD": {
       "type": "drawers",
       "blocks": {
@@ -342,75 +250,6 @@
         "padding_bottom": 30,
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 0
-      }
-    },
-    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
-      "type": "custom-tab",
-      "blocks": {
-        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1": {
-          "type": "text",
-          "settings": {
-            "heading": "Delivery",
-            "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
-            "page": "description",
-            "padding_top": 30,
-            "padding_bottom": 68,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 0
-          }
-        },
-        "features_cKP6N9": {
-          "type": "features",
-          "settings": {
-            "heading": "Features",
-            "content_type": "features",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        },
-        "dimensions_MmNA4J": {
-          "type": "dimensions",
-          "settings": {
-            "heading": "Dimensions",
-            "content_type": "dimensions",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        },
-        "text_XHxTG4": {
-          "type": "text",
-          "settings": {
-            "heading": "Description",
-            "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "page": "",
-            "padding_top": 61,
-            "padding_bottom": 61,
-            "padding_top_mobile": 8,
-            "padding_bottom_mobile": 8
-          }
-        }
-      },
-      "block_order": [
-        "template--16903854063855__ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95-text-1",
-        "features_cKP6N9",
-        "dimensions_MmNA4J",
-        "text_XHxTG4"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "background-1",
-        "padding_top": 19,
-        "padding_bottom": 50,
-        "padding_top_mobile": 5,
-        "padding_bottom_mobile": 20
       }
     },
     "video_QM4Cg7": {
@@ -996,9 +835,7 @@
   },
   "order": [
     "main",
-    "d429c49f-e09d-426d-a360-6ab92fc46930",
     "drawers_Ut99DD",
-    "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "video_QM4Cg7",
     "video_FxQj6U",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
