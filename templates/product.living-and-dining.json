@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,6 +15,7 @@
         "title": {
           "type": "title",
           "settings": {
+            "layout": "default",
             "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
@@ -64,17 +65,6 @@
             "padding_bottom": 5
           }
         },
-        "expected_delivery_8DGkii": {
-          "type": "expected_delivery",
-          "settings": {
-            "heading": "Expected Delivery",
-            "enable_expected_delivery": true,
-            "date_type": "accurate",
-            "padding_top": 0,
-            "padding_bottom": 5,
-            "background_colour": "#ffffff"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -103,10 +93,21 @@
             "padding_bottom": 5
           }
         },
+        "expected_delivery_8DGkii": {
+          "type": "expected_delivery",
+          "settings": {
+            "heading": "Expected Delivery",
+            "enable_expected_delivery": true,
+            "date_type": "vague",
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ffffff"
+          }
+        },
         "snap_buttons_wYQaPr": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#fff"
+            "colors_background": "#ffffff"
           }
         },
         "drawer_j3bNWd": {
@@ -117,7 +118,7 @@
             "content_type": "view_the_range",
             "content": "",
             "page": "",
-            "colors_background": "#fff",
+            "colors_background": "#ffffff",
             "colors_border": "#707070"
           }
         },
@@ -144,8 +145,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "expected_delivery_8DGkii",
         "buy_buttons",
+        "expected_delivery_8DGkii",
         "snap_buttons_wYQaPr",
         "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
