@@ -65,17 +65,6 @@
             "padding_bottom": 5
           }
         },
-        "expected_delivery_EBee6K": {
-          "type": "expected_delivery",
-          "settings": {
-            "heading": "Expected Delivery",
-            "enable_expected_delivery": true,
-            "date_type": "vague",
-            "padding_top": 0,
-            "padding_bottom": 5,
-            "background_colour": "#ede9e2"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -102,6 +91,17 @@
             "wishlist_colors_background_hover": "#eb9c9c",
             "padding_top": 10,
             "padding_bottom": 5
+          }
+        },
+        "expected_delivery_EBee6K": {
+          "type": "expected_delivery",
+          "settings": {
+            "heading": "Expected Delivery",
+            "enable_expected_delivery": true,
+            "date_type": "vague",
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ede9e2"
           }
         },
         "drawer_j3bNWd": {
@@ -140,8 +140,8 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
-        "expected_delivery_EBee6K",
         "buy_buttons",
+        "expected_delivery_EBee6K",
         "drawer_j3bNWd",
         "staingard_drawer_iWbVLW"
       ],
