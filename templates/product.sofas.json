@@ -252,6 +252,27 @@
         "padding_bottom_mobile": 0
       }
     },
+    "as_seen_in_Pnd8YJ": {
+      "type": "as-seen-in",
+      "settings": {
+        "heading": "As Seen In",
+        "font": "Garamond",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 15,
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link1": "",
+        "image_picker_alt1": "HouseBeautiful",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "image_picker_link2": "",
+        "image_picker_alt2": "interior designer",
+        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "image_picker_link3": "",
+        "image_picker_alt3": "COUNTRY LIVING",
+        "background_color": "#48544C"
+      }
+    },
     "video_FxQj6U": {
       "type": "video",
       "blocks": {
@@ -639,111 +660,12 @@
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 12
       }
-    },
-    "multicolumn_UJ8zHX": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_8kHAxi": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "small",
-            "text": "",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "column_WxDV6K": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "small",
-            "text": "",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "column_LXxiRW": {
-          "type": "column",
-          "settings": {
-            "block_content_max_w": "full",
-            "custom_content_max_w": 250,
-            "set_border": false,
-            "content_position": "center",
-            "subheading": "",
-            "subheading_size": "medium",
-            "heading": "Column",
-            "heading_size": "small",
-            "text": "",
-            "text_size": "medium",
-            "button_type": "standard",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_8kHAxi",
-        "column_WxDV6K",
-        "column_LXxiRW"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "v2",
-        "use_hr": true,
-        "font": "Garamond",
-        "content_inside_image": false,
-        "heading": "Why We Love This Range",
-        "link_label": "Link label",
-        "link": "",
-        "image_ratio": "adapt",
-        "text_alignment": "left",
-        "button_transparent": "transparent",
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "carousel_gap": 10,
-        "carousel_gap_tablet": 10,
-        "carousel_gap_mobile": 10,
-        "carousel_number": 3,
-        "carousel_number_tablet": 1.2,
-        "carousel_number_mobile": "1",
-        "arrows_type": "all",
-        "carousel_infinite_scroll": false,
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
-        "image_animation": "none",
-        "text_animation": "none",
-        "margin_top": 40,
-        "margin_bottom": 40,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 45,
-        "padding_bottom_mobile": 20
-      }
     }
   },
   "order": [
     "main",
     "drawers_Ut99DD",
+    "as_seen_in_Pnd8YJ",
     "video_FxQj6U",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "multicolumn_FJHgEr",
@@ -751,7 +673,6 @@
     "featured_collection_RD8KMd",
     "related-products",
     "recently-products",
-    "newsletter_Lkdri8",
-    "multicolumn_UJ8zHX"
+    "newsletter_Lkdri8"
   ]
 }
