@@ -30,7 +30,7 @@
             "image_overlay_opacity": 90,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Shop the range",
-            "primary_button_link": "shopify://collections/mary-sofas",
+            "primary_button_link": "https://honeypotfurniture.co.uk/search?q=jacob&options%5Bprefix%5D=last",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
