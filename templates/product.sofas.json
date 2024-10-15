@@ -35,9 +35,9 @@
           "settings": {
             "available_colours": "Available Colours",
             "font_size": 13,
-            "font": "normal",
+            "font": "Garamond",
             "font_weight": "normal",
-            "font_style": "normal",
+            "font_style": "italic",
             "padding_top": 0,
             "padding_bottom": 10
           }
