@@ -260,7 +260,7 @@
     <script src="{{ 'insider-sw-sdk.js' | asset_url }}" defer="defer"></script>
 
     {%- if template contains 'product' -%}
-      <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script>
+      {% comment %} <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script> {% endcomment %}
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
