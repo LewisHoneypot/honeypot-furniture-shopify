@@ -26265,7 +26265,7 @@ body.multitasking__show .newsletter-popup-opener {
 .custom-col {
   flex: 1 1 100%; /* Full width by default */
   display: flex;
-  justify-content: center; /* Center content by default */
+  justify-content: left; /* Center content by default */
   align-items: center;
   text-align: center;
   padding-top: 15px;
@@ -26305,7 +26305,7 @@ body.multitasking__show .newsletter-popup-opener {
 @media (min-width: 992px) {
   .custom-col {
     flex: 1 1 50%; /* Equal width columns */
-    justify-content: center; /* Center content */
+    justify-content: left; /* Center content by default */
   }
 }
 
@@ -26313,7 +26313,7 @@ body.multitasking__show .newsletter-popup-opener {
 @media (min-width: 1200px) {
   .custom-first-col {
     flex: 0 0 auto; /* Width based on content */
-    justify-content: center; /* Center content within the column */
+    justify-content: left; /* Center content by default */
   }
   
   .custom-second-col {
