@@ -26326,3 +26326,14 @@ body.multitasking__show .newsletter-popup-opener {
     justify-content: flex-start; /* Align items to the left */
   }
 }
+
+
+/* Free Delivery Popup */
+.ins-preview-wrapper-25 .ins-element-close-button {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.ins-preview-wrapper .ins-element-close-button[close-button-with-icons] .ins-element-content {
+  width: 40px !important;
+}
