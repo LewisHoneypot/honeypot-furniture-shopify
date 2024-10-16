@@ -852,7 +852,7 @@
                 {% comment %} USP Drawer 1 {% endcomment %}
               {%- when 'usp_drawer_1' -%}
                 <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-                  <div
+                  {% comment %} <div
                     class="custom-col custom-first-col"
                     {{ block.shopify_attributes }}
                   >
@@ -870,7 +870,7 @@
                         </span>
                       </button>
                     </side-drawer-opener>
-                  </div>
+                  </div> {% endcomment %}
 
                   {% comment %} USP Drawer 2 {% endcomment %}
               {%- when 'usp_drawer_2' -%}
