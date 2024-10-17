@@ -48,6 +48,27 @@
       "
     >
       <div class="card__inner pos-relative o-h w-100{% if card_style_popup == 'advanced-default' %} rounded-ovh{% endif %}">
+
+        {% if section.settings.christmas_delivery_eta_toggle == true %}
+          {% if section.settings.christmas_image != blank %}
+            {% assign current_variant = card_product.selected_or_first_available_variant %}
+            {% if current_variant.available and current_variant.inventory_quantity > 0 %}
+              <div 
+                style="
+                  position: absolute;
+                  z-index: 5;
+                  max-height: 75px;
+                  max-width: 75px;
+                  top: 0;
+                  right: 0;
+                "
+              >
+                {{ section.settings.christmas_image | image_url: height: 75 | image_tag: loading: 'lazy' }}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
         <div class="card__media o-h">
           <{% if product_cards_style == 'standard' or product_cards_style == 'standard-plus' %}div{% else %}a href="{{ card_product.url }}"{% endif %}
             class="card-media media media--transparent media--{{ media_aspect_ratio }} pos-relative o-h d-block"
@@ -1370,6 +1391,20 @@
   <div class="product-card-wrapper card-wrapper pos-relative h-100">
     <div class="card d-flex f-column h-100">
       <div class="card__inner pos-relative o-h w-100 gradient gradient-global">
+
+        <div 
+          style="
+            position: absolute;
+            background-color: red;
+            z-index: 5;
+            height: 75px;
+            width: 75px;
+            top: 0;
+            right: 0;
+          "
+        >
+        </div>
+
         <div class="card__media o-h">
           <div class="media media--transparent pos-relative o-h d-block" style="padding-bottom: 100%;">
             {%- liquid
