@@ -96,7 +96,7 @@
         "expected_delivery_8DGkii": {
           "type": "expected_delivery",
           "settings": {
-            "heading": "Expected Delivery",
+            "heading": "Delivery From",
             "enable_expected_delivery": true,
             "date_type": "vague",
             "padding_top": 0,
