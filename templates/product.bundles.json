@@ -96,7 +96,7 @@
         "expected_delivery_EBee6K": {
           "type": "expected_delivery",
           "settings": {
-            "heading": "Expected Delivery",
+            "heading": "Delivery From",
             "enable_expected_delivery": true,
             "date_type": "vague",
             "padding_top": 0,
