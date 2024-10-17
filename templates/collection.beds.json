@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -21,7 +21,7 @@
         "9d466322-a450-453a-adc0-7fe3b697bda4": {
           "type": "text",
           "settings": {
-            "text": "<p>Sale up to 60% off on selected items*<\/p>"
+            "text": "<p>Sale up to 60% off on selected items*</p>"
           }
         }
       },
@@ -48,7 +48,7 @@
           "disabled": true,
           "settings": {
             "banner_position": 3,
-            "image": "shopify:\/\/shop_images\/1_84d249e5-55c0-4d12-bbac-39459a348234.jpg",
+            "image": "shopify://shop_images/1_84d249e5-55c0-4d12-bbac-39459a348234.jpg",
             "image_ratio": "adapt",
             "subtitle_image": "",
             "subheading_font": "font-body",
@@ -57,7 +57,7 @@
             "heading_size": "small",
             "show_view_all": "button",
             "text_view_all": "SHOP NOW",
-            "link": "shopify:\/\/collections\/bundles-1",
+            "link": "shopify://collections/bundles-1",
             "content_inside_image": true,
             "text_alignment": "center",
             "image_color_scheme": "background-1",
@@ -70,7 +70,7 @@
           "disabled": true,
           "settings": {
             "banner_position": 6,
-            "image": "shopify:\/\/shop_images\/2_1fb17b71-d746-436e-b083-660f2e076db4.jpg",
+            "image": "shopify://shop_images/2_1fb17b71-d746-436e-b083-660f2e076db4.jpg",
             "image_ratio": "adapt",
             "subtitle_image": "",
             "subheading_font": "font-body",
@@ -79,7 +79,7 @@
             "heading_size": "x-small",
             "show_view_all": "button",
             "text_view_all": "SHOP NOW",
-            "link": "shopify:\/\/collections\/outlet",
+            "link": "shopify://collections/outlet",
             "content_inside_image": true,
             "text_alignment": "center",
             "image_color_scheme": "background-1",
@@ -125,7 +125,11 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "collection_dimensions_toggle": false,
+        "collection_delivery_eta_heading": "Delivery From",
+        "collection_delivery_eta_toggle": true,
+        "date_type": "vague"
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
@@ -139,7 +143,7 @@
             "button_transparent": "default",
             "button_type": "standard",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/new-arrivals",
+            "link": "shopify://collections/new-arrivals",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#2d2d2d",
             "desktop_content_position": "top-left"
@@ -153,7 +157,7 @@
             "button_transparent": "default",
             "button_type": "standard",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/new-arrivals",
+            "link": "shopify://collections/new-arrivals",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#2d2d2d",
             "desktop_content_position": "top-left"
@@ -220,6 +224,7 @@
       "settings": {
         "type_style": "classic",
         "heading": "Collections",
+        "font": "default",
         "heading_size": "medium",
         "heading_margin_bottom": 30,
         "heading_margin_bottom_mobile": 0,
