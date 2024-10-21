@@ -16,11 +16,6 @@
     endcapture
   -%}
 
-  {% comment %} {%- assign primary_material = product.metafields.Material.PrimaryMaterial | json -%}
-  <script>
-    console.log({{primary_material}});
-  </script> {% endcomment %}
-
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {%- if first_threed_model -%}
     <link
