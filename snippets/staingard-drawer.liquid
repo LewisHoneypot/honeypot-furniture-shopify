@@ -77,7 +77,15 @@
                 >
               {%- else -%}
                 <img
-                  src="{{ block.settings.main_image | image_url }}"
+                  srcset="{% if block.settings.main_image %}
+                    {{ block.settings.main_image | image_url: width: 360 }} 360w,
+                    {{ block.settings.main_image | image_url: width: 550 }} 550w,
+                    {{ block.settings.main_image | image_url: width: 750 }} 750w,
+                    {{ block.settings.main_image | image_url: width: 1000 }} 1000w,
+                    {{ block.settings.main_image | image_url: width: 1200 }} 1200w
+                  {% endif %}"
+                  sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+                  src="{{ block.settings.main_image | image_url: width: 750 }}"
                   {% if block.settings.main_image.alt != blank %}
                     alt="{{ block.settings.main_image.alt | escape }}"
                   {% else %}
@@ -87,7 +95,7 @@
                   width="222"
                   loading="lazy"
                   style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                >
+                >                
               {%- endif -%}
 
               <p>{{ block.settings.text1 }}</p>
