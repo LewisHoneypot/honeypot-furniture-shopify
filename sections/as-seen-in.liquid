@@ -13,33 +13,16 @@
 
     <div
       class="col-12 d-md-none center
-      {% if section.settings.font == 'Anaktoria' %}
-        Anaktoria
-      {% elsif section.settings.font == 'Garamond' %}
-        Garamond
-      {% endif %}"
-      style="
-        padding-top:15px;
-        padding-bottom:15px;
-      "
+      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% endif %}"
+      style="padding-top:15px; padding-bottom:15px;"
     >
       As Seen In:
     </div>
 
     <div
       class="d-none d-md-block col-md-3 center 
-      {% if section.settings.font == 'Anaktoria' %}
-        Anaktoria
-      {% elsif section.settings.font == 'Garamond' %}
-        Garamond
-      {% endif %}"
-      style="
-        padding-top:15px;
-        padding-bottom:15px;
-        background-color: {{ section.settings.background_color }};
-        color: #fff;
-        font-size: 26px;
-      "
+      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% endif %}"
+      style="padding-top:15px; padding-bottom:15px; background-color: {{ section.settings.background_color }}; color: #fff; font-size: 26px;"
     >
       As Seen In:
     </div>
@@ -47,19 +30,23 @@
     {%- if section.settings.logo1 != blank -%}
       <div
         class="col-4 col-md-3"
-        style="
-          padding-top:15px;
-          padding-bottom:15px;
-          background-color: {{ section.settings.background_color }};
-          align-content: space-evenly;
-        "
+        style="padding-top:15px; padding-bottom:15px; background-color: {{ section.settings.background_color }}; align-content: space-evenly;"
       >
         {%- if section.settings.image_picker_link1 != blank -%}
           <a href="{{ section.settings.image_picker_link1 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo1 | image_url }}"
+          srcset="{% if section.settings.logo1 != blank %}
+              {{ section.settings.logo1 | image_url: width: 360 }} 360w,
+              {{ section.settings.logo1 | image_url: width: 550 }} 550w,
+              {{ section.settings.logo1 | image_url: width: 750 }} 750w,
+              {{ section.settings.logo1 | image_url: width: 1000 }} 1000w,
+              {{ section.settings.logo1 | image_url: width: 1200 }} 1200w
+            {% endif %}"
+          sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+          src="{{ section.settings.logo1 | image_url: width: 200 }}"
           alt="{{ section.settings.image_picker_alt1 }}"
+          loading="lazy"
           height="50"
           width="200"
           style="margin-right: 15px;"
@@ -69,22 +56,27 @@
         {%- endif -%}
       </div>
     {%- endif -%}
+
     {%- if section.settings.logo2 != blank -%}
       <div
         class="col-4 col-md-3"
-        style="
-          padding-top:15px;
-          padding-bottom:15px;
-          background-color: {{ section.settings.background_color }};
-          align-content: space-evenly;
-        "
+        style="padding-top:15px; padding-bottom:15px; background-color: {{ section.settings.background_color }}; align-content: space-evenly;"
       >
         {%- if section.settings.image_picker_link2 != blank -%}
           <a href="{{ section.settings.image_picker_link2 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo2 | image_url }}"
+          srcset="{% if section.settings.logo2 != blank %}
+              {{ section.settings.logo2 | image_url: width: 360 }} 360w,
+              {{ section.settings.logo2 | image_url: width: 550 }} 550w,
+              {{ section.settings.logo2 | image_url: width: 750 }} 750w,
+              {{ section.settings.logo2 | image_url: width: 1000 }} 1000w,
+              {{ section.settings.logo2 | image_url: width: 1200 }} 1200w
+            {% endif %}"
+          sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+          src="{{ section.settings.logo2 | image_url: width: 200 }}"
           alt="{{ section.settings.image_picker_alt2 }}"
+          loading="lazy"
           height="50"
           width="200"
           style="margin-right: 15px;"
@@ -94,22 +86,27 @@
         {%- endif -%}
       </div>
     {%- endif -%}
+
     {%- if section.settings.logo3 != blank -%}
       <div
         class="col-4 col-md-3"
-        style="
-          padding-top:15px;
-          padding-bottom:15px;
-          background-color: {{ section.settings.background_color }};
-          align-content: space-evenly;
-        "
+        style="padding-top:15px; padding-bottom:15px; background-color: {{ section.settings.background_color }}; align-content: space-evenly;"
       >
         {%- if section.settings.image_picker_link3 != blank -%}
           <a href="{{ section.settings.image_picker_link3 }}">
         {%- endif -%}
         <img
-          src="{{ section.settings.logo3 | image_url }}"
+          srcset="{% if section.settings.logo3 != blank %}
+              {{ section.settings.logo3 | image_url: width: 360 }} 360w,
+              {{ section.settings.logo3 | image_url: width: 550 }} 550w,
+              {{ section.settings.logo3 | image_url: width: 750 }} 750w,
+              {{ section.settings.logo3 | image_url: width: 1000 }} 1000w,
+              {{ section.settings.logo3 | image_url: width: 1200 }} 1200w
+            {% endif %}"
+          sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+          src="{{ section.settings.logo3 | image_url: width: 200 }}"
           alt="{{ section.settings.image_picker_alt3 }}"
+          loading="lazy"
           height="50"
           width="200"
           style="margin-right: 15px;"

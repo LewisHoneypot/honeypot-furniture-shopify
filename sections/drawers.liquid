@@ -218,10 +218,31 @@
                       {%- if product.metafields.Dimensions.Length2 -%}
                         {%- assign dimensions_data = true -%}
                       {%- endif -%}
-                      
+
                       <div class="col-12 center">
-                        {{ product.metafields.custom.dimension_image_file | image_url: width: 1000 | image_tag: loading: "lazy" }}
+                        {% assign image_url = product.metafields.custom.dimension_image_file | image_url %}
+                      
+                        <img class="global-media-settings f-a-none"
+                          srcset="{% if image_url %}
+                            {{ image_url | image_url: width: 360 }} 360w,
+                            {{ image_url | image_url: width: 550 }} 550w,
+                            {{ image_url | image_url: width: 750 }} 750w,
+                            {{ image_url | image_url: width: 1000 }} 1000w,
+                            {{ image_url | image_url: width: 1200 }} 1200w,
+                            {{ image_url | image_url: width: 1500 }} 1500w,
+                            {{ image_url | image_url: width: 2000 }} 2000w,
+                            {{ image_url | image_url: width: 2500 }} 2500w,
+                            {{ image_url | image_url: width: 3000 }} 3000w 
+                          {% endif %}"
+                          sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+                          src="{{ image_url | image_url: width: 360 }}"
+                          alt="{{ block.settings.heading | escape }}"
+                          loading="lazy"
+                          width="360"
+                          height="148"
+                          data-media-id="{{ product.metafields.custom.dimension_image_file.id }}">
                       </div>
+
                       <div class="col-12" style="align-self: center;">
                         <ol
                           style="
