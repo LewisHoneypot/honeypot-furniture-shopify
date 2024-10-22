@@ -118,6 +118,7 @@
                     {%- assign image_alt = block.settings.image.alt | default: shop.name | escape -%}
                     {%- if forloop.index == 1 -%}
                       {{ block.settings.image | image_url: width: block.settings.image.width | image_tag:
+                          loading: 'lazy',
                           widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
                           sizes: '100vw',
                           alt: image_alt,
