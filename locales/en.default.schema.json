@@ -631,13 +631,21 @@
           "label": "Enable preloading screen"
         }
       }
-    }
-  },
-  "snap-finance": {
-    "name": "Snap Finance",
-    "settings": {
-      "checkbox": {
-        "label": "Use snap on Collections"
+    },
+    "snap-finance": {
+      "name": "Snap Finance",
+      "settings": {
+        "checkbox": {
+          "label": "Use snap on Collections"
+        },
+        "header": {
+          "content": "Snap"
+        },
+        "text": {
+          "label": "APR",
+          "label_2": "Years",
+          "label_3": "Deposit (£)"
+        }
       }
     }
   },
