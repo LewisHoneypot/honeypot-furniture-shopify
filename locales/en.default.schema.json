@@ -3088,6 +3088,14 @@
       "presets": {
         "name": "Before you leave"
       }
+    },
+    "snap-finance": {
+      "name": "Snap Finance",
+      "settings": {
+        "checkbox": {
+          "label": "Use snap on Collections"
+        }
+      }
     }
   }
 }
