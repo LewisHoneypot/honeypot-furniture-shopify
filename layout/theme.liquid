@@ -178,8 +178,9 @@
     {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer="defer"></script> {% endcomment %}
 
     <script src="{{ 'GlobalBasics.js' | asset_url }}" defer="defer"></script>
-
-    <script src="{{ 'Common.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'product' or template contains 'collection' or template == 'index' -%}
+      <script src="{{ 'Common.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     <script src="{{ 'AnimateElement.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'AnnouncementBar.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'AZBrands.js' | asset_url }}" defer="defer"></script> {% endcomment %}
@@ -222,35 +223,53 @@
     {%- unless template contains 'collection' -%}
       <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
-    <script src="{{ 'SliderComponentProduct.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'CategorySlide.js' | asset_url }}" defer="defer"></script>
+    {%- if template contains 'product' -%}
+      <script src="{{ 'SliderComponentProduct.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {% comment %} <script src="{{ 'CategorySlide.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'AnchorTarget.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'SlideshowComponent.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'collection' -%}
+      <script src="{{ 'SlideshowComponent.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     <script src="{{ 'StickyHeader.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'ThemeTab.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'collection' -%}
+      <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'ThemeTab.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     <script src="{{ 'VariantTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'VideoTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'ProductCustomerViewing.js' | asset_url }}" defer="defer"></script>
     {%- if template contains 'article' -%}
       <script src="{{ 'WriteComment.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="{{ 'Parallax.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'CollapseCollection.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'Parallax.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {%- unless template contains 'collection' -%}
+      <script src="{{ 'CollapseCollection.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     <script src="{{ 'SplittingAnimate.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'Gallery.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'collection' -%}
+      <script src="{{ 'Gallery.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     {%- if template == 'index' or template contains 'product' -%}
       <script src="{{ 'NewsletterForm.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'ButtonRipple.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'BundleTools.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'ScrollContainerCenter.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'ScrollContainerCenter.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'cartTools.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'shippingCalculator.js' | asset_url }}" defer="defer"></script>
+    {%- unless template contains 'index'
+      or template contains 'collection'
+      or template contains 'blog'
+      or template contains 'article'
+      or template == 'page'
+      or template == 'product'
+    -%}
+      <script src="{{ 'shippingCalculator.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
     {% comment %} <script src="{{ 'wishlistCard.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {% comment %} <script src="{{ 'wishlistDrawer.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    <script src="{{ 'cursorFixed.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'cursorBlur.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'cursorFixed.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {% comment %} <script src="{{ 'cursorBlur.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'pageLoadScrollFix.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'trustpilotServiceReviewStars.js' | asset_url }}" defer="defer"></script>
 
