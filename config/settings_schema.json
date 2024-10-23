@@ -2541,12 +2541,12 @@
     ]
   },
   {
-    "name": "Snap Finance",
+    "name": "t:settings_schema.snap-finance.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "enable_snap_collections",
-        "label": "Use snap on Collections",
+        "label": "t:settings_schema.snap-finance.settings.checkbox.label",
         "default": false
       },
       {
