@@ -2551,24 +2551,24 @@
       },
       {
         "type": "header",
-        "content": "Snap"
+        "content": "t:settings_schema.snap-finance.settings.header.content"
       },
       {
         "type": "text",
         "id": "snap_apr",
-        "label": "APR",
+        "label": "t:settings_schema.snap-finance.settings.text.label",
         "default": "29.9"
       },
       {
         "type": "text",
         "id": "snap_years",
-        "label": "Years",
+        "label": "t:settings_schema.snap-finance.settings.text.label_2",
         "default": "4"
       },
       {
         "type": "text",
         "id": "snap_deposit",
-        "label": "Deposit (£)",
+        "label": "t:settings_schema.snap-finance.settings.text.label_3",
         "default": "1"
       }
     ]
