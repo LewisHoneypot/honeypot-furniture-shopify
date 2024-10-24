@@ -76,6 +76,10 @@
           "label__3": "Typography for Subheading",
           "options__1": "Font Heading",
           "options__2": "Font Body"
+        },
+        "font_name": {
+          "label": "Anaktoria",
+          "label_2": "Garamond"
         }
       }
     },
