@@ -162,6 +162,17 @@
           role="list"
           style="--c-xs: 1; --c-sm: 1; --c-md: 1;"
         >
+          {% if section.settings.christmas_delivery_eta_toggle == true %}
+            {% if section.settings.christmas_image != blank %}
+              {% assign current_variant = product.selected_or_first_available_variant %}
+              {% if current_variant.available and current_variant.inventory_quantity > 0 %}
+                <div class="product-christmas-eta">
+                  {{ section.settings.christmas_image | image_url: height: 150 | image_tag: loading: 'lazy' }}
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endif %}
+
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
             <li 

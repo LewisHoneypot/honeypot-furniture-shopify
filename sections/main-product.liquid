@@ -5977,6 +5977,18 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 25
+    },
+    {
+      "type": "checkbox",
+      "id": "christmas_delivery_eta_toggle",
+      "default": false,
+      "label": "Display Christmas Delivery"    
+    },
+    {
+      "type": "image_picker",
+      "id": "christmas_image",
+      "label": "Christmas ETA Image",
+      "info": "(75 x 75 px)"
     }
   ]
 }
@@ -6097,6 +6109,21 @@
 
   .usp-button .icon {
     transform: none !important;
+  }
+
+  .product-christmas-eta {
+    max-height: 75px;
+    max-width: 75px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+  }
+  @media screen and (min-width:450px){
+    .product-christmas-eta {
+      max-height: 150px;
+      max-width: 150px;
+    }
   }
 {% endstylesheet %}
 

@@ -53,17 +53,8 @@
           {% if section.settings.christmas_image != blank %}
             {% assign current_variant = card_product.selected_or_first_available_variant %}
             {% if current_variant.available and current_variant.inventory_quantity > 0 %}
-              <div 
-                style="
-                  position: absolute;
-                  z-index: 5;
-                  max-height: 75px;
-                  max-width: 75px;
-                  top: 0;
-                  right: 0;
-                "
-              >
-                {{ section.settings.christmas_image | image_url: height: 75 | image_tag: loading: 'lazy' }}
+              <div class="collection-christmas-eta">
+                {{ section.settings.christmas_image | image_url: height: 150 | image_tag: loading: 'lazy' }}
               </div>
             {% endif %}
           {% endif %}
@@ -1451,3 +1442,7 @@
     </div>
   </div>
 {%- endif -%}
+
+{% style %}
+
+{% endstyle %}
