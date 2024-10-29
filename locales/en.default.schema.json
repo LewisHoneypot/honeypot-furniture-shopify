@@ -1438,6 +1438,9 @@
           "content": "After image",
           "info": "Dimensions must match before image."
         },
+        "after-label": {
+          "content": "After label"
+        },
         "drag": {
           "label": "Drag initial position",
           "color_icon": "Drag cursor color",
