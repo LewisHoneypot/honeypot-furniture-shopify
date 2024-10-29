@@ -78,7 +78,7 @@
 
     <div 
       class="page-width m-auto product-video" 
-      style="max-width: 900px;
+      style="max-width: {{section.settings.video_width}}px;
     ">
       <div 
         class="
@@ -276,6 +276,16 @@
       "type": "video",
       "id": "video",
       "label": "t:sections.collection-video.blocks.settings.label__1"
+    },
+    {
+      "type": "range",
+      "id": "video_width",
+      "min": 500,
+      "max": 2000,
+      "step": 50,
+      "unit": "px",
+      "label": "t:sections.all.video_width.label",
+      "default": 900
     },
     {
       "type": "video_url",
