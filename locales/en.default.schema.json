@@ -1528,6 +1528,9 @@
           "options__1": "Classic",
           "options__2": "Masonry",
           "options__3": "Default"
+        },
+        "arrows": {
+          "label": "Arrow Position"
         }
       },
       "blocks": {
