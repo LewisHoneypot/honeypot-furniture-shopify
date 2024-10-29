@@ -1098,6 +1098,9 @@
         "options__1": "Auto",
         "options__2": "Full width of column"
       },
+      "video_width": {
+        "label": "Video width"
+      },
       "image_overlay_opacity": {
         "label": "Image overlay opacity on hover",
         "label__1": "Overlay background"
