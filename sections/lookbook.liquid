@@ -27,7 +27,17 @@
   >
 
     {%- if section.settings.heading != blank or section.settings.text != blank -%}
-      <div class="p-w__header">
+      <div 
+        class="
+          p-w__header 
+          {{ section.settings.section_width }} 
+          m-auto
+          pb-5
+        " 
+        {% if section.settings.section_width == 'customized-width' %}
+          style="--page-width: {{ section.settings.customize_width }}px;"
+        {% endif %}
+    >
         <div class="p-w__header--wrapper f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
           {%- if section.settings.heading != blank or section.settings.text != blank -%}
             <div class="p-w__header--item">
