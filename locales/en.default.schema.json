@@ -719,6 +719,9 @@
         "header": {
           "content": "Blog post card"
         },
+        "article": {
+          "label": "Article"
+        },
         "sidebar_type": {
           "name": "Sidebar",
           "label": "Style",
@@ -1241,6 +1244,12 @@
         "options__2": "Custom content",
         "options__3": "Content from page",
         "options__4": "View The Range",
+        "options__5": "Dimensions",
+        "options__6": "Additional Information",
+        "options__7": "Delivery & Returns",
+        "options__8": "Care & Cleaning",
+        "options__9": "Content 1",
+        "options__10": "Content 2",
         "info": "(The 'Content from product description' feature only functions on the product detail page)"
       },
       "section_width": {
@@ -1811,6 +1820,20 @@
             "header": "App store",
             "label__1": "Show app store ?"
           }
+        },
+        "whatsapp": {
+          "always_open": "Always Open?",
+          "availability_header": "Availability Header",
+          "availability_text_1": "Availability Text 1",
+          "availability_text_2": "Availability Text 2",
+          "whatsapp_button_text_1": "WhatsApp Button Text",
+          "whatsapp_button_phone_number": "WhatsApp Button Text",
+          "whatsapp_button_icon_colour_1": "WhatsApp Icon Colour 1",
+          "whatsapp_button_icon_colour_2": "WhatsApp Icon Colour 2",
+          "email_button_text": "Email Button Text",
+          "email_icon_colour": "Email Icon Colour",
+          "header": "WhatsApp Sticky",
+          "use_sticky": "Use Sticky"
         }
       },
       "settings": {
@@ -2287,6 +2310,36 @@
         },
         "pill": {
           "label": "Input option name to show pill style"
+        },
+        "dimensions": {
+          "header": {
+            "content": "Dimensions"
+          },
+          "collection_dimensions_toggle": {
+            "label": "Display Arrows"
+          }
+        },
+        "delivery_eta": {
+          "header": {
+            "content": "Delivery ETA"
+          },
+          "collection_delivery_eta_heading": {
+            "label": "Heading"
+          },
+          "collection_delivery_eta_toggle": {
+            "label": "Display Dates"
+          },
+          "date_type": {
+            "name": "Date Type",
+            "accurate": "Accurate",
+            "vague": "Vague"
+          },
+          "christmas_delivery_eta_toggle": {
+            "label": "Display Christmas Delivery"
+          },
+          "christmas_image": {
+            "label": "Christmas ETA Image"
+          }
         }
       },
       "blocks": {
