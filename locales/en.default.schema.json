@@ -1674,6 +1674,9 @@
           "label": "Custom tab"
         }
       },
+      "blocks": {
+        "label_1": "Features"
+      },
       "presets": {
         "name": "Custom tab"
       }
