@@ -2702,13 +2702,13 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Title",
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.title",
           "default": "Staingard"
         },
         {
           "type": "image_picker",
           "id": "main_image",
-          "label": "Main Image"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.main_image"
         },
         {
           "type": "richtext",
@@ -2725,78 +2725,68 @@
         {
           "type": "text",
           "id": "seat-price",
-          "label": "Price Per Seat",
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.seat_price",
           "default": "40"
         },
         {
           "type": "text",
           "id": "tick-1-text",
           "default": "5-year fabric upholstery care plan",
-          "label": "Tick 1 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_1_text"
         },
         {
           "type": "text",
           "id": "tick-2-text",
           "default": "Covers accidental damage",
-          "label": "Tick 2 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_2_text"
         },
         {
           "type": "text",
           "id": "tick-3-text",
           "default": "Covers accidental staining",
-          "label": "Tick 3 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_3_text"
         },
         {
           "type": "text",
           "id": "tick-4-text",
           "default": "'Clean, Repair or Replace' policy",
-          "label": "Tick 4 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_4_text"
         },
         {
           "type": "text",
           "id": "tick-5-text",
           "default": "At home professional cleaning",
-          "label": "Tick 5 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_5_text"
         },
         {
           "type": "image_picker",
           "id": "tick_image",
-          "label": "Tick Image"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.tick_image"
         },
         {
           "type": "text",
           "id": "button-1-text",
           "default": "Protect From Accidental Damage",
-          "label": "Button 1 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.button_1_text"
         },
         {
           "type": "text",
           "id": "button-2-text",
           "default": "Return To Cart",
-          "label": "Button 2 Text"
+          "label": "t:sections.main-product.blocks.staingard_drawer.settings.button_2_text"
         }
       ]
     },
     {
       "type": "color_swatch",
-      "name": "Colour Swatch",
+      "name": "t:sections.main-product.blocks.color_swatch.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "available_colours",
           "default": "Available Colours",
-          "label": "Available Colours"
-        },
-        {
-          "id": "font_size",
-          "type": "range",
-          "min": 1,
-          "max": 50,
-          "step": 1,
-          "unit": "pt",
-          "label": "Font Size",
-          "default": 13
+          "label": "t:sections.main-product.blocks.color_swatch.settings.title"
         },
         {
           "type": "select",
@@ -2804,7 +2794,7 @@
           "options": [
             {
               "value": "normal",
-              "label": "Normal"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.label_1"
             },
             {
               "value": "Anaktoria",
@@ -2816,7 +2806,17 @@
             }
               ],
           "default": "normal",
-          "label": "Font"
+          "label": "t:sections.main-product.blocks.color_swatch.settings.font"
+        },
+        {
+          "id": "font_size",
+          "type": "range",
+          "min": 1,
+          "max": 50,
+          "step": 1,
+          "unit": "pt",
+          "label": "t:sections.main-product.blocks.color_swatch.settings.font_size",
+          "default": 13
         },
         {
           "type": "select",
@@ -2824,19 +2824,19 @@
           "options": [
             {
               "value": "normal",
-              "label": "Normal"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.label_1"
             },
             {
               "value": "bold",
-              "label": "Bold"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.label_2"
             },
             {
               "value": "900",
-              "label": "Bolder"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.label_3"
             }
           ],
           "default": "normal",
-          "label": "Font Weight"
+          "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.name"
         },
         {
           "type": "select",
@@ -2844,15 +2844,15 @@
           "options": [
             {
               "value": "normal",
-              "label": "Normal"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_weight.label_1"
             },
             {
               "value": "italic",
-              "label": "Italic"
+              "label": "t:sections.main-product.blocks.color_swatch.settings.font_style.label"
             }
           ],
           "default": "normal",
-          "label": "Font Style"
+          "label": "t:sections.main-product.blocks.color_swatch.settings.font_style.name"
         },
         {
           "type": "range",
@@ -2884,15 +2884,15 @@
         {
           "type": "select",
           "id": "layout",
-          "label": "Layout",
+          "label": "t:sections.main-product.blocks.layout.settings.name",
           "options": [
             {
               "value": "default",
-              "label": "Default"
+              "label": "t:sections.main-product.blocks.layout.settings.options.default"
             },
             {
               "value": "v2",
-              "label": "v2"
+              "label": "t:sections.main-product.blocks.layout.settings.options.v2"
             }
           ],
           "default": "default"
@@ -2903,19 +2903,19 @@
           "options": [
             {
               "value": "light",
-              "label": "Light"
+              "label": "t:sections.main-product.blocks.layout.settings.font_weight.label_1"
             },
             {
               "value": "normal",
-              "label": "Normal"
+              "label": "t:sections.main-product.blocks.layout.settings.font_weight.label_2"
             },
             {
               "value": "bold",
-              "label": "Bold"
+              "label": "t:sections.main-product.blocks.layout.settings.font_weight.label_3"
             }
           ],
           "default": "normal",
-          "label": "Font Weight"
+          "label": "t:sections.main-product.blocks.layout.settings.font_weight.name"
         },
         {
           "type": "header",
@@ -4144,32 +4144,32 @@
     },
     {
       "type": "expected_delivery",
-      "name": "Expected Delivery",
+      "name": "t:sections.main-collection-product-grid.settings.delivery_eta.collection_delivery_eta_heading.label",
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "default": "Delivery From",
-          "label": "Heading"
+          "label": "t:sections.all.heading.label"
         },
         {
           "type": "checkbox",
           "id": "enable_expected_delivery",
           "default": false,
-          "label": "Enable"
+          "label": "t:sections.main-collection-product-grid.settings.delivery_eta.enable_expected_delivery.label",
         },
         {
           "type": "select",
           "id": "date_type",
-          "label": "Date Type",
+          "label": "t:sections.main-collection-product-grid.settings.delivery_eta.date_type.name",
           "options": [
             {
               "value": "accurate",
-              "label": "Accurate"
+              "label": "t:sections.main-collection-product-grid.settings.delivery_eta.date_type.accurate"
             },
             {
               "value": "vague",
-              "label": "Vague"
+              "label": "t:sections.main-collection-product-grid.settings.delivery_eta.date_type.vague"
             }
           ],
           "default": "accurate"
@@ -4198,7 +4198,7 @@
           "type": "color",
           "id": "background_colour",
           "default": "#EDE9E2",
-          "label": "Background Colour"
+          "label": "t:sections.main-collection-product-grid.settings.delivery_eta.background_colour.label"
         }
       ]
     },
@@ -4219,7 +4219,7 @@
           "options": [
             {
               "value": "normal",
-              "label": "Normal"
+              "label": "t:settings_schema.global.settings.font_style.options__1"
             },
             {
               "value": "Anaktoria",
@@ -4231,7 +4231,7 @@
             }
               ],
           "default": "normal",
-          "label": "Font"
+          "label": "t:sections.main-product.blocks.color_swatch.settings.font"
         },
         {
           "type": "select",
