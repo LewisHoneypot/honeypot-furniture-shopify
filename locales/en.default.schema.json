@@ -2094,6 +2094,7 @@
       "name": "Image gallery",
       "name__1": "Block image",
       "label__1": "Cart label",
+      "label__2": "Display button viewmore?",
       "blocks": {
         "name": "Image"
       },
