@@ -79,7 +79,8 @@
         },
         "font_name": {
           "label": "Anaktoria",
-          "label_2": "Garamond"
+          "label_2": "Garamond",
+          "label_3": "Normal"
         }
       }
     },
@@ -1374,6 +1375,21 @@
         "label": "Video"
       }
     },
+    "as_seen_in": {
+      "settings": {
+        "content": "Logos",
+        "label_1": "Logo 1",
+        "label_2": "Logo 1 Link",
+        "label_3": "Logo 1 Alt Tag",
+        "label_4": "Logo 2",
+        "label_5": "Logo 2 Link",
+        "label_6": "Logo 2 Alt Tag",
+        "label_7": "Logo 3",
+        "label_8": "Logo 3 Link",
+        "label_9": "Logo 3 Alt Tag",
+        "label_10": "Background Colour"
+      }
+    },
     "article_tags": {
       "name": "All article tags"
     },
@@ -2339,6 +2355,12 @@
           },
           "christmas_image": {
             "label": "Christmas ETA Image"
+          },
+          "enable_expected_delivery": {
+            "label": "Enable"
+          },
+          "background_colour": {
+            "label": "Background Colour"
           }
         }
       },
@@ -2663,6 +2685,54 @@
             "product_card": {
               "heading": "Product card"
             }
+          }
+        },
+        "staingard_drawer": {
+          "settings": {
+            "title": "Title",
+            "main_image": "Main Image",
+            "seat_price": "Price Per Seat",
+            "tick_1_text": "Tick 1 Text",
+            "tick_2_text": "Tick 2 Text",
+            "tick_3_text": "Tick 3 Text",
+            "tick_4_text": "Tick 4 Text",
+            "tick_5_text": "Tick 5 Text",
+            "tick_image": "Tick Image",
+            "button_1_text": "Button 1 Text",
+            "button_2_text": "Button 2 Text"
+          }
+        },
+        "color_swatch": {
+          "name": "Colour Swatch",
+          "settings": {
+            "title": "Title",
+            "font": "Font",
+            "font_size": "Font Size",
+            "font_weight": {
+              "name": "Font Weight",
+              "label_1": "Normal",
+              "label_2": "Bold",
+              "label_3": "Bolder",
+            },
+            "font_style": {
+              "name": "Font Style",
+              "label": "Italic"
+            }
+          }
+        },
+        "layout": {
+          "settings": {
+            "name": "Layout",
+            "options": {
+              "default": "Default",
+              "v2": "v2"
+            },
+            "font_weight": {
+              "name": "Font Weight",
+              "label_1": "Light",
+              "label_2": "Normal",
+              "label_3": "Bold",
+            },
           }
         }
       },
