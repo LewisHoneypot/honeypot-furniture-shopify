@@ -1457,6 +1457,7 @@
         "vertical_spacing": "Vertical space between content items",
         "before-image": {
           "content": "Before image",
+          "content_2": "Before label",
           "info": "2000 x 1200px .jpg recommended"
         },
         "after-image": {
@@ -1527,6 +1528,10 @@
         },
         "image_ratio": {
           "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
+        },
+        "type_style": {
+          "label_1": "Banner",
+          "label_2": "Thumbnails"
         }
       },
       "blocks": {
