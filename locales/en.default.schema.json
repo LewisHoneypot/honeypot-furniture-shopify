@@ -289,7 +289,8 @@
           "label__1": "Font size step",
           "label__2": "Font size (Desktop)",
           "label__3": "Font size (Tablet)",
-          "label__4": "Font size (Mobile)"
+          "label__4": "Font size (Mobile)",
+          "info__1": "Cannot be used when default heading size is selected"
         }
       }
     },
@@ -809,7 +810,8 @@
         "has_cards_info": "To change the card color scheme, update your theme settings.",
         "use_custom_color": "Use custom color",
         "use_custom_colors_background_content": "Use custom background color content",
-        "use_background_gradient": "Use background gradient special"
+        "use_background_gradient": "Use background gradient special",
+        "border": "Border"
       },
       "columns_desktop": {
         "label": "Number of columns on desktop"
@@ -1832,6 +1834,10 @@
             },
             "paragraph__1": {
               "content": "Subscribers added automatically to your “accepted marketing” customer list. [Learn more](https:\/\/help.shopify.com\/manual\/customers\/manage-customers)"
+            },
+            "labels": {
+              "label_1": "Default",
+              "label_2": "Block width"
             }
           }
         },
@@ -1881,6 +1887,9 @@
         "show_policy": {
           "label": "Show policy links",
           "info": "To add store policies, go to your [policy settings](\/admin\/settings\/legal)."
+        },
+        "hide_arrow": {
+          "label": "Hide arrow icon"
         }
       }
     },
@@ -2705,6 +2714,14 @@
             "tick_image": "Tick Image",
             "button_1_text": "Button 1 Text",
             "button_2_text": "Button 2 Text"
+          }
+        },
+        "usp_drawers": {
+          "name_1": "USP Drawer 1",
+          "name_2": "USP Drawer 2",
+          "settings": {
+            "label_1": "USP Content 1",
+            "label_2": "Dimensions"
           }
         },
         "color_swatch": {
