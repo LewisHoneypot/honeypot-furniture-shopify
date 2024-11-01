@@ -2183,6 +2183,9 @@
             },
             "vertical": {
               "label": "Vertical position"
+            },
+            "use_hr": {
+              "label": "Enable HR Separator"
             }
           }
         }
