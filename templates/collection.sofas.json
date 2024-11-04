@@ -129,7 +129,9 @@
         "collection_dimensions_toggle": true,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
-        "date_type": "vague"
+        "date_type": "vague",
+        "christmas_delivery_eta_toggle": false,
+        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
