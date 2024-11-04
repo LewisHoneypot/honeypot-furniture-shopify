@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -19,7 +19,7 @@
           "settings": {
             "heading": "",
             "heading_font": "f-bold",
-            "subtext": "<p>Office Hours<br\/>Mon-Fri: 8am-8pm<\/p><p>Sat-Sun: 10am-3pm<\/p><p><\/p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 338771<\/a><\/p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.co.uk<\/a><\/p>",
+            "subtext": "<p>Office Hours<br/>Mon-Fri: 8am-8pm</p><p>Sat-Sun: 10am-3pm</p><p></p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 338771</a></p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.co.uk</a></p>",
             "subtext_size": "medium",
             "image_width": 180,
             "show_social": true,
@@ -78,14 +78,14 @@
             "heading_typography": "font-heading",
             "heading_size": "h3",
             "heading_size_step": 0,
-            "subtext": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
+            "subtext": "<p>Be the first to know about new collections and exclusive offers.</p>",
             "text_size": "medium",
             "text_margin_top": 0,
             "text_margin_bottom": 16,
             "text_alignment": "left",
             "button_label": "",
             "hide_arrow": false,
-            "caption": "<p>Learn more about how we protect your personal data by viewing our <a href=\"\/\" target=\"_blank\" title=\"\/\">Privacy Notice<\/a>.<\/p>",
+            "caption": "<p>Learn more about how we protect your personal data by viewing our <a href=\"/\" target=\"_blank\" title=\"/\">Privacy Notice</a>.</p>",
             "caption_size": "medium",
             "check_text": "",
             "show_social": false,
@@ -167,7 +167,10 @@
         "social_media_colors_text": "#2d2d2d",
         "social_media_colors_background": "",
         "social_media_gradient_background": "",
-        "text_copyright": "<p>©2024 Honeypot Furniture<\/p>"
+        "text_copyright": "<p>©2024 Honeypot Furniture</p>",
+        "awards_enable": false,
+        "awards_logo_1": "shopify://shop_images/HOME_AWARDS_2024_FINALISTS.png",
+        "awards_logo_1_alt": "ufurnish awards"
       }
     }
   },
