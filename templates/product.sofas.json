@@ -34,8 +34,8 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font_size": 13,
             "font": "Garamond",
+            "font_size": 13,
             "font_weight": "normal",
             "font_style": "italic",
             "padding_top": 0,
@@ -176,7 +176,9 @@
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 30,
+        "christmas_delivery_eta_toggle": false,
+        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
     "drawers_Ut99DD": {
@@ -295,6 +297,7 @@
       ],
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
+        "video_width": 1000,
         "video_url": "",
         "description": "",
         "enable_autoplay": false,
@@ -486,6 +489,8 @@
       ],
       "disabled": true,
       "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
         "use_hr": false,
         "font": "normal",
         "heading": "Shop The Look",
@@ -497,6 +502,7 @@
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
+        "carousel_background_colour": "#F4F4F4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
