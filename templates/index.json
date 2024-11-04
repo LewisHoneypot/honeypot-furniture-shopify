@@ -114,7 +114,7 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Build Your Saving Bundle",
-            "primary_button_link": "",
+            "primary_button_link": "shopify://collections/sofas",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
