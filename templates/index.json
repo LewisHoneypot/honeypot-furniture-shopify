@@ -98,6 +98,7 @@
         },
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/BF7.png",
             "mobile_image": "shopify://shop_images/mobile_banner_jacob.png",
