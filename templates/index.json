@@ -726,7 +726,7 @@
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-1"
       ],
       "settings": {
-        "section_width": "full-width",
+        "section_width": "page-width",
         "customize_width": 1800,
         "use_hr": false,
         "font": "normal",
