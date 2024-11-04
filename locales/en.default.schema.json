@@ -1864,6 +1864,11 @@
           "email_icon_colour": "Email Icon Colour",
           "header": "WhatsApp Sticky",
           "use_sticky": "Use Sticky"
+        },
+        "awards": {
+          "checkbox": "Show awards?",
+          "logo_1": "Logo 1",
+          "logo_1_alt": "Logo 1 Alt"
         }
       },
       "settings": {
