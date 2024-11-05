@@ -19,7 +19,7 @@
       render 'icon-arrow-long'
     endcapture
   -%}
-  <div class="section__lookbook spacing spacing-xs color-{{ section.settings.color_scheme }} gradient page-width m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+  <div class="section__lookbook spacing spacing-xs color-{{ section.settings.color_scheme }} gradient page-width m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} p-0" 
     style="--padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
@@ -109,7 +109,18 @@
           max-width: {{ section.settings.lookbook_max_height }}px;
           margin: auto;
         ">
-          <div class="swiper grid-scroll d-block pos-relative no-js-overflow-x"> 
+          <div 
+            class="
+              swiper 
+              grid-scroll 
+              d-block 
+              pos-relative 
+              no-js-overflow-x
+            "
+            style="
+              padding-right: 15px; 
+              margin-right: auto;
+            "> 
             <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Lookbook" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1.25;">
               {%- for block in section.blocks -%}
                 <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if item_full_width %} grid__item-full grid__item-scroll--full{% endif %}" {{ block.shopify_attributes }}>
