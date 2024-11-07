@@ -19,92 +19,99 @@
       render 'icon-arrow-long'
     endcapture
   -%}
-  <div class="section__lookbook spacing spacing-xs color-{{ section.settings.color_scheme }} gradient page-width m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} p-0" 
+  <div class="section__lookbook spacing spacing-xs color-{{ section.settings.color_scheme }} gradient {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} p-0" 
     style="--padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;"
   >
-
-    {%- if section.settings.heading != blank or section.settings.text != blank -%}
-      <div 
-        class="
-          p-w__header 
-          {{ section.settings.section_width }} 
-          m-auto
-          pb-5
-        " 
-        {% if section.settings.section_width == 'customized-width' %}
-          style="--page-width: {{ section.settings.customize_width }}px;"
-        {% endif %}
-    >
-        <div class="p-w__header--wrapper f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
-          {%- if section.settings.heading != blank or section.settings.text != blank -%}
-            <div class="p-w__header--item">
-
-              {%- if section.settings.heading != blank -%}
-                {%- if section.settings.use_hr == true -%}
-                  <hr style="margin:0px;">
-                  <div
-                    style="
-                      text-align:center;
-                      top:-12px;
-                      position: relative;
-                      z-index: 2;
-                    "
-                  >
-                    <span 
-                      {% if section.settings.font == 'Anaktoria' %}
-                        class="Anaktoria"
-                      {% elsif section.settings.font == 'Garamond' %}
-                        class="Garamond"
-                      {% endif %} 
+    <div class="page-width m-auto">
+      {%- if section.settings.heading != blank or section.settings.text != blank -%}
+        <div 
+          class="
+            p-w__header 
+            {{ section.settings.section_width }} 
+            m-auto
+            pb-5
+          " 
+          {% if section.settings.section_width == 'customized-width' %}
+            style="--page-width: {{ section.settings.customize_width }}px;"
+          {% endif %}
+      >
+          <div class="p-w__header--wrapper f-wrap j-c-between a-i-center a-i-end-lg g-gap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--g-gap: 1rem;">
+            {%- if section.settings.heading != blank or section.settings.text != blank -%}
+              <div class="p-w__header--item">
+                {%- if section.settings.heading != blank -%}
+                  {%- if section.settings.use_hr == true -%}
+                    <hr style="margin:0px;">
+                    <div
                       style="
-                        background-color: #fff;
-                        padding-left: 30px;
-                        padding-right: 30px;
+                        text-align:center;
+                        top:-12px;
+                        position: relative;
+                        z-index: 2;
                       "
                     >
-                      {{ section.settings.heading | escape }}
-                    </span>    
-                  </div>
-                {%- else -%}
-                  <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
+                      <span 
+                        {% if section.settings.font == 'Anaktoria' %}
+                          class="Anaktoria"
+                        {% elsif section.settings.font == 'Garamond' %}
+                          class="Garamond"
+                        {% endif %} 
+                        style="
+                          background-color: #fff;
+                          padding-left: 30px;
+                          padding-right: 30px;
+                        "
+                      >
+                        {{ section.settings.heading | escape }}
+                      </span>    
+                    </div>
+                  {%- else -%}
+                    <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading heading-size-default m-0">{{ section.settings.heading | escape }}</h2>
+                  {%- endif-%}
                 {%- endif-%}
-              {%- endif-%}
-
-              {%- if section.settings.text != blank -%}
-                <div class="p-w__text rte m-t" style="--m-t: 1rem;">{{ section.settings.text }}</div>
-              {%- endif-%}
-            </div>
-          {%- endif -%}
-          {%- if section.settings.button_label != blank -%}
-            <div class="p-w__header--item w-100 d-flex">
-              <a {% if section.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} button--transparent mi-w {{ section.settings.desktop_button_alignment }} {{ section.settings.mobile_button_alignment }}" aria-label="{{ section.settings.link_label | escape }}" style="--mi-w: 24rem;">
-                <span class="text">{{ section.settings.button_label | escape }}</span>
-                {% render 'button-main-style' %}
-              </a>
-            </div>
-          {%- endif -%}
+                {%- if section.settings.text != blank -%}
+                  <div class="p-w__text rte m-t" style="--m-t: 1rem;">{{ section.settings.text }}</div>
+                {%- endif-%}
+              </div>
+            {%- endif -%}
+            {%- if section.settings.button_label != blank -%}
+              <div class="p-w__header--item w-100 d-flex">
+                <a 
+                  {% if section.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %} class="button {{ settings.button_type | prepend: 'button--main-' }} {{ settings.button_icon | prepend: 'button--icon-' }} {{ settings.button_style | prepend: 'button--style-' }} 
+                  button--transparent 
+                  mi-w {{ section.settings.desktop_button_alignment }} {{ section.settings.mobile_button_alignment }}" 
+                  aria-label="{{ section.settings.link_label | escape }}" 
+                  style="--mi-w: 24rem;">
+                  <span class="text">{{ section.settings.button_label | escape }}</span>
+                  {% render 'button-main-style' %}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
         </div>
-      </div>
-    {%- endif -%}
+      {%- endif -%}
 
     <div class="{% if section.settings.section_width == 'customized-width' %} customized-width {% endif %} m-auto{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       
-      <div class="lookbook-carousel p-w__content" {% if item_full_width %}style="text-align: -webkit-center;"{% endif %}
+      <div class="lookbook-carousel p-w__content" 
         style="
+          {% if item_full_width %}text-align: -webkit-center;{% endif %} 
           background-color: {{ section.settings.carousel_background_colour }};
           padding-bottom: 25px;
         ">
-        <slider-component class="
-          carousel{% if item_full_width %} carousel--full{% endif %} 
-          d-block pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}" 
+        <slider-component 
+          class="
+            carousel{% if item_full_width %} carousel--full{% endif %} 
+            d-block 
+            pos-relative{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}
+          " 
           data-space-between="10" 
           data-type-pagination="{{ section.settings.pagination_type }}" 
           data-item-to-show-desktop="1.215" 
           data-item-to-show-tablet="1" 
-          data-item-to-show-mobile="1" 
+          data-item-to-show-mobile="1"
           style="
           max-width: {{ section.settings.lookbook_max_height }}px;
           margin: auto;
