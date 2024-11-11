@@ -126,10 +126,11 @@
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
-        "collection_dimensions_toggle": true,
+        "collection_dimensions_toggle": false,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
-        "date_type": "vague"
+        "date_type": "vague",
+        "christmas_delivery_eta_toggle": false
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
@@ -282,13 +283,11 @@
     },
     "clickslice_bottom_description_n9Yg4N": {
       "type": "clickslice-bottom-description",
-      "settings": {
-      }
+      "settings": {}
     },
     "clickslice_bottom_collapsible_tabs_igpGt9": {
       "type": "clickslice-bottom-collapsible-tabs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
