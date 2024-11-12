@@ -2358,7 +2358,7 @@
             "content": "Dimensions"
           },
           "collection_dimensions_toggle": {
-            "label": "Display Arrows"
+            "label": "Display Dimensions"
           }
         },
         "delivery_eta": {
