@@ -26337,3 +26337,27 @@ body.multitasking__show .newsletter-popup-opener {
 .ins-preview-wrapper .ins-element-close-button[close-button-with-icons] .ins-element-content {
   width: 40px !important;
 }
+
+/* Homepage | Collection List Arrow Placements */
+@media screen and (min-width: 1400px){
+  .arrow-wrapper{
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: hidden;
+  }
+  .arrow-placement {
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 9;
+    height: 200px;
+    top: -100px;
+    width: 100px;
+    float: inline-end;
+  }
+  .arrow-placement-left {
+    float: inline-start;
+  }
+  .arrow-placement-right {
+    float: inline-end;
+  }
+}
