@@ -26363,8 +26363,8 @@ body.multitasking__show .newsletter-popup-opener {
 }
 
 /* INSIDER Overrides */
-@media screen and (min-width: 1660px){
+/* @media screen and (min-width: 1660px){
   .ins-element-wrap.ins-layout-block-wrapper{
     max-height: 25px !important;
   }
-}
+} */
