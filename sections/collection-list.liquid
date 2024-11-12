@@ -135,7 +135,7 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="p-w__content{% if section.settings.type_style == 'classic' %} p-l-xxl p-r-xxl{% endif %}"{% if section.settings.type_style == 'classic' %} style="--p-l-xxl: 10rem; --p-r-xxl: 10rem;"{% endif %}>
+
           <slider-component class="d-block pos-relative p-t p-t-xs{% if section.settings.enable_carousel %} swiper-more-item{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if section.settings.type_style == 'classic' %} o-h{% endif %}"
             {% if section.settings.enable_carousel %}
               {% if section.settings.type_style == 'masonry' %}
@@ -159,10 +159,27 @@
             {%- if section.settings.enable_carousel -%}
               <div class="swiper d-block pos-relative no-js-overflow-x{% if section.settings.type_style == 'masonry' %} grid-scroll{% endif %}{% if section.settings.type_style != 'masonry' %} o-v{% endif %}">
             {%- endif -%}
-              <div class="carousel__items d-flex{% if section.settings.enable_carousel %} swiper-wrapper{% else %} f-wrap grid{% endif %}" 
+              <div 
+                class="
+                arrow-wrapper
+                carousel__items 
+                d-flex
+                {% if section.settings.enable_carousel %} 
+                  swiper-wrapper
+                {% else %} 
+                  f-wrap 
+                  grid
+                {% endif %}" 
                 id="Slider-{{ section.id }}" 
                 aria-label="Collection list" 
-                style="--c-xs: {{ column_xs }}; --c-sm: {{ column_sm }}; --c-md: {{ column_md }}; --c-lg: {{ column_lg }}; --c-xl: {{ column_xl }}; --c-xxl: {{ column_xxl }};"
+                style="
+                  --c-xs: {{ column_xs }}; 
+                  --c-sm: {{ column_sm }}; 
+                  --c-md: {{ column_md }}; 
+                  --c-lg: {{ column_lg }}; 
+                  --c-xl: {{ column_xl }}; 
+                  --c-xxl: {{ column_xxl }};
+                "
               >
                 {%- for block in section.blocks -%}
                   {%- liquid
@@ -268,26 +285,98 @@
                   </div>
                 {%- endfor -%}
               </div>
+            
               {%- if section.blocks.size > 1 -%}
-                <div class="carousel__controls arrow-style-{{ settings.arrow_style }}{% if section.settings.type_style != 'default' %} carousel__controls--inner{% endif %}{% if section.settings.arrows_type == 'none' or section.settings.enable_carousel == false %} hidden{% endif %} no-js-hidden" 
+                <div 
+                  class="
+                    carousel__controls 
+                    arrow-style-{{ settings.arrow_style }}
+                    {% if section.settings.type_style != 'default' %} carousel__controls--inner{% endif %}
+                    {% if section.settings.arrows_type == 'none' or section.settings.enable_carousel == false %} hidden{% endif %} 
+                    no-js-hidden
+                  " 
                   style="--padding: 0px;
-                  {% if section.settings.type_style == 'classic' %} 
-                    --carousel_controls_width: {{ carousel_controls_width }}rem; 
-                    --carousel_controls_height: {{ carousel_controls_height }}; 
-                    --carousel_controls_height_mb: {{ carousel_controls_height_mb }}rem;
-                  {% endif %} 
-                  width: 100%;
-                  top: {{ section.settings.arrow_position }}px;">
+                    {% if section.settings.type_style == 'classic' %} 
+                      --carousel_controls_width: {{ carousel_controls_width }}rem; 
+                      --carousel_controls_height: {{ carousel_controls_height }}; 
+                      --carousel_controls_height_mb: {{ carousel_controls_height_mb }}rem;
+                    {% endif %} 
+                    width: 100%;
+                    top: {{ section.settings.arrow_position }}px;
+                  ">
                   {% if section.settings.enable_carousel and section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' %}
                     <div class="arrow-wrap d-flex top-0 right-0 z-index-2 pos-absolute swiper-screen__{{ section.settings.arrows_type }}">
                   {% endif %}
-                    <button type="button" data-step="1" class="button-slider button-slider__prev{% if settings.arrow_style != 'modern-plus' %} swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous" 
-                            style="{% if section.settings.type_style == 'classic' %}--carousel_controls_prev_right: {{ carousel_controls_prev_right }};--carousel_controls_prev_right_mb: {{ carousel_controls_prev_right_mb }}{% endif %}; left:0;">
+
+                  <div class="arrow-placement arrow-placement-left">
+                    <button 
+                      type="button" 
+                      data-step="1" 
+                      class="
+                        button-slider 
+                        button-slider__prev
+                        {% if settings.arrow_style != 'modern-plus' %} 
+                          swiper-screen__{{ section.settings.arrows_type }}
+                        {% endif %} 
+                        color-arrow 
+                        t-button 
+                        b-none 
+                        c-pointer 
+                        pos-absolute 
+                        z-index-2 
+                        b-circle 
+                        p-0 
+                        d-flex 
+                        a-i-center 
+                        j-c-center 
+                        swiper-button-prev
+                      " 
+                      aria-label="{{ 'accessibility.previous_slide' | t }}" 
+                      aria-controls="Slider-{{ section.id }}" 
+                      name="previous" 
+                      style="
+                        {% if section.settings.type_style == 'classic' %}
+                          --carousel_controls_prev_right: {{ carousel_controls_prev_right }};
+                          --carousel_controls_prev_right_mb: {{ carousel_controls_prev_right_mb }}
+                        {% endif %}; 
+                        left:0;
+                      "
+                    >
                       {{ icon_arrow_list }}
                     </button>
-                    <button type="button" data-step="1" class="button-slider button-slider__next{% if settings.arrow_style != 'modern-plus' %} swiper-screen__{{ section.settings.arrows_type }}{% endif %} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                  </div>
+
+                  <div class="arrow-placement arrow-placement-right">
+                    <button 
+                      type="button" 
+                      data-step="1" 
+                      class="
+                        button-slider 
+                        button-slider__next
+                        {% if settings.arrow_style != 'modern-plus' %} 
+                          swiper-screen__{{ section.settings.arrows_type }}
+                        {% endif %} 
+                         color-arrow 
+                         t-button 
+                         b-none 
+                         c-pointer 
+                         pos-absolute 
+                         z-index-2 
+                         b-circle 
+                         p-0 
+                         d-flex 
+                         a-i-center 
+                         j-c-center 
+                         swiper-button-next
+                        " 
+                      aria-label="{{ 'accessibility.next_slide' | t }}" 
+                      aria-controls="Slider-{{ section.id }}" 
+                      name="next"
+                    >
                       {{ icon_arrow_list }}
                     </button>
+                  </div>
+
                   {% if section.settings.enable_carousel and section.settings.arrows_type != 'none' and settings.arrow_style == 'modern-plus' %}
                       <div class="mask-overlay pos-absolute top-0 left-0"></div>
                     </div>
@@ -298,7 +387,7 @@
               </div>
             {%- endif -%}
           </slider-component>
-        </div>
+
         {%- if section.settings.show_view_all -%}
           <div class="p-w__footer m-b-i" style="--m-b-i: 1rem;">
             <div class="p-w__footer--wrapper center">
