@@ -773,9 +773,8 @@
         },
         "collection_yaqDQx": {
           "type": "collection",
-          "disabled": true,
           "settings": {
-            "collection": "bundles-1"
+            "collection": "beds"
           }
         }
       },
