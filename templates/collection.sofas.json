@@ -126,7 +126,7 @@
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
-        "collection_dimensions_toggle": false,
+        "collection_dimensions_toggle": true,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
         "date_type": "vague",
