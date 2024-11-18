@@ -70,6 +70,7 @@
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Hp_Banner_-_Light.jpg",
             "mobile_image": "shopify://shop_images/Carnaby_Sofa_Light.jpg",
