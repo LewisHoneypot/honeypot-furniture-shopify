@@ -12,5 +12,11 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "testimonial_NkEcJz": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }
