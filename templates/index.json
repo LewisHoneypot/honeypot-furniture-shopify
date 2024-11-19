@@ -815,7 +815,7 @@
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "columns_desktop": 3,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "image_animation": "fade-down",
         "text_animation": "none",
         "padding_top": 70,
