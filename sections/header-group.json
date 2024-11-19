@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "logo_width": 100,
-            "text": "<p>BLACK FRIDAY IS LIVE!  PURCHASE 2 ITEMS AND RECEIVE 5% OFF YOUR ORDER OR 3 OR MORE ITEMS AND RECEIVE 10% OFF YOUR ORDER - APPLIES AT CHECKOUT</p>"
+            "text": "<p><em>BLACK FRIDAY IS LIVE!</em>  PURCHASE <strong>2 ITEMS</strong> AND RECEIVE <strong>5% OFF</strong> YOUR ORDER OR <strong>3 OR MORE ITEMS</strong> AND RECEIVE <strong>10% OFF</strong> YOUR ORDER - APPLIES AT CHECKOUT</p>"
           }
         }
       },
