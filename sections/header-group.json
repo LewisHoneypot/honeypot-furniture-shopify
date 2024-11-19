@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -18,24 +18,15 @@
           "type": "announcement",
           "settings": {
             "logo_width": 100,
-            "text": "<p>COVID-19 Updates & Shipment Delays. <a href=\"/collections\" title=\"All collections\">Explore Now</a></p>"
-          }
-        },
-        "d826dfdb-6961-4fc5-906d-23f75f404022": {
-          "type": "announcement",
-          "settings": {
-            "logo_width": 100,
-            "text": "<p>Free Shipping on all orders*. <a href=\"/collections\" title=\"All collections\">Explore Now</a></p>"
+            "text": "<p>BLACK FRIDAY IS LIVE!  PURCHASE 2 ITEMS AND RECEIVE 5% OFF YOUR ORDER OR 3 OR MORE ITEMS AND RECEIVE 10% OFF YOUR ORDER - APPLIES AT CHECKOUT</p>"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "d826dfdb-6961-4fc5-906d-23f75f404022"
+        "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
-        "text_size": "medium",
+        "text_size": "small",
         "enable_autoplay": false,
         "change_slides_speed": 5,
         "enable_link_tablet_mobile": false,
@@ -43,7 +34,7 @@
         "link": "",
         "label_link_2": "",
         "link_2": "",
-        "color_scheme": "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0",
+        "color_scheme": "accent-1",
         "padding_top": 16,
         "padding_bottom": 16,
         "padding_top_mobile": 16,
@@ -74,6 +65,7 @@
         "text_TCMy7h",
         "sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "type_layout": "scroll",
