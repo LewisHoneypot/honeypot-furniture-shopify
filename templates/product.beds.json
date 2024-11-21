@@ -101,6 +101,7 @@
         },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
+          "disabled": true,
           "settings": {
             "title": "Staingard",
             "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
@@ -412,7 +413,7 @@
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
-        "carousel_background_colour": "#F4F4F4",
+        "carousel_background_colour": "#f4f4f4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
