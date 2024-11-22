@@ -159,9 +159,18 @@
                   {% elsif sofas_price <= 299999 %}
                     {% assign staingard_price = 200 %}
                     {% assign staingard_id = 48626778964255 %}
-                  {% elsif sofas_price >= 300000 %}
+                  {% elsif sofas_price <= 399999 %}
                     {% assign staingard_price = 250 %}
                     {% assign staingard_id = 48626779390239 %}
+                  {% elsif sofas_price <= 499999 %}
+                    {% assign staingard_price = 300 %}
+                    {% assign staingard_id = 54782372053367 %}
+                  {% elsif sofas_price <= 999999 %}
+                    {% assign staingard_price = 350 %}
+                    {% assign staingard_id = 54782371529079 %}
+                  {% elsif sofas_price >= 1000000 %}
+                    {% assign staingard_price = 400 %}
+                    {% assign staingard_id = 54782371201399 %}
                   {% endif %}
                 {% endif %}
 
