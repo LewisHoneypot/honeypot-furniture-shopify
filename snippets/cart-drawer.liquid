@@ -15,6 +15,15 @@
   endcapture
 -%}
 
+{% comment %} 
+<script>
+  const cartItems = {{ cart.items | json }};
+  cartItems.forEach((item) => {
+    console.log("Product Type:", item.product_type);
+  });
+</script> 
+{% endcomment %}
+
 <cart-drawer
   class="drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end{% if cart == empty %} is-empty{% endif %} color-{{ settings.cart_color_scheme }} gradient"
   id="Cart-Drawer"
@@ -185,6 +194,7 @@
                                   class="cart-item__remove cart-item__remove-header cart-remove d-flex a-i-center pos-absolute right-0 top-0"
                                   id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                                   data-index="{{ item.index | plus: 1 }}"
+                                  data-product-id="{{ item.variant_id }}"
                                 >
                                   <button
                                     type="button"
@@ -367,6 +377,7 @@
                                       class="cart-item__remove cart-remove d-flex a-i-center"
                                       id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                                       data-index="{{ item.index | plus: 1 }}"
+                                      data-product-id="{{ item.variant_id }}"
                                     >
                                       <button
                                         type="button"
