@@ -7,24 +7,49 @@ class CartRemoveButton extends HTMLElement {
 
       const cartItems =
         this.closest("cart-items") || this.closest("cart-drawer-items");
-      await cartItems.updateQuantity(this.dataset.index, 0);
 
-      await this.wait(500);
+      // Fetch the current cart state
       let cart = await this.getCart();
 
-      if (!cart.items.some((item) => item.product_type === "Sofas")) {
-        await Promise.all(
-          cart.items
-          .filter((item) => item.title.includes("Staingard"))
-          .map((item) => this.removeProductFromCart(item.key))
-        );
+      // Retrieve the product_id from the button
+      const productId = parseInt(this.dataset.productId, 10); // Ensure it's parsed as a number
+      // console.log("Button product_id:", productId);
 
-        await this.wait(500);
-        cart = await this.getCart();
+      // Find the product being removed
+      const removedItem = cart.items.find((item) => item.id === productId);
+
+      if (!removedItem) {
+        // console.log("Removed item not found in the cart.");
+        // console.log("Cart items:", cart.items);
+        return;
       }
 
-      this.refreshUI("#CartDrawer");
-      this.refreshUI(".cart-count-bubble");
+      // Remove the clicked item from the cart
+      await cartItems.updateQuantity(this.dataset.index, 0);
+
+      // Wait for the cart to update
+      await this.wait(500);
+      cart = await this.getCart();
+
+      // Check if the removed product was a sofa
+      if (removedItem.product_type === "Sofas") {
+        // console.log("Sofa Removed.");
+        // Remove all Staingard items
+        await Promise.all(
+          cart.items
+            .filter((item) => item.title.includes("Staingard"))
+            .map((item) => this.removeProductFromCart(item.key))
+        );
+
+        // Wait for the cart to update after removing Staingard
+        await this.wait(500);
+      } else {
+        // console.log("Removed item was not a sofa.");
+      }
+
+      // Refresh the cart UI after all operations are complete
+      await this.refreshUI("#CartDrawer");
+      await this.refreshUI(".cart-count-bubble");
     });
   }
 
@@ -48,23 +73,20 @@ class CartRemoveButton extends HTMLElement {
     return response.json();
   }
 
-  refreshUI(selector) {
-    fetch(location.href)
-    .then((response) => response.text())
-    .then((html) => {
-      const tempDoc = document.createElement("div");
-      tempDoc.innerHTML = html;
-      const newContent = tempDoc.querySelector(selector);
-      if (newContent) {
-        document.querySelector(selector).innerHTML = newContent.innerHTML;
-      }
-    });
+  async refreshUI(selector) {
+    const response = await fetch(location.href);
+    if (!response.ok) throw new Error("Failed to refresh UI");
+    const html = await response.text();
+    const tempDoc = document.createElement("div");
+    tempDoc.innerHTML = html;
+    const newContent = tempDoc.querySelector(selector);
+    if (newContent) {
+      document.querySelector(selector).innerHTML = newContent.innerHTML;
+    }
   }
 }
 
 customElements.define("cart-remove-button", CartRemoveButton);
-
-
 
 class CartItems extends HTMLElement {
   constructor() {
