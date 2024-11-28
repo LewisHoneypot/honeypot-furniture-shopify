@@ -106,6 +106,7 @@
 
 .cart-item__remove.cart-item__remove-header {
   margin-left: 0;
+  width: 23px;
 }
 
 .cart-drawer.style--special .cart-item__name {
