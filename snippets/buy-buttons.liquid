@@ -114,22 +114,23 @@
           </div>
         {%- endif -%}
         <button
-          id= "ProductSubmitButton-{{ section_id }}"
+          id="ProductSubmitButton-{{ section_id }}"
           type="submit"
           name="add"
           class="product-form__submit button button--style-diagonal-swipe{% if type_style == 'special' %} uppercase{% endif %} w-100"
           {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
             disabled
           {% endif %}
-          style="--button-color-text: {{ block.settings.add_to_cart_colors_text.red }}, {{ block.settings.add_to_cart_colors_text.green }}, {{ block.settings.add_to_cart_colors_text.blue }};
+          style="
+            --button-color-text: {{ block.settings.add_to_cart_colors_text.red }}, {{ block.settings.add_to_cart_colors_text.green }}, {{ block.settings.add_to_cart_colors_text.blue }};
             --button-color-background: {{ block.settings.add_to_cart_colors_background.red }}, {{ block.settings.add_to_cart_colors_background.green }}, {{ block.settings.add_to_cart_colors_background.blue }};
             --button-gradient-background: {% if block.settings.add_to_cart_gradient_background != blank %}{{ block.settings.add_to_cart_gradient_background }}{% else %}{{ block.settings.add_to_cart_colors_background }}{% endif %};
             --button-color-text-hover: {{ block.settings.add_to_cart_colors_text_hover.red }}, {{ block.settings.add_to_cart_colors_text_hover.green }}, {{ block.settings.add_to_cart_colors_text_hover.blue }};
             --button-color-background-hover: {{ block.settings.add_to_cart_colors_background_hover.red }}, {{ block.settings.add_to_cart_colors_background_hover.green }}, {{ block.settings.add_to_cart_colors_background_hover.blue }};
             --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};
-              font-size: 20px;
-              text-transform: uppercase;
-            "
+            font-size: 20px;
+            text-transform: uppercase;
+          "
         >
           <span>
             {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
