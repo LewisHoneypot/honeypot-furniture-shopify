@@ -818,12 +818,32 @@
                   {%- assign date_2 = 0 -%}
 
                   {%- if collection_titles contains 'Sofas' -%}
-                    {%- if card_product.available and in_stock == true -%}
-                      {%- assign date_1 = 1 -%}
-                      {%- assign date_2 = 7 -%}
+                    {%- if block.settings.tiers == 'on' -%}
+                      {%- if product.tier == 1 -%}
+                        {%- if product.available and in_stock == true -%}
+                          {%- assign date_1 = 1 -%}
+                          {%- assign date_2 = 7 -%}
+                        {%- else -%}
+                          {%- assign date_1 = 7 -%}
+                          {%- assign date_2 = 42 -%}
+                        {%- endif -%}
+                      {%- elsif product.tier == 2 -%}
+                        {%- if product.available and in_stock == true -%}
+                          {%- assign date_1 = 1 -%}
+                          {%- assign date_2 = 7 -%}
+                        {%- else -%}
+                          {%- assign date_1 = 42 -%}
+                          {%- assign date_2 = 84 -%}
+                        {%- endif -%}
+                      {%- endif -%}
                     {%- else -%}
-                      {%- assign date_1 = 28 -%}
-                      {%- assign date_2 = 42 -%}
+                      {%- if product.available and in_stock == true -%}
+                        {%- assign date_1 = 1 -%}
+                        {%- assign date_2 = 7 -%}
+                      {%- else -%}
+                        {%- assign date_1 = 28 -%}
+                        {%- assign date_2 = 42 -%}
+                      {%- endif -%}
                     {%- endif -%}
                   {%- elsif collection_titles contains 'rugs' 
                     or card_product.tags contains 'LL'
