@@ -240,19 +240,19 @@
           "insider_tag": true
         }
       },
+      "17428600031447253342": {
+        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
+        "disabled": true,
+        "settings": {}
+      },
       "6990797075511561578": {
         "type": "shopify://apps/nosto/blocks/nosto-tagging-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       },
       "10812935154079970445": {
         "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": true,
-        "settings": {}
-      },
-      "17428600031447253342": {
-        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       }
     },
