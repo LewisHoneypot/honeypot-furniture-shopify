@@ -916,6 +916,9 @@
 
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
+                      <script>
+                        console.log({{ product | json }});
+                      </script>
                       {%- if product.tier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
