@@ -14,6 +14,7 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/BF7.png",
             "mobile_image": "shopify://shop_images/mobile_banner_jacob.png",
@@ -99,13 +100,12 @@
         },
         "slide_dN3rVP": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Jacob_Right_Hand_Facing_Sofa_Vertical_Beige_1_High_Res_1_91a35ab0-d756-4573-802b-2529d9404d0b.jpg",
             "mobile_image": "shopify://shop_images/Jacob_Right_Hand_Facing_Sofa_Vertical_Beige_1_High_Res_1.jpg",
             "content_max_width": 1200,
             "heading_font": "font-heading",
-            "heading": "Just dropped: The Jacob",
+            "heading": "New In: The Jacob",
             "heading_size": "medium",
             "heading_margin_bottom": 20,
             "subheading": "Giving your home that WOW factor",
