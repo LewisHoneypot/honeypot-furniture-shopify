@@ -11,7 +11,7 @@ if (!customElements.get('product-form')) {
       if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
     }
 
-    onSubmitHandler(evt) {
+    async onSubmitHandler(evt) {
       evt.preventDefault();
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
@@ -20,68 +20,59 @@ if (!customElements.get('product-form')) {
       this.submitButton.setAttribute('aria-disabled', true);
       this.submitButton.classList.add('loading');
       this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
-      if (this.querySelector('[data-quantity-rules]')) {
-        this.querySelector('.quantity__rules-cart').classList.remove('hidden');
-        this.querySelector('.loading-overlay__hide')?.classList.remove('hidden');
-        this.querySelector('.loading-overlay__show')?.classList.add('hidden');
-      }
 
       const config = fetchConfig('javascript');
       config.headers['X-Requested-With'] = 'XMLHttpRequest';
       delete config.headers['Content-Type'];
 
       const formData = new FormData(this.form);
+
+      // Add custom form data parsing if necessary
       /************************************************************/
-      document.querySelectorAll('.all-wrpp-varit input').forEach(function(input){
-          if (!input.hasAttribute('disabled')) {
-            var name = input.getAttribute('name');
-            var value = input.value;
-        
-            var ipType = input.getAttribute('type');
-            if (ipType !== 'radio') {
-                if (ipType !== 'checkbox') {
-                    formData.append(name, value);
-                } else {
-                    if (input.checked) {
-                        formData.append(name, value);
-                    } 
-                }
-            } 
-          }
-      });
+      document.querySelectorAll('.all-wrpp-varit input').forEach(function (input) {
+        if (!input.hasAttribute('disabled')) {
+          var name = input.getAttribute('name');
+          var value = input.value;
 
-      document.querySelectorAll('.all-wrpp-varit select').forEach(function(select){
-        if (!select.hasAttribute('disabled')) {
-          var name = select.getAttribute('name');
-          var value = select.value;
-
-          var disAtrr = select.getAttribute('disabled');
-          if (disAtrr !== 'disabled') {
+          var ipType = input.getAttribute('type');
+          if (ipType !== 'radio') {
+            if (ipType !== 'checkbox') {
               formData.append(name, value);
+            } else {
+              if (input.checked) {
+                formData.append(name, value);
+              }
+            }
           }
         }
       });
 
-      document.querySelectorAll('.all-wrpp-varit textarea').forEach(function(textarea){
-          if (!textarea.hasAttribute('disabled')) {
-            var name = textarea.getAttribute('name');
-            var value = textarea.value;
-        
-            var disAtrr = textarea.getAttribute('disabled');
-            if (disAtrr !== 'disabled') {
-                formData.append(name, value);
-            }
-          }
+      document.querySelectorAll('.all-wrpp-varit select').forEach(function (select) {
+        if (!select.hasAttribute('disabled')) {
+          var name = select.getAttribute('name');
+          var value = select.value;
+
+          formData.append(name, value);
+        }
       });
 
-      //swatch override
-      document.querySelectorAll('.swt-checked input').forEach(function(input) {
-          if (!input.hasAttribute('disabled')) {
-            var name = input.getAttribute('name');
-            var value = input.value;
-        
-            formData.append(name, value);
-          }
+      document.querySelectorAll('.all-wrpp-varit textarea').forEach(function (textarea) {
+        if (!textarea.hasAttribute('disabled')) {
+          var name = textarea.getAttribute('name');
+          var value = textarea.value;
+
+          formData.append(name, value);
+        }
+      });
+
+      // swatch override
+      document.querySelectorAll('.swt-checked input').forEach(function (input) {
+        if (!input.hasAttribute('disabled')) {
+          var name = input.getAttribute('name');
+          var value = input.value;
+
+          formData.append(name, value);
+        }
       });
       /************************************************************/
 
@@ -94,9 +85,9 @@ if (!customElements.get('product-form')) {
 
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
-        .then((response) => {
+        .then(async (response) => {
           if (response.status) {
-            publish(PUB_SUB_EVENTS.cartError, {source: 'product-form', productVariantId: formData.get('id'), errors: response.description, message: response.message});
+            publish(PUB_SUB_EVENTS.cartError, { source: 'product-form', productVariantId: formData.get('id'), errors: response.description, message: response.message });
             this.handleErrorMessage(response.description);
 
             const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
@@ -106,26 +97,26 @@ if (!customElements.get('product-form')) {
             soldOutMessage.classList.remove('hidden');
             this.error = true;
             return;
-          } else if (!this.cart) {
-            window.location = window.routes.cart_url;
-            return;
           }
 
-          if (this.querySelector('[data-quantity-rules]')) {
-            this.querySelector('.quantity__rules-cart').classList.remove('hidden');
-            this.querySelector('.quantity-cart').innerHTML = response.quantity;
-          }
+          // Handle successful addition to cart
+          if (this.cart) {
+            const addedItemId = parseInt(formData.get('id'), 10); // Get the ID of the added item
 
-          if (!this.error) publish(PUB_SUB_EVENTS.cartUpdate, {source: 'product-form', productVariantId: formData.get('id')});
-          this.error = false;
-          const quickAddModal = this.closest('quick-add-modal');
-          if (quickAddModal) {
-            document.body.addEventListener('modalClosed', () => {
-              setTimeout(() => { this.cart.renderContents(response) });
-            }, { once: true });
-            quickAddModal.hide(true);
-          } else {
+            // Perform the Staingard removal logic AFTER cart update
+            setTimeout(async () => {
+              const updatedCart = await this.getCart(); // Fetch the updated cart
+              const addedItem = updatedCart.items.find((item) => item.id === addedItemId);
+
+              if (addedItem && addedItem.product_type === "Sofas") {
+                console.log("Sofa added. Checking for Staingard items to remove.");
+                await this.removeStaingardItems(updatedCart);
+              }
+            }, 0);
+
             this.cart.renderContents(response);
+          } else {
+            window.location = window.routes.cart_url;
           }
         })
         .catch((e) => {
@@ -136,11 +127,48 @@ if (!customElements.get('product-form')) {
           if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
           if (!this.error) this.submitButton.removeAttribute('aria-disabled');
           this.querySelector('.loading-overlay__spinner').classList.add('hidden');
-          if (this.querySelector('[data-quantity-rules]')) {
-            this.querySelector('.loading-overlay__hide')?.classList.add('hidden');
-            this.querySelector('.loading-overlay__show')?.classList.remove('hidden');
-          }
         });
+    }
+
+    async removeStaingardItems(cart) {
+      const staingardItems = cart.items.filter((item) => item.title.includes("Staingard"));
+      if (staingardItems.length === 0) {
+        console.log("No Staingard items found to remove.");
+        return;
+      }
+
+      await Promise.all(
+        staingardItems.map((item) =>
+          fetch("/cart/change.js", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: item.key, quantity: 0 }),
+          })
+        )
+      );
+      console.log("Removed Staingard items.");
+
+      // Refresh the cart UI after Staingard items are removed
+      await this.refreshUI("#CartDrawer");
+      await this.refreshUI(".cart-count-bubble");
+    }
+
+    async refreshUI(selector) {
+      const response = await fetch(location.href);
+      if (!response.ok) throw new Error("Failed to refresh UI");
+      const html = await response.text();
+      const tempDoc = document.createElement("div");
+      tempDoc.innerHTML = html;
+      const newContent = tempDoc.querySelector(selector);
+      if (newContent) {
+        document.querySelector(selector).innerHTML = newContent.innerHTML;
+      }
+    }
+
+    async getCart() {
+      const response = await fetch("/cart.json");
+      if (!response.ok) throw new Error("Failed to fetch cart data");
+      return response.json();
     }
 
     handleErrorMessage(errorMessage = false) {
