@@ -173,6 +173,38 @@
             {% endif %}
           {% endif %}
 
+          {%- if section.settings.use_overlay_1 == true -%}
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% if current_variant.available and current_variant.inventory_quantity > 0 %}
+              <div 
+                class="delivery-msg-1" 
+                style="
+                  color: {{ section.settings.overlay_text_color_1 }}; 
+                  background-color: {{ section.settings.overlay_background_color_1 }};
+                "
+              >
+                {{ section.settings.overlay_text_1 }}
+              </div>
+            {%- endif -%}
+          {% endif %}
+  
+          {%- if section.settings.use_overlay_2 == true -%}
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% if current_variant.available and current_variant.inventory_quantity > 0 %}
+              <div class="delivery-msg-2">
+                <div 
+                  class="text" 
+                  style="
+                    color: {{ section.settings.overlay_text_color_2 }}; 
+                    background-color: {{ section.settings.overlay_background_color_2 }};
+                  "
+                >
+                  {{ section.settings.overlay_text_2 }}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
             <li 

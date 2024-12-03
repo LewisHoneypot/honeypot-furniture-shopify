@@ -2376,6 +2376,12 @@
             "accurate": "Accurate",
             "vague": "Vague"
           },
+          "overlay_text_1_toggle": {
+            "label": "Display Overlay 1"
+          },
+          "overlay_text_2_toggle": {
+            "label": "Display Overlay 2"
+          },
           "christmas_delivery_eta_toggle": {
             "label": "Display Christmas Delivery"
           },
