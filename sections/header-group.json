@@ -16,15 +16,26 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "logo_width": 100,
             "text": "<p>BLACK FRIDAY IS LIVE!  5% OFF EVERYTHING OR PURCHASE 2 ITEMS AND RECEIVE 10% OFF OR 3 OR MORE ITEMS AND RECEIVE 15% OFF - APPLIES AT CHECKOUT</p>"
           }
+        },
+        "announcement_HGqHJD": {
+          "type": "announcement",
+          "settings": {
+            "logo": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1_c8a4e0d9-2fb3-42d9-be03-d28c104446d2.png",
+            "logo_width": 70,
+            "text": "<p>ORDER IN TIME FOR CHRISTMAS! Any item with the Chrsitmas Delivery icon is in stock and ready to be delivered. </p>"
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_HGqHJD"
       ],
+      "disabled": true,
       "settings": {
         "text_size": "small",
         "enable_autoplay": false,
@@ -34,7 +45,7 @@
         "link": "",
         "label_link_2": "",
         "link_2": "",
-        "color_scheme": "accent-1",
+        "color_scheme": "scheme-de5bbc57-70e1-4dc5-98bc-dfe9a942777b",
         "padding_top": 16,
         "padding_bottom": 16,
         "padding_top_mobile": 16,
@@ -65,7 +76,6 @@
         "text_TCMy7h",
         "sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2"
       ],
-      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "type_layout": "scroll",
