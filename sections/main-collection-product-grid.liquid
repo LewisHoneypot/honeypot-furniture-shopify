@@ -979,6 +979,54 @@
     },
     {
       "type": "checkbox",
+      "id": "use_overlay_1",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.delivery_eta.overlay_text_1_toggle.label"
+    },
+    {
+      "type": "text",
+      "id": "overlay_text_1",
+      "label": "Overlay Text 1",
+      "default": "Delivery from Fri, 13 Dec"
+    },
+    {
+      "type": "color",
+      "id": "overlay_text_color_1",
+      "label": "Overlay Text Color 1",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "overlay_background_color_1",
+      "label": "Overlay Background Color 1",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_overlay_2",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.delivery_eta.overlay_text_2_toggle.label"
+    },
+    {
+      "type": "text",
+      "id": "overlay_text_2",
+      "label": "Overlay Text 2",
+      "default": "PRE-CHRISTMAS DELIVERY"
+    },
+    {
+      "type": "color",
+      "id": "overlay_text_color_2",
+      "label": "Overlay Text Color 2",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_background_color_2",
+      "label": "Overlay Background Color 2",
+      "default": "#000"
+    },
+    {
+      "type": "checkbox",
       "id": "christmas_delivery_eta_toggle",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.delivery_eta.christmas_delivery_eta_toggle.label"
@@ -1252,6 +1300,32 @@
     max-width: 150px;
   }
 } */
+
+.delivery-msg-1 {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 0;
+  padding: 10px 15px 10px 15px;
+  color: #000;
+  background-color: #fff;
+}
+
+.delivery-msg-2 {
+  position: absolute;
+  z-index: 5;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  .text {
+    color: #fff;
+    background-color: #000;
+    margin: auto;
+    padding: 10px 15px 10px 15px;
+    font-size: 12px;
+  }
+}
 
 /* Filter hovers */
 .facets__summary.c-pointer.pos-relative.focus-offset.link--style-line.h-link.text-size-default:hover, .sorting-label:hover {
