@@ -14,6 +14,7 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Naples_Sofa_Mocha_32_Set_-_Christmas_Campaign_2024_-_Hero_Horizontal_1.jpg",
             "mobile_image": "shopify://shop_images/Naples_Sofa_Mocha_32_Set_-_Christmas_Campaign_2024_-_Hero_Horizontal_1.jpg",
