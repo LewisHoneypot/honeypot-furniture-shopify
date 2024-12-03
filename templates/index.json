@@ -14,13 +14,12 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Naples_Sofa_Mocha_32_Set_-_Christmas_Campaign_2024_-_Hero_Horizontal_1.jpg",
             "mobile_image": "shopify://shop_images/Naples_Sofa_Mocha_32_Set_-_Christmas_Campaign_2024_-_Hero_Horizontal_1.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
-            "heading": "Time is running out for Christmas Delivery!",
+            "heading": "Time is running out Christmas Delivery!",
             "heading_size": "small",
             "heading_margin_bottom": 20,
             "subheading": "Order before December 10th to receive your sofa in time for Christmas!",
