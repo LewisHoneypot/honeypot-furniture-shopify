@@ -916,9 +916,9 @@
 
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                      <script>
+                      {% comment %} <script>
                         console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
-                      </script>
+                      </script> {% endcomment %}
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
@@ -1056,9 +1056,17 @@
                           <strong class="pr-1 mr-1">{{ formatted_date_2 }}</strong>
                         {%- else -%}
                           {%- if in_stock == true -%}
-                            <strong class="pr-1 mr-1">Tomorrow</strong>
+                            <strong class="pr-1 mr-1"> Tomorrow</strong>
                           {%- else -%}
-                            <strong class="pr-1 mr-1">2 Weeks</strong>
+                            {%- if block.settings.tiers == 'on' -%}
+                              {%- if product.metafields.Details.ProductTier == 1 -%}
+                                <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
+                              {%- elsif product.metafields.Details.ProductTier == 2 -%}
+                                <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
+                              {%- endif -%}
+                            {%- else -%}
+                              <strong class="pr-1 mr-1"> 2 weeks</strong>
+                            {%- endif -%}
                           {%- endif -%}
                         {%- endif -%}
                       </div>
