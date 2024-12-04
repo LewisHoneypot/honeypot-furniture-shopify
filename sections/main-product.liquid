@@ -916,9 +916,9 @@
 
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                      <script>
+                      {% comment %} <script>
                         console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
-                      </script>
+                      </script> {% endcomment %}
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
