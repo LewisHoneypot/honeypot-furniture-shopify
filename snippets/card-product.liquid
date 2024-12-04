@@ -850,17 +850,17 @@
                   {%- assign date_2 = 0 -%}
 
                   {%- if collection_titles contains 'Sofas' -%}
-                    {%- if block.settings.tiers == 'on' -%}
-                      {%- if product.metafields.Details.ProductTier == 1 -%}
-                        {%- if product.available and in_stock == true -%}
+                    {%- if section.settings.tiers == 'on' -%}
+                      {%- if card_product.metafields.Details.ProductTier == 1 -%}
+                        {%- if card_product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
                           {%- assign date_2 = 7 -%}
                         {%- else -%}
                           {%- assign date_1 = 7 -%}
                           {%- assign date_2 = 42 -%}
                         {%- endif -%}
-                      {%- elsif product.metafields.Details.ProductTier == 2 -%}
-                        {%- if product.available and in_stock == true -%}
+                      {%- elsif card_product.metafields.Details.ProductTier == 2 -%}
+                        {%- if card_product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
                           {%- assign date_2 = 7 -%}
                         {%- else -%}
@@ -869,7 +869,7 @@
                         {%- endif -%}
                       {%- endif -%}
                     {%- else -%}
-                      {%- if product.available and in_stock == true -%}
+                      {%- if card_product.available and in_stock == true -%}
                         {%- assign date_1 = 1 -%}
                         {%- assign date_2 = 7 -%}
                       {%- else -%}
@@ -983,7 +983,15 @@
                           {%- if in_stock == true -%}
                             <strong class="pr-1 mr-1"> Tomorrow</strong>
                           {%- else -%}
-                            <strong class="pr-1 mr-1"> 2 Weeks</strong>
+                            {%- if section.settings.tiers == 'on' -%}
+                              {%- if card_product.metafields.Details.ProductTier == 1 -%}
+                                <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
+                              {%- elsif card_product.metafields.Details.ProductTier == 2 -%}
+                                <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
+                              {%- endif -%}
+                            {%- else -%}
+                              <strong class="pr-1 mr-1"> 2 weeks</strong>
+                            {%- endif -%}
                           {%- endif -%}
                         {%- endif -%}
 
