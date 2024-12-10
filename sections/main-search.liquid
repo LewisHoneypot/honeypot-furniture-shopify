@@ -71,7 +71,7 @@
                     spellcheck="false"
                   {%- endif -%}
                 >
-                <label class="field__label field__label--fixed pos-absolute e-none subrte" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                <label class="field__label field__label--fixed pos-absolute e-none subrte" for="Search-In-Template"></label>
                 <input name="options[prefix]" type="hidden" value="last">
 
                 {%- if settings.predictive_search_enabled -%}
@@ -91,7 +91,7 @@
                 </button>
               </div>
               <button type="reset" class="reset__button link u-link link--style-line t-button b-none c-pointer bg-transparent p-0 m-t{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}" style="--m-t: 1.5rem;">
-                <span class="link-style">{{ 'general.search.reset' | t }}</span>
+                {% comment %} <span class="link-style">{{ 'general.search.reset' | t }}</span> {% endcomment %}
               </button>
             </form>
           </main-search>
@@ -112,7 +112,10 @@
         {%- endif -%}
       </div>
       {%- if search.performed -%}
-        <div{% if search.filters != empty %} class="facets-{{ section.settings.filter_type }} clearfix"{% endif %}>
+
+        <div id="nosto-results"></div>
+        
+        {% comment %} <div{% if search.filters != empty %} class="facets-{{ section.settings.filter_type }} clearfix"{% endif %}>
           {%- if search.filters != empty -%}
             {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
               <aside aria-labelledby="verticalTitle" class="facets-wrapper facets-wrapper__{{ section.settings.filter_type }}{% unless section.settings.enable_filtering %} facets-wrapper--no-filters pos-relative w-100{% endunless %}" id="main-search-filters" data-id="{{ section.id }}">
@@ -268,7 +271,7 @@
               {%- endpaginate -%}
             {%- endif -%}
           </div>
-        </div>
+        </div> {% endcomment %}
       {%- endif -%}
     </div>
   </div>

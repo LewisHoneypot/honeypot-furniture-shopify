@@ -147,7 +147,10 @@
         </div>
       </div>
     {%- endif -%}
-    <div class="p-w__content">
+
+    <div id="nosto-collection"></div>
+
+    {% comment %} <div class="p-w__content">
       <div class="facets-{{ section.settings.filter_type }} clearfix">
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
           <aside
@@ -435,7 +438,7 @@
           {%- endpaginate -%}
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 
