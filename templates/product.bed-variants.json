@@ -42,6 +42,10 @@
             "padding_bottom": 5
           }
         },
+        "glo_color_swatch_product_swatches_detail_TfYAXR": {
+          "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
+          "settings": {}
+        },
         "size_chart_kqc3gt": {
           "type": "size_chart",
           "disabled": true,
@@ -59,6 +63,7 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
+            "tiers": "off",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
@@ -104,6 +109,7 @@
           "disabled": true,
           "settings": {
             "title": "Staingard",
+            "pricing_type": "seating_capacity",
             "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
@@ -121,6 +127,7 @@
         "title",
         "price",
         "variant_picker_AJEB8c",
+        "glo_color_swatch_product_swatches_detail_TfYAXR",
         "size_chart_kqc3gt",
         "expected_delivery_4HJChA",
         "buy_buttons",
@@ -145,6 +152,14 @@
         "padding_bottom": 32,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 30,
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000",
+        "overlay_background_color_1": "#fff",
+        "use_overlay_2": false,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#fff",
+        "overlay_background_color_2": "#000",
         "christmas_delivery_eta_toggle": false
       }
     },
