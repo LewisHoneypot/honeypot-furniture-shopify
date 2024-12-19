@@ -94,10 +94,6 @@
             "padding_bottom": 5
           }
         },
-        "glo_color_swatch_product_swatches_detail_TfYAXR": {
-          "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
-          "settings": {}
-        },
         "snap_buttons_rnjz4z": {
           "type": "snap_buttons",
           "settings": {
@@ -130,7 +126,6 @@
         "size_chart_kqc3gt",
         "expected_delivery_4HJChA",
         "buy_buttons",
-        "glo_color_swatch_product_swatches_detail_TfYAXR",
         "snap_buttons_rnjz4z",
         "staingard_drawer_iWbVLW"
       ],
