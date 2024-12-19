@@ -175,38 +175,36 @@
       try {
         const response = await fetch(
           'https://cdn.shopify.com/s/files/1/0857/1358/4415/files/deliverycharges.json'
-        ); // Replace URL with your JSON data endpoint
+        );
         const data = await response.json();
 
-        // Find the entry for the given postcode
         const entry = data.find((item) => item.postcode === postcode);
 
         if (entry && entry.delivery_charges !== "Sorry! We don't deliver here.") {
-          delivery_charges = entry.delivery_charges;
+          return {
+            delivery_charges: entry.delivery_charges,
+            delivery_day: entry.delivery_day !== "N/A" ? entry.delivery_day : 'Not available',
+          };
         } else {
-          return 'Not available';
-        }
-        if (entry && entry.delivery_day !== "N/A") {
-          delivery_day = entry.delivery_day;
-        } else {
-          return 'Not available';
+          return { error: "Sorry! We don't deliver here." };
         }
       } catch (error) {
         console.error('Error fetching delivery cost:', error);
-        return 'Not available';
+        return { error: 'Not available' };
       }
     };
 
     const renderDeliveryCost = async (postcode) => {
-      const deliveryCost = await fetchDeliveryCost(postcode);
+      const result = await fetchDeliveryCost(postcode);
       const deliveryDayResult = document.getElementById('delivery-day-result');
       const deliveryCostResult = document.getElementById('delivery-cost-result');
 
-      if (deliveryCost !== 'Not available') {
-        deliveryDayResult.textContent = `We deliver to your area (${postcode}) on: ${delivery_day}`;
-        deliveryCostResult.textContent = `Delivery Charge: £${delivery_charges}`;
+      if (result.error) {
+        deliveryDayResult.textContent = ``;
+        deliveryCostResult.textContent = result.error;
       } else {
-        deliveryCostResult.textContent = `Sorry, delivery information is not available for this postcode.`;
+        deliveryDayResult.textContent = `We deliver to your area (${postcode}) on: ${result.delivery_day}`;
+        deliveryCostResult.textContent = `Delivery Charge: £${result.delivery_charges}`;
       }
     };
 
