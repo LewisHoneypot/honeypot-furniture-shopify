@@ -17,6 +17,32 @@
       "disabled": false,
       "settings": {},
       "blocks": {}
+    },
+    "0b6105a9-a3ce-4181-b45b-7a55c709e140": {
+      "settings": {},
+      "blocks": {
+        "marquee_6FBeq9": {
+          "settings": {
+            "text": "<p>Free Returns</p>"
+          }
+        },
+        "marquee_JxL8Kw": {
+          "settings": {
+            "text": "<p>Free Delivery & Setup</p>"
+          }
+        },
+        "marquee_kD9cM4": {
+          "settings": {
+            "text": "<p>Unlimited Customisations</p>"
+          }
+        },
+        "marquee_3RkMqm": {
+          "disabled": false,
+          "settings": {
+            "text": "<p>British Quality Guarantee</p>"
+          }
+        }
+      }
     }
   }
 }
