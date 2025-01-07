@@ -12,5 +12,12 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "header": {
+      "settings": {
+        "menu": "uae-menu"
+      },
+      "blocks": {}
+    }
+  }
 }
