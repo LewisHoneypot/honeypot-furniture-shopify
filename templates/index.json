@@ -576,6 +576,34 @@
         "padding_bottom_mobile": 0
       }
     },
+    "17364240654517feb4": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_U9jEWT": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "frontpage-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_U9jEWT"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "collection_list_NKqtYJ": {
       "type": "collection-list",
       "blocks": {
@@ -1411,6 +1439,7 @@
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
     "1736424003f2ba2ed5",
     "trustpilot_service_reviews_mini_qrrfxa",
+    "17364240654517feb4",
     "collection_list_NKqtYJ",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
     "3d277f0b-f31b-482d-996e-089de61f3e90",
