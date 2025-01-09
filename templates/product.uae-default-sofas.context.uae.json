@@ -12,5 +12,46 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "title": {
+          "settings": {
+            "layout": "default",
+            "font_weight": "normal"
+          }
+        },
+        "expected_delivery_TKcTdt": {
+          "disabled": true,
+          "settings": {}
+        },
+        "glo_color_swatch_product_swatches_detail_Q9a74": {
+          "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
+          "disabled": false,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "usp_drawer_1_h8wxkV",
+        "usp_drawer_2_Yk9cgj",
+        "glo_color_swatch_product_swatches_detail_Q9a74",
+        "buy_buttons",
+        "expected_delivery_TKcTdt"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "drawers_Ut99DD",
+    "as_seen_in_Pnd8YJ",
+    "trustpilot_product_reviews_collapsible_8YH8Ak",
+    "multicolumn_FJHgEr",
+    "lookbook_pGUge4",
+    "related-products",
+    "recently-products",
+    "newsletter_Lkdri8"
+  ]
 }
