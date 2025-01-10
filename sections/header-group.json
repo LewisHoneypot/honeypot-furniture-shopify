@@ -180,7 +180,7 @@
         "use_button_label": "Button label",
         "use_button_link": "",
         "icon_type_style": "classic",
-        "enable_search": true,
+        "enable_search": false,
         "enable_account": false,
         "enable_cart": true,
         "enable_wishlist": false,
