@@ -93,7 +93,33 @@
       </h1>
     </div>
   {%- endif -%}
-  <header class="header main--icons-style-{{ section.settings.icon_type_style }}{% if section.settings.type_style != 'special' %} header--{{ section.settings.logo_position }}{% else %}  header--middle-left{% endif %}{% if section.settings.logo_position == 'middle-left' or section.settings.logo_position == 'middle-right' %}{% if section.settings.logo_width >= 110 %} header--nav__center{% endif %}{% endif %} {{ header__icons_desktop }} {{ header__icons_mobile }}{% if section.settings.use_custom_button %} has-button--customized{% endif %} d-grid header--mobile-{{ section.settings.mobile_logo_position }} {{ section.settings.section_width }} m-auto{% if section.settings.menu != blank %} header--has-menu{% endif %} spacing"
+  <header 
+    class="
+      header 
+      main--icons-style-{{ section.settings.icon_type_style }}
+      {% if section.settings.type_style != 'special' %} 
+        header--{{ section.settings.logo_position }}
+      {% else %}  
+        header--middle-left
+      {% endif %}
+      {% if section.settings.logo_position == 'middle-left' or section.settings.logo_position == 'middle-right' %}
+        {% if section.settings.logo_width >= 110 %} 
+          header--nav__center
+        {% endif %}
+      {% endif %} 
+      {{ header__icons_desktop }} 
+      {{ header__icons_mobile }}
+      {% if section.settings.use_custom_button %} 
+        has-button--customized
+      {% endif %} 
+      d-grid header--mobile-{{ section.settings.mobile_logo_position }} 
+      {{ section.settings.section_width }} 
+      m-auto
+      {% if section.settings.menu != blank %} 
+        header--has-menu
+      {% endif %} 
+      spacing
+    " 
     style="{% if section.settings.section_width == 'customized-width' %}--page-width: {{ section.settings.customize_width }}px;{% endif %}
       --padding-top: {{ section.settings.padding_top }}px;
       --padding-bottom: {{ section.settings.padding_bottom }}px;" 
@@ -952,6 +978,13 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
+    
+    {%- if section.settings.use_wide_search == true -%}
+      <div class="j-s-center" style="top: -115px; position: relative; left: 41px; margin-bottom: -76px;">
+        <input class="search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">
+      </div>
+    {%- endif -%}
+
     {%- if request.page_type == 'index' and section.settings.logo_position == 'top-center-special' and section.settings.type_style != 'special' -%}
       <div class="header__heading selector-special-inline d-flex{% if check_header__icons_desktop %} d-none-l{% endif %}{% if section.settings.mobile_logo_position == 'left' %} d-none-mw-md{% endif %} {{ section.settings.logo_alignment_desktop | prepend: 'j-s-' }}{% if section.settings.type_style == 'special' %} a-i-center{% endif %}">
         {%- liquid
@@ -2043,6 +2076,12 @@
   {
     "type": "header",
     "content": "t:sections.header.settings.enable_header.heading__1"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_wide_search",
+    "label": "Use Wide Search",
+    "default": false
   },
   {
     "type": "checkbox",
