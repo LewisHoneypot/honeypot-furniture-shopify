@@ -26369,7 +26369,7 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1024px){
   .wide-search {
     display: none !important;
   }
