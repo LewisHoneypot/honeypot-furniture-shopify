@@ -982,13 +982,13 @@
     {%- if section.settings.use_wide_search == true -%}
       <div class="j-s-center" 
         style="
-          top: -115px; 
+          top: -122px; 
           position: relative; 
           left: 15px; 
           margin-bottom: -76px;
         "
       >
-        <form class="search">
+        <form class="search wide-search">
           <input class="search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" 
             style="
               min-width: 39vw; 
@@ -997,6 +997,13 @@
               border: solid 1px #000;
             "
           >
+            <button type="submit" class="search__button field__button pos-absolute pos-absolute-c-r d-flex a-i-center j-c-center t-button b-none c-pointer p-0 o-h" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search icon-search-basic" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" role="presentation">
+                <g id="Search">
+                <path id="Vector" d="M22 20.954L16.4133 15.3673C17.7558 13.7556 18.4253 11.6884 18.2825 9.59562C18.1396 7.50288 17.1954 5.54579 15.6464 4.13146C14.0973 2.71713 12.0626 1.95446 9.96554 2.00211C7.86847 2.04975 5.87051 2.90405 4.38728 4.38728C2.90405 5.87051 2.04975 7.86847 2.00211 9.96554C1.95446 12.0626 2.71713 14.0973 4.13146 15.6464C5.54579 17.1954 7.50288 18.1396 9.59562 18.2825C11.6884 18.4253 13.7556 17.7558 15.3673 16.4133L20.954 22L22 20.954ZM3.50598 10.1638C3.50598 8.84703 3.89645 7.5598 4.62803 6.46492C5.3596 5.37004 6.39941 4.51669 7.61598 4.01277C8.83254 3.50886 10.1712 3.37701 11.4627 3.6339C12.7542 3.8908 13.9405 4.5249 14.8716 5.45601C15.8028 6.38713 16.4369 7.57345 16.6937 8.86494C16.9506 10.1564 16.8188 11.4951 16.3149 12.7117C15.811 13.9282 14.9576 14.9681 13.8627 15.6996C12.7678 16.4312 11.4806 16.8217 10.1638 16.8217C8.39865 16.8197 6.70634 16.1176 5.45818 14.8695C4.21001 13.6213 3.50793 11.929 3.50598 10.1638Z" fill="currentColor"></path>
+                </g>
+              </svg>
+            </button>
         </form>
       </div>
     {%- endif -%}
