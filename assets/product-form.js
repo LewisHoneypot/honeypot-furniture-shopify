@@ -109,7 +109,7 @@ if (!customElements.get('product-form')) {
               const addedItem = updatedCart.items.find((item) => item.id === addedItemId);
 
               if (addedItem && addedItem.product_type === "Sofas") {
-                console.log("Sofa added. Checking for Staingard items to remove.");
+                // console.log("Sofa added. Checking for Staingard items to remove.");
                 await this.removeStaingardItems(updatedCart);
               }
             }, 0);
@@ -133,7 +133,7 @@ if (!customElements.get('product-form')) {
     async removeStaingardItems(cart) {
       const staingardItems = cart.items.filter((item) => item.title.includes("Staingard"));
       if (staingardItems.length === 0) {
-        console.log("No Staingard items found to remove.");
+        // console.log("No Staingard items found to remove.");
         return;
       }
 
@@ -146,7 +146,7 @@ if (!customElements.get('product-form')) {
           })
         )
       );
-      console.log("Removed Staingard items.");
+      // console.log("Removed Staingard items.");
 
       // Refresh the cart UI after Staingard items are removed
       await this.refreshUI("#CartDrawer");
