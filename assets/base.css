@@ -26374,3 +26374,7 @@ body.multitasking__show .newsletter-popup-opener {
     display: none !important;
   }
 }
+
+.nosto-search-form input::placeholder {
+  opacity: 1;
+}
