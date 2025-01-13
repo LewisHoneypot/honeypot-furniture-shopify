@@ -30,7 +30,7 @@
           "settings": {
             "picker_type": "dropdown",
             "swatch": "Color",
-            "header-da9f690f186a66ab5a4f564dcf71105e": null,
+            "header-f01b55d37004876c5ca0793c5001555d": null,
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -43,6 +43,22 @@
         "expected_delivery_TKcTdt": {
           "disabled": true,
           "settings": {}
+        },
+        "complementary_BBTnU": {
+          "type": "complementary",
+          "disabled": false,
+          "settings": {
+            "paragraph-67451515a8045b31c40c708b1494c0bc": null,
+            "heading": "View The Range",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "header-f3c944b1e759d0cbf0121a6f5bf5fbea": null,
+            "image_ratio": "square",
+            "show_swatch": false,
+            "header-62fd6ccb05935c383650cd75bf892483": null,
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
         }
       },
       "block_order": [
@@ -52,6 +68,7 @@
         "usp_drawer_2_Yk9cgj",
         "variant_picker_3iMFX",
         "glo_color_swatch_product_swatches_detail_Q9a74",
+        "complementary_BBTnU",
         "buy_buttons",
         "expected_delivery_TKcTdt"
       ]
