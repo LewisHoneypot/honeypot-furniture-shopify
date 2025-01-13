@@ -14,7 +14,9 @@
   },
   "sections": {
     "main": {
-      "settings": {},
+      "settings": {
+        "use_overlay_2": false
+      },
       "blocks": {
         "title": {
           "settings": {
@@ -22,13 +24,13 @@
             "font_weight": "normal"
           }
         },
-        "expected_delivery_TKcTdt": {
-          "disabled": true,
-          "settings": {}
-        },
         "glo_color_swatch_product_swatches_detail_Q9a74": {
           "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
           "disabled": false,
+          "settings": {}
+        },
+        "expected_delivery_TKcTdt": {
+          "disabled": true,
           "settings": {}
         }
       },
