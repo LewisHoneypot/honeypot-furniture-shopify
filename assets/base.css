@@ -26368,3 +26368,9 @@ body.multitasking__show .newsletter-popup-opener {
     max-height: 27px;
   }
 }
+
+@media screen and (max-width: 1024px){
+  .wide-search {
+    display: none !important;
+  }
+}
