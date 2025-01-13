@@ -24,13 +24,26 @@
             "font_weight": "normal"
           }
         },
+        "drawer_c9e9i": {
+          "type": "drawer",
+          "disabled": false,
+          "settings": {
+            "heading": "View the Range",
+            "font": "normal",
+            "content_type": "view_the_range",
+            "content": "",
+            "page": "",
+            "colors_background": "#fff",
+            "colors_border": "#707070"
+          }
+        },
         "variant_picker_3iMFX": {
           "type": "variant_picker",
           "disabled": true,
           "settings": {
             "picker_type": "dropdown",
             "swatch": "Color",
-            "header-f01b55d37004876c5ca0793c5001555d": null,
+            "header-4433707328020286291f50289a7eebbe": null,
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -44,20 +57,11 @@
           "disabled": true,
           "settings": {}
         },
-        "complementary_BBTnU": {
-          "type": "complementary",
+        "s_contact_form_builder_block_app_hbUMm": {
+          "type": "shopify://apps/s-contact-form-builder/blocks/block-app/cceef8dd-a4f1-4344-962d-06bf0022ec0d",
           "disabled": false,
           "settings": {
-            "paragraph-67451515a8045b31c40c708b1494c0bc": null,
-            "heading": "View The Range",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "header-f3c944b1e759d0cbf0121a6f5bf5fbea": null,
-            "image_ratio": "square",
-            "show_swatch": false,
-            "header-62fd6ccb05935c383650cd75bf892483": null,
-            "padding_top": 5,
-            "padding_bottom": 5
+            "ify_contactform_short_code": "<button class=\"storeify-formbuilder-button\" style=\"border:0; font-size: 16px;color: #FFFFFF;background:#000000\" data-target=\"#storeify-light-modal-18882\">Customise your Dream Sofa</button>"
           }
         }
       },
@@ -66,11 +70,12 @@
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "drawer_c9e9i",
         "variant_picker_3iMFX",
         "glo_color_swatch_product_swatches_detail_Q9a74",
-        "complementary_BBTnU",
         "buy_buttons",
-        "expected_delivery_TKcTdt"
+        "expected_delivery_TKcTdt",
+        "s_contact_form_builder_block_app_hbUMm"
       ]
     }
   },
