@@ -5,34 +5,34 @@
       {% comment %} {%- assign page_seating_capacity = product.variants[0].weight | divided_by: 1000 -%} {% endcomment %}
 
       {% comment %} <script> {% endcomment %}
-        {% comment %} console.log('staingard-drawer product_log: ', {{ product_log }}); {% endcomment %}
-        {% comment %} console.log('staingard-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
+      {% comment %} console.log('staingard-drawer product_log: ', {{ product_log }}); {% endcomment %}
+      {% comment %} console.log('staingard-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
       {% comment %} </script> {% endcomment %}
 
-      {% comment %}       
-      {% if page_seating_capacity > 6 %}
-        {% assign page_seating_capacity = 6 %}
-      {% endif %}
+      {% comment %}
+        {% if page_seating_capacity > 6 %}
+          {% assign page_seating_capacity = 6 %}
+        {% endif %}
 
-      {% if page_seating_capacity == 1 %}
-        {% comment %} £40 {% endcomment %}
-        {% assign staingard_id = 48612272898335 %}
-      {% elsif page_seating_capacity == 2 %}
-        {% comment %} £80 {% endcomment %}
-        {% assign staingard_id = 48612274700575 %}
-      {% elsif page_seating_capacity == 3 %}
-        {% comment %} £120 {% endcomment %}
-        {% assign staingard_id = 48626777522463 %}
-      {% elsif page_seating_capacity == 4 %}
-        {% comment %} £160 {% endcomment %}
-        {% assign staingard_id = 48626778505503 %}
-      {% elsif page_seating_capacity == 5 %}
-        {% comment %} £200 {% endcomment %}
-        {% assign staingard_id = 48626778964255 %}
-      {% elsif page_seating_capacity >= 6 %}
-        {% comment %} £240 {% endcomment %}
-        {% assign staingard_id = 48626779390239 %}
-      {% endif %}
+        {% if page_seating_capacity == 1 %}
+          {% comment %} £40 {% endcomment %}
+          {% assign staingard_id = 48612272898335 %}
+        {% elsif page_seating_capacity == 2 %}
+          {% comment %} £80 {% endcomment %}
+          {% assign staingard_id = 48612274700575 %}
+        {% elsif page_seating_capacity == 3 %}
+          {% comment %} £120 {% endcomment %}
+          {% assign staingard_id = 48626777522463 %}
+        {% elsif page_seating_capacity == 4 %}
+          {% comment %} £160 {% endcomment %}
+          {% assign staingard_id = 48626778505503 %}
+        {% elsif page_seating_capacity == 5 %}
+          {% comment %} £200 {% endcomment %}
+          {% assign staingard_id = 48626778964255 %}
+        {% elsif page_seating_capacity >= 6 %}
+          {% comment %} £240 {% endcomment %}
+          {% assign staingard_id = 48626779390239 %}
+        {% endif %}
       {% endcomment %}
 
       {% comment %} <script>console.log('staingard-drawer staingard_id: ', {{ staingard_id }});</script> {% endcomment %}
@@ -79,13 +79,15 @@
                 >
               {%- else -%}
                 <img
-                  srcset="{% if block.settings.main_image %}
-                    {{ block.settings.main_image | image_url: width: 360 }} 360w,
-                    {{ block.settings.main_image | image_url: width: 550 }} 550w,
-                    {{ block.settings.main_image | image_url: width: 750 }} 750w,
-                    {{ block.settings.main_image | image_url: width: 1000 }} 1000w,
-                    {{ block.settings.main_image | image_url: width: 1200 }} 1200w
-                  {% endif %}"
+                  srcset="
+                    {% if block.settings.main_image %}
+                      {{ block.settings.main_image | image_url: width: 360 }} 360w,
+                      {{ block.settings.main_image | image_url: width: 550 }} 550w,
+                      {{ block.settings.main_image | image_url: width: 750 }} 750w,
+                      {{ block.settings.main_image | image_url: width: 1000 }} 1000w,
+                      {{ block.settings.main_image | image_url: width: 1200 }} 1200w
+                    {% endif %}
+                  "
                   sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
                   src="{{ block.settings.main_image | image_url: width: 750 }}"
                   {% if block.settings.main_image.alt != blank %}
@@ -108,16 +110,13 @@
 
               {% for item in cart.items %}
                 {% if item.product.type == 'Sofas' %}
-
                   {% if block.settings.pricing_type == 'price' %}
-
                     {% assign new_price = item.product.price %}
                     {% assign new_price = new_price | times: item.quantity %}
 
                     {% assign page_new_price = page_new_price | plus: new_price %}
 
                   {% elsif block.settings.pricing_type == 'seating_capacity' %}
-                  
                     {% if item.grams %}
                       {% comment %} <script>console.log('staingard-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
 
@@ -130,7 +129,6 @@
                     {% else %}
                       {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
                     {% endif %}
-
                   {% endif %}
 
                 {% else %}
@@ -139,7 +137,6 @@
               {% endfor %}
 
               {% if block.settings.pricing_type == 'price' %}
-
                 {% assign sofas_price = page_new_price %}
                 {% comment %} <div>{{ sofas_price }}</div> {% endcomment %}
 
@@ -181,7 +178,6 @@
                 </p>
 
               {% elsif block.settings.pricing_type == 'seating_capacity' %}
-
                 {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
                 {% assign seating_capacity = page_seating_capacity %}
 
@@ -214,7 +210,6 @@
                 <p>
                   <strong id="staingard-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
                 </p>
-
               {% endif %}
 
               <p class="left" style="display: inline-block;">
@@ -496,4 +491,15 @@
         }
       });
   }
+
+  // Create a global theme object with a refreshCart method
+  window.theme = {
+    refreshCart: function () {
+      {% comment %} console.log('theme.refreshCart started.'); {% endcomment %}
+      refreshCartDrawer();
+      refreshCartBubble();
+      refreshStaingardDrawer();
+      {% comment %} console.log('theme.refreshCart completed.'); {% endcomment %}
+    },
+  };
 </script>
