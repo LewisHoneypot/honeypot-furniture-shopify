@@ -264,6 +264,34 @@
         "padding_bottom_mobile": 0
       }
     },
+    "1736163654e8d791fe": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_adT36z": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_adT36z"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "as_seen_in_Pnd8YJ": {
       "type": "as-seen-in",
       "settings": {
@@ -598,34 +626,6 @@
         "padding_bottom_mobile": 15
       }
     },
-    "1736163654e8d791fe": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_adT36z": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "product-page-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_adT36z"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "1736163667c8a5c273": {
       "type": "apps",
       "blocks": {
@@ -766,15 +766,15 @@
   "order": [
     "main",
     "drawers_Ut99DD",
+    "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
     "video_FxQj6U",
+    "1736163667c8a5c273",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "multicolumn_FJHgEr",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
     "related-products",
-    "1736163654e8d791fe",
-    "1736163667c8a5c273",
     "17361637054b91e455",
     "recently-products",
     "newsletter_Lkdri8"
