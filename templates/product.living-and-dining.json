@@ -403,6 +403,34 @@
         "secondary_button_color_scheme": ""
       }
     },
+    "17368723341d549696": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_JERfXa": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_JERfXa"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "video_QM4Cg7": {
       "type": "video",
       "disabled": true,
@@ -665,6 +693,7 @@
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "17368723211b28aaee",
     "trustpilot_product_revewis_Eb8Cd6",
+    "17368723341d549696",
     "video_QM4Cg7",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
