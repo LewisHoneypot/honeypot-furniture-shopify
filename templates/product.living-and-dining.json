@@ -34,8 +34,8 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font_size": 16,
             "font": "normal",
+            "font_size": 16,
             "font_weight": "normal",
             "font_style": "normal",
             "padding_top": 0,
@@ -98,6 +98,7 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
+            "tiers": "off",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
@@ -126,6 +127,7 @@
           "type": "staingard_drawer",
           "settings": {
             "title": "Staingard",
+            "pricing_type": "seating_capacity",
             "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
@@ -168,7 +170,16 @@
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 30,
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000",
+        "overlay_background_color_1": "#fff",
+        "use_overlay_2": false,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#fff",
+        "overlay_background_color_2": "#000",
+        "christmas_delivery_eta_toggle": false
       }
     },
     "d429c49f-e09d-426d-a360-6ab92fc46930": {
@@ -369,6 +380,7 @@
       "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
+        "video_width": 1000,
         "video_url": "",
         "description": "",
         "enable_autoplay": false,
@@ -422,6 +434,8 @@
       ],
       "disabled": true,
       "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
         "use_hr": false,
         "font": "normal",
         "heading": "Shop The Look",
@@ -433,6 +447,7 @@
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
+        "carousel_background_colour": "#F4F4F4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
@@ -520,6 +535,7 @@
     },
     "recently-products": {
       "type": "recently-products",
+      "disabled": true,
       "settings": {
         "heading": "Recently Viewed Products",
         "heading_margin_bottom": 32,
