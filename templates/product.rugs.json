@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,6 +15,8 @@
         "title": {
           "type": "title",
           "settings": {
+            "layout": "default",
+            "font_weight": "normal",
             "padding_top": 12,
             "padding_bottom": 12,
             "heading_size": "default"
@@ -32,6 +34,10 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
+            "font": "normal",
+            "font_size": 13,
+            "font_weight": "normal",
+            "font_style": "normal",
             "padding_top": 0,
             "padding_bottom": 10
           }
@@ -100,16 +106,20 @@
           "type": "drawer",
           "settings": {
             "heading": "More Sizes",
+            "font": "normal",
             "content_type": "view_the_range",
             "content": "",
-            "page": ""
+            "page": "",
+            "colors_background": "#fff",
+            "colors_border": "#707070"
           }
         },
         "staingard_drawer_iWbVLW": {
           "type": "staingard_drawer",
           "settings": {
             "title": "Staingard",
-            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "pricing_type": "seating_capacity",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -150,7 +160,16 @@
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 30,
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000",
+        "overlay_background_color_1": "#fff",
+        "use_overlay_2": false,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#fff",
+        "overlay_background_color_2": "#000",
+        "christmas_delivery_eta_toggle": false
       }
     },
     "slideshow_Gx6AXC": {
@@ -304,9 +323,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free return within 15 days<\/p>",
+            "text": "<p>Free return within 15 days</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
@@ -317,9 +336,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free shipping on orders over 49$<\/p>",
+            "text": "<p>Free shipping on orders over 49$</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
@@ -330,9 +349,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>No harmful chemicals<\/p>",
+            "text": "<p>No harmful chemicals</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
@@ -343,9 +362,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Fresh and clean product<\/p>",
+            "text": "<p>Fresh and clean product</p>",
             "link_label": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         }
       },
@@ -410,10 +429,15 @@
           "type": "logos",
           "settings": {
             "image_picker_link1": "",
+            "image_picker_alt1": "",
             "image_picker_link2": "",
+            "image_picker_alt2": "",
             "image_picker_link3": "",
+            "image_picker_alt3": "",
             "image_picker_link4": "",
-            "image_picker_link5": ""
+            "image_picker_alt4": "",
+            "image_picker_link5": "",
+            "image_picker_alt5": ""
           }
         },
         "buttons_ptFHaB": {
@@ -472,7 +496,7 @@
           "settings": {
             "heading": "Delivery",
             "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Assembly in any room of choice included<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -486,7 +510,7 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
-            "content": "<p>Metafield<\/p>",
+            "content": "<p>Metafield</p>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -514,7 +538,7 @@
           "settings": {
             "heading": "Features",
             "content_type": "custom",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -527,7 +551,7 @@
           "settings": {
             "heading": "Description",
             "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
@@ -560,10 +584,15 @@
           "type": "logos",
           "settings": {
             "image_picker_link1": "",
+            "image_picker_alt1": "",
             "image_picker_link2": "",
+            "image_picker_alt2": "",
             "image_picker_link3": "",
+            "image_picker_alt3": "",
             "image_picker_link4": "",
-            "image_picker_link5": ""
+            "image_picker_alt4": "",
+            "image_picker_link5": "",
+            "image_picker_alt5": ""
           }
         }
       },
@@ -576,7 +605,7 @@
         "customize_width": 1800,
         "custom_rouded": false,
         "custom_block_rouded": 0,
-        "image": "shopify:\/\/shop_images\/RUGS_DIMENSIONS_IMAGE.jpg",
+        "image": "shopify://shop_images/RUGS_DIMENSIONS_IMAGE.jpg",
         "content_inside_image_mobile": false,
         "mobile_row_height": 70,
         "desktop_content_position": "middle-center",
@@ -619,6 +648,7 @@
       "disabled": true,
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
+        "video_width": 1000,
         "video_url": "",
         "description": "",
         "enable_autoplay": false,
@@ -672,13 +702,20 @@
       ],
       "disabled": true,
       "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "use_hr": false,
+        "font": "normal",
         "heading": "Shop The Look",
         "text": "",
         "button_label": "",
         "button_link": "",
+        "mobile_button_alignment": "mx-auto",
+        "desktop_button_alignment": "mx-sm-auto",
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
+        "carousel_background_colour": "#F4F4F4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
@@ -748,6 +785,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "products_to_show": 5,
@@ -765,6 +803,7 @@
     },
     "recently-products": {
       "type": "recently-products",
+      "disabled": true,
       "settings": {
         "heading": "Recently Viewed Products",
         "heading_margin_bottom": 32,
