@@ -479,6 +479,34 @@
         "padding_bottom_mobile": 20
       }
     },
+    "1736870732996de3c1": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_3qq77D": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_3qq77D"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "featured_collection_RD8KMd": {
       "type": "featured-collection",
       "blocks": {
@@ -644,6 +672,7 @@
     "17368706928b3c69fc",
     "video_QM4Cg7",
     "lookbook_pGUge4",
+    "1736870732996de3c1",
     "featured_collection_RD8KMd",
     "related-products",
     "recently-products",
