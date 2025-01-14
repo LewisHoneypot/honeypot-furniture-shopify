@@ -517,6 +517,7 @@
     },
     "recently-products": {
       "type": "recently-products",
+      "disabled": true,
       "settings": {
         "heading": "Recently Viewed Products",
         "heading_margin_bottom": 32,
