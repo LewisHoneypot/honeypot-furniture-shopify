@@ -162,9 +162,7 @@
     {% comment %} VENDOR SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 
-    {%- unless template contains 'collection' -%}
-      <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
-    {%- endunless -%}
+    <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 
     {% comment %} <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'ScrollTrigger.js' | asset_url }}" defer="defer"></script>
@@ -229,8 +227,8 @@
     <script src="{{ 'AnchorTarget.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'SlideshowComponent.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'StickyHeader.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
     {%- unless template contains 'collection' -%}
-      <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'ThemeTab.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
     <script src="{{ 'VariantTools.js' | asset_url }}" defer="defer"></script>
