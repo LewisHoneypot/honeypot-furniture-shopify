@@ -183,7 +183,7 @@
         "overlay_text_1": "Delivery from Fri, 13 Dec",
         "overlay_text_color_1": "#000000",
         "overlay_background_color_1": "#ffffff",
-        "use_overlay_2": true,
+        "use_overlay_2": false,
         "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
         "overlay_text_color_2": "#ffffff",
         "overlay_background_color_2": "#000000",
@@ -356,6 +356,34 @@
         "text_animation": "none",
         "padding_top": 0,
         "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "1736163667c8a5c273": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_rpXq8n": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_rpXq8n"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
@@ -624,34 +652,6 @@
         "padding_bottom": 28,
         "padding_top_mobile": 35,
         "padding_bottom_mobile": 15
-      }
-    },
-    "1736163667c8a5c273": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_rpXq8n": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "product-page-nosto-2"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_rpXq8n"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "17361637054b91e455": {
