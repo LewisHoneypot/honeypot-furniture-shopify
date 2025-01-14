@@ -54,16 +54,19 @@ function loadReviews() {
   const productRequest = [trustpilot_skus].length ? urlCurrentProductWithFullRangeTrustPilot : urlCurrentProduct;
 
   fetch(productRequest)
-    .then(response => response.json())
-    .then(reviewsData => {
-      // Handle reviews data
-      const reviewsContainer = document.querySelector("#reviews");
-      if (!reviewsContainer) return;
+  .then(response => response.json())
+  .then(reviewsData => {
+    // Handle reviews data
+    const reviewsContainer = document.querySelector("#reviews");
+    if (!reviewsContainer) return;
 
-      const outerDiv = createElement("div", ["outerDiv"]);
-      reviewsContainer.appendChild(outerDiv);
+    const outerDiv = createElement("div", ["outerDiv"]);
+    reviewsContainer.appendChild(outerDiv);
 
-      reviewsData.productReviews.forEach((review, i) => {
+
+    reviewsData.productReviews.forEach((review, i) => {
+
+      if (review.stars >= 4) {
         const reviewDate = new Date(review.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
         let reviewHTML = `
@@ -150,21 +153,23 @@ function loadReviews() {
             </div>
           `;
         }
+      
 
         reviewHTML += `</div></div>`;
         outerDiv.innerHTML += reviewHTML;
-      });
+      }
+    });
 
-      document.querySelectorAll(".toggle-button").forEach(button => {
-        button.addEventListener("click", function () {
-          const targetId = this.getAttribute("data-target");
-          const content = document.querySelector(`#${targetId}`);
-          if (content) {
-            content.classList.toggle("d-none");
-            this.querySelector(".text").textContent = content.classList.contains("d-none") ? "Rating Breakdown" : "Hide Breakdown";
-          }
-        });
+    document.querySelectorAll(".toggle-button").forEach(button => {
+      button.addEventListener("click", function () {
+        const targetId = this.getAttribute("data-target");
+        const content = document.querySelector(`#${targetId}`);
+        if (content) {
+          content.classList.toggle("d-none");
+          this.querySelector(".text").textContent = content.classList.contains("d-none") ? "Rating Breakdown" : "Hide Breakdown";
+        }
       });
-    })
-    .catch(error => console.error("Error fetching data from Trustpilot API:", error));
+    });
+  })
+  .catch(error => console.error("Error fetching data from Trustpilot API:", error));
 }
