@@ -1,1 +1,69 @@
-{"sections":{"cart-items":{"type":"main-cart-items","blocks":{"8c1897eb-1997-4e3b-8e02-56a2ec7e9cee":{"type":"subtotal","settings":{}},"b982c376-2fb3-4a4a-90d1-e04bf2b302ab":{"type":"buttons","settings":{}}},"block_order":["8c1897eb-1997-4e3b-8e02-56a2ec7e9cee","b982c376-2fb3-4a4a-90d1-e04bf2b302ab"],"settings":{"color_scheme":"scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c","padding_top":30,"padding_bottom":36,"padding_top_mobile":20,"padding_bottom_mobile":20}}},"order":["cart-items"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "blocks": {
+        "8c1897eb-1997-4e3b-8e02-56a2ec7e9cee": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "b982c376-2fb3-4a4a-90d1-e04bf2b302ab": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "8c1897eb-1997-4e3b-8e02-56a2ec7e9cee",
+        "b982c376-2fb3-4a4a-90d1-e04bf2b302ab"
+      ],
+      "settings": {
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "padding_top": 30,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "17369551538f2444e0": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_erYM8p": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "cartpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_erYM8p"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "17369551538f2444e0"
+  ]
+}
