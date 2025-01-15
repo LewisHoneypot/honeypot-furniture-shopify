@@ -15,14 +15,14 @@
         "slide_BzgHcM": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Gradient_Banner_Design_1_859d2ffd-e5f2-445f-8856-f49c906635df.png",
-            "mobile_image": "shopify://shop_images/Gradient_Banner_Design_1_859d2ffd-e5f2-445f-8856-f49c906635df.png",
+            "image": "shopify://shop_images/New_Dark_Banners.png",
+            "mobile_image": "shopify://shop_images/Mirabel_Sofa_Grey_Right_Hand_Facing_Corner_LS_KF_1.jpg",
             "content_max_width": 440,
             "heading_font": "font-heading",
-            "heading": "Countdown for Christmas!",
+            "heading": "January Flash Sale",
             "heading_size": "medium",
             "heading_margin_bottom": 20,
-            "subheading": "Order by 13th December to receive your sofa in time for Christmas delivery.",
+            "subheading": "Up to 10% off sofas, living, dining and more!",
             "subheading_size": "small",
             "subheading_margin_bottom": 30,
             "box_align": "bottom-left",
