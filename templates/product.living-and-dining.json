@@ -388,21 +388,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "trustpilot_product_revewis_Eb8Cd6": {
-      "type": "trustpilot-product-revewis",
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "primary_button_label": "Rating Breakdown",
-        "primary_button_color_scheme": "",
-        "secondary_button_label": "Hide Breakdown",
-        "secondary_button_color_scheme": ""
-      }
-    },
     "17368723341d549696": {
       "type": "apps",
       "blocks": {
@@ -429,6 +414,21 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
+      }
+    },
+    "trustpilot_product_revewis_Eb8Cd6": {
+      "type": "trustpilot-product-revewis",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "primary_button_label": "Rating Breakdown",
+        "primary_button_color_scheme": "",
+        "secondary_button_label": "Hide Breakdown",
+        "secondary_button_color_scheme": ""
       }
     },
     "video_QM4Cg7": {
@@ -704,8 +704,8 @@
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "17368723211b28aaee",
-    "trustpilot_product_revewis_Eb8Cd6",
     "17368723341d549696",
+    "trustpilot_product_revewis_Eb8Cd6",
     "video_QM4Cg7",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
