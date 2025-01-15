@@ -129,7 +129,17 @@
         "collection_dimensions_toggle": false,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
-        "date_type": "vague"
+        "tiers": "off",
+        "date_type": "vague",
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000",
+        "overlay_background_color_1": "#fff",
+        "use_overlay_2": false,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#fff",
+        "overlay_background_color_2": "#000",
+        "christmas_delivery_eta_toggle": false
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
@@ -261,6 +271,7 @@
     },
     "recently-products": {
       "type": "recently-products",
+      "disabled": true,
       "settings": {
         "heading": "Recently Viewed Products",
         "heading_margin_bottom": 32,
