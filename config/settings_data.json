@@ -128,6 +128,7 @@
     "create_account_color_scheme": "scheme-89676448-a464-48a1-8bde-758b199507a8",
     "create_account_button_transparent": "default",
     "show_multitasking_bar": false,
+    "multitasking_show_recently_viewed": false,
     "multitasking_show_search": true,
     "multitasking_style": "classic",
     "multitasking_collapse": true,
