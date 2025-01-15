@@ -611,6 +611,7 @@
       "block_order": [
         "nosto_nosto_placements_block_adT36z"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -639,6 +640,7 @@
       "block_order": [
         "nosto_nosto_placements_block_rpXq8n"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -667,6 +669,7 @@
       "block_order": [
         "nosto_nosto_placements_block_DigETz"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
