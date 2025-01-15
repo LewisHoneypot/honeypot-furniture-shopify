@@ -33,24 +33,24 @@
             "content_type": "view_the_range",
             "content": "",
             "page": "",
-            "colors_background": "#fff",
+            "colors_background": "#ffffff",
             "colors_border": "#707070"
           }
         },
         "variant_picker_3iMFX": {
           "type": "variant_picker",
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "picker_type": "dropdown",
             "swatch": "Color",
-            "header-4433707328020286291f50289a7eebbe": null,
+            "header-91c43f84d02740239931e48c2a4927c4": null,
             "padding_top": 5,
             "padding_bottom": 5
           }
         },
         "glo_color_swatch_product_swatches_detail_Q9a74": {
-          "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
-          "disabled": false,
+          "type": "shopify://apps/glo-color-swatch-variant-image/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
+          "disabled": true,
           "settings": {}
         },
         "expected_delivery_TKcTdt": {
