@@ -44,7 +44,7 @@
           }
         },
         "glo_color_swatch_product_swatches_detail_r9tCtB": {
-          "type": "shopify://apps/glo-color-swatch/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
+          "type": "shopify://apps/glo-color-swatch-variant-image/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
           "settings": {}
         },
         "size_chart_kqc3gt": {
@@ -678,6 +678,34 @@
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 12
       }
+    },
+    "173693672889b7194c": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_LRENcU": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-4"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_LRENcU"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
     }
   },
   "order": [
@@ -693,6 +721,7 @@
     "related-products",
     "recently-products",
     "1736871876960e9466",
-    "newsletter_Lkdri8"
+    "newsletter_Lkdri8",
+    "173693672889b7194c"
   ]
 }
