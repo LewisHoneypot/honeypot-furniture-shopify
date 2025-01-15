@@ -164,7 +164,7 @@
         "enable_transparent": true,
         "logo_transparent": "shopify://shop_images/Primary_Logo.png",
         "color_opacity_1": 100,
-        "text_transparent": "#000000",
+        "text_transparent": "#FFFFFF",
         "color_opacity_2": 70,
         "logo": "shopify://shop_images/Primary_Logo.png",
         "logo_width": 100,
