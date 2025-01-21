@@ -133,13 +133,41 @@
         "date_type": "vague",
         "use_overlay_1": false,
         "overlay_text_1": "Delivery from Fri, 13 Dec",
-        "overlay_text_color_1": "#000",
-        "overlay_background_color_1": "#fff",
+        "overlay_text_color_1": "#000000",
+        "overlay_background_color_1": "#ffffff",
         "use_overlay_2": false,
         "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
-        "overlay_text_color_2": "#fff",
-        "overlay_background_color_2": "#000",
+        "overlay_text_color_2": "#ffffff",
+        "overlay_background_color_2": "#000000",
         "christmas_delivery_eta_toggle": false
+      }
+    },
+    "1737458348d29b8739": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_bdnYfn": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_bdnYfn"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
@@ -269,6 +297,34 @@
         "padding_bottom_mobile": 43
       }
     },
+    "173745835665acc581": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_XKUKkR": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_XKUKkR"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "recently-products": {
       "type": "recently-products",
       "disabled": true,
@@ -295,8 +351,10 @@
   "order": [
     "banner",
     "product-grid",
+    "1737458348d29b8739",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "collection_list_ig8tXp",
+    "173745835665acc581",
     "recently-products"
   ]
 }
