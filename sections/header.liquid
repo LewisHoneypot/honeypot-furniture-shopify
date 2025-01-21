@@ -57,7 +57,13 @@
     assign header__icons_mobile = "disable-icons__mobile"
   endunless
 -%}
-<{% if section.settings.type_sticky_header != 'none' %}sticky-header{% else %}div{% endif %} class="header-wrapper{% if section.settings.logo != blank or has_transparent %} has--logo{% endif %} header-style-{{ section.settings.type_style }} {{ header_class }} d-block pos-relative{% if section.settings.show_line_separator %} b-bottom{% endif %} header-sticky__{{ section.settings.type_sticky_header }} color-{{ section.settings.color_scheme }} {{ section.settings.text_size | prepend: 'text-size-' }} gradient"
+<{% if section.settings.type_sticky_header != 'none' %}sticky-header{% else %}div{% endif %} class="header-wrapper{% if section.settings.logo != blank or has_transparent %} has--logo{% endif %} header-style-{{ section.settings.type_style }} {{ header_class }} d-block pos-relative{% if section.settings.show_line_separator %} b-bottom{% endif %} header-sticky__{{ section.settings.type_sticky_header }} color-{{ section.settings.color_scheme }} {{ section.settings.text_size | prepend: 'text-size-' }} gradient 
+  
+  {% if section.settings.use_wide_search == true %}wide-menu-header-wrapper 
+    {% if request.page_type != 'index' %} wide-menu-header-wrapper-fix {% endif %}
+  {% endif %}
+  
+  "
   style="
     {%- if section.settings.enable_transparent -%}
       --foreground-transparent: {{ section.settings.text_transparent.red }},{{ section.settings.text_transparent.green }},{{ section.settings.text_transparent.blue }};
@@ -904,7 +910,7 @@
         -%}
         <h1 class="header__heading m-0{% if check_no_logo %} no--logo{% endif %}{% if section.settings.type_style != 'special' %} {{ section.settings.logo_alignment_desktop | prepend: 'j-s-' }}{%  else %} j-s-start{% endif %}{% if section.settings.logo_position == 'top-center-special' %} logo-special-inline no-js-hidden{% endif %}"{% if section.settings.type_style == 'special' or section.settings.logo_position == 'top-center-special' %} style="--m-w-logo: {{ section.settings.logo_width }}px;"{% endif %}>
       {%- endif -%}
-          <a href="{{ routes.root_url }}" class="header__heading-link link link--text u-none break focus-inset d-inline-block{% if section.settings.type_style == 'special' and section.settings.logo != blank %} m-w{% endif %}"
+          <a href="{{ routes.root_url }}" class="{% if section.settings.use_wide_search == true %}wide-search-logo {% if request.page_type != 'index' %} wide-search-logo-fix {% endif %}{% endif %}header__heading-link link link--text u-none break focus-inset d-inline-block{% if section.settings.type_style == 'special' and section.settings.logo != blank %} m-w{% endif %}"
             {%- if section.settings.logo != blank -%}
               style="--m-w: {{ section.settings.logo_width }}px;"
             {%- endif -%}
@@ -980,24 +986,9 @@
     {%- endif -%}
     
     {%- if section.settings.use_wide_search == true -%}
-      <div class="j-s-center" 
-        style="
-          top: -122px; 
-          position: relative; 
-          left: 15px; 
-          margin-bottom: -76px;
-        "
-      >
+      <div class="j-s-center wide-search-container {% if request.page_type != 'index' %} wide-search-container-fix {% endif %}">
         <form class="search wide-search">
-          <input class="search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" 
-            style="
-              min-width: 39vw; 
-              background-color: #fff; 
-              opacity: 0.7;
-              border: solid 1px #d1d1d1;
-              border-radius: 30px;
-            "
-          >
+          <input class="search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" >
             <button type="submit" class="search__button field__button pos-absolute pos-absolute-c-r d-flex a-i-center j-c-center t-button b-none c-pointer p-0 o-h" aria-label="Search">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search icon-search-basic" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" role="presentation">
                 <g id="Search">
@@ -1109,7 +1100,7 @@
       </div>
     {%- endif -%}
     {%- if section.settings.menu != blank -%}
-      <nav class="header__inline-menu d-none d-block-lg{% unless section.settings.logo_position == 'middle-center' %} {{ section.settings.menu_alignment_desktop }}{% endunless %} {{ section.settings.font_transform }}">
+      <nav class="{% if section.settings.use_wide_search == true %}inline-wide-menu {% endif %}header__inline-menu d-none d-block-lg{% unless section.settings.logo_position == 'middle-center' %} {{ section.settings.menu_alignment_desktop }}{% endunless %} {{ section.settings.font_transform }}">
         <ul class="list-menu list-menu--inline d-inline-flex f-wrap list-unstyled left g-gap" role="list" style="--g-gap: {{ section.settings.spacing_gap }}px; --m-t: calc(var(--padding-bottom) * 1);">
           {%- for link in section.settings.menu.links -%}
             {%- liquid
@@ -1162,7 +1153,13 @@
                     <a href="{{ link.url }}" class="header__menu-item menu-lv-1 link {{ section.settings.link_type | prepend: "link--style-" }} u-none color-foreground focus-inset d-flex a-i-center c-pointer pos-relative"{% if link.current %} aria-current="page"{% endif %}>
                       <span class="link-style">{{ link.title | escape }}</span>
                     </a>
-                    <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup pos-absolute top-100 left-0 right-0 {{ section.settings.menu_transform }} cus-scrollbar" tabindex="-1">
+                    <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup pos-absolute top-100 left-0 right-0 {{ section.settings.menu_transform }} cus-scrollbar 
+                      
+                      {% if section.settings.use_wide_search == true %}wide-search-menu 
+                        {% if request.page_type != 'index' %} wide-search-menu-fix {% endif %}
+                      {% endif %}                      
+                                            
+                      " tabindex="-1">
                       <div class="{{ menu_type }} {{ section_width }} m-auto d-flex f-wrap j-c-between"{% if section_width == 'customized-width' %} style="--page-width: {{ customize_width }}px;"{% endif %}>
                         <ul class="mega-menu__list d-grid list-unstyled rounded grid-mg-{{ link.links.size }}{% if menu_type == 'mega_menu_1' and mg1_image_1 == blank %} no-mg1--image{% endif %}{% if menu_type == 'mega_menu_2' and link.links.size > 1 %} no-mg2--image{% endif %}" role="list">
                           {%- for childlink in link.links -%}
@@ -1451,7 +1448,11 @@
         endif
       -%}
 
-      <div class="header__icons{% if section.settings.enable_country_selector or section.settings.use_custom_button %} f-wrap{% if check_btn_country_lang %} j-c-end cus-btn_and_country{% endif %}{% endif %} d-flex icons-style-{{ section.settings.icon_type_style }}{% if check_header__icons_desktop %} d-none-lg{% endif %}{% if section.settings.mobile_logo_position == 'left' %} d-none-mw-md{% endif %} {{ section.settings.function_alignment_desktop | prepend: 'j-c-' }} {{ section.settings.function_alignment_desktop | prepend: 'j-s-' }}{% if section.settings.type_style == 'special' or section.settings.use_custom_button %} a-i-center{% endif %}">
+      <div class="
+        {% if section.settings.use_wide_search == true %}wide-search-icons 
+          {% if request.page_type != 'index' %} wide-search-icons-fix {% endif %}
+        {% endif %}
+         header__icons{% if section.settings.enable_country_selector or section.settings.use_custom_button %} f-wrap{% if check_btn_country_lang %} j-c-end cus-btn_and_country{% endif %}{% endif %} d-flex icons-style-{{ section.settings.icon_type_style }}{% if check_header__icons_desktop %} d-none-lg{% endif %}{% if section.settings.mobile_logo_position == 'left' %} d-none-mw-md{% endif %} {{ section.settings.function_alignment_desktop | prepend: 'j-c-' }} {{ section.settings.function_alignment_desktop | prepend: 'j-s-' }}{% if section.settings.type_style == 'special' or section.settings.use_custom_button %} a-i-center{% endif %}">
         {%- liquid
           if section.settings.enable_country_selector and localization.available_countries.size > 1
             assign check_selector = true
