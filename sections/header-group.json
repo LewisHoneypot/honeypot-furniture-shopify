@@ -187,7 +187,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "function_alignment_desktop": "end",
-        "enable_search_mobile": true,
+        "enable_search_mobile": false,
         "enable_account_mobile": false,
         "enable_cart_mobile": true,
         "enable_wishlist_mobile": false,
