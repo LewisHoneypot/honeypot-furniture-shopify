@@ -53,6 +53,11 @@ class ModalDialog extends HTMLElement {
     this.removeAttribute("open");
     removeTrapFocus(this.openedBy);
     window.pauseAllMedia();
+  
+    // Explicitly blur the active element and clear selection
+    if (document.activeElement) {
+      document.activeElement.blur(); // Removes focus from the currently active element
+    }
   }
 }
 customElements.define("modal-dialog", ModalDialog);
