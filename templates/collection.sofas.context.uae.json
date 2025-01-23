@@ -12,5 +12,12 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "product-grid": {
+      "settings": {
+        "use_nosto": false
+      },
+      "blocks": {}
+    }
+  }
 }
