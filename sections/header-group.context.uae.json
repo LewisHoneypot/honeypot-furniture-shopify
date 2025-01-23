@@ -15,7 +15,8 @@
   "sections": {
     "header": {
       "settings": {
-        "menu": "uae-menu"
+        "menu": "uae-menu",
+        "use_nosto": false
       },
       "blocks": {}
     }
