@@ -988,7 +988,7 @@
     {%- if section.settings.use_wide_search == true -%}
       <div class="j-s-center wide-search-container {% if request.page_type != 'index' %} wide-search-container-fix {% endif %}">
         <form class="search wide-search">
-          <input class="search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" >
+          <input class="{% if section.settings.use_nosto == true %}nosto-search-input{% endif %} search__input field__input field__input--bg f-grow left" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" >
             <button type="submit" class="search__button field__button pos-absolute pos-absolute-c-r d-flex a-i-center j-c-center t-button b-none c-pointer p-0 o-h" aria-label="Search">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search icon-search-basic" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" role="presentation">
                 <g id="Search">
@@ -1766,6 +1766,13 @@
   "name": "t:sections.header.name",
   "class": "section-header pos-relative z-index-3",
   "settings": [
+  {
+    "type": "checkbox",
+    "id": "use_nosto",
+    "default": true,
+    "label": "Use Nosto",
+    "info": "Switch this off/on to replace Shopify/Nosto"
+  },
   {
     "type": "select",
     "id": "section_width",
