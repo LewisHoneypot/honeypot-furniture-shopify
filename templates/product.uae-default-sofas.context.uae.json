@@ -43,7 +43,7 @@
           "settings": {
             "picker_type": "dropdown",
             "swatch": "Color",
-            "header-91c43f84d02740239931e48c2a4927c4": null,
+            "header-a874ae75b933c6027d4a21188ec7b8d6": null,
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -77,6 +77,16 @@
         "expected_delivery_TKcTdt",
         "s_contact_form_builder_block_app_hbUMm"
       ]
+    },
+    "drawers_Ut99DD": {
+      "settings": {},
+      "blocks": {
+        "drawer_9K8JiB": {
+          "settings": {
+            "content1": "<h3><strong>Delivery</strong></h3><p><strong>Free and Reliable</strong><br/>Enjoy <strong>free delivery</strong> on all in-stock furniture. Our two-person delivery team will carefully assemble your sofa in the room of your choice—because we believe in making it effortless for you. Delivery is available within <strong>2-4 weeks</strong> for most items.</p><h3><strong>Returns</strong></h3><p><strong>Hassle-Free Returns</strong><br/>We offer a <strong>14-day cooling-off period</strong> for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><h3><strong>Need Assistance?</strong></h3><p><strong>Office Hours:</strong></p><ul><li><strong>Mon-Fri:</strong> 8am-8pm</li><li><strong>Sat-Sun:</strong> 10am-3pm</li></ul><p><strong>Contact Us:</strong><br/><a>hello@honeypotfurniture.ae</a></p>"
+          }
+        }
+      }
     }
   },
   "order": [
