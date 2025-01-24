@@ -14,6 +14,7 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/New_Dark_Banners.png",
             "mobile_image": "shopify://shop_images/Mirabel_Sofa_Grey_Right_Hand_Facing_Corner_LS_KF_1.jpg",
