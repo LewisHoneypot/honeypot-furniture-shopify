@@ -129,6 +129,7 @@
     {%- endif -%}
 
     {% comment %} Clarity Script {% endcomment %}
+    {% comment %}
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -136,7 +137,8 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "g4fmvmhh6m");
     </script>
-
+    {% endcomment %}
+     
     <meta name="google-site-verification" content="gLFJD4hFYhNPblJVfCGHocM0W-0EWfTd9gdJ870czFA">
   </head>
   <body class="page-{{ request.page_type | replace: 'customers/', '' }} gradient {{ settings.text_size | prepend: 'text-size main-text-' }} {{ settings.heading_size | prepend: 'heading-size main-heading-' }}{% if settings.enable_animated_cursor and settings.animated_cursor_style == 'following' %} cursor-fixed__show{% endif %}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
