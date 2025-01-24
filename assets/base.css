@@ -26623,5 +26623,5 @@ body.multitasking__show .newsletter-popup-opener {
 /* UAE CSS */
 
 .ul-globo-dropdown-option {
-  position: relative;
+  position: relative !important;
 }
