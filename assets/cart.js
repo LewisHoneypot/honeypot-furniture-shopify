@@ -37,7 +37,7 @@ class CartRemoveButton extends HTMLElement {
         // Remove all Protection items
         await Promise.all(
           cart.items
-            .filter((item) => item.title.includes("Staingard"))
+            .filter((item) => item.title.includes("Emmiera"))
             .map((item) => this.removeProductFromCart(item.key))
         );
 
