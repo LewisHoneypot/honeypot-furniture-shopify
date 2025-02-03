@@ -15,9 +15,24 @@
   "sections": {
     "header": {
       "settings": {
-        "menu": "uae-menu",
-        "use_nosto": false
+        "use_nosto": false,
+        "menu": "uae-menu"
       },
+      "blocks": {},
+      "block_order": [
+        "mega_menu_1_MkHmHf",
+        "mega_menu_1_NE4a6D",
+        "mega_menu_1_TFhwQt"
+      ]
+    },
+    "announcement-bar": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "b38aad37-e5d6-4a4a-9109-e406344cc53a": {
+      "disabled": true,
+      "settings": {},
       "blocks": {}
     }
   }

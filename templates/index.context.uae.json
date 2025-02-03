@@ -13,11 +13,6 @@
     "market": "uae"
   },
   "sections": {
-    "testimonial_NkEcJz": {
-      "disabled": false,
-      "settings": {},
-      "blocks": {}
-    },
     "0b6105a9-a3ce-4181-b45b-7a55c709e140": {
       "settings": {},
       "blocks": {
@@ -45,13 +40,34 @@
       }
     },
     "collection_list_NKqtYJ": {
-      "settings": {},
+      "settings": {
+        "type_style": "default"
+      },
       "blocks": {},
       "block_order": [
         "collection_C3hGgh",
-        "collection_ezwFEi",
-        "collection_VW4dHF"
+        "collection_ezwFEi"
       ]
+    },
+    "testimonial_NkEcJz": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "3d277f0b-f31b-482d-996e-089de61f3e90": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_list_GDamp9": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   },
   "order": [
