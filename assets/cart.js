@@ -34,14 +34,14 @@ class CartRemoveButton extends HTMLElement {
       // Check if the removed product was a sofa
       if (removedItem.product_type === "Sofas") {
         // console.log("Sofa Removed.");
-        // Remove all Staingard items
+        // Remove all Protection items
         await Promise.all(
           cart.items
             .filter((item) => item.title.includes("Staingard"))
             .map((item) => this.removeProductFromCart(item.key))
         );
 
-        // Wait for the cart to update after removing Staingard
+        // Wait for the cart to update after removing Protection
         await this.wait(500);
       } else {
         // console.log("Removed item was not a sofa.");

@@ -2336,13 +2336,13 @@
       },
       {
         "type": "header",
-        "content": "Staingard Drawer"
+        "content": "Protection Drawer"
       },
       {
         "type": "checkbox",
         "id": "use_staingard_drawer",
         "default": true,
-        "label": "Use Staingard Drawer"
+        "label": "Use Protection Drawer"
       },
       {
         "type": "text",
@@ -2354,13 +2354,13 @@
         "type": "text",
         "id": "staingard_cart_paragraph",
         "label": "Paragraph",
-        "default": "Staingard offers a host of protection benefits for your new sofa."
+        "default": "Emmiera offers a host of protection benefits for your new sofa."
       },
       {
         "type": "text",
         "id": "staingard_cart_button_text",
         "label": "Button Text",
-        "default": "Add Staingard..."
+        "default": "Add Emmiera..."
       }
     ]
   },
