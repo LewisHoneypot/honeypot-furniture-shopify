@@ -93,6 +93,7 @@
         "3fca5cef-72fc-4b52-a001-50044316c114"
       ],
       "settings": {
+        "use_nosto": true,
         "products_per_row": 3,
         "products_per_page": 15,
         "columns_mobile": "1",
@@ -232,6 +233,34 @@
         "padding_bottom_mobile": 0
       }
     },
+    "1737458259d4e86ac0": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_HjQy84": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_HjQy84"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "collection_list_ig8tXp": {
       "type": "collection-list",
       "blocks": {
@@ -319,34 +348,6 @@
         "padding_bottom_mobile": 50
       }
     },
-    "1737458259d4e86ac0": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_HjQy84": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "categorypage-nosto-2"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_HjQy84"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "clickslice_bottom_description_n9Yg4N": {
       "type": "clickslice-bottom-description",
       "settings": {}
@@ -361,9 +362,9 @@
     "product-grid",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "1737458242aa846c9c",
+    "1737458259d4e86ac0",
     "collection_list_ig8tXp",
     "recently-products",
-    "1737458259d4e86ac0",
     "clickslice_bottom_description_n9Yg4N",
     "clickslice_bottom_collapsible_tabs_igpGt9"
   ]
