@@ -39,6 +39,11 @@
         }
       }
     },
+    "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
     "collection_list_NKqtYJ": {
       "settings": {
         "type_style": "default"
@@ -48,11 +53,6 @@
         "collection_C3hGgh",
         "collection_ezwFEi"
       ]
-    },
-    "testimonial_NkEcJz": {
-      "disabled": false,
-      "settings": {},
-      "blocks": {}
     },
     "3d277f0b-f31b-482d-996e-089de61f3e90": {
       "disabled": true,
@@ -64,10 +64,32 @@
       "settings": {},
       "blocks": {}
     },
-    "a0b92d9e-e25a-4de9-9035-373ef5c4d596": {
-      "disabled": true,
+    "testimonial_NkEcJz": {
+      "disabled": false,
       "settings": {},
       "blocks": {}
+    },
+    "12b81e44-2b28-427b-9080-19dfb79fd112": {
+      "settings": {},
+      "blocks": {
+        "slide_MVHYjL": {
+          "disabled": true,
+          "settings": {}
+        },
+        "slide_dN3rVP": {
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
+            "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
+            "heading": "Need text from Matt",
+            "subheading": "matt text",
+            "primary_button_label": "Shop Sofas"
+          }
+        },
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
     }
   },
   "order": [
