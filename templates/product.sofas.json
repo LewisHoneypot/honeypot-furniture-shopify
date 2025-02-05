@@ -94,7 +94,7 @@
             "add_to_cart_colors_text": "#ede9e2",
             "add_to_cart_colors_background": "#3c3c3b",
             "add_to_cart_gradient_background": "",
-            "add_to_cart_colors_text_hover": "rgba(0,0,0,0)",
+            "add_to_cart_colors_text_hover": "#ffffff",
             "add_to_cart_colors_background_hover": "rgba(0,0,0,0)",
             "add_to_cart_gradient_background_hover": "",
             "buy_it_now_colors_text": "#3c3c3b",
