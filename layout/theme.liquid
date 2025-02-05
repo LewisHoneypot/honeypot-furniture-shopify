@@ -32,14 +32,21 @@
 
     {%- if template contains 'product' -%}
       <style>
-          @font-face {
-            font-family: 'Anaktoria';
-            src: url('{{ 'Anaktoria.woff2' | asset_url }}') format('woff2'),
-                 url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
-            font-weight: 100 900;
-            font-style: normal;
-            font-display: swap;
-          }
+        @font-face {
+          font-family: 'Gotham';
+          src: url('{{ 'Gotham Book.woff2' | asset_url }}') format('woff2');
+          font-weight: 100 900;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Anaktoria';
+          src: url('{{ 'Anaktoria.woff2' | asset_url }}') format('woff2'),
+                url('{{ 'Anaktoria.woff' | asset_url }}') format('woff');
+          font-weight: 100 900;
+          font-style: normal;
+          font-display: swap;
+        }
         /* Italic Variable Font */
         @font-face {
           font-family: 'Garamond';
