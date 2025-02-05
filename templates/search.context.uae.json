@@ -18,6 +18,24 @@
         "use_nosto": false
       },
       "blocks": {}
+    },
+    "173644017484d70445": {
+      "settings": {},
+      "blocks": {
+        "nosto_nosto_placements_block_p6ayXd": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "173644019721b90778": {
+      "settings": {},
+      "blocks": {
+        "nosto_nosto_placements_block_A7DkyK": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
     }
   }
 }
