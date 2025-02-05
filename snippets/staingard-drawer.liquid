@@ -359,12 +359,14 @@
                 {{ block.settings['tick-5-text'] }}
               </p>
 
-              <input type="checkbox">
-              <p>I have read and agree to the terms and conditions</p>
+              <div id="emmiera-checks">
+                <input type="checkbox" id="emmiera-tnc">
+                <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Emmiera_Terms_Conditions_Newline_18-12-2024.pdf_2.7.pdf?v=1738744488" target="_blank">terms and conditions</a></p>
+              </div>
 
               <div
                 id="staingard-add-to-cart"
-                onclick="customAddToCart({{staingard_id}}); this.closest('side-drawer').close()"
+                onclick="handleStaingardAddToCart({{staingard_id}});"
                 class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
               >
                 <span>{{ block.settings['button-1-text'] }}</span>
@@ -385,9 +387,26 @@
 {%- endfor -%}
 
 <script>
-  function customAddToCart(staingard_id) {
-    {% comment %} console.log('staingard-drawer staingard_id: ', staingard_id); {% endcomment %}
+  // Function to handle adding to the cart
+  function handleStaingardAddToCart(staingardId) {
+    const checkbox = document.getElementById('emmiera-tnc');
+    const checkboxWrapper = document.getElementById('emmiera-checks');
 
+    // Check if checkbox is checked
+    if (!checkbox.checked) {
+      {% comment %} console.log('Unchecked - Add Border'); {% endcomment %}
+      checkboxWrapper.style.border = '2px solid red'; // Add red border if unchecked
+      return; // Stop the process here if not checked
+    }
+
+    {% comment %} console.log('Checked - Add to cart'); {% endcomment %}
+    checkboxWrapper.style.border = '2px solid white'; // Remove red border if checked
+
+    customAddToCart(staingardId); // Proceed to add to cart
+  }
+
+  // Custom function to add the item to the cart
+  function customAddToCart(staingard_id) {
     let formData = {
       items: [
         {
@@ -404,15 +423,79 @@
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then(() => {
-        refreshCartDrawer();
-        refreshCartBubble();
+        refreshCartDrawer(); // Refresh the cart drawer without closing it
+        refreshCartBubble(); // Refresh the cart bubble
+        closeSideDrawer(); // Close the side drawer after adding to cart
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   }
+
+  // Function to close the side drawer
+  function closeSideDrawer() {
+    const sideDrawer = document.querySelector('#Drawer-Staingard .side-drawer'); // Try a general selector for 'side-drawer'
+    if (sideDrawer) {
+      {% comment %} console.log('Attempting to close the side drawer...'); {% endcomment %}
+      sideDrawer.classList.add('closed'); // Add a 'closed' class to hide the drawer (or use the correct class name)
+
+      // Try closing via a close button if available
+      const closeButton = sideDrawer.querySelector('.drawer__close');
+      if (closeButton) {
+        closeButton.click();
+        {% comment %} console.log('Close button clicked.'); {% endcomment %}
+      } else {
+        {% comment %} console.log('No close button found.'); {% endcomment %}
+      }
+    } else {
+      {% comment %} console.log('Side drawer not found'); {% endcomment %}
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    {% comment %} console.log('Loaded'); {% endcomment %}
+
+    const button = document.getElementById('staingard-add-to-cart');
+    const checkboxWrapper = document.getElementById('emmiera-checks');
+    const staingardId = {{ staingard_id }}; // Assuming the staingard_id is being passed in
+
+    {% comment %} console.log('button', button); {% endcomment %}
+    {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
+
+    // Event delegation to handle checkbox state change
+    document.addEventListener('change', function (event) {
+      if (event.target && event.target.id === 'emmiera-tnc') {
+        {% comment %} console.log('EventListener | Checkbox state changed:', event.target.checked ? 'Checked' : 'Unchecked'); {% endcomment %}
+
+        // Enable/disable the button based on checkbox state
+        button.disabled = !event.target.checked;
+
+        if (event.target.checked) {
+          document.getElementById('emmiera-checks').style.border = '2px solid white';
+        } else {
+          checkboxWrapper.style.border = '2px solid red';
+        }
+        {% comment %} console.log('Updated border style:', checkboxWrapper.style.border); {% endcomment %}
+      }
+    });
+  });
 </script>
+
+{% style %}
+  #emmiera-checks {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+  }
+  #emmiera-checks #emmiera-tnc {
+    position: relative;
+    -webkit-appearance: auto;
+    appearance: auto;
+    margin-left: 6%;
+    margin-right: 8px;
+    top: 0px;
+    z-index: 0;
+  }
+{% endstyle %}
