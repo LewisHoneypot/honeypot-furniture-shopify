@@ -13,18 +13,6 @@
     "market": "uae"
   },
   "sections": {
-    "header": {
-      "settings": {
-        "use_nosto": false,
-        "menu": "uae-menu"
-      },
-      "blocks": {},
-      "block_order": [
-        "mega_menu_1_MkHmHf",
-        "mega_menu_1_NE4a6D",
-        "mega_menu_1_TFhwQt"
-      ]
-    },
     "announcement-bar": {
       "disabled": true,
       "settings": {},
@@ -34,6 +22,19 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "header": {
+      "settings": {
+        "use_nosto": false,
+        "menu": "uae-menu",
+        "type_style": "classic"
+      },
+      "blocks": {},
+      "block_order": [
+        "mega_menu_1_MkHmHf",
+        "mega_menu_1_NE4a6D",
+        "mega_menu_1_TFhwQt"
+      ]
     }
   }
 }
