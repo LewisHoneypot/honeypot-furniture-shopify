@@ -1,4 +1,5 @@
 {%- liquid
+  assign page_product = product
   assign product = all_products[settings.cart_product_gift]
   assign product_downcase = product | downcase
   assign id = product.selected_or_first_available_variant.id | minus: 0
@@ -560,15 +561,15 @@
             {%- endif -%}
           </div>
 
-          {% comment %} <script>console.log({{ cart | json }});</script> {% endcomment %}
+          {% comment %} <script>console.log('cart', {{ cart | json }});</script> {% endcomment %}
 
           {% if template == "product.sofas" %}
           
             {% if cart.item_count > 0 %}
-              {% if settings.use_staingard_drawer == true %}
+              {% if settings.use_protection_drawer == true %}
 
                 {% assign containsSofa = false %}
-                {% assign staingardExists = false %}
+                {% assign protectionExists = false %}
                 
                 {% for item in cart.items %}
                   {% comment %} Check if sofa product is in cart {% endcomment %}
@@ -578,53 +579,13 @@
                   {% endif %}
                   {% comment %} Check if Emmiera product is in cart {% endcomment %}
                   {% if item.product.type == 'Emmiera' %}
-                    {% assign staingardExists = true %}
+                    {% assign protectionExists = true %}
                     {% comment %} <script>console.log('cart Contains Emmiera TRUE');</script> {% endcomment %}
                   {% endif %}
                 {% endfor %}
 
-                {% comment %} <script>console.log('cart staingardExists: ', {{ staingardExists }});</script> {% endcomment %}
-
-                {% if staingardExists == false %}
+                {% if protectionExists == false %}
                   {% if containsSofa == true %}
-
-                    {% for item in cart.items %}
-                      {% if item.product.type == 'Sofas' %}
-                        {% if item.grams %}
-                          {% assign SeatingCapacity = item.grams %}
-                          {% assign SeatingCapacity = SeatingCapacity | divided_by: 1000 %}
-
-                          {% comment %} <script>console.log('cart SeatingCapacity: ', {{ SeatingCapacity }});</script> {% endcomment %}
-
-                          {% if SeatingCapacity == 1 %}
-                            {% comment %} £40 {% endcomment %}
-                            {% assign StaingardId = 9218303000863 %}
-                          {% elsif SeatingCapacity == 2 %}
-                            {% comment %} £80 {% endcomment %}
-                            {% assign StaingardId = 9218303820063 %}
-                          {% elsif SeatingCapacity == 3 %}
-                            {% comment %} £120 {% endcomment %}
-                            {% assign StaingardId = 9224343814431 %}
-                          {% elsif SeatingCapacity == 4 %}
-                            {% comment %} £160 {% endcomment %}
-                            {% assign StaingardId = 9224344142111 %}
-                          {% elsif SeatingCapacity == 5 %}
-                            {% comment %} £200 {% endcomment %}
-                            {% assign StaingardId = 9224344273183 %}
-                          {% elsif SeatingCapacity >= 6 %}
-                            {% comment %} £240 {% endcomment %}
-                            {% assign StaingardId = 9224344437023 %}
-                          {% endif %}
-
-                          {% comment %} <script>console.log('cart StaingardId: ', {{ StaingardId }});</script> {% endcomment %}
-                        {% else %}
-                          {% comment %} <script>console.log('Doesn\'t contain seating capacity');</script> {% endcomment %}
-                        {% endif %}
-                      {% else %}
-                        {% comment %} <script>console.log('Doesn\'t contain a sofa');</script> {% endcomment %}
-                      {% endif %}
-                    {% endfor %}
-                  
 
                     <div class="previewCart-staingard cart__ctas">
 
@@ -646,6 +607,7 @@
                 {% endif %}
 
               {% endif %}
+                         
             {% endif %}
 
           {% endif %}

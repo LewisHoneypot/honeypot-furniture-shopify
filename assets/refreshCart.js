@@ -1,5 +1,5 @@
 function refreshStaingardDrawer() {
-  // console.log("drawer__wrapper refreshStaingardDrawer");
+  console.log("drawer__wrapper refreshStaingardDrawer");
 
   // Fetch the current page to update the drawer
   fetch(location.href)

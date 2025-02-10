@@ -2340,7 +2340,7 @@
       },
       {
         "type": "checkbox",
-        "id": "use_staingard_drawer",
+        "id": "use_protection_drawer",
         "default": true,
         "label": "Use Protection Drawer"
       },
