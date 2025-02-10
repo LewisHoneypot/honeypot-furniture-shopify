@@ -129,8 +129,8 @@
             "colors_background": "#f2f2f2"
           }
         },
-        "staingard_drawer_iWbVLW": {
-          "type": "staingard_drawer",
+        "protection_drawer_iWbVLW": {
+          "type": "protection_drawer",
           "settings": {
             "title": "Emmiera",
             "pricing_type": "price",
@@ -159,7 +159,7 @@
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_HagTqx",
-        "staingard_drawer_iWbVLW"
+        "protection_drawer_iWbVLW"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,

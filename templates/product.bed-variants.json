@@ -100,11 +100,11 @@
             "colors_background": "#ffffff"
           }
         },
-        "staingard_drawer_iWbVLW": {
-          "type": "staingard_drawer",
+        "protection_drawer_iWbVLW": {
+          "type": "protection_drawer",
           "disabled": true,
           "settings": {
-            "title": "Staingard",
+            "title": "Protection",
             "pricing_type": "seating_capacity",
             "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
@@ -127,7 +127,7 @@
         "expected_delivery_4HJChA",
         "buy_buttons",
         "snap_buttons_rnjz4z",
-        "staingard_drawer_iWbVLW"
+        "protection_drawer_iWbVLW"
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
