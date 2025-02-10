@@ -110,7 +110,7 @@ if (!customElements.get('product-form')) {
 
               if (addedItem && addedItem.product_type === "Sofas") {
                 // console.log("Sofa added. Checking for Protection items to remove.");
-                await this.removeStaingardItems(updatedCart);
+                await this.removeProtectionItems(updatedCart);
               }
             }, 0);
 
@@ -130,15 +130,15 @@ if (!customElements.get('product-form')) {
         });
     }
 
-    async removeStaingardItems(cart) {
-      const staingardItems = cart.items.filter((item) => item.title.includes("Emmiera"));
-      if (staingardItems.length === 0) {
+    async removeProtectionItems(cart) {
+      const protectionItems = cart.items.filter((item) => item.title.includes("Emmiera"));
+      if (protectionItems.length === 0) {
         // console.log("No Protection items found to remove.");
         return;
       }
 
       await Promise.all(
-        staingardItems.map((item) =>
+        protectionItems.map((item) =>
           fetch("/cart/change.js", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

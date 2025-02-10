@@ -2719,7 +2719,7 @@
             }
           }
         },
-        "staingard_drawer": {
+        "protection_drawer": {
           "settings": {
             "title": "Title",
             "main_image": "Main Image",

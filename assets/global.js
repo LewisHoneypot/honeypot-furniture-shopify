@@ -2665,7 +2665,7 @@ class SideDrawerOpener extends HTMLElement {
 }
 customElements.define("side-drawer-opener", SideDrawerOpener);
 
-class StaingardDrawerOpener extends HTMLElement {
+class ProtectionDrawerOpener extends HTMLElement {
   constructor() {
     super();
 
@@ -2687,7 +2687,7 @@ class StaingardDrawerOpener extends HTMLElement {
     }, 100);
   }
 }
-customElements.define("staingard-drawer-opener", StaingardDrawerOpener);
+customElements.define("protection-drawer-opener", ProtectionDrawerOpener);
 
 class LookbookDrawerOpener extends SideDrawerOpener {
   constructor() {

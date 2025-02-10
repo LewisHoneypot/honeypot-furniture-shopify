@@ -587,19 +587,19 @@
                 {% if protectionExists == false %}
                   {% if containsSofa == true %}
 
-                    <div class="previewCart-staingard cart__ctas">
+                    <div class="previewCart-protection cart__ctas">
 
-                      <div class="title">{{ settings.staingard_cart_title }}</div>
-                      <p class="description">{{ settings.staingard_cart_paragraph }}</p>
+                      <div class="title">{{ settings.protection_cart_title }}</div>
+                      <p class="description">{{ settings.protection_cart_paragraph }}</p>
 
-                      <staingard-drawer-opener
+                      <protection-drawer-opener
                         class="d-block product-drawer__opener no-js-hidden"
-                        data-side-drawer="#Drawer-Staingard"
+                        data-side-drawer="#Drawer-Protection"
                       >
-                        <button type="submit" id="staingard-button" onclick="refreshStaingardPrice(); refreshCartDrawer(); refreshStaingardDrawer();" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
-                          <span>{{ settings.staingard_cart_button_text }}</span>
+                        <button type="submit" id="protection-button" onclick="refreshProtectionPrice(); refreshCartDrawer(); refreshProtectiondDrawer();" class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient" aria-haspopup="dialog">
+                          <span>{{ settings.protection_cart_button_text }}</span>
                         </button>
-                      </staingard-drawer-opener>
+                      </protection-drawer-opener>
 
                     </div>
 
@@ -872,35 +872,35 @@
 </script>
 
 <script>
-  function refreshStaingardPrice() {
+  function refreshProtectionPrice() {
     fetch('/cart.js')
     .then(response => response.json())
     .then(cart => {
-      const staingardPrice = document.querySelector('#staingard-price');
-      const staingardAddToCart = document.querySelector('#staingard-add-to-cart');
+      const protectionPrice = document.querySelector('#protection-price');
+      const protectionAddToCart = document.querySelector('#protection-add-to-cart');
 
-      if (staingardPrice) {
+      if (protectionPrice) {
         fetch(location.href)
         .then(response => response.text())
         .then(html => {
           const tempDoc = document.createElement('div');
           tempDoc.innerHTML = html;
-          const newStaingardPrice = tempDoc.querySelector('#staingard-price');
-          if (newStaingardPrice) {
-            staingardPrice.innerHTML = newStaingardPrice.innerHTML;
+          const newProtectionPrice = tempDoc.querySelector('#protection-price');
+          if (newProtectionPrice) {
+            protectionPrice.innerHTML = newProtectionPrice.innerHTML;
           }
         });
       }
 
-      if (staingardAddToCart) {
+      if (protectionAddToCart) {
         fetch(location.href)
         .then(response => response.text())
         .then(html => {
           const tempDoc = document.createElement('div');
           tempDoc.innerHTML = html;
-          const newStaingardAddToCart = tempDoc.querySelector('#staingard-add-to-cart');
-          if (newStaingardAddToCart) {
-            staingardAddToCart.innerHTML = newStaingardAddToCart.innerHTML;
+          const newProtectionAddToCart = tempDoc.querySelector('#protection-add-to-cart');
+          if (newProtectionAddToCart) {
+            protectionAddToCart.innerHTML = newProtectionAddToCart.innerHTML;
           }
         });
       }
@@ -909,29 +909,29 @@
 </script>
 
 <style>
-  .previewCart-staingard {
+  .previewCart-protection {
     background-color: #f1e8e1;
     margin: auto -24px 0 -24px;
   }
 
-  .previewCart-staingard .title {
+  .previewCart-protection .title {
     padding: 10px;
     margin: 15px;
     font-weight: bold;
   }
 
-  .previewCart-staingard .description {
+  .previewCart-protection .description {
     padding: 0 10px 10px 10px;
     margin: 0 15px 15px 15px;
   }
 
-  .previewCart-staingard #staingard-button {
+  .previewCart-protection #protection-button {
     margin: 0 24px 24px 0;
     float: right;
     max-width: 200px;
   }
 
-  .previewCart-staingard button:hover {
+  .previewCart-protection button:hover {
     color: rgba(var(--button-color-text-hover), 1);
   }
 </style>

@@ -2346,19 +2346,19 @@
       },
       {
         "type": "text",
-        "id": "staingard_cart_title",
+        "id": "protection_cart_title",
         "label": "Title",
         "default": "Protect From Accidental Damage"
       },
       {
         "type": "text",
-        "id": "staingard_cart_paragraph",
+        "id": "protection_cart_paragraph",
         "label": "Paragraph",
         "default": "Emmiera offers a host of protection benefits for your new sofa."
       },
       {
         "type": "text",
-        "id": "staingard_cart_button_text",
+        "id": "protection_cart_button_text",
         "label": "Button Text",
         "default": "Add Emmiera..."
       }
