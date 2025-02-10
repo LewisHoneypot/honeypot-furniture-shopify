@@ -108,109 +108,129 @@
               {% assign page_seating_capacity = 0 %}
               {% assign page_new_price = 0 %}
 
-              {% for item in cart.items %}
-                {% if item.product.type == 'Sofas' %}
-                  {% if block.settings.pricing_type == 'price' %}
-                    {% assign new_price = item.product.price %}
-                    {% assign new_price = new_price | times: item.quantity %}
+              {% assign items_in_cart = cart.items | size %}
 
-                    {% assign page_new_price = page_new_price | plus: new_price %}
+              <script>
+                {% comment %} console.log('items_in_cart', {{items_in_cart | json}}); {% endcomment %}
+              </script>
 
-                  {% elsif block.settings.pricing_type == 'seating_capacity' %}
-                    {% if item.grams %}
-                      {% comment %} <script>console.log('staingard-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
+              {% if items_in_cart > 0 %}
 
-                      {% assign newseating_capacity = item.grams | divided_by: 1000 %}
-                      {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
+                {% for item in cart.items %}
+                  {% if item.product.type == 'Sofas' %}
+                    {% if block.settings.pricing_type == 'price' %}
+                      {% assign new_price = item.product.price %}
+                      {% assign new_price = new_price | times: item.quantity %}
 
-                      {% comment %} <script>console.log('staingard-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
+                      {% assign page_new_price = page_new_price | plus: new_price %}
 
-                      {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
-                    {% else %}
-                      {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
+                    {% elsif block.settings.pricing_type == 'seating_capacity' %}
+                      {% if item.grams %}
+                        {% comment %} <script>console.log('staingard-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
+
+                        {% assign newseating_capacity = item.grams | divided_by: 1000 %}
+                        {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
+
+                        {% comment %} <script>console.log('staingard-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
+
+                        {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
+                      {% else %}
+                        {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
+                      {% endif %}
+                    {% endif %}
+
+                  {% else %}
+                    {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
+                  {% endif %}
+                {% endfor %}
+
+              {% endif %}
+
+                {% if block.settings.pricing_type == 'price' %}
+
+                  <script>
+                    {% comment %} console.log('product', {{ product | json }}); {% endcomment %}
+                  </script>
+
+                  {% if items_in_cart > 0 %}
+                    {% assign sofas_price = page_new_price %}
+                  {% else %}
+                    {% assign sofas_price = product.price %}
+                  {% endif %}
+
+                  {% comment %} <div>{{ sofas_price }}</div> {% endcomment %}
+
+                  {%- if sofas_price > 0 -%}
+                    {%- if sofas_price <= 49999 -%}
+                      {% assign staingard_price = 50 %}
+                      {% assign staingard_id = 54782371201399 %}
+                    {% elsif sofas_price <= 99999 %}
+                      {% assign staingard_price = 75 %}
+                      {% assign staingard_id = 54782371529079 %}
+                    {% elsif sofas_price <= 149999 %}
+                      {% assign staingard_price = 100 %}
+                      {% assign staingard_id = 54782372053367 %}
+                    {% elsif sofas_price <= 199999 %}
+                      {% assign staingard_price = 150 %}
+                      {% assign staingard_id = 54782492606839 %}
+                    {% elsif sofas_price <= 299999 %}
+                      {% assign staingard_price = 200 %}
+                      {% assign staingard_id = 54782492967287 %}
+                    {% elsif sofas_price <= 399999 %}
+                      {% assign staingard_price = 250 %}
+                      {% assign staingard_id = 54782493000055 %}
+                    {% elsif sofas_price <= 499999 %}
+                      {% assign staingard_price = 300 %}
+                      {% assign staingard_id = 54782493622647 %}
+                    {% elsif sofas_price <= 999999 %}
+                      {% assign staingard_price = 350 %}
+                      {% assign staingard_id = 54782493819255 %}
+                    {% elsif sofas_price >= 1000000 %}
+                      {% assign staingard_price = 400 %}
+                      {% assign staingard_id = 54782494245239 %}
                     {% endif %}
                   {% endif %}
 
-                {% else %}
-                  {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
-                {% endif %}
-              {% endfor %}
+                  {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
-              {% if block.settings.pricing_type == 'price' %}
-                {% assign sofas_price = page_new_price %}
-                {% comment %} <div>{{ sofas_price }}</div> {% endcomment %}
+                  <p>
+                    <strong id="staingard-price">£{{ staingard_price }}</strong>
+                  </p>
 
-                {%- if sofas_price > 0 -%}
-                  {%- if sofas_price <= 49999 -%}
-                    {% assign staingard_price = 50 %}
-                    {% assign staingard_id = 54782371201399 %}
-                  {% elsif sofas_price <= 99999 %}
-                    {% assign staingard_price = 75 %}
-                    {% assign staingard_id = 54782371529079 %}
-                  {% elsif sofas_price <= 149999 %}
-                    {% assign staingard_price = 100 %}
-                    {% assign staingard_id = 54782372053367 %}
-                  {% elsif sofas_price <= 199999 %}
-                    {% assign staingard_price = 150 %}
-                    {% assign staingard_id = 54782492606839 %}
-                  {% elsif sofas_price <= 299999 %}
-                    {% assign staingard_price = 200 %}
-                    {% assign staingard_id = 54782492967287 %}
-                  {% elsif sofas_price <= 399999 %}
-                    {% assign staingard_price = 250 %}
-                    {% assign staingard_id = 54782493000055 %}
-                  {% elsif sofas_price <= 499999 %}
-                    {% assign staingard_price = 300 %}
-                    {% assign staingard_id = 54782493622647 %}
-                  {% elsif sofas_price <= 999999 %}
-                    {% assign staingard_price = 350 %}
-                    {% assign staingard_id = 54782493819255 %}
-                  {% elsif sofas_price >= 1000000 %}
-                    {% assign staingard_price = 400 %}
-                    {% assign staingard_id = 54782494245239 %}
+                {% elsif block.settings.pricing_type == 'seating_capacity' %}
+                  {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
+                  {% assign seating_capacity = page_seating_capacity %}
+
+                  {% if seating_capacity > 6 %}
+                    {% assign seating_capacity = 6 %}
                   {% endif %}
+
+                  {% if seating_capacity == 1 %}
+                    {% comment %} £40 {% endcomment %}
+                    {% assign staingard_id = 48612272898335 %}
+                  {% elsif seating_capacity == 2 %}
+                    {% comment %} £80 {% endcomment %}
+                    {% assign staingard_id = 48612274700575 %}
+                  {% elsif seating_capacity == 3 %}
+                    {% comment %} £120 {% endcomment %}
+                    {% assign staingard_id = 48626777522463 %}
+                  {% elsif seating_capacity == 4 %}
+                    {% comment %} £160 {% endcomment %}
+                    {% assign staingard_id = 48626778505503 %}
+                  {% elsif seating_capacity == 5 %}
+                    {% comment %} £200 {% endcomment %}
+                    {% assign staingard_id = 48626778964255 %}
+                  {% elsif seating_capacity >= 6 %}
+                    {% comment %} £240 {% endcomment %}
+                    {% assign staingard_id = 48626779390239 %}
+                  {% endif %}
+
+                  {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
+
+                  <p>
+                    <strong id="staingard-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
+                  </p>
                 {% endif %}
-
-                {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
-
-                <p>
-                  <strong id="staingard-price">£{{ staingard_price }}</strong>
-                </p>
-
-              {% elsif block.settings.pricing_type == 'seating_capacity' %}
-                {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
-                {% assign seating_capacity = page_seating_capacity %}
-
-                {% if seating_capacity > 6 %}
-                  {% assign seating_capacity = 6 %}
-                {% endif %}
-
-                {% if seating_capacity == 1 %}
-                  {% comment %} £40 {% endcomment %}
-                  {% assign staingard_id = 48612272898335 %}
-                {% elsif seating_capacity == 2 %}
-                  {% comment %} £80 {% endcomment %}
-                  {% assign staingard_id = 48612274700575 %}
-                {% elsif seating_capacity == 3 %}
-                  {% comment %} £120 {% endcomment %}
-                  {% assign staingard_id = 48626777522463 %}
-                {% elsif seating_capacity == 4 %}
-                  {% comment %} £160 {% endcomment %}
-                  {% assign staingard_id = 48626778505503 %}
-                {% elsif seating_capacity == 5 %}
-                  {% comment %} £200 {% endcomment %}
-                  {% assign staingard_id = 48626778964255 %}
-                {% elsif seating_capacity >= 6 %}
-                  {% comment %} £240 {% endcomment %}
-                  {% assign staingard_id = 48626779390239 %}
-                {% endif %}
-
-                {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
-
-                <p>
-                  <strong id="staingard-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
-                </p>
-              {% endif %}
 
               <p class="left" style="display: inline-block;">
                 {%- if block.settings.tick_image == null -%}
@@ -459,11 +479,11 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    {% comment %} console.log('Loaded'); {% endcomment %}
-
     const button = document.getElementById('staingard-add-to-cart');
     const checkboxWrapper = document.getElementById('emmiera-checks');
     const staingardId = {{ staingard_id }}; // Assuming the staingard_id is being passed in
+
+    {% comment %} console.log('staingardId', staingardId); {% endcomment %}
 
     {% comment %} console.log('button', button); {% endcomment %}
     {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
