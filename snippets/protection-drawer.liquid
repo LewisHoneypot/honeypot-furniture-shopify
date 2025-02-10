@@ -1,12 +1,12 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
-    {%- when 'staingard_drawer' -%}
+    {%- when 'protection_drawer' -%}
       {% comment %} {%- assign product_log = product.variants[0] | json -%} {% endcomment %}
       {% comment %} {%- assign page_seating_capacity = product.variants[0].weight | divided_by: 1000 -%} {% endcomment %}
 
       {% comment %} <script> {% endcomment %}
-      {% comment %} console.log('staingard-drawer product_log: ', {{ product_log }}); {% endcomment %}
-      {% comment %} console.log('staingard-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
+      {% comment %} console.log('protection-drawer product_log: ', {{ product_log }}); {% endcomment %}
+      {% comment %} console.log('protection-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
       {% comment %} </script> {% endcomment %}
 
       {% comment %}
@@ -16,30 +16,30 @@
 
         {% if page_seating_capacity == 1 %}
           {% comment %} £40 {% endcomment %}
-          {% assign staingard_id = 48612272898335 %}
+          {% assign protection_id = 48612272898335 %}
         {% elsif page_seating_capacity == 2 %}
           {% comment %} £80 {% endcomment %}
-          {% assign staingard_id = 48612274700575 %}
+          {% assign protection_id = 48612274700575 %}
         {% elsif page_seating_capacity == 3 %}
           {% comment %} £120 {% endcomment %}
-          {% assign staingard_id = 48626777522463 %}
+          {% assign protection_id = 48626777522463 %}
         {% elsif page_seating_capacity == 4 %}
           {% comment %} £160 {% endcomment %}
-          {% assign staingard_id = 48626778505503 %}
+          {% assign protection_id = 48626778505503 %}
         {% elsif page_seating_capacity == 5 %}
           {% comment %} £200 {% endcomment %}
-          {% assign staingard_id = 48626778964255 %}
+          {% assign protection_id = 48626778964255 %}
         {% elsif page_seating_capacity >= 6 %}
           {% comment %} £240 {% endcomment %}
-          {% assign staingard_id = 48626779390239 %}
+          {% assign protection_id = 48626779390239 %}
         {% endif %}
       {% endcomment %}
 
-      {% comment %} <script>console.log('staingard-drawer staingard_id: ', {{ staingard_id }});</script> {% endcomment %}
+      {% comment %} <script>console.log('protection-drawer protection_id: ', {{ protection_id }});</script> {% endcomment %}
 
       <side-drawer
         class="product__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden animate"
-        id="Drawer-Staingard"
+        id="Drawer-Protection"
         style="z-index:9;"
       >
         <div class="side-drawer">
@@ -51,7 +51,7 @@
             class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100"
             role="dialog"
             aria-modal="true"
-            aria-label="Staingard"
+            aria-label="Protection"
             tabindex="-1"
             style="padding: 3rem 3rem 0;"
           >
@@ -62,7 +62,7 @@
                 class="drawer__close d-block t-button b-none b-circle c-pointer button--close"
                 type="button"
                 onclick="this.closest('side-drawer').close()"
-                aria-label="Staingard"
+                aria-label="Protection"
                 style="top: 0rem; right: 0rem;"
               >
                 <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
@@ -126,12 +126,12 @@
 
                     {% elsif block.settings.pricing_type == 'seating_capacity' %}
                       {% if item.grams %}
-                        {% comment %} <script>console.log('staingard-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
+                        {% comment %} <script>console.log('protection-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
 
                         {% assign newseating_capacity = item.grams | divided_by: 1000 %}
                         {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
 
-                        {% comment %} <script>console.log('staingard-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
+                        {% comment %} <script>console.log('protection-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
 
                         {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
                       {% else %}
@@ -162,39 +162,39 @@
 
                   {%- if sofas_price > 0 -%}
                     {%- if sofas_price <= 49999 -%}
-                      {% assign staingard_price = 50 %}
-                      {% assign staingard_id = 54782371201399 %}
+                      {% assign protection_price = 50 %}
+                      {% assign protection_id = 54782371201399 %}
                     {% elsif sofas_price <= 99999 %}
-                      {% assign staingard_price = 75 %}
-                      {% assign staingard_id = 54782371529079 %}
+                      {% assign protection_price = 75 %}
+                      {% assign protection_id = 54782371529079 %}
                     {% elsif sofas_price <= 149999 %}
-                      {% assign staingard_price = 100 %}
-                      {% assign staingard_id = 54782372053367 %}
+                      {% assign protection_price = 100 %}
+                      {% assign protection_id = 54782372053367 %}
                     {% elsif sofas_price <= 199999 %}
-                      {% assign staingard_price = 150 %}
-                      {% assign staingard_id = 54782492606839 %}
+                      {% assign protection_price = 150 %}
+                      {% assign protection_id = 54782492606839 %}
                     {% elsif sofas_price <= 299999 %}
-                      {% assign staingard_price = 200 %}
-                      {% assign staingard_id = 54782492967287 %}
+                      {% assign protection_price = 200 %}
+                      {% assign protection_id = 54782492967287 %}
                     {% elsif sofas_price <= 399999 %}
-                      {% assign staingard_price = 250 %}
-                      {% assign staingard_id = 54782493000055 %}
+                      {% assign protection_price = 250 %}
+                      {% assign protection_id = 54782493000055 %}
                     {% elsif sofas_price <= 499999 %}
-                      {% assign staingard_price = 300 %}
-                      {% assign staingard_id = 54782493622647 %}
+                      {% assign protection_price = 300 %}
+                      {% assign protection_id = 54782493622647 %}
                     {% elsif sofas_price <= 999999 %}
-                      {% assign staingard_price = 350 %}
-                      {% assign staingard_id = 54782493819255 %}
+                      {% assign protection_price = 350 %}
+                      {% assign protection_id = 54782493819255 %}
                     {% elsif sofas_price >= 1000000 %}
-                      {% assign staingard_price = 400 %}
-                      {% assign staingard_id = 54782494245239 %}
+                      {% assign protection_price = 400 %}
+                      {% assign protection_id = 54782494245239 %}
                     {% endif %}
                   {% endif %}
 
                   {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
                   <p>
-                    <strong id="staingard-price">£{{ staingard_price }}</strong>
+                    <strong id="protection-price">£{{ protection_price }}</strong>
                   </p>
 
                 {% elsif block.settings.pricing_type == 'seating_capacity' %}
@@ -207,28 +207,28 @@
 
                   {% if seating_capacity == 1 %}
                     {% comment %} £40 {% endcomment %}
-                    {% assign staingard_id = 48612272898335 %}
+                    {% assign protection_id = 48612272898335 %}
                   {% elsif seating_capacity == 2 %}
                     {% comment %} £80 {% endcomment %}
-                    {% assign staingard_id = 48612274700575 %}
+                    {% assign protection_id = 48612274700575 %}
                   {% elsif seating_capacity == 3 %}
                     {% comment %} £120 {% endcomment %}
-                    {% assign staingard_id = 48626777522463 %}
+                    {% assign protection_id = 48626777522463 %}
                   {% elsif seating_capacity == 4 %}
                     {% comment %} £160 {% endcomment %}
-                    {% assign staingard_id = 48626778505503 %}
+                    {% assign protection_id = 48626778505503 %}
                   {% elsif seating_capacity == 5 %}
                     {% comment %} £200 {% endcomment %}
-                    {% assign staingard_id = 48626778964255 %}
+                    {% assign protection_id = 48626778964255 %}
                   {% elsif seating_capacity >= 6 %}
                     {% comment %} £240 {% endcomment %}
-                    {% assign staingard_id = 48626779390239 %}
+                    {% assign protection_id = 48626779390239 %}
                   {% endif %}
 
                   {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
                   <p>
-                    <strong id="staingard-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
+                    <strong id="protection-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
                   </p>
                 {% endif %}
 
@@ -389,8 +389,8 @@
               </div>
 
               <div
-                id="staingard-add-to-cart"
-                onclick="handleStaingardAddToCart({{staingard_id}});"
+                id="protection-add-to-cart"
+                onclick="handleProtectionAddToCart({{protection_id}});"
                 class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
               >
                 <span>{{ block.settings['button-1-text'] }}</span>
@@ -412,7 +412,7 @@
 
 <script>
   // Function to handle adding to the cart
-  function handleStaingardAddToCart(staingardId) {
+  function handleProtectionAddToCart(protectionId) {
     const checkbox = document.getElementById('emmiera-tnc');
     const checkboxWrapper = document.getElementById('emmiera-checks');
 
@@ -426,15 +426,15 @@
     {% comment %} console.log('Checked - Add to cart'); {% endcomment %}
     checkboxWrapper.style.border = '2px solid white'; // Remove red border if checked
 
-    customAddToCart(staingardId); // Proceed to add to cart
+    customAddToCart(protectionId); // Proceed to add to cart
   }
 
   // Custom function to add the item to the cart
-  function customAddToCart(staingard_id) {
+  function customAddToCart(protection_id) {
     let formData = {
       items: [
         {
-          id: staingard_id,
+          id: protection_id,
           quantity: 1,
         },
       ],
@@ -460,7 +460,7 @@
 
   // Function to close the side drawer
   function closeSideDrawer() {
-    const sideDrawer = document.querySelector('#Drawer-Staingard .side-drawer'); // Try a general selector for 'side-drawer'
+    const sideDrawer = document.querySelector('#Drawer-Protection .side-drawer'); // Try a general selector for 'side-drawer'
     if (sideDrawer) {
       {% comment %} console.log('Attempting to close the side drawer...'); {% endcomment %}
       sideDrawer.classList.add('closed'); // Add a 'closed' class to hide the drawer (or use the correct class name)
@@ -479,11 +479,11 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('staingard-add-to-cart');
+    const button = document.getElementById('protection-add-to-cart');
     const checkboxWrapper = document.getElementById('emmiera-checks');
-    const staingardId = {{ staingard_id }}; // Assuming the staingard_id is being passed in
+    const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
 
-    {% comment %} console.log('staingardId', staingardId); {% endcomment %}
+    {% comment %} console.log('protectionId', protectionId); {% endcomment %}
 
     {% comment %} console.log('button', button); {% endcomment %}
     {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}

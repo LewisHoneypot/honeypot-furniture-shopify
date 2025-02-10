@@ -1,6 +1,4 @@
-function refreshStaingardDrawer() {
-  console.log("drawer__wrapper refreshStaingardDrawer");
-
+function refreshProtectiondDrawer() {
   // Fetch the current page to update the drawer
   fetch(location.href)
     .then((response) => {
@@ -15,10 +13,10 @@ function refreshStaingardDrawer() {
 
       // Get the updated drawer content from the fetched HTML
       const newCartDrawer = tempDoc.querySelector(
-        "#Drawer-Staingard .drawer__wrapper"
+        "#Drawer-Protection .drawer__wrapper"
       );
       const cartDrawer = document.querySelector(
-        "#Drawer-Staingard .drawer__wrapper"
+        "#Drawer-Protection .drawer__wrapper"
       );
 
       if (cartDrawer && newCartDrawer) {
@@ -33,7 +31,7 @@ function refreshStaingardDrawer() {
 }
 
 function refreshCartDrawer() {
-  // console.log('staingard-drawer refreshCartDrawer');
+  // console.log('protection-drawer refreshCartDrawer');
 
   fetch("/cart.js")
     .then((response) => response.json())
@@ -56,7 +54,7 @@ function refreshCartDrawer() {
 }
 
 function refreshCartBubble() {
-  // console.log('staingard-drawer refreshCartBubble');
+  // console.log('protection-drawer refreshCartBubble');
 
   fetch("/cart.js")
     .then((response) => response.json())
@@ -85,7 +83,7 @@ window.theme = {
     //   console.log('theme.refreshCart started.');
     refreshCartDrawer();
     refreshCartBubble();
-    refreshStaingardDrawer();
+    refreshProtectiondDrawer();
     //   console.log('theme.refreshCart completed.');
   },
 };
