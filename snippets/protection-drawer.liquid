@@ -1,533 +1,538 @@
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'protection_drawer' -%}
-      {% comment %} {%- assign product_log = product.variants[0] | json -%} {% endcomment %}
-      {% comment %} {%- assign page_seating_capacity = product.variants[0].weight | divided_by: 1000 -%} {% endcomment %}
+{%- if template contains "sofas" -%}
 
-      {% comment %} <script> {% endcomment %}
-      {% comment %} console.log('protection-drawer product_log: ', {{ product_log }}); {% endcomment %}
-      {% comment %} console.log('protection-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
-      {% comment %} </script> {% endcomment %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'protection_drawer' -%}
+        {% comment %} {%- assign product_log = product.variants[0] | json -%} {% endcomment %}
+        {% comment %} {%- assign page_seating_capacity = product.variants[0].weight | divided_by: 1000 -%} {% endcomment %}
 
-      {% comment %}
-        {% if page_seating_capacity > 6 %}
-          {% assign page_seating_capacity = 6 %}
-        {% endif %}
+        {% comment %} <script> {% endcomment %}
+        {% comment %} console.log('protection-drawer product_log: ', {{ product_log }}); {% endcomment %}
+        {% comment %} console.log('protection-drawer page_seating_capacity: ', {{ page_seating_capacity }}); {% endcomment %}
+        {% comment %} </script> {% endcomment %}
 
-        {% if page_seating_capacity == 1 %}
-          {% comment %} £40 {% endcomment %}
-          {% assign protection_id = 48612272898335 %}
-        {% elsif page_seating_capacity == 2 %}
-          {% comment %} £80 {% endcomment %}
-          {% assign protection_id = 48612274700575 %}
-        {% elsif page_seating_capacity == 3 %}
-          {% comment %} £120 {% endcomment %}
-          {% assign protection_id = 48626777522463 %}
-        {% elsif page_seating_capacity == 4 %}
-          {% comment %} £160 {% endcomment %}
-          {% assign protection_id = 48626778505503 %}
-        {% elsif page_seating_capacity == 5 %}
-          {% comment %} £200 {% endcomment %}
-          {% assign protection_id = 48626778964255 %}
-        {% elsif page_seating_capacity >= 6 %}
-          {% comment %} £240 {% endcomment %}
-          {% assign protection_id = 48626779390239 %}
-        {% endif %}
-      {% endcomment %}
+        {% comment %}
+          {% if page_seating_capacity > 6 %}
+            {% assign page_seating_capacity = 6 %}
+          {% endif %}
 
-      {% comment %} <script>console.log('protection-drawer protection_id: ', {{ protection_id }});</script> {% endcomment %}
+          {% if page_seating_capacity == 1 %}
+            {% comment %} £40 {% endcomment %}
+            {% assign protection_id = 48612272898335 %}
+          {% elsif page_seating_capacity == 2 %}
+            {% comment %} £80 {% endcomment %}
+            {% assign protection_id = 48612274700575 %}
+          {% elsif page_seating_capacity == 3 %}
+            {% comment %} £120 {% endcomment %}
+            {% assign protection_id = 48626777522463 %}
+          {% elsif page_seating_capacity == 4 %}
+            {% comment %} £160 {% endcomment %}
+            {% assign protection_id = 48626778505503 %}
+          {% elsif page_seating_capacity == 5 %}
+            {% comment %} £200 {% endcomment %}
+            {% assign protection_id = 48626778964255 %}
+          {% elsif page_seating_capacity >= 6 %}
+            {% comment %} £240 {% endcomment %}
+            {% assign protection_id = 48626779390239 %}
+          {% endif %}
+        {% endcomment %}
 
-      <side-drawer
-        class="product__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden animate"
-        id="Drawer-Protection"
-        style="z-index:9;"
-      >
-        <div class="side-drawer">
-          <div
-            id="Drawer-Overlay-Search"
-            class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"
-          ></div>
-          <div
-            class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Protection"
-            tabindex="-1"
-            style="padding: 3rem 3rem 0;"
-          >
-            <div class="drawer__header d-flex j-c-between a-i-center pos-relative">
-              <h2 class="drawer__heading break m-0">{{ block.settings.title }}</h2>
+        {% comment %} <script>console.log('protection-drawer protection_id: ', {{ protection_id }});</script> {% endcomment %}
 
-              <button
-                class="drawer__close d-block t-button b-none b-circle c-pointer button--close"
-                type="button"
-                onclick="this.closest('side-drawer').close()"
-                aria-label="Protection"
-                style="top: 0rem; right: 0rem;"
-              >
-                <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
-              </button>
-            </div>
-            <div class="drawer__wrapper center">
-              {% comment %} <p>{{ product.title | escape }}</p> {% endcomment %}
+        <side-drawer
+          class="product__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex j-c-end no-js-hidden animate"
+          id="Drawer-Protection"
+          style="z-index:9;"
+        >
+          <div class="side-drawer">
+            <div
+              id="Drawer-Overlay-Search"
+              class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"
+            ></div>
+            <div
+              class="drawer__inner gradient d-flex f-column overflow-y overflow-x-h h-100"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Protection"
+              tabindex="-1"
+              style="padding: 3rem 3rem 0;"
+            >
+              <div class="drawer__header d-flex j-c-between a-i-center pos-relative">
+                <h2 class="drawer__heading break m-0">{{ block.settings.title }}</h2>
 
-              {%- if block.settings.main_image == null -%}
-                <img
-                  srcset="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/emmiera_logo.jpg?v=1738576879"
-                  width="444"
-                  height="222"
+                <button
+                  class="drawer__close d-block t-button b-none b-circle c-pointer button--close"
+                  type="button"
+                  onclick="this.closest('side-drawer').close()"
+                  aria-label="Protection"
+                  style="top: 0rem; right: 0rem;"
                 >
-              {%- else -%}
-                <img
-                  srcset="
-                    {% if block.settings.main_image %}
-                      {{ block.settings.main_image | image_url: width: 360 }} 360w,
-                      {{ block.settings.main_image | image_url: width: 550 }} 550w,
-                      {{ block.settings.main_image | image_url: width: 750 }} 750w,
-                      {{ block.settings.main_image | image_url: width: 1000 }} 1000w,
-                      {{ block.settings.main_image | image_url: width: 1200 }} 1200w
+                  <span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span>
+                </button>
+              </div>
+              <div class="drawer__wrapper center">
+                {% comment %} <p>{{ product.title | escape }}</p> {% endcomment %}
+
+                {%- if block.settings.main_image == null -%}
+                  <img
+                    srcset="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/emmiera_logo.jpg?v=1738576879"
+                    width="444"
+                    height="222"
+                  >
+                {%- else -%}
+                  <img
+                    srcset="
+                      {% if block.settings.main_image %}
+                        {{ block.settings.main_image | image_url: width: 360 }} 360w,
+                        {{ block.settings.main_image | image_url: width: 550 }} 550w,
+                        {{ block.settings.main_image | image_url: width: 750 }} 750w,
+                        {{ block.settings.main_image | image_url: width: 1000 }} 1000w,
+                        {{ block.settings.main_image | image_url: width: 1200 }} 1200w
+                      {% endif %}
+                    "
+                    sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
+                    src="{{ block.settings.main_image | image_url: width: 750 }}"
+                    {% if block.settings.main_image.alt != blank %}
+                      alt="{{ block.settings.main_image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
                     {% endif %}
-                  "
-                  sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
-                  src="{{ block.settings.main_image | image_url: width: 750 }}"
-                  {% if block.settings.main_image.alt != blank %}
-                    alt="{{ block.settings.main_image.alt | escape }}"
-                  {% else %}
-                    role="presentation"
-                  {% endif %}
-                  height="444"
-                  width="222"
-                  loading="lazy"
-                  style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                >
-              {%- endif -%}
+                    height="444"
+                    width="222"
+                    loading="lazy"
+                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                  >
+                {%- endif -%}
 
-              <p>{{ block.settings.text1 }}</p>
-              <p>{{ block.settings.text2 }}</p>
+                <p>{{ block.settings.text1 }}</p>
+                <p>{{ block.settings.text2 }}</p>
 
-              {% assign page_seating_capacity = 0 %}
-              {% assign page_new_price = 0 %}
+                {% assign page_seating_capacity = 0 %}
+                {% assign page_new_price = 0 %}
 
-              {% assign items_in_cart = cart.items | size %}
+                {% assign items_in_cart = cart.items | size %}
 
-              <script>
-                {% comment %} console.log('items_in_cart', {{items_in_cart | json}}); {% endcomment %}
-              </script>
+                <script>
+                  {% comment %} console.log('items_in_cart', {{items_in_cart | json}}); {% endcomment %}
+                </script>
 
-              {% if items_in_cart > 0 %}
+                {% if items_in_cart > 0 %}
 
-                {% for item in cart.items %}
-                  {% if item.product.type == 'Sofas' %}
-                    {% if block.settings.pricing_type == 'price' %}
-                      {% assign new_price = item.product.price %}
-                      {% assign new_price = new_price | times: item.quantity %}
+                  {% for item in cart.items %}
+                    {% if item.product.type == 'Sofas' %}
+                      {% if block.settings.pricing_type == 'price' %}
+                        {% assign new_price = item.product.price %}
+                        {% assign new_price = new_price | times: item.quantity %}
 
-                      {% assign page_new_price = page_new_price | plus: new_price %}
+                        {% assign page_new_price = page_new_price | plus: new_price %}
 
-                    {% elsif block.settings.pricing_type == 'seating_capacity' %}
-                      {% if item.grams %}
-                        {% comment %} <script>console.log('protection-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
+                      {% elsif block.settings.pricing_type == 'seating_capacity' %}
+                        {% if item.grams %}
+                          {% comment %} <script>console.log('protection-drawer seating_capacity', {{ item.grams }});</script> {% endcomment %}
 
-                        {% assign newseating_capacity = item.grams | divided_by: 1000 %}
-                        {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
+                          {% assign newseating_capacity = item.grams | divided_by: 1000 %}
+                          {% assign newseating_capacity = newseating_capacity | times: item.quantity %}
 
-                        {% comment %} <script>console.log('protection-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
+                          {% comment %} <script>console.log('protection-drawer newseating_capacity', {{ newseating_capacity }});</script> {% endcomment %}
 
-                        {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
-                      {% else %}
-                        {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
+                          {% assign page_seating_capacity = page_seating_capacity | plus: newseating_capacity %}
+                        {% else %}
+                          {% comment %} <script>console.log("Doesn't contain seating capacity");</script> {% endcomment %}
+                        {% endif %}
+                      {% endif %}
+
+                    {% else %}
+                      {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
+                    {% endif %}
+                  {% endfor %}
+
+                {% endif %}
+
+                  {% if block.settings.pricing_type == 'price' %}
+
+                    <script>
+                      {% comment %} console.log('product', {{ product | json }}); {% endcomment %}
+                    </script>
+
+                    {% if items_in_cart > 0 %}
+                      {% assign sofas_price = page_new_price %}
+                    {% else %}
+                      {% assign sofas_price = product.price %}
+                    {% endif %}
+
+                    {% comment %} <div>{{ sofas_price }}</div> {% endcomment %}
+
+                    {%- if sofas_price > 0 -%}
+                      {%- if sofas_price <= 49999 -%}
+                        {% assign protection_price = 50 %}
+                        {% assign protection_id = 54782371201399 %}
+                      {% elsif sofas_price <= 99999 %}
+                        {% assign protection_price = 75 %}
+                        {% assign protection_id = 54782371529079 %}
+                      {% elsif sofas_price <= 149999 %}
+                        {% assign protection_price = 100 %}
+                        {% assign protection_id = 54782372053367 %}
+                      {% elsif sofas_price <= 199999 %}
+                        {% assign protection_price = 150 %}
+                        {% assign protection_id = 54782492606839 %}
+                      {% elsif sofas_price <= 299999 %}
+                        {% assign protection_price = 200 %}
+                        {% assign protection_id = 54782492967287 %}
+                      {% elsif sofas_price <= 399999 %}
+                        {% assign protection_price = 250 %}
+                        {% assign protection_id = 54782493000055 %}
+                      {% elsif sofas_price <= 499999 %}
+                        {% assign protection_price = 300 %}
+                        {% assign protection_id = 54782493622647 %}
+                      {% elsif sofas_price <= 999999 %}
+                        {% assign protection_price = 350 %}
+                        {% assign protection_id = 54782493819255 %}
+                      {% elsif sofas_price >= 1000000 %}
+                        {% assign protection_price = 400 %}
+                        {% assign protection_id = 54782494245239 %}
                       {% endif %}
                     {% endif %}
 
-                  {% else %}
-                    {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
-                  {% endif %}
-                {% endfor %}
+                    {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
 
-              {% endif %}
+                    <p>
+                      <strong id="protection-price">£{{ protection_price }}</strong>
+                    </p>
 
-                {% if block.settings.pricing_type == 'price' %}
+                  {% elsif block.settings.pricing_type == 'seating_capacity' %}
+                    {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
+                    {% assign seating_capacity = page_seating_capacity %}
 
-                  <script>
-                    {% comment %} console.log('product', {{ product | json }}); {% endcomment %}
-                  </script>
-
-                  {% if items_in_cart > 0 %}
-                    {% assign sofas_price = page_new_price %}
-                  {% else %}
-                    {% assign sofas_price = product.price %}
-                  {% endif %}
-
-                  {% comment %} <div>{{ sofas_price }}</div> {% endcomment %}
-
-                  {%- if sofas_price > 0 -%}
-                    {%- if sofas_price <= 49999 -%}
-                      {% assign protection_price = 50 %}
-                      {% assign protection_id = 54782371201399 %}
-                    {% elsif sofas_price <= 99999 %}
-                      {% assign protection_price = 75 %}
-                      {% assign protection_id = 54782371529079 %}
-                    {% elsif sofas_price <= 149999 %}
-                      {% assign protection_price = 100 %}
-                      {% assign protection_id = 54782372053367 %}
-                    {% elsif sofas_price <= 199999 %}
-                      {% assign protection_price = 150 %}
-                      {% assign protection_id = 54782492606839 %}
-                    {% elsif sofas_price <= 299999 %}
-                      {% assign protection_price = 200 %}
-                      {% assign protection_id = 54782492967287 %}
-                    {% elsif sofas_price <= 399999 %}
-                      {% assign protection_price = 250 %}
-                      {% assign protection_id = 54782493000055 %}
-                    {% elsif sofas_price <= 499999 %}
-                      {% assign protection_price = 300 %}
-                      {% assign protection_id = 54782493622647 %}
-                    {% elsif sofas_price <= 999999 %}
-                      {% assign protection_price = 350 %}
-                      {% assign protection_id = 54782493819255 %}
-                    {% elsif sofas_price >= 1000000 %}
-                      {% assign protection_price = 400 %}
-                      {% assign protection_id = 54782494245239 %}
+                    {% if seating_capacity > 6 %}
+                      {% assign seating_capacity = 6 %}
                     {% endif %}
+
+                    {% if seating_capacity == 1 %}
+                      {% comment %} £40 {% endcomment %}
+                      {% assign protection_id = 48612272898335 %}
+                    {% elsif seating_capacity == 2 %}
+                      {% comment %} £80 {% endcomment %}
+                      {% assign protection_id = 48612274700575 %}
+                    {% elsif seating_capacity == 3 %}
+                      {% comment %} £120 {% endcomment %}
+                      {% assign protection_id = 48626777522463 %}
+                    {% elsif seating_capacity == 4 %}
+                      {% comment %} £160 {% endcomment %}
+                      {% assign protection_id = 48626778505503 %}
+                    {% elsif seating_capacity == 5 %}
+                      {% comment %} £200 {% endcomment %}
+                      {% assign protection_id = 48626778964255 %}
+                    {% elsif seating_capacity >= 6 %}
+                      {% comment %} £240 {% endcomment %}
+                      {% assign protection_id = 48626779390239 %}
+                    {% endif %}
+
+                    {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
+
+                    <p>
+                      <strong id="protection-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
+                    </p>
                   {% endif %}
 
-                  {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
+                <p class="left" style="display: inline-block;">
+                  {%- if block.settings.tick_image == null -%}
+                    <svg
+                      class="icon icon-tick"
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      width="15"
+                      style="margin-right: 1rem;"
+                    >
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  {%- else -%}
+                    <img
+                      src="{{ block.settings.tick_image | image_url }}"
+                      {% if block.settings.tick_image.alt != blank %}
+                        alt="{{ block.settings.tick_image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      height="25"
+                      width="25"
+                      loading="lazy"
+                      style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                    >
+                  {%- endif -%}
+                  {{ block.settings['tick-1-text'] }}
+                  <br>
+                  {%- if block.settings.tick_image == null -%}
+                    <svg
+                      class="icon icon-tick"
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      width="15"
+                      style="margin-right: 1rem;"
+                    >
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  {%- else -%}
+                    <img
+                      src="{{ block.settings.tick_image | image_url }}"
+                      {% if block.settings.tick_image.alt != blank %}
+                        alt="{{ block.settings.tick_image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      height="25"
+                      width="25"
+                      loading="lazy"
+                      style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                    >
+                  {%- endif -%}
+                  {{ block.settings['tick-2-text'] }}
+                  <br>
+                  {%- if block.settings.tick_image == null -%}
+                    <svg
+                      class="icon icon-tick"
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      width="15"
+                      style="margin-right: 1rem;"
+                    >
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  {%- else -%}
+                    <img
+                      src="{{ block.settings.tick_image | image_url }}"
+                      {% if block.settings.tick_image.alt != blank %}
+                        alt="{{ block.settings.tick_image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      height="25"
+                      width="25"
+                      loading="lazy"
+                      style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                    >
+                  {%- endif -%}
+                  {{ block.settings['tick-3-text'] }}
+                  <br>
+                  {%- if block.settings.tick_image == null -%}
+                    <svg
+                      class="icon icon-tick"
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      width="15"
+                      style="margin-right: 1rem;"
+                    >
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  {%- else -%}
+                    <img
+                      src="{{ block.settings.tick_image | image_url }}"
+                      {% if block.settings.tick_image.alt != blank %}
+                        alt="{{ block.settings.tick_image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      height="25"
+                      width="25"
+                      loading="lazy"
+                      style="margin-right: 1rem; margin-bottom: 0.5rem;"
+                    >
+                  {%- endif -%}
+                  {{ block.settings['tick-4-text'] }}
+                  <br>
+                  {%- if block.settings.tick_image == null -%}
+                    <svg
+                      class="icon icon-tick"
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      width="15"
+                      style="margin-right: 1rem;"
+                    >
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
+                    </svg>
+                  {%- else -%}
+                    <img
+                      src="{{ block.settings.tick_image | image_url }}"
+                      {% if block.settings.tick_image.alt != blank %}
+                        alt="{{ block.settings.tick_image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      height="25"
+                      width="25"
+                      loading="lazy"
+                      style="margin-right: 1rem;"
+                    >
+                  {%- endif -%}
+                  {{ block.settings['tick-5-text'] }}
+                </p>
 
-                  <p>
-                    <strong id="protection-price">£{{ protection_price }}</strong>
-                  </p>
+                <p>
+                  <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Newline_Insurance_IPID_Form_-_18-12-2024.pdf_1.2.pdf?v=1738750354" target="_blank">Insurance Product Information Document</a>
+                </p>
 
-                {% elsif block.settings.pricing_type == 'seating_capacity' %}
-                  {% comment %} <script>console.log('Total seating capacity across all sofas:', {{ page_seating_capacity }});</script> {% endcomment %}
-                  {% assign seating_capacity = page_seating_capacity %}
+                <div id="emmiera-checks">
+                  <input type="checkbox" id="emmiera-tnc">
+                  <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Emmiera_Terms_Conditions_Newline_18-12-2024.pdf_2.7.pdf?v=1738744488" target="_blank">Terms & Conditions</a></p>
+                </div>
 
-                  {% if seating_capacity > 6 %}
-                    {% assign seating_capacity = 6 %}
-                  {% endif %}
+                <div
+                  id="protection-add-to-cart"
+                  onclick="handleProtectionAddToCart({{protection_id}});"
+                  class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
+                >
+                  <span>{{ block.settings['button-1-text'] }}</span>
+                </div>
 
-                  {% if seating_capacity == 1 %}
-                    {% comment %} £40 {% endcomment %}
-                    {% assign protection_id = 48612272898335 %}
-                  {% elsif seating_capacity == 2 %}
-                    {% comment %} £80 {% endcomment %}
-                    {% assign protection_id = 48612274700575 %}
-                  {% elsif seating_capacity == 3 %}
-                    {% comment %} £120 {% endcomment %}
-                    {% assign protection_id = 48626777522463 %}
-                  {% elsif seating_capacity == 4 %}
-                    {% comment %} £160 {% endcomment %}
-                    {% assign protection_id = 48626778505503 %}
-                  {% elsif seating_capacity == 5 %}
-                    {% comment %} £200 {% endcomment %}
-                    {% assign protection_id = 48626778964255 %}
-                  {% elsif seating_capacity >= 6 %}
-                    {% comment %} £240 {% endcomment %}
-                    {% assign protection_id = 48626779390239 %}
-                  {% endif %}
-
-                  {% comment %} <script>console.log("Combinedseating_capacity:", {{ seating_capacity }});</script> {% endcomment %}
-
-                  <p>
-                    <strong id="protection-price">£{{ seating_capacity | times: block.settings['seat-price'] }}</strong>
-                  </p>
-                {% endif %}
-
-              <p class="left" style="display: inline-block;">
-                {%- if block.settings.tick_image == null -%}
-                  <svg
-                    class="icon icon-tick"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                    width="15"
-                    style="margin-right: 1rem;"
-                  >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
-                  </svg>
-                {%- else -%}
-                  <img
-                    src="{{ block.settings.tick_image | image_url }}"
-                    {% if block.settings.tick_image.alt != blank %}
-                      alt="{{ block.settings.tick_image.alt | escape }}"
-                    {% else %}
-                      role="presentation"
-                    {% endif %}
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                  >
-                {%- endif -%}
-                {{ block.settings['tick-1-text'] }}
-                <br>
-                {%- if block.settings.tick_image == null -%}
-                  <svg
-                    class="icon icon-tick"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                    width="15"
-                    style="margin-right: 1rem;"
-                  >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
-                  </svg>
-                {%- else -%}
-                  <img
-                    src="{{ block.settings.tick_image | image_url }}"
-                    {% if block.settings.tick_image.alt != blank %}
-                      alt="{{ block.settings.tick_image.alt | escape }}"
-                    {% else %}
-                      role="presentation"
-                    {% endif %}
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                  >
-                {%- endif -%}
-                {{ block.settings['tick-2-text'] }}
-                <br>
-                {%- if block.settings.tick_image == null -%}
-                  <svg
-                    class="icon icon-tick"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                    width="15"
-                    style="margin-right: 1rem;"
-                  >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
-                  </svg>
-                {%- else -%}
-                  <img
-                    src="{{ block.settings.tick_image | image_url }}"
-                    {% if block.settings.tick_image.alt != blank %}
-                      alt="{{ block.settings.tick_image.alt | escape }}"
-                    {% else %}
-                      role="presentation"
-                    {% endif %}
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                  >
-                {%- endif -%}
-                {{ block.settings['tick-3-text'] }}
-                <br>
-                {%- if block.settings.tick_image == null -%}
-                  <svg
-                    class="icon icon-tick"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                    width="15"
-                    style="margin-right: 1rem;"
-                  >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
-                  </svg>
-                {%- else -%}
-                  <img
-                    src="{{ block.settings.tick_image | image_url }}"
-                    {% if block.settings.tick_image.alt != blank %}
-                      alt="{{ block.settings.tick_image.alt | escape }}"
-                    {% else %}
-                      role="presentation"
-                    {% endif %}
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                    style="margin-right: 1rem; margin-bottom: 0.5rem;"
-                  >
-                {%- endif -%}
-                {{ block.settings['tick-4-text'] }}
-                <br>
-                {%- if block.settings.tick_image == null -%}
-                  <svg
-                    class="icon icon-tick"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                    width="15"
-                    style="margin-right: 1rem;"
-                  >
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"/>
-                  </svg>
-                {%- else -%}
-                  <img
-                    src="{{ block.settings.tick_image | image_url }}"
-                    {% if block.settings.tick_image.alt != blank %}
-                      alt="{{ block.settings.tick_image.alt | escape }}"
-                    {% else %}
-                      role="presentation"
-                    {% endif %}
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                    style="margin-right: 1rem;"
-                  >
-                {%- endif -%}
-                {{ block.settings['tick-5-text'] }}
-              </p>
-
-              <p>
-                <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Newline_Insurance_IPID_Form_-_18-12-2024.pdf_1.2.pdf?v=1738750354" target="_blank">Insurance Product Information Document</a>
-              </p>
-
-              <div id="emmiera-checks">
-                <input type="checkbox" id="emmiera-tnc">
-                <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Emmiera_Terms_Conditions_Newline_18-12-2024.pdf_2.7.pdf?v=1738744488" target="_blank">Terms & Conditions</a></p>
+                <button
+                  class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c gradient"
+                  onclick="this.closest('side-drawer').close()"
+                  style="margin-top: 1.4rem; margin-bottom: 2.6rem;"
+                >
+                  <span>{{ block.settings['button-2-text'] }}</span>
+                </button>
               </div>
-
-              <div
-                id="protection-add-to-cart"
-                onclick="handleProtectionAddToCart({{protection_id}});"
-                class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-6129edf5-f2cb-409d-832b-936cf3545e85 gradient"
-              >
-                <span>{{ block.settings['button-1-text'] }}</span>
-              </div>
-
-              <button
-                class="cart__checkout-button button button--style-diagonal-swipe w-100 color-scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c gradient"
-                onclick="this.closest('side-drawer').close()"
-                style="margin-top: 1.4rem; margin-bottom: 2.6rem;"
-              >
-                <span>{{ block.settings['button-2-text'] }}</span>
-              </button>
             </div>
           </div>
-        </div>
-      </side-drawer>
-  {%- endcase -%}
-{%- endfor -%}
+        </side-drawer>
+    {%- endcase -%}
+  {%- endfor -%}
 
-<script>
-  // Function to handle adding to the cart
-  function handleProtectionAddToCart(protectionId) {
-    const checkbox = document.getElementById('emmiera-tnc');
-    const checkboxWrapper = document.getElementById('emmiera-checks');
+  <script>
+    // Function to handle adding to the cart
+    function handleProtectionAddToCart(protectionId) {
+      const checkbox = document.getElementById('emmiera-tnc');
+      const checkboxWrapper = document.getElementById('emmiera-checks');
 
-    // Check if checkbox is checked
-    if (!checkbox.checked) {
-      {% comment %} console.log('Unchecked - Add Border'); {% endcomment %}
-      checkboxWrapper.style.border = '2px solid red'; // Add red border if unchecked
-      return; // Stop the process here if not checked
+      // Check if checkbox is checked
+      if (!checkbox.checked) {
+        {% comment %} console.log('Unchecked - Add Border'); {% endcomment %}
+        checkboxWrapper.style.border = '2px solid red'; // Add red border if unchecked
+        return; // Stop the process here if not checked
+      }
+
+      {% comment %} console.log('Checked - Add to cart'); {% endcomment %}
+      checkboxWrapper.style.border = '2px solid white'; // Remove red border if checked
+
+      customAddToCart(protectionId); // Proceed to add to cart
     }
 
-    {% comment %} console.log('Checked - Add to cart'); {% endcomment %}
-    checkboxWrapper.style.border = '2px solid white'; // Remove red border if checked
+    // Custom function to add the item to the cart
+    function customAddToCart(protection_id) {
+      let formData = {
+        items: [
+          {
+            id: protection_id,
+            quantity: 1,
+          },
+        ],
+      };
 
-    customAddToCart(protectionId); // Proceed to add to cart
-  }
-
-  // Custom function to add the item to the cart
-  function customAddToCart(protection_id) {
-    let formData = {
-      items: [
-        {
-          id: protection_id,
-          quantity: 1,
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      ],
-    };
-
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then(() => {
-        refreshCartDrawer(); // Refresh the cart drawer without closing it
-        refreshCartBubble(); // Refresh the cart bubble
-        closeSideDrawer(); // Close the side drawer after adding to cart
+        body: JSON.stringify(formData),
       })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  }
-
-  // Function to close the side drawer
-  function closeSideDrawer() {
-    const sideDrawer = document.querySelector('#Drawer-Protection .side-drawer'); // Try a general selector for 'side-drawer'
-    if (sideDrawer) {
-      {% comment %} console.log('Attempting to close the side drawer...'); {% endcomment %}
-      sideDrawer.classList.add('closed'); // Add a 'closed' class to hide the drawer (or use the correct class name)
-
-      // Try closing via a close button if available
-      const closeButton = sideDrawer.querySelector('.drawer__close');
-      if (closeButton) {
-        closeButton.click();
-        {% comment %} console.log('Close button clicked.'); {% endcomment %}
-      } else {
-        {% comment %} console.log('No close button found.'); {% endcomment %}
-      }
-    } else {
-      {% comment %} console.log('Side drawer not found'); {% endcomment %}
+        .then((response) => response.json())
+        .then(() => {
+          refreshCartDrawer(); // Refresh the cart drawer without closing it
+          refreshCartBubble(); // Refresh the cart bubble
+          closeSideDrawer(); // Close the side drawer after adding to cart
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
     }
-  }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('protection-add-to-cart');
-    const checkboxWrapper = document.getElementById('emmiera-checks');
-    const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
+    // Function to close the side drawer
+    function closeSideDrawer() {
+      const sideDrawer = document.querySelector('#Drawer-Protection .side-drawer'); // Try a general selector for 'side-drawer'
+      if (sideDrawer) {
+        {% comment %} console.log('Attempting to close the side drawer...'); {% endcomment %}
+        sideDrawer.classList.add('closed'); // Add a 'closed' class to hide the drawer (or use the correct class name)
 
-    {% comment %} console.log('protectionId', protectionId); {% endcomment %}
-
-    {% comment %} console.log('button', button); {% endcomment %}
-    {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
-
-    // Event delegation to handle checkbox state change
-    document.addEventListener('change', function (event) {
-      if (event.target && event.target.id === 'emmiera-tnc') {
-        {% comment %} console.log('EventListener | Checkbox state changed:', event.target.checked ? 'Checked' : 'Unchecked'); {% endcomment %}
-
-        // Enable/disable the button based on checkbox state
-        button.disabled = !event.target.checked;
-
-        if (event.target.checked) {
-          document.getElementById('emmiera-checks').style.border = '2px solid white';
+        // Try closing via a close button if available
+        const closeButton = sideDrawer.querySelector('.drawer__close');
+        if (closeButton) {
+          closeButton.click();
+          {% comment %} console.log('Close button clicked.'); {% endcomment %}
         } else {
-          checkboxWrapper.style.border = '2px solid red';
+          {% comment %} console.log('No close button found.'); {% endcomment %}
         }
-        {% comment %} console.log('Updated border style:', checkboxWrapper.style.border); {% endcomment %}
+      } else {
+        {% comment %} console.log('Side drawer not found'); {% endcomment %}
       }
-    });
-  });
-</script>
-
-{% style %}
-  #emmiera-checks {
-    display: flex;
-    align-items: center;
-    border: 2px solid white;
-  }
-  #emmiera-checks #emmiera-tnc {
-    position: relative;
-    -webkit-appearance: auto;
-    appearance: auto;
-    margin-left: 6%;
-    margin-right: 8px;
-    top: 0px;
-    z-index: 0;
-    width: 3.6rem;
-    height: 3.6rem;
-  }
-  @media only screen and (min-width: 750px) {
-    #emmiera-checks #emmiera-tnc {
-      width: 1.6rem;
-      height: 1.6rem;
     }
-  }
-{% endstyle %}
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const button = document.getElementById('protection-add-to-cart');
+      const checkboxWrapper = document.getElementById('emmiera-checks');
+      const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
+
+      {% comment %} console.log('protectionId', protectionId); {% endcomment %}
+
+      {% comment %} console.log('button', button); {% endcomment %}
+      {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
+
+      // Event delegation to handle checkbox state change
+      document.addEventListener('change', function (event) {
+        if (event.target && event.target.id === 'emmiera-tnc') {
+          {% comment %} console.log('EventListener | Checkbox state changed:', event.target.checked ? 'Checked' : 'Unchecked'); {% endcomment %}
+
+          // Enable/disable the button based on checkbox state
+          button.disabled = !event.target.checked;
+
+          if (event.target.checked) {
+            document.getElementById('emmiera-checks').style.border = '2px solid white';
+          } else {
+            checkboxWrapper.style.border = '2px solid red';
+          }
+          {% comment %} console.log('Updated border style:', checkboxWrapper.style.border); {% endcomment %}
+        }
+      });
+    });
+  </script>
+
+  {% style %}
+    #emmiera-checks {
+      display: flex;
+      align-items: center;
+      border: 2px solid white;
+    }
+    #emmiera-checks #emmiera-tnc {
+      position: relative;
+      -webkit-appearance: auto;
+      appearance: auto;
+      margin-left: 6%;
+      margin-right: 8px;
+      top: 0px;
+      z-index: 0;
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    @media only screen and (min-width: 750px) {
+      #emmiera-checks #emmiera-tnc {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  {% endstyle %}
+
+{%- endif -%}
