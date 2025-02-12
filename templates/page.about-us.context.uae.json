@@ -12,5 +12,35 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "icon_with_text_Y3WbTh": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collapsible_content_H3JgAU": {
+      "settings": {},
+      "blocks": {
+        "collapsible_row_cUf7f7": {
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_row_rHyJtr": {
+          "settings": {
+            "row_content": "<p>With years of experience designing, sourcing, and supplying sought-after furniture for UK homes, we understand what makes a space truly special. Our deep-rooted partnerships with top European manufacturers allow us to bring premium-quality, stylish, and fairly priced furniture to the UAE—helping you craft a home that’s both inviting and uniquely yours.</p><p></p><p>At Honeypot Furniture, we believe your home is more than just a space—it’s where life happens. That’s why we stay ahead of the latest design trends, offering a carefully curated selection of sofas, sofa beds, and home essentials that blend comfort, style, and practicality. If you’re looking for something specific and don’t see it on our site, just ask—we’ll do our best to source it for you.</p><p></p><p>Your home, your style, our expertise.</p>"
+          }
+        }
+      }
+    },
+    "rich_text_ctUHEi": {
+      "settings": {},
+      "blocks": {
+        "text_LrBhR9": {
+          "settings": {
+            "text": "<p>With a proven track record of designing, sourcing, and supplying sought-after sofas and sofa beds to the UK market, we know what truly matters when it comes to quality, comfort, and style. Our strong relationships with top European manufacturers enable us to bring high-quality, fairly priced furniture to the UAE—helping you create a home that reflects both luxury and everyday practicality.</p>"
+          }
+        }
+      }
+    }
+  }
 }
