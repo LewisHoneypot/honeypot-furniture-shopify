@@ -21,14 +21,14 @@
     "collapsible_content_H3JgAU": {
       "settings": {},
       "blocks": {
-        "collapsible_row_cUf7f7": {
-          "disabled": true,
-          "settings": {}
-        },
         "collapsible_row_rHyJtr": {
           "settings": {
             "row_content": "<p>With years of experience designing, sourcing, and supplying sought-after furniture for UK homes, we understand what makes a space truly special. Our deep-rooted partnerships with top European manufacturers allow us to bring premium-quality, stylish, and fairly priced furniture to the UAE—helping you craft a home that’s both inviting and uniquely yours.</p><p></p><p>At Honeypot Furniture, we believe your home is more than just a space—it’s where life happens. That’s why we stay ahead of the latest design trends, offering a carefully curated selection of sofas, sofa beds, and home essentials that blend comfort, style, and practicality. If you’re looking for something specific and don’t see it on our site, just ask—we’ll do our best to source it for you.</p><p></p><p>Your home, your style, our expertise.</p>"
           }
+        },
+        "collapsible_row_cUf7f7": {
+          "disabled": true,
+          "settings": {}
         }
       }
     },
@@ -38,6 +38,56 @@
         "text_LrBhR9": {
           "settings": {
             "text": "<p>With a proven track record of designing, sourcing, and supplying sought-after sofas and sofa beds to the UK market, we know what truly matters when it comes to quality, comfort, and style. Our strong relationships with top European manufacturers enable us to bring high-quality, fairly priced furniture to the UAE—helping you create a home that reflects both luxury and everyday practicality.</p>"
+          }
+        }
+      }
+    },
+    "fdad168f-7d9e-4226-9e96-e24307d01253": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "bcdfdd92-1560-4fa2-832d-8531cf03526d": {
+      "settings": {},
+      "blocks": {
+        "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-0": {
+          "settings": {
+            "heading": "<p><strong>More Than Just Sofas—A Better Way to Live<br/></strong></p>"
+          }
+        },
+        "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-1": {
+          "settings": {
+            "text": "<p>At Honeypot Furniture, we know a great sofa isn’t just about looks—it’s about the moments you create around it. Whether it’s family time, lazy Sundays, or hosting friends, our furniture is designed for real living, combining style, comfort, and durability.<br/></p>"
+          }
+        }
+      }
+    },
+    "a1a91792-a4e4-4254-bd04-603f6955212c": {
+      "settings": {},
+      "blocks": {
+        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-0": {
+          "settings": {
+            "heading": "<p><strong>Quality Without Compromise</strong></p>"
+          }
+        },
+        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-1": {
+          "settings": {
+            "text": "<p>We’ve partnered closely with leading manufacturers to bring you exceptional craftsmanship, the finest fabrics, and a bespoke sofa service. No matter the size, style, or colour, we can create the perfect piece to suit your space. Our new collections blend timeless design with luxury, tailored for the region.<br/></p>"
+          }
+        }
+      }
+    },
+    "image_with_text_mD473n": {
+      "settings": {},
+      "blocks": {
+        "heading_jLiWzw": {
+          "settings": {
+            "heading": "<p><strong>Designed for Every Home</strong></p>"
+          }
+        },
+        "text_6tPXCa": {
+          "settings": {
+            "text": "<p>Your home should reflect your style. That’s why we offer a range of designs, from modern minimalism to classic elegance. Because furniture isn’t just about filling a space—it’s about creating a home.</p>"
           }
         }
       }
