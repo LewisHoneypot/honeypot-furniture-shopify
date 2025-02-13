@@ -72,7 +72,7 @@
               </div>
             </div>
           {%- endif -%}
-          <div class="collapsible-content__item collapsible-content__itemRight w-100">
+          <div class="collapsible-content__item collapsible-content__itemRight w-100" style="padding:15px;">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
 
@@ -105,7 +105,7 @@
                         style="min-height:58px;"
                       >
                         <button
-                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if section.settings.font == 'Anaktoria' %}
+                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left {% if section.settings.font == 'Anaktoria' %}
                             Anaktoria
                           {% elsif section.settings.font == 'Garamond' %}
                             Garamond 
@@ -125,6 +125,16 @@
 
                         </button>
                       </side-drawer-opener>
+
+                      {%- if forloop.last == false -%}
+                        <hr
+                          style="
+                            margin: 0px auto 0px auto;
+                            width: 98%;
+                          "
+                        >
+                      {%- endif -%}
+                      
                       {%- if block.settings.page != blank and block.settings.page.url != blank -%}
                         <a
                           href="{{ block.settings.page.url }}"
