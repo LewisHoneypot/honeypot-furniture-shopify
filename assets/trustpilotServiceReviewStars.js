@@ -20,7 +20,7 @@ fetch(serviceStarsUrl)
 
     if (numberOfReviewsImageElement) {
       numberOfReviewsImageElement.innerHTML = serviceStars
-        ? `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${serviceStars.stars}.png" class="stars-image pb-1" alt="Trustpilot Stars" height="26" width="128">`
+        ? `<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_${serviceStars.stars}.png" class="stars-image pb-1" alt="Trustpilot Stars" height="26" width="100">`
         : "";
     }
   })

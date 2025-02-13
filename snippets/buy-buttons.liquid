@@ -117,7 +117,7 @@
           id="ProductSubmitButton-{{ section_id }}"
           type="submit"
           name="add"
-          class="product-form__submit button button--style-diagonal-swipe{% if type_style == 'special' %} uppercase{% endif %} w-100"
+          class="{%- if block.settings.use_buy_button_price -%}custom-buy-button-price {% endif %}product-form__submit button button--style-diagonal-swipe{% if type_style == 'special' %} uppercase{% endif %} w-100"
           {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
             disabled
           {% endif %}
@@ -128,7 +128,6 @@
             --button-color-text-hover: {{ block.settings.add_to_cart_colors_text_hover.red }}, {{ block.settings.add_to_cart_colors_text_hover.green }}, {{ block.settings.add_to_cart_colors_text_hover.blue }};
             --button-color-background-hover: {{ block.settings.add_to_cart_colors_background_hover.red }}, {{ block.settings.add_to_cart_colors_background_hover.green }}, {{ block.settings.add_to_cart_colors_background_hover.blue }};
             --button-gradient-background-hover: {% if block.settings.add_to_cart_gradient_background_hover != blank %}{{ block.settings.add_to_cart_gradient_background_hover }}{% else %}{{ block.settings.add_to_cart_colors_background_hover }}{% endif %};
-            font-size: 20px;
             text-transform: uppercase;
           "
         >
@@ -137,6 +136,38 @@
               {{ 'products.product.sold_out' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
+              
+              {%- if block.settings.use_buy_button_price -%}
+                <div class="buy-button-price">
+                  <span style="margin-left:10px; margin-right:15px;">|</span>
+                  <div
+                    class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
+                    {{ block.shopify_attributes }}
+                    id="price-{{ section.id }}"
+                    role="status"
+                    style="
+                      --padding-top: {{ block.settings.padding_top }}px;
+                      --padding-bottom: {{ block.settings.padding_bottom }}px;
+                    "
+                  >
+                    {%- liquid
+                      if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
+                        assign show_you_save = false
+                      else
+                        assign show_you_save = true
+                      endif
+                    -%}
+                    {%- render 'price',
+                      product: product,
+                      use_variant: true,
+                      show_you_save: show_you_save,
+                      main_price: true,
+                      price_class: 'price--large style-m-price'
+                    -%}
+                  </div>
+                </div>
+              {%- endif -%}
+
             {%- endif -%}
           </span>
           <div class="loading-overlay__spinner d-inline-block z-index-2 hidden">{{ icon_spinner }}</div>

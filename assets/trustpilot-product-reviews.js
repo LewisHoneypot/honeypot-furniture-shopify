@@ -8,7 +8,7 @@ function getTrustpilotImage(rating, isAnchorImage = false) {
   const ratingText = isMobile ? `${rating} / 5` : `${rating} out of 5`;
 
   return isAnchorImage
-    ? `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="128">`
+    ? `<img src="${imageUrl}" class="stars-image" alt="Trustpilot Rating" height="24" width="90">`
     : `<img src="${imageUrl}" class="stars-image mr-2" alt="Trustpilot Rating" height="24" width="128"><span>${ratingText}</span>`;
 }
 

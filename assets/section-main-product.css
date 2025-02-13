@@ -1559,6 +1559,7 @@ pickup-availability[available] {
   .product.product--slider_thumbnail:not(.product--no-media) .product__info-wrapper{
     width: 100%;
     max-width: 100%;
+    margin-top: 15px;
   }
 }
 
@@ -1644,6 +1645,11 @@ pickup-availability[available] {
   .product-form__messages {
     right: calc((100% / 3) * -2);
   }
+}
+
+.product__info-container {
+  padding: 15px;
+  background-color: #fff !important;
 }
 
 @media screen and (max-width: 374px) {

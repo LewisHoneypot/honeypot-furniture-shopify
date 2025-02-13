@@ -12,7 +12,7 @@
     aria-label="breadcrumbs"
     style="
       --padding-top: {{ padding_top  }};
-      --padding-bottom: {{ padding_bottom }};
+      --padding-bottom: {{ padding_top }};
     "
   >
   	<ul class="d-flex f-wrap j-c-{{ alignment }} list-unstyled g-gap" style="--g-gap: 0.7rem;">
@@ -96,6 +96,21 @@
             </li>
             {{ separate }}
           {%- endif -%}
+          <li class="is-active">
+            <span aria-current="page">{{ product.title | split: '|' | first }}</span>
+          </li>
+	      {%- when 'product.sofas' -%}
+	      	{%- if collection.url -%}
+            <li>
+              <a class="link link--text h-link link--style-line" href="collection.url">
+                <span class="link-style">Test 1 {{ collection.title | split: '|' | first }}</span>
+              </a>
+            </li>
+            {{ separate }}
+          {%- endif -%}
+          <script>console.log('Product: ', {{ product | json }});</script>
+          <script>console.log('Collection: ', {{ collection }});</script>
+          {{ collection }}
           <li class="is-active">
             <span aria-current="page">{{ product.title | split: '|' | first }}</span>
           </li>

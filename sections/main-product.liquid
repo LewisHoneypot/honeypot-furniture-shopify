@@ -37,8 +37,52 @@
     {% render 'breadcrumb', padding_top: '2rem', padding_bottom: '4rem', alignment: 'start' %}
     <div
       class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} product--style-{{ section.settings.type_style }} d-flex f-wrap{% if product.media.size == 0 %} product--no-media m-auto{% endif %} r-gap"
-      style="--r-gap: 3rem;"
+      {% comment %} style="--r-gap: 3rem;" {% endcomment %}
     >
+      {%- if  section.settings.use_custom_title == true -%}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <div class="product__title break element-spacing-all float-left float-lg-none pt-0 pb-0">
+                {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
+                  <h1 style="
+                    font-weight: normal;
+                    font-size: 24pt;
+                    margin-top: 15px;
+                    margin-bottom: 0px;
+                    font-weight: bold;
+                    line-height: 26pt;
+                  ">
+                    {{ product.metafields.custom.range_name }}
+                    <br>
+                    <span 
+                      style="
+                        font-size: 14pt;
+                        font-weight: 500;
+                        top: -11px;
+                        position: relative;
+                        line-height: 17pt;
+                      "
+                    >
+                      {{ product.metafields.custom.colour_and_model }}
+                    </span>
+                  </h1>
+                {%- else %}
+                  <h1 style="
+                    font-weight: normal;
+                    font-size: 18pt;
+                    margin-bottom: 0px;
+                    font-weight: bold;
+                  ">
+                    {{ product.title | escape }}
+                  </h1>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+
       {%- if product.media.size > 0 -%}
         <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:275px;">
           {% render 'product-media-gallery',
@@ -678,6 +722,8 @@
                         class="Anaktoria"
                       {% elsif block.settings.font == 'Garamond' %}
                         class="Garamond"
+                      {% elsif block.settings.font == 'Gotham' %}
+                        class="Gotham"
                       {% endif %}
                       style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 10px;"
                     >
@@ -814,6 +860,8 @@
                                 Anaktoria
                               {% elsif block.settings.font == 'Garamond' %}
                                 Garamond
+                              {% elsif block.settings.font == 'Gotham' %}
+                                Gotham
                               {% endif %}
                             "
                             type="button"
@@ -823,10 +871,11 @@
                               background-color:{{ block.settings.colors_background }};
                               border: solid 1px {{ block.settings.colors_border }};
                               min-height: 80px;
+                              justify-content: center;
                             "
                           >
                             {{ block.settings.heading | escape }}
-                            {{ icon_caret }}
+                            {% comment %} {{ icon_caret }} {% endcomment %}
                           </button>
                         </side-drawer-opener>
                         {%- if block.settings.page != blank and block.settings.page.url != blank -%}
@@ -842,9 +891,8 @@
                   {%- endif -%}
                 </div>
 
-                {% comment %} USP Drawers {% endcomment %}
-
-                {% comment %} USP Drawer 1 {% endcomment %}
+              {% comment %} USP Drawers {% endcomment %}
+              {% comment %} USP Drawer 1 {% endcomment %}
               {%- when 'usp_drawer_1' -%}
                 <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
                   {% comment %} <div
@@ -2112,10 +2160,10 @@
                           if (totalStarsAverage >= 4){
                             const reviewsLink = createElement("div", [], {}, `
                               <span style='min-height:24px;'>
-                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
-                                <span class="ammount-of-reviews mt-1 mr-3"> ${amountOfReviews} Reviews</span>
                                 <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
-                                <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot">
+                                <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
+                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
+                                {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
                               </span>
                             `);
 
@@ -2853,8 +2901,12 @@
             {
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
+            },
+            {
+              "value": "Gotham",
+              "label": "t:settings_schema.global.settings.font_name.label_4"
             }
-              ],
+          ],
           "default": "normal",
           "label": "t:sections.main-product.blocks.color_swatch.settings.font"
         },
@@ -3630,6 +3682,12 @@
       "settings": [
         {
           "type": "checkbox",
+          "id": "use_buy_button_price",
+          "default": false,
+          "label": "Use price on Add to Cart"
+        },
+        {
+          "type": "checkbox",
           "id": "show_quantity_selector",
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_quantity_selector.label"
@@ -4294,8 +4352,12 @@
             {
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
+            },
+            {
+              "value": "Gotham",
+              "label": "t:settings_schema.global.settings.font_name.label_4"
             }
-              ],
+          ],
           "default": "normal",
           "label": "t:sections.main-product.blocks.color_swatch.settings.font"
         },
@@ -5824,6 +5886,12 @@
   "settings": [
     {
       "type": "checkbox",
+      "id": "use_custom_title",
+      "default": false,
+      "label": "Use custom title"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_sticky_add_to_cart",
       "default": false,
       "label": "t:sections.main-product.settings.enable_sticky_add_to_cart.label"
@@ -6198,6 +6266,7 @@
     position: relative;
     left: 5px;
     color: rgba(var(--color-foreground), 1);
+    font-size: 9pt;
   }
 
   #reviews-button {

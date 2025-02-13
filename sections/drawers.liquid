@@ -108,7 +108,9 @@
                           class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if section.settings.font == 'Anaktoria' %}
                             Anaktoria
                           {% elsif section.settings.font == 'Garamond' %}
-                            Garamond
+                            Garamond 
+                          {% elsif section.settings.font == 'Gotham' %} 
+                            Gotham 
                           {% endif %}
                           "
                           type="button"
@@ -349,6 +351,10 @@
         {
           "value": "Garamond",
           "label": "t:settings_schema.global.settings.font_name.label_2"
+        },
+        {
+          "value": "Gotham",
+          "label": "t:settings_schema.global.settings.font_name.label_4"
         }
       ],
       "default": "normal",

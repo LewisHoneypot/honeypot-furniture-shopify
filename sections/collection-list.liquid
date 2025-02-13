@@ -129,7 +129,7 @@
             {% endif %}"
           >
             <div class="p-w__header--wrapper {{ section.settings.header_alignment }}">
-              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.font == 'garamond' %} Garamond {% endif %}">
+              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.font == 'garamond' %} Garamond {% elsif section.settings.font == 'Gotham' %} Gotham {% endif %}">
                 {{ section.settings.heading | escape }}
               </h2>
             </div>
@@ -469,6 +469,10 @@
       {
         "value": "garamond",
         "label": "t:settings_schema.global.settings.font_name.label_2"
+      },
+      {
+        "value": "gotham",
+        "label": "t:settings_schema.global.settings.font_name.label_4"
       }
     ],
     "default": "default",

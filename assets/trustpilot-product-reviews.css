@@ -1,7 +1,9 @@
 /* Tooltip container */
 .trustpilotTooltip {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
+  float: inline-end;
+  top: 18px;
 }
 
 /* Tooltip text */
@@ -11,7 +13,7 @@
   color: #000;
   text-align: center;
   border-radius: 6px;
-  left: -5px;
+  left: -136px;
   top: 50px;
   
   border: 1px solid rgba(151,151,151,.18);
