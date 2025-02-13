@@ -26688,6 +26688,55 @@ body.multitasking__show .newsletter-popup-opener {
   font-size: 11pt;
 }
 
+.buy-button-price {
+  display: inline;
+}
+.buy-button-price .d-block {
+  display: none;
+}
+.buy-button-price .float-lg-none {
+  float: right !important;
+}
+.buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+  color: unset;
+  font-size: 11pt;
+}
+@media screen and (min-width: 440px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 13pt !important;
+  }
+}
+@media screen and (min-width: 576px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 16pt !important;
+  }
+}
+.custom-buy-button-price {
+  font-size: 11pt !important;
+}
+@media screen and (min-width: 440px){
+  .custom-buy-button-price {
+    font-size: 13pt !important;
+  }
+}
+@media screen and (min-width: 576px){
+  .custom-buy-button-price {
+    font-size: 16pt !important;
+  }
+}
+
+.custom-buy-button-price .was {
+  font-weight: 400;
+  font-size: 11pt;
+}
+
+
+#shopify-section-template--24400886759799__drawers_Ut99DD .color-background-1 {
+  background-color: #EDEDED;
+}
+.collapsible-content .p-w__content {
+  background-color: #fff;
+}
 
 /* iphone fixes */
 
@@ -26700,7 +26749,6 @@ body.multitasking__show .newsletter-popup-opener {
     top: 25px;
   }
 }
-
 
 /* UAE CSS */
 

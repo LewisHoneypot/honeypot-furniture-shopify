@@ -1924,7 +1924,7 @@ pickup-availability[available] {
   }
 
   .product--large.product--slider_thumbnail:not(.product--no-media) .product__media-wrapper{
-    max-width: 55%;
+    max-width: 61%;
     width: calc(55% - var(--grid-h-md) / 2);
   }
 

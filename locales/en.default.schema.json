@@ -2163,6 +2163,20 @@
         "name": "Link list"
       }
     },
+    "trustpilot": {
+      "name": "Trustpilot",
+      "blocks": {
+        "text": {
+          "name": "Text"
+        },
+        "link_list": {
+          "name": "Menu"
+        }
+      },
+      "presets": {
+        "name": "Trustpilot"
+      }
+    },
     "lookbook": {
       "name": "Lookbook",
       "blocks": {
