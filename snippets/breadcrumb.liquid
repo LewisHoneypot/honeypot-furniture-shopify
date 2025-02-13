@@ -108,7 +108,7 @@
             </li>
             {{ separate }}
           {%- endif -%}
-          <script>console.log('Product: ', {{ product | json }});</script>
+          {% comment %} <script>console.log('Product: ', {{ product | json }});</script> {% endcomment %}
           <script>console.log('Collection: ', {{ collection }});</script>
           {{ collection }}
           <li class="is-active">
