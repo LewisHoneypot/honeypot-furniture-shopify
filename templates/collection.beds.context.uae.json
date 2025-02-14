@@ -15,8 +15,19 @@
   "sections": {
     "product-grid": {
       "settings": {
-        "use_nosto": false
+        "use_nosto": false,
+        "collection_delivery_eta_toggle": false
       },
+      "blocks": {}
+    },
+    "1737458306dc1ec5c6": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_list_ig8tXp": {
+      "disabled": true,
+      "settings": {},
       "blocks": {}
     }
   }
