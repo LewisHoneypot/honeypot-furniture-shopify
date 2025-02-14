@@ -13,21 +13,6 @@
     "market": "uae"
   },
   "sections": {
-    "postcode_checker_J8VQBA": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "custom_liquid_PEbtxe": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "image_with_text_zJhwhJ": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
     "image_with_text_fe9mUJ": {
       "disabled": true,
       "settings": {},
@@ -69,6 +54,21 @@
         }
       }
     },
+    "postcode_checker_J8VQBA": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "custom_liquid_PEbtxe": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "image_with_text_zJhwhJ": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
     "collapsible_content_4F8ffL": {
       "settings": {},
       "blocks": {
@@ -76,6 +76,10 @@
           "settings": {
             "row_content": "<p>We believe in making your furniture shopping experience as seamless as possible—that’s why we offer <strong>free delivery across the UAE</strong>.  No hidden fees, no extra charges—just high-quality furniture delivered straight to your home at no additional cost. It’s our way of ensuring luxury and convenience go hand in hand.</p>"
           }
+        },
+        "collapsible_row_gLEjmt": {
+          "disabled": true,
+          "settings": {}
         }
       }
     }
