@@ -24,6 +24,11 @@
             "font_weight": "normal"
           }
         },
+        "price": {
+          "settings": {
+            "padding_top": 12
+          }
+        },
         "drawer_c9e9i": {
           "type": "drawer",
           "disabled": false,
@@ -97,6 +102,11 @@
       }
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "newsletter_Lkdri8": {
       "disabled": true,
       "settings": {},
       "blocks": {}
