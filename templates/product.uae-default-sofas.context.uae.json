@@ -43,7 +43,7 @@
           "settings": {
             "picker_type": "dropdown",
             "swatch": "Color",
-            "header-96cc0a9c205bc309745b99edbf81e1c9": null,
+            "header-2823d96931979c9a6c27fc82fa0e1b63": null,
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -61,7 +61,7 @@
           "type": "shopify://apps/s-contact-form-builder/blocks/block-app/cceef8dd-a4f1-4344-962d-06bf0022ec0d",
           "disabled": false,
           "settings": {
-            "ify_contactform_short_code": "<button class=\"storeify-formbuilder-button\" style=\"margin-top:10px; width:100%; text-transform:uppercase; border:solid 1px #3c3c3b; font-size:18px; font-weight:900; color:#3c3c3b; min-height:80px; background:#fff; cursor:pointer;\" data-target=\"#storeify-light-modal-18882\">Customise your Dream Sofa</button>"
+            "ify_contactform_short_code": "<button class=\"storeify-formbuilder-button\" style=\"margin-top:10px; width:100%; text-transform:uppercase; border:solid 1px #3c3c3b; font-size:15px; font-weight:900; color:#3c3c3b; min-height:80px; background:#fff; cursor:pointer;\" data-target=\"#storeify-light-modal-18882\">Customise your Dream Sofa</button>"
           }
         }
       },
