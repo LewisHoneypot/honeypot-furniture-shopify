@@ -1269,7 +1269,7 @@
         "spacing_tablet": 30,
         "spacing_mobile": 10,
         "show_image": true,
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "show_content": false,
         "show_date": true,
         "show_author": false,
