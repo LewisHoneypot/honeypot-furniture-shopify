@@ -1297,8 +1297,7 @@
                       <!-- Popup -->
                       <div id="finance-options-popup" class="popup">
                         <div class="popup-content">
-                          <svg xmlns="http://www.w3.org/2000/svg" height="undefined" id="Layer_2" viewBox="0 0 400.69 179.37" style="width: 40px;
-    height: 25px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="undefined" id="Layer_2" viewBox="0 0 400.69 179.37" style="width: 40px; height:25px;">
                             <defs>
                               <style>.cls-1{fill:#0d2b47}</style>
                             </defs>
@@ -1332,18 +1331,19 @@
                           <span style="position:inherit; margin-left:9px;">FINANCE OPTIONS</span>
                           <span class="close">&times;</span>
                           <div class="popup-body">
-                    {%- endif %}
+                            {%- endif %}
 
-                    <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
-                    </div>
-                    <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
-                    </div>
+                            <div class="col-12 pt-2 pl-0 pr-0">
+                              {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
+                            </div>
+                            <div class="col-12 pt-2 pl-0 pr-0">
+                              {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
+                            </div>
 
-                    {%- if block.settings.use_finance_popup == true -%}
-                      </div>
-                      </div>
+                            {%- if block.settings.use_finance_popup == true -%}
+                            <p class="mb-0">Choice available at checkout.</p>
+                          </div>
+                        </div>
                       </div>
 
                       <style>
@@ -1381,6 +1381,7 @@
                           font-size: 65px;
                           cursor: pointer;
                           font-weight: 100;
+                          color: #45544c;
                         }
                       </style>
 
