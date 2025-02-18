@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -35,7 +35,7 @@
         "text_DUcWQ6": {
           "type": "text",
           "settings": {
-            "text": "<p>Our friendly team are available online, in store or over the phone to help with any questions you may have. <\/p>",
+            "text": "<p>Our friendly team are available online, in store or over the phone to help with any questions you may have. </p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -79,7 +79,7 @@
         "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41": {
           "type": "text",
           "settings": {
-            "text": "<h3>PHONE OPERATING HOURS:<\/h3><p>Monday - Friday: 8AM - 8PM<br\/><a href=\"tel:01476 338 771\" title=\"tel:01476 338 771\">01476 338 771<\/a><\/p><h3>VISIT OUR SHOWROOM:<\/h3><p>Honeypot Furniture, Honey Pot Ln,<br\/>Colsterworth, Grantham,<br\/>NG33 5LY<\/p><p>Opening Hours:<br\/>Monday - Friday: 9AM - 5PM<br\/>Saturday: 10AM - 3PM<br\/>Sunday: Closed<\/p><h3>EMAIL:<\/h3><p><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk<\/strong><\/a><\/p>",
+            "text": "<h3>PHONE OPERATING HOURS:</h3><p>Monday - Friday: 8AM - 8PM<br/>Saturday - Sunday 10AM - 3 PM<br/><a href=\"tel:01476 338 771\" title=\"tel:01476 338 771\">01476 338 771</a></p><h3>EMAIL:</h3><p><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -88,9 +88,7 @@
       "block_order": [
         "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1400,

@@ -626,6 +626,27 @@
           "secondary_arrow_gradient": "",
           "shadow": "#121212"
         }
+      },
+      "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c": {
+        "settings": {
+          "text": "#121212",
+          "text_link": "#000000",
+          "background": "#ededed",
+          "background_gradient": "",
+          "button_label": "#ffffff",
+          "button_background": "#000000",
+          "button_gradient": "",
+          "secondary_button_label": "#000000",
+          "secondary_button_background": "#b7b0a3",
+          "secondary_button_gradient": "",
+          "arrow": "#121212",
+          "arrow_background": "#FFFFFF",
+          "arrow_gradient": "",
+          "secondary_arrow": "#121212",
+          "secondary_arrow_background": "#b7b0a3",
+          "secondary_arrow_gradient": "",
+          "shadow": "#121212"
+        }
       }
     }
   },

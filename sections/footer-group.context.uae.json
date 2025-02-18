@@ -16,14 +16,14 @@
     "footer": {
       "settings": {},
       "blocks": {
+        "footer-2": {
+          "settings": {
+            "subtext": "<p>Office Hours<br/>Mon-Fri: 8am-8pm</p><p>Sat-Sun: 10am-3pm</p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.ae</a></p>"
+          }
+        },
         "footer-0": {
           "settings": {
             "menu": "uae-footer"
-          }
-        },
-        "footer-2": {
-          "settings": {
-            "subtext": "<p>Office Hours<br/>Mon-Fri: 8am-8pm</p><p>Sat-Sun: 10am-3pm</p><p></p><p>Call us: <a href=\"tel:01476589446\" title=\"tel:01476589446\">01476 338771</a></p><p>Email: <a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\">hello@honeypotfurniture.ae</a></p>"
           }
         }
       },
@@ -35,6 +35,11 @@
         "17114992-59f7-4a83-bf27-1f00c171e823",
         "whatsapp_hGmeMU"
       ]
+    },
+    "173695510324a686fd": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }

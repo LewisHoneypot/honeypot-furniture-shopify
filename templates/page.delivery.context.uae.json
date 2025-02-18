@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.delivery.json",
+  "context": {
+    "market": "uae"
+  },
+  "sections": {
+    "image_with_text_fe9mUJ": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "rich_text_JPy3zj": {
+      "settings": {},
+      "blocks": {
+        "text_Unt4Kk": {
+          "settings": {
+            "text": "<p>We offer reliable delivery across the UAE, with your furniture arriving within <strong>2-4 weeks </strong>from the time of order. Every piece is brand new and transported directly from our trusted suppliers to ensure the highest quality. Our dedicated delivery team will bring your sofa straight to your home, ensuring a smooth and hassle-free experience.</p>"
+          }
+        }
+      }
+    },
+    "icon_with_text_ngUGpR": {
+      "settings": {},
+      "blocks": {
+        "item_gTgaLm": {
+          "settings": {
+            "text": "<p>Find your favourite items and make your way through our checkout</p>"
+          }
+        },
+        "item_MC4MKd": {
+          "settings": {
+            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery</p>"
+          }
+        },
+        "item_xrTYWQ": {
+          "disabled": false,
+          "settings": {
+            "text": "<p>You'll receieve confirmation and our two-person team will deliver your items</p>"
+          }
+        },
+        "item_ypLzVb": {
+          "settings": {
+            "text": "<p>Sit back, relax and please don't forget to let us know about your experience</p>"
+          }
+        }
+      }
+    },
+    "postcode_checker_J8VQBA": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "custom_liquid_PEbtxe": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "image_with_text_zJhwhJ": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collapsible_content_4F8ffL": {
+      "settings": {},
+      "blocks": {
+        "collapsible_row_RwtpbP": {
+          "settings": {
+            "row_content": "<p>We believe in making your furniture shopping experience as seamless as possible—that’s why we offer <strong>free delivery across the UAE</strong>.  No hidden fees, no extra charges—just high-quality furniture delivered straight to your home at no additional cost. It’s our way of ensuring luxury and convenience go hand in hand.</p>"
+          }
+        },
+        "collapsible_row_gLEjmt": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
+}

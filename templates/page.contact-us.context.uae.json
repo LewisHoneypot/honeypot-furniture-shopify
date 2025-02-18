@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.contact-us.json",
+  "context": {
+    "market": "uae"
+  },
+  "sections": {
+    "form": {
+      "settings": {},
+      "blocks": {
+        "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41": {
+          "settings": {
+            "text": "<h3>PHONE OPERATING HOURS:</h3><p>Monday - Friday: 8AM - 8PM<br/><a href=\"tel:01476 338 771\" title=\"tel:01476 338 771\">01476 338 771</a></p><h3>EMAIL:</h3><p><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.ae</strong></a></p>"
+          }
+        }
+      }
+    }
+  }
+}

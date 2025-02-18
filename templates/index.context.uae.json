@@ -13,6 +13,29 @@
     "market": "uae"
   },
   "sections": {
+    "12b81e44-2b28-427b-9080-19dfb79fd112": {
+      "settings": {},
+      "blocks": {
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
+          "disabled": true,
+          "settings": {}
+        },
+        "slide_MVHYjL": {
+          "disabled": true,
+          "settings": {}
+        },
+        "slide_dN3rVP": {
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
+            "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
+            "heading": "Luxury, Redefined. Comfort, Unmatched",
+            "subheading": "Discover handcrafted sofas designed for you",
+            "primary_button_label": "Shop Sofas",
+            "primary_button_link": "shopify://collections/sofas"
+          }
+        }
+      }
+    },
     "0b6105a9-a3ce-4181-b45b-7a55c709e140": {
       "settings": {},
       "blocks": {
@@ -68,28 +91,6 @@
       "disabled": false,
       "settings": {},
       "blocks": {}
-    },
-    "12b81e44-2b28-427b-9080-19dfb79fd112": {
-      "settings": {},
-      "blocks": {
-        "slide_MVHYjL": {
-          "disabled": true,
-          "settings": {}
-        },
-        "slide_dN3rVP": {
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
-            "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-01-10_at_21.11.00_bbea46ba.jpg",
-            "heading": "Need text from Matt",
-            "subheading": "matt text",
-            "primary_button_label": "Shop Sofas"
-          }
-        },
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
     }
   },
   "order": [

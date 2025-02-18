@@ -282,7 +282,7 @@
           "settings": {
             "heading": "Delivery",
             "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Assembly in any room of choice included</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Two-person delivery team</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
             "page": "description",
             "padding_top": 30,
             "padding_bottom": 68,
