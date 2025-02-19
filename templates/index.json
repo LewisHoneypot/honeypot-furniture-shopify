@@ -429,6 +429,7 @@
       "block_order": [
         "nosto_nosto_placements_block_CF7Uyt"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -589,6 +590,7 @@
       "block_order": [
         "nosto_nosto_placements_block_U9jEWT"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -703,6 +705,7 @@
       "block_order": [
         "nosto_nosto_placements_block_kPtLfq"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -1174,6 +1177,7 @@
     },
     "custom_liquid_dfcHEi": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "",
         "padding_top": 20,

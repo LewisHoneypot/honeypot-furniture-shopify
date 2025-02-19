@@ -13,6 +13,7 @@
   "sections": {
     "173695510324a686fd": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
