@@ -130,6 +130,24 @@
             "color_overlay_opacity": "#000000"
           }
         },
+        "mega_menu_2_U88XrE": {
+          "type": "mega_menu_2",
+          "settings": {
+            "menu_item": "Rugs",
+            "section_width": "customized-width",
+            "customize_width": 1400,
+            "image_1": "shopify://shop_images/4_90b93fd1-e2be-4201-a4a3-708282f01835.jpg",
+            "text_image_1": "",
+            "link_image_1": "shopify://collections/large-rugs",
+            "image_2": "shopify://shop_images/3_8a78d8bf-83f7-4862-8984-9df0eb5ee93a.jpg",
+            "text_image_2": "",
+            "link_image_2": "shopify://collections/medium-rugs",
+            "text_image_3": "",
+            "link_image_3": "",
+            "text_image_4": "",
+            "link_image_4": ""
+          }
+        },
         "mega_menu_1_TFhwQt": {
           "type": "mega_menu_1",
           "settings": {
@@ -147,12 +165,14 @@
         "mega_menu_1_QYBCyP",
         "mega_menu_1_MkHmHf",
         "mega_menu_1_NE4a6D",
+        "mega_menu_2_U88XrE",
         "mega_menu_1_TFhwQt"
       ],
       "custom_css": [
         ".menu-drawer {background-color: #ffffff;}"
       ],
       "settings": {
+        "use_nosto": true,
         "section_width": "page-width",
         "customize_width": 1800,
         "type_style": "classic",
