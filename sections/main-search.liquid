@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="p-w__content{% unless search.performed and search.results_count > 0 %} p-w__content--empty{% endunless %}">
-      <div class="search__container m-auto m-w m-b" style="--m-w: 50rem; --m-b: 2rem;">
+      {% comment %} <div class="search__container m-auto m-w m-b" style="--m-w: 50rem; --m-b: 2rem;">
         {%- if settings.predictive_search_enabled -%}
           <predictive-search class="search-modal__form d-block pos-relative" data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- endif -%}
@@ -110,7 +110,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-      </div>
+      </div> {% endcomment %}
       {%- if search.performed -%}
 
         {%- if section.settings.use_nosto == true -%}
