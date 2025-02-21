@@ -91,6 +91,11 @@
       "disabled": false,
       "settings": {},
       "blocks": {}
+    },
+    "featured_blog_DdAnpK": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   },
   "order": [
