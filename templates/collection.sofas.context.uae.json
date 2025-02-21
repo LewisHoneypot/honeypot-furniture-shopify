@@ -17,9 +17,9 @@
       "settings": {
         "use_nosto": false,
         "products_per_row": 4,
+        "breadcrumb_size": "xx-small",
         "collection_delivery_eta_toggle": false,
-        "use_overlay_2": false,
-        "breadcrumb_size": "xx-small"
+        "use_overlay_2": false
       },
       "blocks": {}
     },

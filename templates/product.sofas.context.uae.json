@@ -12,5 +12,15 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "snap_buttons_HagTqx": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
 }
