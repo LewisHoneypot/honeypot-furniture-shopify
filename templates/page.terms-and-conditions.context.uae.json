@@ -12,5 +12,16 @@
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "collapsible_content_4F8ffL": {
+      "settings": {},
+      "blocks": {
+        "collapsible_row_gLEjmt": {
+          "settings": {
+            "row_content": "<p>3.1 All orders made through our website are subject to our acceptance.. We will confirm your order has been placed successfully via email, at which point a contract will come into existence between you and us.</p><p>3.2 If we are unable to accept your order, we will inform you of this and will not charge you for the product(s). This might be due to stock issues or because we have identified an error in the price or description of the product.</p><p>3.3 Our website is solely for the promotion of our products to certain areas of the UAE. Please see our Delivery Page for more information about where we deliver. Please read the page before placing your order as your delivery address may be in an exclusion zone or incur an extra charge.</p>"
+          }
+        }
+      }
+    }
+  }
 }
