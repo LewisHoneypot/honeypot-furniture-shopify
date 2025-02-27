@@ -1,0 +1,406 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "rich_text_Pg8qjV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6ncV4p": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Autumn Content Challenge 2024</strong>",
+            "heading_size": "medium",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_QzN8Lc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re offering our customers the chance to WIN £200 in cash by participating in our Autumn Content Challenge! With a total prize giveaway of £550 in cash, show us your creativity and win big.</p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_6ncV4p",
+        "text_QzN8Lc"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_with_text_qTAEHG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RTBVbf": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>THE DETAILS</p>",
+            "heading_size": "h2",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_QCJ4PQ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>How to enter</strong></h2><ol><li>Post a creative photo or video featuring a Honeypot product with an autumnal theme. Think cosy nights in, pumpkins, Halloween fun, or anything that embodies the spirit of the season.</li><li> Tag us in your post and use the hashtag #HoneypotAutumn</li><li> Ensure you're following Honeypot Furniture on Instagram or Facebook.</li></ol><h2><strong>The Prizes</strong></h2><p>Video Winner:</p><p><strong>£200</strong></p><p>Photo Winners:</p><p>1st Place:<strong> £200</strong></p><p>2nd Place:<strong> £100</strong></p><p>3rd Place: <strong>£50</strong></p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_RTBVbf",
+        "text_QCJ4PQ"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify://shop_images/Autumn_Challenge_Grid_Photo_1.png",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "center",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "slide_banner_XN9G8d": {
+      "type": "slide-banner",
+      "blocks": {
+        "slide_Bd3zQy": {
+          "type": "slide",
+          "settings": {
+            "content_max_width": 580,
+            "font_transform": "none",
+            "heading_font": "f-normal",
+            "heading": "<h2><strong>What we're looking for...</strong></h2>",
+            "heading_size": "default",
+            "subheading": "",
+            "subheading_font": "f-normal",
+            "subheading_size": "medium",
+            "content": "<p>In order to have the best chance of winning, we require a good-quality photo or video reel that showcases our furniture. We are looking for best pieces of content that capture the Autumn season perfectly. Cosy nights/days on the sofa, candles, pumpkins, hot drinks and warm throws could be a perfect example of capturing the Autumn season. </p>",
+            "time": "",
+            "time_margin_top": 24,
+            "time_margin_top_mobile": 24,
+            "colors_text": "#FFFFFF",
+            "colors_background": "#B30E13",
+            "gradient_background": "",
+            "button_transparent": "transparent",
+            "button_label": "",
+            "button_link": "",
+            "button_margin_top": 60,
+            "button_margin_top_mobile": 20,
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Bd3zQy"
+      ],
+      "settings": {
+        "image_first": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_3_2.jpg",
+        "image_second": "shopify://shop_images/Mary_Sofa_Beige_3_2_Lifestyle_1_2_173f0ef2-e4bd-4bb0-9a7b-335f98de0988.jpg",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": false,
+        "change_slides_speed": 5,
+        "padding_top_block": 0,
+        "padding_bottom_block": 0,
+        "padding_top_block_mobile": 0,
+        "padding_bottom_block_mobile": 0,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_WBygHX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_D3k7yF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Tips and tricks</strong>",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_8GTJba": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>How To Capture The Photo:</strong></p><ul><li>Take your photo on a smartphone using the camera setting </li><li>If you have a DSLR camera this will be even better, however please make sure you get a good depth of field. </li></ul><p><strong>Lighting:</strong></p><ul><li>We recommend using natural daylight when capturing your photo. </li><li>For photos captured in the evening make sure you have good artificial lighting from </li></ul><p>ceiling lights and lamps etc. </p><p><strong>The Product: </strong></p><ul><li>Make the piece of furniture you’re capturing the focal point of your photo.</li><li>Dress the furniture up with accessories if you have them i.e. cushions, throws. </li><li>Create a realistic homely setting with rugs, coffee tables, lamps etc.</li></ul>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_D3k7yF",
+        "text_8GTJba"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_L68QB9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WrM433": {
+          "type": "heading",
+          "settings": {
+            "heading": "How to enter",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_EbEqkU": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Post a creative photo or video featuring a Honeypot product with an autumnal theme. Think cosy nights in, pumpkins, Halloween fun, or anything that embodies the spirit of the season.</li><li> Tag us in your post and use the hashtag #HoneypotAutumn</li><li> Ensure you're following Honeypot Furniture on Instagram or Facebook.</li></ol>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_WrM433",
+        "text_EbEqkU"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collapsible_content_3XFGTj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_CPttwF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The prizes",
+            "icon": "star",
+            "row_content": "<p>Video Winner: </p><p>£200</p><p></p><p>Photo Winners:</p><p>1st Place: £200</p><p>2nd Place: £100</p><p>3rd Place: £50</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GG9GYj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are we looking for?",
+            "icon": "eye",
+            "row_content": "<p>In order to have the best chance of winning, we require a good-quality photo or video reel that showcases our furniture. We are looking for best pieces of content that capture the Autumn season perfectly. Cosy nights/days on the sofa, candles, pumpkins, hot drinks and warm throws could be a perfect example of capturing the Autumn season. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9pXHWq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Tips and tricks",
+            "icon": "heart",
+            "row_content": "<p><strong>How To Capture The Photo:</strong></p><ul><li>Take your photo on a smartphone using the camera setting </li><li>If you have a DSLR camera this will be even better, however please make sure you get a good depth of field. </li></ul><p><strong>Lighting:</strong></p><ul><li>We recommend using natural daylight when capturing your photo. </li><li>For photos captured in the evening make sure you have good artificial lighting from </li></ul><p>ceiling lights and lamps etc. </p><p><strong>The Product: </strong></p><ul><li>Make the piece of furniture you’re capturing the focal point of your photo.</li><li>Dress the furniture up with accessories if you have them i.e. cushions, throws. </li><li>Create a realistic homely setting with rugs, coffee tables, lamps etc.</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CPttwF",
+        "collapsible_row_GG9GYj",
+        "collapsible_row_9pXHWq"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Collapsible content",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "top_subheading": "Subheading",
+        "top_text": "<p>Talk about your brand</p>",
+        "top_icon_1": "none",
+        "top_heading_1": "",
+        "top_icon_2": "none",
+        "top_heading_2": "",
+        "bottom_text": "<p>Get inspired</p>",
+        "bottom_button_label": "Follow us",
+        "bottom_button_link": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "collage_YMWxdQ": {
+      "type": "collage",
+      "blocks": {
+        "image_4wx7XK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image0_40.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "image_CLJYwH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_1.jpg",
+            "heading_image": "",
+            "heading_size": "default",
+            "button_transparent": "transparent",
+            "button_type": "standard",
+            "button_label": "",
+            "link": "",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_4wx7XK",
+        "image_CLJYwH"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "Our Previous Entries",
+        "text": "<p>Share information about your brand with your customers.</p>",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_DkFf4y": {
+      "type": "collage",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": true,
+        "enable_pagination_type": "sm",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "none",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_Pg8qjV",
+    "image_with_text_qTAEHG",
+    "slide_banner_XN9G8d",
+    "rich_text_WBygHX",
+    "rich_text_L68QB9",
+    "collapsible_content_3XFGTj",
+    "collage_YMWxdQ",
+    "collage_DkFf4y"
+  ]
+}
