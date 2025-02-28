@@ -2564,6 +2564,7 @@
                             const toolTip = createElement("span", ["tooltip-content"]);
                             const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
                             toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+                            toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
 
                             // Iterate in reverse order and include all rows
                             [5, 4, 3, 2, 1].forEach(stars => {
@@ -2573,10 +2574,6 @@
                             toolTip.appendChild(toolTipHeader);
                             reviewsLink.appendChild(toolTip);
                             outerDivSummaries.appendChild(reviewsLink);
-
-                            reviewsLink.addEventListener("click", () => {
-                              window.scrollTo({ top: document.querySelector("#reviews").offsetTop, behavior: "smooth" });
-                            });
 
                             // Attach click event listener to the <details> element
                             const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
@@ -2592,12 +2589,35 @@
                               console.log("Details element not found");
                             }
 
-                            const reviewsButton = document.querySelector("#reviews-button");
+                            const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
+                         
+                            readMoreReviewsButton.addEventListener('click', function () {
+                              // Simulate a click on the collapsible content element
+                              const collapsible = document.querySelector('.trustpilot-accordion');
+
+                              if (collapsible) {
+                                collapsible.click();
+                              }
+
+                              // Smoothly scroll to the element with the ID "reviews"
+                              document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
                           
-                            if (reviewsButton) {
-                              reviewsButton.addEventListener("click", function() {
+                              // Determine scroll offset based on screen size
+                              const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
+                          
+                              // Adjust the scroll position slightly above the target
+                              setTimeout(function () {
+                                window.scrollBy(0, -offset); // Use the offset value based on the device
+                              }, 500); // Delay to allow smooth scroll to finish
+                            });
+
+                            tooltip = document.querySelector('.trustpilotTooltip');
+
+                            if (readMoreReviewsButton) {
+                              readMoreReviewsButton.addEventListener("click", function() {
                                 // Load reviews if the details element is not open
                                 if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
+                                  tooltip.classList.remove('active');
                                   loadReviews();
                                 }
                               });
@@ -2610,6 +2630,38 @@
                       }
 
                       initializeTrustPilot();
+
+                      let tooltip = '';
+
+                      document.addEventListener('DOMContentLoaded', () => {
+                        tooltip = document.querySelector('.trustpilotTooltip');
+                        const reviewsButton = document.getElementById('reviews-button'); 
+                        const readMoreButton = document.getElementById('reviews-read-more-button'); 
+
+                        {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
+
+                        // Open tooltip when clicking the reviews button
+                        reviewsButton.addEventListener('click', (event) => {
+                          event.stopPropagation(); // Prevents event from bubbling up to document
+                          tooltip.classList.add('active'); // Open the tooltip
+                        });
+
+                        // Prevent click on "Read More" from affecting tooltip behavior
+                        if (readMoreButton) {
+                          readMoreButton.addEventListener('click', (event) => {
+                            event.stopPropagation(); // Prevents event from reaching reviews-button or document
+                          });
+                        }
+
+                        // Close tooltip when clicking anywhere else on the page
+                        document.addEventListener("click", function(event) {
+                          setTimeout(() => {
+                            if (tooltip && !tooltip.contains(event.target)) {
+                              tooltip.classList.remove("active"); // Close tooltip
+                          }
+                          }, 10); // Small delay to ensure click events don't conflict
+                        });
+                      });
                     </script>
                   {%- endif -%}
 

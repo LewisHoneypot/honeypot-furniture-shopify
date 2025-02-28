@@ -99,6 +99,7 @@
             "menu_item": "Sofas",
             "section_width": "customized-width",
             "customize_width": 1400,
+            "heading_font_size": 16,
             "image_1": "shopify://shop_images/1_b460768e-3384-4721-81c0-9fc7384db2cc.png",
             "text_image_1": "",
             "link_image_1": "",
@@ -112,6 +113,7 @@
             "menu_item": "Bedroom",
             "section_width": "customized-width",
             "customize_width": 1400,
+            "heading_font_size": 16,
             "text_image_1": "",
             "link_image_1": "",
             "image_overlay_opacity": 30,
@@ -124,10 +126,30 @@
             "menu_item": "Living And Dining",
             "section_width": "customized-width",
             "customize_width": 1400,
+            "heading_font_size": 16,
             "text_image_1": "",
             "link_image_1": "",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
+          }
+        },
+        "mega_menu_2_U88XrE": {
+          "type": "mega_menu_2",
+          "settings": {
+            "menu_item": "Rugs",
+            "section_width": "customized-width",
+            "customize_width": 1400,
+            "heading_font_size": 12,
+            "image_1": "shopify://shop_images/3_8a78d8bf-83f7-4862-8984-9df0eb5ee93a.jpg",
+            "text_image_1": "Large Rugs: 290cm x 200cm",
+            "link_image_1": "shopify://collections/large-rugs",
+            "image_2": "shopify://shop_images/4_90b93fd1-e2be-4201-a4a3-708282f01835.jpg",
+            "text_image_2": "Medium Rugs: 230cm x 160cm",
+            "link_image_2": "shopify://collections/medium-rugs",
+            "text_image_3": "",
+            "link_image_3": "",
+            "text_image_4": "",
+            "link_image_4": ""
           }
         },
         "mega_menu_1_TFhwQt": {
@@ -136,6 +158,7 @@
             "menu_item": "Inspiration",
             "section_width": "customized-width",
             "customize_width": 1400,
+            "heading_font_size": 16,
             "text_image_1": "",
             "link_image_1": "",
             "image_overlay_opacity": 30,
@@ -147,17 +170,19 @@
         "mega_menu_1_QYBCyP",
         "mega_menu_1_MkHmHf",
         "mega_menu_1_NE4a6D",
+        "mega_menu_2_U88XrE",
         "mega_menu_1_TFhwQt"
       ],
       "custom_css": [
         ".menu-drawer {background-color: #ffffff;}"
       ],
       "settings": {
+        "use_nosto": true,
         "section_width": "page-width",
         "customize_width": 1800,
         "type_style": "classic",
         "show_line_separator": true,
-        "type_sticky_header": "always",
+        "type_sticky_header": "scroll-up",
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "text_size": "medium",
         "font_transform": "capitalize",

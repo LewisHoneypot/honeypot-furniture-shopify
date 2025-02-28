@@ -130,6 +130,12 @@
       --padding-top: {{ section.settings.padding_top }}px;
       --padding-bottom: {{ section.settings.padding_bottom }}px;" 
   >
+    <!-- start Omniconvert.com code -->
+    <link rel="dns-prefetch" href="//app.omniconvert.com" />
+    <script type="text/javascript">window._mktz=window._mktz||[];</script>
+    <script src="//cdn.omniconvert.com/js/xeb7be7.js"></script>
+    <!-- end Omniconvert.com code -->
+    
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="md" class="header-drawer icons-style-{{ section.settings.icon_type_style }} d-none-lg{% if section.settings.enable_wishlist_mobile and section.settings.mobile_logo_position == 'center' %} a-i-center{% endif %}">
         {%- if section.settings.mobile_logo_position == 'left' -%}
@@ -391,6 +397,7 @@
                                                       assign mg2_link_image_2 = block.settings.link_image_2
                                                       assign mg2_link_image_3 = block.settings.link_image_3
                                                       assign mg2_link_image_4 = block.settings.link_image_4
+                                                      assign heading_font_size = block.settings.heading_font_size
                                                   endcase
                                                 endif
                                               endfor
@@ -451,7 +458,7 @@
                                                         </div>
                                                         {%- if mg2_text_image_1 != blank -%}
                                                           <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                            <span class="link-style">{{ mg2_text_image_1 }}</span>
+                                                            <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_1 }}</span>
                                                           </div>
                                                         {%- endif -%}
                                                     </{% if mg2_link_image_1 != blank %}a{% else %}div{% endif %}>
@@ -475,7 +482,7 @@
                                                         </div>
                                                         {%- if mg2_text_image_2 != blank -%}
                                                           <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                            <span class="link-style">{{ mg2_text_image_2 }}</span>
+                                                            <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_2 }}</span>
                                                           </div>
                                                         {%- endif -%}
                                                     </{% if mg2_link_image_2 != blank %}a{% else %}div{% endif %}>
@@ -499,7 +506,7 @@
                                                           </div>
                                                           {%- if mg2_text_image_3 != blank -%}
                                                             <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                              <span class="link-style">{{ mg2_text_image_3 }}</span>
+                                                              <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_3 }}</span>
                                                             </div>
                                                           {%- endif -%}
                                                       </{% if mg2_link_image_3 != blank %}a{% else %}div{% endif %}>
@@ -523,7 +530,7 @@
                                                         </div>
                                                         {%- if mg2_text_image_4 != blank -%}
                                                           <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                            <span class="link-style">{{ mg2_text_image_4 }}</span>
+                                                            <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_4 }}</span>
                                                           </div>
                                                         {%- endif -%}
                                                     </{% if mg2_link_image_4 != blank %}a{% else %}div{% endif %}>
@@ -578,6 +585,7 @@
                                           assign mg2_link_image_2 = block.settings.link_image_2
                                           assign mg2_link_image_3 = block.settings.link_image_3
                                           assign mg2_link_image_4 = block.settings.link_image_4
+                                          assign heading_font_size = block.settings.heading_font_size
                                       endcase
                                     endif
                                   endfor
@@ -638,7 +646,7 @@
                                             </div>
                                             {%- if mg2_text_image_1 != blank -%}
                                               <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                <span class="link-style">{{ mg2_text_image_1 }}</span>
+                                                <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_1 }}</span>
                                               </div>
                                             {%- endif -%}
                                         </{% if mg2_link_image_1 != blank %}a{% else %}div{% endif %}>
@@ -662,7 +670,7 @@
                                             </div>
                                             {%- if mg2_text_image_2 != blank -%}
                                               <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                <span class="link-style">{{ mg2_text_image_2 }}</span>
+                                                <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_2 }}</span>
                                               </div>
                                             {%- endif -%}
                                         </{% if mg2_link_image_2 != blank %}a{% else %}div{% endif %}>
@@ -686,7 +694,7 @@
                                               </div>
                                               {%- if mg2_text_image_3 != blank -%}
                                                 <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                  <span class="link-style">{{ mg2_text_image_3 }}</span>
+                                                  <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_3 }}</span>
                                                 </div>
                                               {%- endif -%}
                                           </{% if mg2_link_image_3 != blank %}a{% else %}div{% endif %}>
@@ -710,7 +718,7 @@
                                             </div>
                                             {%- if mg2_text_image_4 != blank -%}
                                               <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                                <span class="link-style">{{ mg2_text_image_4 }}</span>
+                                                <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_4 }}</span>
                                               </div>
                                             {%- endif -%}
                                         </{% if mg2_link_image_4 != blank %}a{% else %}div{% endif %}>
@@ -1241,7 +1249,7 @@
                                   </div>
                                   {%- if mg2_text_image_1 != blank -%}
                                     <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                      <span class="link-style">{{ mg2_text_image_1 }}</span>
+                                      <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_1 }}</span>
                                     </div>
                                   {%- endif -%}
                               </{% if mg2_link_image_1 != blank %}a{% else %}div{% endif %}>
@@ -1265,7 +1273,7 @@
                                   </div>
                                   {%- if mg2_text_image_2 != blank -%}
                                     <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                      <span class="link-style">{{ mg2_text_image_2 }}</span>
+                                      <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_2 }}</span>
                                     </div>
                                   {%- endif -%}
                               </{% if mg2_link_image_2 != blank %}a{% else %}div{% endif %}>
@@ -1289,7 +1297,7 @@
                                     </div>
                                     {%- if mg2_text_image_3 != blank -%}
                                       <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                        <span class="link-style">{{ mg2_text_image_3 }}</span>
+                                        <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_3 }}</span>
                                       </div>
                                     {%- endif -%}
                                 </{% if mg2_link_image_3 != blank %}a{% else %}div{% endif %}>
@@ -1313,7 +1321,7 @@
                                   </div>
                                   {%- if mg2_text_image_4 != blank -%}
                                     <div class="mg_heading d-inline-block link u-none color-foreground uppercase">
-                                      <span class="link-style">{{ mg2_text_image_4 }}</span>
+                                      <span class="link-style" style="font-size: {{ heading_font_size }}px;">{{ mg2_text_image_4 }}</span>
                                     </div>
                                   {%- endif -%}
                               </{% if mg2_link_image_4 != blank %}a{% else %}div{% endif %}>
@@ -2341,6 +2349,15 @@
       "label": "t:sections.all.customize_width.label"
     },
     {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 10,
+      "max": 26,
+      "default": 16,
+      "unit": "px",
+      "label": "Heading Font Size"
+    },
+    {
       "type": "header",
       "content": "t:sections.header.settings.mega_menu.image_block.label"
     },
@@ -2413,6 +2430,15 @@
       "default": 1400,
       "unit": "px",
       "label": "t:sections.all.customize_width.label"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 10,
+      "max": 26,
+      "default": 16,
+      "unit": "px",
+      "label": "Heading Font Size"
     },
     {
       "type": "header",

@@ -71,8 +71,8 @@
             >
               <div class="d-flex pos-relative w-100 h-100">
                 {%- if block.settings.heading != blank or block.settings.text != blank -%}
-                  <div class="slider__content slideshow__content d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h banner__content banner__content--{{ block.settings.box_align }}">
-                    <animate-element class="slider__content--wrapper d-flex f-column j-c-center w-100 h-100 {{ block.settings.text_alignment }} banner__box">
+                  <div class="slider__content slideshow__content d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h banner__content banner__content--{{ block.settings.box_align }}" style="padding-top:0px;">
+                    <animate-element class="slider__content--wrapper d-flex f-column j-c-center w-100 h-100 {{ block.settings.text_alignment }} banner__box" style="padding-top:15px;">
                       <div class="banner__box--wrapper w-100">
                         {%- if block.settings.rating != '0' and section.settings.type_style == 'special' -%}
                           <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.6s;">

@@ -45,12 +45,11 @@ function loadReviews() {
 
   reviewsLoaded = true; // Set flag to prevent further fetching
 
-  const productId = productSku;
+  const productId = encodeURIComponent(productSku);
   const phpEndpoint = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php`;
 
   const urlCurrentProduct = `${phpEndpoint}?type=reviews&sku=${productId}&perPage=100`;
-  const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${[trustpilot_skus].toString()}&perPage=100`;
-
+  const urlCurrentProductWithFullRangeTrustPilot = `${phpEndpoint}?type=reviews&sku=${[encodeURIComponent(trustpilot_skus)].toString()}&perPage=100`;
   const productRequest = [trustpilot_skus].length ? urlCurrentProductWithFullRangeTrustPilot : urlCurrentProduct;
 
   fetch(productRequest)
@@ -62,7 +61,6 @@ function loadReviews() {
 
     const outerDiv = createElement("div", ["outerDiv"]);
     reviewsContainer.appendChild(outerDiv);
-
 
     reviewsData.productReviews.forEach((review, i) => {
 
@@ -153,7 +151,6 @@ function loadReviews() {
             </div>
           `;
         }
-      
 
         reviewHTML += `</div></div>`;
         outerDiv.innerHTML += reviewHTML;

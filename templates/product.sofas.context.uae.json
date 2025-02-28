@@ -8,9 +8,19 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "popup-group.json",
+  "parent": "product.sofas.json",
   "context": {
     "market": "uae"
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "snap_buttons_HagTqx": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
 }
