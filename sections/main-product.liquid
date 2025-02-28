@@ -155,7 +155,9 @@
                             >
                               {{ product.metafields.custom.range_name }}
                               <br>
-                              <span style="font-size: 14pt; font-weight: 500; top: -10px; position: relative;">{{ product.metafields.custom.colour_and_model }}</span>
+                              <span style="font-size: 14pt; font-weight: 500; top: -10px; position: relative;">
+                                {{- product.metafields.custom.colour_and_model -}}
+                              </span>
                             </h1>
                           {%- endif -%}
                         {%- else -%}
@@ -847,25 +849,27 @@
                 {% comment %} USP Drawer 1 {% endcomment %}
               {%- when 'usp_drawer_1' -%}
                 <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-                  {% comment %} <div
-                    class="custom-col custom-first-col"
-                    {{ block.shopify_attributes }}
-                  >
-                    <side-drawer-opener
-                      class="d-block product-drawer__opener no-js-hidden"
-                      data-side-drawer="#Drawer-{{ block.id }}"
+                  {% comment %}
+                    <div
+                      class="custom-col custom-first-col"
                       {{ block.shopify_attributes }}
                     >
-                      <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
-                        <span style="position: relative; top: 3px;">
-                          {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
-                        </span>
-                        <span style="font-size:13px; text-decoration: underline;">
-                          {{ block.settings.heading | escape }}
-                        </span>
-                      </button>
-                    </side-drawer-opener>
-                  </div> {% endcomment %}
+                      <side-drawer-opener
+                        class="d-block product-drawer__opener no-js-hidden"
+                        data-side-drawer="#Drawer-{{ block.id }}"
+                        {{ block.shopify_attributes }}
+                      >
+                        <button class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex a-i-center left usp-button p-0">
+                          <span style="position: relative; top: 3px;">
+                            {% render 'icon-accordion', icon: block.settings.usp_icon_1 %}
+                          </span>
+                          <span style="font-size:13px; text-decoration: underline;">
+                            {{ block.settings.heading | escape }}
+                          </span>
+                        </button>
+                      </side-drawer-opener>
+                    </div>
+                  {% endcomment %}
 
                   {% comment %} USP Drawer 2 {% endcomment %}
               {%- when 'usp_drawer_2' -%}
@@ -916,9 +920,11 @@
 
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                      {% comment %} <script>
-                        console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
-                      </script> {% endcomment %}
+                      {% comment %}
+                        <script>
+                          console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
+                        </script>
+                      {% endcomment %}
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
@@ -947,7 +953,7 @@
                     {%- endif -%}
                   {%- elsif collection_titles contains 'rugs'
                     or product.tags contains 'LL'
-                    or product.tags contains 'JB' 
+                    or product.tags contains 'JB'
                   -%}
                     {%- if product.available and in_stock == true -%}
                       {%- assign date_1 = 1 -%}
@@ -1917,26 +1923,30 @@
 
                     <div class="col-12 center">
                       {% assign image_url = product.metafields.custom.dimension_image_file | image_url %}
-                    
-                      <img class="global-media-settings f-a-none"
-                        srcset="{% if image_url %}
-                          {{ image_url | image_url: width: 360 }} 360w,
-                          {{ image_url | image_url: width: 550 }} 550w,
-                          {{ image_url | image_url: width: 750 }} 750w,
-                          {{ image_url | image_url: width: 1000 }} 1000w,
-                          {{ image_url | image_url: width: 1200 }} 1200w,
-                          {{ image_url | image_url: width: 1500 }} 1500w,
-                          {{ image_url | image_url: width: 2000 }} 2000w,
-                          {{ image_url | image_url: width: 2500 }} 2500w,
-                          {{ image_url | image_url: width: 3000 }} 3000w 
-                        {% endif %}"
+
+                      <img
+                        class="global-media-settings f-a-none"
+                        srcset="
+                          {% if image_url %}
+                            {{ image_url | image_url: width: 360 }} 360w,
+                            {{ image_url | image_url: width: 550 }} 550w,
+                            {{ image_url | image_url: width: 750 }} 750w,
+                            {{ image_url | image_url: width: 1000 }} 1000w,
+                            {{ image_url | image_url: width: 1200 }} 1200w,
+                            {{ image_url | image_url: width: 1500 }} 1500w,
+                            {{ image_url | image_url: width: 2000 }} 2000w,
+                            {{ image_url | image_url: width: 2500 }} 2500w,
+                            {{ image_url | image_url: width: 3000 }} 3000w
+                          {% endif %}
+                        "
                         sizes="(min-width: 1200px) 1000px, (min-width: 750px) 50vw, 100vw"
                         src="{{ image_url | image_url: width: 360 }}"
                         alt="{{ block.settings.heading | escape }}"
                         loading="lazy"
                         width="360"
                         height="148"
-                        data-media-id="{{ product.metafields.custom.dimension_image_file.id }}">
+                        data-media-id="{{ product.metafields.custom.dimension_image_file.id }}"
+                      >
                     </div>
                     <div class="col-12" style="align-self: center;">
                       <ol
@@ -2129,6 +2139,7 @@
                             const toolTip = createElement("span", ["tooltip-content"]);
                             const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
                             toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+                            toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
 
                             // Iterate in reverse order and include all rows
                             [5, 4, 3, 2, 1].forEach(stars => {
@@ -2138,10 +2149,6 @@
                             toolTip.appendChild(toolTipHeader);
                             reviewsLink.appendChild(toolTip);
                             outerDivSummaries.appendChild(reviewsLink);
-
-                            reviewsLink.addEventListener("click", () => {
-                              window.scrollTo({ top: document.querySelector("#reviews").offsetTop, behavior: "smooth" });
-                            });
 
                             // Attach click event listener to the <details> element
                             const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
@@ -2157,12 +2164,35 @@
                               console.log("Details element not found");
                             }
 
-                            const reviewsButton = document.querySelector("#reviews-button");
+                            const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
+                         
+                            readMoreReviewsButton.addEventListener('click', function () {
+                              // Simulate a click on the collapsible content element
+                              const collapsible = document.querySelector('.trustpilot-accordion');
+
+                              if (collapsible) {
+                                collapsible.click();
+                              }
+
+                              // Smoothly scroll to the element with the ID "reviews"
+                              document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
                           
-                            if (reviewsButton) {
-                              reviewsButton.addEventListener("click", function() {
+                              // Determine scroll offset based on screen size
+                              const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
+                          
+                              // Adjust the scroll position slightly above the target
+                              setTimeout(function () {
+                                window.scrollBy(0, -offset); // Use the offset value based on the device
+                              }, 500); // Delay to allow smooth scroll to finish
+                            });
+
+                            tooltip = document.querySelector('.trustpilotTooltip');
+
+                            if (readMoreReviewsButton) {
+                              readMoreReviewsButton.addEventListener("click", function() {
                                 // Load reviews if the details element is not open
                                 if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
+                                  tooltip.classList.remove('active');
                                   loadReviews();
                                 }
                               });
@@ -2175,6 +2205,38 @@
                       }
 
                       initializeTrustPilot();
+
+                      let tooltip = '';
+
+                      document.addEventListener('DOMContentLoaded', () => {
+                        tooltip = document.querySelector('.trustpilotTooltip');
+                        const reviewsButton = document.getElementById('reviews-button'); 
+                        const readMoreButton = document.getElementById('reviews-read-more-button'); 
+
+                        {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
+
+                        // Open tooltip when clicking the reviews button
+                        reviewsButton.addEventListener('click', (event) => {
+                          event.stopPropagation(); // Prevents event from bubbling up to document
+                          tooltip.classList.add('active'); // Open the tooltip
+                        });
+
+                        // Prevent click on "Read More" from affecting tooltip behavior
+                        if (readMoreButton) {
+                          readMoreButton.addEventListener('click', (event) => {
+                            event.stopPropagation(); // Prevents event from reaching reviews-button or document
+                          });
+                        }
+
+                        // Close tooltip when clicking anywhere else on the page
+                        document.addEventListener("click", function(event) {
+                          setTimeout(() => {
+                            if (tooltip && !tooltip.contains(event.target)) {
+                              tooltip.classList.remove("active"); // Close tooltip
+                          }
+                          }, 10); // Small delay to ensure click events don't conflict
+                        });
+                      });
                     </script>
                   {%- endif -%}
 
@@ -2854,7 +2916,7 @@
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
             }
-              ],
+          ],
           "default": "normal",
           "label": "t:sections.main-product.blocks.color_swatch.settings.font"
         },
@@ -4206,7 +4268,7 @@
           "type": "checkbox",
           "id": "enable_expected_delivery",
           "default": false,
-          "label": "t:sections.main-collection-product-grid.settings.delivery_eta.enable_expected_delivery.label",
+          "label": "t:sections.main-collection-product-grid.settings.delivery_eta.enable_expected_delivery.label"
         },
         {
           "type": "select",
@@ -4295,7 +4357,7 @@
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
             }
-              ],
+          ],
           "default": "normal",
           "label": "t:sections.main-product.blocks.color_swatch.settings.font"
         },
@@ -4377,7 +4439,7 @@
           "options": [
             {
               "value": "usp_content_selector_1",
-              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_1",
+              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_1"
             },
             {
               "value": "custom",
@@ -4414,7 +4476,7 @@
             },
             {
               "value": "dimensions",
-              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_2",
+              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_2"
             }
           ],
           "default": "dimensions",
@@ -4427,7 +4489,7 @@
           "options": [
             {
               "value": "usp_content_selector_2",
-              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_2",
+              "label": "t:sections.main-product.blocks.usp_drawers.settings.label_2"
             },
             {
               "value": "custom",
@@ -6173,8 +6235,8 @@
       border-bottom: solid 1px #f2f2f2;
       .review-wrapper {
         border-radius: 15px;
-        padding-top: 40px; 
-        box-shadow: 0 1.5rem 2rem rgba(var(--color-foreground), .08);
+        padding-top: 40px;
+        box-shadow: 0 1.5rem 2rem rgba(var(--color-foreground), 0.08);
         .customerInfo {
           width: -webkit-fill-available;
         }
