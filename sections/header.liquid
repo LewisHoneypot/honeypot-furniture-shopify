@@ -761,6 +761,22 @@
                   -%}
                   {%- if check_selector -%}
                     <div class="menu-drawer__localization header-localization">
+                      {%- if section.settings.use_country_selector -%}
+                        <div class="country-selector caption-large">
+
+                          {%- if localization.country.iso_code == "UAE "-%}
+                            <a href="{{ section.settings.country_selector_url_1 }}">
+                              <span>Switch to {{ section.settings.country_selector_text_1 }}</span>
+                              <img src="{{ section.settings.country_selector_image_1 | image_url }}">
+                            </a>
+                          {%- else -%}
+                            <a href="{{ section.settings.country_selector_url_2 }}">
+                              <span>Switch to {{ section.settings.country_selector_text_2 }}</span>
+                              <img src="{{ section.settings.country_selector_image_2 | image_url }}">
+                            </a>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
                       {%- if section.settings.enable_country_selector_mobile and localization.available_countries.size > 1 -%}
                         <noscript>
                           {%- form 'localization', 
@@ -2308,6 +2324,50 @@
     "unit": "px",
     "label": "t:sections.all.padding.padding_bottom",
     "default": 20
+  },
+  {
+    "type": "header",
+    "content": "Country"
+  },
+  {
+    "type": "checkbox",
+    "id": "use_country_selector",
+    "label": "Use county selector",
+    "default": false
+  },
+  {
+    "type": "text",
+    "id": "country_selector_text_1",
+    "label": "County 1 Name",
+    "default": "GB"
+  },
+  {
+    "type": "text",
+    "id": "country_selector_url_1",
+    "label": "County 1 URL",
+    "default": "https://honeypotfurniture.co.uk/"
+  },
+  {
+    "type": "image_picker",
+    "id": "country_selector_image_1",
+    "label": "County 1 Image"
+  },
+  {
+    "type": "text",
+    "id": "country_selector_text_2",
+    "label": "County 2 Name",
+    "default": "UAE"
+  },
+  {
+    "type": "text",
+    "id": "country_selector_url_2",
+    "label": "County 2 URL",
+    "default": "https://honeypotfurniture.ae/"
+  },
+  {
+    "type": "image_picker",
+    "id": "country_selector_image_2",
+    "label": "County 2 Image"
   }],
   "blocks": [
   {

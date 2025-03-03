@@ -26625,3 +26625,17 @@ body.multitasking__show .newsletter-popup-opener {
 .ul-globo-dropdown-option {
   position: relative !important;
 }
+
+.country-selector {
+  padding: 0 1.5rem 0 1rem;
+}
+
+.country-selector a {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+.country-selector img {
+  height: 21px;
+  padding-bottom: 4px;
+}
