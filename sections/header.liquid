@@ -763,12 +763,12 @@
                     <div class="menu-drawer__localization header-localization">
 
                       <script>
-                        console.log('country: ', {{ section.settings.use_country_selector }});
+                        console.log('country: ', {{ localization.country.iso_code }});
                       </script>
                       {%- if section.settings.use_country_selector -%}
                         <div class="country-selector caption-large">
 
-                          {%- if localization.country.iso_code == "UAE "-%}
+                          {%- if localization.country.iso_code == "UAE" -%}
                             <a href="{{ section.settings.country_selector_url_1 }}">
                               <span>Switch to {{ section.settings.country_selector_text_1 }}</span>
                               <img src="{{ section.settings.country_selector_image_1 | image_url }}">
