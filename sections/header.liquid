@@ -762,10 +762,6 @@
                   {%- if check_selector -%}
                     <div class="menu-drawer__localization header-localization">
 
-                      <script>
-                        console.log('country: ', {{ localization.country.iso_code | json }});
-                      </script>
-
                       {%- if section.settings.use_country_selector -%}
                         <div class="country-selector caption-large">
 
