@@ -1399,6 +1399,108 @@
             {%- endif -%}
           {%- endfor -%}
         </ul>
+
+        {%- if section.settings.use_country_selector -%}
+          {%- if section.settings.country_selector_position == "center" -%}
+            <div class="list-menu list-menu--inline d-inline-flex f-wrap list-unstyled left g-gap">
+              <div class="country-selector caption-large custom-dropdown">
+                <button id="dropdownButton" class="dropdown-button">
+                  <img id="selectedImage" src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Country Flag">
+                  <span id="selectedText">{{ section.settings.country_selector_text_1 }}</span>
+                </button>
+                <ul id="dropdownMenu" class="dropdown-menu" style="max-width:69px;">
+                  <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
+                    <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
+                    <span>{{ section.settings.country_selector_text_1 }}</span>
+                  </li>
+                  <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
+                    <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
+                    <span>{{ section.settings.country_selector_text_2 }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                var dropdownButton = document.getElementById("dropdownButton");
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                var selectedImage = document.getElementById("selectedImage");
+                var selectedText = document.getElementById("selectedText");
+          
+                dropdownButton.addEventListener("click", function() {
+                  dropdownMenu.classList.toggle("show");
+                });
+          
+                document.querySelectorAll("#dropdownMenu li").forEach(function(item) {
+                  item.addEventListener("click", function() {
+                    selectedImage.src = this.getAttribute("data-image");
+                    selectedText.textContent = this.querySelector("span").textContent;
+                    window.location.href = this.getAttribute("data-value");
+                  });
+                });
+          
+                document.addEventListener("click", function(event) {
+                  if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove("show");
+                  }
+                });
+              });
+            </script>
+          
+            <style>
+              .custom-dropdown {
+                position: relative;
+                display: inline-block;
+                padding-top: 9px;
+              }
+              .dropdown-button {
+                display: flex;
+                align-items: center;
+                background: #fff;
+                border: 1px solid #ccc;
+                padding: 5px 10px;
+                cursor: pointer;
+                width: 68px;
+              }
+              .dropdown-button img {
+                width: 20px;
+                height: 16px;
+                margin-right: 8px;
+                padding-bottom: 0px;
+              }
+              .dropdown-menu {
+                display: none;
+                position: absolute;
+                background: #fff;
+                border: 1px solid #ccc;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+              }
+              .dropdown-menu.show {
+                display: block;
+              }
+              .dropdown-menu li {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+              }
+              .dropdown-menu li img {
+                width: 20px;
+                height: 16px;
+                margin-right: 8px;
+                padding-bottom: 0px;
+              }
+              .dropdown-menu li:hover {
+                background: #f0f0f0;
+              }
+            </style>
+          {%- endif -%}
+        {%- endif -%}
+
       </nav>
     {%- endif -%}
     {%- if section.settings.logo_position == 'middle-center' -%}
@@ -1655,6 +1757,148 @@
             </noscript>
           </side-drawer-opener>
         {%- endif -%}
+
+        {%- if section.settings.use_country_selector -%}
+          {%- if section.settings.country_selector_position == "right" -%}
+            <div class="list-menu list-menu--inline f-wrap list-unstyled left g-gap d-none d-lg-inline-flex">
+              <div class="country-selector caption-large custom-dropdown">
+                <button id="dropdownButton" class="dropdown-button">
+                  <img id="selectedImage" src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Country Flag">
+                  <span id="selectedText">{{ section.settings.country_selector_text_1 }}</span>
+                </button>
+                <ul id="dropdownMenu" class="dropdown-menu" style="max-width:69px;">
+                  <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
+                    <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
+                    <span>{{ section.settings.country_selector_text_1 }}</span>
+                  </li>
+                  <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
+                    <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
+                    <span>{{ section.settings.country_selector_text_2 }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                var dropdownButton = document.getElementById("dropdownButton");
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                var selectedImage = document.getElementById("selectedImage");
+                var selectedText = document.getElementById("selectedText");
+          
+                dropdownButton.addEventListener("click", function() {
+                  dropdownMenu.classList.toggle("show");
+                });
+          
+                document.querySelectorAll("#dropdownMenu li").forEach(function(item) {
+                  item.addEventListener("click", function() {
+                    selectedImage.src = this.getAttribute("data-image");
+                    selectedText.textContent = this.querySelector("span").textContent;
+                    window.location.href = this.getAttribute("data-value");
+                  });
+                });
+          
+                document.addEventListener("click", function(event) {
+                  if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove("show");
+                  }
+                });
+              });
+            </script>
+          
+            <style>
+              .custom-dropdown {
+                position: relative;
+                display: inline-block;
+                padding-top: 9px;
+              }
+              .dropdown-button {
+                display: flex;
+                align-items: center;
+                background: #fff;
+                border: 1px solid #ccc;
+                padding: 5px 10px;
+                cursor: pointer;
+                width: 68px;
+              }
+              .dropdown-button img {
+                width: 20px;
+                height: 16px;
+                margin-right: 8px;
+                padding-bottom: 0px;
+              }
+              .dropdown-menu {
+                display: none;
+                position: absolute;
+                background: #fff;
+                border: 1px solid #ccc;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+              }
+              .dropdown-menu.show {
+                display: block;
+              }
+              .dropdown-menu li {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+              }
+              .dropdown-menu li img {
+                width: 20px;
+                height: 16px;
+                margin-right: 8px;
+                padding-bottom: 0px;
+              }
+              .dropdown-menu li:hover {
+                background: #f0f0f0;
+              }
+
+              @media screen and (min-width: 980px) {
+                .wide-search-container-fix {
+                  min-width: 78vw;
+                }
+              }
+
+
+              @media screen and (min-width: 992px) {
+                .wide-search-icons {
+                  left: -113px;
+                }
+                .wide-search-icons-fix {
+                  left: -138px;
+                }
+                .wide-search-container-fix {
+                  min-width: 94vw;
+                }
+              }
+
+              @media screen and (min-width: 1024px) {
+                .wide-search-container {
+                  left: 7vw;
+                }
+                .list-menu {
+                  float: left;
+                }
+                .wide-search-container-fix {
+                  min-width: 78vw;
+                }
+              }
+
+              @media screen and (min-width: 1300px) {
+                .wide-search-container {
+                  left: 28vw !important;
+                }
+                .wide-search-container-fix {
+                  min-width: 0vw;
+                }
+              }
+            </style>
+          {%- endif -%}  
+        {%- endif -%}  
+
         {%- if section.settings.enable_cart or section.settings.enable_cart_mobile -%}
           {%- if settings.cart_type == 'drawer' -%}
             <side-drawer-opener class="header__icon header__icon--cart d-flex j-c-center a-i-center p-0 pos-relative u-none color-foreground f-a-none{% unless section.settings.enable_cart %} d-none-l{% endunless %}{% unless section.settings.enable_cart_mobile %} d-none-mw-l{% endunless %}" data-side-drawer="#Cart-Drawer">
@@ -2335,6 +2579,21 @@
     "id": "use_country_selector",
     "label": "Use country selector",
     "default": false
+  },
+  {
+    "type": "select",
+    "id": "country_selector_position",
+    "label": "Position",
+    "options": [
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      },
+    ]
   },
   {
     "type": "text",
