@@ -1778,30 +1778,35 @@
           {%- if section.settings.country_selector_position == "right" -%}
             <div class="list-menu list-menu--inline f-wrap list-unstyled left g-gap d-none d-lg-inline-flex">
               <div class="country-selector caption-large custom-dropdown">
+                {%- if localization.country.iso_code == "AE" -%}
+                  {% assign selected_image = section.settings.country_selector_image_2 | image_url %}
+                  {% assign selected_text = section.settings.country_selector_text_2 %}
+                  {% assign selected_url = section.settings.country_selector_url_2 %}
+                  {% assign alt_image = section.settings.country_selector_image_1 | image_url %}
+                  {% assign alt_text = section.settings.country_selector_text_1 %}
+                  {% assign alt_url = section.settings.country_selector_url_1 %}
+                {%- else -%}
+                  {% assign selected_image = section.settings.country_selector_image_1 | image_url %}
+                  {% assign selected_text = section.settings.country_selector_text_1 %}
+                  {% assign selected_url = section.settings.country_selector_url_1 %}
+                  {% assign alt_image = section.settings.country_selector_image_2 | image_url %}
+                  {% assign alt_text = section.settings.country_selector_text_2 %}
+                  {% assign alt_url = section.settings.country_selector_url_2 %}
+                {%- endif -%}
+                
                 <button id="dropdownButton" class="dropdown-button">
-                  <img id="selectedImage" src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Country Flag">
-                  <span id="selectedText">{{ section.settings.country_selector_text_1 }}</span>
+                  <img id="selectedImage" src="{{ selected_image }}" alt="Country Flag">
+                  <span id="selectedText">{{ selected_text }}</span>
                 </button>
                 <ul id="dropdownMenu" class="dropdown-menu" style="max-width:69px;">
-                  {%- if shop.locale == "ae" -%}
-                    <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
-                      <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
-                      <span>{{ section.settings.country_selector_text_2 }}</span>
-                    </li>
-                    <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
-                      <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
-                      <span>{{ section.settings.country_selector_text_1 }}</span>
-                    </li>
-                  {%- else -%}
-                    <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
-                      <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
-                      <span>{{ section.settings.country_selector_text_1 }}</span>
-                    </li>
-                    <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
-                      <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
-                      <span>{{ section.settings.country_selector_text_2 }}</span>
-                    </li>
-                  {%- endif -%}
+                  <li data-value="{{ selected_url }}" data-image="{{ selected_image }}">
+                    <img src="{{ selected_image }}" alt="Flag"> 
+                    <span>{{ selected_text }}</span>
+                  </li>
+                  <li data-value="{{ alt_url }}" data-image="{{ alt_image }}">
+                    <img src="{{ alt_image }}" alt="Flag"> 
+                    <span>{{ alt_text }}</span>
+                  </li>
                 </ul>
               </div>
             </div>
