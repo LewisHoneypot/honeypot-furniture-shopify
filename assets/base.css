@@ -26403,7 +26403,7 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1300px){
   .wide-search .ns-autocomplete {
     left: -57vw;
   }
