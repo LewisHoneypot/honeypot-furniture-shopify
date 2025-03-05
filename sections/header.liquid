@@ -1404,34 +1404,50 @@
           {%- if section.settings.country_selector_position == "center" -%}
             <div class="list-menu list-menu--inline d-inline-flex f-wrap list-unstyled left g-gap">
               <div class="country-selector caption-large custom-dropdown">
+                {%- if localization.country.iso_code == "AE" -%}
+                  {% assign selected_image = section.settings.country_selector_image_2 | image_url %}
+                  {% assign selected_text = section.settings.country_selector_text_2 %}
+                  {% assign selected_url = section.settings.country_selector_url_2 %}
+                  {% assign alt_image = section.settings.country_selector_image_1 | image_url %}
+                  {% assign alt_text = section.settings.country_selector_text_1 %}
+                  {% assign alt_url = section.settings.country_selector_url_1 %}
+                {%- else -%}
+                  {% assign selected_image = section.settings.country_selector_image_1 | image_url %}
+                  {% assign selected_text = section.settings.country_selector_text_1 %}
+                  {% assign selected_url = section.settings.country_selector_url_1 %}
+                  {% assign alt_image = section.settings.country_selector_image_2 | image_url %}
+                  {% assign alt_text = section.settings.country_selector_text_2 %}
+                  {% assign alt_url = section.settings.country_selector_url_2 %}
+                {%- endif -%}
+                
                 <button id="dropdownButton" class="dropdown-button">
-                  <img id="selectedImage" src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Country Flag">
-                  <span id="selectedText">{{ section.settings.country_selector_text_1 }}</span>
+                  <img id="selectedImage" src="{{ selected_image }}" alt="Country Flag">
+                  <span id="selectedText">{{ selected_text }}</span>
                 </button>
                 <ul id="dropdownMenu" class="dropdown-menu" style="max-width:69px;">
-                  <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
-                    <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
-                    <span>{{ section.settings.country_selector_text_1 }}</span>
+                  <li data-value="{{ selected_url }}" data-image="{{ selected_image }}">
+                    <img src="{{ selected_image }}" alt="Flag"> 
+                    <span>{{ selected_text }}</span>
                   </li>
-                  <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
-                    <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
-                    <span>{{ section.settings.country_selector_text_2 }}</span>
+                  <li data-value="{{ alt_url }}" data-image="{{ alt_image }}">
+                    <img src="{{ alt_image }}" alt="Flag"> 
+                    <span>{{ alt_text }}</span>
                   </li>
                 </ul>
               </div>
             </div>
-          
+        
             <script>
               document.addEventListener("DOMContentLoaded", function() {
                 var dropdownButton = document.getElementById("dropdownButton");
                 var dropdownMenu = document.getElementById("dropdownMenu");
                 var selectedImage = document.getElementById("selectedImage");
                 var selectedText = document.getElementById("selectedText");
-          
+        
                 dropdownButton.addEventListener("click", function() {
                   dropdownMenu.classList.toggle("show");
                 });
-          
+        
                 document.querySelectorAll("#dropdownMenu li").forEach(function(item) {
                   item.addEventListener("click", function() {
                     selectedImage.src = this.getAttribute("data-image");
@@ -1439,7 +1455,7 @@
                     window.location.href = this.getAttribute("data-value");
                   });
                 });
-          
+        
                 document.addEventListener("click", function(event) {
                   if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.classList.remove("show");
@@ -1447,7 +1463,7 @@
                 });
               });
             </script>
-          
+        
             <style>
               .custom-dropdown {
                 position: relative;
@@ -1767,29 +1783,40 @@
                   <span id="selectedText">{{ section.settings.country_selector_text_1 }}</span>
                 </button>
                 <ul id="dropdownMenu" class="dropdown-menu" style="max-width:69px;">
-                  <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
-                    <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
-                    <span>{{ section.settings.country_selector_text_1 }}</span>
-                  </li>
-                  <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
-                    <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
-                    <span>{{ section.settings.country_selector_text_2 }}</span>
-                  </li>
+                  {%- if shop.locale == "ae" -%}
+                    <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
+                      <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
+                      <span>{{ section.settings.country_selector_text_2 }}</span>
+                    </li>
+                    <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
+                      <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
+                      <span>{{ section.settings.country_selector_text_1 }}</span>
+                    </li>
+                  {%- else -%}
+                    <li data-value="{{ section.settings.country_selector_url_1 }}" data-image="{{ section.settings.country_selector_image_1 | image_url }}">
+                      <img src="{{ section.settings.country_selector_image_1 | image_url }}" alt="Flag"> 
+                      <span>{{ section.settings.country_selector_text_1 }}</span>
+                    </li>
+                    <li data-value="{{ section.settings.country_selector_url_2 }}" data-image="{{ section.settings.country_selector_image_2 | image_url }}">
+                      <img src="{{ section.settings.country_selector_image_2 | image_url }}" alt="Flag"> 
+                      <span>{{ section.settings.country_selector_text_2 }}</span>
+                    </li>
+                  {%- endif -%}
                 </ul>
               </div>
             </div>
-          
+        
             <script>
               document.addEventListener("DOMContentLoaded", function() {
                 var dropdownButton = document.getElementById("dropdownButton");
                 var dropdownMenu = document.getElementById("dropdownMenu");
                 var selectedImage = document.getElementById("selectedImage");
                 var selectedText = document.getElementById("selectedText");
-          
+        
                 dropdownButton.addEventListener("click", function() {
                   dropdownMenu.classList.toggle("show");
                 });
-          
+        
                 document.querySelectorAll("#dropdownMenu li").forEach(function(item) {
                   item.addEventListener("click", function() {
                     selectedImage.src = this.getAttribute("data-image");
@@ -1797,7 +1824,7 @@
                     window.location.href = this.getAttribute("data-value");
                   });
                 });
-          
+        
                 document.addEventListener("click", function(event) {
                   if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.classList.remove("show");
@@ -1805,7 +1832,7 @@
                 });
               });
             </script>
-          
+        
             <style>
               .custom-dropdown {
                 position: relative;
@@ -1855,14 +1882,13 @@
               .dropdown-menu li:hover {
                 background: #f0f0f0;
               }
-
+        
               @media screen and (min-width: 980px) {
                 .wide-search-container-fix {
                   min-width: 78vw;
                 }
               }
-
-
+        
               @media screen and (min-width: 992px) {
                 .wide-search-icons {
                   left: -113px;
@@ -1874,7 +1900,7 @@
                   min-width: 94vw;
                 }
               }
-
+        
               @media screen and (min-width: 1024px) {
                 .wide-search-container {
                   left: 7vw;
@@ -1886,7 +1912,7 @@
                   min-width: 78vw;
                 }
               }
-
+        
               @media screen and (min-width: 1300px) {
                 .wide-search-container {
                   left: 28vw !important;
@@ -1896,8 +1922,8 @@
                 }
               }
             </style>
-          {%- endif -%}  
-        {%- endif -%}  
+          {%- endif -%}
+        {%- endif -%}
 
         {%- if section.settings.enable_cart or section.settings.enable_cart_mobile -%}
           {%- if settings.cart_type == 'drawer' -%}
