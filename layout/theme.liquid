@@ -229,12 +229,12 @@
     {%- endif -%}
     <script src="{{ 'ModalTools.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'PageDrawer.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'ProductRecommendations.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'ProductRecommendations.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'QuantityInput.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'SearchForm.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'ShowMoreButton.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'SearchForm.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {% comment %} <script src="{{ 'ShowMoreButton.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'DrawerOpeners.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'PreloadScreen.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'PreloadScreen.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {%- unless template contains 'collection' -%}
       <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
@@ -298,9 +298,9 @@
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
     <link rel="stylesheet" href="{{ 'animation.css' | asset_url }}" media="print" onload="this.media='all'">
   </body>
 </html>
