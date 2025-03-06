@@ -569,11 +569,21 @@
             <div class="footer__payment{% if section.settings.type_style == 'classy' %} spacing{% endif %}">
               <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
               <ul class="list list-payment list-unstyled d-flex f-wrap j-c-end j-c-center-xs" role="list">
-                {%- for type in shop.enabled_payment_types -%}
-                  <li class="list-payment__item d-flex a-i-center">
-                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  </li>
-                {%- endfor -%}
+                {%- if localization.iso_code == "ae" -%}
+                  {%- for type in shop.enabled_payment_types -%}
+                    {%- if type == "visa" or type == "master" or type == "unionpay" or type == "american_express" -%}
+                      <li class="list-payment__item d-flex a-i-center">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for type in shop.enabled_payment_types -%}
+                    <li class="list-payment__item d-flex a-i-center">
+                      {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                    </li>
+                  {%- endfor -%}
+                {%- endif -%}
               </ul>
             </div>
           {%- endif -%}
