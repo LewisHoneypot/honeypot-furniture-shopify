@@ -300,7 +300,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "CALL US",
-            "primary_button_link": "",
+            "primary_button_link": "tel:01476338771",
             "primary_button_type": "transparent",
             "secondary_button_label": "CHAT WITH US",
             "secondary_button_link": "",
