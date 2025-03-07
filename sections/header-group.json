@@ -220,7 +220,15 @@
         "enable_language_selector_mobile": true,
         "mobile_logo_position": "center",
         "padding_top": 16,
-        "padding_bottom": 16
+        "padding_bottom": 16,
+        "use_country_selector": false,
+        "country_selector_position": "center",
+        "country_selector_text_1": "GB",
+        "country_selector_url_1": "https://honeypotfurniture.co.uk/",
+        "country_selector_image_1": "shopify://shop_images/gb.webp",
+        "country_selector_text_2": "UAE",
+        "country_selector_url_2": "https://honeypotfurniture.ae/",
+        "country_selector_image_2": "shopify://shop_images/ae.webp"
       }
     }
   },

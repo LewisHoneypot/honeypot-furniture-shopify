@@ -8,9 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "cart.json",
+  "parent": "collection.json",
   "context": {
-    "market": "uae"
+    "market": "gb"
   },
   "sections": {}
 }
