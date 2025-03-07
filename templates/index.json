@@ -58,7 +58,7 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Shop The Collection",
-            "primary_button_link": "shopify://collections/outlet",
+            "primary_button_link": "shopify://collections/large-rugs",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
