@@ -131,8 +131,8 @@
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#f2f2f2",
-            "use_finance_popup": false,
+            "colors_background": "#ededed",
+            "use_finance_popup": true,
             "finance_button_text": "FINANCE AVAILABLE"
           }
         },
