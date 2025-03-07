@@ -569,7 +569,7 @@
             <div class="footer__payment{% if section.settings.type_style == 'classy' %} spacing{% endif %}">
               <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
               <ul class="list list-payment list-unstyled d-flex f-wrap j-c-end j-c-center-xs" role="list">
-                {%- if localization.iso_code == "ae" -%}
+                {%- if localization.country.iso_code == "ae" -%}
                   {%- for type in shop.enabled_payment_types -%}
                     {%- if type == "visa" or type == "master" or type == "unionpay" or type == "american_express" -%}
                       <li class="list-payment__item d-flex a-i-center">
