@@ -1876,6 +1876,18 @@ hr {
   transition: transform var(--duration-slow) var(--cubic-fade);
 }
 
+@media screen and (min-width: 1024px) {
+  #MainContent {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #MainContent {
+    margin-top: 0px;
+  }
+}
+
 .drawer--opening #MainContent,
 .drawer--open #MainContent {
   transform: translateX(-4rem);
