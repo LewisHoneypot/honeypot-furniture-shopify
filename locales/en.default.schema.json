@@ -80,7 +80,8 @@
         "font_name": {
           "label": "Anaktoria",
           "label_2": "Garamond",
-          "label_3": "Normal"
+          "label_3": "Normal",
+          "label_4": "Gotham"
         }
       }
     },
@@ -2160,6 +2161,12 @@
       },
       "presets": {
         "name": "Link list"
+      }
+    },
+    "trustpilot": {
+      "name": "Trustpilot",
+      "presets": {
+        "name": "Trustpilot"
       }
     },
     "lookbook": {

@@ -13,7 +13,7 @@
 
     <div
       class="col-12 d-md-none center
-      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% endif %}"
+      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% elsif section.settings.font == 'Gotham' %} Gotham {% endif %}"
       style="padding-top:15px; padding-bottom:15px;"
     >
       As Seen In:
@@ -21,7 +21,7 @@
 
     <div
       class="d-none d-md-block col-md-3 center 
-      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% endif %}"
+      {% if section.settings.font == 'Anaktoria' %} Anaktoria {% elsif section.settings.font == 'Garamond' %} Garamond {% elsif section.settings.font == 'Gotham' %} Gotham {% endif %}"
       style="padding-top:15px; padding-bottom:15px; background-color: {{ section.settings.background_color }}; color: #fff; font-size: 26px;"
     >
       As Seen In:
@@ -149,6 +149,10 @@
         {
           "value": "Garamond",
           "label": "t:settings_schema.global.settings.font_name.label_2"
+        },
+        {
+          "value": "Gotham",
+          "label": "t:settings_schema.global.settings.font_name.label_4"
         }
       ],
       "default": "normal",

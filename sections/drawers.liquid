@@ -6,7 +6,7 @@
   -%}
 
   <div
-    class="section__c-content spacing spacing-xs color-{{ section.settings.color_scheme }} gradient"
+    class="section__c-content spacing spacing-xs color-{{ section.settings.color_scheme }}"
     style="
       --padding-top: {{ section.settings.padding_top }}px;
       --padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -72,7 +72,7 @@
               </div>
             </div>
           {%- endif -%}
-          <div class="collapsible-content__item collapsible-content__itemRight w-100">
+          <div class="collapsible-content__item collapsible-content__itemRight w-100" style="padding:15px;">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
 
@@ -105,10 +105,12 @@
                         style="min-height:58px;"
                       >
                         <button
-                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none b-bottom left {% if section.settings.font == 'Anaktoria' %}
+                          class="t-button bg-transparent color-foreground b-none c-pointer focus-inset d-flex w-100 a-i-center j-c-between u-none left {% if section.settings.font == 'Anaktoria' %}
                             Anaktoria
                           {% elsif section.settings.font == 'Garamond' %}
-                            Garamond
+                            Garamond 
+                          {% elsif section.settings.font == 'Gotham' %} 
+                            Gotham 
                           {% endif %}
                           "
                           type="button"
@@ -116,9 +118,23 @@
                           aria-label="{{ block.settings.heading | escape }}"
                         >
                           {{ block.settings.heading | escape }}
+
+                        {%- if section.settings.use_icon_caret == true -%}
                           {{ icon_caret }}
+                        {%- endif -%}
+
                         </button>
                       </side-drawer-opener>
+
+                      {%- if forloop.last == false -%}
+                        <hr
+                          style="
+                            margin: 0px auto 0px auto;
+                            width: 98%;
+                          "
+                        >
+                      {%- endif -%}
+                      
                       {%- if block.settings.page != blank and block.settings.page.url != blank -%}
                         <a
                           href="{{ block.settings.page.url }}"
@@ -349,6 +365,10 @@
         {
           "value": "Garamond",
           "label": "t:settings_schema.global.settings.font_name.label_2"
+        },
+        {
+          "value": "Gotham",
+          "label": "t:settings_schema.global.settings.font_name.label_4"
         }
       ],
       "default": "normal",
@@ -439,6 +459,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "use_icon_caret",
+      "label": "Use icon caret",
+      "default": true
     }
   ],
   "blocks": [

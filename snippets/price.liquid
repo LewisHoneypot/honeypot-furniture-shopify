@@ -19,6 +19,7 @@
   assign unformatted_price = price
   assign amount_of_credit = unformatted_price | minus: snap_deposit | divided_by: 100
 
+  assign money_price = money_price | remove: '.00' 
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
@@ -29,7 +30,7 @@
 
 <div
   class="
-    price
+    price 
     {%- if settings.product_cards_style == 'card' %}{% unless main_price %} right{% endunless %}{% endif -%}
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} price--sold-out{% endif -%}
@@ -37,7 +38,7 @@
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
   "
 >
-  <div class="price__container d-flex v-a-top pt-2">
+  <div class="price__container d-flex v-a-top">
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span
@@ -53,22 +54,23 @@
       </span>
     </div>
     <div class="price__sale">
-      {%- unless product.price_varies == false and product.compare_at_price_varies %}
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-        <span>
-          <s class="price-item price-item--regular d-inline-block{% if compare_at_price != blank %} price-before--sale{% endif %}">
-            {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
-            {% else %}
-              {{ compare_at_price | money }}
-            {% endif %}
-          </s>
-        </span>
-      {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last d-inline-block">
         {{ money_price }}
       </span>
+      {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+        <span class="was">Was</span>
+        <span> 
+          <s class="price-item price-item--regular d-inline-block{% if compare_at_price != blank %} price-before--sale{% endif %}">
+            {% if settings.currency_code_enabled %}
+              {{ compare_at_price | money_with_currency }}
+            {% else %}
+              {{ compare_at_price | money | remove: '.00' }}
+            {% endif %}
+          </s>
+        </span>
+      {%- endunless -%}
       {% render 'product-discounts', product: product, check_discount_price: true %}
     </div>
     <small class="unit-price caption d-block{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">

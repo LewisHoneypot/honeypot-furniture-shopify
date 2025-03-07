@@ -1,17 +1,24 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="link-list layout--{{ section.settings.type_layout }} color-{{ section.settings.color_scheme }} gradient"
+  <div
+    class="link-list layout--{{ section.settings.type_layout }} color-{{ section.settings.color_scheme }} gradient"
     style="
-    {% if section.settings.use_custom_color %}
-      --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
-      --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
-      --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
-    {% endif %}
-    --padding-top: {{ section.settings.padding_top }}px;
-    --padding-bottom: {{ section.settings.padding_bottom }}px;" 
+      {% if section.settings.use_custom_color %}
+        --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
+        --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
+        --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
+      {% endif %}
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+    "
   >
     <div class="{{ section.settings.section_width }} m-auto{% if section.settings.section_width == 'full-width' %} p-banner{% endif %}">
       {%- if section.settings.type_layout == 'scroll' -%}
-        <div class="link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap"{% if section.settings.section_width == 'page-width' %} style="--g-gap: 3rem;"{% endif %}>
+        <div
+          class="link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap"
+          {% if section.settings.section_width == 'page-width' %}
+            style="--g-gap: 3rem;"
+          {% endif %}
+        >
           {%- for block in section.blocks -%}
             {%- liquid
               if section.settings.section_width == 'full-width'
@@ -23,13 +30,13 @@
                       assign aligment = 'right'
                     elsif forloop.index == 2
                       assign aligment = 'center'
-                    else forloop.index == 1
+                    else
                       assign aligment = 'left'
                     endif
                   when 2
                     if forloop.index == 2
                       assign aligment = 'right'
-                    else forloop.index == 1
+                    else
                       assign aligment = 'left'
                     endif
                   when 1
@@ -40,27 +47,38 @@
             {%- case block.type -%}
               {%- when 'text' -%}
                 {%- if block.settings.text -%}
-                  <div class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                  <div
+                    class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
                     style="
                       --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
                       --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
                     "
                   >
-                    <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                    <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">
+                      {{ block.settings.text }}
+                    </div>
                   </div>
                 {%- endif -%}
               {%- when 'link_list' -%}
                 {%- if block.settings.link_list != blank -%}
-                  <div class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                  <div
+                    class="link-list__item link--{{ block.type }} d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
                     style="
                       --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
                       --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
                     "
                   >
-                    <ul class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte" style="--c-gap: 2.5rem;" role="list">
+                    <ul
+                      class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte"
+                      style="--c-gap: 2.5rem;"
+                      role="list"
+                    >
                       {%- for link in block.settings.link_list.links -%}
                         <li>
-                          <a href="{{ link.url }}" class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}">
+                          <a
+                            href="{{ link.url }}"
+                            class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}"
+                          >
                             <span class="link-style">{{ link.title }}</span>
                           </a>
                         </li>
@@ -72,15 +90,16 @@
           {%- endfor -%}
         </div>
       {%- else -%}
-        <slider-component class="carousel d-block link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap infinite-scroll"
+        <slider-component
+          class="carousel d-block link-list__inner d-flex a-i-center w-s-nowrap overflow-x{% if section.blocks.size > 1 %} j-c-between{% else %} j-c-center{% endif %} g-gap infinite-scroll"
           style="
             {% if section.settings.section_width == 'page-width' %}--g-gap: 3rem;{% endif %}
             --c-xs: 1; --c-sm: 1; --c-md: {% if section.blocks.size >= 2 %}2{% else %}1{% endif %}; --c-lg: {% if section.blocks.size >= 2 %}2{% else %}1{% endif %}; --n-j-grid-h-md: 0px; --n-j-grid-h-xs: 0px; --padding-h-md: 0px; --padding-h-xs: 0px;
           "
           data-space-between="0"
-          data-type-pagination="progressbar" 
-          data-item-to-show-desktop="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}" 
-          data-item-to-show-tablet="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}" 
+          data-type-pagination="progressbar"
+          data-item-to-show-desktop="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}"
+          data-item-to-show-tablet="{% if section.blocks.size >= 2 %}2{% else %}1{% endif %}"
           data-item-to-show-mobile="1"
         >
           <div class="swiper d-block w-100 no-js-grid-scroll no-js-overflow-x">
@@ -96,13 +115,13 @@
                           assign aligment = 'right'
                         elsif forloop.index == 2
                           assign aligment = 'center'
-                        else forloop.index == 1
+                        else
                           assign aligment = 'left'
                         endif
                       when 2
                         if forloop.index == 2
                           assign aligment = 'right'
-                        else forloop.index == 1
+                        else
                           assign aligment = 'left'
                         endif
                       when 1
@@ -113,33 +132,44 @@
                 {%- case block.type -%}
                   {%- when 'text' -%}
                     {%- if block.settings.text -%}
-                      <div class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing{% if section.settings.type_layout != 'carousel' %} spacing-all{% endif %} cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                      <div
+                        class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing{% if section.settings.type_layout != 'carousel' %} spacing-all{% endif %} cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
                         data-swiper-parallax="40%"
-                        role="listitem" 
+                        role="listitem"
                         id="Slide-{{ section.id }}-{{ forloop.index }}"
                         style="
                           --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
                           --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
                         "
                       >
-                        <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">{{ block.settings.text }}</div>
+                        <div class="link-list__text rte subrte {{ section.settings.text_size | prepend: 'text-size-' }}">
+                          {{ block.settings.text }}
+                        </div>
                       </div>
                     {%- endif -%}
                   {%- when 'link_list' -%}
                     {%- if block.settings.link_list != blank -%}
-                      <div class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
+                      <div
+                        class="link-list__item link--{{ block.type }} swiper-slide no-js-grid__item no-js-grid__scroll d-block pos-relative w-100 {{ aligment }} spacing spacing-all cus--color-background{% if section.settings.section_width == 'full-width' %} cus-p-l cus-p-r{% endif %}"
                         data-swiper-parallax="40%"
-                        role="listitem" 
+                        role="listitem"
                         id="Slide-{{ section.id }}-{{ forloop.index }}"
                         style="
                           --color-background: {{ block.settings.background.red }},{{ block.settings.background.green }},{{ block.settings.background.blue }};
                           --color-secondary-background: {{ block.settings.secondary_background.red }},{{ block.settings.secondary_background.green }},{{ block.settings.secondary_background.blue }};
                         "
                       >
-                        <ul class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte" style="--c-gap: 2.5rem;" role="list">
+                        <ul
+                          class="link-list__list d-flex list-unstyled j-c-{{ aligment | replace: 'left', 'start' | replace: 'right', 'end' }} c-gap subrte"
+                          style="--c-gap: 2.5rem;"
+                          role="list"
+                        >
                           {%- for link in block.settings.link_list.links -%}
                             <li>
-                              <a href="{{ link.url }}" class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}">
+                              <a
+                                href="{{ link.url }}"
+                                class="d-block link h-link {{ settings.link_type | prepend: "link--style-" }} color-foreground focus-inset {{ section.settings.text_size | prepend: 'text-size-' }}"
+                              >
                                 <span class="link-style">{{ link.title }}</span>
                               </a>
                             </li>
@@ -151,7 +181,9 @@
               {%- endfor -%}
             </div>
             <div class="carousel__controls no-js-hidden">
-              <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative m-t-i"></div>
+              <div
+                class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative m-t-i"
+              ></div>
             </div>
           </div>
         </slider-component>
@@ -331,61 +363,66 @@
     "default": 10
   }],
   "blocks": [
-  {
-    "type": "text",
-    "name": "t:sections.link-list.blocks.text.name",
-    "settings": [
     {
-      "type": "richtext",
-      "id": "text",
-      "default": "<p>Welcome to our store</p>",
-      "label": "t:sections.all.text.label"
+      "type": "text",
+      "name": "t:sections.link-list.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Welcome to our store</p>",
+          "label": "t:sections.all.text.label"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "t:settings_schema.colors.settings.colors_background.label"
+        },
+        {
+          "type": "color",
+          "id": "secondary_background",
+          "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
+        }
+      ]
     },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:settings_schema.colors.settings.colors_background.label"
-    },
-    {
-      "type": "color",
-      "id": "secondary_background",
-      "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
-    }]
-  },
-  {
-    "type": "link_list",
-    "name": "t:sections.link-list.blocks.link_list.name",
-    "settings": [
     {
       "type": "link_list",
-      "id": "link_list",
-      "label": "t:sections.all.menu.label",
-      "info": "t:sections.all.menu.info"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:settings_schema.colors.settings.colors_background.label"
-    },
-    {
-      "type": "color",
-      "id": "secondary_background",
-      "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
-    }]
-  }],
+      "name": "t:sections.link-list.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "link_list",
+          "label": "t:sections.all.menu.label",
+          "info": "t:sections.all.menu.info"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "t:settings_schema.colors.settings.colors_background.label"
+        },
+        {
+          "type": "color",
+          "id": "secondary_background",
+          "label": "t:settings_schema.colors.settings.outline_button_colors_background.label"
+        }
+      ]
+    }
+  ],
   "presets": [
-  {
-    "name": "t:sections.link-list.presets.name",
-    "blocks": [
     {
-      "type": "text"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "link_list"
-    }]
-  }]
+      "name": "t:sections.link-list.presets.name",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "link_list"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

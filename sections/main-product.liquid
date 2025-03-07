@@ -37,10 +37,148 @@
     {% render 'breadcrumb', padding_top: '2rem', padding_bottom: '4rem', alignment: 'start' %}
     <div
       class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} product--style-{{ section.settings.type_style }} d-flex f-wrap{% if product.media.size == 0 %} product--no-media m-auto{% endif %} r-gap"
-      style="--r-gap: 3rem;"
+      {% comment %} style="--r-gap: 3rem;" {% endcomment %}
     >
+      {%- if section.settings.use_custom_title == true -%}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <div class="product__title break element-spacing-all float-left float-lg-none pt-0 pb-0">
+                {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
+                  <h1
+                    style="
+                      font-weight: normal;
+                      font-size: 24pt;
+                      margin-top: 15px;
+                      margin-bottom: 0px;
+                      font-weight: bold;
+                      line-height: 26pt;
+                    "
+                  >
+                    {{ product.metafields.custom.range_name }}
+                    <br>
+                    <span
+                      style="
+                        font-size: 14pt;
+                        font-weight: 500;
+                        top: -11px;
+                        position: relative;
+                        line-height: 17pt;
+                      "
+                    >
+                      {{ product.metafields.custom.colour_and_model }}
+                    </span>
+                  </h1>
+                {%- else %}
+                  <h1
+                    style="
+                      font-weight: normal;
+                      font-size: 18pt;
+                      margin-bottom: 0px;
+                      font-weight: bold;
+                    "
+                  >
+                    {{ product.title | escape }}
+                  </h1>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+
       {%- if product.media.size > 0 -%}
-        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:275px;">
+        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:275px; z-index:0;">
+          {%- if section.settings.use_dimensions_icon == true or section.settings.use_image_zoom_icon == true -%}
+            <div
+              class="container-fluid"
+              style="
+                position: absolute;
+                z-index: 2;
+                top: -32px;
+              "
+            >
+              <div class="row" style="flex-wrap:nowrap; float:inline-end;">
+                {%- if section.settings.use_dimensions_icon == true -%}
+                  <side-drawer-opener
+                    data-side-drawer="#Drawer-drawer_nfiTCK"
+                  >
+                    <button
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-label="Dimensions"
+                      style="border:none; cursor:pointer; padding:0px;"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="20"
+                        zoomAndPan="magnify"
+                        viewBox="0 0 375 374.999991"
+                        height="20"
+                        preserveAspectRatio="xMidYMid meet"
+                        version="1.0"
+                        style="
+                          width: 26px;
+                          height: 26px;
+                          margin-right: 10px;
+                          cursor: pointer;
+                        "
+                      >
+                        <defs>
+                          <clipPath id="255cf4331b">
+                            <path d="M 39.925781 18 L 335.425781 18 L 335.425781 357 L 39.925781 357 Z M 39.925781 18 " clip-rule="nonzero"></path>
+                          </clipPath>
+                          <clipPath id="60d850cd04">
+                            <path d="M 30.359375 7.617188 L 346.859375 7.617188 L 346.859375 367.53125 L 30.359375 367.53125 Z M 30.359375 7.617188 " clip-rule="nonzero"></path>
+                          </clipPath>
+                        </defs>
+                        <g clip-path="url(#255cf4331b)">
+                          <path fill="#000000" d="M 332.597656 100.65625 L 190.507812 19.007812 C 188.808594 17.878906 186.542969 17.878906 184.847656 19.007812 L 42.757812 100.9375 C 41.058594 102.070312 39.925781 103.765625 39.925781 105.742188 L 39.925781 269.324219 C 39.925781 271.300781 41.058594 273.277344 42.757812 274.125 L 184.847656 356.058594 C 185.695312 356.621094 186.828125 356.90625 187.675781 356.90625 C 188.527344 356.90625 189.65625 356.621094 190.507812 356.058594 L 332.597656 274.125 C 334.292969 272.996094 335.425781 271.300781 335.425781 269.324219 L 335.425781 105.460938 C 335.425781 103.480469 334.292969 101.785156 332.597656 100.65625 Z M 324.105469 265.933594 L 187.675781 344.472656 L 51.25 265.933594 L 51.25 108.851562 L 187.675781 30.308594 L 324.105469 108.851562 Z M 191.074219 69.296875 L 211.734375 84.269531 C 214.28125 85.964844 214.847656 89.636719 213.152344 92.179688 C 212.019531 93.59375 210.320312 94.441406 208.621094 94.441406 C 207.488281 94.441406 206.359375 94.160156 205.226562 93.3125 L 193.335938 84.835938 L 193.335938 184.285156 L 275.988281 239.941406 L 275.421875 225.53125 C 275.421875 222.425781 277.683594 219.882812 280.800781 219.597656 C 283.914062 219.597656 286.460938 221.859375 286.742188 224.96875 L 287.59375 250.394531 C 287.59375 250.957031 287.59375 251.523438 287.308594 251.804688 C 287.308594 251.804688 287.308594 252.089844 287.308594 252.089844 C 287.027344 252.652344 287.027344 252.9375 286.742188 253.5 C 286.460938 254.066406 286.175781 254.347656 285.609375 254.632812 C 285.609375 254.632812 285.328125 254.914062 285.328125 254.914062 C 285.042969 255.195312 284.761719 255.480469 284.195312 255.480469 C 284.195312 255.480469 283.914062 255.480469 283.914062 255.480469 L 259.855469 264.238281 C 259.289062 264.519531 258.4375 264.519531 257.871094 264.519531 C 255.609375 264.519531 253.34375 263.109375 252.496094 260.847656 C 251.363281 258.023438 252.777344 254.632812 255.890625 253.5 L 269.476562 248.417969 L 187.675781 194.171875 L 105.875 249.265625 L 119.460938 254.347656 C 122.292969 255.480469 123.992188 258.585938 122.859375 261.695312 C 122.011719 263.953125 119.746094 265.367188 117.480469 265.367188 C 116.914062 265.367188 116.066406 265.367188 115.5 265.085938 L 91.441406 256.042969 C 91.441406 256.042969 91.15625 256.042969 91.15625 256.042969 C 90.875 255.761719 90.308594 255.761719 90.027344 255.480469 C 90.027344 255.480469 89.742188 255.195312 89.742188 255.195312 C 89.460938 254.914062 88.894531 254.347656 88.609375 254.066406 C 88.328125 253.5 88.042969 253.21875 88.042969 252.652344 C 88.042969 252.652344 88.042969 252.371094 88.042969 252.371094 C 88.042969 251.804688 87.761719 251.242188 87.761719 250.960938 L 88.609375 225.53125 C 88.609375 222.425781 91.15625 219.882812 94.554688 220.164062 C 97.667969 220.164062 100.214844 222.988281 99.933594 226.097656 L 99.367188 240.503906 L 182.015625 184.285156 L 182.015625 85.117188 L 170.128906 93.59375 C 167.582031 95.289062 164.183594 94.722656 162.203125 92.179688 C 160.503906 89.636719 161.070312 86.25 163.617188 84.269531 L 184.28125 69.296875 C 184.5625 69.015625 185.128906 68.730469 185.695312 68.730469 C 185.695312 68.730469 185.980469 68.730469 185.980469 68.730469 C 186.542969 68.730469 187.109375 68.449219 187.394531 68.449219 C 187.675781 68.449219 188.527344 68.449219 188.808594 68.730469 C 188.808594 68.730469 189.09375 68.730469 189.09375 68.730469 C 189.941406 68.730469 190.507812 69.015625 191.074219 69.296875 Z M 140.125 189.085938 C 138.425781 186.542969 138.992188 182.871094 141.539062 181.175781 L 157.957031 170.15625 L 157.957031 150.378906 C 157.957031 147.273438 160.503906 144.730469 163.617188 144.730469 C 166.730469 144.730469 169.277344 147.273438 169.277344 150.378906 L 169.277344 173.265625 C 169.277344 173.546875 169.277344 174.113281 169.277344 174.394531 C 169.277344 174.679688 169.277344 174.679688 168.996094 174.960938 C 168.996094 175.242188 168.996094 175.242188 168.710938 175.523438 C 168.710938 175.808594 168.429688 175.808594 168.429688 176.089844 C 168.429688 176.371094 168.148438 176.371094 168.148438 176.65625 C 168.148438 176.9375 167.863281 176.9375 167.863281 177.21875 C 167.863281 177.21875 167.582031 177.503906 167.582031 177.503906 C 167.296875 177.785156 167.015625 178.066406 166.730469 178.351562 L 147.765625 191.0625 C 146.917969 191.628906 145.785156 191.910156 144.652344 191.910156 C 142.957031 191.628906 141.257812 190.78125 140.125 189.085938 Z M 211.734375 144.449219 C 214.847656 144.449219 217.398438 146.992188 217.398438 150.097656 L 217.398438 169.875 L 233.8125 180.894531 C 236.359375 182.589844 237.210938 186.261719 235.230469 188.804688 C 234.097656 190.5 232.398438 191.347656 230.417969 191.347656 C 229.285156 191.347656 228.152344 191.0625 227.304688 190.5 L 208.339844 177.785156 C 208.054688 177.503906 207.773438 177.21875 207.488281 176.9375 C 207.488281 176.9375 207.207031 176.65625 207.207031 176.65625 C 207.207031 176.371094 206.925781 176.371094 206.925781 176.089844 C 206.925781 175.808594 206.640625 175.808594 206.640625 175.527344 C 206.640625 175.242188 206.359375 175.242188 206.359375 174.960938 C 206.359375 174.679688 206.359375 174.679688 206.074219 174.394531 C 206.074219 174.113281 206.074219 174.113281 205.792969 173.832031 C 205.792969 173.546875 205.792969 172.984375 205.792969 172.699219 L 205.792969 149.816406 C 206.074219 146.992188 208.621094 144.449219 211.734375 144.449219 Z M 212.867188 230.335938 C 211.734375 232.3125 209.753906 233.441406 207.773438 233.441406 C 206.925781 233.441406 206.074219 233.160156 205.226562 232.878906 L 187.675781 223.554688 L 170.128906 232.878906 C 169.277344 233.441406 168.429688 233.441406 167.582031 233.441406 C 165.597656 233.441406 163.617188 232.3125 162.484375 230.335938 C 161.070312 227.507812 162.203125 224.121094 164.75 222.707031 L 184.847656 211.972656 C 185.128906 211.6875 185.414062 211.6875 185.980469 211.40625 C 186.261719 211.40625 186.261719 211.40625 186.542969 211.40625 C 186.828125 211.40625 186.828125 211.40625 187.109375 211.40625 C 187.394531 211.40625 187.394531 211.40625 187.675781 211.40625 C 187.960938 211.40625 187.960938 211.40625 188.242188 211.40625 C 188.527344 211.40625 188.808594 211.40625 188.808594 211.40625 C 188.808594 211.40625 189.09375 211.40625 189.09375 211.40625 C 189.375 211.40625 189.941406 211.6875 190.222656 211.972656 L 210.320312 222.707031 C 213.433594 224.121094 214.28125 227.792969 212.867188 230.335938 Z M 212.867188 230.335938 " fill-opacity="1" fill-rule="nonzero"></path>
+                        </g>
+                        <g clip-path="url(#60d850cd04)">
+                          <path fill="#000000" d="M 188.71875 20.714844 C 187.753906 20.714844 186.792969 20.964844 185.933594 21.460938 L 46.25 102.109375 C 44.535156 103.097656 43.46875 104.945312 43.46875 106.929688 L 43.46875 268.21875 C 43.46875 270.203125 44.535156 272.050781 46.25 273.042969 L 185.933594 353.6875 C 187.652344 354.679688 189.785156 354.679688 191.5 353.6875 L 331.183594 273.042969 C 332.902344 272.050781 333.96875 270.203125 333.96875 268.21875 L 333.96875 106.929688 C 333.96875 104.945312 332.902344 103.097656 331.183594 102.109375 L 191.5 21.460938 C 190.640625 20.964844 189.679688 20.714844 188.71875 20.714844 Z M 188.71875 367.53125 C 185.488281 367.53125 182.261719 366.703125 179.382812 365.039062 L 39.699219 284.390625 C 33.9375 281.066406 30.359375 274.871094 30.359375 268.21875 L 30.359375 106.929688 C 30.359375 100.277344 33.9375 94.082031 39.699219 90.757812 L 179.382812 10.113281 C 185.140625 6.785156 192.296875 6.785156 198.054688 10.113281 L 337.738281 90.757812 C 343.496094 94.082031 347.074219 100.277344 347.074219 106.929688 L 347.074219 268.21875 C 347.074219 274.871094 343.496094 281.066406 337.738281 284.394531 L 198.054688 365.039062 C 195.175781 366.703125 191.945312 367.53125 188.71875 367.53125 " fill-opacity="1" fill-rule="nonzero"></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </side-drawer-opener>
+                {%- endif -%}
+
+                {%- if section.settings.use_image_zoom_icon == true -%}
+                  <modal-opener
+                    class="product__modal-opener product__modal-opener--image d-block pos-relative w-100 no-js-hidden"
+                    data-modal="#ProductModal-{{ section.id }}"
+                  >
+                    <button
+                      class="product__media-toggle t-button b-none c-pointer d-flex p-0"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-media-id="48386929131807"
+                    >
+                      <span>
+                        <svg
+                          class="icon icon-zoom"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 448 512"
+                          style="
+                            width: 25px;
+                            height: 25px;
+                            cursor: pointer;
+                          "
+                        >
+                          <path d="M416 176V86.63L246.6 256L416 425.4V336c0-8.844 7.156-16 16-16s16 7.156 16 16v128c0 8.844-7.156 16-16 16h-128c-8.844 0-16-7.156-16-16s7.156-16 16-16h89.38L224 278.6L54.63 448H144C152.8 448 160 455.2 160 464S152.8 480 144 480h-128C7.156 480 0 472.8 0 464v-128C0 327.2 7.156 320 16 320S32 327.2 32 336v89.38L201.4 256L32 86.63V176C32 184.8 24.84 192 16 192S0 184.8 0 176v-128C0 39.16 7.156 32 16 32h128C152.8 32 160 39.16 160 48S152.8 64 144 64H54.63L224 233.4L393.4 64H304C295.2 64 288 56.84 288 48S295.2 32 304 32h128C440.8 32 448 39.16 448 48v128C448 184.8 440.8 192 432 192S416 184.8 416 176z"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </modal-opener>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+
           {% render 'product-media-gallery',
             product: product,
             gallery_layout: section.settings.gallery_layout,
@@ -680,8 +818,10 @@
                         class="Anaktoria"
                       {% elsif block.settings.font == 'Garamond' %}
                         class="Garamond"
+                      {% elsif block.settings.font == 'Gotham' %}
+                        class="Gotham"
                       {% endif %}
-                      style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-bottom: 10px;"
+                      style="font: {{ block.settings.font_style }} normal {{ block.settings.font_weight }} {{ block.settings.font_size }}pt/23px Arial; letter-spacing: 0px; margin-top: 0px; margin-bottom: 10px;"
                     >
                       {{ block.settings.available_colours }}:
                     </p>
@@ -816,6 +956,8 @@
                                 Anaktoria
                               {% elsif block.settings.font == 'Garamond' %}
                                 Garamond
+                              {% elsif block.settings.font == 'Gotham' %}
+                                Gotham
                               {% endif %}
                             "
                             type="button"
@@ -825,10 +967,11 @@
                               background-color:{{ block.settings.colors_background }};
                               border: solid 1px {{ block.settings.colors_border }};
                               min-height: 80px;
+                              justify-content: center;
                             "
                           >
                             {{ block.settings.heading | escape }}
-                            {{ icon_caret }}
+                            {% comment %} {{ icon_caret }} {% endcomment %}
                           </button>
                         </side-drawer-opener>
                         {%- if block.settings.page != blank and block.settings.page.url != blank -%}
@@ -845,7 +988,6 @@
                 </div>
 
                 {% comment %} USP Drawers {% endcomment %}
-
                 {% comment %} USP Drawer 1 {% endcomment %}
               {%- when 'usp_drawer_1' -%}
                 <div class="custom-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -1120,12 +1262,295 @@
                   >
                     {% assign colors_background = block.settings.colors_background %}
 
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0 pr-xl-1">
-                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 pt-2 pl-0 pr-0 pl-md-1 pl-lg-0 pl-xl-1">
-                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
-                    </div>
+                    {%- if block.settings.use_finance_popup == true -%}
+                      <div id="open-finance-options" class="col-12 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0">
+                        <div
+                          class="
+                            mt-2
+                            t-button
+                            bg-transparent
+                            color-foreground
+                            b-none
+                            c-pointer
+                            focus-inset
+                            d-flex
+                            w-100
+                            a-i-center
+                            j-c-between
+                            u-none
+                            b-bottom
+                            left
+                            Gotham
+                          "
+                          style="
+                            min-height:80px;
+                            background-color:#ededed;
+                            border: solid 1px #ededed;
+                            min-height: 80px;
+                            justify-content: center;
+                          "
+                        >
+                          {{ block.settings.finance_button_text }}
+                        </div>
+                      </div>
+
+                      <!-- Popup -->
+                      <div id="finance-options-popup" class="popup">
+                        <div class="popup-content">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="undefined" id="Layer_2" viewBox="0 0 400.69 179.37" style="width: 40px; height:25px;">
+                            <defs>
+                              <style>.cls-1{fill:#0d2b47}</style>
+                            </defs>
+                            <g id="Layer_1-2">
+                              <g>
+                                <g>
+                                  <path class="cls-1" d="M50.01,122.32c-5.58-2.55-10-6.02-13.25-10.41-3.25-4.39-4.99-9.29-5.2-14.72h19.19c.33,3.8,2.14,6.97,5.45,9.51,3.31,2.55,7.45,3.82,12.44,3.82s9.24-1,12.11-3.01c2.87-2,4.31-4.58,4.31-7.72,0-3.36-1.6-5.85-4.8-7.48-3.2-1.63-8.27-3.41-15.2-5.37-6.72-1.84-12.2-3.63-16.42-5.37-4.23-1.73-7.89-4.39-10.98-7.97-3.09-3.58-4.63-8.29-4.63-14.15,0-4.77,1.41-9.13,4.23-13.09,2.82-3.95,6.85-7.07,12.11-9.35,5.26-2.28,11.3-3.41,18.13-3.41,10.19,0,18.4,2.58,24.64,7.72,6.23,5.15,9.57,12.17,10,21.06h-18.54c-.33-4.01-1.95-7.21-4.88-9.59-2.93-2.38-6.89-3.58-11.87-3.58s-8.62,.92-11.22,2.76c-2.6,1.85-3.9,4.28-3.9,7.32,0,2.39,.87,4.39,2.6,6.02,1.73,1.63,3.85,2.9,6.34,3.82,2.49,.92,6.18,2.09,11.06,3.5,6.51,1.74,11.84,3.5,16.02,5.29,4.17,1.79,7.78,4.42,10.81,7.89,3.03,3.47,4.61,8.08,4.72,13.82,0,5.1-1.41,9.65-4.23,13.66-2.82,4.01-6.8,7.16-11.95,9.43-5.15,2.28-11.2,3.42-18.13,3.42s-13.36-1.28-18.94-3.82Z"></path>
+                                  <path class="cls-1" d="M177.34,38c5.58,2.93,9.95,7.27,13.09,13.01,3.14,5.75,4.72,12.68,4.72,20.82v52.85h-18.38v-50.09c0-8.02-2.01-14.17-6.02-18.46-4.01-4.28-9.49-6.42-16.42-6.42s-12.44,2.14-16.51,6.42c-4.07,4.28-6.1,10.44-6.1,18.46v50.09h-18.54V35.07h18.54v10.24c3.03-3.68,6.91-6.56,11.63-8.62,4.72-2.06,9.73-3.09,15.04-3.09,7.05,0,13.36,1.46,18.94,4.39Z"></path>
+                                  <path class="cls-1" d="M208.07,55.56c3.74-6.94,8.84-12.33,15.29-16.18,6.45-3.85,13.58-5.77,21.38-5.77,7.05,0,13.2,1.38,18.46,4.15,5.26,2.76,9.46,6.21,12.6,10.33v-13.01h18.7V124.68h-18.7v-13.34c-3.15,4.23-7.43,7.75-12.85,10.57-5.42,2.82-11.6,4.23-18.54,4.23-7.7,0-14.75-1.98-21.14-5.94-6.4-3.96-11.46-9.49-15.21-16.59-3.74-7.1-5.61-15.15-5.61-24.15s1.87-16.97,5.61-23.9Zm63.91,8.13c-2.55-4.55-5.88-8.02-10-10.41-4.12-2.38-8.57-3.58-13.33-3.58s-9.22,1.17-13.33,3.5c-4.12,2.33-7.46,5.75-10,10.25-2.55,4.5-3.82,9.84-3.82,16.02s1.27,11.6,3.82,16.26c2.55,4.66,5.91,8.21,10.08,10.65,4.17,2.44,8.59,3.66,13.25,3.66s9.21-1.19,13.33-3.58c4.12-2.38,7.45-5.88,10-10.49,2.55-4.61,3.82-10,3.82-16.18s-1.28-11.55-3.82-16.1Z"></path>
+                                  <path class="cls-1" d="M340.2,37.84c5.42-2.82,11.55-4.23,18.38-4.23,7.81,0,14.93,1.93,21.38,5.77,6.45,3.85,11.52,9.24,15.21,16.18,3.68,6.94,5.53,14.91,5.53,23.9s-1.85,17.05-5.53,24.15c-3.69,7.1-8.76,12.63-15.21,16.59-6.45,3.96-13.58,5.94-21.38,5.94-6.83,0-12.9-1.38-18.21-4.15-5.31-2.76-9.65-6.21-13.01-10.33v55.62h-18.54V35.07h18.54v13.17c3.14-4.12,7.42-7.59,12.85-10.41Zm37.81,25.61c-2.55-4.5-5.91-7.91-10.08-10.25-4.17-2.33-8.65-3.5-13.42-3.5s-9.08,1.19-13.25,3.58c-4.17,2.39-7.54,5.85-10.08,10.41-2.55,4.55-3.82,9.92-3.82,16.1s1.27,11.57,3.82,16.18c2.55,4.61,5.91,8.1,10.08,10.49,4.17,2.39,8.59,3.58,13.25,3.58s9.24-1.22,13.42-3.66c4.17-2.44,7.53-5.99,10.08-10.65,2.55-4.66,3.82-10.08,3.82-16.26s-1.28-11.52-3.82-16.02Z"></path>
+                                </g>
+                                <g>
+                                  <circle class="cls-1" cx="34.36" cy="27.5" r="5.95"></circle>
+                                  <path class="cls-1" d="M11.59,67.21c-1.97-.1-3.81-1.27-4.66-3.19-1.21-2.72,.02-5.9,2.74-7.11l7.07-3.14c2.72-1.2,5.9,.02,7.11,2.74,1.21,2.72-.02,5.9-2.74,7.11l-7.07,3.14c-.8,.35-1.63,.5-2.45,.46Z"></path>
+                                  <path class="cls-1" d="M51.76,26.66c-.24-.01-.48-.04-.71-.08-2.93-.54-4.86-3.35-4.33-6.27l2.75-14.99c.54-2.93,3.35-4.86,6.27-4.33,2.93,.54,4.86,3.35,4.33,6.27l-2.75,14.99c-.49,2.69-2.9,4.54-5.56,4.41Z"></path>
+                                  <path class="cls-1" d="M22.83,46.63c-.58-.03-1.17-.15-1.74-.38L3.38,39.15c-2.76-1.11-4.1-4.24-3-7,1.11-2.76,4.24-4.1,7-3l17.71,7.1c2.76,1.11,4.1,4.24,3,7-.88,2.19-3.03,3.49-5.27,3.38Z"></path>
+                                  <path class="cls-1" d="M24.16,19.76c-1.6-.08-3.15-.87-4.14-2.28l-6.33-8.99c-1.71-2.43-1.13-5.79,1.31-7.51,2.43-1.71,5.79-1.13,7.51,1.31l6.33,8.99c1.71,2.43,1.13,5.79-1.31,7.51-1.02,.72-2.2,1.03-3.36,.98Z"></path>
+                                </g>
+                                <g>
+                                  <path class="cls-1" d="M77.74,156.13h-5.04v22.8h-9.37v-22.8h-3.4v-7.78h3.4v-.88c0-3.76,1.08-6.62,3.23-8.58,2.16-1.95,5.32-2.93,9.48-2.93,.69,0,1.21,.02,1.53,.05v7.95c-1.79-.11-3.05,.15-3.78,.77-.73,.62-1.1,1.74-1.1,3.34v.27h5.04v7.78Z"></path>
+                                  <path class="cls-1" d="M86.76,143.72c-1.04-.97-1.56-2.16-1.56-3.59s.52-2.68,1.56-3.64c1.04-.97,2.38-1.45,4.03-1.45s2.93,.48,3.97,1.45c1.04,.97,1.56,2.18,1.56,3.64s-.52,2.62-1.56,3.59c-1.04,.97-2.37,1.45-3.97,1.45s-2.99-.48-4.03-1.45Zm8.69,4.63v30.58h-9.37v-30.58h9.37Z"></path>
+                                  <path class="cls-1" d="M133.4,151.5c2.14,2.32,3.21,5.51,3.21,9.57v17.87h-9.32v-16.61c0-2.05-.53-3.63-1.59-4.77-1.06-1.13-2.49-1.7-4.28-1.7s-3.22,.57-4.28,1.7c-1.06,1.13-1.59,2.72-1.59,4.77v16.61h-9.37v-30.58h9.37v4.06c.95-1.35,2.23-2.42,3.84-3.21,1.61-.78,3.42-1.18,5.43-1.18,3.58,0,6.44,1.16,8.58,3.48Z"></path>
+                                  <path class="cls-1" d="M146.99,155.31c1.19-2.38,2.8-4.2,4.85-5.48,2.05-1.28,4.33-1.92,6.85-1.92,2.16,0,4.05,.44,5.67,1.32,1.63,.88,2.88,2.03,3.75,3.45v-4.33h9.37v30.58h-9.37v-4.33c-.91,1.43-2.18,2.58-3.81,3.45-1.63,.88-3.52,1.32-5.67,1.32-2.48,0-4.75-.65-6.8-1.95-2.05-1.3-3.66-3.14-4.85-5.54-1.19-2.39-1.78-5.16-1.78-8.3s.59-5.9,1.78-8.28Zm19.18,2.79c-1.3-1.35-2.88-2.03-4.74-2.03s-3.44,.67-4.74,2c-1.3,1.33-1.95,3.17-1.95,5.51s.65,4.19,1.95,5.56c1.3,1.37,2.88,2.06,4.74,2.06s3.44-.68,4.74-2.03c1.3-1.35,1.95-3.2,1.95-5.54s-.65-4.18-1.95-5.54Z"></path>
+                                  <path class="cls-1" d="M215.45,151.5c2.14,2.32,3.21,5.51,3.21,9.57v17.87h-9.32v-16.61c0-2.05-.53-3.63-1.59-4.77-1.06-1.13-2.49-1.7-4.28-1.7s-3.22,.57-4.28,1.7c-1.06,1.13-1.59,2.72-1.59,4.77v16.61h-9.37v-30.58h9.37v4.06c.95-1.35,2.23-2.42,3.84-3.21,1.61-.78,3.42-1.18,5.43-1.18,3.58,0,6.44,1.16,8.58,3.48Z"></path>
+                                  <path class="cls-1" d="M229.21,155.31c1.3-2.38,3.11-4.2,5.43-5.48,2.32-1.28,4.98-1.92,7.97-1.92,3.84,0,7.04,1.01,9.62,3.01,2.58,2.01,4.27,4.84,5.07,8.5h-9.98c-.84-2.34-2.47-3.51-4.88-3.51-1.72,0-3.09,.67-4.11,2-1.02,1.33-1.53,3.24-1.53,5.73s.51,4.39,1.53,5.73c1.02,1.33,2.39,2,4.11,2,2.41,0,4.04-1.17,4.88-3.51h9.98c-.8,3.58-2.5,6.39-5.1,8.44-2.6,2.05-5.79,3.07-9.59,3.07-3,0-5.66-.64-7.97-1.92-2.32-1.28-4.13-3.1-5.43-5.48-1.3-2.37-1.95-5.15-1.95-8.33s.65-5.96,1.95-8.33Z"></path>
+                                  <path class="cls-1" d="M294.9,165.89h-21.21c.15,1.9,.76,3.35,1.84,4.36,1.08,1.01,2.4,1.51,3.97,1.51,2.34,0,3.96-.99,4.88-2.96h9.98c-.51,2.01-1.43,3.82-2.77,5.43-1.33,1.61-3.01,2.87-5.02,3.78-2.01,.91-4.26,1.37-6.74,1.37-3,0-5.66-.64-8-1.92-2.34-1.28-4.17-3.1-5.48-5.48-1.32-2.37-1.97-5.15-1.97-8.33s.65-5.96,1.95-8.33c1.3-2.38,3.12-4.2,5.45-5.48s5.02-1.92,8.06-1.92,5.59,.62,7.89,1.86c2.3,1.24,4.1,3.01,5.4,5.32,1.3,2.3,1.95,4.99,1.95,8.06,0,.88-.06,1.79-.16,2.74Zm-9.43-5.21c0-1.61-.55-2.89-1.64-3.84-1.1-.95-2.47-1.43-4.11-1.43s-2.9,.46-3.97,1.37c-1.08,.91-1.75,2.21-2,3.89h11.73Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                          <span style="position:inherit; margin-left:9px;">FINANCE OPTIONS</span>
+                          <span class="close">&times;</span>
+                          <div class="popup-body">
+                            {%- endif %}
+
+                            <div class="col-12 pt-2 pl-0 pr-0">
+                              {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
+                            </div>
+                            <div class="col-12 pt-2 pl-0 pr-0">
+                              {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
+                            </div>
+
+                            {%- if block.settings.use_finance_popup == true -%}
+                            <p class="mb-0">Choice available at checkout.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <style>
+                        /* Popup background */
+                        .popup {
+                          display: none;
+                          position: fixed;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+                          z-index: 1000;
+                        }
+
+                        /* Popup box */
+                        .popup-content {
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          background: white;
+                          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                          padding: 20px;
+                          width: 80%;
+                          max-width: 500px;
+                          border-radius: 8px;
+                        }
+
+                        /* Close button */
+                        .popup .close {
+                          position: absolute;
+                          top: -21px;
+                          right: 14px;
+                          font-size: 65px;
+                          cursor: pointer;
+                          font-weight: 100;
+                          color: #45544c;
+                        }
+                      </style>
+
+                      <script>
+                    document.getElementById("open-finance-options").addEventListener("click", function() {
+                      document.getElementById("finance-options-popup").style.display = "block";
+                    });
+                    
+                    // Close popup when clicking the X button
+                    document.querySelector(".popup .close").addEventListener("click", function() {
+                      document.getElementById("finance-options-popup").style.display = "none";
+                    });
+                    
+                    // Close popup when clicking outside of the popup content
+                    document.getElementById("finance-options-popup").addEventListener("click", function(event) {
+                      if (event.target === this) {
+                        this.style.display = "none";
+                      }
+                    });
+
+                    // APR
+                    document.addEventListener('DOMContentLoaded', function() {
+                      // Select the shadow host element
+                      const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
+                      
+                      // Access the shadow root
+                      const shadowRoot = shadowHost.shadowRoot;
+                      
+                      // Create a style element
+                      const style = document.createElement('style');
+                      
+                      // Add CSS rules to the style element
+                      style.textContent = `
+                        .injected-product-widget {
+                          background-color: {{ colors_background }} !important;
+                          border: 0.1rem solid #707070 !important;
+                          border-radius: 0 !important;
+                          min-height: 80px !important;
+                          min-width: 100%;
+                          padding: 0 !important;
+                          cursor: pointer;
+                          flex-direction: row-reverse;
+                        }
+                        .injected-product-widget .injected-product-widget__grid__text p {
+                          font-size: 16px !important;
+                          gap: 0 !important;
+                          justify-content: center !important;
+                        }
+                        #snap-product-widget-container {
+                          justify-content: center;
+                          align-items: center;
+                          margin: 0 auto;
+                          padding-left: 1px;
+                          padding-right: 1px;
+                        }
+                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                          display: none;
+                          min-width: 17%;
+                          max-width: 17%;
+                          @media screen and (min-width:460px) {
+                            min-width: 27%;
+                            max-width: 27%;
+                          }
+                          @media screen and (min-width:768px) {
+                            min-width: 15%;
+                            max-width: 15%;
+                          }
+                          @media screen and (min-width:992px) {
+                            min-width: 20%;
+                            max-width: 20%;
+                          }
+                          @media screen and (min-width:1455px) {
+                            min-width: 15%;
+                            max-width: 15%;
+                          }
+                          align-items: flex-start;
+                        }
+                        .rbp-bnpl-widget .injected-product-widget__grid__text {
+                          text-align: center;
+                        }
+                        .three-col-holder {
+                          {% comment %} min-width: 85%;
+                          max-width: 85%; {% endcomment %}
+                        }
+                        /* Hide the 'Learn more' element */
+                        #rbp-bnpl-learn-more {
+                          display: none !important;
+                        }
+                      `;
+                      
+                      // Append the style element to the shadow root
+                      shadowRoot.appendChild(style);
+                    });
+                    
+                    // Interest Free (BNPL)
+                    document.addEventListener('DOMContentLoaded', function() {  
+                      // Select the shadow host element
+                      const shadowHost = document.querySelector('#snap-uk-widgets-product-bnpl');
+                      
+                      // Access the shadow root
+                      const shadowRoot = shadowHost.shadowRoot;
+                      
+                      // Create a style element
+                      const style = document.createElement('style');
+                      
+                      // Add CSS rules to the style element
+                      style.textContent = `
+                        .injected-product-widget {
+                          background-color: {{ colors_background }} !important;
+                          border: 0.1rem solid #707070 !important;
+                          border-radius: 0 !important;
+                          min-height: 80px !important;
+                          min-width: 100%;
+                          padding: 0 !important;
+                          cursor: pointer;
+                          flex-direction: row-reverse;
+                        }
+                        .injected-product-widget .injected-product-widget__grid__text p {
+                          font-size: 16px! important;
+                          gap: 0 !important;
+                          justify-content: center !important;
+                        }
+                        #snap-product-widget-container {
+                          justify-content: center;
+                          align-items: center;
+                          margin: 0 auto;
+                          padding-left: 1px;
+                          padding-right: 1px;
+                        }
+                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                          display: none;
+                          min-width: 25%;
+                          max-width: 17%;
+                          @media screen and (min-width:460px) {
+                            min-width: 31%;
+                            max-width: 31%;
+                          }
+                          @media screen and (min-width:768px) {
+                            min-width: 25%;
+                            max-width: 25%;
+                          }
+                          @media screen and (min-width:992px) {
+                            min-width: 25%;
+                            max-width: 25%;
+                          }
+                          @media screen and (min-width:1500px) {
+                            min-width: 25%;
+                            max-width: 25%;
+                          }
+                          align-items: flex-start;
+                        }
+                        .rbp-bnpl-widget .injected-product-widget__grid__text {
+                          text-align: center;
+                        }
+                        .three-col-holder {
+                          {% comment %} min-width: 75%;
+                          max-width: 75%; {% endcomment %}
+                        }
+                        /* Hide the 'Learn more' element */
+                        #rbp-bnpl-learn-more {
+                          display: none !important;
+                        }
+                      `;
+                      
+                      // Append the style element to the shadow root
+                      shadowRoot.appendChild(style);
+                    });
+                      </script>
+                    {%- endif %}
                   </div>
                 </div>
 
@@ -2122,10 +2547,10 @@
                           if (totalStarsAverage >= 4){
                             const reviewsLink = createElement("div", [], {}, `
                               <span style='min-height:24px;'>
-                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
-                                <span class="ammount-of-reviews mt-1 mr-3"> ${amountOfReviews} Reviews</span>
                                 <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
-                                <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot">
+                                <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
+                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
+                                {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
                               </span>
                             `);
 
@@ -2915,6 +3340,10 @@
             {
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
+            },
+            {
+              "value": "Gotham",
+              "label": "t:settings_schema.global.settings.font_name.label_4"
             }
           ],
           "default": "normal",
@@ -3692,6 +4121,12 @@
       "settings": [
         {
           "type": "checkbox",
+          "id": "use_buy_button_price",
+          "default": false,
+          "label": "Use price on Add to Cart"
+        },
+        {
+          "type": "checkbox",
           "id": "show_quantity_selector",
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_quantity_selector.label"
@@ -3863,6 +4298,18 @@
           "id": "colors_background",
           "label": "t:sections.all.colors.colors_background",
           "default": "#fff"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_finance_popup",
+          "label": "Use Popup",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "finance_button_text",
+          "label": "Button Text",
+          "default": "FINANCE AVAILABLE"
         }
       ]
     },
@@ -4356,6 +4803,10 @@
             {
               "value": "Garamond",
               "label": "t:settings_schema.global.settings.font_name.label_2"
+            },
+            {
+              "value": "Gotham",
+              "label": "t:settings_schema.global.settings.font_name.label_4"
             }
           ],
           "default": "normal",
@@ -5886,6 +6337,24 @@
   "settings": [
     {
       "type": "checkbox",
+      "id": "use_custom_title",
+      "default": false,
+      "label": "Use custom title"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_dimensions_icon",
+      "default": false,
+      "label": "Use dimensions icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_image_zoom_icon",
+      "default": false,
+      "label": "Use image zoom icon"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_sticky_add_to_cart",
       "default": false,
       "label": "t:sections.main-product.settings.enable_sticky_add_to_cart.label"
@@ -6260,6 +6729,7 @@
     position: relative;
     left: 5px;
     color: rgba(var(--color-foreground), 1);
+    font-size: 9pt;
   }
 
   #reviews-button {

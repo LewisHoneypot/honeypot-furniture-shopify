@@ -57,6 +57,8 @@
                           class="Anaktoria"
                         {% elsif section.settings.font == 'Garamond' %}
                           class="Garamond"
+                        {% elsif section.settings.font == 'Gotham' %} 
+                          class="Gotham"
                         {% endif %} 
                         style="
                           background-color: #fff;
@@ -359,6 +361,10 @@
         {
           "value": "Garamond",
           "label": "t:settings_schema.global.settings.font_name.label_2"
+        },
+        {
+          "value": "Gotham",
+          "label": "t:settings_schema.global.settings.font_name.label_4"
         }
       ],
       "default": "normal",

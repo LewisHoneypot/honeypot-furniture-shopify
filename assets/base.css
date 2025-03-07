@@ -1985,6 +1985,7 @@ hr {
   );
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2591,6 +2592,7 @@ summary::-webkit-details-marker {
 .limit-text {
   display: -webkit-box;
   -webkit-line-clamp: var(--text-per-line);
+  line-clamp: var(--text-per-line);
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2727,9 +2729,45 @@ summary::-webkit-details-marker {
 }
 
 /* component-breadcrumb */
+.breadcrumb {
+  font-size: 11pt;
+  background-color: #fff !important;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media only screen and (min-width: 750px) {
+  .breadcrumb {
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .breadcrumb {
+    margin-left: -60px;
+    margin-right: -60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .breadcrumb {
+    margin-left: -70px;
+    margin-right: -70px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
 .breadcrumb .separate:before {
-  content: "/";
-  font-size: inherit;
+  content: "|";
+  /* font-size: inherit; */
   font-weight: inherit;
   line-height: inherit;
   letter-spacing: inherit;
@@ -3262,6 +3300,7 @@ summary::-webkit-details-marker {
 .card--horizontal .card__heading {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -4020,6 +4059,7 @@ summary::-webkit-details-marker {
     rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -4939,6 +4979,7 @@ input[type="checkbox"]:checked ~ svg {
 
 .quantity__input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* component-drawer */
@@ -9467,6 +9508,7 @@ body.scroll-down .header-wrapper.header-sticky__always.transparent {
   transition: height 0.35s linear;
   will-change: height;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   padding: 0 2rem;
 }
 
@@ -9476,6 +9518,7 @@ body.scroll-down .header-wrapper.header-sticky__always.transparent {
   transition: opacity var(--duration-default) linear;
   will-change: opacity;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .logo-special-inline,
@@ -9491,12 +9534,14 @@ body.scroll-down .header-wrapper.header-sticky__always.transparent {
 
 .disable--logo-small.animating ~ .content-for-layout {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: translateY(0rem);
   transition: transform 0.5s linear;
 }
 
 .enable--logo-small.animating ~ .content-for-layout {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: translateY(5rem);
   transition: transform 0.5s linear;
 }
@@ -9729,7 +9774,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .js .menu-drawer {
-  height: calc(100vh - 100%);
+  /* height: calc(100vh - 100%); */
   height: calc(
     var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%))
   );
@@ -9856,7 +9901,7 @@ summary.menu-drawer__menu-item {
   position: absolute;
   cursor: default;
   width: 100%;
-  height: calc(100vh - 100%);
+  /* height: calc(100vh - 100%); */
   height: calc(
     var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%))
   );
@@ -10657,6 +10702,7 @@ menu-drawer > details[open] > summary::before {
 .section__f-product-tab.style--special .card__heading > a {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -12793,7 +12839,7 @@ body.multitasking__show .newsletter-popup-opener {
   background: rgba(var(--color-background), 1);
   background: var(--gradient-background);
   border: 0;
-  border-image-source: rgba(var(--color-background), 1) !important;
+  /* border-image-source: rgba(var(--color-background), 1) !important; */
   border-image-source: var(--gradient-background) !important;
   border-image-slice: 1 !important;
   transition: transform 0.25s;
@@ -15621,7 +15667,7 @@ body.multitasking__show .newsletter-popup-opener {
     opacity: 0;
     pointer-events: none;
     border-image-slice: 1;
-    border-image-source: rgba(var(--color-background), 1);
+    /* border-image-source: rgba(var(--color-background), 1); */
     border-image-source: var(--gradient-background);
   }
 
@@ -26249,7 +26295,11 @@ body.multitasking__show .newsletter-popup-opener {
   font-weight: 400;
   font-style: italic;
 }
-
+.Gotham {
+  font-family: "Gotham", serif !important;
+  font-weight: 400;
+  /* font-style: italic; */
+}
 
 
 /* custom bootstrap test */
@@ -26394,8 +26444,15 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
+@media screen and (min-width: 750px){
+  .wide-search-container {
+    min-width: 78vw;
+  }
+}
+
 @media screen and (min-width: 1024px){
   .wide-search-container {
+    top: -60px;
     position: relative;
     margin-bottom: -50px;
     min-width: 70vw;
@@ -26612,13 +26669,96 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-@media screen and (max-width: 1300px){
-  .wide-menu-header-wrapper{
-    padding-bottom: 72px;
+.buy-button-price {
+  display: inline;
+}
+.buy-button-price .d-block {
+  display: none;
+}
+.buy-button-price .float-lg-none {
+  float: right !important;
+}
+.buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+  color: unset;
+  font-size: 11pt;
+}
+@media screen and (min-width: 440px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 13pt !important;
   }
-  .wide-menu-header-wrapper-fix{
-    padding-bottom: 77px;
+}
+@media screen and (min-width: 576px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 16pt !important;
   }
+}
+.custom-buy-button-price {
+  font-size: 11pt !important;
+}
+@media screen and (min-width: 440px){
+  .custom-buy-button-price {
+    font-size: 13pt !important;
+  }
+}
+@media screen and (min-width: 576px){
+  .custom-buy-button-price {
+    font-size: 16pt !important;
+  }
+}
+
+.custom-buy-button-price .was {
+  font-weight: 400;
+  font-size: 11pt;
+}
+
+.buy-button-price {
+  display: inline;
+}
+.buy-button-price .d-block {
+  display: none;
+}
+.buy-button-price .float-lg-none {
+  float: right !important;
+}
+.buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+  color: unset;
+  font-size: 11pt;
+}
+@media screen and (min-width: 440px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 13pt !important;
+  }
+}
+@media screen and (min-width: 576px){
+  .buy-button-price .price, .buy-button-price .price-item--regular, .buy-button-price .price-item--sale, .buy-button-price .price__caption, .buy-button-price .product-form__submit {
+    font-size: 16pt !important;
+  }
+}
+.custom-buy-button-price {
+  font-size: 11pt !important;
+}
+@media screen and (min-width: 440px){
+  .custom-buy-button-price {
+    font-size: 13pt !important;
+  }
+}
+@media screen and (min-width: 576px){
+  .custom-buy-button-price {
+    font-size: 16pt !important;
+  }
+}
+
+.custom-buy-button-price .was {
+  font-weight: 400;
+  font-size: 11pt;
+}
+
+
+#shopify-section-template--24400886759799__drawers_Ut99DD .color-background-1 {
+  background-color: #EDEDED;
+}
+.collapsible-content .p-w__content {
+  background-color: #fff;
 }
 
 /* iphone fixes */
@@ -26632,7 +26772,6 @@ body.multitasking__show .newsletter-popup-opener {
     top: 25px;
   }
 }
-
 
 /* UAE CSS */
 
