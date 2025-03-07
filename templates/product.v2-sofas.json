@@ -58,8 +58,8 @@
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
-            "heading": "View The Range",
-            "font": "Garamond",
+            "heading": "VIEW THE RANGE",
+            "font": "Gotham",
             "content_type": "view_the_range",
             "content": "",
             "page": "",
