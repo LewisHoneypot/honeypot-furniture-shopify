@@ -63,7 +63,7 @@
             "content_type": "view_the_range",
             "content": "",
             "page": "",
-            "colors_background": "#f2f2f2",
+            "colors_background": "#ededed",
             "colors_border": "#707070"
           }
         },
@@ -125,7 +125,7 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
-            "background_colour": "#ede9e2"
+            "background_colour": "#ededed"
           }
         },
         "snap_buttons_HagTqx": {
