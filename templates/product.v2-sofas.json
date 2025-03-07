@@ -90,14 +90,14 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "use_buy_button_price": false,
+            "use_buy_button_price": true,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": false,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
-            "add_to_cart_colors_background": "#3c3c3b",
+            "add_to_cart_colors_background": "#527e36",
             "add_to_cart_gradient_background": "",
             "add_to_cart_colors_text_hover": "#ffffff",
             "add_to_cart_colors_background_hover": "rgba(0,0,0,0)",
