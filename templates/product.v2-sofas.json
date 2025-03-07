@@ -263,16 +263,16 @@
         "drawer_aNBQEa"
       ],
       "settings": {
-        "font": "Garamond",
+        "font": "Gotham",
         "heading": "",
         "section_width": "customized-width",
         "customize_width": 1400,
-        "color_scheme": "",
+        "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "padding_top": 75,
-        "padding_bottom": 30,
+        "padding_bottom": 75,
         "padding_top_mobile": 15,
-        "padding_bottom_mobile": 0,
-        "use_icon_caret": true
+        "padding_bottom_mobile": 40,
+        "use_icon_caret": false
       }
     },
     "as_seen_in_Pnd8YJ": {
