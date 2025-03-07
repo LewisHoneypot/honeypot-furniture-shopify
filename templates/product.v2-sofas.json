@@ -14,6 +14,7 @@
       "blocks": {
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "layout": "v2",
             "font_weight": "bold",
@@ -34,16 +35,17 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font": "Garamond",
-            "font_size": 13,
+            "font": "Gotham",
+            "font_size": 10,
             "font_weight": "normal",
-            "font_style": "italic",
+            "font_style": "normal",
             "padding_top": 0,
             "padding_bottom": 10
           }
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes": false,
             "show_shipping": false,
@@ -67,6 +69,7 @@
         },
         "usp_drawer_1_h8wxkV": {
           "type": "usp_drawer_1",
+          "disabled": true,
           "settings": {
             "heading": "Buy With Confidence",
             "usp_icon_1": "trust",
@@ -76,6 +79,7 @@
         },
         "usp_drawer_2_Yk9cgj": {
           "type": "usp_drawer_2",
+          "disabled": true,
           "settings": {
             "heading": "Product Dimensions",
             "usp_icon_2": "dimensions",
@@ -86,6 +90,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": false,
@@ -126,7 +131,9 @@
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#f2f2f2"
+            "colors_background": "#f2f2f2",
+            "use_finance_popup": false,
+            "finance_button_text": "FINANCE AVAILABLE"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -162,11 +169,14 @@
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": true,
+        "use_dimensions_icon": true,
+        "use_image_zoom_icon": true,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
-        "media_size": "small",
+        "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
         "enable_video_looping": false,
@@ -174,7 +184,7 @@
         "carousel_direction": "horizontal",
         "carousel_gap_desktop": 16,
         "carousel_gap_tablet": 8,
-        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
@@ -261,7 +271,8 @@
         "padding_top": 75,
         "padding_bottom": 30,
         "padding_top_mobile": 15,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "use_icon_caret": true
       }
     },
     "as_seen_in_Pnd8YJ": {
