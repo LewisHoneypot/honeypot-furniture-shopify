@@ -1877,14 +1877,14 @@ hr {
 }
 
 @media screen and (min-width: 1024px) {
-  #MainContent {
-    margin-top: 50px;
+  .header {
+    padding-bottom: 82px !important;
   }
 }
 
 @media screen and (min-width: 1300px) {
-  #MainContent {
-    margin-top: 0px;
+  .header {
+    padding-bottom: 16px !important;
   }
 }
 
