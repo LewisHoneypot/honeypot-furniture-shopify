@@ -355,7 +355,7 @@
           "type": "hr-separator",
           "settings": {
             "hr-separator-title": "Video",
-            "font": "Garamond",
+            "font": "Gotham",
             "padding_top": 36,
             "padding_bottom": 36,
             "padding_left_right": 50,
