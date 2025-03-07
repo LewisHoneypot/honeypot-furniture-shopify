@@ -275,6 +275,58 @@
         "use_icon_caret": false
       }
     },
+    "rich_text_WaVhX9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yjApHr": {
+          "type": "heading",
+          "settings": {
+            "heading": "QUESTIONS ABOUT YOUR SOFA?",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_mDUJrg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team is just a call or WhatsApp message away!</p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_HKewh9": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "CALL US",
+            "primary_button_link": "",
+            "primary_button_type": "transparent",
+            "secondary_button_label": "CHAT WITH US",
+            "secondary_button_link": "",
+            "secondary_button_type": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_yjApHr",
+        "text_mDUJrg",
+        "button_HKewh9"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "center",
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "as_seen_in_Pnd8YJ": {
       "type": "as-seen-in",
       "settings": {
@@ -778,6 +830,7 @@
   "order": [
     "main",
     "drawers_Ut99DD",
+    "rich_text_WaVhX9",
     "as_seen_in_Pnd8YJ",
     "video_FxQj6U",
     "1736163654e8d791fe",
