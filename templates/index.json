@@ -12,6 +12,34 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/New_Dark_Banners_14.png",
+            "mobile_image": "shopify://shop_images/New_Dark_Banners_600_x_1200_px_2.png",
+            "content_max_width": 600,
+            "heading_font": "font-heading",
+            "heading": "Dream Big, Save Bigger!",
+            "heading_size": "medium",
+            "heading_margin_bottom": 23,
+            "subheading": "Get 10% off all bedroom furniture until 17th March.",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Explore Bedroom Furniture",
+            "primary_button_link": "shopify://collections/bedroom",
+            "secondary_button_label": "Find Your Perfect Bed",
+            "secondary_button_link": "shopify://collections/beds",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "vertical",
+            "padding_top_bottom": 100,
+            "padding_left_right": 88
+          }
+        },
         "slide_BzgHcM": {
           "type": "slide",
           "settings": {
@@ -22,7 +50,7 @@
             "heading": "New Collection: Rugs",
             "heading_size": "medium",
             "heading_margin_bottom": 20,
-            "subheading": "This weekend only, enjoy 10% off + FREE delivery on rugs!",
+            "subheading": "Enjoy FREE delivery on rugs!",
             "subheading_size": "medium",
             "subheading_margin_bottom": 30,
             "box_align": "bottom-left",
@@ -124,34 +152,6 @@
             "padding_left_right": 0
           }
         },
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/RoasBedLifestyle.jpg",
-            "content_max_width": 600,
-            "heading_font": "font-heading",
-            "heading": "Our Blissful Beds Collection",
-            "heading_size": "large",
-            "heading_margin_bottom": 23,
-            "subheading": "Save up to 70% off on selected items.",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Shop Sofas",
-            "primary_button_link": "shopify://collections/sectional-sofas",
-            "secondary_button_label": "Shop Dining Sets",
-            "secondary_button_link": "shopify://collections/chairs-1",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "vertical",
-            "padding_top_bottom": 100,
-            "padding_left_right": 88
-          }
-        },
         "lookbook_m7Girj": {
           "type": "lookbook",
           "disabled": true,
@@ -199,11 +199,11 @@
         }
       },
       "block_order": [
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "slide_BzgHcM",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
         "slide_MVHYjL",
         "slide_dN3rVP",
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "lookbook_m7Girj"
       ],
       "settings": {
