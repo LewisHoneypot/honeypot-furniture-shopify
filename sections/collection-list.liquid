@@ -114,16 +114,7 @@
   >
     <div class="page-width m-auto o-h{% if section.settings.type_style == 'classic' %} collection-list--classic{% endif %}">
       {%- if section.settings.show_line_separator -%}
-        <div class="b-bottom spacing spacing-xs">
-
-          {%- if localization.country.iso_code == "AE" -%}
-            test
-          {%- endif -%}
-
-          <script>
-            console.log('Locale: ', "{{ localization.country.iso_code }}");
-          </script>
-          
+        <div class="b-bottom spacing spacing-xs">          
       {%- endif -%}
         {%- if section.settings.heading != blank -%}
           <div class="p-w__header m-spacing{% if section.settings.type_style == 'classic' %} m-spacing-xs p-r p-r-xxl{% endif %}"
