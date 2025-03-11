@@ -69,7 +69,7 @@
     "show_swatch_mobile": true,
     "show_product_discounts": false,
     "discounts_colors_text": "#B30E13",
-    "media_border_thickness": 1,
+    "media_border_thickness": 0,
     "media_border_opacity": 5,
     "media_radius": 0,
     "media_shadow_horizontal_offset": 0,
