@@ -52,6 +52,14 @@
         "padding_bottom_mobile": 16
       }
     },
+    "trustpilot_pfqpVk": {
+      "type": "trustpilot",
+      "settings": {
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
     "b38aad37-e5d6-4a4a-9109-e406344cc53a": {
       "type": "link-list",
       "blocks": {
@@ -76,6 +84,7 @@
         "text_TCMy7h",
         "sections--16801854095599__b38aad37-e5d6-4a4a-9109-e406344cc53a-167808627045fd9a59-2"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "type_layout": "scroll",
@@ -234,6 +243,7 @@
   },
   "order": [
     "announcement-bar",
+    "trustpilot_pfqpVk",
     "b38aad37-e5d6-4a4a-9109-e406344cc53a",
     "header"
   ]
