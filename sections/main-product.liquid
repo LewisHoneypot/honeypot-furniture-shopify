@@ -1328,7 +1328,7 @@
                               </g>
                             </g>
                           </svg>
-                          <span class="center" style="position:inherit; margin-left:9px;">FINANCE OPTIONS</span>
+                          <span class="finance-popup-header center">FINANCE OPTIONS</span>
                           <span class="close">&times;</span>
                           <div class="popup-body">
                             {%- endif %}
@@ -6771,6 +6771,17 @@
       max-width: 150px;
     }
   } */
+
+  .finance-popup-header {
+    position: inherit;
+    width: 65%;
+  }
+  @media screen and (min-width:540px) {
+    .finance-popup-header {
+      position: inherit;
+      width: 76%;
+    }
+  }
 {% endstylesheet %}
 
 <script>
