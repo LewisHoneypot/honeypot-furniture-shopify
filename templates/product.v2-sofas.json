@@ -176,7 +176,7 @@
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
-        "media_size": "medium",
+        "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
         "enable_video_looping": false,
