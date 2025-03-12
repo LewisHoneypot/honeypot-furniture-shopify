@@ -208,13 +208,14 @@
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "disabled": true,
           "settings": {
-            "placement": "cartpage-nosto-1-copy"
+            "placement": "cartpage-nosto-1"
           }
         }
       },
       "block_order": [
         "nosto_nosto_placements_block_9HqhKk"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
