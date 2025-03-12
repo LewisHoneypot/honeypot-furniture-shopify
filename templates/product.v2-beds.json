@@ -244,6 +244,7 @@
       "block_order": [
         "nosto_nosto_placements_block_Ayqycf"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
