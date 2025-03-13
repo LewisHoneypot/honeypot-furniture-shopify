@@ -200,10 +200,10 @@
       const deliveryCostResult = document.getElementById('delivery-cost-result');
 
       if (result.error) {
-        deliveryDayResult.textContent = ``;
+        // deliveryDayResult.textContent = ``;
         deliveryCostResult.textContent = result.error;
       } else {
-        deliveryDayResult.textContent = `We deliver to your area (${postcode}) on: ${result.delivery_day}`;
+        // deliveryDayResult.textContent = `We deliver to your area (${postcode}) on: ${result.delivery_day}`;
         deliveryCostResult.textContent = `Delivery Charge: £${result.delivery_charges}`;
       }
     };
