@@ -575,12 +575,12 @@
                   {% comment %} Check if sofa product is in cart {% endcomment %}
                   {% if item.product.type == 'Sofas' %}
                     {% assign containsSofa = true %}
-                    {% comment %} <script>console.log('cart Contains sofa TRUE');</script> {% endcomment %}
+                    <script>console.log('cart Contains sofa TRUE');</script>
                   {% endif %}
                   {% comment %} Check if Emmiera product is in cart {% endcomment %}
                   {% if item.product.type == 'Emmiera' %}
                     {% assign protectionExists = true %}
-                    {% comment %} <script>console.log('cart Contains Emmiera TRUE');</script> {% endcomment %}
+                    <script>console.log('cart Contains Emmiera TRUE');</script>
                   {% endif %}
                 {% endfor %}
 
