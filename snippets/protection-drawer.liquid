@@ -1,5 +1,7 @@
 {%- if template contains "sofas" -%}
-
+  <script>
+    console.log('sofas Template');
+  </script>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'protection_drawer' -%}
@@ -535,4 +537,8 @@
     }
   {% endstyle %}
 
+{%- elsif template contains "v2-sofas" -%}
+  <script>
+    console.log('v2-sofas Template');
+  </script>
 {%- endif -%}
