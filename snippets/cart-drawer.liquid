@@ -577,10 +577,10 @@
                     {% assign containsSofa = true %}
                     <script>console.log('cart Contains sofa TRUE');</script>
                   {% endif %}
-                  {% comment %} Check if Emmiera product is in cart {% endcomment %}
-                  {% if item.product.type == 'Emmiera' %}
+                  {% comment %} Check if Protection product is in cart {% endcomment %}
+                  {% if item.product.type == 'Protection' %}
                     {% assign protectionExists = true %}
-                    <script>console.log('cart Contains Emmiera TRUE');</script>
+                    <script>console.log('cart Contains Protection TRUE');</script>
                   {% endif %}
                 {% endfor %}
 
