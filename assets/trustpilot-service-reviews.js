@@ -189,7 +189,7 @@ function fetchReviews(endpoint) {
           '<span class="p-0"><strong>' + reviewData.reviews[i].consumer.displayName + '</strong>, ' + formattedDate1 + '</span>' +
           '<span class="d-block mb-2">' +
           '<img src="//honeypot-furniture.myshopify.com/cdn/shop/files/trustpilot_' + reviewData.reviews[i].stars +
-          '.png" class="stars-image" alt="Trustpilot Rating" height="21" width="100"><span> ' + reviewData.reviews[i].stars +
+          '.png" class="stars-image" alt="Trustpilot Rating" height="21" width="100" style="min-height:17px"><span> ' + reviewData.reviews[i].stars +
           ' out of 5</span>' +
           '<br>' +
           '</span>' +
