@@ -563,7 +563,7 @@
 
           {% comment %} <script>console.log('cart', {{ cart | json }});</script> {% endcomment %}
 
-          {% if template == "product.sofas" or template == "product.v2-sofas" %}
+          {% if template contains "sofas" %}
           
             {% if cart.item_count > 0 %}
               {% if settings.use_protection_drawer == true %}
