@@ -233,14 +233,6 @@
         "disabled": false,
         "settings": {}
       },
-      "497739090016974244": {
-        "type": "shopify://apps/insider/blocks/app-embed/c7b01eeb-6b78-48a3-a1bb-28dbc584bd41",
-        "disabled": true,
-        "settings": {
-          "insider_object": true,
-          "insider_tag": true
-        }
-      },
       "17428600031447253342": {
         "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
         "disabled": true,

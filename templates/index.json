@@ -14,6 +14,7 @@
       "blocks": {
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/New_Dark_Banners_14.png",
             "mobile_image": "shopify://shop_images/New_Dark_Banners_600_x_1200_px_2.png",
@@ -40,25 +41,25 @@
             "padding_left_right": 88
           }
         },
-        "slide_BzgHcM": {
+        "slide_MVHYjL": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/New_Dark_Banners_12.png",
-            "mobile_image": "shopify://shop_images/New_Dark_Banners_12.png",
-            "content_max_width": 440,
-            "heading_font": "font-body",
-            "heading": "New Collection: Rugs",
-            "heading_size": "medium",
-            "heading_margin_bottom": 20,
-            "subheading": "Enjoy FREE delivery on rugs!",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
+            "image": "shopify://shop_images/Banner-Miel-Sofa.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_Banner_Template_16_copy_618a6e70-ba6a-4cbc-96ab-6504150bedab.png",
+            "content_max_width": 910,
+            "heading_font": "font-heading",
+            "heading": "0% Finance Available",
+            "heading_size": "small",
+            "heading_margin_bottom": 30,
+            "subheading": "",
+            "subheading_size": "large",
+            "subheading_margin_bottom": 32,
             "box_align": "bottom-left",
             "text_alignment": "left",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "primary_button_label": "Shop The Collection",
-            "primary_button_link": "shopify://collections/medium-rugs",
+            "primary_button_label": "Find out more",
+            "primary_button_link": "shopify://pages/finance",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
@@ -96,25 +97,25 @@
             "padding_left_right": 0
           }
         },
-        "slide_MVHYjL": {
+        "slide_BzgHcM": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Banner-Miel-Sofa.jpg",
-            "mobile_image": "shopify://shop_images/Mobile_Banner_Template_16_copy_618a6e70-ba6a-4cbc-96ab-6504150bedab.png",
-            "content_max_width": 910,
-            "heading_font": "font-heading",
-            "heading": "0% Finance Available",
-            "heading_size": "small",
-            "heading_margin_bottom": 30,
-            "subheading": "",
-            "subheading_size": "large",
-            "subheading_margin_bottom": 32,
+            "image": "shopify://shop_images/New_Dark_Banners_12.png",
+            "mobile_image": "shopify://shop_images/New_Dark_Banners_12.png",
+            "content_max_width": 440,
+            "heading_font": "font-body",
+            "heading": "New Collection: Rugs",
+            "heading_size": "medium",
+            "heading_margin_bottom": 20,
+            "subheading": "Enjoy FREE delivery on rugs!",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
             "box_align": "bottom-left",
             "text_alignment": "left",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "primary_button_label": "Find out more",
-            "primary_button_link": "shopify://pages/finance",
+            "primary_button_label": "Shop The Collection",
+            "primary_button_link": "shopify://collections/medium-rugs",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
@@ -200,9 +201,9 @@
       },
       "block_order": [
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
-        "slide_BzgHcM",
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
         "slide_MVHYjL",
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
+        "slide_BzgHcM",
         "slide_dN3rVP",
         "lookbook_m7Girj"
       ],
