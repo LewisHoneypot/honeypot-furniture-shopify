@@ -115,7 +115,7 @@
                 {% assign items_in_cart = cart.items | size %}
 
                 <script>
-                  {% comment %} console.log('items_in_cart', {{items_in_cart | json}}); {% endcomment %}
+                  console.log('items_in_cart', {{items_in_cart | json}});
                 </script>
 
                 {% if items_in_cart > 0 %}
@@ -144,7 +144,7 @@
                       {% endif %}
 
                     {% else %}
-                      {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
+                      <script>console.log("Doesn't contain a sofa");</script>
                     {% endif %}
                   {% endfor %}
 
@@ -153,7 +153,7 @@
                   {% if block.settings.pricing_type == 'price' %}
 
                     <script>
-                      {% comment %} console.log('product', {{ product | json }}); {% endcomment %}
+                      console.log('product', {{ product | json }});
                     </script>
 
                     {% if items_in_cart > 0 %}
@@ -488,7 +488,7 @@
       const checkboxWrapper = document.getElementById('emmiera-checks');
       const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
 
-      {% comment %} console.log('protectionId', protectionId); {% endcomment %}
+      console.log('protectionId', protectionId);
 
       {% comment %} console.log('button', button); {% endcomment %}
       {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
