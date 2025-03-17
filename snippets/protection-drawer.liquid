@@ -1,7 +1,4 @@
 {%- if template contains "sofas" -%}
-  <script>
-    console.log('sofas Template');
-  </script>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'protection_drawer' -%}
@@ -114,9 +111,9 @@
 
                 {% assign items_in_cart = cart.items | size %}
 
-                <script>
+                {% comment %} <script>
                   console.log('items_in_cart', {{items_in_cart | json}});
-                </script>
+                </script> {% endcomment %}
 
                 {% if items_in_cart > 0 %}
 
@@ -144,7 +141,7 @@
                       {% endif %}
 
                     {% else %}
-                      <script>console.log("Doesn't contain a sofa");</script>
+                      {% comment %} <script>console.log("Doesn't contain a sofa");</script> {% endcomment %}
                     {% endif %}
                   {% endfor %}
 
@@ -152,9 +149,9 @@
 
                   {% if block.settings.pricing_type == 'price' %}
 
-                    <script>
+                    {% comment %} <script>
                       console.log('product', {{ product | json }});
-                    </script>
+                    </script> {% endcomment %}
 
                     {% if items_in_cart > 0 %}
                       {% assign sofas_price = page_new_price %}
@@ -488,7 +485,7 @@
       const checkboxWrapper = document.getElementById('emmiera-checks');
       const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
 
-      console.log('protectionId', protectionId);
+      {% comment %} console.log('protectionId', protectionId); {% endcomment %}
 
       {% comment %} console.log('button', button); {% endcomment %}
       {% comment %} console.log('checkboxWrapper', checkboxWrapper); {% endcomment %}
@@ -537,8 +534,4 @@
     }
   {% endstyle %}
 
-{%- elsif template contains "v2-sofas" -%}
-  <script>
-    console.log('v2-sofas Template');
-  </script>
 {%- endif -%}
