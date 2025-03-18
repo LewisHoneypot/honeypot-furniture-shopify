@@ -139,9 +139,9 @@
               
               {%- if block.settings.use_buy_button_price -%}
                 <div class="buy-button-price">
-                  <span class="separator">|</span>
+                  <span class="separator {% if product.compare_at_price != null %} separator-fix{%- endif -%}">|</span>
                   <div
-                    class="product__price element-spacing-all no-js-hidden pt-0 price-alignment"
+                    class="product__price element-spacing-all no-js-hidden pt-0 price-alignment{% if product.compare_at_price != null %} price-alignment-fix{%- endif -%}"
                     {{ block.shopify_attributes }}
                     id="price-{{ section.id }}"
                     role="status"
