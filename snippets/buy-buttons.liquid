@@ -139,9 +139,9 @@
               
               {%- if block.settings.use_buy_button_price -%}
                 <div class="buy-button-price">
-                  <span style="margin-left:10px; margin-right:15px;">|</span>
+                  <span class="separator">|</span>
                   <div
-                    class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
+                    class="product__price element-spacing-all no-js-hidden pt-0 price-alignment"
                     {{ block.shopify_attributes }}
                     id="price-{{ section.id }}"
                     role="status"
