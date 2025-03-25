@@ -110,40 +110,6 @@
       <script src="https://sdk.snapfinance.co.uk/v1/snapuk.min.js" defer="defer"></script>
     {%- endunless -%}
 
-    {% comment %} Insider Scripts {% endcomment %}
-    {%- if template == 'index' -%}
-      <script>
-        window.insider_object = window.insider_object || {};
-        window.insider_object.page = {
-          type: 'Home',
-        };
-      </script>
-    {%- endif -%}
-    {%- if template contains 'collection' -%}
-      <script>
-        window.insider_object = window.insider_object || {};
-        window.insider_object.page = {
-          type: 'Category',
-        };
-      </script>
-    {%- endif -%}
-    {%- if template contains 'product' -%}
-      <script>
-        window.insider_object = window.insider_object || {};
-        window.insider_object.page = {
-          type: 'Product',
-        };
-      </script>
-    {%- endif -%}
-    {%- if template == 'cart' -%}
-      <script>
-        window.insider_object = window.insider_object || {};
-        window.insider_object.page = {
-          type: 'Basket',
-        };
-      </script>
-    {%- endif -%}
-
     {% comment %} Clarity Script {% endcomment %}
 
     {% comment %} <script type="text/javascript">
@@ -291,9 +257,6 @@
     <script src="{{ 'trustpilotServiceReviewStars.js' | asset_url }}" defer="defer"></script>
 
     <script src="{{ 'refreshCart.js' | asset_url }}" defer="defer"></script>
-
-    {% comment %} Insider {% endcomment %}
-    <script src="{{ 'insider-sw-sdk.js' | asset_url }}" defer="defer"></script>
 
     {%- if template contains 'product' -%}
       {% comment %} <script src="{{ 'productPage.js' | asset_url }}" defer="defer"></script> {% endcomment %}

@@ -26389,17 +26389,6 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-/* INSIDER */
-/* Free Delivery Popup */
-.ins-preview-wrapper-25 .ins-element-close-button {
-  width: 40px !important;
-  height: 40px !important;
-}
-
-.ins-preview-wrapper .ins-element-close-button[close-button-with-icons] .ins-element-content {
-  width: 40px !important;
-}
-
 /* Homepage | Collection List Arrow Placements */
 @media screen and (min-width: 1400px){
   .arrow-wrapper{
