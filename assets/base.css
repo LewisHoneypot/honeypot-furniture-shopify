@@ -26413,13 +26413,6 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-/* INSIDER Overrides */
-@media screen and (min-width: 1660px){
-  .ins-layout-wrapper.ins-selectable-element.ins-element-content.ins-sortable-container .ins-element-wrap.ins-layout-block-wrapper.ins-element-select-menu.ins-erase-container:nth-child(2) {
-    max-height: 27px;
-  }
-}
-
 .wide-search-container {
   top: 30px;
   position: relative;
