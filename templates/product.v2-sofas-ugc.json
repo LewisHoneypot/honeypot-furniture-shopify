@@ -310,6 +310,7 @@
         "slide_hxgmNx": {
           "type": "slide",
           "settings": {
+            "mobile_image": "{{ product.metafields.custom.ugc_pdp_image_1.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "",
@@ -374,7 +375,7 @@
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": false,
-        "color_autoplay": "#FFFFFF",
+        "color_autoplay": "#ffffff",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
