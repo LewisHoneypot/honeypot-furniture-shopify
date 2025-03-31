@@ -337,6 +337,7 @@
         "slide_7WgBUq": {
           "type": "slide",
           "settings": {
+            "mobile_image": "{{ product.metafields.custom.ugc_pdp_image_2.value }}",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "Image slide",
