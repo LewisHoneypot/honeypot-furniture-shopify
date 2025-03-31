@@ -398,7 +398,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "image_ratio": "adapt-image",
-        "image_ratio_mobile": "550px",
+        "image_ratio_mobile": "adapt-image",
         "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "arrows_type": "all",
         "arrows_position": "middle-center",
