@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -79,10 +79,10 @@
         "heading_size": "medium",
         "font_transform": "none",
         "heading_margin_bottom": 16,
-        "content": "<p>Mention <strong>@honeypotfurniture<\/strong> in your Instagram photos for the chance to be featured in our gallery.<\/p>",
+        "content": "<p>Mention <strong>@honeypotfurniture</strong> in your Instagram photos for the chance to be featured in our gallery.</p>",
         "text_margin_bottom": 0,
         "button_label": "Follow Us",
-        "button_link": "https:\/\/www.instagram.com\/honeypotfurniture",
+        "button_link": "https://www.instagram.com/honeypotfurniture",
         "button_margin_bottom": 20,
         "text_alignment": "center",
         "cart_label": "",
@@ -117,22 +117,22 @@
         "image_9wTVrX": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_8.webp",
-            "image_link": "shopify:\/\/products\/rupert-bundle-offer"
+            "image": "shopify://shop_images/INSPO_GAL_8.webp",
+            "image_link": "shopify://collections/rupert-sofas"
           }
         },
         "image_XeErBH": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_2.webp",
-            "image_link": "shopify:\/\/products\/kiana-modular-sofa-ivory-large-corner"
+            "image": "shopify://shop_images/INSPO_GAL_2.webp",
+            "image_link": "shopify://collections/kiana-modular-sofas"
           }
         },
         "image_hCczVX": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_7.webp",
-            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-3-seater"
+            "image": "shopify://shop_images/INSPO_GAL_7.webp",
+            "image_link": "shopify://collections/windsor-fullback-sofas"
           }
         }
       },
@@ -187,22 +187,22 @@
         "image_E7Qytx": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_6.webp",
-            "image_link": ""
+            "image": "shopify://shop_images/INSPO_GAL_6.webp",
+            "image_link": "shopify://collections/grey"
           }
         },
         "image_hnmAxE": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_5.webp",
-            "image_link": "shopify:\/\/products\/windsor-fullback-sofa-stone-2-seater"
+            "image": "shopify://shop_images/INSPO_GAL_5.webp",
+            "image_link": "shopify://products/windsor-fullback-sofa-stone-2-seater"
           }
         },
         "image_8L4ygQ": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_40_copy.webp",
-            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-3-2-set"
+            "image": "shopify://shop_images/INSPO_GAL_40_copy.webp",
+            "image_link": "shopify://collections/rupert-sofas"
           }
         }
       },
@@ -257,22 +257,22 @@
         "image_Xc9RiA": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_12.webp",
-            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-armchair"
+            "image": "shopify://shop_images/INSPO_GAL_12.webp",
+            "image_link": "shopify://collections/rupert-sofas"
           }
         },
         "image_Ax4VHw": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_10.webp",
-            "image_link": "shopify:\/\/products\/rupert-sofa-plush-beige-3-seater"
+            "image": "shopify://shop_images/INSPO_GAL_10.webp",
+            "image_link": "shopify://collections/rupert-sofas"
           }
         },
         "image_Qy7XXK": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_17.webp",
-            "image_link": ""
+            "image": "shopify://shop_images/INSPO_GAL_17.webp",
+            "image_link": "shopify://collections/windsor-fullback-sofas"
           }
         }
       },
@@ -327,22 +327,22 @@
         "image_zAxMXg": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_19.webp",
-            "image_link": "shopify:\/\/products\/azzuro-sofabed-cream-universal-corner"
+            "image": "shopify://shop_images/INSPO_GAL_19.webp",
+            "image_link": "shopify://collections/azzuro-sofabeds"
           }
         },
         "image_yXxqFU": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/UGC_29.webp",
-            "image_link": "shopify:\/\/products\/harper-sofa-plush-beige-4-seater"
+            "image": "shopify://shop_images/UGC_29.webp",
+            "image_link": "shopify://collections/harper-sofas"
           }
         },
         "image_YrD39a": {
           "type": "Image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/INSPO_GAL_16.webp",
-            "image_link": "shopify:\/\/products\/briar-sofa-beige-left-hand-facing-corner"
+            "image": "shopify://shop_images/INSPO_GAL_16.webp",
+            "image_link": "shopify://collections/beige"
           }
         }
       },
