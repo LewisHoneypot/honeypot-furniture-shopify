@@ -95,6 +95,7 @@
     },
     "image_banner_kW7TGh": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
