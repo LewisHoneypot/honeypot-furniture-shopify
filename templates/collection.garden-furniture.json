@@ -40,6 +40,36 @@
         "padding_bottom": 0
       }
     },
+    "image_banner_kW7TGh": {
+      "type": "image-banner",
+      "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "image": "shopify://shop_images/Garden-Banner-1.jpg",
+        "content_inside_image_mobile": false,
+        "mobile_row_height": 42,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "custom_content_max_width": false,
+        "content_max_width": 500,
+        "mobile_color_scheme": "custom",
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "color_scheme": "",
+        "image_overlay_opacity": 30,
+        "color_overlay_opacity": "#000000",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -362,6 +392,7 @@
   },
   "order": [
     "banner",
+    "image_banner_kW7TGh",
     "product-grid",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "1736440044ce275a3d",
