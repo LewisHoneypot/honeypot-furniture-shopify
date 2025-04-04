@@ -237,7 +237,7 @@
           "type": "drawer",
           "settings": {
             "heading": "Dimensions",
-            "content_type": "dimensions",
+            "content_type": "custom",
             "content1": "",
             "content2": "",
             "page": ""
