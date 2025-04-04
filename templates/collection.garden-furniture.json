@@ -85,7 +85,7 @@
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": false,
-        "color_autoplay": "#FFFFFF",
+        "color_autoplay": "#ffffff",
         "change_slides_speed": 5,
         "enable_pagination_type": "all",
         "pagination_type": "dots",
@@ -443,54 +443,98 @@
       "disabled": true,
       "settings": {}
     },
-    "featured_collection_96aK6a": {
-      "type": "featured-collection",
+    "featured_product_pK8JEd": {
+      "type": "featured-product",
       "blocks": {
-        "heading_JhEyc7": {
-          "type": "heading",
+        "title_6G3YA9": {
+          "type": "title",
           "settings": {
-            "heading": "Featured collection",
-            "heading_size": "default",
-            "label_view_all": "",
-            "show_view_all": "link",
-            "text_view_all": "",
-            "text_view_all_size": "medium",
-            "text_alignment": "left",
-            "padding_top": 0,
-            "padding_bottom": 30
+            "padding_top": 5,
+            "padding_bottom": 5,
+            "heading_size": "h1"
+          }
+        },
+        "price_AfrPCc": {
+          "type": "price",
+          "settings": {
+            "show_taxes": false,
+            "show_shipping": false,
+            "use_custom_color": false,
+            "colors_text": "#424242",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "vendor_9gEAri": {
+          "type": "vendor",
+          "settings": {
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "variant_picker_4XULVU": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "buy_buttons_MCW8Xy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_wishlist_product": false,
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_colors_text": "#121212",
+            "add_to_cart_colors_background": "#ffffff",
+            "add_to_cart_gradient_background": "",
+            "add_to_cart_colors_text_hover": "#FFFFFF",
+            "add_to_cart_colors_background_hover": "#396774",
+            "add_to_cart_gradient_background_hover": "",
+            "buy_it_now_colors_text": "#ffffff",
+            "buy_it_now_colors_background": "#121212",
+            "buy_it_now_gradient_background": "",
+            "buy_it_now_colors_text_hover": "#FFFFFF",
+            "buy_it_now_colors_background_hover": "#000000",
+            "buy_it_now_gradient_background_hover": "",
+            "wishlist_colors_text": "#000000",
+            "wishlist_colors_background": "#000000",
+            "wishlist_colors_text_hover": "#EB9C9C",
+            "wishlist_colors_background_hover": "#EB9C9C",
+            "padding_top": 5,
+            "padding_bottom": 5
           }
         }
       },
       "block_order": [
-        "heading_JhEyc7"
+        "title_6G3YA9",
+        "price_AfrPCc",
+        "vendor_9gEAri",
+        "variant_picker_4XULVU",
+        "buy_buttons_MCW8Xy"
       ],
       "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "show_line_separator_top": false,
-        "show_line_separator_bottom": false,
-        "collection": "parasols",
-        "product_list": [],
-        "products_to_show": 4,
-        "carousel_number": 4,
-        "carousel_number_tablet": 2,
-        "carousel_number_mobile": "2",
-        "spacing_desktop": 10,
-        "spacing_tablet": 10,
-        "spacing_mobile": 10,
-        "arrows_type": "all",
-        "carousel_infinite_scroll": false,
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
+        "product": "oxford-garden-furniture-set",
+        "show_product_badges": true,
+        "enable_share": true,
+        "type_style": "modern",
+        "media_size": "large",
+        "gallery_layout": "stacked",
+        "image_zoom": "lightbox",
+        "enable_video_looping": false,
+        "image_ratio": "square",
+        "carousel_direction": "vertical",
+        "carousel_gap_desktop": 16,
+        "carousel_gap_tablet": 8,
         "color_scheme": "",
-        "use_background_gradient": false,
-        "colors_background_special": "",
-        "gradient_background_special": "linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)",
-        "text_animation": "none",
-        "padding_top": 78,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 15
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 25
       }
     }
   },
@@ -506,6 +550,6 @@
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
     "clickslice_bottom_collapsible_tabs_GD3zKe",
-    "featured_collection_96aK6a"
+    "featured_product_pK8JEd"
   ]
 }
