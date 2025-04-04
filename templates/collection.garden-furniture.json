@@ -442,6 +442,56 @@
       "type": "clickslice-bottom-collapsible-tabs",
       "disabled": true,
       "settings": {}
+    },
+    "featured_collection_96aK6a": {
+      "type": "featured-collection",
+      "blocks": {
+        "heading_JhEyc7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Featured collection",
+            "heading_size": "default",
+            "label_view_all": "",
+            "show_view_all": "link",
+            "text_view_all": "",
+            "text_view_all_size": "medium",
+            "text_alignment": "left",
+            "padding_top": 0,
+            "padding_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "heading_JhEyc7"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator_top": false,
+        "show_line_separator_bottom": false,
+        "collection": "parasols",
+        "product_list": [],
+        "products_to_show": 4,
+        "carousel_number": 4,
+        "carousel_number_tablet": 2,
+        "carousel_number_mobile": "2",
+        "spacing_desktop": 10,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "use_background_gradient": false,
+        "colors_background_special": "",
+        "gradient_background_special": "linear-gradient(215deg, rgba(248, 208, 218, 0.45) 34.38%, rgba(195, 236, 252, 0.45) 73.44%)",
+        "text_animation": "none",
+        "padding_top": 78,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15
+      }
     }
   },
   "order": [
@@ -455,6 +505,7 @@
     "17364400660185726f",
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
-    "clickslice_bottom_collapsible_tabs_GD3zKe"
+    "clickslice_bottom_collapsible_tabs_GD3zKe",
+    "featured_collection_96aK6a"
   ]
 }
