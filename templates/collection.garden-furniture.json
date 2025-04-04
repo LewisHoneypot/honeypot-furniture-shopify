@@ -40,6 +40,59 @@
         "padding_bottom": 0
       }
     },
+    "slideshow_cK3HQE": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_TUrnyn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Garden_Banner_2_short.jpg",
+            "mobile_image": "shopify://shop_images/Garden-Banner-1.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_TUrnyn"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "image_ratio": "adapt-image",
+        "image_ratio_mobile": "550px",
+        "color_scheme": "",
+        "arrows_type": "all",
+        "arrows_position": "middle-center",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": false,
+        "color_autoplay": "#FFFFFF",
+        "change_slides_speed": 5,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "image_behavior": "none",
+        "accessibility_info": ""
+      }
+    },
     "image_banner_kW7TGh": {
       "type": "image-banner",
       "settings": {
@@ -392,6 +445,7 @@
   },
   "order": [
     "banner",
+    "slideshow_cK3HQE",
     "image_banner_kW7TGh",
     "product-grid",
     "29a4766e-9b16-4206-927b-f13e02616027",
