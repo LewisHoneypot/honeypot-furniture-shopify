@@ -533,7 +533,7 @@
         "color_scheme": "",
         "padding_top": 25,
         "padding_bottom": 45,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 30,
         "padding_bottom_mobile": 25
       }
     }
