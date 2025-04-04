@@ -536,6 +536,61 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 25
       }
+    },
+    "featured_collection_tab_7ja6k8": {
+      "type": "featured-collection-tab",
+      "blocks": {
+        "tab_QrThAe": {
+          "type": "tab",
+          "settings": {
+            "heading": "Tab name",
+            "collection": "",
+            "colors_text": "#000"
+          }
+        },
+        "tab_t4FVTJ": {
+          "type": "tab",
+          "settings": {
+            "heading": "Tab name",
+            "collection": "",
+            "colors_text": "#000"
+          }
+        },
+        "tab_gC3TLk": {
+          "type": "tab",
+          "settings": {
+            "heading": "Tab name",
+            "collection": "",
+            "colors_text": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "tab_QrThAe",
+        "tab_t4FVTJ",
+        "tab_gC3TLk"
+      ],
+      "settings": {
+        "type_style": "special",
+        "show_line_separator": true,
+        "heading": "Featured collection",
+        "heading_size": "default",
+        "text": "<p>Pair text with an image to focus on your chosen collection. Add details on availability, style, or even provide a review.</p>",
+        "text_alignment": "left",
+        "products_to_show": 5,
+        "show_view_all": true,
+        "color_scheme": "",
+        "product_color_scheme": "",
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "image_behavior": "none",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
     }
   },
   "order": [
@@ -550,6 +605,7 @@
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
     "clickslice_bottom_collapsible_tabs_GD3zKe",
-    "featured_product_pK8JEd"
+    "featured_product_pK8JEd",
+    "featured_collection_tab_7ja6k8"
   ]
 }
