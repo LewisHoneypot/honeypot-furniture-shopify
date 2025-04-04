@@ -47,8 +47,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Garden_Banner_2_short.jpg",
-            "mobile_image": "shopify://shop_images/Garden-Banner-1.jpg",
-            "content_max_width": 440,
+            "mobile_image": "shopify://shop_images/Garden_Banner_-_mob1.jpg",
+            "content_max_width": 400,
             "heading_font": "font-heading",
             "heading": "",
             "heading_size": "default",
