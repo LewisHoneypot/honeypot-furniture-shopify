@@ -739,6 +739,101 @@
                   </ul>
                 </nav>
                 <div class="menu-drawer__utility-links d-grid r-gap" style="--r-gap: 1rem;">
+
+                {%- if section.settings.use_country_selector -%}
+
+                  <div class="list-menu list-menu--inline f-wrap list-unstyled left g-gap d-inline-flex d-lg-none">
+                    <details class="country-selector caption-large custom-dropdown">
+                      <summary class="dropdown-button" {%- if localization.country.iso_code == "AE" -%} style="width:75px" {%- endif %}>
+                        {% if localization.country.iso_code == "AE" %}
+                          {% assign selected_image = section.settings.country_selector_image_2 | image_url %}
+                          {% assign selected_text = section.settings.country_selector_text_2 %}
+                          {% assign selected_url = section.settings.country_selector_url_2 %}
+                          {% assign alt_image = section.settings.country_selector_image_1 | image_url %}
+                          {% assign alt_text = section.settings.country_selector_text_1 %}
+                          {% assign alt_url = section.settings.country_selector_url_1 %}
+                        {% else %}
+                          {% assign selected_image = section.settings.country_selector_image_1 | image_url %}
+                          {% assign selected_text = section.settings.country_selector_text_1 %}
+                          {% assign selected_url = section.settings.country_selector_url_1 %}
+                          {% assign alt_image = section.settings.country_selector_image_2 | image_url %}
+                          {% assign alt_text = section.settings.country_selector_text_2 %}
+                          {% assign alt_url = section.settings.country_selector_url_2 %}
+                        {% endif %}
+                        
+                        <img id="selectedImage" src="{{ selected_image }}" alt="Country Flag">
+                        <span id="selectedText">{{ selected_text }}</span>
+                      </summary>
+
+                      <ul id="dropdownMenuMobile" class="dropdown-menu" {%- if localization.country.iso_code == "AE" -%} style="max-width:75px" {%- else -%} style="max-width:69px;" {%- endif %}>
+                        <li data-value="{{ selected_url }}" data-image="{{ selected_image }}">
+                          <img src="{{ selected_image }}" alt="Flag"> 
+                          <span>{{ selected_text }}</span>
+                        </li>
+                        <li data-value="{{ alt_url }}" data-image="{{ alt_image }}">
+                          <img src="{{ alt_image }}" alt="Flag"> 
+                          <span>{{ alt_text }}</span>
+                        </li>
+                      </ul>
+
+                      <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                          const selectedImage = document.getElementById("selectedImage");
+                          const selectedText = document.getElementById("selectedText");
+
+                          document.querySelectorAll("#dropdownMenuMobile li").forEach(function(item) {
+                            item.addEventListener("click", function() {
+                              selectedImage.src = this.getAttribute("data-image");
+                              selectedText.textContent = this.querySelector("span").textContent;
+                              window.location.href = this.getAttribute("data-value");
+                            });
+                          });
+                        });
+                      </script>
+
+                      <style>
+                        .dropdown-menu {
+                          display: none;
+                          position: absolute;
+                          background: white;
+                          z-index: 1000;
+                        }
+
+                        .country-selector[open] .dropdown-menu {
+                          display: block;
+                        }
+
+                        summary.dropdown-button {
+                          list-style: none;
+                          cursor: pointer;
+                          display: flex;
+                          align-items: center;
+                          gap: 0.5rem;
+                        }
+
+                        summary.dropdown-button::-webkit-details-marker {
+                          display: none;
+                        }
+                      </style>
+                    </details>
+                  </div>
+
+                  {% comment %} <div class="country-selector caption-large">
+                    {%- if localization.country.iso_code == "AE" -%}
+                      <a href="{{ section.settings.country_selector_url_1 }}">
+                        <span>Switch to {{ section.settings.country_selector_text_1 }}</span>
+                        <img src="{{ section.settings.country_selector_image_1 | image_url }}">
+                      </a>
+                    {%- else -%}
+                      <a href="{{ section.settings.country_selector_url_2 }}">
+                        <span>Switch to {{ section.settings.country_selector_text_2 }}</span>
+                        <img src="{{ section.settings.country_selector_image_2 | image_url }}">
+                      </a>
+                    {%- endif -%}
+                  </div> {% endcomment %}
+
+                {%- endif -%}
+                
                   {%- if section.settings.use_custom_button and section.settings.use_button_label != blank -%}
                     <div class="header__custom-button d-none-md">
                         <a {% if section.settings.use_button_link == blank %}role="link"aria-disabled="true"{% else %}href="{{ section.settings.use_button_link }}"{% endif %} 
@@ -760,24 +855,7 @@
                     endif
                   -%}
                   {%- if check_selector -%}
-                    <div class="menu-drawer__localization header-localization">
-
-                      {%- if section.settings.use_country_selector -%}
-                        <div class="country-selector caption-large">
-
-                          {%- if localization.country.iso_code == "AE" -%}
-                            <a href="{{ section.settings.country_selector_url_1 }}">
-                              <span>Switch to {{ section.settings.country_selector_text_1 }}</span>
-                              <img src="{{ section.settings.country_selector_image_1 | image_url }}">
-                            </a>
-                          {%- else -%}
-                            <a href="{{ section.settings.country_selector_url_2 }}">
-                              <span>Switch to {{ section.settings.country_selector_text_2 }}</span>
-                              <img src="{{ section.settings.country_selector_image_2 | image_url }}">
-                            </a>
-                          {%- endif -%}
-                        </div>
-                      {%- endif -%}
+                    <div class="menu-drawer__localization header-localization"></div>
                       {%- if section.settings.enable_country_selector_mobile and localization.available_countries.size > 1 -%}
                         <noscript>
                           {%- form 'localization', 
@@ -2623,7 +2701,7 @@
       {
         "value": "right",
         "label": "Right"
-      },
+      }
     ]
   },
   {
@@ -2704,6 +2782,7 @@
       "id": "heading_font_size",
       "min": 10,
       "max": 26,
+      "step": 1,
       "default": 16,
       "unit": "px",
       "label": "Heading Font Size"
@@ -2787,6 +2866,7 @@
       "id": "heading_font_size",
       "min": 10,
       "max": 26,
+      "step": 1,
       "default": 16,
       "unit": "px",
       "label": "Heading Font Size"
