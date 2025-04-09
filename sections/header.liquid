@@ -855,7 +855,7 @@
                     endif
                   -%}
                   {%- if check_selector -%}
-                    <div class="menu-drawer__localization header-localization"></div>
+                    <div class="menu-drawer__localization header-localization">
                       {%- if section.settings.enable_country_selector_mobile and localization.available_countries.size > 1 -%}
                         <noscript>
                           {%- form 'localization', 
