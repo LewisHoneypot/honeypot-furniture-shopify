@@ -4,16 +4,50 @@
       render 'icon-arrow-list'
     endcapture
   -%}
-  <slideshow-component class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %}"
+  <slideshow-component class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %} {%- if template contains 'ugc' %} hide-desktop-ugc{%- endif -%}"
     data-type-pagination="{{ section.settings.pagination_type }}"
     data-speed="{{ section.settings.change_slides_speed }}"
     style="transform: translate(0px, 0px);"
   >
+
+    {%- if template contains 'ugc' %} 
+      
+      <div class="p-w__content">
+        <hr style="margin:0px;">
+        <div 
+          style="
+            text-align:center;
+            top:-12px;
+            position: relative;
+            z-index: 2;
+          "
+        >
+          <span 
+            class="Gotham color-{{ section.settings.color_scheme }}" 
+            style="
+              padding-left: 30px;
+              padding-right: 30px;
+            "
+          >
+            {{ section.settings.title }}
+          </span>
+        </div>
+      </div>
+      
+    {%- endif -%}
+
     <div class="slideshow swiper slider has-banner__content--{{ section.blocks[0].settings.box_align }} position-arrows--{{ section.settings.arrows_position }}"
       role="region" 
       aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" 
       aria-label="{{ section.settings.accessibility_info | escape }}" 
     >
+      <style>
+        @media screen and (min-width: 750px){
+          .hide-desktop-ugc {
+            display: none !important;
+          }
+        }
+      </style>
       <div 
         class="slideshow__items swiper-wrapper slider__items f-row no-js-overflow-x no-js-scroll-b {{ section.settings.image_ratio | prepend: "slideshow--ratio-" }} {{ section.settings.image_ratio_mobile | prepend: "slideshow--ratio-mobile-" }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
         id="Slider-{{ section.id }}"
@@ -620,14 +654,15 @@
       "type": "select",
       "id": "section_width",
       "options": [
-      {
-        "value": "page-width",
-        "label": "t:sections.all.section_width.options__2"
-      },
-      {
-        "value": "customized-width",
-        "label": "t:sections.all.section_width.options__3"
-      }],
+        {
+          "value": "page-width",
+          "label": "t:sections.all.section_width.options__2"
+        },
+        {
+          "value": "customized-width",
+          "label": "t:sections.all.section_width.options__3"
+        }
+      ],
       "default": "page-width",
       "label": "t:sections.all.section_width.label__4"
     },
@@ -704,6 +739,12 @@
     {
       "type": "header",
       "content": "t:sections.all.carousel.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "See It In Action",
+      "label": "Title"
     },
     {
       "type": "select",
