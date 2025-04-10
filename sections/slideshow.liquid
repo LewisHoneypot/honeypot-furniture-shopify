@@ -11,6 +11,33 @@
       data-speed="{{ section.settings.change_slides_speed }}"
       style="transform: translate(0px, 0px);"
     >
+
+      {%- if template contains 'ugc' %} 
+        
+        <div class="p-w__content">
+          <hr style="margin:0px;">
+          <div 
+            style="
+              text-align:center;
+              top:-12px;
+              position: relative;
+              z-index: 2;
+            "
+          >
+            <span 
+              class="Gotham color-{{ section.settings.color_scheme }}" 
+              style="
+                padding-left: 30px;
+                padding-right: 30px;
+              "
+            >
+              {{ section.settings.title }}
+            </span>
+          </div>
+        </div>
+        
+      {%- endif -%}
+
       <div
         class="slideshow swiper slider has-banner__content--{{ section.blocks[0].settings.box_align }} position-arrows--{{ section.settings.arrows_position }}"
         role="region"
@@ -684,6 +711,33 @@
       data-speed="{{ section.settings.change_slides_speed }}"
       style="transform: translate(0px, 0px);"
     >
+
+      {%- if template contains 'ugc' %} 
+          
+        <div class="p-w__content">
+          <hr style="margin:0px;">
+          <div 
+            style="
+              text-align:center;
+              top:-12px;
+              position: relative;
+              z-index: 2;
+            "
+          >
+            <span 
+              class="Gotham color-{{ section.settings.color_scheme }}" 
+              style="
+                padding-left: 30px;
+                padding-right: 30px;
+              "
+            >
+              {{ section.settings.title }}
+            </span>
+          </div>
+        </div>
+        
+      {%- endif -%}
+
       <div
         class="{% if settings.slider_type == 'splide' -%}splide{%- endif %} slideshow swiper slider has-banner__content--{{ section.blocks[0].settings.box_align }} position-arrows--{{ section.settings.arrows_position }}"
         role="region"
