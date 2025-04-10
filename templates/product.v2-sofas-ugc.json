@@ -401,7 +401,7 @@
         "image_ratio_mobile": "adapt-image",
         "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "title": "See It In Action",
-        "arrows_type": "all",
+        "arrows_type": "none",
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
         "enable_autoplay": true,
