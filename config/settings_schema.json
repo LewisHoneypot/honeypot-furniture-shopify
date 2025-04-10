@@ -694,6 +694,22 @@
         "default": "default",
         "label": "t:settings_schema.animations.settings.animations_hover_elements.label",
         "info": "t:settings_schema.animations.settings.animations_hover_elements.info"
+      },
+      {
+        "type": "select",
+        "id": "slider_type",
+        "options": [
+          {
+            "value": "swiper",
+            "label": "Default (Swiper.js)" 
+          },
+          {
+            "value": "splide",
+            "label": "Splide"
+          }
+        ],
+        "default": "swiper",
+        "label": "Slider Tech"
       }
     ]
   },

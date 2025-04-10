@@ -36,7 +36,7 @@
           </animate-element>
         </div>
       {%- endif -%}
-      <div role="region" aria-roledescription="Testimonials" aria-label="Testimonials" class="slideshow swiper slider">
+      <div role="region" aria-roledescription="Testimonials" aria-label="Testimonials" class="{%- if settings.slider_type == 'splide' -%}splide{%- endif %} slideshow swiper slider">
         {%- if section.settings.use_bg_image -%}
           <div class="slideshow__bg media media--transparent pos-relative" style="padding-bottom: {% if section.settings.image != blank %}{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}{% else %}56{% endif %}%;">
             {%- if section.settings.image != blank -%}
@@ -53,139 +53,150 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        <div 
-          aria-live="polite" 
-          aria-atomic="true" 
-          id="Slider-{{ section.id }}" 
-          class="slideshow__items swiper-wrapper slider__items{% if section.settings.enable_autoplay %} swiper-autoplay{% endif %} f-row no-js-overflow-x no-js-scroll-b d-flex f-row{% if section.settings.use_bg_image == true %} pos-absolute pos-relative-swiper-xs top-0 left-0{% endif %} w-100 h-100"
-        >
-          {%- for block in section.blocks -%}
-            <div class="slideshow__item swiper-slide slider__item slider__item--{{ forloop.index }} scroll-s-start mi-w" 
-              role="group" 
-              aria-roledescription="Slide" 
-              aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}" 
-              tabindex="-1" 
-              id="Slide-{{ section.id }}-{{ forloop.index }}" 
-              style="--mi-w: 100%;" 
-              {{ block.shopify_attributes }}
-            >
-              <div class="d-flex pos-relative w-100 h-100">
-                {%- if block.settings.heading != blank or block.settings.text != blank -%}
-                  <div class="slider__content slideshow__content d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h banner__content banner__content--{{ block.settings.box_align }}" style="padding-top:0px;">
-                    <animate-element class="slider__content--wrapper d-flex f-column j-c-center w-100 h-100 {{ block.settings.text_alignment }} banner__box" style="padding-top:15px;">
-                      <div class="banner__box--wrapper w-100">
-                        {%- if block.settings.rating != '0' and section.settings.type_style == 'special' -%}
-                          <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.6s;">
-                            <div class="rating d-inline-block"
-                              role="img"
-                              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}"
-                            >
-                              <span class="rating-star d-inline-block l-h-1"
-                                aria-hidden="true"
-                                style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"
-                              ></span>
-                            </div>
-                          </div>
-                        {%- endif -%}
-                        {%- if block.settings.heading != blank -%}
-                          <h2 class="banner__heading u-u{% if section.settings.type_style == 'special' %} pos-relative heading-size-medium{% else %} h4{% endif %}"
-                            data-animate="fade-down"
-                            style="--a-delay: 0.4s; margin-bottom: {{ block.settings.heading_margin_bottom }}px;" 
-                            {% comment %} add margin bottom schema {% endcomment %}
-                          >
-                            {{ block.settings.heading | escape }}
-                          </h2>
-                        {%- endif -%}
-                        {%- if block.settings.text != blank -%}
-                          <div class="banner__text{% if section.settings.type_style == 'special' %} text-size-xx-large{% else %} h2{% endif %} rte m-0"
-                            data-animate="fade-down"
-                            style="--a-delay: 0.6s;"
-                          >
-                            {{ block.settings.text }}
-                          </div>
-                        {%- endif -%}
-                        <div class="banner__info d-flex f-wrap a-i-center g-gap j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" style="--g-gap: 1.5rem;">
-                          {%- if block.settings.rating != '0' and section.settings.type_style == 'classic' -%}
-                            <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.8s;">
-                              <div class="rating d-inline-block" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
-                                <span aria-hidden="true" class="rating-star d-inline-block l-h-1" style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"></span>
+
+        {%- if settings.slider_type == 'splide' -%}<div class="splide__track">{%- endif -%}
+
+          <div 
+            aria-live="polite" 
+            aria-atomic="true" 
+            id="Slider-{{ section.id }}" 
+            class="{%- if settings.slider_type == 'splide' -%}splide__list{%- endif %} slideshow__items swiper-wrapper slider__items{% if section.settings.enable_autoplay %} swiper-autoplay{% endif %} f-row no-js-overflow-x no-js-scroll-b d-flex f-row{% if section.settings.use_bg_image == true %} pos-absolute pos-relative-swiper-xs top-0 left-0{% endif %} w-100 h-100"
+          >
+            {%- for block in section.blocks -%}
+              <div class="{%- if settings.slider_type == 'splide' -%}splide__slide{%- endif %} slideshow__item swiper-slide slider__item slider__item--{{ forloop.index }} scroll-s-start mi-w" 
+                role="group" 
+                aria-roledescription="Slide" 
+                aria-label="{{ 'accessibility.slide' | t: index: forloop.index, total: forloop.length }}" 
+                tabindex="-1" 
+                id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                style="--mi-w: 100%;" 
+                {{ block.shopify_attributes }}
+              >
+                <div class="d-flex pos-relative w-100 h-100">
+                  {%- if block.settings.heading != blank or block.settings.text != blank -%}
+                    <div class="slider__content slideshow__content d-flex a-i-center j-c-center f-shrink f-grow pos-relative w-100 z-index-2 o-h banner__content banner__content--{{ block.settings.box_align }}" style="padding-top:0px;">
+                      <animate-element class="slider__content--wrapper d-flex f-column j-c-center w-100 h-100 {{ block.settings.text_alignment }} banner__box" style="padding-top:15px;">
+                        <div class="banner__box--wrapper w-100">
+                          {%- if block.settings.rating != '0' and section.settings.type_style == 'special' -%}
+                            <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.6s;">
+                              <div class="rating d-inline-block"
+                                role="img"
+                                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}"
+                              >
+                                <span class="rating-star d-inline-block l-h-1"
+                                  aria-hidden="true"
+                                  style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"
+                                ></span>
                               </div>
                             </div>
                           {%- endif -%}
-                          {%- if block.settings.name != blank or block.setting.avatar != blank -%}
-                            <div class="banner__info--author{% if block.settings.avatar %} w-100 d-flex a-i-center j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}{% endif %}"
+                          {%- if block.settings.heading != blank -%}
+                            <h2 class="banner__heading u-u{% if section.settings.type_style == 'special' %} pos-relative heading-size-medium{% else %} h4{% endif %}"
                               data-animate="fade-down"
-                              style="--a-delay: 0.8s;"
+                              style="--a-delay: 0.4s; margin-bottom: {{ block.settings.heading_margin_bottom }}px;" 
+                              {% comment %} add margin bottom schema {% endcomment %}
                             >
-                              {%- if block.settings.avatar != blank -%}
-                                <div class="banner__info--avatar" style="width: 4rem">
-                                  <div
-                                    class=" media media--adapt media--transparent o-h d-block pos-relative b-circle"
-                                    style="padding-bottom: {{ 1 | divided_by: block.settings.avatar.aspect_ratio | times: 100 }}%;"
-                                  >
-                                    {%- assign alt = block.settings.avatar.alt | default: shop.name | escape -%}
-                                    {{
-                                      block.settings.avatar
-                                      | image_url: width: 50, height: 50
-                                      | image_tag: alt: alt, loading: 'lazy'
-                                    }}
-                                  </div>
-                                </div>
-                              {%- endif -%}
-
-                              {%- if block.settings.name != blank -%}
-                                <div class="banner__info--name {% if section.settings.type_style == 'special' %} text-size-s-small{% endif %}">
-                                  {{ block.settings.name | escape }}
-                                </div>
-                              {%- endif -%}
+                              {{ block.settings.heading | escape }}
+                            </h2>
+                          {%- endif -%}
+                          {%- if block.settings.text != blank -%}
+                            <div class="banner__text{% if section.settings.type_style == 'special' %} text-size-xx-large{% else %} h2{% endif %} rte m-0"
+                              data-animate="fade-down"
+                              style="--a-delay: 0.6s; {% if settings.slider_type == 'splide' -%}opacity: 1;{%- endif -%}"
+                            >
+                              {{ block.settings.text }}
                             </div>
                           {%- endif -%}
+                          <div class="banner__info d-flex f-wrap a-i-center g-gap j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" style="--g-gap: 1.5rem;">
+                            {%- if block.settings.rating != '0' and section.settings.type_style == 'classic' -%}
+                              <div class="banner__info--rating" data-animate="fade-down" style="--a-delay: 0.8s;">
+                                <div class="rating d-inline-block" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
+                                  <span aria-hidden="true" class="rating-star d-inline-block l-h-1" style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"></span>
+                                </div>
+                              </div>
+                            {%- endif -%}
+                            {%- if block.settings.name != blank or block.setting.avatar != blank -%}
+                              <div class="banner__info--author{% if block.settings.avatar %} w-100 d-flex a-i-center j-c-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}{% endif %}"
+                                data-animate="fade-down"
+                                style="--a-delay: 0.8s;"
+                              >
+                                {%- if block.settings.avatar != blank -%}
+                                  <div class="banner__info--avatar" style="width: 4rem">
+                                    <div
+                                      class=" media media--adapt media--transparent o-h d-block pos-relative b-circle"
+                                      style="padding-bottom: {{ 1 | divided_by: block.settings.avatar.aspect_ratio | times: 100 }}%;"
+                                    >
+                                      {%- assign alt = block.settings.avatar.alt | default: shop.name | escape -%}
+                                      {{
+                                        block.settings.avatar
+                                        | image_url: width: 50, height: 50
+                                        | image_tag: alt: alt, loading: 'lazy'
+                                      }}
+                                    </div>
+                                  </div>
+                                {%- endif -%}
+
+                                {%- if block.settings.name != blank -%}
+                                  <div class="banner__info--name {% if section.settings.type_style == 'special' %} text-size-s-small{% endif %}">
+                                    {{ block.settings.name | escape }}
+                                  </div>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                          </div>
                         </div>
-                      </div>
-                    </animate-element>
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endfor -%}
-        </div>
-        {%- if section.blocks.size > 1 -%}
-          <div class="slideshow__controls arrow-style-{{ settings.arrow_style }} controls-{{ section.settings.pagination_type }} d-flex a-i-center j-c-center w-100 no-js-hidden">
-            {%- if section.settings.arrows_type != 'none' -%}
-              <button type="button" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
-                {{ icon_arrow_list }}
-              </button>
-            {%- endif -%}
-            {%- if section.settings.enable_autoplay -%}
-              <button type="button" class="button-slider button-slider__autoplay gradient gradient-global t-button b-none c-pointer d-flex a-i-center j-c-center no-js-hidden pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
-                {%- render 'icon-pause' -%}
-                {%- render 'icon-play' -%}
-                <svg class="autoplay-progress" viewBox="0 0 48 48">
-                  <circle cx="24" cy="24" r="20"></circle>
-                </svg>
-              </button>
-            {%- endif -%}
-            {%- if section.settings.arrows_type != 'none' -%}
-              <button type="button" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
-                {{ icon_arrow_list }}
-              </button>
-            {%- endif -%}
-            <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} slider-counter pos-relative-xs z-index-1 d-flex a-i-center j-c-center"></div>
-          </div>
-          <noscript>
-            <div class="slideshow__controls d-flex a-i-center j-c-center w-100">
-              <div class="slider-counter pos-absolute pos-relative-xs z-index-2">
-                <div class="slider-counter__wrapper d-flex a-i-center j-c-center">
-                  {%- for block in section.blocks -%}
-                    <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link link--text u-none" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
-                      {{ forloop.index }}
-                    </a>
-                  {%- endfor -%}
+                      </animate-element>
+                    </div>
+                  {%- endif -%}
                 </div>
               </div>
+            {%- endfor -%}
+          </div>
+
+        {%- if settings.slider_type == 'splide' -%}</div>{%- endif -%}
+        
+        {%- if settings.slider_type == "swiper" -%}
+
+          {%- if section.blocks.size > 1 -%}
+            <div class="slideshow__controls arrow-style-{{ settings.arrow_style }} controls-{{ section.settings.pagination_type }} d-flex a-i-center j-c-center w-100 no-js-hidden">
+              {%- if section.settings.arrows_type != 'none' -%}
+                <button type="button" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                  {{ icon_arrow_list }}
+                </button>
+              {%- endif -%}
+              {%- if section.settings.enable_autoplay -%}
+                <button type="button" class="button-slider button-slider__autoplay gradient gradient-global t-button b-none c-pointer d-flex a-i-center j-c-center no-js-hidden pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+                  {%- render 'icon-pause' -%}
+                  {%- render 'icon-play' -%}
+                  <svg class="autoplay-progress" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                </button>
+              {%- endif -%}
+              {%- if section.settings.arrows_type != 'none' -%}
+                <button type="button" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute{% if section.settings.pagination_type == 'none'%} pos-relative-xs{% endif %} z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                  {{ icon_arrow_list }}
+                </button>
+              {%- endif -%}
+              <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} slider-counter pos-relative-xs z-index-1 d-flex a-i-center j-c-center"></div>
             </div>
-          </noscript>
+            <noscript>
+              <div class="slideshow__controls d-flex a-i-center j-c-center w-100">
+                <div class="slider-counter pos-absolute pos-relative-xs z-index-2">
+                  <div class="slider-counter__wrapper d-flex a-i-center j-c-center">
+                    {%- for block in section.blocks -%}
+                      <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link link--text u-none" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
+                        {{ forloop.index }}
+                      </a>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              </div>
+            </noscript>
+          {%- endif -%}
+          
         {%- endif -%}
+
       </div>
     </div>
   </slideshow-component>

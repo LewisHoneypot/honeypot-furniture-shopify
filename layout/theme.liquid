@@ -27,8 +27,18 @@
     {% render 'meta-tags' %}
     {% render 'global-style' %}
     {{ content_for_header }}
+
+    {%- if settings.slider_type == 'swiper' -%}
+      {{ 'swiper.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- endif -%}
+
     {{ 'vendor.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+
+    {%- if settings.slider_type == 'splide' -%}
+      {{ 'splide.min.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'splide-override.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
 
     {%- if template contains 'product' -%}
       <style>
@@ -78,10 +88,12 @@
     {% endif %}
 
     {% comment %} tempalte type {% endcomment %}
-    {%- assign template_log = template | json -%}
-    <script>
-      console.log({{ template_log }});
-    </script>
+    {% comment %}
+      {%- assign template_log = template | json -%}
+      <script>
+        console.log({{ template_log }});
+      </script>
+    {% endcomment %}
 
     {%- if template contains 'collection' or template == 'search' -%}
       {{ 'collections-arrows.css' | asset_url | stylesheet_tag: preload: true }}
@@ -89,6 +101,43 @@
 
     {%- if template == 'blog' or template == 'article' or template contains 'collection' -%}
       {{ 'clickslice.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.nosto) {
+          window.nosto.sliderType = '{{ settings.slider_type }}';
+          console.log('✅ Nosto sliderType set to:', window.nosto.sliderType);
+        } else {
+          console.warn('⚠️ Nosto is not available yet. Retrying...');
+          let checkNosto = setInterval(function () {
+            if (window.nosto) {
+              clearInterval(checkNosto);
+              window.nosto.sliderType = '{{ settings.slider_type }}';
+              console.log('✅ Nosto sliderType set on retry:', window.nosto.sliderType);
+            }
+          }, 500);
+        }
+      });
+    </script>
+
+    {%- if settings.slider_type == 'splide' -%}
+      <script src="{{ 'splide.min.js' | asset_url }}" async></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(() => {
+            const sliders = document.querySelectorAll('.splide');
+            console.log(`Found ${sliders.length} Splide sliders on the page.`);
+
+            sliders.forEach(function (slider) {
+              new Splide(slider, {
+                type: 'loop',
+                perPage: 1,
+              }).mount();
+            });
+          }, 500); // Delay by 500ms
+        });
+      </script>
     {%- endif -%}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -112,13 +161,14 @@
 
     {% comment %} Clarity Script {% endcomment %}
 
-    {% comment %} <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "g4fmvmhh6m");
-    </script>
+    {% comment %}
+      <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "g4fmvmhh6m");
+      </script>
     {% endcomment %}
 
     <meta name="google-site-verification" content="gLFJD4hFYhNPblJVfCGHocM0W-0EWfTd9gdJ870czFA">
@@ -146,7 +196,9 @@
     {% comment %} VENDOR SCRIPTS {% endcomment %}
     {% comment %} <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 
-    <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+    {%- if settings.slider_type == 'swiper' -%}
+      <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
 
     {% comment %} <script src="{{ 'GSAP.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'ScrollTrigger.js' | asset_url }}" defer="defer"></script>
@@ -204,19 +256,27 @@
     <script src="{{ 'DrawerOpeners.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'PreloadScreen.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {%- unless template contains 'collection' -%}
-      <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
+      {%- if settings.slider_type == 'swiper' -%}
+        <script src="{{ 'SliderComponent.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
     {%- endunless -%}
     {%- if template contains 'product' -%}
-      <script src="{{ 'SliderComponentProduct.js' | asset_url }}" defer="defer"></script>
+      {%- if settings.slider_type == 'swiper' -%}
+        <script src="{{ 'SliderComponentProduct.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
     {%- endif -%}
     {% comment %} <script src="{{ 'CategorySlide.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'AnchorTarget.js' | asset_url }}" defer="defer"></script>
     {%- unless template contains 'collection' -%}
-      <script src="{{ 'SlideshowComponent.js' | asset_url }}" defer="defer"></script>
+      {%- if settings.slider_type == 'swiper' -%}
+        <script src="{{ 'SlideshowComponent.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
     {%- endunless -%}
     <script src="{{ 'StickyHeader.js' | asset_url }}" defer="defer"></script>
     {%- unless template contains 'collection' -%}
-      <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
+      {%- if settings.slider_type == 'swiper' -%}
+        <script src="{{ 'ThemeSwiper.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
       <script src="{{ 'ThemeTab.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
     <script src="{{ 'VariantTools.js' | asset_url }}" defer="defer"></script>
@@ -263,9 +323,11 @@
       <script src="{{ 'ufurnish.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% comment %} {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%} {% endcomment %}
+    {% comment %}
+      {%- if settings.predictive_search_enabled -%}
+        <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
+    {% endcomment %}
     <link rel="stylesheet" href="{{ 'animation.css' | asset_url }}" media="print" onload="this.media='all'">
   </body>
 </html>
