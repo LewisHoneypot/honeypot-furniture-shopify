@@ -120,6 +120,7 @@
         ">
           <div 
             class="
+              {%- if settings.slider_type == 'splide' -%}splide{%- endif %} 
               swiper 
               grid-scroll 
               d-block 
@@ -130,169 +131,183 @@
               padding-right: 15px; 
               margin-right: auto;
             "> 
-            <div class="carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Lookbook" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1.25;">
-              {%- for block in section.blocks -%}
-                <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if item_full_width %} grid__item-full grid__item-scroll--full{% endif %}" {{ block.shopify_attributes }}>
-                  <div class="item pos-relative">
-                    <div class="item__media d-block color-foreground">
-                      <div class="media media--transparent media--{{ section.settings.image_ratio }} pos-relative o-h d-block"
-                        {% if section.settings.image_ratio == 'adapt' %}
-                          {% if block.settings.image != blank %}
-                            style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
-                          {% else %}
-                            style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                          {% endif %}
-                        {% endif %}
-                      >
-                        {%- if block.settings.image != blank -%}
-                          {{
-                            block.settings.image | image_url: width: 3840 | image_tag:
-                            loading: 'lazy',
-                            sizes: sizes,
-                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                            class: 'motion-reduce'
-                          }}
-                        {%- else -%}
-                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                        {%- endif -%}
-                      </div>
-                    </div>
-                    <theme-lookbook class="lookbook d-block">
-                      {%- assign has_product = false -%}
-                      {%- for i in (1..5) -%}
-                        {%- capture product -%}product_{{ i }}{%- endcapture -%}
-                        {%- capture horizontal -%}horizontal_{{ i }}{%- endcapture -%}
-                        {%- capture vertical -%}vertical_{{ i }}{%- endcapture -%}
-                        {%- liquid
-                          assign product = block.settings[product]
-                          assign horizontal = block.settings[horizontal]
-                          assign vertical = block.settings[vertical]
-                        -%}
-                        {%- if product != blank -%}
-                          {%- assign has_product = true -%}
-                          <lookbook-point class="lookbook__point d-block pos-absolute l-h-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" 
-                            data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}" 
-                            {% if settings.animations_reveal_on_scroll %}
-                              style="--animation-order: {{ forloop.index }}; left: {{ horizontal }}%; top: {{ vertical }}%;"
+
+            {%- if settings.slider_type == 'splide' -%}<div class="splide__track">{%- endif %}
+
+              <div class="{%- if settings.slider_type == 'splide' -%}splide__list{%- endif %} carousel__items swiper-wrapper d-flex f-nowrap" id="Slider-{{ section.id }}" aria-label="Lookbook" style="--c-xs: 1; --c-sm: 1; --c-md: 1; --c-lg: 1.25;">
+                {%- for block in section.blocks -%}
+                  <div 
+                    role="listitem" 
+                    id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                    class="{%- if settings.slider_type == 'splide' -%}splide__slide{%- endif %} carousel__item swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% if item_full_width %} grid__item-full grid__item-scroll--full{% endif %}" {{ block.shopify_attributes }}>
+                    <div class="item pos-relative">
+                      <div class="item__media d-block color-foreground">
+                        <div class="media media--transparent media--{{ section.settings.image_ratio }} pos-relative o-h d-block"
+                          {% if section.settings.image_ratio == 'adapt' %}
+                            {% if block.settings.image != blank %}
+                              style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
                             {% else %}
-                              style="left: {{ horizontal }}%; top: {{ vertical }}%;"
+                              style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                             {% endif %}
-                          >
-                            <button class="lookbook__point-button d-block t-button p-0 b-none c-pointer b-circle focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.view' | t: title : product.title }}">&nbsp;</button>
-                            <noscript>
-                              <a href="{{ product.url }}" class="lookbook__point-button d-block t-button c-pointer b-none b-circle u-none color-foreground focus-inset">
-                                <span class="visually-hidden">{{ 'general.lookbook.view' | t: title : product.title }}</span>
-                                &nbsp;
-                              </a>
-                            </noscript>
-                            <div class="lookbook__point-popup pos-absolute z-index-1 global-settings-popup gradient d-none no-js-hidden" id="LOOKBOOK-{{ block.id }}-{{ product.id }}-{{ forloop.index }}">
+                          {% endif %}
+                        >
+                          {%- if block.settings.image != blank -%}
+                            {{
+                              block.settings.image | image_url: width: 3840 | image_tag:
+                              loading: 'lazy',
+                              sizes: sizes,
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              class: 'motion-reduce'
+                            }}
+                          {%- else -%}
+                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                          {%- endif -%}
+                        </div>
+                      </div>
+                      <theme-lookbook class="lookbook d-block">
+                        {%- assign has_product = false -%}
+                        {%- for i in (1..5) -%}
+                          {%- capture product -%}product_{{ i }}{%- endcapture -%}
+                          {%- capture horizontal -%}horizontal_{{ i }}{%- endcapture -%}
+                          {%- capture vertical -%}vertical_{{ i }}{%- endcapture -%}
+                          {%- liquid
+                            assign product = block.settings[product]
+                            assign horizontal = block.settings[horizontal]
+                            assign vertical = block.settings[vertical]
+                          -%}
+                          {%- if product != blank -%}
+                            {%- assign has_product = true -%}
+                            <lookbook-point class="lookbook__point d-block pos-absolute l-h-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" 
+                              data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}" 
+                              {% if settings.animations_reveal_on_scroll %}
+                                style="--animation-order: {{ forloop.index }}; left: {{ horizontal }}%; top: {{ vertical }}%;"
+                              {% else %}
+                                style="left: {{ horizontal }}%; top: {{ vertical }}%;"
+                              {% endif %}
+                            >
+                              <button class="lookbook__point-button d-block t-button p-0 b-none c-pointer b-circle focus-inset no-js-hidden" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.view' | t: title : product.title }}">&nbsp;</button>
+                              <noscript>
+                                <a href="{{ product.url }}" class="lookbook__point-button d-block t-button c-pointer b-none b-circle u-none color-foreground focus-inset">
+                                  <span class="visually-hidden">{{ 'general.lookbook.view' | t: title : product.title }}</span>
+                                  &nbsp;
+                                </a>
+                              </noscript>
+                              <div class="lookbook__point-popup pos-absolute z-index-1 global-settings-popup gradient d-none no-js-hidden" id="LOOKBOOK-{{ block.id }}-{{ product.id }}-{{ forloop.index }}">
+                                <template>
+                                  <div class="item__card pos-relative animate-arrow">
+                                    <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
+                                      <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
+                                        <span class="link-style">{{ product.title | escape }}</span>
+                                      </a>
+                                    </h3>
+                                    <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
+                                      {% render 'price',
+                                        product: product,
+                                        price_class: ''
+                                      %}
+                                      {{ icon_arrow_long }}
+                                    </div>
+                                  </div>
+                                </template>
+                              </div>
+                            </lookbook-point>
+                          {%- endif -%}
+                        {%- endfor -%}
+                        {%- if has_product -%}
+                          <lookbook-drawer-opener class="lookbook__drawer-opener d-none d-block-xl pos-absolute o-h no-js-hidden" data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}">
+                            <button class="d-block t-button b-none c-pointer o-h l-h-1 gradient" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.show' | t }}">
+                              <span class="text">{{ 'general.lookbook.show' | t }}</span>
+                            </button>
+                          </lookbook-drawer-opener>
+                          <lookbook-drawer id="LOOKBOOK-{{ block.id }}-{{ section.id }}" class="lookbook__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex a-i-end j-c-end no-js-hidden">
+                            <div class="side-drawer no-animation--popup w-100">
+                              <div id="Drawer-Overlay-LOOKBOOK-{{ block.id }}-{{ section.id }}" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
                               <template>
-                                <div class="item__card pos-relative animate-arrow">
-                                  <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
-                                    <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
-                                      <span class="link-style">{{ product.title | escape }}</span>
-                                    </a>
-                                  </h3>
-                                  <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
-                                    {% render 'price',
-                                      product: product,
-                                      price_class: ''
-                                    %}
-                                    {{ icon_arrow_long }}
+                                <div class="lookbook__drawer-inner drawer__inner gradient d-flex f-column o-h color-background-1" role="dialog" aria-modal="true" aria-label="{{ 'general.lookbook.view_all' | t }}" tabindex="-1">
+                                  <div class="lookbook__drawer-header drawer__header d-flex j-c-between a-i-center pos-relative">
+                                    <h2 class="lookbook__drawer-heading drawer__heading break m-0">{{ 'general.lookbook.view_all' | t }}</h2>
+                                    <button class="lookbook__drawer-close drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('lookbook-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
+                                  </div>
+                                  <div class="lookbook__drawer-wrapper drawer__wrapper d-flex f-nowrap overflow-x g-gap p-b" style="--g-gap: 1rem; --p-b: 1rem;">
+                                    {%- for i in (1..5) -%}
+                                      {%- capture product -%}product_{{ i }}{%- endcapture -%}
+                                      {%- assign product = block.settings[product] -%}
+                                      {%- if product != blank -%}
+                                        {%- liquid
+                                          assign ratio = product.featured_media.aspect_ratio
+                                          if ratio == 0 or ratio == null
+                                            assign ratio = 1
+                                          endif
+                                        -%}
+                                        <div class="item__card-drawer pos-relative">
+                                          <div class="item__card-media o-h">
+                                            <div class="media media--transparent media--adapt pos-relative" style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                                            >
+                                              {%- if product.featured_media -%}
+                                                <img
+                                                  srcset="{{ product.featured_media | image_url: width: 550 }}"
+                                                  src="{{ product.featured_media | image_url: width: 550 }}"
+                                                  sizes="(min-width: 750px) 550, calc(100vw - 30px)"
+                                                  alt="{{ product.featured_media.alt | escape }}"
+                                                  class="motion-reduce"
+                                                  loading="lazy"
+                                                  width="{{ product.featured_media.width }}"
+                                                  height="{{ product.featured_media.height }}"
+                                                >
+                                              {%- else -%}
+                                                {{ 'product-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+                                              {%- endif -%}
+                                            </div>
+                                          </div>
+                                          <div class="item__card-content m-t" style="--m-t: 1.5rem;">
+                                            <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
+                                              <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
+                                                <span class="link-style">{{ product.title | escape }}</span>
+                                              </a>
+                                            </h3>
+                                            <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
+                                              {% render 'price',
+                                                product: product,
+                                                price_class: ''
+                                              %}
+                                              {{ icon_arrow_long }}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      {%- endif -%}
+                                    {%- endfor-%}
                                   </div>
                                 </div>
                               </template>
                             </div>
-                          </lookbook-point>
+                          </lookbook-drawer>
                         {%- endif -%}
-                      {%- endfor -%}
-                      {%- if has_product -%}
-                        <lookbook-drawer-opener class="lookbook__drawer-opener d-none d-block-xl pos-absolute o-h no-js-hidden" data-side-drawer="#LOOKBOOK-{{ block.id }}-{{ section.id }}">
-                          <button class="d-block t-button b-none c-pointer o-h l-h-1 gradient" type="button" aria-haspopup="dialog" aria-label="{{ 'general.lookbook.show' | t }}">
-                            <span class="text">{{ 'general.lookbook.show' | t }}</span>
-                          </button>
-                        </lookbook-drawer-opener>
-                        <lookbook-drawer id="LOOKBOOK-{{ block.id }}-{{ section.id }}" class="lookbook__drawer drawer pos-fixed top-0 left-0 z-index-8 w-100v h-100 d-flex a-i-end j-c-end no-js-hidden">
-                          <div class="side-drawer no-animation--popup w-100">
-                            <div id="Drawer-Overlay-LOOKBOOK-{{ block.id }}-{{ section.id }}" class="drawer__overlay pos-fixed top-0 left-0 right-0 bottom-0 c-pointer"></div>
-                            <template>
-                              <div class="lookbook__drawer-inner drawer__inner gradient d-flex f-column o-h color-background-1" role="dialog" aria-modal="true" aria-label="{{ 'general.lookbook.view_all' | t }}" tabindex="-1">
-                                <div class="lookbook__drawer-header drawer__header d-flex j-c-between a-i-center pos-relative">
-                                  <h2 class="lookbook__drawer-heading drawer__heading break m-0">{{ 'general.lookbook.view_all' | t }}</h2>
-                                  <button class="lookbook__drawer-close drawer__close d-block t-button b-none c-pointer b-circle button--close" type="button" onclick="this.closest('lookbook-drawer').close()" aria-label="{{ 'accessibility.close' | t }}"><span class="i__close e-none d-block pos-relative color-current w-100 h-100"></span></button>
-                                </div>
-                                <div class="lookbook__drawer-wrapper drawer__wrapper d-flex f-nowrap overflow-x g-gap p-b" style="--g-gap: 1rem; --p-b: 1rem;">
-                                  {%- for i in (1..5) -%}
-                                    {%- capture product -%}product_{{ i }}{%- endcapture -%}
-                                    {%- assign product = block.settings[product] -%}
-                                    {%- if product != blank -%}
-                                      {%- liquid
-                                        assign ratio = product.featured_media.aspect_ratio
-                                        if ratio == 0 or ratio == null
-                                          assign ratio = 1
-                                        endif
-                                      -%}
-                                      <div class="item__card-drawer pos-relative">
-                                        <div class="item__card-media o-h">
-                                          <div class="media media--transparent media--adapt pos-relative" style="padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;"
-                                          >
-                                            {%- if product.featured_media -%}
-                                              <img
-                                                srcset="{{ product.featured_media | image_url: width: 550 }}"
-                                                src="{{ product.featured_media | image_url: width: 550 }}"
-                                                sizes="(min-width: 750px) 550, calc(100vw - 30px)"
-                                                alt="{{ product.featured_media.alt | escape }}"
-                                                class="motion-reduce"
-                                                loading="lazy"
-                                                width="{{ product.featured_media.width }}"
-                                                height="{{ product.featured_media.height }}"
-                                              >
-                                            {%- else -%}
-                                              {{ 'product-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
-                                            {%- endif -%}
-                                          </div>
-                                        </div>
-                                        <div class="item__card-content m-t" style="--m-t: 1.5rem;">
-                                          <h3 class="item__card-title h4 m-b" style="--m-b: 0.3rem;">
-                                            <a href="{{ product.url }}" class="d-block link link--text h-link {{ settings.link_type | prepend: "link--style-" }} link-cover">
-                                              <span class="link-style">{{ product.title | escape }}</span>
-                                            </a>
-                                          </h3>
-                                          <div class="item__card-price d-flex a-i-center c-gap" style="--c-gap: 1.5rem;">
-                                            {% render 'price',
-                                              product: product,
-                                              price_class: ''
-                                            %}
-                                            {{ icon_arrow_long }}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    {%- endif -%}
-                                  {%- endfor-%}
-                                </div>
-                              </div>
-                            </template>
-                          </div>
-                        </lookbook-drawer>
-                      {%- endif -%}
-                    </theme-lookbook>
+                      </theme-lookbook>
+                    </div>
                   </div>
-                </div>
-              {%- endfor -%}
-            </div>
-            {%- if section.blocks.size > 1 -%}
-              <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
-                {%- if section.settings.arrows_type != 'none' -%}
-                  <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
-                    {{ icon_arrow_list }}
-                  </button>
-                  <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
-                    {{ icon_arrow_list }}
-                  </button>
-                {%- endif -%}
-                <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                {%- endfor -%}
               </div>
+
+            {%- if settings.slider_type == 'splide' -%}</div>{%- endif %}
+
+            {%- if settings.slider_type == "swiper" -%}
+
+              {%- if section.blocks.size > 1 -%}
+                <div class="carousel__controls arrow-style-{{ settings.arrow_style }} no-js-hidden">
+                  {%- if section.settings.arrows_type != 'none' -%}
+                    <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                      {{ icon_arrow_list }}
+                    </button>
+                    <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                      {{ icon_arrow_list }}
+                    </button>
+                  {%- endif -%}
+                  <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative"></div>
+                </div>
+              {%- endif -%}
+              
             {%- endif -%}
+
           </div>
         </slider-component>
       </div>

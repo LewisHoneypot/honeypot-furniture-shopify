@@ -1,0 +1,15 @@
+.splide__arrow {
+  z-index: 2 !important;
+  height: 4em !important;
+  width: 4em !important;
+  border: solid 1px #000 !important;
+  background: #fff !important;
+}
+
+/* .splide__list {
+  max-height: 100vw;
+} */
+
+#shopify-section-template--24400885285239__a0b92d9e-e25a-4de9-9035-373ef5c4d596 {
+  min-height: 454px;
+}

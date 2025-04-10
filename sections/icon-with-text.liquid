@@ -101,9 +101,28 @@
       {%- endif -%}
 				<slider-component class="d-block pos-relative"{% if section.settings.layout == 'vertical' and section.settings.type_vertical == 'carousel' %} data-space-between="30" data-type-pagination="dots" data-item-to-show-desktop="4" data-item-to-show-tablet="3" data-item-to-show-mobile="2"{% endif %}>
 					{%- if section.settings.layout == 'vertical' and section.settings.type_vertical == 'carousel' -%}
-            <div class="swiper d-block pos-relative no-js-overflow-x">
+            <div 
+              class="{% if settings.slider_type == 'splide' -%}splide{%- endif %} swiper d-block pos-relative no-js-overflow-x" 
+              data-splide='{
+                "type": "loop",
+                "perPage": 4,
+                "breakpoints": {
+                  "640": {
+                    "perPage": 1
+                  },
+                  "990": {
+                    "perPage": 3
+                  },
+                  "1300": {
+                    "perPage": 4
+                  }
+                },
+                "perMove": 1,
+                "autoplay": "pause"
+              }'
+            >
           {%- endif -%}
-            <div class="carousel__items{% if section.settings.layout != 'horizontal' and section.settings.type_vertical == 'scroll' %} a-i-start j-c-between f-wrap{% endif %} {% if section.settings.layout == 'horizontal' %}f-wrap grid{% else %}{% if section.settings.type_vertical == 'carousel' %}swiper-wrapper f-nowrap{% else %}grid{% endif %}{% endif %} d-flex spacing-xs" id="Slider-{{ section.id }}" role="list" aria-label="Icon with text"
+            <div class="{% if settings.slider_type == 'splide' -%}splide__track{%- endif %} carousel__items{% if section.settings.layout != 'horizontal' and section.settings.type_vertical == 'scroll' %} a-i-start j-c-between f-wrap{% endif %} {% if section.settings.layout == 'horizontal' %}f-wrap grid{% else %}{% if section.settings.type_vertical == 'carousel' %}swiper-wrapper f-nowrap{% else %}grid{% endif %}{% endif %} d-flex spacing-xs" id="Slider-{{ section.id }}" role="list" aria-label="Icon with text"
               {% if section.settings.layout == 'horizontal' or section.settings.type_vertical != 'carousel' %} 
                 style="--c-xs: {{ column_xs | default: '1'}}; --c-sm: {{ column_sm | default: '2'}}; --c-md: {{ column_md | default: '2'}}; --c-lg: {{ column_lg | default: '4'}}; --c-xl: {{ column_xl | default: '0'}};
                 {% if section.settings.layout == 'vertical' %}
@@ -111,67 +130,86 @@
                 {% endif %}"
               {% endif %}
             >
-              {%- for block in section.blocks -%}
-                <div class="carousel__item {% if section.settings.layout == 'horizontal' or section.settings.type_vertical == 'scroll' %}grid__item grid__item--xl{% else %}{% if section.settings.type_vertical == 'carousel' %}swiper-slide no-js-grid__item no-js-grid__scroll{% else %}grid__item{% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
-                  role="listitem" 
-                  id="Slide-{{ section.id }}-{{ forloop.index }}" 
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  <{% if block.settings.link != blank and block.settings.link_label == blank %}a{% else %}div{% endif %} class="item{% if section.settings.layout == 'horizontal' %} d-flex a-i-center j-c-{{ section.settings.text_alignment }} h-100 c-gap{% else %} pos-relative {{ section.settings.text_alignment }}{% endif %}{% if block.settings.link != blank and block.settings.link_label == blank %} h-link u-none{% endif %} color-foreground animate-icon link-cover"{% if section.settings.layout == 'horizontal' %} style="--c-gap: 2rem;"{% endif %}{% if block.settings.link != blank and block.settings.link_label == blank %} href="{{ block.settings.link }}"{% endif %}>
-                    {%- if block.settings.icon != 'none' -%}
-                      <div class="item__icon{% if block.settings.enable_custom_size_icon %} custom-size-icon{% endif %}{% if section.settings.layout != 'horizontal' %}{% if block.settings.link != blank and block.settings.link_label == blank %} d-flex m-auto {{ section.settings.text_alignment }}{% else %} d-inline-block{% endif %}{% if section.settings.enable_background_icon %} background-icon{% if block.settings.custom_icon_background != blank %} bg-custom{% else %} gradient{% endif %} gradient-global{% endif %} b-circle c-inline l-h-1{% endif %}"
-                        style="
-                          {% if block.settings.custom_icon_background != blank %}--bg-custom:{{ block.settings.custom_icon_background.rgb }};{% endif %}
-                          {% if block.settings.enable_custom_size_icon %}--custom-size-icon: {{ block.settings.custom_size_icon }}px{% endif %}
-                          "
-                      >
-                        {% render 'icon-accordion', icon: block.settings.icon %}
-                      </div>
-                    {%- endif -%}
-                    {%- if block.settings.heading != blank or block.settings.text != blank or block.settings.link_label != blank -%}
-                      <{% if section.settings.text_animation == 'split' %}splitting-animate{%  else %}animate-element{% endif %} class="item__content">
-                        {%- if block.settings.heading != blank -%}
-                          <h3 {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} 
-                            class="{% if section.settings.blocks_heading_size == 'text-body' %}text-body{% else %}{{ section.settings.blocks_heading_size | prepend: 'text-size text-size-' }}{% endif %}{% if section.settings.type_vertical == 'grid' and section.blocks.size == 3 %} m-spacing{% endif %} {{ section.settings.blocks_heading_font | prepend: 'typography-' }} f-w-600 u-none" 
-                            style="--font-body-weight: 600; --a-delay: 0.2s;{% if section.settings.type_vertical == 'grid' and section.blocks.size == 3 %} --m-spacing-b: 0.6rem;--m-spacing-t: 0;{% endif %}"
-                          >
-                            {{ block.settings.heading | escape }}
-                          </h3>
-                        {%- endif -%}
-                        {%- if block.settings.text != blank -%}
-                          <div {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} 
-                            class="text m-b{% if block.settings.link != blank and block.settings.link_label == blank %} {{ section.settings.text_alignment }}{% endif %}{% if section.settings.layout != 'horizontal' and section.settings.enable_background_icon == false %} cus-text--vertical{% else %} {{ section.settings.blocks_text_size | prepend: 'text-size-' }}{% endif %} rte" 
-                            style="--a-delay: 0.4s;--m-b: 1rem;"
-                          >
-                            {{ block.settings.text }}
-                          </div>
-                        {%- endif -%}
-                        {%- if block.settings.link_label != blank -%}
-                          <div {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} class="rte" style="--a-delay: 0.6s;">
-                            <a {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %} class="link link--text u-link {{ settings.link_type | prepend: "link--style-" }}" aria-label="{{ block.settings.link_label }}">
-                              <span class="link-style">{{ block.settings.link_label | escape }}</span>
-                            </a>
-                          </div>
-                        {%- endif -%}
-                      </{% if section.settings.text_animation == 'split' %}splitting-animate{%  else %}animate-element{% endif %}>
-                    {%- endif -%}
-                  </{% if block.settings.link != blank and block.settings.link_label == blank %}a{% else %}div{% endif %}>
-                </div>
-              {%- endfor -%}
+            {% if settings.slider_type == 'splide' -%}<div class="splide__list">{%- endif -%}
+              
+              {% if settings.slider_type == 'splide' -%}
+                <style>
+                  .splide__slide {
+                    max-width: 100vw;
+                  }
+                </style>                
+              {%- endif -%}
+
+                {%- for block in section.blocks -%}
+                  <div class="{%- if settings.slider_type == 'splide' -%}splide__slide {%- endif %} carousel__item {% if section.settings.layout == 'horizontal' or section.settings.type_vertical == 'scroll' %}grid__item grid__item--xl{% else %}{% if section.settings.type_vertical == 'carousel' %}swiper-slide no-js-grid__item no-js-grid__scroll{% else %}grid__item{% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                    role="listitem" 
+                    id="Slide-{{ section.id }}-{{ forloop.index }}" 
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <{% if block.settings.link != blank and block.settings.link_label == blank %}a{% else %}div{% endif %} class="item{% if section.settings.layout == 'horizontal' %} d-flex a-i-center j-c-{{ section.settings.text_alignment }} h-100 c-gap{% else %} pos-relative {{ section.settings.text_alignment }}{% endif %}{% if block.settings.link != blank and block.settings.link_label == blank %} h-link u-none{% endif %} color-foreground animate-icon link-cover"{% if section.settings.layout == 'horizontal' %} style="--c-gap: 2rem;"{% endif %}{% if block.settings.link != blank and block.settings.link_label == blank %} href="{{ block.settings.link }}"{% endif %}>
+                      {%- if block.settings.icon != 'none' -%}
+                        <div class="item__icon{% if block.settings.enable_custom_size_icon %} custom-size-icon{% endif %}{% if section.settings.layout != 'horizontal' %}{% if block.settings.link != blank and block.settings.link_label == blank %} d-flex m-auto {{ section.settings.text_alignment }}{% else %} d-inline-block{% endif %}{% if section.settings.enable_background_icon %} background-icon{% if block.settings.custom_icon_background != blank %} bg-custom{% else %} gradient{% endif %} gradient-global{% endif %} b-circle c-inline l-h-1{% endif %}"
+                          style="
+                            {% if block.settings.custom_icon_background != blank %}--bg-custom:{{ block.settings.custom_icon_background.rgb }};{% endif %}
+                            {% if block.settings.enable_custom_size_icon %}--custom-size-icon: {{ block.settings.custom_size_icon }}px{% endif %}
+                            "
+                        >
+                          {% render 'icon-accordion', icon: block.settings.icon %}
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.heading != blank or block.settings.text != blank or block.settings.link_label != blank -%}
+                        <{% if section.settings.text_animation == 'split' %}splitting-animate{%  else %}animate-element{% endif %} class="item__content">
+                          {%- if block.settings.heading != blank -%}
+                            <h3 {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} 
+                              class="{% if section.settings.blocks_heading_size == 'text-body' %}text-body{% else %}{{ section.settings.blocks_heading_size | prepend: 'text-size text-size-' }}{% endif %}{% if section.settings.type_vertical == 'grid' and section.blocks.size == 3 %} m-spacing{% endif %} {{ section.settings.blocks_heading_font | prepend: 'typography-' }} f-w-600 u-none" 
+                              style="--font-body-weight: 600; --a-delay: 0.2s;{% if section.settings.type_vertical == 'grid' and section.blocks.size == 3 %} --m-spacing-b: 0.6rem;--m-spacing-t: 0;{% endif %}"
+                            >
+                              {{ block.settings.heading | escape }}
+                            </h3>
+                          {%- endif -%}
+                          {%- if block.settings.text != blank -%}
+                            <div {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} 
+                              class="text m-b{% if block.settings.link != blank and block.settings.link_label == blank %} {{ section.settings.text_alignment }}{% endif %}{% if section.settings.layout != 'horizontal' and section.settings.enable_background_icon == false %} cus-text--vertical{% else %} {{ section.settings.blocks_text_size | prepend: 'text-size-' }}{% endif %} rte" 
+                              style="--a-delay: 0.4s;--m-b: 1rem;"
+                            >
+                              {{ block.settings.text }}
+                            </div>
+                          {%- endif -%}
+                          {%- if block.settings.link_label != blank -%}
+                            <div {% if section.settings.text_animation == 'split' %}data-splitting-element="chars" data-splitting-animate="up"{% else %}data-animate="{{ section.settings.text_animation }}"{% endif %} class="rte" style="--a-delay: 0.6s;">
+                              <a {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %} class="link link--text u-link {{ settings.link_type | prepend: "link--style-" }}" aria-label="{{ block.settings.link_label }}">
+                                <span class="link-style">{{ block.settings.link_label | escape }}</span>
+                              </a>
+                            </div>
+                          {%- endif -%}
+                        </{% if section.settings.text_animation == 'split' %}splitting-animate{%  else %}animate-element{% endif %}>
+                      {%- endif -%}
+                    </{% if block.settings.link != blank and block.settings.link_label == blank %}a{% else %}div{% endif %}>
+                  </div>
+                {%- endfor -%}
+
+              {% if settings.slider_type == 'splide' -%}</div>{%- endif -%}
+
             </div>
-            {%- if section.settings.layout == 'vertical' and section.settings.arrows_type != 'none' and section.settings.type_vertical == 'carousel' and section.blocks.size > 1 -%}
-              <div class="carousel__controls arrow-style-{{ settings.arrow_style }} carousel__controls--inner no-js-hidden" style="--padding-width: 0rem; --padding-grid-scroll: 0rem;">
-                <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
-                  {{ icon_arrow_list }}
-                </button>
-                <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
-                  {{ icon_arrow_list }}
-                </button>
-              </div>
+
+            {% if settings.slider_type != 'splide' -%}
+
+              {%- if section.settings.layout == 'vertical' and section.settings.arrows_type != 'none' and section.settings.type_vertical == 'carousel' and section.blocks.size > 1 -%}
+                <div class="carousel__controls arrow-style-{{ settings.arrow_style }} carousel__controls--inner no-js-hidden" style="--padding-width: 0rem; --padding-grid-scroll: 0rem;">
+                  <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
+                    {{ icon_arrow_list }}
+                  </button>
+                  <button type="button" data-step="1" class="button-slider button-slider__next swiper-screen__{{ section.settings.arrows_type }} color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-next" aria-label="{{ 'accessibility.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="next">
+                    {{ icon_arrow_list }}
+                  </button>
+                </div>
+              {%- endif -%}
+            
             {%- endif -%}
+
           {%- if section.settings.layout == 'vertical' or section.settings.type_vertical == 'carousel' -%}
             </div>
           {%- endif -%}

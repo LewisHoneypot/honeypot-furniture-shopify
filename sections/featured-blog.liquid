@@ -98,17 +98,20 @@
             {% endif %}
           >
             {%- if section.settings.style_layout == 'enable_carousel' -%}
-              <div class="swiper d-block pos-relative grid-scroll no-js-grid-scroll no-js-overflow-x" 
+              <div class="{%- if settings.slider_type == 'splide' -%}splide{%- endif %} swiper d-block pos-relative grid-scroll no-js-grid-scroll no-js-overflow-x" 
                 style="--n-j-grid-h-md: 0px; --n-j-grid-h-xs: 0px; --padding-h-md: 20px; --padding-h-xs: 10px;"
               > 
+
+              {%- if settings.slider_type == 'splide' -%}<div class="splide__track">{%- endif -%}
+
             {%- endif -%}
-                <div class="carousel__items{% if section.settings.style_layout == 'enable_carousel' %} swiper-wrapper f-nowrap{% else %} f-wrap grid{% endif %} d-flex" id="Slider-{{ section.id }}" aria-label="Featured blog"
+                <div class="{%- if settings.slider_type == 'splide' -%}splide__list{%- endif %} carousel__items{% if section.settings.style_layout == 'enable_carousel' %} swiper-wrapper f-nowrap{% else %} f-wrap grid{% endif %} d-flex" id="Slider-{{ section.id }}" aria-label="Featured blog"
                   style="{% if section.settings.style_layout == 'enable_carousel' %}--c-xs: {{ carousel_number_mobile }}; --c-sm: {{ carousel_number_mobile }}; --c-md: {{ carousel_number_tablet }}; --c-lg: {{ carousel_number }};{% else %}--c-xs: {{ grid_number_mobile }}; --c-sm: {{ grid_number_mobile }}; --c-md: {{ grid_number_tablet }}; --c-lg: {{ grid_number }};{% endif %} --grid-v-xs: {{ spacing_mobile }}px; --grid-v-md: {{ spacing_tablet }}px; --grid-v-lg: {{ spacing_desktop }}px; --grid-h-xs: {{ spacing_mobile }}px; --grid-h-md: {{ spacing_tablet }}px; --grid-h-lg: {{ spacing_desktop }}px;"
                 >
                   {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
                     <div role="listitem" 
                       id="Slide-{{ section.id }}-{{ forloop.index }}" 
-                      class="carousel__item{% if section.settings.style_layout == 'enable_carousel' %} swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% else %} grid__item{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      class="{%- if settings.slider_type == 'splide' -%}splide__slide{%- endif %} carousel__item{% if section.settings.style_layout == 'enable_carousel' %} swiper-slide scroll-s-start no-js-grid__item no-js-grid__scroll{% else %} grid__item{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                       {% if settings.animations_reveal_on_scroll %}
                         style="--animation-order: {{ forloop.index }};"
                       {% endif %}
@@ -219,6 +222,9 @@
                     {%- endfor -%}
                   {%- endfor -%}
                 </div>
+
+              {%- if settings.slider_type == "swiper" -%}
+                
                 {%- if posts_exceed_limit and section.settings.arrows_type != 'none' and section.settings.style_layout == 'enable_carousel' -%}
                   <div class="carousel__controls arrow-style-{{ settings.arrow_style }} carousel__controls--inner no-js-hidden" style="--padding: 0px;">
                     <button type="button" data-step="1" class="button-slider button-slider__prev swiper-screen__{{ section.settings.arrows_type }} button-slider__hover color-arrow t-button b-none c-pointer pos-absolute z-index-2 b-circle p-0 d-flex a-i-center j-c-center swiper-button-prev" aria-label="{{ 'accessibility.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" name="previous">
@@ -230,6 +236,11 @@
                     <div class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} pos-relative pos-relative-xs"></div>
                   </div>
                 {%- endif -%}
+
+              {%- endif -%}
+
+              {%- if settings.slider_type == 'splide' -%}</div>{%- endif -%}
+
             {%- if section.settings.style_layout == 'enable_carousel' -%}
               </div> 
             {%- endif -%}
