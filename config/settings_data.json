@@ -34,7 +34,7 @@
     "enable_animated_cursor": false,
     "colors_animated_cursor": "#ede9e2",
     "animations_reveal_on_scroll": true,
-    "slider_type": "splide",
+    "slider_type": "swiper",
     "buttons_font_weight": "bold",
     "buttons_border_thickness": 2,
     "buttons_border_opacity": 100,
