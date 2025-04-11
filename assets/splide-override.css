@@ -10,6 +10,12 @@
   max-height: 100vw;
 } */
 
+@media  screen and (min-width:641px) {
+  .nosto-carousel .splide__slide {
+    padding: 5px;
+  }  
+}
+
 #shopify-section-template--24400885285239__a0b92d9e-e25a-4de9-9035-373ef5c4d596 {
   min-height: 454px;
 }
