@@ -658,11 +658,11 @@
             {%- liquid
               if section.settings.pagination_type == 'none'
                 if section.settings.arrows_type == 'none' or section.settings.arrows_type == 'lg' or section.settings.arrows_type == 'md'
-                  assign checkControls = true
+                  assign check_controls = true
                 endif
               endif
             -%}
-            {%- if section.settings.enable_autoplay and checkControls -%}
+            {%- if section.settings.enable_autoplay and check_controls -%}
               <div
                 type="button"
                 class="slideshow-autoplay swiper-screen__{{ section.settings.arrows_type | replace: 'none', 'all' | replace: 'lg', 'sm' | replace: 'md', 'xs' }} color-arrow t-button b-none c-pointer pos-absolute bottom-0 focus-none z-index-2 b-circle p-0 d-flex a-i-center j-c-center"
@@ -1373,11 +1373,11 @@
           {%- liquid
             if section.settings.pagination_type == 'none'
               if section.settings.arrows_type == 'none' or section.settings.arrows_type == 'lg' or section.settings.arrows_type == 'md'
-                assign checkControls = true
+                assign check_controls = true
               endif
             endif
           -%}
-          {%- if section.settings.enable_autoplay and checkControls -%}
+          {%- if section.settings.enable_autoplay and check_controls -%}
             <div
               type="button"
               class="slideshow-autoplay swiper-screen__{{ section.settings.arrows_type | replace: 'none', 'all' | replace: 'lg', 'sm' | replace: 'md', 'xs' }} color-arrow t-button b-none c-pointer pos-absolute bottom-0 focus-none z-index-2 b-circle p-0 d-flex a-i-center j-c-center"
