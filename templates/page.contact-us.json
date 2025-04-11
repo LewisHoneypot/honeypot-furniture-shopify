@@ -61,6 +61,7 @@
         "text_DUcWQ6",
         "button_Thpi8Y"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -88,6 +89,7 @@
       "block_order": [
         "6590b1b0-227d-4fcc-9983-ab8aa8ae9b41"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "section_width": "customized-width",
