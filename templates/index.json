@@ -1258,7 +1258,7 @@
         "customize_width": 1800,
         "padding_container_full_w": 0,
         "show_line_separator": false,
-        "style_layout": "enable_carousel",
+        "style_layout": "enable_grid",
         "icon": "none",
         "heading": "Blog Posts",
         "heading_size": "small",

@@ -103,16 +103,21 @@
     endif
   -%}
   <div class="section__c-list style--{{ section.settings.type_style }}{% if section.settings.arrows_type != 'none' or section.settings.enable_carousel == true %}{% if section.settings.type_style == 'masonry' %} display-arrow display-arrow__{{ section.settings.arrows_type }}{% endif %}{% endif %}{% unless section.settings.show_line_separator %} spacing spacing-xs{% endunless %} color-{{ section.settings.color_scheme }} gradient"
-    style="--padding-top: {{ section.settings.padding_top }}px;
+    style="
+    --padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
     --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
     --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    min-height:454px;
     {%- if section.settings.use_custom_color -%}
       --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
       --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
     {%- endif -%}"
   >
-    <div class="page-width m-auto o-h{% if section.settings.type_style == 'classic' %} collection-list--classic{% endif %}">
+    <div 
+      class="page-width m-auto o-h{% if section.settings.type_style == 'classic' %} collection-list--classic{% endif %}"
+      style="min-height:434px;"
+    > 
       {%- if section.settings.show_line_separator -%}
         <div class="b-bottom spacing spacing-xs">          
       {%- endif -%}
@@ -129,12 +134,20 @@
             {% endif %}"
           >
             <div class="p-w__header--wrapper {{ section.settings.header_alignment }}">
-              <h2 id="SectionHeading-{{ section.id }}" class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.font == 'garamond' %} Garamond {% elsif section.settings.font == 'Gotham' %} Gotham {% endif %}">
+              <h2 
+                id="SectionHeading-{{ section.id }}" 
+                class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0
+                  {% comment %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}  {% endcomment %}
+                  {% if section.settings.font == 'garamond' %} Garamond {% elsif section.settings.font == 'Gotham' %} Gotham {% endif %}
+                ">
                 {{ section.settings.heading | escape }}
               </h2>
             </div>
           </div>
         {%- endif -%}
+
+
+        {%- if settings.slider_type == "swiper" -%}
 
           <slider-component class="d-block pos-relative p-t p-t-xs{% if section.settings.enable_carousel %} swiper-more-item{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if section.settings.type_style == 'classic' %} o-h{% endif %}"
             {% if section.settings.enable_carousel %}
@@ -219,7 +232,8 @@
                               {%- else -%}
                                 padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;
                               {%- endif -%}
-                              --a-delay: {{ '0.05' | times: forloop.index }}s;"
+                              --a-delay: {{ '0.05' | times: forloop.index }}s;
+                            "
                           {% endif %}
                         >
                           {%- if block.settings.collection != blank and block.settings.collection.featured_image -%}
@@ -387,6 +401,180 @@
               </div>
             {%- endif -%}
           </slider-component>
+
+        {%- elsif settings.slider_type == 'splide' -%}
+
+          <slider-component 
+            class="d-block pos-relative p-t p-t-xs
+              {% comment %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% endcomment %}
+              {% if section.settings.type_style == 'classic' %} o-h{% endif %}
+            " 
+            aria-label="Collection list slider"
+            {% if section.settings.type_style == 'masonry' %}
+              data-space-between="{{ section.settings.carousel_gap }}" 
+              data-space-between-tablet="{{ section.settings.carousel_gap | times: 1.5 }}" 
+              data-space-between-desktop="{{ section.settings.carousel_gap | times: 2 }}" 
+              data-item-xs="{% if section.settings.columns_mobile == '1' %}1.055{% endif %}"
+            {% else %}
+              data-space-between="{{ section.settings.carousel_gap }}" 
+              data-item-xs="{{ column_xs }}"
+            {% endif %}
+            data-type-pagination="none"
+            data-item-xxl="{{ column_xxl }}" 
+            data-item-xl="{{ column_xl }}" 
+            data-item-lg="{{ column_lg }}" 
+            data-item-md="{{ column_md }}" 
+            data-item-sm="{{ column_sm }}"
+            {% if section.settings.type_style == 'classic' %} 
+              style="--button-control-top: -{{ carousel_controls_top }}rem;--button-control-top-mb: -{{ carousel_controls_top_mb }}rem;--p-t: {{ carousel_controls_top }}rem;--p-t-xs: {{ carousel_controls_top_mb }}rem; padding-bottom: 65px;
+              min-height:383px;"
+            {% endif %}
+          >
+            <div 
+              class="splide d-block pos-relative no-js-overflow-x{% if section.settings.type_style == 'masonry' %} grid-scroll{% endif %}{% if section.settings.type_style != 'masonry' %} o-v{% endif %}" 
+              data-splide='{
+                "type": "loop",
+                "perPage": 5,
+                "breakpoints": {
+                  "640": {
+                    "perPage": 1
+                  },
+                  "990": {
+                    "perPage": 3
+                  },
+                  "1300": {
+                    "perPage": 4
+                  }
+                },
+                "perMove": 1,
+                "autoplay": "pause"
+              }'
+              style="min-height:250px"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+
+                  {%- for block in section.blocks -%}
+                    {%- liquid
+                      assign total = forloop.index | modulo: 2
+                      if total == 0
+                          assign image_type = 'image-even'
+                      else
+                          assign image_type = 'image-odd'
+                      endif
+                    -%}
+                    <div role="listitem" id="Slide-{{ section.id }}-{{ forloop.index }}" class="splide__slide carousel__item{% if section.settings.enable_carousel %} swiper-slide no-js-grid__item no-js-grid__scroll{% else %} grid__item{% endif %} {{ class_item }}" style="padding: 0 20px 0 20px;" 
+                    {{ block.shopify_attributes }}>
+
+                      <animate-element class="splide__slide__container item d-block pos-relative color-foreground {{ settings.link_type | prepend: "link--style-" }}{% if section.settings.type_style == 'masonry' %} u-none{% else %} u-u{% endif %}
+                      {% comment %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% endcomment %}
+                      "
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ forloop.index }};"
+                        {% endif %}
+                      >
+  
+                        <{% if block.settings.collection != blank %}a{% else %}div{% endif %} 
+                          class="item__media d-block m-w m-auto color-foreground link-cover {{ section.settings.text_alignment }} rounded o-h"
+                          {% if block.settings.collection != blank %}href="{{ block.settings.collection.url }}"{% endif %}
+                          {% if block.settings.collection != blank and block.settings.collection.featured_image and section.settings.image_width == 'auto' %}
+                            style="--m-w: {{ block.settings.collection.featured_image.width | append: 'px' }};"
+                          {% endif %}
+                        >
+                          <div class="media media--transparent media--{{ section.settings.image_ratio }} media--zoom pos-relative o-h d-block {{ image_type }}" 
+                            {% comment %} data-animate="{{ section.settings.image_animation }}" {% endcomment %}
+                            {% if section.settings.image_ratio == 'adapt' %}
+                              style="
+                                {%- if section.settings.type_style == 'masonry' -%}
+                                  {%- if image_type == 'image-even' -%}
+                                    padding-bottom: {{ section.settings.height_even_image }}%;
+                                  {%- else -%}
+                                    padding-bottom: {{ section.settings.height_odd_image }}%;
+                                  {%- endif -%}
+                                {%- else -%}
+                                  padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;
+                                {%- endif -%}
+                                --a-delay: {{ '0.05' | times: forloop.index }}s; 
+                                min-height:83px;"
+                            {% endif %}
+                          >
+                            {%- if block.settings.collection != blank and block.settings.collection.featured_image -%}
+                              {%- capture sizes -%}
+                                (min-width: 990px) 550px, (min-width: 750px) 550px, calc(50vw - 10px)
+                              {%- endcapture -%}
+                              {{
+                                block.settings.collection.featured_image | image_url: width: 550 | image_tag:
+                                  loading: 'lazy',
+                                  sizes: sizes,
+                                  widths: '275, 550',
+                                  class: 'motion-reduce'
+                              }}
+                            {%- else -%}
+                              {% capture index %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                              {{ 'collection-' | append: index | placeholder_svg_tag: 'placeholder-svg' }}
+                            {%- endif -%}
+                          </div>
+                        </{% if block.settings.collection != blank %}a{% else %}div{% endif %}>
+
+                        <{% if block.settings.collection != blank %}a{% else %}div{% endif %} 
+                        class="color-foreground"
+                        {% if block.settings.collection != blank %}href="{{ block.settings.collection.url }}"{% endif %}>
+                          <div class="item__content {{ section.settings.text_alignment }}">
+                            <h3 
+                              class="
+                                d-inline-block pos-relative{% if section.settings.blocks_heading_size == 'text-body' %} text-body{% else %} text-body {{ section.settings.blocks_heading_size | prepend: 'heading-size-' }}{% endif %} {{ section.settings.font_transform }} m-0 f-bold" 
+                                {% comment %} data-animate="{{ section.settings.text_animation }}"  {% endcomment %}
+                                style="--a-delay: {{ '0.05' | times: forloop.index }}s;
+                              "
+                            >
+                              {%- if section.settings.type_style == 'default' -%}
+                                {{ block.settings.collection.title | default: 'Collection heading' }}
+                              {%- else -%}
+                                <span class="link-style">
+                                  {%- if section.settings.type_style != 'masonry' -%}
+                                    <strong>
+                                  {%- endif -%}
+                                    {{ block.settings.collection.title | default: 'Collection heading' }}
+                                  {%- if section.settings.type_style != 'masonry' -%}
+                                    </strong>
+                                  {%- endif -%}
+                                </span>
+                                {%- if block.settings.collection.title != blank and section.settings.type_style != 'masonry' -%}
+                                  {% render 'icon-caret' %}
+                                {%- endif -%}
+                              {%- endif -%}
+                            </h3>
+                            {%- if section.settings.type_style == 'default' -%}
+                              {%- if block.settings.collection.description != blank -%}
+                                <div class="item-content__desc text-size-x-small rte">
+                                    {{ block.settings.collection.description }}
+                                </div>
+                              {%- endif -%}
+                              <div class="item-content__button">
+                                  <a href="{{ block.settings.collection.url }}"
+                                      class="link u-link {{ settings.link_type | prepend: "link--style-" }}"
+                                      aria-label="Shop Collection"
+                                  >
+                                      <span class="text link-style">
+                                        Shop Collection
+                                      </span>
+                                  </a>
+                              </div>
+                            {%- endif -%}
+                          </div>
+                        </a>
+                      </animate-element>
+                    </div>
+                  {%- endfor -%}
+
+                </ul>
+              </div>
+            </div>
+
+          </slider-component>
+
+        {%- endif -%}
 
         {%- if section.settings.show_view_all -%}
           <div class="p-w__footer m-b-i" style="--m-b-i: 1rem;">
