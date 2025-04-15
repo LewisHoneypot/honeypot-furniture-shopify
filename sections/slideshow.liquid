@@ -707,7 +707,7 @@
       endcapture
     -%}
     <slideshow-component
-      class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %}"
+      class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %} {%- if template contains 'ugc' %} hide-desktop-ugc{%- endif -%}"
       data-type-pagination="{{ section.settings.pagination_type }}"
       data-speed="{{ section.settings.change_slides_speed }}"
       style="transform: translate(0px, 0px);"
@@ -749,6 +749,13 @@
           }
         '
       >
+        <style>
+          @media screen and (min-width: 750px) {
+            .hide-desktop-ugc {
+              display: none !important;
+            }
+          }
+        </style>
         <div
           class="{% if settings.slider_type == 'splide' -%}splide__track{%- endif %} slideshow__items swiper-wrapper slider__items f-row no-js-overflow-x no-js-scroll-b {{ section.settings.image_ratio | prepend: "slideshow--ratio-" }} {{ section.settings.image_ratio_mobile | prepend: "slideshow--ratio-mobile-" }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           id="Slider-{{ section.id }}"
