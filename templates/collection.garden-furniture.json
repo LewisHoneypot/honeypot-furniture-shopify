@@ -564,7 +564,12 @@
         "show_line_separator_top": false,
         "show_line_separator_bottom": false,
         "collection": "parasols",
-        "product_list": [],
+        "product_list": [
+          "richmond-parasol-beige",
+          "richmond-parasol-grey-copy",
+          "richmond-parasol-light-grey-copy",
+          "richmond-parasol-beige-copy"
+        ],
         "products_to_show": 5,
         "carousel_number": 4,
         "carousel_number_tablet": 3,
