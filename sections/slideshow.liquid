@@ -6,17 +6,15 @@
       endcapture
     -%}
     <slideshow-component
-      class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %}"
+      class="section__slideshow pos-relative z-index-2 d-block color-{{ section.settings.color_scheme }} gradient{% if section.settings.carousel_infinite_scroll %} infinite-scroll{% endif %}{% if section.settings.enable_autoplay %} enable--autoplay{% endif %} {%- if template contains 'ugc' %} hide-desktop-ugc{%- endif -%}"
       data-type-pagination="{{ section.settings.pagination_type }}"
       data-speed="{{ section.settings.change_slides_speed }}"
       style="transform: translate(0px, 0px);"
     >
-
-      {%- if template contains 'ugc' %} 
-        
+      {%- if template contains 'ugc' %}
         <div class="p-w__content">
           <hr style="margin:0px;">
-          <div 
+          <div
             style="
               text-align:center;
               top:-12px;
@@ -24,8 +22,8 @@
               z-index: 2;
             "
           >
-            <span 
-              class="Gotham color-{{ section.settings.color_scheme }}" 
+            <span
+              class="Gotham color-{{ section.settings.color_scheme }}"
               style="
                 padding-left: 30px;
                 padding-right: 30px;
@@ -35,15 +33,20 @@
             </span>
           </div>
         </div>
-        
       {%- endif -%}
-
       <div
         class="slideshow swiper slider has-banner__content--{{ section.blocks[0].settings.box_align }} position-arrows--{{ section.settings.arrows_position }}"
         role="region"
         aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
         aria-label="{{ section.settings.accessibility_info | escape }}"
       >
+        <style>
+          @media screen and (min-width: 750px) {
+            .hide-desktop-ugc {
+              display: none !important;
+            }
+          }
+        </style>
         <div
           class="slideshow__items swiper-wrapper slider__items f-row no-js-overflow-x no-js-scroll-b {{ section.settings.image_ratio | prepend: "slideshow--ratio-" }} {{ section.settings.image_ratio_mobile | prepend: "slideshow--ratio-mobile-" }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           id="Slider-{{ section.id }}"
@@ -654,7 +657,6 @@
             <div
               class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} slider-counter{% if section.settings.pagination_type != 'number' %} pos-relative-xs{% endif %} z-index-1 d-flex a-i-center j-c-center"
             ></div>
-
             {%- liquid
               if section.settings.pagination_type == 'none'
                 if section.settings.arrows_type == 'none' or section.settings.arrows_type == 'lg' or section.settings.arrows_type == 'md'
@@ -697,7 +699,6 @@
       <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   {%- endif -%}
-
 {%- elsif settings.slider_type == 'splide' -%}
   {%- if section.blocks.size > 0 -%}
     {%- liquid
@@ -711,12 +712,10 @@
       data-speed="{{ section.settings.change_slides_speed }}"
       style="transform: translate(0px, 0px);"
     >
-
-      {%- if template contains 'ugc' %} 
-          
+      {%- if template contains 'ugc' %}
         <div class="p-w__content">
           <hr style="margin:0px;">
-          <div 
+          <div
             style="
               text-align:center;
               top:-12px;
@@ -724,8 +723,8 @@
               z-index: 2;
             "
           >
-            <span 
-              class="Gotham color-{{ section.settings.color_scheme }}" 
+            <span
+              class="Gotham color-{{ section.settings.color_scheme }}"
               style="
                 padding-left: 30px;
                 padding-right: 30px;
@@ -735,9 +734,7 @@
             </span>
           </div>
         </div>
-        
       {%- endif -%}
-
       <div
         class="{% if settings.slider_type == 'splide' -%}splide{%- endif %} slideshow swiper slider has-banner__content--{{ section.blocks[0].settings.box_align }} position-arrows--{{ section.settings.arrows_position }}"
         role="region"
@@ -745,10 +742,10 @@
         aria-label="{{ section.settings.accessibility_info | escape }}"
         data-splide='
           {
-            "type": "loop",
-            "perMove": 1,
-            "autoplay": "true",
-            "interval": 5000
+          "type": "loop",
+          "perMove": 1,
+          "autoplay": "true",
+          "interval": 5000
           }
         '
       >
@@ -1369,7 +1366,6 @@
           <div
             class="swiper-pagination swiper-screen__{{ section.settings.enable_pagination_type }} slider-counter{% if section.settings.pagination_type != 'number' %} pos-relative-xs{% endif %} z-index-1 d-flex a-i-center j-c-center"
           ></div>
-
           {%- liquid
             if section.settings.pagination_type == 'none'
               if section.settings.arrows_type == 'none' or section.settings.arrows_type == 'lg' or section.settings.arrows_type == 'md'
@@ -1413,7 +1409,6 @@
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
-
 {% schema %}
 {
   "name": "t:sections.slideshow.name",
