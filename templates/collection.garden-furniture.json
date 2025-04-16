@@ -227,6 +227,101 @@
         "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
+    "featured_product_pK8JEd": {
+      "type": "featured-product",
+      "blocks": {
+        "title_6G3YA9": {
+          "type": "title",
+          "settings": {
+            "padding_top": 5,
+            "padding_bottom": 5,
+            "heading_size": "h1"
+          }
+        },
+        "price_AfrPCc": {
+          "type": "price",
+          "settings": {
+            "show_taxes": false,
+            "show_shipping": false,
+            "use_custom_color": false,
+            "colors_text": "#424242",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "vendor_9gEAri": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "variant_picker_4XULVU": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "buy_buttons_MCW8Xy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_wishlist_product": false,
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_colors_text": "#121212",
+            "add_to_cart_colors_background": "#ffffff",
+            "add_to_cart_gradient_background": "",
+            "add_to_cart_colors_text_hover": "#ffffff",
+            "add_to_cart_colors_background_hover": "#396774",
+            "add_to_cart_gradient_background_hover": "",
+            "buy_it_now_colors_text": "#ffffff",
+            "buy_it_now_colors_background": "#121212",
+            "buy_it_now_gradient_background": "",
+            "buy_it_now_colors_text_hover": "#ffffff",
+            "buy_it_now_colors_background_hover": "#000000",
+            "buy_it_now_gradient_background_hover": "",
+            "wishlist_colors_text": "#000000",
+            "wishlist_colors_background": "#000000",
+            "wishlist_colors_text_hover": "#eb9c9c",
+            "wishlist_colors_background_hover": "#eb9c9c",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        }
+      },
+      "block_order": [
+        "title_6G3YA9",
+        "price_AfrPCc",
+        "vendor_9gEAri",
+        "variant_picker_4XULVU",
+        "buy_buttons_MCW8Xy"
+      ],
+      "settings": {
+        "product": "oxford-garden-furniture-set",
+        "show_product_badges": true,
+        "enable_share": true,
+        "type_style": "modern",
+        "media_size": "large",
+        "gallery_layout": "stacked",
+        "image_zoom": "lightbox",
+        "enable_video_looping": false,
+        "image_ratio": "square",
+        "carousel_direction": "vertical",
+        "carousel_gap_desktop": 16,
+        "carousel_gap_tablet": 8,
+        "color_scheme": "",
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 25
+      }
+    },
     "1744710593d3c3e758": {
       "type": "apps",
       "blocks": {
@@ -415,101 +510,6 @@
       "disabled": true,
       "settings": {}
     },
-    "featured_product_pK8JEd": {
-      "type": "featured-product",
-      "blocks": {
-        "title_6G3YA9": {
-          "type": "title",
-          "settings": {
-            "padding_top": 5,
-            "padding_bottom": 5,
-            "heading_size": "h1"
-          }
-        },
-        "price_AfrPCc": {
-          "type": "price",
-          "settings": {
-            "show_taxes": false,
-            "show_shipping": false,
-            "use_custom_color": false,
-            "colors_text": "#424242",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "vendor_9gEAri": {
-          "type": "vendor",
-          "disabled": true,
-          "settings": {
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "variant_picker_4XULVU": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch": "Color",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        },
-        "buy_buttons_MCW8Xy": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": true,
-            "show_wishlist_product": false,
-            "show_dynamic_checkout": true,
-            "show_pickup_availability": false,
-            "show_gift_card_recipient": false,
-            "add_to_cart_colors_text": "#121212",
-            "add_to_cart_colors_background": "#ffffff",
-            "add_to_cart_gradient_background": "",
-            "add_to_cart_colors_text_hover": "#ffffff",
-            "add_to_cart_colors_background_hover": "#396774",
-            "add_to_cart_gradient_background_hover": "",
-            "buy_it_now_colors_text": "#ffffff",
-            "buy_it_now_colors_background": "#121212",
-            "buy_it_now_gradient_background": "",
-            "buy_it_now_colors_text_hover": "#ffffff",
-            "buy_it_now_colors_background_hover": "#000000",
-            "buy_it_now_gradient_background_hover": "",
-            "wishlist_colors_text": "#000000",
-            "wishlist_colors_background": "#000000",
-            "wishlist_colors_text_hover": "#eb9c9c",
-            "wishlist_colors_background_hover": "#eb9c9c",
-            "padding_top": 5,
-            "padding_bottom": 5
-          }
-        }
-      },
-      "block_order": [
-        "title_6G3YA9",
-        "price_AfrPCc",
-        "vendor_9gEAri",
-        "variant_picker_4XULVU",
-        "buy_buttons_MCW8Xy"
-      ],
-      "settings": {
-        "product": "oxford-garden-furniture-set",
-        "show_product_badges": true,
-        "enable_share": true,
-        "type_style": "modern",
-        "media_size": "large",
-        "gallery_layout": "stacked",
-        "image_zoom": "lightbox",
-        "enable_video_looping": false,
-        "image_ratio": "square",
-        "carousel_direction": "vertical",
-        "carousel_gap_desktop": 16,
-        "carousel_gap_tablet": 8,
-        "color_scheme": "",
-        "padding_top": 25,
-        "padding_bottom": 45,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 25
-      }
-    },
     "1736440044ce275a3d": {
       "type": "apps",
       "blocks": {
@@ -545,13 +545,13 @@
     "slideshow_cK3HQE",
     "image_banner_kW7TGh",
     "product-grid",
+    "featured_product_pK8JEd",
     "1744710593d3c3e758",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "collection_list_ig8tXp",
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
     "clickslice_bottom_collapsible_tabs_GD3zKe",
-    "featured_product_pK8JEd",
     "1736440044ce275a3d"
   ]
 }
