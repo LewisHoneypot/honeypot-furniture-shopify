@@ -249,13 +249,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4571859552318407796": {
-        "type": "shopify://apps/glo-color-swatch/blocks/app-embed-block/4394f710-096c-4021-bbde-8ebb26057c11",
-        "disabled": false,
-        "settings": {
-          "customCssGCW": ""
-        }
-      },
       "9035537717662245677": {
         "type": "shopify://apps/s-contact-form-builder/blocks/embed-app/cceef8dd-a4f1-4344-962d-06bf0022ec0d",
         "disabled": false,
