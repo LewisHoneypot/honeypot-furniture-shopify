@@ -47,7 +47,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Garden_Banner_2_short.jpg",
-            "mobile_image": "shopify://shop_images/Garden_Banner_-_mob1.jpg",
+            "mobile_image": "shopify://shop_images/Garden-Banner-Mobile.jpg",
             "content_max_width": 400,
             "heading_font": "font-heading",
             "heading": "",
@@ -81,6 +81,7 @@
         "image_ratio": "adapt-image",
         "image_ratio_mobile": "550px",
         "color_scheme": "",
+        "title": "See It In Action",
         "arrows_type": "all",
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
