@@ -245,6 +245,7 @@
         },
         "drawer_EkDrRn": {
           "type": "drawer",
+          "disabled": true,
           "settings": {
             "heading": "Additional Information",
             "content_type": "additional_information",
@@ -265,6 +266,7 @@
         },
         "drawer_r9twij": {
           "type": "drawer",
+          "disabled": true,
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "custom",
