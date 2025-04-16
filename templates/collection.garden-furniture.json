@@ -227,6 +227,103 @@
         "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
+    "1744710593d3c3e758": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_chyi6d": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_chyi6d"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_Tghmdz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iNgVMc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Garden Furniture On Finance</strong></h3>",
+            "heading_size": "h0",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_YbfLtJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Honeypot Furniture, we make it easy to spread the cost of your perfect outdoor setup. Our flexible finance options are designed to suit every budget:</p><p><br/> – Enjoy interest-free payments over shorter terms, so you can spread the cost without paying a penny more.<br/></p><p><br/> – Need more time? Choose from extended finance options with competitive rates to make larger purchases more manageable.<br/><br/>See Finance Options at Checkout.<br/></p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_4VQJqj": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_iNgVMc",
+        "text_YbfLtJ",
+        "link_4VQJqj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify://shop_images/2_68e8a00b-c706-459d-b73b-eadda8278163.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#FFFFFF",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0
+      }
+    },
     "featured_product_pK8JEd": {
       "type": "featured-product",
       "blocks": {
@@ -320,34 +417,6 @@
         "padding_bottom": 45,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 25
-      }
-    },
-    "1744710593d3c3e758": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_chyi6d": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "categorypage-nosto-3"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_chyi6d"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "29a4766e-9b16-4206-927b-f13e02616027": {
@@ -509,35 +578,6 @@
       "type": "clickslice-bottom-collapsible-tabs",
       "disabled": true,
       "settings": {}
-    },
-    "1736440044ce275a3d": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_gJQ3B8": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "disabled": true,
-          "settings": {
-            "placement": "categorypage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_gJQ3B8"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
     }
   },
   "order": [
@@ -545,13 +585,13 @@
     "slideshow_cK3HQE",
     "image_banner_kW7TGh",
     "product-grid",
-    "featured_product_pK8JEd",
     "1744710593d3c3e758",
+    "image_with_text_Tghmdz",
+    "featured_product_pK8JEd",
     "29a4766e-9b16-4206-927b-f13e02616027",
     "collection_list_ig8tXp",
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
-    "clickslice_bottom_collapsible_tabs_GD3zKe",
-    "1736440044ce275a3d"
+    "clickslice_bottom_collapsible_tabs_GD3zKe"
   ]
 }
