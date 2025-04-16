@@ -238,7 +238,7 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
-            "content1": "<p><strong>Corner Set<br/><br/></strong>Length: 279cm<strong><br/></strong>Length2: 222cm<br/>Depth: 79cm<br/>Height: 66cm<br/>Seat Depth: 70cm<br/>Floor to Seat Height: 30cm<br/><br/><strong>Firepit Table<br/><br/></strong>Length: 150cm<br/>Depth: 90cm<br/>Height: (adjustable) 48cm-74cm<br/><br/><strong>Bench<br/><br/></strong>Length: 80cm<br/>Depth: 40cm<br/>Height: 30cm<br/><br/><strong>Stool</strong><br/><br/>Length: 40cm<br/>Depth: 40cm<br/>Height: 30cm</p>",
+            "content1": "<p>{{ product.metafields.Dimensions.Length1.value }}</p>",
             "content2": "",
             "page": ""
           }
