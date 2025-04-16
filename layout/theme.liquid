@@ -107,14 +107,14 @@
       document.addEventListener('DOMContentLoaded', function () {
         if (window.nosto) {
           window.nosto.sliderType = '{{ settings.slider_type }}';
-          console.log('✅ Nosto sliderType set to:', window.nosto.sliderType);
+          // console.log('✅ Nosto sliderType set to:', window.nosto.sliderType);
         } else {
-          console.warn('⚠️ Nosto is not available yet. Retrying...');
+          // console.warn('⚠️ Nosto is not available yet. Retrying...');
           let checkNosto = setInterval(function () {
             if (window.nosto) {
               clearInterval(checkNosto);
               window.nosto.sliderType = '{{ settings.slider_type }}';
-              console.log('✅ Nosto sliderType set on retry:', window.nosto.sliderType);
+              // console.log('✅ Nosto sliderType set on retry:', window.nosto.sliderType);
             }
           }, 500);
         }
@@ -127,7 +127,7 @@
         document.addEventListener('DOMContentLoaded', function () {
           setTimeout(() => {
             const sliders = document.querySelectorAll('.splide');
-            console.log(`Found ${sliders.length} Splide sliders on the page.`);
+            // console.log(`Found ${sliders.length} Splide sliders on the page.`);
 
             sliders.forEach(function (slider) {
               new Splide(slider, {
