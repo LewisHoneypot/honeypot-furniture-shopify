@@ -126,7 +126,6 @@
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Garden_Banner_Image_1.jpg",
             "mobile_image": "shopify://shop_images/Garden_Banner_Image_Mob.jpg",
@@ -142,9 +141,9 @@
             "text_alignment": "left",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "primary_button_label": "Explore Bedroom Furniture",
-            "primary_button_link": "shopify://collections/bedroom",
-            "secondary_button_label": "Find Your Perfect Bed",
+            "primary_button_label": "Explore Garden Furniture",
+            "primary_button_link": "shopify://collections/garden",
+            "secondary_button_label": "",
             "secondary_button_link": "shopify://collections/beds",
             "button_transparent": "transparent",
             "button_spacing_between": 10,
