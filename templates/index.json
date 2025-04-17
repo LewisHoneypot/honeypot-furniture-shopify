@@ -126,6 +126,7 @@
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Garden_Banner_Image_1.jpg",
             "mobile_image": "shopify://shop_images/Garden_Banner_Image_Mob.jpg",
