@@ -1,3 +1,26 @@
+{%- if section.settings.image_tech == "cylindo" -%}
+  <link rel="preconnect" href="https://content.cylindo.com" crossorigin>
+  <script
+    type="module"
+    src="https://viewer-cdn.cylindo.com/v1/index.mjs"
+    async
+  ></script>
+  <script
+    type="module"
+    src="https://viewer-cdn.cylindo.com/v1/shopify.mjs"
+    async
+  ></script>
+
+  {%- if section.settings.cylindo_thumbnail_bar == "on" -%}
+    <script
+      type="module"
+      src="https://viewer-cdn.cylindo.com/v1/bar.mjs"
+      async
+    ></script>
+  {%- endif -%}
+  
+{%- endif -%}
+
 <section
   id="MainProduct-{{ section.id }}"
   data-section="{{ section.id }}"
@@ -94,7 +117,6 @@
             <div
               class="container-fluid"
               style="
-                position: absolute;
                 z-index: 2;
                 top: -32px;
               "
@@ -180,18 +202,34 @@
             </div>
           {%- endif -%}
 
-          {% render 'product-media-gallery',
-            product: product,
-            gallery_layout: section.settings.gallery_layout,
-            media_size: section.settings.media_size,
-            enable_video_looping: section.settings.enable_video_looping,
-            type_style: section.settings.type_style,
-            show_product_badges: section.settings.show_product_badges,
-            carousel_direction: section.settings.carousel_direction,
-            carousel_gap_tablet: section.settings.carousel_gap_tablet,
-            carousel_gap_desktop: section.settings.carousel_gap_desktop,
-            ratio_square: section.settings.image_ratio
-          %}
+          {%- if section.settings.image_tech == "cylindo" -%}
+            {% render 'product-media-gallery-cylindo',
+              product: product,
+              gallery_layout: section.settings.gallery_layout,
+              media_size: section.settings.media_size,
+              enable_video_looping: section.settings.enable_video_looping,
+              type_style: section.settings.type_style,
+              show_product_badges: section.settings.show_product_badges,
+              carousel_direction: section.settings.carousel_direction,
+              carousel_gap_tablet: section.settings.carousel_gap_tablet,
+              carousel_gap_desktop: section.settings.carousel_gap_desktop,
+              ratio_square: section.settings.image_ratio
+            %}
+          {%- else -%}
+            {% render 'product-media-gallery',
+              product: product,
+              gallery_layout: section.settings.gallery_layout,
+              media_size: section.settings.media_size,
+              enable_video_looping: section.settings.enable_video_looping,
+              type_style: section.settings.type_style,
+              show_product_badges: section.settings.show_product_badges,
+              carousel_direction: section.settings.carousel_direction,
+              carousel_gap_tablet: section.settings.carousel_gap_tablet,
+              carousel_gap_desktop: section.settings.carousel_gap_desktop,
+              ratio_square: section.settings.image_ratio
+            %}
+          {%- endif -%}
+          
           {%- if section.settings.show_product_badges and section.settings.type_style != 'special' -%}
             {%- liquid
               if settings.badge_position == 'top left'
@@ -1298,7 +1336,13 @@
                       <!-- Popup -->
                       <div id="finance-options-popup" class="popup">
                         <div class="popup-content">
-                          <svg xmlns="http://www.w3.org/2000/svg" height="undefined" id="Layer_2" viewBox="0 0 400.69 179.37" style="width: 40px; height:25px;">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="undefined"
+                            id="Layer_2"
+                            viewBox="0 0 400.69 179.37"
+                            style="width: 40px; height:25px;"
+                          >
                             <defs>
                               <style>.cls-1{fill:#0d2b47}</style>
                             </defs>
@@ -1332,19 +1376,19 @@
                           <span class="finance-popup-header center">FINANCE OPTIONS</span>
                           <span class="close">&times;</span>
                           <div class="popup-body">
-                            {%- endif %}
+                    {%- endif %}
 
-                            <div class="col-12 pt-2 pl-0 pr-0">
-                              {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
-                            </div>
-                            <div class="col-12 pt-2 pl-0 pr-0">
-                              {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
-                            </div>
+                    <div class="col-12 pt-2 pl-0 pr-0">
+                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
+                    </div>
+                    <div class="col-12 pt-2 pl-0 pr-0">
+                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
+                    </div>
 
-                            {%- if block.settings.use_finance_popup == true -%}
-                            <p class="mb-0 center">Choose Snap Finance at checkout.</p>
-                          </div>
-                        </div>
+                    {%- if block.settings.use_finance_popup == true -%}
+                      <p class="mb-0 center">Choose Snap Finance at checkout.</p>
+                      </div>
+                      </div>
                       </div>
 
                       <style>
@@ -1387,35 +1431,35 @@
                       </style>
 
                       <script>
-                    document.getElementById("open-finance-options").addEventListener("click", function() {
-                      document.getElementById("finance-options-popup").style.display = "block";
-                    });
-                    
-                    // Close popup when clicking the X button
-                    document.querySelector(".popup .close").addEventListener("click", function() {
-                      document.getElementById("finance-options-popup").style.display = "none";
-                    });
-                    
-                    // Close popup when clicking outside of the popup content
-                    document.getElementById("finance-options-popup").addEventListener("click", function(event) {
-                      if (event.target === this) {
-                        this.style.display = "none";
-                      }
-                    });
+                        document.getElementById('open-finance-options').addEventListener('click', function () {
+                          document.getElementById('finance-options-popup').style.display = 'block';
+                        });
 
-                    // APR
-                    document.addEventListener('DOMContentLoaded', function() {
-                      // Select the shadow host element
-                      const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
-                      
-                      // Access the shadow root
-                      const shadowRoot = shadowHost.shadowRoot;
-                      
-                      // Create a style element
-                      const style = document.createElement('style');
-                      
-                      // Add CSS rules to the style element
-                      style.textContent = `
+                        // Close popup when clicking the X button
+                        document.querySelector('.popup .close').addEventListener('click', function () {
+                          document.getElementById('finance-options-popup').style.display = 'none';
+                        });
+
+                        // Close popup when clicking outside of the popup content
+                        document.getElementById('finance-options-popup').addEventListener('click', function (event) {
+                          if (event.target === this) {
+                            this.style.display = 'none';
+                          }
+                        });
+
+                        // APR
+                        document.addEventListener('DOMContentLoaded', function () {
+                          // Select the shadow host element
+                          const shadowHost = document.querySelector('#snap-uk-widgets-product-rbp');
+
+                          // Access the shadow root
+                          const shadowRoot = shadowHost.shadowRoot;
+
+                          // Create a style element
+                          const style = document.createElement('style');
+
+                          // Add CSS rules to the style element
+                          style.textContent = `
                         .injected-product-widget {
                           background-color: {{ colors_background }} !important;
                           border: 0.1rem solid #707070 !important;
@@ -1472,24 +1516,24 @@
                           display: none !important;
                         }
                       `;
-                      
-                      // Append the style element to the shadow root
-                      shadowRoot.appendChild(style);
-                    });
-                    
-                    // Interest Free (BNPL)
-                    document.addEventListener('DOMContentLoaded', function() {  
-                      // Select the shadow host element
-                      const shadowHost = document.querySelector('#snap-uk-widgets-product-bnpl');
-                      
-                      // Access the shadow root
-                      const shadowRoot = shadowHost.shadowRoot;
-                      
-                      // Create a style element
-                      const style = document.createElement('style');
-                      
-                      // Add CSS rules to the style element
-                      style.textContent = `
+
+                          // Append the style element to the shadow root
+                          shadowRoot.appendChild(style);
+                        });
+
+                        // Interest Free (BNPL)
+                        document.addEventListener('DOMContentLoaded', function () {
+                          // Select the shadow host element
+                          const shadowHost = document.querySelector('#snap-uk-widgets-product-bnpl');
+
+                          // Access the shadow root
+                          const shadowRoot = shadowHost.shadowRoot;
+
+                          // Create a style element
+                          const style = document.createElement('style');
+
+                          // Add CSS rules to the style element
+                          style.textContent = `
                         .injected-product-widget {
                           background-color: {{ colors_background }} !important;
                           border: 0.1rem solid #707070 !important;
@@ -1546,10 +1590,10 @@
                           display: none !important;
                         }
                       `;
-                      
-                      // Append the style element to the shadow root
-                      shadowRoot.appendChild(style);
-                    });
+
+                          // Append the style element to the shadow root
+                          shadowRoot.appendChild(style);
+                        });
                       </script>
                     {%- endif %}
                   </div>
@@ -6403,6 +6447,38 @@
     },
     {
       "type": "select",
+      "id": "image_tech",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "cylindo",
+          "label": "Cylindo"
+        }
+      ],
+      "default": "default",
+      "label": "Image Tech"
+    },
+    {
+      "type": "select",
+      "id": "cylindo_thumbnail_bar",
+      "options": [
+        {
+          "value": "off",
+          "label": "Off"
+        },
+        {
+          "value": "on",
+          "label": "On"
+        }
+      ],
+      "default": "off",
+      "label": "Cylindo Thumbnail Bar"
+    },
+    {
+      "type": "select",
       "id": "media_size",
       "options": [
         {
@@ -6777,7 +6853,7 @@
     position: inherit;
     width: 65%;
   }
-  @media screen and (min-width:540px) {
+  @media screen and (min-width: 540px) {
     .finance-popup-header {
       position: inherit;
       width: 76%;
