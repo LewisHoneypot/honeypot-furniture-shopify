@@ -12,34 +12,6 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Garden_Banner_Image_1.jpg",
-            "mobile_image": "shopify://shop_images/Garden_Banner_Image_Mob.jpg",
-            "content_max_width": 600,
-            "heading_font": "font-heading",
-            "heading": "New In - Firepit Garden Sets",
-            "heading_size": "medium",
-            "heading_margin_bottom": 23,
-            "subheading": "Relax in style this summer with our stunning garden sets. 0% Finance Available.",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Explore Garden Furniture",
-            "primary_button_link": "shopify://collections/garden",
-            "secondary_button_label": "",
-            "secondary_button_link": "shopify://collections/beds",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "vertical",
-            "padding_top_bottom": 100,
-            "padding_left_right": 88
-          }
-        },
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
@@ -66,6 +38,34 @@
             "buttons_direction": "horizontal",
             "padding_top_bottom": 0,
             "padding_left_right": 0
+          }
+        },
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Garden_Banner_Image_1.jpg",
+            "mobile_image": "shopify://shop_images/Garden_Banner_Image_Mob.jpg",
+            "content_max_width": 600,
+            "heading_font": "font-heading",
+            "heading": "New In - Firepit Garden Sets",
+            "heading_size": "medium",
+            "heading_margin_bottom": 23,
+            "subheading": "Relax in style this summer with our stunning garden sets. 0% Finance Available.",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Explore Garden Furniture",
+            "primary_button_link": "shopify://collections/garden",
+            "secondary_button_label": "",
+            "secondary_button_link": "shopify://collections/beds",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "vertical",
+            "padding_top_bottom": 100,
+            "padding_left_right": 88
           }
         },
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
@@ -199,8 +199,8 @@
         }
       },
       "block_order": [
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "slide_MVHYjL",
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
         "slide_BzgHcM",
         "slide_dN3rVP",
