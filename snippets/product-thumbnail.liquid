@@ -1,6 +1,10 @@
 {%- liquid
   unless lazy_load == false
-    assign lazy = 'lazy'
+    if position == 1
+      assign lazy = 'eager'
+    else
+      assign lazy = 'lazy'
+    endif
   endunless
 -%}
 
