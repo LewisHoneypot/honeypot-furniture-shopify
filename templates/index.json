@@ -257,6 +257,7 @@
         },
         "marquee_aGCjeG": {
           "type": "marquee",
+          "disabled": true,
           "settings": {
             "type_marquee": "text",
             "text": "<p>5-Year Sofa Frame Guarantee</p>",
