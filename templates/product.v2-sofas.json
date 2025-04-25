@@ -176,6 +176,8 @@
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
+        "image_tech": "default",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
@@ -199,34 +201,6 @@
         "overlay_background_color_2": "#000000",
         "christmas_delivery_eta_toggle": false,
         "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
-      }
-    },
-    "17361637054b91e455": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_DigETz": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "product-page-nosto-3"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_DigETz"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "background-1",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "drawers_Ut99DD": {
@@ -301,6 +275,34 @@
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 40,
         "use_icon_caret": false
+      }
+    },
+    "17361637054b91e455": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_DigETz": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "product-page-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_DigETz"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "background-1",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_WaVhX9": {
@@ -828,15 +830,15 @@
   },
   "order": [
     "main",
-    "17361637054b91e455",
     "drawers_Ut99DD",
     "rich_text_WaVhX9",
+    "17361637054b91e455",
     "multicolumn_FJHgEr",
     "video_FxQj6U",
-    "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
-    "1736163667c8a5c273",
+    "1736163654e8d791fe",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
+    "1736163667c8a5c273",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
     "related-products",
