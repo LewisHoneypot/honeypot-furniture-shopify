@@ -307,6 +307,7 @@
 .cart-item {
   border-top: 0.1rem solid rgba(var(--color-foreground), .2);
   border-bottom: 0.1rem solid rgba(var(--color-foreground), .2);
+  background-color: #ededed !important;
 }
 
 .cart-item td{
@@ -537,6 +538,7 @@
 
   .cart__totals {
     padding: 2rem;
+    background-color: #ededed;
   }
 
   .cart__totals-title{
