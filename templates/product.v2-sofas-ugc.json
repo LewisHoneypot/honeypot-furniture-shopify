@@ -132,7 +132,7 @@
           "type": "snap_buttons",
           "settings": {
             "colors_background": "#ededed",
-            "use_finance_popup": true,
+            "use_finance_popup": false,
             "finance_button_text": "FINANCE AVAILABLE"
           }
         },
