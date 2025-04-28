@@ -5022,6 +5022,7 @@ input[type="checkbox"]:checked ~ svg {
   transition-property: transform, visibility;
   transition-duration: var(--duration-extra-long);
   transition-timing-function: var(--cubic-fade);
+  background-color: #ededed;
 }
 
 #CartDrawer {
