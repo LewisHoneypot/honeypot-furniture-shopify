@@ -1302,7 +1302,17 @@
                   >
                     {% assign colors_background = block.settings.colors_background %}
 
-                    {%- if block.settings.use_finance_popup == true -%}
+                    {%- if block.settings.popup_design == "minimal" -%}
+                      <script>
+                        let custom_button_style = "minimal"
+                      </script>
+                    {%- else -%}
+                      <script>
+                        let custom_button_style = "standard"
+                      </script>
+                  {%- endif -%}
+
+                    {%- if block.settings.popup_layout == "single" -%}
                       <div id="open-finance-options" class="col-12 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0">
                         <div
                           class="
@@ -1333,7 +1343,7 @@
                           {{ block.settings.finance_button_text }}
                         </div>
                       </div>
-
+                      
                       <!-- Popup -->
                       <div id="finance-options-popup" class="popup">
                         <div class="popup-content">
@@ -1380,13 +1390,13 @@
                     {%- endif %}
 
                     <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
+                      {% render 'snap-finance-rbp-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
                     </div>
                     <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
+                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
                     </div>
 
-                    {%- if block.settings.use_finance_popup == true -%}
+                    {%- if block.settings.popup_layout == "single" -%}
                       <p class="mb-0 center">Choose Snap Finance at checkout.</p>
                       </div>
                       </div>
@@ -4346,16 +4356,46 @@
           "default": "#fff"
         },
         {
-          "type": "checkbox",
-          "id": "use_finance_popup",
-          "label": "Use Popup",
-          "default": false
+          "type": "header",
+          "content": "Finance Popups"
+        },
+        {
+          "type": "select",
+          "id": "popup_layout",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "double",
+              "label": "Double"
+            }
+          ],
+          "label": "Popup Layout",
+          "default": "single"
         },
         {
           "type": "text",
           "id": "finance_button_text",
-          "label": "Button Text",
+          "label": "Single Button Text",
           "default": "FINANCE AVAILABLE"
+        },
+        {
+          "type": "select",
+          "id": "popup_design",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ],
+          "label": "Popup Design",
+          "default": "standard"
         }
       ]
     },
