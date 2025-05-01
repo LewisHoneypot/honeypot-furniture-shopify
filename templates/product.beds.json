@@ -43,10 +43,6 @@
             "padding_bottom": 5
           }
         },
-        "glo_color_swatch_product_swatches_detail_r9tCtB": {
-          "type": "shopify://apps/glo-color-swatch-variant-image/blocks/product-swatches-detail/4394f710-096c-4021-bbde-8ebb26057c11",
-          "settings": {}
-        },
         "size_chart_kqc3gt": {
           "type": "size_chart",
           "disabled": true,
@@ -61,6 +57,7 @@
         },
         "expected_delivery_4HJChA": {
           "type": "expected_delivery",
+          "disabled": true,
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
@@ -74,6 +71,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": true,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
@@ -102,7 +100,10 @@
         "snap_buttons_rnjz4z": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#ffffff"
+            "colors_background": "#ffffff",
+            "popup_layout": "single",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "standard"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -128,7 +129,6 @@
         "title",
         "price",
         "variant_picker_AJEB8c",
-        "glo_color_swatch_product_swatches_detail_r9tCtB",
         "size_chart_kqc3gt",
         "expected_delivery_4HJChA",
         "buy_buttons",
@@ -136,10 +136,15 @@
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": true,
         "type_style": "classic",
+        "image_tech": "default",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
