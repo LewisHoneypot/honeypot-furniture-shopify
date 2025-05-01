@@ -72,8 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
           cursor: pointer;
           flex-direction: row-reverse;
         }
-        .injected-product-widget__grid {
-          width: 236px !important;
+        @media screen and (min-width:370px) {
+          .injected-product-widget__grid {
+            width: 236px !important;
+          }
         }
         .injected-product-widget .injected-product-widget__grid__text p {
           font-size: clamp(11px, 3.5cqw, 14px) !important;
