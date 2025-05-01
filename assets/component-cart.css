@@ -538,7 +538,7 @@
 
   .cart__totals {
     padding: 2rem;
-    background-color: #ededed;
+    background-color: #ededed !important;
   }
 
   .cart__totals-title{
