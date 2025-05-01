@@ -1,4 +1,4 @@
-<div id="snap-uk-widgets-product-bnpl" class="mt-2" style="min-height:63px;"></div>
+<div id="snap-uk-widgets-product-bnpl" class="mt-2"></div>
 
 {% assign product_price = product.price | money_without_currency %}
 
@@ -60,65 +60,110 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create a style element
     const style = document.createElement('style');
+
+    if (custom_button_style == "minimal") {
+
+      style.textContent = `
+        .injected-product-widget {
+          background-color: transparent !important;
+          border: none !important;
+          border-radius: 0 !important;
+          padding: 0 !important;
+          cursor: pointer;
+          flex-direction: row-reverse;
+          min-width: unset !important;
+          width: unset !important;
+        }
+        .injected-product-widget__grid {
+          width: 185px !important;
+          height: unset !important;
+        }
+        .injected-product-widget .injected-product-widget__grid__text p {
+          font-size: clamp(11px, 3.5cqw, 14px) !important;
+          gap: 0 !important;
+        }
+        #snap-product-widget-container {
+          align-items: center;
+          margin: 0 auto;
+          padding-left: 1px;
+          padding-right: 1px;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid-logo {
+          min-width: 0%;
+          max-width: 100%;
+          align-items: flex-start;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid__text {
+          text-align: left;
+          height: unset !important;
+        }
+        /* Hide the 'Learn more' element */
+        #rbp-bnpl-learn-more {
+          display: none !important;
+        }
+      `;
     
-    // Add CSS rules to the style element
-    style.textContent = `
-      .injected-product-widget {
-        background-color: {{ colors_background }} !important;
-        border: 0.1rem solid #707070 !important;
-        border-radius: 0 !important;
-        min-height: 80px !important;
-        min-width: 100%;
-        padding: 0 !important;
-        cursor: pointer;
-        flex-direction: row-reverse;
-      }
-      .injected-product-widget .injected-product-widget__grid__text p {
-        font-size: clamp(11px, 3.5cqw, 14px) !important;
-        gap: 0 !important;
-        justify-content: flex-end !important;
-      }
-      #snap-product-widget-container {
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding-left: 1px;
-        padding-right: 1px;
-      }
-      .rbp-bnpl-widget .injected-product-widget__grid-logo {
-        min-width: 25%;
-        max-width: 17%;
-        @media screen and (min-width:460px) {
-          min-width: 31%;
-          max-width: 31%;
+    } else {
+
+      // Add CSS rules to the style element
+      style.textContent = `
+        #snap-uk-widgets-product-bnpl {
+          min-height: 63px;
         }
-        @media screen and (min-width:768px) {
-          min-width: 34%;
-          max-width: 31%;
+        .injected-product-widget {
+          background-color: {{ colors_background }} !important;
+          border: 0.1rem solid #707070 !important;
+          border-radius: 0 !important;
+          min-height: 80px !important;
+          min-width: 100%;
+          padding: 0 !important;
+          cursor: pointer;
+          flex-direction: row-reverse;
         }
-        @media screen and (min-width:992px) {
+        .injected-product-widget .injected-product-widget__grid__text p {
+          font-size: clamp(11px, 3.5cqw, 14px) !important;
+          gap: 0 !important;
+          justify-content: flex-end !important;
+        }
+        #snap-product-widget-container {
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          padding-left: 1px;
+          padding-right: 1px;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid-logo {
           min-width: 25%;
-          max-width: 25%;
+          max-width: 17%;
+          @media screen and (min-width:460px) {
+            min-width: 31%;
+            max-width: 31%;
+          }
+          @media screen and (min-width:768px) {
+            min-width: 34%;
+            max-width: 31%;
+          }
+          @media screen and (min-width:992px) {
+            min-width: 25%;
+            max-width: 25%;
+          }
+          @media screen and (min-width:1500px) {
+            min-width: 30%;
+            max-width: 30%;
+          }
+          align-items: flex-start;
         }
-        @media screen and (min-width:1500px) {
-          min-width: 30%;
-          max-width: 30%;
+        .rbp-bnpl-widget .injected-product-widget__grid__text {
+          text-align: right;
         }
-        align-items: flex-start;
-      }
-      .rbp-bnpl-widget .injected-product-widget__grid__text {
-        text-align: right;
-      }
-      .three-col-holder {
-        {% comment %} min-width: 75%;
-        max-width: 75%; {% endcomment %}
-      }
-      /* Hide the 'Learn more' element */
-      #rbp-bnpl-learn-more {
-        display: none !important;
-      }
-    `;
-    
+        /* Hide the 'Learn more' element */
+        #rbp-bnpl-learn-more {
+          display: none !important;
+        }
+      `;
+
+    }
+
     // Append the style element to the shadow root
     shadowRoot.appendChild(style);
   }

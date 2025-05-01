@@ -1,24 +1,13 @@
 {%- if section.settings.image_tech == "cylindo" -%}
+  
   <link rel="preconnect" href="https://content.cylindo.com" crossorigin>
-  <script
-    type="module"
-    src="https://viewer-cdn.cylindo.com/v1/index.mjs"
-    async
-  ></script>
-  <script
-    type="module"
-    src="https://viewer-cdn.cylindo.com/v1/shopify.mjs"
-    async
-  ></script>
+  <script type="module" src="https://viewer-cdn.cylindo.com/v1/index.mjs" async></script>
+  <script type="module" src="https://viewer-cdn.cylindo.com/v1/shopify.mjs" async></script>
 
   {%- if section.settings.cylindo_thumbnail_bar == "on" -%}
-    <script
-      type="module"
-      src="https://viewer-cdn.cylindo.com/v1/bar.mjs"
-      async
-    ></script>
+    <script type="module" src="https://viewer-cdn.cylindo.com/v1/bar.mjs" async></script>
   {%- endif -%}
-  
+
 {%- endif -%}
 
 <section
