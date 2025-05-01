@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create a style element
     const style = document.createElement('style');
-        
+
     if (custom_button_style == "minimal") {
 
       style.textContent = `
@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
           padding: 0 !important;
           cursor: pointer;
           flex-direction: row-reverse;
+        }
+        .injected-product-widget__grid {
+          width: 236px !important;
         }
         .injected-product-widget .injected-product-widget__grid__text p {
           font-size: clamp(11px, 3.5cqw, 14px) !important;
@@ -89,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .rbp-bnpl-widget .injected-product-widget__grid__text {
           text-align: left;
+          height: unset !important;
         }
         /* Hide the 'Learn more' element */
         #rbp-bnpl-learn-more {
@@ -100,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Add CSS rules to the style element
       style.textContent = `
-      #snap-uk-widgets-product-rbp {
+        #snap-uk-widgets-product-rbp {
           min-height: 63px;
         }
         .injected-product-widget {
@@ -154,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
           display: none !important;
         }
       `;
-    
+
     }
 
     // Append the style element to the shadow root
