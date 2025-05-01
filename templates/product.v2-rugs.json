@@ -121,7 +121,7 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "on",
+            "tiers": "off",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
