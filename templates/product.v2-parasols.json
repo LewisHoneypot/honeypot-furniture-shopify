@@ -121,7 +121,7 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "on",
+            "tiers": "off",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
@@ -132,8 +132,9 @@
           "type": "snap_buttons",
           "settings": {
             "colors_background": "#ededed",
-            "use_finance_popup": true,
-            "finance_button_text": "FINANCE AVAILABLE"
+            "popup_layout": "single",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "standard"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -176,6 +177,8 @@
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
+        "image_tech": "default",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
