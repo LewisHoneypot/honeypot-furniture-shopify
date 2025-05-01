@@ -68,6 +68,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
@@ -95,6 +96,7 @@
         },
         "expected_delivery_8DGkii": {
           "type": "expected_delivery",
+          "disabled": true,
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
@@ -108,7 +110,10 @@
         "snap_buttons_wYQaPr": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#ffffff"
+            "colors_background": "#ffffff",
+            "popup_layout": "single",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "standard"
           }
         },
         "drawer_j3bNWd": {
@@ -154,10 +159,15 @@
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": true,
         "type_style": "classic",
+        "image_tech": "default",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
