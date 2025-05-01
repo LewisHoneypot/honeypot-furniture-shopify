@@ -522,6 +522,10 @@
   }
 }
 
+.cart__totals {
+  background-color: #ededed !important;
+}
+
 @media screen and (min-width: 750px) {
   .cart__items {
     padding-bottom: 4rem;
@@ -538,7 +542,6 @@
 
   .cart__totals {
     padding: 2rem;
-    background-color: #ededed !important;
   }
 
   .cart__totals-title{
