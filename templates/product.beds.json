@@ -57,7 +57,6 @@
         },
         "expected_delivery_4HJChA": {
           "type": "expected_delivery",
-          "disabled": true,
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
@@ -65,7 +64,8 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ffffff"
+            "background_colour": "#ffffff",
+            "data_source": "nosto"
           }
         },
         "buy_buttons": {
