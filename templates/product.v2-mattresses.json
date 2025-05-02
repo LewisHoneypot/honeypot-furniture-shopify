@@ -118,7 +118,6 @@
         },
         "expected_delivery_TKcTdt": {
           "type": "expected_delivery",
-          "disabled": true,
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
@@ -126,7 +125,8 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
-            "background_colour": "#ededed"
+            "background_colour": "#ededed",
+            "data_source": "nosto"
           }
         },
         "snap_buttons_HagTqx": {
