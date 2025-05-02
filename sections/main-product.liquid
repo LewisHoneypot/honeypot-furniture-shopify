@@ -1680,6 +1680,56 @@
                   </div>
                 </div>
 
+              {%- when 'klarna_buttons' -%}
+                <div class="container-fluid {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+                  <div
+                    class="row"
+                    {{ block.shopify_attributes }}
+                  >
+                    {% assign colors_background = block.settings.colors_background %}
+
+                    {%- if block.settings.popup_design == "minimal" -%}
+                      <script>
+                        let custom_button_style = "minimal"
+                      </script>
+                    {%- else -%}
+                      <script>
+                        let custom_button_style = "standard"
+                      </script>
+                  {%- endif -%}
+
+                    {%- if block.settings.popup_layout == "single" -%}
+                      
+                      {%- assign klarna_price = product.price | money_without_currency -%}
+                      {%- assign klarna_price = klarna_price | divided_by: 3 -%}
+
+                      <div class="col-12 pt-2 pl-0 pr-0 klarna">
+                        <span>Pay in 3 - £{{ klarna_price | round: 2 }} P/M</span>
+                        <img src="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/klarna-black.webp?v=1718639352" alt="Klarna Logo" height="72" width="318" >                        
+                      </div>
+
+                      <style>
+                        .klarna {
+                          font-family: "Aeonik", Arial, Helvetica, sans-serif;
+                          font-size: .7em;
+                          height: 40px;
+                          min-height: 30px;
+                          align-content: center;
+                          color: #062d4e;
+                          margin-bottom: -5px;
+                        }
+                        .klarna img {
+                          max-height: 11px;
+                          width: auto;
+                          margin-bottom: 4px;
+                          margin-left: 11px;
+                        }
+                      </style>
+
+                    {%- endif %}
+                  </div>
+                </div>
+
               {%- when 'rating' -%}
                 <div
                   class="product__rating d-flex a-i-center element-spacing-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -4417,6 +4467,61 @@
     {
       "type": "snap_buttons",
       "name": "Snap Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color",
+          "id": "colors_background",
+          "label": "t:sections.all.colors.colors_background",
+          "default": "#fff"
+        },
+        {
+          "type": "header",
+          "content": "Finance Popups"
+        },
+        {
+          "type": "select",
+          "id": "popup_layout",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "double",
+              "label": "Double"
+            }
+          ],
+          "label": "Popup Layout",
+          "default": "single"
+        },
+        {
+          "type": "text",
+          "id": "finance_button_text",
+          "label": "Single Button Text",
+          "default": "FINANCE AVAILABLE"
+        },
+        {
+          "type": "select",
+          "id": "popup_design",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ],
+          "label": "Popup Design",
+          "default": "standard"
+        }
+      ]
+    },
+    {
+      "type": "klarna_buttons",
+      "name": "Klarna Buttons",
       "limit": 1,
       "settings": [
         {
