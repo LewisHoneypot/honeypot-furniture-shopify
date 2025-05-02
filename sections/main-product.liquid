@@ -1687,26 +1687,16 @@
                     {{ block.shopify_attributes }}
                   >
                     {% assign colors_background = block.settings.colors_background %}
+                      
+                    {%- assign klarna_price = product.price | money_without_currency -%}
+                    {%- assign klarna_price = klarna_price | divided_by: 3 -%}
+
+                    <div class="col-12 pt-2 pl-0 pr-0 klarna">
+                      <span>Pay in 3 - £{{ klarna_price | round: 2 }} P/M</span>
+                      <img src="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/klarna-black.webp?v=1718639352" alt="Klarna Logo" height="72" width="318" >                        
+                    </div>
 
                     {%- if block.settings.popup_design == "minimal" -%}
-                      <script>
-                        let custom_button_style = "minimal"
-                      </script>
-                    {%- else -%}
-                      <script>
-                        let custom_button_style = "standard"
-                      </script>
-                  {%- endif -%}
-
-                    {%- if block.settings.popup_layout == "single" -%}
-                      
-                      {%- assign klarna_price = product.price | money_without_currency -%}
-                      {%- assign klarna_price = klarna_price | divided_by: 3 -%}
-
-                      <div class="col-12 pt-2 pl-0 pr-0 klarna">
-                        <span>Pay in 3 - £{{ klarna_price | round: 2 }} P/M</span>
-                        <img src="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/klarna-black.webp?v=1718639352" alt="Klarna Logo" height="72" width="318" >                        
-                      </div>
 
                       <style>
                         .klarna {
@@ -1726,7 +1716,8 @@
                         }
                       </style>
 
-                    {%- endif %}
+                    {%- endif -%}
+
                   </div>
                 </div>
 
@@ -4533,28 +4524,6 @@
         {
           "type": "header",
           "content": "Finance Popups"
-        },
-        {
-          "type": "select",
-          "id": "popup_layout",
-          "options": [
-            {
-              "value": "single",
-              "label": "Single"
-            },
-            {
-              "value": "double",
-              "label": "Double"
-            }
-          ],
-          "label": "Popup Layout",
-          "default": "single"
-        },
-        {
-          "type": "text",
-          "id": "finance_button_text",
-          "label": "Single Button Text",
-          "default": "FINANCE AVAILABLE"
         },
         {
           "type": "select",
