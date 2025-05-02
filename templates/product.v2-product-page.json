@@ -118,7 +118,7 @@
             "heading": "Delivery From",
             "enable_expected_delivery": true,
             "tiers": "off",
-            "date_type": "accurate",
+            "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
             "background_colour": "#ede9e2",
