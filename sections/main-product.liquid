@@ -1077,9 +1077,17 @@
                     {%- assign in_stock = false -%}
                   {% endif %}
 
+                  <script>
+                    // console.log('product: ', {{ product | json }});
+                    // console.log('product.collections: ', {{ product.collections | json }});
+                    </script>
+
                   {% comment %} Check which collections product is in {% endcomment %}
                   {%- assign collection_titles = '' -%}
                   {%- for collection in product.collections -%}
+                    <script>
+                      // console.log('collection: ', collection);
+                    </script>
                     {%- assign collection_titles = collection_titles | append: collection.title -%}
                     {%- unless forloop.last -%}
                       {%- assign collection_titles = collection_titles | append: ', ' -%}
@@ -1089,13 +1097,16 @@
                   {%- assign date_1 = 0 -%}
                   {%- assign date_2 = 0 -%}
 
+                  <script>
+                    // console.log("ProductTier: ", {{ product.metafields.Details.ProductTier }});
+                    // console.log("collection_titles: ", {{ collection_titles | json }});
+                    </script>
+
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                      {% comment %}
                         <script>
-                          console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
+                          // console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
                         </script>
-                      {% endcomment %}
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
@@ -1156,6 +1167,11 @@
                     {%- assign date_2 = 10 -%}
                   {%- endif -%}
 
+                  <script>
+                    // console.log("date_1: ", {{ date_1 }});
+                    // console.log("date_2: ", {{ date_2 }});
+                  </script>
+
                   {%- assign today_1 = 'now' | date: '%s' -%}
                   {%- assign today_2 = 'now' | date: '%s' -%}
                   {%- assign seconds_1 = date_1 | times: 24 | times: 60 | times: 60 -%}
@@ -1203,6 +1219,11 @@
                     | append: delivery_date_suffix_2
                   -%}
 
+                  <script>
+                    // console.log("formatted_date_1: ", {{ formatted_date_1 }});
+                    // console.log("formatted_date_2: ", {{ formatted_date_2 }});
+                  </script>
+
                   <div
                     class="deliverydate-new sb_delivery-new m-0 text-center pt-2 pr-3 pb-2 pl-3{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
                     style="background-color:{{ block.settings.background_colour }};"
@@ -1229,23 +1250,82 @@
 
                         {% comment %} Change display based on date type {% endcomment %}
                         {%- if block.settings.date_type == 'accurate' -%}
+                          <script>
+                            // console.log("date_type: Accurate");
+                          </script>
+
                           <strong class="pr-1 mr-1">{{ formatted_date_1 }}</strong>
                           <span class="pr-1 mr-1">to</span>
                           <strong class="pr-1 mr-1">{{ formatted_date_2 }}</strong>
                         {%- else -%}
-                          {%- if in_stock == true -%}
-                            <strong class="pr-1 mr-1"> Tomorrow</strong>
-                          {%- else -%}
-                            {%- if block.settings.tiers == 'on' -%}
-                              {%- if product.metafields.Details.ProductTier == 1 -%}
-                                <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
-                              {%- elsif product.metafields.Details.ProductTier == 2 -%}
-                                <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
-                              {%- endif -%}
+
+                          <script>
+                            // console.log("date_type: Vague");
+                          </script>
+
+                          {%- if block.settings.data_source == "nosto" -%}
+
+                            {%- assign nosto_delivery = product.metafields.Nosto.Delivery -%}
+
+                            <script>
+                              // console.log("data_source: Nosto");
+                              // console.log("Nosto.delivery: ", {{ product.metafields.Nosto.delivery }});
+                              // console.log("Nosto.Delivery: ", {{ product.metafields.Nosto.Delivery }});
+                              // console.log("nosto_delivery: ", {{ nosto_delivery }});
+                            </script>
+
+                            {%- if nosto_delivery == "1" -%}
+                              {%- assign nosto_delivery_text = "Tomorrow" -%}
+                            {%- elsif nosto_delivery == "2" -%}
+                              {%- assign nosto_delivery_text = "1 Week" -%}
+                            {%- elsif nosto_delivery == "3" -%}
+                              {%- assign nosto_delivery_text = "4 Weeks" -%}
+                            {%- elsif nosto_delivery == "4" -%}
+                              {%- assign nosto_delivery_text = "6 Weeks" -%}
                             {%- else -%}
-                              <strong class="pr-1 mr-1"> 2 weeks</strong>
+                              {%- assign nosto_delivery_text = "2 Weeks" -%}
                             {%- endif -%}
+
+                            <strong class="pr-1 mr-1"> {{ nosto_delivery_text }}</strong>
+
+                          {%- else -%}
+
+                            {%- if in_stock == true -%}
+
+                              <script>
+                                // console.log("in_stock: yes");
+                              </script>
+
+                              <strong class="pr-1 mr-1"> Tomorrow</strong>
+                            {%- else -%}
+
+                              <script>
+                                // console.log("in_stock: no");
+                              </script>
+
+                              {%- if block.settings.tiers == 'on' -%}
+
+                                <script>
+                                  // console.log("tiers: on");
+                                </script>
+    
+                                {%- if product.metafields.Details.ProductTier == 1 -%}
+                                  <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
+                                {%- elsif product.metafields.Details.ProductTier == 2 -%}
+                                  <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
+                                {%- endif -%}
+
+                              {%- else -%}
+
+                                <strong class="pr-1 mr-1"> 2 weeks</strong>
+
+                              {%- endif -%}
+
+                            {%- endif -%}
+
                           {%- endif -%}
+
+
                         {%- endif -%}
                       </div>
                     {%- endif -%}
@@ -4850,6 +4930,22 @@
           "id": "background_colour",
           "default": "#EDE9E2",
           "label": "t:sections.main-collection-product-grid.settings.delivery_eta.background_colour.label"
+        },
+        {
+          "type": "select",
+          "id": "data_source",
+          "label": "Data Source",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "nosto",
+              "label": "Nosto"
+            }
+          ],
+          "default": "default"
         }
       ]
     },
