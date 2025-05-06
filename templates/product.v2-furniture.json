@@ -55,18 +55,6 @@
             "padding_bottom": 12
           }
         },
-        "drawer_j3bNWd": {
-          "type": "drawer",
-          "settings": {
-            "heading": "VIEW THE RANGE",
-            "font": "Gotham",
-            "content_type": "view_the_range",
-            "content": "",
-            "page": "",
-            "colors_background": "#ededed",
-            "colors_border": "#707070"
-          }
-        },
         "usp_drawer_1_h8wxkV": {
           "type": "usp_drawer_1",
           "disabled": true,
@@ -93,7 +81,7 @@
             "use_buy_button_price": true,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
@@ -138,6 +126,18 @@
             "popup_design": "standard"
           }
         },
+        "drawer_j3bNWd": {
+          "type": "drawer",
+          "settings": {
+            "heading": "VIEW THE RANGE",
+            "font": "Gotham",
+            "content_type": "view_the_range",
+            "content": "",
+            "page": "",
+            "colors_background": "#ededed",
+            "colors_border": "#707070"
+          }
+        },
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
@@ -162,12 +162,12 @@
         "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
-        "drawer_j3bNWd",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_HagTqx",
+        "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
