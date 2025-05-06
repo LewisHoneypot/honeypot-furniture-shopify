@@ -71,10 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
           padding: 0 !important;
           cursor: pointer;
           flex-direction: row-reverse;
+          width: 428px;
         }
         @media screen and (min-width:370px) {
           .injected-product-widget__grid {
-            width: 236px !important;
+            width: 167px !important;
           }
         }
         .injected-product-widget .injected-product-widget__grid__text p {
@@ -89,8 +90,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .rbp-bnpl-widget .injected-product-widget__grid-logo {
           min-width: 0%;
-          max-width: 100%;
+          max-width: 27%;
           align-items: flex-start;
+        }
+        @media screen and (min-width:427px) {
+          .rbp-bnpl-widget .injected-product-widget__grid-logo {
+            max-width: 39%;
+          }
+        }
+        @media screen and (min-width:990px) {
+          .rbp-bnpl-widget .injected-product-widget__grid-logo {
+            max-width: 28%;
+          }
+        }
+        @media screen and (min-width:1113px) {
+          .rbp-bnpl-widget .injected-product-widget__grid-logo {
+            max-width: 39%;
+          }
+        }
+        @media screen and (min-width:1200px) {
+          .rbp-bnpl-widget .injected-product-widget__grid-logo {
+            max-width: 27%;
+          }
+        }
+        @media screen and (min-width:1451px) {
+          .rbp-bnpl-widget .injected-product-widget__grid-logo {
+            max-width: 39%;
+          }
         }
         .rbp-bnpl-widget .injected-product-widget__grid__text {
           text-align: left;
