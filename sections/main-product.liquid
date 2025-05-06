@@ -1541,62 +1541,58 @@
 
                           // Add CSS rules to the style element
                           style.textContent = `
-                        .injected-product-widget {
-                          background-color: {{ colors_background }} !important;
-                          border: 0.1rem solid #707070 !important;
-                          border-radius: 0 !important;
-                          min-height: 80px !important;
-                          min-width: 100%;
-                          padding: 0 !important;
-                          cursor: pointer;
-                          flex-direction: row-reverse;
-                        }
-                        .injected-product-widget .injected-product-widget__grid__text p {
-                          font-size: 16px !important;
-                          gap: 0 !important;
-                          justify-content: center !important;
-                        }
-                        #snap-product-widget-container {
-                          justify-content: center;
-                          align-items: center;
-                          margin: 0 auto;
-                          padding-left: 1px;
-                          padding-right: 1px;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
-                          display: none;
-                          min-width: 17%;
-                          max-width: 17%;
-                          @media screen and (min-width:460px) {
-                            min-width: 27%;
-                            max-width: 27%;
-                          }
-                          @media screen and (min-width:768px) {
-                            min-width: 15%;
-                            max-width: 15%;
-                          }
-                          @media screen and (min-width:992px) {
-                            min-width: 20%;
-                            max-width: 20%;
-                          }
-                          @media screen and (min-width:1455px) {
-                            min-width: 15%;
-                            max-width: 15%;
-                          }
-                          align-items: flex-start;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid__text {
-                          text-align: center;
-                        }
-                        .three-col-holder {
-                          {% comment %} min-width: 85%;
-                          max-width: 85%; {% endcomment %}
-                        }
-                        /* Hide the 'Learn more' element */
-                        #rbp-bnpl-learn-more {
-                          display: none !important;
-                        }
-                      `;
+                            .injected-product-widget {
+                              background-color: {{ colors_background }} !important;
+                              border: 0.1rem solid #707070 !important;
+                              border-radius: 0 !important;
+                              min-height: 80px !important;
+                              min-width: 100%;
+                              padding: 0 !important;
+                              cursor: pointer;
+                              flex-direction: row-reverse;
+                            }
+                            .injected-product-widget .injected-product-widget__grid__text p {
+                              font-size: 16px !important;
+                              gap: 0 !important;
+                              justify-content: center !important;
+                            }
+                            #snap-product-widget-container {
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0 auto;
+                              padding-left: 1px;
+                              padding-right: 1px;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                              display: none;
+                              min-width: 17%;
+                              max-width: 17%;
+                              @media screen and (min-width:460px) {
+                                min-width: 27%;
+                                max-width: 27%;
+                              }
+                              @media screen and (min-width:768px) {
+                                min-width: 15%;
+                                max-width: 15%;
+                              }
+                              @media screen and (min-width:992px) {
+                                min-width: 20%;
+                                max-width: 20%;
+                              }
+                              @media screen and (min-width:1455px) {
+                                min-width: 15%;
+                                max-width: 15%;
+                              }
+                              align-items: flex-start;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid__text {
+                              text-align: center;
+                            }
+                            /* Hide the 'Learn more' element */
+                            #rbp-bnpl-learn-more {
+                              display: none !important;
+                            }
+                          `;
 
                           // Append the style element to the shadow root
                           shadowRoot.appendChild(style);
@@ -1615,62 +1611,58 @@
 
                           // Add CSS rules to the style element
                           style.textContent = `
-                        .injected-product-widget {
-                          background-color: {{ colors_background }} !important;
-                          border: 0.1rem solid #707070 !important;
-                          border-radius: 0 !important;
-                          min-height: 80px !important;
-                          min-width: 100%;
-                          padding: 0 !important;
-                          cursor: pointer;
-                          flex-direction: row-reverse;
-                        }
-                        .injected-product-widget .injected-product-widget__grid__text p {
-                          font-size: 16px! important;
-                          gap: 0 !important;
-                          justify-content: center !important;
-                        }
-                        #snap-product-widget-container {
-                          justify-content: center;
-                          align-items: center;
-                          margin: 0 auto;
-                          padding-left: 1px;
-                          padding-right: 1px;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
-                          display: none;
-                          min-width: 25%;
-                          max-width: 17%;
-                          @media screen and (min-width:460px) {
-                            min-width: 31%;
-                            max-width: 31%;
-                          }
-                          @media screen and (min-width:768px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          @media screen and (min-width:992px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          @media screen and (min-width:1500px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          align-items: flex-start;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid__text {
-                          text-align: center;
-                        }
-                        .three-col-holder {
-                          {% comment %} min-width: 75%;
-                          max-width: 75%; {% endcomment %}
-                        }
-                        /* Hide the 'Learn more' element */
-                        #rbp-bnpl-learn-more {
-                          display: none !important;
-                        }
-                      `;
+                            .injected-product-widget {
+                              background-color: {{ colors_background }} !important;
+                              border: 0.1rem solid #707070 !important;
+                              border-radius: 0 !important;
+                              min-height: 80px !important;
+                              min-width: 100%;
+                              padding: 0 !important;
+                              cursor: pointer;
+                              flex-direction: row-reverse;
+                            }
+                            .injected-product-widget .injected-product-widget__grid__text p {
+                              font-size: 16px !important;
+                              gap: 0 !important;
+                              justify-content: center !important;
+                            }
+                            #snap-product-widget-container {
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0 auto;
+                              padding-left: 1px;
+                              padding-right: 1px;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                              display: none;
+                              min-width: 25%;
+                              max-width: 17%;
+                              @media screen and (min-width:460px) {
+                                min-width: 31%;
+                                max-width: 31%;
+                              }
+                              @media screen and (min-width:768px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              @media screen and (min-width:992px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              @media screen and (min-width:1500px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              align-items: flex-start;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid__text {
+                              text-align: center;
+                            }
+                            /* Hide the 'Learn more' element */
+                            #rbp-bnpl-learn-more {
+                              display: none !important;
+                            }
+                          `;
 
                           // Append the style element to the shadow root
                           shadowRoot.appendChild(style);
