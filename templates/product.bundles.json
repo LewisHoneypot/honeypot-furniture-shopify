@@ -65,6 +65,15 @@
             "padding_bottom": 5
           }
         },
+        "snap_buttons_AxQ6m4": {
+          "type": "snap_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -104,7 +113,8 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ede9e2"
+            "background_colour": "#ede9e2",
+            "data_source": "default"
           }
         },
         "drawer_j3bNWd": {
@@ -144,6 +154,7 @@
         "color_swatch_bWwLRJ",
         "price",
         "size_chart_kqc3gt",
+        "snap_buttons_AxQ6m4",
         "buy_buttons",
         "expected_delivery_EBee6K",
         "drawer_j3bNWd",
