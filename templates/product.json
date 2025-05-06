@@ -132,9 +132,9 @@
           "type": "snap_buttons",
           "settings": {
             "colors_background": "#ffffff",
-            "popup_layout": "single",
+            "popup_layout": "double",
             "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "standard"
+            "popup_design": "minimal"
           }
         },
         "protection_drawer_iWbVLW": {
