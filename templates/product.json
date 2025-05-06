@@ -95,6 +95,13 @@
             "popup_design": "minimal"
           }
         },
+        "klarna_buttons_pUYwXw": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -165,6 +172,7 @@
         "size_chart_kqc3gt",
         "drawer_j3bNWd",
         "snap_buttons_HagTqx",
+        "klarna_buttons_pUYwXw",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "protection_drawer_iWbVLW"
