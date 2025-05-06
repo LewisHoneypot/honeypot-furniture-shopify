@@ -86,6 +86,7 @@
         },
         "klarna_buttons_E8rbfR": {
           "type": "klarna_buttons",
+          "disabled": true,
           "settings": {
             "colors_background": "#ffffff",
             "popup_design": "minimal"
