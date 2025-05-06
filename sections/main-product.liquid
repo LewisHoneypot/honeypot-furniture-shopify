@@ -1688,8 +1688,9 @@
                   >
                     {% assign colors_background = block.settings.colors_background %}
                       
-                    {%- assign klarna_price = product.price | money_without_currency -%}
-                    {%- assign klarna_price = klarna_price | divided_by: 3 -%}
+                    {% assign klarna_price = product.price %}
+                    {% assign klarna_price = klarna_price | divided_by: 100 %}
+                    {% assign klarna_price = klarna_price | divided_by: 3 %}
 
                     <div class="col-12 pt-2 pl-0 pr-0 klarna">
                       <span>Pay in 3 - £{{ klarna_price | round: 2 }} P/M</span>
