@@ -87,6 +87,22 @@
             "content": ""
           }
         },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_VJbEwF": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -129,15 +145,6 @@
             "data_source": "nosto"
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
@@ -165,9 +172,10 @@
         "drawer_j3bNWd",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "snap_buttons_HagTqx",
+        "klarna_buttons_VJbEwF",
         "buy_buttons",
         "expected_delivery_TKcTdt",
-        "snap_buttons_HagTqx",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
