@@ -55,17 +55,20 @@
             "padding_bottom": 5
           }
         },
-        "expected_delivery_4HJChA": {
-          "type": "expected_delivery",
+        "snap_buttons_rnjz4z": {
+          "type": "snap_buttons",
           "settings": {
-            "heading": "Delivery From",
-            "enable_expected_delivery": true,
-            "tiers": "off",
-            "date_type": "vague",
-            "padding_top": 0,
-            "padding_bottom": 5,
-            "background_colour": "#ffffff",
-            "data_source": "nosto"
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_mXEin8": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "buy_buttons": {
@@ -97,13 +100,17 @@
             "padding_bottom": 5
           }
         },
-        "snap_buttons_rnjz4z": {
-          "type": "snap_buttons",
+        "expected_delivery_4HJChA": {
+          "type": "expected_delivery",
           "settings": {
-            "colors_background": "#ffffff",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
+            "heading": "Delivery From",
+            "enable_expected_delivery": true,
+            "tiers": "off",
+            "date_type": "vague",
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ffffff",
+            "data_source": "nosto"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -130,9 +137,10 @@
         "price",
         "variant_picker_AJEB8c",
         "size_chart_kqc3gt",
-        "expected_delivery_4HJChA",
-        "buy_buttons",
         "snap_buttons_rnjz4z",
+        "klarna_buttons_mXEin8",
+        "buy_buttons",
+        "expected_delivery_4HJChA",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
