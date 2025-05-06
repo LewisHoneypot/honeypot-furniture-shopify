@@ -75,6 +75,15 @@
             "content": ""
           }
         },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
         "klarna_buttons_LyTFWQ": {
           "type": "klarna_buttons",
           "settings": {
@@ -124,15 +133,6 @@
             "data_source": "nosto"
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -171,10 +171,10 @@
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "snap_buttons_HagTqx",
         "klarna_buttons_LyTFWQ",
         "buy_buttons",
         "expected_delivery_TKcTdt",
-        "snap_buttons_HagTqx",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
