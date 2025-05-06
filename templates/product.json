@@ -86,6 +86,15 @@
             "colors_border": "#707070"
           }
         },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -128,15 +137,6 @@
             "data_source": "nosto"
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "colors_background": "#ffffff",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
@@ -164,9 +164,9 @@
         "price",
         "size_chart_kqc3gt",
         "drawer_j3bNWd",
+        "snap_buttons_HagTqx",
         "buy_buttons",
         "expected_delivery_TKcTdt",
-        "snap_buttons_HagTqx",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
