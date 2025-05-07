@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -74,7 +65,7 @@
             "heading": "Buy With Confidence",
             "usp_icon_1": "trust",
             "usp_content_type": "custom",
-            "content": "<p>At Honeypot, we want you to find your perfect sofa. If you're not 100% satisfied for any reason and want to return it, no problem! We offer an on-the-spot return option with our friendly delivery drivers. Here’s how it works:</p><ul><li><strong>Try it out:</strong> Once the drivers unpack the sofa, feel free to sit, relax, and make sure it's right for you before deciding.</li><li><strong>Immediate Return:</strong> If you're not 100% satisfied for any reason and want to return the sofa, simply let our drivers know before they leave, and we'll either arrange a full refund or an exchange. </li><li><strong>Final Decision:</strong> Once the drivers leave, this option expires, but you can still use our standard return policy (additional fees may apply).</li></ul><p>Your satisfaction is our priority, and we’re committed to giving you the flexibility to create your dream home!</p>"
+            "content": "<p>At Honeypot, we want you to find your perfect sofa. If you're not 100% satisfied for any reason and want to return it, no problem! We offer an on-the-spot return option with our friendly delivery drivers. Here’s how it works:<\/p><ul><li><strong>Try it out:<\/strong> Once the drivers unpack the sofa, feel free to sit, relax, and make sure it's right for you before deciding.<\/li><li><strong>Immediate Return:<\/strong> If you're not 100% satisfied for any reason and want to return the sofa, simply let our drivers know before they leave, and we'll either arrange a full refund or an exchange. <\/li><li><strong>Final Decision:<\/strong> Once the drivers leave, this option expires, but you can still use our standard return policy (additional fees may apply).<\/li><\/ul><p>Your satisfaction is our priority, and we’re committed to giving you the flexibility to create your dream home!<\/p>"
           }
         },
         "usp_drawer_2_Yk9cgj": {
@@ -150,8 +141,8 @@
           "settings": {
             "title": "Emmiera",
             "pricing_type": "price",
-            "main_image": "shopify://shop_images/emmiera_logo.jpg",
-            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
+            "main_image": "shopify:\/\/shop_images\/emmiera_logo.jpg",
+            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -210,14 +201,14 @@
         "overlay_text_color_2": "#ffffff",
         "overlay_background_color_2": "#000000",
         "christmas_delivery_eta_toggle": false,
-        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
+        "christmas_image": "shopify:\/\/shop_images\/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
     "17361637054b91e455": {
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_DigETz": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-3"
           }
@@ -250,7 +241,7 @@
           "settings": {
             "heading": "Dimensions",
             "content_type": "custom",
-            "content1": "<p>{{ product.metafields.custom.garden_dimenions | metafield_tag }}</p>",
+            "content1": "<p>{{ product.metafields.custom.garden_dimenions | metafield_tag }}<\/p>",
             "content2": "",
             "page": ""
           }
@@ -261,7 +252,7 @@
           "settings": {
             "heading": "Additional Information",
             "content_type": "additional_information",
-            "content1": "<p><strong>Please note:</strong> Gas bottle not included.</p><p>The firepit table comes with easy-to-follow instructions for quick setup, and includes decorative coals that retain heat even after the gas is turned off—ideal for relaxing outdoors as the evening cools down.</p><p>To keep your set protected, a rain cover is also included <strong>at no extra cost</strong>.</p>",
+            "content1": "<p><strong>Please note:<\/strong> Gas bottle not included.<\/p><p>The firepit table comes with easy-to-follow instructions for quick setup, and includes decorative coals that retain heat even after the gas is turned off—ideal for relaxing outdoors as the evening cools down.<\/p><p>To keep your set protected, a rain cover is also included <strong>at no extra cost<\/strong>.<\/p>",
             "content2": "",
             "page": ""
           }
@@ -271,7 +262,7 @@
           "settings": {
             "heading": "Delivery & Returns",
             "content_type": "delivery_and_returns",
-            "content1": "<p><strong>Delivery</strong><br/><br/>Delivery is typically 1-3 weeks depending on stock. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
+            "content1": "<p><strong>Delivery<\/strong><br\/><br\/>Delivery is typically 1-3 weeks depending on stock. <\/p><p><strong>Real-Time Tracking<\/strong><br\/><br\/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br\/><br\/><strong>Hassle-Free Returns<\/strong><br\/><br\/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.<\/p><p><strong>Need Assistance?<\/strong><br\/><br\/>Contact our friendly customer service team for any questions or concerns:<\/p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771<\/strong><\/a><br\/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk<\/strong><\/a><\/p><p><strong>Office Hours:<\/strong><br\/><br\/>Mon-Fri: 8am-8pm<br\/>Sat-Sun: 10am-3pm<\/p>",
             "content2": "",
             "page": ""
           }
@@ -282,8 +273,8 @@
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "custom",
-            "content1": "<p>A rain cover is provided with this set at no extra charge and it's advisable to cover your furniture when not in use. Please ensure that the coals have cooled on the firepit table before covering. <br/><br/><strong>Rattan Frame Cleaning:</strong></p><ul><li>Take off all cushions before cleaning.<br/>Use a soft brush or vacuum to remove loose dirt.</li><li>Mix warm water with mild soap. Wipe the rattan with a soft cloth or sponge. Use a toothbrush for hard-to-reach spots.</li><li>Use a garden hose on a gentle setting to rinse. Avoid pressure washers as they can damage the rattan.</li><li>Let the furniture air-dry completely before use.<br/></li></ul><p><strong>Cushion Cover Care:</strong></p><ul><li>Always follow manufacturer care instructions.</li><li>Apply a mild detergent to stains and let sit.</li><li>Most removable covers can be machine washed on a gentle, cold cycle. For hand-wash-only covers, soak in cold water with mild detergent and rinse well.</li><li>Air-dry completely before refitting to prevent mildew.</li></ul>",
-            "content2": "<p><strong>Maintenance Tips:</strong></p><ul><li>Clean twice yearly or as needed.</li><li>Use furniture covers and store cushions indoors during bad weather.</li><li>Avoid harsh chemicals or abrasive cleaners.</li></ul>",
+            "content1": "<p>A rain cover is provided with this set at no extra charge and it's advisable to cover your furniture when not in use. Please ensure that the coals have cooled on the firepit table before covering. <br\/><br\/><strong>Rattan Frame Cleaning:<\/strong><\/p><ul><li>Take off all cushions before cleaning.<br\/>Use a soft brush or vacuum to remove loose dirt.<\/li><li>Mix warm water with mild soap. Wipe the rattan with a soft cloth or sponge. Use a toothbrush for hard-to-reach spots.<\/li><li>Use a garden hose on a gentle setting to rinse. Avoid pressure washers as they can damage the rattan.<\/li><li>Let the furniture air-dry completely before use.<br\/><\/li><\/ul><p><strong>Cushion Cover Care:<\/strong><\/p><ul><li>Always follow manufacturer care instructions.<\/li><li>Apply a mild detergent to stains and let sit.<\/li><li>Most removable covers can be machine washed on a gentle, cold cycle. For hand-wash-only covers, soak in cold water with mild detergent and rinse well.<\/li><li>Air-dry completely before refitting to prevent mildew.<\/li><\/ul>",
+            "content2": "<p><strong>Maintenance Tips:<\/strong><\/p><ul><li>Clean twice yearly or as needed.<\/li><li>Use furniture covers and store cushions indoors during bad weather.<\/li><li>Avoid harsh chemicals or abrasive cleaners.<\/li><\/ul>",
             "page": ""
           }
         },
@@ -333,7 +324,7 @@
         "text_mDUJrg": {
           "type": "text",
           "settings": {
-            "text": "<p>Our team is just a call or WhatsApp message away!</p>",
+            "text": "<p>Our team is just a call or WhatsApp message away!<\/p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -346,7 +337,7 @@
             "primary_button_link": "tel:01476338771",
             "primary_button_type": "transparent",
             "secondary_button_label": "CHAT WITH US",
-            "secondary_button_link": "https://wa.me/15557037896",
+            "secondary_button_link": "https:\/\/wa.me\/15557037896",
             "secondary_button_type": "transparent",
             "padding_top": 50,
             "padding_bottom": 10
@@ -523,7 +514,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_adT36z": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-1"
           }
@@ -556,13 +547,13 @@
         "padding_bottom": 50,
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 15,
-        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "logo1": "shopify:\/\/shop_images\/1_d5758214-c826-444c-bafd-07857f6f5020.png",
         "image_picker_link1": "",
         "image_picker_alt1": "HouseBeautiful",
-        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "logo2": "shopify:\/\/shop_images\/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
         "image_picker_link2": "",
         "image_picker_alt2": "interior designer",
-        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "logo3": "shopify:\/\/shop_images\/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
         "image_picker_link3": "",
         "image_picker_alt3": "COUNTRY LIVING",
         "background_color": "#48544c"
@@ -572,7 +563,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_rpXq8n": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-2"
           }
