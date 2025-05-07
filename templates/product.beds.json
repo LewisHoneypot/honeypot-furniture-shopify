@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -55,17 +46,20 @@
             "padding_bottom": 5
           }
         },
-        "expected_delivery_4HJChA": {
-          "type": "expected_delivery",
+        "snap_buttons_rnjz4z": {
+          "type": "snap_buttons",
           "settings": {
-            "heading": "Delivery From",
-            "enable_expected_delivery": true,
-            "tiers": "off",
-            "date_type": "vague",
-            "padding_top": 0,
-            "padding_bottom": 5,
-            "background_colour": "#ffffff",
-            "data_source": "nosto"
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_mXEin8": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "buy_buttons": {
@@ -97,13 +91,17 @@
             "padding_bottom": 5
           }
         },
-        "snap_buttons_rnjz4z": {
-          "type": "snap_buttons",
+        "expected_delivery_4HJChA": {
+          "type": "expected_delivery",
           "settings": {
-            "colors_background": "#ffffff",
-            "popup_layout": "single",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "standard"
+            "heading": "Delivery From",
+            "enable_expected_delivery": true,
+            "tiers": "off",
+            "date_type": "vague",
+            "padding_top": 0,
+            "padding_bottom": 5,
+            "background_colour": "#ffffff",
+            "data_source": "nosto"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -112,7 +110,7 @@
           "settings": {
             "title": "Protection",
             "pricing_type": "seating_capacity",
-            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
+            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -130,9 +128,10 @@
         "price",
         "variant_picker_AJEB8c",
         "size_chart_kqc3gt",
-        "expected_delivery_4HJChA",
-        "buy_buttons",
         "snap_buttons_rnjz4z",
+        "klarna_buttons_mXEin8",
+        "buy_buttons",
+        "expected_delivery_4HJChA",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
@@ -180,9 +179,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free return within 15 days</p>",
+            "text": "<p>Free return within 15 days<\/p>",
             "link_label": "",
-            "link": "shopify://collections"
+            "link": "shopify:\/\/collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-1": {
@@ -193,9 +192,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Free shipping on orders over 49$</p>",
+            "text": "<p>Free shipping on orders over 49$<\/p>",
             "link_label": "",
-            "link": "shopify://collections"
+            "link": "shopify:\/\/collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-2": {
@@ -206,9 +205,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>No harmful chemicals</p>",
+            "text": "<p>No harmful chemicals<\/p>",
             "link_label": "",
-            "link": "shopify://collections"
+            "link": "shopify:\/\/collections"
           }
         },
         "template--16864572244207__d429c49f-e09d-426d-a360-6ab92fc46930-1686822038126118ed-3": {
@@ -219,9 +218,9 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "",
-            "text": "<p>Fresh and clean product</p>",
+            "text": "<p>Fresh and clean product<\/p>",
             "link_label": "",
-            "link": "shopify://collections"
+            "link": "shopify:\/\/collections"
           }
         }
       },
@@ -269,7 +268,7 @@
           "settings": {
             "heading": "Delivery",
             "content_type": "custom",
-            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br/></p><ul><li>Delivery in 1-7 days for items in stock</li><li>Two-person delivery team</li><li>Doesn’t fit? We’ll refund you in full including the delivery fee</li><li>Live tracking with ETA provided on your day of delivery</li></ul>",
+            "content": "<p>Once you place your order, we will call you within 24 hours to arrange your delivery date.<br\/><\/p><ul><li>Delivery in 1-7 days for items in stock<\/li><li>Two-person delivery team<\/li><li>Doesn’t fit? We’ll refund you in full including the delivery fee<\/li><li>Live tracking with ETA provided on your day of delivery<\/li><\/ul>",
             "page": "description",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -308,7 +307,7 @@
           "settings": {
             "heading": "Features",
             "content_type": "custom",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "page": "",
             "padding_top": 30,
             "padding_bottom": 68,
@@ -321,7 +320,7 @@
           "settings": {
             "heading": "Description",
             "content_type": "description",
-            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "page": "",
             "padding_top": 61,
             "padding_bottom": 61,
@@ -396,7 +395,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_KamEBE": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-1"
           }
@@ -424,7 +423,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_8Ke6Ey": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-2"
           }
@@ -602,7 +601,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_4Htw4L": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "disabled": true,
           "settings": {
             "placement": "product-page-nosto-3"
@@ -689,7 +688,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_LRENcU": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "disabled": true,
           "settings": {
             "placement": "product-page-nosto-4"
