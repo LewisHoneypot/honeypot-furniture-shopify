@@ -4354,6 +4354,13 @@ summary::-webkit-details-marker {
 .button > span {
   position: relative;
   z-index: 2;
+  top: 3px;
+}
+
+@media screen and (min-width:576px) {
+  .button > span {
+    top: 0px;
+  }
 }
 
 .button--close {
