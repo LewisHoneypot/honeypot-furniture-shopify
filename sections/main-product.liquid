@@ -804,30 +804,66 @@
                 {%- endif -%}
 
               {%- when 'popup' -%}
+                {%- if block.settings.design_type == "minimal" %}
+                  <style>
+                    [data-side-drawer="#PopupModal-{{ block.id }}"] {
+                      width: 100%;
+                    }
+                    #ProductPopup-{{ block.id }}.product-popup-modal__button {
+                      text-align: left !important;
+                      font-family: "Aeonik", Arial, Helvetica, sans-serif;
+                      font-size: .7em;
+                      height: 40px;
+                      min-height: 30px;
+                      align-content: center;
+                      color: #062d4e;
+                      margin-bottom: -5px;
+                      text-decoration: none;
+                      cursor: pointer;
+                      margin-top: 10px;
+                      width: 100%;
+                    }
+                    #ProductPopup-{{ block.id }} .see-details {
+                      color: #527e36;
+                      text-decoration: underline;
+                      margin-left: 5px;
+                    }
+                  </style>
+                {%- endif -%}
+
                 {%- if block.settings.text != blank or block.settings.page != blank -%}
                   <side-drawer-opener
                     class="popups-popup-modal__opener product-popup-modal__opener d-inline-block no-js-hidden"
                     data-side-drawer="#PopupModal-{{ block.id }}"
                     {{ block.shopify_attributes }}
                   >
-                    <button
+                    <{%- if block.settings.dummy_button == "yes" -%}div {% else -%}button {% endif %}
                       id="ProductPopup-{{ block.id }}"
                       class="product-popup-modal__button bg-transparent b-none link u-link d-inline-block u-u t-button p-0"
                       type="button"
                       aria-haspopup="dialog"
+                    {%- if block.settings.dummy_button == "yes" %} style="cursor: default;"{%- endif %}
                     >
+                      {%- if block.settings.use_icon == "on" -%}
+                        <img src="{{ block.settings.icon_image | image_url }}" height="39" width="39">
+                      {%- endif -%}
                       <span>{{ block.settings.text | default: block.settings.page.title }}</span>
-                    </button>
+                      {%- if block.settings.dummy_button == "no" -%}
+                        {%- if block.settings.design_type == "minimal" %}
+                          <span class="see-details">SEE DETAILS</span>
+                        {%- endif -%}
+                      {%- endif -%}
+                  </{%- if block.settings.dummy_button == "yes" -%}div{%- else -%}button{%- endif -%}>
                   </side-drawer-opener>
-                  <a
-                    href="{{ block.settings.page.url }}"
-                    class="product-popup-modal__button link u-link d-inline-block u-u t-button p-0 no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    {{- block.settings.text -}}
-                  </a>
+                    <a
+                      href="{{ block.settings.page.url }}"
+                      class="product-popup-modal__button link u-link d-inline-block u-u t-button p-0 no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {{- block.settings.text -}}
+                    </a>
                 {%- endif -%}
 
               {%- when 'trustpilot_mini' -%}
@@ -4921,6 +4957,56 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.all.content_from_page.label"
+        },
+        {
+          "id": "use_icon",
+          "type": "select",
+          "label": "Use Icon",
+          "options": [
+            {
+              "value": "off",
+              "label": "Off"
+            },
+            {
+              "value": "on",
+              "label": "On"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "id": "design_type",
+          "type": "select",
+          "label": "Design Type",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ]
+        },
+        {
+          "id": "dummy_button",
+          "type": "select",
+          "label": "Dummy Button",
+          "options": [
+            {
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "value": "yes",
+              "label": "Yes"
+            }
+          ]
         }
       ]
     },
