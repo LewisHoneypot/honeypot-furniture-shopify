@@ -145,6 +145,17 @@
             "dummy_button": "yes"
           }
         },
+        "popup_C7wLwE": {
+          "type": "popup",
+          "settings": {
+            "text": "PRICE MATCH GUARANTEE*",
+            "page": "price-match-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -188,6 +199,7 @@
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "popup_wJ3rXc",
+        "popup_C7wLwE",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
