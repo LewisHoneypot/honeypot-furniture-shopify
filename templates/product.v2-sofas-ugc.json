@@ -147,11 +147,24 @@
         },
         "popup_C7wLwE": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "text": "PRICE MATCH GUARANTEE*",
             "page": "price-match-guarantee",
             "use_icon": "on",
             "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "popup_4gFHxf": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
             "design_type": "minimal",
             "dummy_button": "no"
           }
@@ -200,6 +213,7 @@
         "expected_delivery_TKcTdt",
         "popup_wJ3rXc",
         "popup_C7wLwE",
+        "popup_4gFHxf",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
