@@ -135,7 +135,6 @@
         },
         "popup_wJ3rXc": {
           "type": "popup",
-          "disabled": true,
           "settings": {
             "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
             "page": "",
@@ -147,7 +146,6 @@
         },
         "popup_C7wLwE": {
           "type": "popup",
-          "disabled": true,
           "settings": {
             "text": "PRICE MATCH GUARANTEE*",
             "page": "price-match-guarantee",
@@ -159,7 +157,6 @@
         },
         "popup_4gFHxf": {
           "type": "popup",
-          "disabled": true,
           "settings": {
             "text": "5-YEAR FRAME GUARANTEE",
             "page": "5-year-frame-guarantee",
