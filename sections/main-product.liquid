@@ -903,7 +903,13 @@
                     <!-- Set columns -->
                     <style>
                       .color-list {
-                        {%- if p_count == 5 %}
+                        {%- if p_count == 8 %}
+                          grid-template-columns: repeat({{ p_count }}, 12.5%);
+                        {%- elsif p_count == 7 %}
+                          grid-template-columns: repeat({{ p_count }}, 14.2%);
+                        {%- elsif p_count == 6 %}
+                          grid-template-columns: repeat({{ p_count }}, 16.6%);
+                        {%- elsif p_count == 5 %}
                           grid-template-columns: repeat({{ p_count }}, 20%);
                         {%- elsif p_count == 4 -%}
                           grid-template-columns: repeat({{ p_count }}, 25%);
