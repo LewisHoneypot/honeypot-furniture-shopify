@@ -155,6 +155,17 @@
             "dummy_button": "no"
           }
         },
+        "popup_zT8VM4": {
+          "type": "popup",
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
         "drawer_j3bNWd": {
           "type": "drawer",
           "settings": {
@@ -199,6 +210,7 @@
         "expected_delivery_TKcTdt",
         "popup_bbyB6H",
         "popup_grnbAg",
+        "popup_zT8VM4",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
