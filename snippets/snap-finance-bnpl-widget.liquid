@@ -112,12 +112,22 @@ document.addEventListener('DOMContentLoaded', function() {
           width: unset !important;
         }
         .injected-product-widget__grid {
-          width: 136px !important;
-          height: unset !important;
+          width: 140px !important;
+        }
+        @media screen and (min-width:370px) {
+          .injected-product-widget__grid {
+            width: 185px !important;
+            flex: none !important;
+            height: unset !important;
+          }
         }
         .injected-product-widget .injected-product-widget__grid__text p {
           font-size: clamp(11px, 3.5cqw, 14px) !important;
           gap: 0 !important;
+          color: #000 !important;
+        }
+        .injected-product-widget .injected-product-widget__grid__text p span {
+          color: #000 !important;
         }
         #snap-product-widget-container {
           align-items: center;
@@ -127,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .rbp-bnpl-widget .injected-product-widget__grid-logo {
           min-width: 0%;
-          max-width: 27%;
           align-items: flex-start;
           display: block;
           position: relative;
