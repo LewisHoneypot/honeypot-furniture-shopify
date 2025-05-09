@@ -106,16 +106,24 @@ document.addEventListener('DOMContentLoaded', function() {
           padding: 0 !important;
           cursor: pointer;
           flex-direction: row-reverse;
-          width: 428px;
+          width: unset;
+        }
+        .injected-product-widget__grid {
+          width: 140px !important;
         }
         @media screen and (min-width:370px) {
           .injected-product-widget__grid {
-            width: 167px !important;
+            width: 236px !important;
+            flex: none !important;
           }
         }
         .injected-product-widget .injected-product-widget__grid__text p {
           font-size: clamp(11px, 3.5cqw, 14px) !important;
           gap: 0 !important;
+          color: #000 !important;
+        }
+        .injected-product-widget .injected-product-widget__grid__text p span {
+          color: #000 !important;
         }
         #snap-product-widget-container {
           align-items: center;
@@ -125,36 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .rbp-bnpl-widget .injected-product-widget__grid-logo {
           min-width: 0%;
-          max-width: 27%;
           align-items: flex-start;
           display: block;
           position: relative;
           top: 4px;
-        }
-        @media screen and (min-width:427px) {
-          .rbp-bnpl-widget .injected-product-widget__grid-logo {
-            max-width: 39%;
-          }
-        }
-        @media screen and (min-width:990px) {
-          .rbp-bnpl-widget .injected-product-widget__grid-logo {
-            max-width: 28%;
-          }
-        }
-        @media screen and (min-width:1113px) {
-          .rbp-bnpl-widget .injected-product-widget__grid-logo {
-            max-width: 39%;
-          }
-        }
-        @media screen and (min-width:1200px) {
-          .rbp-bnpl-widget .injected-product-widget__grid-logo {
-            max-width: 27%;
-          }
-        }
-        @media screen and (min-width:1451px) {
-          .rbp-bnpl-widget .injected-product-widget__grid-logo {
-            max-width: 39%;
-          }
         }
         .rbp-bnpl-widget .injected-product-widget__grid__text {
           text-align: left;
