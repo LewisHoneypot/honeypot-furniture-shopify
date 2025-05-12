@@ -31,8 +31,15 @@
             "padding_bottom": 0
           }
         },
+        "nosto_nosto_placements_block_9cch4p": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "available-colours"
+          }
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
+          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font": "Gotham",
@@ -200,6 +207,7 @@
       "block_order": [
         "title",
         "trustpilot_mini_TB9jLy",
+        "nosto_nosto_placements_block_9cch4p",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
