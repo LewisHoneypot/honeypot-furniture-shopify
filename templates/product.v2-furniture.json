@@ -140,8 +140,15 @@
             "data_source": "nosto"
           }
         },
+        "nosto_nosto_placements_block_8kgmiP": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
+          }
+        },
         "drawer_j3bNWd": {
           "type": "drawer",
+          "disabled": true,
           "settings": {
             "heading": "VIEW THE RANGE",
             "font": "Gotham",
@@ -183,6 +190,7 @@
         "klarna_buttons_Cb86nH",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "nosto_nosto_placements_block_8kgmiP",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
