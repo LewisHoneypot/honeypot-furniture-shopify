@@ -665,6 +665,7 @@
         "item_hrJQRV",
         "item_NtmAA3"
       ],
+      "disabled": true,
       "settings": {
         "type_style": "classic",
         "section_width": "customized-width",
