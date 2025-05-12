@@ -173,8 +173,15 @@
             "dummy_button": "no"
           }
         },
+        "nosto_nosto_placements_block_gLkfYt": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
+          }
+        },
         "drawer_j3bNWd": {
           "type": "drawer",
+          "disabled": true,
           "settings": {
             "heading": "VIEW THE RANGE",
             "font": "Gotham",
@@ -219,6 +226,7 @@
         "popup_bbyB6H",
         "popup_grnbAg",
         "popup_zT8VM4",
+        "nosto_nosto_placements_block_gLkfYt",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
