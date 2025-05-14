@@ -110,36 +110,33 @@
   </style>
     
   <script>
-    document.addEventListener( 'DOMContentLoaded', function () {
-    var main = new Splide( '#main-carousel', {
-      type      : 'loop',
-      pagination: false,
-      arrows    : false,
-      perPage   : 1
-    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var main = new Splide('#main-carousel');
+      var thumbs = new Splide('#thumbnail-carousel');
 
-    var thumbnails = new Splide( '#thumbnail-carousel', {
-      fixedWidth  : 100,
-      fixedHeight : 60,
-      gap         : 10,
-      rewind      : true,
-      pagination  : false,
-      isNavigation: true,
-      breakpoints : {
-        600: {
-          fixedWidth : 60,
-          fixedHeight: 44
-        },
-      },
+      main.sync(thumbs);
+      main.mount();
+      thumbs.mount();
     });
-
-    main.sync( thumbnails );
-    main.mount();
-    thumbnails.mount();
-  });
   </script>
 
-  <section id="main-carousel" class="splide" aria-label="Product Images">
+  <section 
+    id="main-carousel" 
+    class="splide" 
+    aria-label="Product Images"
+    data-splide='{
+      "type": "slide",
+      "arrows": true,
+      "lazyLoad": "nearby",
+      "rewind": false,
+      "gap": 0,
+      "breakpoints": {
+        "640": {
+          "gap": 0
+        }
+      }
+    }'
+  >
     <div class="splide__track">
       <ul class="splide__list">
         {%- for media in product.media -%}
@@ -168,6 +165,25 @@
     id="thumbnail-carousel"
     class="splide"
     aria-label="The carousel with thumbnails. Selecting a thumbnail will change the product carousel."
+    data-splide='{
+      "type": "fade",
+      "perPage": {{ media_count }},
+      "rewind": false,
+      "fixedWidth": 100,
+      "fixedHeight": 100,
+      "isNavigation": true,
+      "gap": 10,
+      "focus": "center",
+      "pagination": false,
+      "lazyLoad": "nearby",
+      "arrows": true,
+      "breakpoints": {
+        "640": {
+          "fixedWidth": 100,
+          "fixedHeight": 60
+        }
+      }
+    }'
   >
     <div class="splide__track">
       <ul class="splide__list">
