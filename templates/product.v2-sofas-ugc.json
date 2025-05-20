@@ -649,6 +649,63 @@
         "padding_bottom_mobile": 0
       }
     },
+    "trustpilot_product_reviews_collapsible_8YH8Ak": {
+      "type": "trustpilot-product-reviews-collapsible",
+      "blocks": {
+        "collapsible_row_V9KmDH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Customer Reviews",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "primary_button_label": "Rating Breakdown",
+            "primary_button_color_scheme": "background-1",
+            "secondary_button_label": "Hide Breakdown",
+            "secondary_button_color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_V9KmDH"
+      ],
+      "settings": {
+        "heading": "Reviews",
+        "use_hr": true,
+        "font": "Gotham",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
+      }
+    },
+    "as_seen_in_Pnd8YJ": {
+      "type": "as-seen-in",
+      "settings": {
+        "heading": "As Seen In",
+        "font": "Gotham",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 15,
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link1": "",
+        "image_picker_alt1": "HouseBeautiful",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "image_picker_link2": "",
+        "image_picker_alt2": "interior designer",
+        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "image_picker_link3": "",
+        "image_picker_alt3": "COUNTRY LIVING",
+        "background_color": "#48544c"
+      }
+    },
     "17361637054b91e455": {
       "type": "apps",
       "blocks": {
@@ -706,27 +763,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "as_seen_in_Pnd8YJ": {
-      "type": "as-seen-in",
-      "settings": {
-        "heading": "As Seen In",
-        "font": "Gotham",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 15,
-        "padding_bottom_mobile": 15,
-        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
-        "image_picker_link1": "",
-        "image_picker_alt1": "HouseBeautiful",
-        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
-        "image_picker_link2": "",
-        "image_picker_alt2": "interior designer",
-        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
-        "image_picker_link3": "",
-        "image_picker_alt3": "COUNTRY LIVING",
-        "background_color": "#48544c"
-      }
-    },
     "1736163667c8a5c273": {
       "type": "apps",
       "blocks": {
@@ -753,42 +789,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
-      }
-    },
-    "trustpilot_product_reviews_collapsible_8YH8Ak": {
-      "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
       }
     },
     "lookbook_pGUge4": {
@@ -1008,9 +1008,9 @@
     "rich_text_WaVhX9",
     "video_FxQj6U",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
+    "as_seen_in_Pnd8YJ",
     "17361637054b91e455",
     "1736163654e8d791fe",
-    "as_seen_in_Pnd8YJ",
     "1736163667c8a5c273",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
