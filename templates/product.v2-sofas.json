@@ -493,6 +493,42 @@
         "padding_bottom_mobile": 20
       }
     },
+    "trustpilot_product_reviews_collapsible_8YH8Ak": {
+      "type": "trustpilot-product-reviews-collapsible",
+      "blocks": {
+        "collapsible_row_V9KmDH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Customer Reviews",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "primary_button_label": "Rating Breakdown",
+            "primary_button_color_scheme": "background-1",
+            "secondary_button_label": "Hide Breakdown",
+            "secondary_button_color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_V9KmDH"
+      ],
+      "settings": {
+        "heading": "Reviews",
+        "use_hr": true,
+        "font": "Gotham",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
+      }
+    },
     "17361637054b91e455": {
       "type": "apps",
       "blocks": {
@@ -616,42 +652,6 @@
         "image_picker_link3": "",
         "image_picker_alt3": "COUNTRY LIVING",
         "background_color": "#48544c"
-      }
-    },
-    "trustpilot_product_reviews_collapsible_8YH8Ak": {
-      "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
       }
     },
     "1736163667c8a5c273": {
@@ -896,11 +896,11 @@
     "drawers_Ut99DD",
     "multicolumn_FJHgEr",
     "rich_text_WaVhX9",
+    "trustpilot_product_reviews_collapsible_8YH8Ak",
     "17361637054b91e455",
     "video_FxQj6U",
-    "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
-    "trustpilot_product_reviews_collapsible_8YH8Ak",
+    "1736163654e8d791fe",
     "1736163667c8a5c273",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
