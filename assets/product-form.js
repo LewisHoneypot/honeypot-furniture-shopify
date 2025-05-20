@@ -131,7 +131,7 @@ if (!customElements.get('product-form')) {
     }
 
     async removeProtectionItems(cart) {
-      const protectionItems = cart.items.filter((item) => item.title.includes("Emmiera"));
+      const protectionItems = cart.items.filter((item) => item.title.includes("Staingard"));
       if (protectionItems.length === 0) {
         // console.log("No Protection items found to remove.");
         return;
