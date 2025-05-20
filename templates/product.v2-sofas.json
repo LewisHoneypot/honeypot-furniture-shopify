@@ -195,10 +195,10 @@
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
-            "title": "Emmiera",
+            "title": "Staingard",
             "pricing_type": "price",
-            "main_image": "shopify://shop_images/emmiera_logo.jpg",
-            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
+            "main_image": "shopify://shop_images/StainGard.png",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -569,27 +569,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "as_seen_in_Pnd8YJ": {
-      "type": "as-seen-in",
-      "settings": {
-        "heading": "As Seen In",
-        "font": "Gotham",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 15,
-        "padding_bottom_mobile": 15,
-        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
-        "image_picker_link1": "",
-        "image_picker_alt1": "HouseBeautiful",
-        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
-        "image_picker_link2": "",
-        "image_picker_alt2": "interior designer",
-        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
-        "image_picker_link3": "",
-        "image_picker_alt3": "COUNTRY LIVING",
-        "background_color": "#48544c"
-      }
-    },
     "1736163654e8d791fe": {
       "type": "apps",
       "blocks": {
@@ -616,6 +595,27 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
+      }
+    },
+    "as_seen_in_Pnd8YJ": {
+      "type": "as-seen-in",
+      "settings": {
+        "heading": "As Seen In",
+        "font": "Gotham",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 15,
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link1": "",
+        "image_picker_alt1": "HouseBeautiful",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "image_picker_link2": "",
+        "image_picker_alt2": "interior designer",
+        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "image_picker_link3": "",
+        "image_picker_alt3": "COUNTRY LIVING",
+        "background_color": "#48544c"
       }
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
