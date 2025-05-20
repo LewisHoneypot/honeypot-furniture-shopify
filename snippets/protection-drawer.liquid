@@ -387,8 +387,8 @@
                   <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Newline_Insurance_IPID_Form_-_18-12-2024.pdf_1.2.pdf?v=1738750354" target="_blank">Insurance Product Information Document</a>
                 </p>
 
-                <div id="emmiera-checks">
-                  <input type="checkbox" id="emmiera-tnc">
+                <div id="staingard-checks">
+                  <input type="checkbox" id="staingard-tnc">
                   <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Emmiera_Terms_Conditions_Newline_18-12-2024.pdf_2.7.pdf?v=1738744488" target="_blank">Terms & Conditions</a></p>
                 </div>
 
@@ -417,8 +417,8 @@
   <script>
     // Function to handle adding to the cart
     function handleProtectionAddToCart(protectionId) {
-      const checkbox = document.getElementById('emmiera-tnc');
-      const checkboxWrapper = document.getElementById('emmiera-checks');
+      const checkbox = document.getElementById('staingard-tnc');
+      const checkboxWrapper = document.getElementById('staingard-checks');
 
       // Check if checkbox is checked
       if (!checkbox.checked) {
@@ -484,7 +484,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       const button = document.getElementById('protection-add-to-cart');
-      const checkboxWrapper = document.getElementById('emmiera-checks');
+      const checkboxWrapper = document.getElementById('staingard-checks');
       const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
 
       {% comment %} console.log('protectionId', protectionId); {% endcomment %}
@@ -494,14 +494,14 @@
 
       // Event delegation to handle checkbox state change
       document.addEventListener('change', function (event) {
-        if (event.target && event.target.id === 'emmiera-tnc') {
+        if (event.target && event.target.id === 'staingard-tnc') {
           {% comment %} console.log('EventListener | Checkbox state changed:', event.target.checked ? 'Checked' : 'Unchecked'); {% endcomment %}
 
           // Enable/disable the button based on checkbox state
           button.disabled = !event.target.checked;
 
           if (event.target.checked) {
-            document.getElementById('emmiera-checks').style.border = '2px solid white';
+            document.getElementById('staingard-checks').style.border = '2px solid white';
           } else {
             checkboxWrapper.style.border = '2px solid red';
           }
@@ -512,12 +512,12 @@
   </script>
 
   {% style %}
-    #emmiera-checks {
+    #staingard-checks {
       display: flex;
       align-items: center;
       border: 2px solid white;
     }
-    #emmiera-checks #emmiera-tnc {
+    #staingard-checks #staingard-tnc {
       position: relative;
       -webkit-appearance: auto;
       appearance: auto;
@@ -529,7 +529,7 @@
       height: 3.6rem;
     }
     @media only screen and (min-width: 750px) {
-      #emmiera-checks #emmiera-tnc {
+      #staingard-checks #staingard-tnc {
         width: 1.6rem;
         height: 1.6rem;
       }
