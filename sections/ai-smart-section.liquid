@@ -1,0 +1,34 @@
+<section
+  class="ai-smart-section page-width"
+  style="margin-top: {{ section.settings.section_margin }}px; margin-bottom: {{ section.settings.section_margin }}px;"
+>
+  {% content_for 'blocks' %}
+</section>
+
+{% schema %}
+{
+  "name": "AI Smart Section",
+  "tag": "section",
+  "class": "section ai-smart-section",
+  "blocks": [
+    { "type": "@theme" },
+    { "type": "@app" }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "section_margin",
+      "label": "Section margin",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "AI Smart Section"
+    }
+  ]
+}
+{% endschema %}
