@@ -1,6 +1,14 @@
 <section
-  class="ai-smart-section page-width"
-  style="margin-top: {{ section.settings.section_margin }}px; margin-bottom: {{ section.settings.section_margin }}px;"
+  class="ai-smart-section {% if section.settings.section_width == 'page-width' %}page-width{% endif %}"
+  style="
+    margin-top: {{ section.settings.section_margin }}px;
+    margin-bottom: {{ section.settings.section_margin }}px;
+    {% if section.settings.section_width == 'customized-width' %}
+      max-width: {{ section.settings.customize_width }}px;
+      margin-left: auto;
+      margin-right: auto;
+    {% endif %}
+  "
 >
   {% content_for 'blocks' %}
 </section>
@@ -16,13 +24,43 @@
   ],
   "settings": [
     {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "customized-width",
+          "label": "Customized width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "customize_width",
+      "label": "Custom width (px)",
+      "min": 600,
+      "max": 2000,
+      "step": 100,
+      "default": 1400
+    },
+    {
       "type": "range",
       "id": "section_margin",
       "label": "Section margin",
       "min": 0,
       "max": 100,
       "default": 40,
-      "unit": "px"
+      "unit": "px",
+      "step": 1
     }
   ],
   "presets": [
