@@ -593,7 +593,7 @@
             "tab_active_background": "#333333",
             "tab_active_text_color": "#ffffff",
             "product_card_background": "#ffffff",
-            "button_text": "Add to Cart",
+            "button_text": "",
             "button_background": "#4a8f29",
             "button_text_color": "#ffffff",
             "button_hover_background": "#3a7020",
