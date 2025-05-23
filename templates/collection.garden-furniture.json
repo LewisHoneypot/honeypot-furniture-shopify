@@ -579,6 +579,74 @@
       "type": "clickslice-bottom-collapsible-tabs",
       "disabled": true,
       "settings": {}
+    },
+    "ai_smart_section_JmykQq": {
+      "type": "ai-smart-section",
+      "blocks": {
+        "ai_gen_block_bdd6eea_dbGxYm": {
+          "type": "ai_gen_block_bdd6eea",
+          "settings": {
+            "main_heading": "Explore Our Garden Collection",
+            "section_background": "#ffffff",
+            "tab_background": "#f4f4f4",
+            "tab_text_color": "#333333",
+            "tab_active_background": "#333333",
+            "tab_active_text_color": "#ffffff",
+            "product_card_background": "#ffffff",
+            "button_text": "Add to Cart",
+            "button_background": "#4a8f29",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#3a7020",
+            "tab_1_label": "Fire Pit",
+            "tab_1_heading": "Premium Fire Pit Collection",
+            "tab_1_product": "",
+            "tab_1_feature_1_caption": "Heat-resistant steel construction for long-lasting durability",
+            "tab_1_feature_1_color": "#e74c3c",
+            "tab_1_feature_2_caption": "Adjustable airflow system for perfect flame control",
+            "tab_1_feature_2_color": "#f39c12",
+            "tab_1_feature_3_caption": "Includes safety mesh cover and weather-resistant cover",
+            "tab_1_feature_3_color": "#3498db",
+            "tab_2_label": "Outdoor Sofa",
+            "tab_2_heading": "Comfortable Outdoor Sofa Sets",
+            "tab_2_product": "",
+            "tab_2_feature_1_caption": "All-weather wicker that resists fading and cracking",
+            "tab_2_feature_1_color": "#27ae60",
+            "tab_2_feature_2_caption": "Quick-dry foam cushions with removable, washable covers",
+            "tab_2_feature_2_color": "#8e44ad",
+            "tab_2_feature_3_caption": "Modular design allows for multiple configurations",
+            "tab_2_feature_3_color": "#e67e22",
+            "tab_3_label": "Dining Set",
+            "tab_3_heading": "Elegant Outdoor Dining Sets",
+            "tab_3_product": "",
+            "tab_3_feature_1_caption": "Rust-resistant aluminum frame for years of use",
+            "tab_3_feature_1_color": "#1abc9c",
+            "tab_3_feature_2_caption": "Tempered glass tabletop that's easy to clean",
+            "tab_3_feature_2_color": "#9b59b6",
+            "tab_3_feature_3_caption": "Stackable chairs for convenient storage",
+            "tab_3_feature_3_color": "#2980b9",
+            "tab_4_label": "Planters",
+            "tab_4_heading": "Stylish Garden Planters",
+            "tab_4_product": "",
+            "tab_4_feature_1_caption": "Frost-resistant ceramic that withstands extreme temperatures",
+            "tab_4_feature_1_color": "#c0392b",
+            "tab_4_feature_2_caption": "Built-in drainage system to prevent root rot",
+            "tab_4_feature_2_color": "#d35400",
+            "tab_4_feature_3_caption": "Available in various sizes for different plants",
+            "tab_4_feature_3_color": "#16a085"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bdd6eea_dbGxYm"
+      ],
+      "disabled": true,
+      "name": "AI Smart Section",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1400,
+        "section_margin": 40
+      }
     }
   },
   "order": [
@@ -593,6 +661,7 @@
     "collection_list_ig8tXp",
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
-    "clickslice_bottom_collapsible_tabs_GD3zKe"
+    "clickslice_bottom_collapsible_tabs_GD3zKe",
+    "ai_smart_section_JmykQq"
   ]
 }
