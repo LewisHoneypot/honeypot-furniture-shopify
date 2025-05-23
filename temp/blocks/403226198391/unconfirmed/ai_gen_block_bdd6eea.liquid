@@ -1,6 +1,864 @@
+{% doc %}
+  @prompt
+    Build a responsive, tabbed product feature block for a garden furniture/firepit product range. The block should support 4 product variations, each with custom feature sets and design controls.
+
+📱 Responsiveness:
+Desktop layout:
+
+Full-width section with a main header above the block.
+
+Under the header, display 4 horizontal clickable tabs to switch between product variants.
+
+Each tab reveals its own product content block with:
+
+A large background lifestyle image (left side) with overlay heading text.
+
+3 vertically stacked feature images on the right, each with:
+
+Editable border or background colour.
+
+Editable caption text below.
+
+A product card below or beside the feature images including:
+
+Product title.
+
+Price.
+
+Variant options (optional).
+
+Add to Cart button.
+
+Mobile layout:
+
+Stack all elements vertically per tab.
+
+Display main header and 4 tabs stacked or horizontally scrollable.
+
+On tab click, show:
+
+Heading text at the top.
+
+Main lifestyle image.
+
+3 feature images each with caption text.
+
+Product card with Add to Cart.
+
+🎨 Customization Options:
+Section background colour (global).
+
+Border or background colour for each of the 3 feature image containers (per tab).
+
+Editable text fields:
+
+Main heading.
+
+Tab labels (e.g., Product A, Product B…).
+
+Image captions (3 per tab).
+
+Image upload slots:
+
+Main lifestyle image per tab.
+
+3 feature images per tab.
+
+Editable product data:
+
+Title, price, variant options, and Add to Cart link/button (integrated with Shopify cart).
+
+🧩 Content Structure per Tab:
+One main lifestyle image with overlay heading text.
+
+Three feature image sections with captions and style settings.
+
+One product card with pricing and Add to Cart.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .product-tabs-container-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.section_background }};
+    padding: 40px 20px;
+  }
+
+  .product-tabs-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .product-tabs-header-{{ ai_gen_id }} h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .product-tabs-nav-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;gap: 10px;
+  }
+
+  .product-tab-button-{{ ai_gen_id }} {
+    padding: 12px 24px;
+    background-color: {{ block.settings.tab_background }};
+    color: {{ block.settings.tab_text_color }};
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .product-tab-button-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.tab_active_background }};
+    color: {{ block.settings.tab_active_text_color }};
+  }
+
+  .product-tab-content-{{ ai_gen_id }} {
+    display: none;}
+
+  .product-tab-content-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .product-tab-layout-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .product-tab-main-image-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .product-tab-main-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-tab-main-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;}
+
+  .product-tab-main-image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .product-tab-main-heading-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    color: white;}
+
+  .product-tab-main-heading-{{ ai_gen_id }} h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .product-tab-features-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-feature-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-feature-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .product-feature-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-feature-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+
+  .product-feature-image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .product-feature-caption-{{ ai_gen_id }} {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .product-card-{{ ai_gen_id }} {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: {{ block.settings.product_card_background }};
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .product-card-title-{{ ai_gen_id }} {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+
+  .product-card-price-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .product-card-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .product-card-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .product-tabs-nav-{{ ai_gen_id }} {
+      overflow-x: auto;
+      white-space: nowrap;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+    }
+    
+    .product-tab-layout-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+    
+    .product-tab-main-image-{{ ai_gen_id }} {
+      height: 300px;
+    }
+  }
+{% endstyle %}
+
+<div class="product-tabs-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="product-tabs-header-{{ ai_gen_id }}">
+    <h2>{{ block.settings.main_heading }}</h2>
+  </div>
+  
+  <div class="product-tabs-nav-{{ ai_gen_id }}">
+    {% for i in (1..4) %}
+      {% assign tab_label_key = 'tab_' | append: i | append: '_label' %}
+      {% assign tab_label = block.settings[tab_label_key] %}
+      <button 
+        class="product-tab-button-{{ ai_gen_id }} {% if i == 1 %}active{% endif %}" 
+        data-tab="{{ i }}"
+      >
+        {{ tab_label }}
+      </button>
+    {% endfor %}
+  </div>
+  
+  {% for i in (1..4) %}
+    {% assign tab_heading_key = 'tab_' | append: i | append: '_heading' %}
+    {% assign main_image_key = 'tab_' | append: i | append: '_main_image' %}
+    {% assign product_key = 'tab_' | append: i | append: '_product' %}
+    
+    {% assign tab_heading = block.settings[tab_heading_key] %}
+    {% assign main_image = block.settings[main_image_key] %}
+    {% assign product = block.settings[product_key] %}<div class="product-tab-content-{{ ai_gen_id }} {% if i == 1 %}active{% endif %}" data-tab-content="{{ i }}">
+      <div class="product-tab-layout-{{ ai_gen_id }}">
+        <div class="product-tab-main-image-{{ ai_gen_id }}">
+          {% if main_image %}
+            <img
+              src="{{ main_image | image_url: width: 800 }}" 
+              alt="{{ tab_heading }}"
+              loading="lazy"
+              width="{{ main_image.width }}"
+              height="{{ main_image.height }}"
+            >
+          {% else %}
+            <div class="product-tab-main-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}<div class="product-tab-main-heading-{{ ai_gen_id }}">
+            <h3>{{ tab_heading }}</h3>
+          </div>
+        </div>
+        
+        <div class="product-tab-features-{{ ai_gen_id }}">
+          {% for j in (1..3) %}
+            {% assign feature_image_key = 'tab_' | append: i | append: '_feature_' | append: j | append: '_image' %}
+            {% assign feature_caption_key = 'tab_' | append: i | append: '_feature_' | append: j | append: '_caption' %}
+            {% assign feature_color_key = 'tab_' | append: i | append: '_feature_' | append: j | append: '_color' %}
+            
+            {% assign feature_image = block.settings[feature_image_key] %}
+            {% assign feature_caption = block.settings[feature_caption_key] %}
+            {% assign feature_color = block.settings[feature_color_key] %}
+            
+            <div class="product-feature-item-{{ ai_gen_id }}">
+              <div class="product-feature-image-{{ ai_gen_id }}" style="border: 3px solid {{ feature_color }};">
+                {% if feature_image %}
+                  <img 
+                    src="{{ feature_image | image_url: width: 400 }}" 
+                    alt="{{ feature_caption }}"
+                    loading="lazy"
+                    width="{{ feature_image.width }}"
+                    height="{{ feature_image.height }}"
+                  >
+                {% else %}
+                  <div class="product-feature-image-placeholder-{{ ai_gen_id }}">
+                    {{ 'image' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="product-feature-caption-{{ ai_gen_id }}">
+                {{ feature_caption }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      {% if product %}
+        <div class="product-card-{{ ai_gen_id }}">
+          <h3 class="product-card-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+          <div class="product-card-price-{{ ai_gen_id }}">{{ product.price | money }}</div>
+          <a href="{{ product.url }}" class="product-card-button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div><script>
+  (function() {
+    class ProductTabs extends HTMLElement {
+      constructor() {
+        super();
+        this.tabButtons = this.querySelectorAll('.product-tab-button-{{ ai_gen_id }}');
+        this.tabContents = this.querySelectorAll('.product-tab-content-{{ ai_gen_id }}');
+        
+        this.setupEventListeners();
+      }
+      
+      setupEventListeners() {
+        this.tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const tabIndex = button.getAttribute('data-tab');
+            this.activateTab(tabIndex);
+          });
+        });
+      }
+      
+      activateTab(tabIndex) {
+        // Deactivate all tabs
+        this.tabButtons.forEach(button => {
+          button.classList.remove('active');
+        });
+        
+        this.tabContents.forEach(content => {
+          content.classList.remove('active');
+        });
+        
+        // Activate selected tab
+        const selectedButton = this.querySelector(`.product-tab-button-{{ ai_gen_id }}[data-tab="${tabIndex}"]`);
+        const selectedContent = this.querySelector(`.product-tab-content-{{ ai_gen_id }}[data-tab-content="${tabIndex}"]`);
+        
+        if (selectedButton && selectedContent) {
+          selectedButton.classList.add('active');
+          selectedContent.classList.add('active');
+        }
+      }
+    }
+    
+    customElements.define('product-tabs-{{ ai_gen_id }}', ProductTabs);
+    
+    // Initialize the component
+    const tabsContainer = document.querySelector('.product-tabs-container-{{ ai_gen_id }}');
+    if (tabsContainer) {
+      new ProductTabs();
+    }
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product Feature Tabs",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Explore Our Garden Collection"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Tab Navigation"
+    },
+    {
+      "type": "color",
+      "id": "tab_background",
+      "label": "Tab Background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_background",
+      "label": "Active Tab Background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text_color",
+      "label": "Active Tab Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Product Card"
+    },
+    {
+      "type": "color",
+      "id": "product_card_background",
+      "label": "Product Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button Background",
+      "default": "#4a8f29"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button Hover Background",
+      "default": "#3a7020"
+    },
+    {
+      "type": "header",
+      "content": "Tab1 Content"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_label",
+      "label": "Tab 1 Label",
+      "default": "Fire Pit"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_heading",
+      "label": "Tab 1 Heading",
+      "default": "Premium Fire Pit Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_main_image",
+      "label": "Tab 1 Main Image"
+    },
+    {
+      "type": "product",
+      "id": "tab_1_product",
+      "label": "Tab 1 Product"
+    },
+    {
+      "type": "header",
+      "content": "Tab 1 Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_feature_1_image",
+      "label": "Feature 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_feature_1_caption",
+      "label": "Feature 1 Caption",
+      "default": "Heat-resistant steel construction for long-lasting durability"
+    },
+    {
+      "type": "color",
+      "id": "tab_1_feature_1_color",
+      "label": "Feature 1 Border Color",
+      "default": "#e74c3c"
+    },
+    {
+      "type": "header",
+      "content": "Tab 1 Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_feature_2_image",
+      "label": "Feature 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_feature_2_caption",
+      "label": "Feature 2 Caption",
+      "default": "Adjustable airflow system for perfect flame control"
+    },
+    {
+      "type": "color",
+      "id": "tab_1_feature_2_color",
+      "label": "Feature 2 Border Color",
+      "default": "#f39c12"
+    },
+    {
+      "type": "header",
+      "content": "Tab 1 Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_feature_3_image",
+      "label": "Feature 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_feature_3_caption",
+      "label": "Feature 3 Caption",
+      "default": "Includes safety mesh cover and weather-resistant cover"
+    },
+    {
+      "type": "color",
+      "id": "tab_1_feature_3_color",
+      "label": "Feature 3 Border Color",
+      "default": "#3498db"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2 Content"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_label",
+      "label": "Tab 2 Label",
+      "default": "Outdoor Sofa"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_heading",
+      "label": "Tab 2 Heading",
+      "default": "Comfortable Outdoor Sofa Sets"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_main_image",
+      "label": "Tab 2 Main Image"
+    },
+    {
+      "type": "product",
+      "id": "tab_2_product",
+      "label": "Tab 2 Product"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2 Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_feature_1_image",
+      "label": "Feature 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_feature_1_caption",
+      "label": "Feature 1 Caption",
+      "default": "All-weather wicker that resists fading and cracking"
+    },
+    {
+      "type": "color",
+      "id": "tab_2_feature_1_color",
+      "label": "Feature 1 Border Color",
+      "default": "#27ae60"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2 Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_feature_2_image",
+      "label": "Feature 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_feature_2_caption",
+      "label": "Feature 2 Caption",
+      "default": "Quick-dry foam cushions with removable, washable covers"
+    },
+    {
+      "type": "color",
+      "id": "tab_2_feature_2_color",
+      "label": "Feature 2 Border Color",
+      "default": "#8e44ad"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2 Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_feature_3_image",
+      "label": "Feature 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_feature_3_caption",
+      "label": "Feature 3 Caption",
+      "default": "Modular design allows for multiple configurations"
+    },
+    {
+      "type": "color",
+      "id": "tab_2_feature_3_color",
+      "label": "Feature 3 Border Color",
+      "default": "#e67e22"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3 Content"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_label",
+      "label": "Tab 3 Label",
+      "default": "Dining Set"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_heading",
+      "label": "Tab 3 Heading",
+      "default": "Elegant Outdoor Dining Sets"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_main_image",
+      "label": "Tab 3 Main Image"
+    },
+    {
+      "type": "product",
+      "id": "tab_3_product",
+      "label": "Tab 3 Product"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3 Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_feature_1_image",
+      "label": "Feature 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_feature_1_caption",
+      "label": "Feature 1 Caption",
+      "default": "Rust-resistant aluminum frame for years of use"
+    },
+    {
+      "type": "color",
+      "id": "tab_3_feature_1_color",
+      "label": "Feature 1 Border Color",
+      "default": "#1abc9c"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3 Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_feature_2_image",
+      "label": "Feature 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_feature_2_caption",
+      "label": "Feature 2 Caption",
+      "default": "Tempered glass tabletop that's easy to clean"
+    },
+    {
+      "type": "color",
+      "id": "tab_3_feature_2_color",
+      "label": "Feature 2 Border Color",
+      "default": "#9b59b6"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3 Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_feature_3_image",
+      "label": "Feature 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_feature_3_caption",
+      "label": "Feature 3 Caption",
+      "default": "Stackable chairs for convenient storage"
+    },
+    {
+      "type": "color",
+      "id": "tab_3_feature_3_color",
+      "label": "Feature 3 Border Color",
+      "default": "#2980b9"
+    },
+    {
+      "type": "header",
+      "content": "Tab 4 Content"
+    },
+    {
+      "type": "text",
+      "id": "tab_4_label",
+      "label": "Tab 4 Label",
+      "default": "Planters"
+    },
+    {
+      "type": "text",
+      "id": "tab_4_heading",
+      "label": "Tab 4 Heading",
+      "default": "Stylish Garden Planters"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_4_main_image",
+      "label": "Tab 4 Main Image"
+    },
+    {
+      "type": "product",
+      "id": "tab_4_product",
+      "label": "Tab 4 Product"
+    },
+    {
+      "type": "header",
+      "content": "Tab 4 Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_4_feature_1_image",
+      "label": "Feature 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_4_feature_1_caption",
+      "label": "Feature 1 Caption",
+      "default": "Frost-resistant ceramic that withstands extreme temperatures"
+    },
+    {
+      "type": "color",
+      "id": "tab_4_feature_1_color",
+      "label": "Feature 1 Border Color",
+      "default": "#c0392b"
+    },
+    {
+      "type": "header",
+      "content": "Tab 4 Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_4_feature_2_image",
+      "label": "Feature 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_4_feature_2_caption",
+      "label": "Feature 2 Caption",
+      "default": "Built-in drainage system to prevent root rot"
+    },
+    {
+      "type": "color",
+      "id": "tab_4_feature_2_color",
+      "label": "Feature 2 Border Color",
+      "default": "#d35400"
+    },
+    {
+      "type": "header",
+      "content": "Tab 4 Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_4_feature_3_image",
+      "label": "Feature 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_4_feature_3_caption",
+      "label": "Feature 3 Caption",
+      "default": "Available in various sizes for different plants"
+    },
+    {
+      "type": "color",
+      "id": "tab_4_feature_3_color",
+      "label": "Feature 3 Border Color",
+      "default": "#16a085"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Feature Tabs"
+    }
+  ]
+}
 {% endschema %}
