@@ -593,7 +593,7 @@
             "tab_active_background": "#333333",
             "tab_active_text_color": "#ffffff",
             "product_card_background": "#ffffff",
-            "button_text": "",
+            "button_text": "View",
             "button_background": "#4a8f29",
             "button_text_color": "#ffffff",
             "button_hover_background": "#3a7020",
@@ -603,13 +603,13 @@
             "tab_1_product": "",
             "tab_1_feature_1_image": "shopify://shop_images/1_a271ea8a-d5b2-4b87-b388-c59b8f7d1ff1.jpg",
             "tab_1_feature_1_caption": "Scratch-proof table top.",
-            "tab_1_feature_1_color": "#FFFFFF",
+            "tab_1_feature_1_color": "#ffffff",
             "tab_1_feature_2_image": "shopify://shop_images/2_0ea46ef5-7513-48bc-9d12-caf698c80e2e.jpg",
             "tab_1_feature_2_caption": "Heat-retaining coals.",
-            "tab_1_feature_2_color": "#FFFFFF",
+            "tab_1_feature_2_color": "#ffffff",
             "tab_1_feature_3_image": "shopify://shop_images/3_a52ed99a-8aa9-429f-aadd-b138efe37574.jpg",
             "tab_1_feature_3_caption": "Comfy cushions.",
-            "tab_1_feature_3_color": "#FFFFFF",
+            "tab_1_feature_3_color": "#ffffff",
             "tab_2_label": "Outdoor Sofa",
             "tab_2_heading": "Comfortable Outdoor Sofa Sets",
             "tab_2_product": "",
@@ -644,7 +644,6 @@
       "block_order": [
         "ai_gen_block_bdd6eea_dbGxYm"
       ],
-      "disabled": true,
       "name": "AI Smart Section",
       "settings": {
         "section_width": "page-width",
