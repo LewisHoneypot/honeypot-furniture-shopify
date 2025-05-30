@@ -644,6 +644,7 @@
       "block_order": [
         "ai_gen_block_bdd6eea_dbGxYm"
       ],
+      "disabled": true,
       "name": "AI Smart Section",
       "settings": {
         "section_width": "page-width",
