@@ -6157,6 +6157,13 @@ details.modal .modal__toggle-close {
 
 slideshow-component .swiper-slide {
   height: auto;
+  max-height: 520px;
+}
+
+@media screen and (min-width:990px) {
+  slideshow-component .swiper-slide {
+    max-height: none;
+  }
 }
 
 slideshow-component .swiper-pagination-bullet:not(.cus-bullet) {
