@@ -58,25 +58,26 @@
             <div class="col-12 p-0">
               <div class="product__title break element-spacing-all float-left float-lg-none pt-0 pb-0">
                 {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
-                  <h1
-                    style="
-                      font-weight: normal;
-                      font-size: 24pt;
-                      margin-top: 15px;
-                      margin-bottom: 0px;
-                      font-weight: 700;
-                      line-height: 26pt;
-                    "
-                  >
-                    {{ product.metafields.custom.range_name }}
+                  <h1 style="line-height: 20pt; margin-top: 15px;">
+                    <span
+                      style="
+                        font-weight: normal;
+                        font-size: 24pt;
+                        margin-top: 15px;
+                        margin-bottom: 0px;
+                        font-weight: bold;
+                        line-height: 30pt;
+                      "
+                    >
+                      {{ product.metafields.custom.range_name }}
+                    </span>
                     <br>
                     <span
                       style="
                         font-size: 14pt;
-                        font-weight: 400;
-                        top: -11px;
+                        font-weight: 500;
                         position: relative;
-                        line-height: 17pt;
+                        line-height: 0pt;
                       "
                     >
                       {{ product.metafields.custom.colour_and_model }}
@@ -101,7 +102,7 @@
       {%- endif -%}
 
       {%- if product.media.size > 0 -%}
-        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:405px; z-index:0;">
+        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:405px; z-index:0; margin-top: 40px;">
           {%- if section.settings.use_dimensions_icon == true or section.settings.use_image_zoom_icon == true -%}
             <div
               class="container-fluid"
