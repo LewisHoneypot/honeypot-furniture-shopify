@@ -104,7 +104,8 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ffffff"
+            "background_colour": "#ffffff",
+            "data_source": "default"
           }
         },
         "snap_buttons_wYQaPr": {
@@ -166,8 +167,8 @@
         "show_product_badges": true,
         "enable_share": true,
         "type_style": "classic",
-        "image_tech": "default",
-        "cylindo_thumbnail_bar": "off",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
