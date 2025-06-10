@@ -139,6 +139,13 @@
         });
       };
 
+      const applyBrightnessFilterToUncontained = () => {
+        const items = deepQuerySelectorAll(viewer, '.cylindo-thumbnail-inner-item:not(.contained)');
+        items.forEach((item) => {
+          item.style.filter = 'brightness(96%)';
+        });
+      };
+
       const observe360Viewer = () => {
         const threeSixty = viewer.shadowRoot?.querySelector('cylindo-three-sixty');
 
@@ -151,7 +158,7 @@
 
         const observer = new MutationObserver(() => {
           applyObjectFit(threeSixty.shadowRoot, '360-view');
-          applyRatioToRoot();
+          applyBrightnessFilterToUncontained();
         });
 
         observer.observe(threeSixty.shadowRoot, {
@@ -195,6 +202,9 @@
           if (fullscreenBtn) {
             fullscreenBtn.style.display = 'none';
           }
+
+          // 🔴 Apply border styling once viewer is ready
+          applyBrightnessFilterToUncontained();
         }
       }, 200);
     };
