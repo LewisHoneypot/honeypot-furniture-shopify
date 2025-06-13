@@ -1,6 +1,527 @@
+{% doc %}
+  @prompt
+    Create a UGC (User-Generated Content) section for product pages that displays customer-submitted square images relevant to the specific product. This section should:
+    
+    🔹 Functionality:
+    Dynamically load between 4 to 10 square UGC images from product-level metafields (e.g., product.metafields.ugc.image_1 to image_10).
+    
+    Only render the entire section if 4 or more images are populated.
+    
+    Carousel should:
+    
+    On desktop: Show 4 images per slide, scroll horizontally, and loop infinitely.
+    
+    On mobile: Show 1 image at a time in the carousel, swipe/scrollable.
+    
+    Images should:
+    
+    Be square aspect ratio (1:1)
+    
+    Have slightly rounded corners (e.g., border-radius: 8px)
+    
+    Fill the container with object-fit: cover and no distortion.
+    
+    🧩 Configuration Settings:
+    Add Shopify section settings or schema to allow optional configuration:
+    
+    max_images: (range 4–10)
+    
+    image_border_radius: (range: 0–20px)
+    
+    image_padding: (range: 0–16px)
+    
+    desktop_slides_to_show: (default: 4)
+    
+    mobile_slides_to_show: (default: 1)
+    
+    carousel_loop: (boolean, default: true)
+    
+    section_padding_top / section_padding_bottom: (range: 0–100px)
+    
+    🧠 Logic Notes:
+    Use Shopify Liquid conditionals to count populated metafields.
+    
+    If fewer than 4 metafields contain images, the entire section should not render at all.
+    
+    Example metafield keys:
+    
+    product.metafields.custom.ugc_image_1
+    
+    product.metafields.custom.ugc_image_2
+    
+    ... up to ugc_image_10
+    
+    🎨 Styling Notes:
+    Ensure consistent image sizing in the carousel tiles using aspect-ratio: 1/1.
+    
+    Use clean, neutral spacing between carousel items.
+    
+    Use native Shopify carousel support if available, or fallback to a minimal JS slider.
+    
+    Section title (optional): “See how others styled it” or similar, configurable via setting.
+    
+    📱 Responsiveness:
+    Fully responsive with breakpoints:
+    
+    Desktop (≥1024px): 4 images side-by-side
+    
+    Tablet (768–1023px): 2–3 images
+    
+    Mobile (≤767px): 1 image per slide
+    
+    Include touch/swipe support for mobile
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% comment %} Count populated UGC images {% endcomment %}
+{% assign ugc_images = '' | split: ',' %}
+{% for i in (1..block.settings.max_images) %}
+  {% assign metafield_key = 'ugc_image_' | append: i %}
+  {% assign ugc_image = product.metafields.custom[metafield_key] %}
+  {% if ugc_image != blank %}
+    {% assign ugc_images = ugc_images | concat: ugc_image %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Only render if 4 or more images {% endcomment %}
+{% if ugc_images.size >= 4 %}
+  {% style %}
+    .ugc-carousel-{{ ai_gen_id }} {
+      padding-top: {{ block.settings.section_padding_top }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    }
+
+    .ugc-carousel__container-{{ ai_gen_id }} {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .ugc-carousel__title-{{ ai_gen_id }} {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .ugc-carousel__wrapper-{{ ai_gen_id }} {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .ugc-carousel__track-{{ ai_gen_id }} {
+      display: flex;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+
+    .ugc-carousel__slide-{{ ai_gen_id }} {
+      flex: 0 0 auto;
+      padding: {{ block.settings.image_padding }}px;
+    }
+
+    .ugc-carousel__image-{{ ai_gen_id }} {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: {{ block.settings.image_border_radius }}px;
+      aspect-ratio: 1/1;
+      display: block;
+    }
+
+    .ugc-carousel__nav-{{ ai_gen_id }} {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .ugc-carousel__nav-{{ ai_gen_id }}:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .ugc-carousel__nav--prev-{{ ai_gen_id }} {
+      left: 16px;
+    }
+
+    .ugc-carousel__nav--next-{{ ai_gen_id }} {
+      right: 16px;
+    }
+
+    .ugc-carousel__nav-{{ ai_gen_id }} svg {
+      width: 20px;
+      height: 20px;
+      fill: #333;
+    }
+
+    .ugc-carousel__dots-{{ ai_gen_id }} {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .ugc-carousel__dot-{{ ai_gen_id }} {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .ugc-carousel__dot-{{ ai_gen_id }}.active {
+      background: #333;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .ugc-carousel__slide-{{ ai_gen_id }} {
+        width: calc(100% / {{ block.settings.desktop_slides_to_show }});
+      }
+      
+      .ugc-carousel__nav-{{ ai_gen_id }} {
+        display: flex;
+      }
+      
+      .ugc-carousel__dots-{{ ai_gen_id }} {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .ugc-carousel__slide-{{ ai_gen_id }} {
+        width: calc(100% / 3);
+      }
+      
+      .ugc-carousel__nav-{{ ai_gen_id }} {
+        display: flex;
+      }
+      
+      .ugc-carousel__dots-{{ ai_gen_id }} {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .ugc-carousel__slide-{{ ai_gen_id }} {
+        width: calc(100% / {{ block.settings.mobile_slides_to_show }});
+      }
+      
+      .ugc-carousel__nav-{{ ai_gen_id }} {
+        display: none;
+      }
+      
+      .ugc-carousel__dots-{{ ai_gen_id }} {
+        display: flex;
+      }
+      
+      .ugc-carousel__wrapper-{{ ai_gen_id }} {
+        touch-action: pan-x;
+      }
+    }
+  {% endstyle %}
+
+  <ugc-carousel-{{ ai_gen_id }}
+    class="ugc-carousel-{{ ai_gen_id }}"
+    data-loop="{{ block.settings.carousel_loop }}"
+    data-desktop-slides="{{ block.settings.desktop_slides_to_show }}"
+    data-mobile-slides="{{ block.settings.mobile_slides_to_show }}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="ugc-carousel__container-{{ ai_gen_id }}">
+      {% if block.settings.section_title != blank %}
+        <h2 class="ugc-carousel__title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+      {% endif %}
+
+      <div class="ugc-carousel__wrapper-{{ ai_gen_id }}">
+        <div class="ugc-carousel__track-{{ ai_gen_id }}">
+          {% for image in ugc_images %}
+            <div class="ugc-carousel__slide-{{ ai_gen_id }}">
+              <img
+                src="{{ image | image_url: width: 400 }}"
+                alt="Customer photo"
+                class="ugc-carousel__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            </div>
+          {% endfor %}
+        </div>
+
+        <button class="ugc-carousel__nav-{{ ai_gen_id }} ugc-carousel__nav--prev-{{ ai_gen_id }}" aria-label="Previous images">
+          <svg viewBox="0 0 24 24">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <button class="ugc-carousel__nav-{{ ai_gen_id }} ugc-carousel__nav--next-{{ ai_gen_id }}" aria-label="Next images">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="ugc-carousel__dots-{{ ai_gen_id }}"></div>
+    </div>
+  </ugc-carousel-{{ ai_gen_id }}>
+
+  <script>
+    (function() {
+      class UGCCarousel{{ ai_gen_id }} extends HTMLElement {
+        constructor() {
+          super();
+          this.currentSlide = 0;
+          this.totalSlides = 0;
+          this.slidesPerView = 1;
+          this.isLoop = this.dataset.loop === 'true';
+          this.autoSlideInterval = null;
+          this.touchStartX = 0;
+          this.touchEndX = 0;
+        }
+
+        connectedCallback() {
+          this.track = this.querySelector('.ugc-carousel__track-{{ ai_gen_id }}');
+          this.slides = this.querySelectorAll('.ugc-carousel__slide-{{ ai_gen_id }}');
+          this.prevBtn = this.querySelector('.ugc-carousel__nav--prev-{{ ai_gen_id }}');
+          this.nextBtn = this.querySelector('.ugc-carousel__nav--next-{{ ai_gen_id }}');
+          this.dotsContainer = this.querySelector('.ugc-carousel__dots-{{ ai_gen_id }}');
+
+          this.totalSlides = this.slides.length;
+          this.updateSlidesPerView();
+          this.createDots();
+          this.setupEventListeners();
+          this.updateCarousel();
+
+          window.addEventListener('resize', () => {
+            this.updateSlidesPerView();
+            this.createDots();
+            this.updateCarousel();
+          });
+        }
+
+        updateSlidesPerView() {
+          const width = window.innerWidth;
+          if (width >= 1024) {
+            this.slidesPerView = parseInt(this.dataset.desktopSlides);
+          } else if (width >= 768) {
+            this.slidesPerView = 3;
+          } else {
+            this.slidesPerView = parseInt(this.dataset.mobileSlides);
+          }
+        }
+
+        createDots() {
+          if (window.innerWidth > 767) return;
+          
+          this.dotsContainer.innerHTML = '';
+          const totalDots = Math.ceil(this.totalSlides / this.slidesPerView);
+          
+          for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'ugc-carousel__dot-{{ ai_gen_id }}';
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.addEventListener('click', () => this.goToSlide(i * this.slidesPerView));
+            this.dotsContainer.appendChild(dot);
+          }
+          this.updateDots();
+        }
+
+        setupEventListeners() {
+          if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prevSlide());
+          }
+          
+          if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.nextSlide());
+          }
+
+          this.track.addEventListener('touchstart', (e) => {
+            this.touchStartX = e.changedTouches[0].screenX;
+          });
+
+          this.track.addEventListener('touchend', (e) => {
+            this.touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe();
+          });
+        }
+
+        handleSwipe() {
+          const swipeThreshold = 50;
+          const diff = this.touchStartX - this.touchEndX;
+          
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              this.nextSlide();
+            } else {
+              this.prevSlide();
+            }
+          }
+        }
+
+        nextSlide() {
+          if (this.currentSlide < this.totalSlides - this.slidesPerView) {
+            this.currentSlide += this.slidesPerView;
+          } else if (this.isLoop) {
+            this.currentSlide = 0;
+          }
+          this.updateCarousel();
+        }
+
+        prevSlide() {
+          if (this.currentSlide > 0) {
+            this.currentSlide -= this.slidesPerView;
+          } else if (this.isLoop) {
+            this.currentSlide = this.totalSlides - this.slidesPerView;
+          }
+          this.updateCarousel();
+        }
+
+        goToSlide(slideIndex) {
+          this.currentSlide = slideIndex;
+          this.updateCarousel();
+        }
+
+        updateCarousel() {
+          const slideWidth = 100 / this.slidesPerView;
+          const translateX = -(this.currentSlide * slideWidth);
+          this.track.style.transform = `translateX(${translateX}%)`;
+          this.updateDots();
+        }
+
+        updateDots() {
+          const dots = this.querySelectorAll('.ugc-carousel__dot-{{ ai_gen_id }}');
+          const activeDotIndex = Math.floor(this.currentSlide / this.slidesPerView);
+          
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeDotIndex);
+          });
+        }
+      }
+
+      customElements.define('ugc-carousel-{{ ai_gen_id }}', UGCCarousel{{ ai_gen_id }});
+    })();
+  </script>
+{% endif %}
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "UGC Product Gallery",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "See how others styled it"
+    },
+    {
+      "type": "range",
+      "id": "max_images",
+      "min": 4,
+      "max": 10,
+      "step": 1,
+      "label": "Maximum images to display",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Carousel Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop_slides_to_show",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Desktop slides to show",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_slides_to_show",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Mobile slides to show",
+      "default": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_loop",
+      "label": "Enable carousel loop",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Image Style"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_padding",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Image padding",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC Product Gallery"
+    }
+  ]
+}
 {% endschema %}
