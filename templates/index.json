@@ -569,6 +569,7 @@
     },
     "trustpilot_service_reviews_mini_qrrfxa": {
       "type": "trustpilot-service-reviews-mini",
+      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1050,
@@ -1049,6 +1050,17 @@
         "padding_bottom_mobile": 0
       }
     },
+    "custom_liquid_X7qiKC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% render 'lipscore-custom-testimonial-banner' %}",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "testimonial_NkEcJz": {
       "type": "testimonial",
       "blocks": {
@@ -1094,6 +1106,7 @@
         "slide_T33ykV",
         "slide_aPFeFp"
       ],
+      "disabled": true,
       "settings": {
         "type_style": "classic",
         "heading": "Customer Reviews",
@@ -1481,6 +1494,7 @@
     "collection_list_GDamp9",
     "496e3ccd-49a7-4461-951f-0d3c7a67bf86",
     "quotes_d7CMtB",
+    "custom_liquid_X7qiKC",
     "testimonial_NkEcJz",
     "069a21ef-b01c-4296-b010-b63bc9797851",
     "custom_liquid_dfcHEi",
