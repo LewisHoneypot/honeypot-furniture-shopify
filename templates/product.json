@@ -276,6 +276,34 @@
         "christmas_delivery_eta_toggle": false
       }
     },
+    "17500845798209c159": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_M4i6kE": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "available-colours"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_M4i6kE"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "d429c49f-e09d-426d-a360-6ab92fc46930": {
       "type": "icon-with-text",
       "blocks": {
@@ -698,6 +726,7 @@
   },
   "order": [
     "main",
+    "17500845798209c159",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "video_QM4Cg7",
