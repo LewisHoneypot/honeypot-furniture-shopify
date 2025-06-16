@@ -159,6 +159,10 @@
             "data_source": "nosto"
           }
         },
+        "lipscore_testimonial_EqmezU": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "popup_9w3zk3": {
           "type": "popup",
           "settings": {
@@ -168,6 +172,17 @@
             "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
             "design_type": "minimal",
             "dummy_button": "yes"
+          }
+        },
+        "popup_RLkDHc": {
+          "type": "popup",
+          "settings": {
+            "text": "PRICE MATCH GUARANTEE*",
+            "page": "",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
           }
         },
         "nosto_nosto_placements_block_pBVKN9": {
@@ -209,7 +224,9 @@
         "klarna_buttons_pUYwXw",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "lipscore_testimonial_EqmezU",
         "popup_9w3zk3",
+        "popup_RLkDHc",
         "nosto_nosto_placements_block_pBVKN9",
         "protection_drawer_iWbVLW"
       ],
