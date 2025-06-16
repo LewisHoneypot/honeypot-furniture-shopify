@@ -120,7 +120,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "use_buy_button_price": false,
+            "use_buy_button_price": true,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
@@ -129,21 +129,21 @@
             "add_to_cart_colors_text": "#ede9e2",
             "add_to_cart_colors_background": "#527e36",
             "add_to_cart_gradient_background": "",
-            "add_to_cart_colors_text_hover": "#3c3c3b",
-            "add_to_cart_colors_background_hover": "#ede9e2",
+            "add_to_cart_colors_text_hover": "#ffffff",
+            "add_to_cart_colors_background_hover": "rgba(0,0,0,0)",
             "add_to_cart_gradient_background_hover": "",
             "buy_it_now_colors_text": "#3c3c3b",
             "buy_it_now_colors_background": "#ede9e2",
             "buy_it_now_gradient_background": "",
-            "buy_it_now_colors_text_hover": "#ede9e2",
-            "buy_it_now_colors_background_hover": "#3c3c3b",
+            "buy_it_now_colors_text_hover": "rgba(0,0,0,0)",
+            "buy_it_now_colors_background_hover": "rgba(0,0,0,0)",
             "buy_it_now_gradient_background_hover": "",
             "wishlist_colors_text": "#000000",
             "wishlist_colors_background": "#000000",
             "wishlist_colors_text_hover": "#eb9c9c",
             "wishlist_colors_background_hover": "#eb9c9c",
             "padding_top": 10,
-            "padding_bottom": 5
+            "padding_bottom": 0
           }
         },
         "expected_delivery_TKcTdt": {
@@ -151,12 +151,18 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "off",
+            "tiers": "on",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ffffff",
+            "background_colour": "#ededed",
             "data_source": "nosto"
+          }
+        },
+        "nosto_nosto_placements_block_pBVKN9": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -192,6 +198,7 @@
         "klarna_buttons_pUYwXw",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "nosto_nosto_placements_block_pBVKN9",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
