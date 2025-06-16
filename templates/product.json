@@ -185,6 +185,17 @@
             "dummy_button": "no"
           }
         },
+        "popup_7RCDPY": {
+          "type": "popup",
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
         "nosto_nosto_placements_block_pBVKN9": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
@@ -227,6 +238,7 @@
         "lipscore_testimonial_EqmezU",
         "popup_9w3zk3",
         "popup_RLkDHc",
+        "popup_7RCDPY",
         "nosto_nosto_placements_block_pBVKN9",
         "protection_drawer_iWbVLW"
       ],
