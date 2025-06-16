@@ -159,6 +159,17 @@
             "data_source": "nosto"
           }
         },
+        "popup_9w3zk3": {
+          "type": "popup",
+          "settings": {
+            "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
+            "page": "",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
+            "design_type": "minimal",
+            "dummy_button": "yes"
+          }
+        },
         "nosto_nosto_placements_block_pBVKN9": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
@@ -198,6 +209,7 @@
         "klarna_buttons_pUYwXw",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "popup_9w3zk3",
         "nosto_nosto_placements_block_pBVKN9",
         "protection_drawer_iWbVLW"
       ],
