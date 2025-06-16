@@ -650,39 +650,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
-      }
+      "settings": {}
     },
     "as_seen_in_Pnd8YJ": {
       "type": "as-seen-in",
@@ -841,37 +809,6 @@
         "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
-      }
-    },
-    "ai_smart_section_GytfbJ": {
-      "type": "ai-smart-section",
-      "blocks": {
-        "ai_gen_block_7128b32_j7Gaka": {
-          "type": "ai_gen_block_7128b32",
-          "disabled": true,
-          "settings": {
-            "section_title": "See how others styled it",
-            "max_images": 8,
-            "desktop_slides_to_show": 4,
-            "mobile_slides_to_show": 1,
-            "carousel_loop": true,
-            "image_border_radius": 8,
-            "image_padding": 4,
-            "section_padding_top": 40,
-            "section_padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7128b32_j7Gaka"
-      ],
-      "disabled": true,
-      "name": "AI Smart Section",
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1400,
-        "section_margin": 40
       }
     },
     "featured_collection_RD8KMd": {
@@ -1043,7 +980,6 @@
     "1736163654e8d791fe",
     "1736163667c8a5c273",
     "lookbook_pGUge4",
-    "ai_smart_section_GytfbJ",
     "featured_collection_RD8KMd",
     "related-products",
     "recently-products",
