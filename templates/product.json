@@ -414,8 +414,8 @@
         "drawer_eXHzJX": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
+            "heading": "Description",
+            "content_type": "description",
             "content1": "",
             "content2": "",
             "page": ""
