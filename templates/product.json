@@ -22,8 +22,13 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_E8XXgr": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
@@ -112,7 +117,7 @@
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
-            "add_to_cart_colors_background": "#3c3c3b",
+            "add_to_cart_colors_background": "#527e36",
             "add_to_cart_gradient_background": "",
             "add_to_cart_colors_text_hover": "#3c3c3b",
             "add_to_cart_colors_background_hover": "#ede9e2",
@@ -165,6 +170,7 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_E8XXgr",
         "trustpilot_mini_TB9jLy",
         "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
@@ -178,9 +184,9 @@
         "protection_drawer_iWbVLW"
       ],
       "settings": {
-        "use_custom_title": false,
-        "use_dimensions_icon": false,
-        "use_image_zoom_icon": false,
+        "use_custom_title": true,
+        "use_dimensions_icon": true,
+        "use_image_zoom_icon": true,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
@@ -195,7 +201,7 @@
         "carousel_direction": "horizontal",
         "carousel_gap_desktop": 16,
         "carousel_gap_tablet": 8,
-        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
@@ -402,39 +408,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": false,
-        "font": "normal",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
-      }
+      "settings": {}
     },
     "lookbook_pGUge4": {
       "type": "lookbook",
