@@ -25,11 +25,16 @@
         },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 0,
             "padding_bottom": 0
           }
+        },
+        "lipscore_rating_d9Gyex": {
+          "type": "lipscore_rating",
+          "settings": {}
         },
         "nosto_nosto_placements_block_9cch4p": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
@@ -140,6 +145,10 @@
             "data_source": "nosto"
           }
         },
+        "lipscore_testimonial_knw7TN": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "popup_bbyB6H": {
           "type": "popup",
           "settings": {
@@ -213,6 +222,7 @@
       "block_order": [
         "title",
         "trustpilot_mini_TB9jLy",
+        "lipscore_rating_d9Gyex",
         "nosto_nosto_placements_block_9cch4p",
         "color_swatch_bWwLRJ",
         "price",
@@ -222,6 +232,7 @@
         "klarna_buttons_DEbH3h",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "lipscore_testimonial_knw7TN",
         "popup_bbyB6H",
         "popup_grnbAg",
         "popup_zT8VM4",
@@ -541,39 +552,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
-      }
+      "settings": {}
     },
     "17361637054b91e455": {
       "type": "apps",
