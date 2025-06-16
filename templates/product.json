@@ -394,9 +394,9 @@
         "drawer_M8PnWh": {
           "type": "drawer",
           "settings": {
-            "heading": "Drawer heading",
-            "content_type": "custom",
-            "content1": "",
+            "heading": "Delivery & Returns",
+            "content_type": "delivery_and_returns",
+            "content1": "<p><strong>Delivery</strong><br/><br/><strong>Fast and Reliable</strong><br/><br/>Enjoy fast 1-7 day delivery on all in-stock sofas. delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
             "content2": "",
             "page": ""
           }
