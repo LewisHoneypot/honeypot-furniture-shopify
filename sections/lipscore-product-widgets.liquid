@@ -22,30 +22,12 @@
 {% assign product_variant_name = '' %}
 {% assign product_gtin = '' %}
 
-{%- if block.settings.use_variant_values -%}
-  {% assign product_variant_id = product_selected_or_first_available_variant.id %}
-  {% assign product_variant_name = product_selected_or_first_available_variant.title %}
-  {% assign product_gtin = product_selected_or_first_available_variant.barcode %}
-{%- endif -%}
+{% assign page_size = 5 %}
 
-{% if app.metafields.lipscore.lipscore_product_ident == 'sku' %}
-  {%- if block.settings.use_all_variant_skus -%}
-    {% assign product_id = product_sku_values %}
-  {% else %}
-    {% assign product_id = product_selected_or_first_available_variant.sku %}
-  {%- endif -%}
-{%- endif -%}
-
-{% if app.metafields.lipscore.lipscore_product_ident == 'gtin' %}
-  {% assign product_id = product_gtin %}
-{%- endif -%}
-
-{% if app.metafields.lipscore.lipscore_product_ident == 'vendor' %}
-  {% assign product_id = product_brand %}
-{%- endif -%}
+<div class="lipscore-product-widgets">
 
 <div
-  class="lipscore-testimonial"
+  id="lipscore-question-post"
   data-ls-product-name="{{product_name}}"
   data-ls-brand="{{product_brand}}"
   data-ls-product-id="{{product_id}}"
@@ -60,5 +42,44 @@
   data-ls-availability="{{product_availability}}"
   data-ls-category="{{product_category}}"
   data-ls-gtin="{{product_gtin}}"
-  {{ block.shopify_attributes }}
 ></div>
+
+<div
+  id="lipscore-question-list"
+  data-ls-product-name="{{product_name}}"
+  data-ls-brand="{{product_brand}}"
+  data-ls-product-id="{{product_id}}"
+  data-ls-product-url="{{product_url}}"
+  data-ls-variant-id="{{product_variant_id}}"
+  data-ls-variant-name="{{product_variant_name}}"
+  data-ls-sku="{{product_sku}}"
+  data-ls-description="{{product_description}}"
+  data-ls-image-url="{{product_image_url}}"
+  data-ls-price="{{product_price}}"
+  data-ls-price-currency="{{product_price_currency}}"
+  data-ls-availability="{{product_availability}}"
+  data-ls-category="{{product_category}}"
+  data-ls-gtin="{{product_gtin}}"
+  data-ls-page-size="{{page_size}}"
+></div>
+
+<div
+  id="lipscore-review-list"
+  data-ls-product-name="{{product_name}}"
+  data-ls-brand="{{product_brand}}"
+  data-ls-product-id="{{product_id}}"
+  data-ls-product-url="{{product_url}}"
+  data-ls-variant-id="{{product_variant_id}}"
+  data-ls-variant-name="{{product_variant_name}}"
+  data-ls-sku="{{product_sku}}"
+  data-ls-description="{{product_description}}"
+  data-ls-image-url="{{product_image_url}}"
+  data-ls-price="{{product_price}}"
+  data-ls-price-currency="{{product_price_currency}}"
+  data-ls-availability="{{product_availability}}"
+  data-ls-category="{{product_category}}"
+  data-ls-gtin="{{product_gtin}}"
+  data-ls-page-size="{{page_size}}"
+></div>
+
+</div>
