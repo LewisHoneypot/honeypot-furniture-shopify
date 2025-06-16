@@ -877,6 +877,11 @@
                   {% render 'product-trustpilot-mini' %}
                 {%- endif -%}
 
+              {%- when 'lipscore_rating' -%}
+                <div {{ block.shopify_attributes }}>
+                  {% render 'lipscore-rating', product: product %}
+                </div>
+
               {%- when 'color_swatch' -%}
                 {%- if product.metafields.custom.product_colour_list != blank -%}
                   <div
@@ -1113,7 +1118,7 @@
                 </div>
                 </div>
 
-                {% comment %} Delivery ETA {% endcomment %}
+              {% comment %} Delivery ETA {% endcomment %}
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
                   {% comment %} Check if in stock {% endcomment %}
@@ -1379,8 +1384,12 @@
                     {%- endif -%}
                   </div>
                 {%- endif -%}
-                {% render 'lipscore-testimonial', product: product %}
 
+              {%- when 'lipscore_testimonial' -%}
+                <div {{ block.shopify_attributes }}>
+                  {% render 'lipscore-testimonial', product: product %}
+                </div>
+                
               {%- when 'buy_buttons' -%}
                 <div
                   class="product__action element-spacing-all {{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -3431,6 +3440,10 @@
       ]
     },
     {
+      "type": "lipscore_rating",
+      "name": "Lipscore Rating"
+    },
+    {
       "type": "protection_drawer",
       "name": "Emmiera",
       "limit": 1,
@@ -5031,7 +5044,7 @@
     },
     {
       "type": "expected_delivery",
-      "name": "t:sections.main-collection-product-grid.settings.delivery_eta.collection_delivery_eta_heading.label",
+      "name": "Delivery",
       "settings": [
         {
           "type": "text",
@@ -5120,6 +5133,10 @@
           "default": "default"
         }
       ]
+    },
+    {
+      "type": "lipscore_testimonial",
+      "name": "Lipscore Testimonial"
     },
     {
       "type": "drawer",
