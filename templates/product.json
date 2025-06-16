@@ -58,6 +58,12 @@
             "padding_bottom": 10
           }
         },
+        "nosto_nosto_placements_block_zBVL7z": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "available-colours"
+          }
+        },
         "price": {
           "type": "price",
           "disabled": true,
@@ -177,6 +183,7 @@
         "trustpilot_mini_TB9jLy",
         "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
+        "nosto_nosto_placements_block_zBVL7z",
         "price",
         "size_chart_kqc3gt",
         "drawer_j3bNWd",
