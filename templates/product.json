@@ -178,7 +178,7 @@
           "type": "popup",
           "settings": {
             "text": "PRICE MATCH GUARANTEE*",
-            "page": "",
+            "page": "price-match-guarantee",
             "use_icon": "on",
             "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
             "design_type": "minimal",
