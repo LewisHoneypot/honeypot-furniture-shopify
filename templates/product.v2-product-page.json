@@ -22,8 +22,13 @@
             "heading_size": "small"
           }
         },
+        "lipscore_rating_Y9Gnea": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
@@ -155,6 +160,7 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_Y9Gnea",
         "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
@@ -446,39 +452,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Garamond",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 45,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 15,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
-      }
+      "settings": {}
     },
     "lookbook_pGUge4": {
       "type": "lookbook",

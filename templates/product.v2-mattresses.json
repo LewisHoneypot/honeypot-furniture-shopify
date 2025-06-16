@@ -23,8 +23,13 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_3Hzdtt": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 0,
@@ -39,7 +44,6 @@
         },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
-          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font": "Gotham",
@@ -180,6 +184,7 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_3Hzdtt",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_CwWhyT",
         "color_swatch_bWwLRJ",
@@ -613,39 +618,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
-      }
+      "settings": {}
     },
     "lookbook_pGUge4": {
       "type": "lookbook",
