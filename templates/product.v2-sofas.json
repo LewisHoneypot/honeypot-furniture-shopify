@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -28,7 +37,7 @@
           "settings": {}
         },
         "nosto_nosto_placements_block_9cch4p": {
-          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "available-colours"
           }
@@ -65,7 +74,7 @@
             "heading": "Buy With Confidence",
             "usp_icon_1": "trust",
             "usp_content_type": "custom",
-            "content": "<p>At Honeypot, we want you to find your perfect sofa. If you're not 100% satisfied for any reason and want to return it, no problem! We offer an on-the-spot return option with our friendly delivery drivers. Here’s how it works:<\/p><ul><li><strong>Try it out:<\/strong> Once the drivers unpack the sofa, feel free to sit, relax, and make sure it's right for you before deciding.<\/li><li><strong>Immediate Return:<\/strong> If you're not 100% satisfied for any reason and want to return the sofa, simply let our drivers know before they leave, and we'll either arrange a full refund or an exchange. <\/li><li><strong>Final Decision:<\/strong> Once the drivers leave, this option expires, but you can still use our standard return policy (additional fees may apply).<\/li><\/ul><p>Your satisfaction is our priority, and we’re committed to giving you the flexibility to create your dream home!<\/p>"
+            "content": "<p>At Honeypot, we want you to find your perfect sofa. If you're not 100% satisfied for any reason and want to return it, no problem! We offer an on-the-spot return option with our friendly delivery drivers. Here’s how it works:</p><ul><li><strong>Try it out:</strong> Once the drivers unpack the sofa, feel free to sit, relax, and make sure it's right for you before deciding.</li><li><strong>Immediate Return:</strong> If you're not 100% satisfied for any reason and want to return the sofa, simply let our drivers know before they leave, and we'll either arrange a full refund or an exchange. </li><li><strong>Final Decision:</strong> Once the drivers leave, this option expires, but you can still use our standard return policy (additional fees may apply).</li></ul><p>Your satisfaction is our priority, and we’re committed to giving you the flexibility to create your dream home!</p>"
           }
         },
         "usp_drawer_2_Yk9cgj": {
@@ -76,6 +85,22 @@
             "usp_icon_2": "dimensions",
             "usp_content_type": "usp_content_selector_2",
             "content": ""
+          }
+        },
+        "dividebuy_spread_the_cost_dividebuyproduct_QmxDj3": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "center",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "center",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
           }
         },
         "snap_buttons_HagTqx": {
@@ -146,7 +171,7 @@
             "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
             "page": "",
             "use_icon": "on",
-            "icon_image": "shopify:\/\/shop_images\/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
+            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
             "design_type": "minimal",
             "dummy_button": "yes"
           }
@@ -157,7 +182,7 @@
             "text": "PRICE MATCH GUARANTEE*",
             "page": "price-match-guarantee",
             "use_icon": "on",
-            "icon_image": "shopify:\/\/shop_images\/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
             "design_type": "minimal",
             "dummy_button": "no"
           }
@@ -168,13 +193,13 @@
             "text": "5-YEAR FRAME GUARANTEE",
             "page": "5-year-frame-guarantee",
             "use_icon": "on",
-            "icon_image": "shopify:\/\/shop_images\/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
             "design_type": "minimal",
             "dummy_button": "no"
           }
         },
         "nosto_nosto_placements_block_gLkfYt": {
-          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "view-the-range"
           }
@@ -196,8 +221,8 @@
           "settings": {
             "title": "Staingard",
             "pricing_type": "price",
-            "main_image": "shopify:\/\/shop_images\/StainGard.png",
-            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.<\/p>",
+            "main_image": "shopify://shop_images/StainGard.png",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -219,6 +244,7 @@
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "dividebuy_spread_the_cost_dividebuyproduct_QmxDj3",
         "snap_buttons_HagTqx",
         "klarna_buttons_DEbH3h",
         "buy_buttons",
@@ -263,7 +289,7 @@
         "overlay_text_color_2": "#ffffff",
         "overlay_background_color_2": "#000000",
         "christmas_delivery_eta_toggle": false,
-        "christmas_image": "shopify:\/\/shop_images\/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
+        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
     "drawers_Ut99DD": {
@@ -294,7 +320,7 @@
           "settings": {
             "heading": "Delivery & Returns",
             "content_type": "delivery_and_returns",
-            "content1": "<p><strong>Delivery<\/strong><br\/><br\/><strong>Fast and Reliable<\/strong><br\/><br\/>Enjoy fast 1-7 day delivery on all in-stock sofas. delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. <\/p><p><strong>Real-Time Tracking<\/strong><br\/><br\/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br\/><br\/><strong>Hassle-Free Returns<\/strong><br\/><br\/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.<\/p><p><strong>Need Assistance?<\/strong><br\/><br\/>Contact our friendly customer service team for any questions or concerns:<\/p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771<\/strong><\/a><br\/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk<\/strong><\/a><\/p><p><strong>Office Hours:<\/strong><br\/><br\/>Mon-Fri: 8am-8pm<br\/>Sat-Sun: 10am-3pm<\/p>",
+            "content1": "<p><strong>Delivery</strong><br/><br/><strong>Fast and Reliable</strong><br/><br/>Enjoy fast 1-7 day delivery on all in-stock sofas. delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
             "content2": "",
             "page": ""
           }
@@ -304,8 +330,8 @@
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "care_and_cleaning",
-            "content1": "<h2>Faux Leather Sofa Care<\/h2><p>Combatting Spills:<\/p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.<\/li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.<\/li><li>Avoid harsh chemicals: Strong cleaners can damage the faux leather. Opt for mild, leather-safe products.<\/li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.<\/li><\/ul><p>General Cleaning Tips:<\/p><ul><li>Regular dusting: Use a soft brush or duster to remove dust and debris.<\/li><li>Weekly wipe-down: With a damp, soft cloth and a mild leather cleaner, gently wipe down the surface.<\/li><li>Avoid direct sunlight: Prolonged exposure to sunlight can cause fading and drying.<\/li><li>Protect from moisture: Excessive moisture can lead to mold and mildew.<\/li><\/ul><p>Additional Tips:<\/p><ul><li>Prevent stains: Use protective covers or throws when eating or drinking on your sofa.<\/li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers.<\/li><li>Avoid sharp objects: Be cautious of sharp items that could scratch the surface.<\/li><\/ul><p>By following these tips, you can keep your faux leather sofa looking its best for years to come.<\/p>",
-            "content2": "<h2>Fabric Sofa Care<\/h2><p>Spills:<\/p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.<\/li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.<\/li><li>Avoid harsh chemicals: Strong cleaners can damage the fabric. Opt for mild, fabric-safe products.<\/li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.<\/li><\/ul><p>General Cleaning:<\/p><ul><li>Regular vacuuming: Vacuum your sofa regularly to remove dust and dirt.<\/li><li>Spot cleaning: For stains or spills, use a mild upholstery cleaner and a clean, soft cloth. Test the cleaner in an inconspicuous area first to ensure it doesn't cause discoloration.<\/li><li>Avoid excessive moisture: While spot cleaning is necessary, avoid soaking the fabric. Too much moisture can lead to mold or mildew.<\/li><\/ul><p>Protection:<\/p><ul><li>Protect from sunlight: Prolonged exposure to direct sunlight can cause fading. Consider using curtains or blinds to protect your sofa.<\/li><li>Prevent moisture: Keep your sofa away from damp areas and avoid placing it directly on the floor. Consider using a sofa cover or throw to protect it from spills and wear and tear.<\/li><\/ul><p>Conditioning:<\/p><ul><li>Use fabric conditioner or protector: To help maintain the fabric's appearance and durability, apply a fabric conditioner or protector according to the manufacturer's instructions.<\/li><\/ul><p>Prevention:<\/p><ul><li>Use covers: To protect your sofa from spills, stains, and wear and tear, consider using removable covers.<\/li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers to prevent damage.<\/li><li>Avoid sharp objects: Be cautious of sharp items that could snag or tear the fabric.<\/li><\/ul><p>By following these tips, you can keep your fabric sofa looking its best for years to come.<\/p>",
+            "content1": "<h2>Faux Leather Sofa Care</h2><p>Combatting Spills:</p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.</li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.</li><li>Avoid harsh chemicals: Strong cleaners can damage the faux leather. Opt for mild, leather-safe products.</li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.</li></ul><p>General Cleaning Tips:</p><ul><li>Regular dusting: Use a soft brush or duster to remove dust and debris.</li><li>Weekly wipe-down: With a damp, soft cloth and a mild leather cleaner, gently wipe down the surface.</li><li>Avoid direct sunlight: Prolonged exposure to sunlight can cause fading and drying.</li><li>Protect from moisture: Excessive moisture can lead to mold and mildew.</li></ul><p>Additional Tips:</p><ul><li>Prevent stains: Use protective covers or throws when eating or drinking on your sofa.</li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers.</li><li>Avoid sharp objects: Be cautious of sharp items that could scratch the surface.</li></ul><p>By following these tips, you can keep your faux leather sofa looking its best for years to come.</p>",
+            "content2": "<h2>Fabric Sofa Care</h2><p>Spills:</p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.</li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.</li><li>Avoid harsh chemicals: Strong cleaners can damage the fabric. Opt for mild, fabric-safe products.</li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.</li></ul><p>General Cleaning:</p><ul><li>Regular vacuuming: Vacuum your sofa regularly to remove dust and dirt.</li><li>Spot cleaning: For stains or spills, use a mild upholstery cleaner and a clean, soft cloth. Test the cleaner in an inconspicuous area first to ensure it doesn't cause discoloration.</li><li>Avoid excessive moisture: While spot cleaning is necessary, avoid soaking the fabric. Too much moisture can lead to mold or mildew.</li></ul><p>Protection:</p><ul><li>Protect from sunlight: Prolonged exposure to direct sunlight can cause fading. Consider using curtains or blinds to protect your sofa.</li><li>Prevent moisture: Keep your sofa away from damp areas and avoid placing it directly on the floor. Consider using a sofa cover or throw to protect it from spills and wear and tear.</li></ul><p>Conditioning:</p><ul><li>Use fabric conditioner or protector: To help maintain the fabric's appearance and durability, apply a fabric conditioner or protector according to the manufacturer's instructions.</li></ul><p>Prevention:</p><ul><li>Use covers: To protect your sofa from spills, stains, and wear and tear, consider using removable covers.</li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers to prevent damage.</li><li>Avoid sharp objects: Be cautious of sharp items that could snag or tear the fabric.</li></ul><p>By following these tips, you can keep your fabric sofa looking its best for years to come.</p>",
             "page": ""
           }
         },
@@ -457,7 +483,7 @@
         "text_mDUJrg": {
           "type": "text",
           "settings": {
-            "text": "<p>Our team is just a call or WhatsApp message away!<\/p>",
+            "text": "<p>Our team is just a call or WhatsApp message away!</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -470,7 +496,7 @@
             "primary_button_link": "tel:01476338771",
             "primary_button_type": "transparent",
             "secondary_button_label": "CHAT WITH US",
-            "secondary_button_link": "https:\/\/wa.me\/15557037896",
+            "secondary_button_link": "https://wa.me/15557037896",
             "secondary_button_type": "transparent",
             "padding_top": 50,
             "padding_bottom": 10
@@ -549,7 +575,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_DigETz": {
-          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "disabled": true,
           "settings": {
             "placement": "product-page-nosto-3"
@@ -583,13 +609,13 @@
         "padding_bottom": 50,
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 15,
-        "logo1": "shopify:\/\/shop_images\/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
         "image_picker_link1": "",
         "image_picker_alt1": "HouseBeautiful",
-        "logo2": "shopify:\/\/shop_images\/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
         "image_picker_link2": "",
         "image_picker_alt2": "interior designer",
-        "logo3": "shopify:\/\/shop_images\/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
         "image_picker_link3": "",
         "image_picker_alt3": "COUNTRY LIVING",
         "background_color": "#48544c"
@@ -599,7 +625,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_adT36z": {
-          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-1"
           }
@@ -627,7 +653,7 @@
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_rpXq8n": {
-          "type": "shopify:\/\/apps\/nosto\/blocks\/nosto-placements-block\/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "product-page-nosto-2"
           }
