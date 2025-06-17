@@ -33,6 +33,41 @@
         "padding_bottom_mobile": 20
       }
     },
+    "17501643057da566ee": {
+      "type": "apps",
+      "blocks": {
+        "dividebuy_spread_the_cost_dividebuycart_JeiTVi": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuycart/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "alignment": "center",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "center",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "dividebuy_spread_the_cost_dividebuycart_JeiTVi"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "17369551538f2444e0": {
       "type": "apps",
       "blocks": {
@@ -64,6 +99,7 @@
   },
   "order": [
     "cart-items",
+    "17501643057da566ee",
     "17369551538f2444e0"
   ]
 }
