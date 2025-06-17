@@ -1,0 +1,7 @@
+{
+  "parent": "search.json",
+  "context": {
+    "market": "gb"
+  },
+  "sections": {}
+}

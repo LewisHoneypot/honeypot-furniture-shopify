@@ -1,0 +1,7 @@
+{
+  "parent": "product.v2-sofas-360.json",
+  "context": {
+    "market": "gb"
+  },
+  "sections": {}
+}
