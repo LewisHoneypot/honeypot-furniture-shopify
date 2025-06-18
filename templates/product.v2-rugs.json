@@ -94,7 +94,7 @@
         "dividebuy_spread_the_cost_dividebuyproduct_FKhNcU": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
           "settings": {
-            "finproms_text": "or_from",
+            "finproms_text": "finance_available",
             "include_cart_total": true,
             "show_soft_search": true,
             "alignment": "left",
