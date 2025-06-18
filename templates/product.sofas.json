@@ -89,11 +89,11 @@
             "finproms_text": "or_from",
             "include_cart_total": true,
             "show_soft_search": true,
-            "alignment": "center",
+            "alignment": "left",
             "tooltip-alignment": "center",
             "top_margin": 0,
             "bottom_margin": 0,
-            "alignment-mobile": "center",
+            "alignment-mobile": "left",
             "top_margin_mobile": 0,
             "bottom_margin_mobile": 0,
             "price_dom_element_selector": ""
@@ -418,7 +418,20 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "settings": {}
+      "settings": {
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 15,
+        "padding_bottom": 0,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
+      }
     },
     "multicolumn_FJHgEr": {
       "type": "multicolumn",
