@@ -23,8 +23,13 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_XQD3wk": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 0,
@@ -36,6 +41,10 @@
           "settings": {
             "placement": "available-colours"
           }
+        },
+        "lipscore_testimonial_QdVxkf": {
+          "type": "lipscore_testimonial",
+          "settings": {}
         },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
@@ -80,15 +89,6 @@
             "usp_icon_2": "dimensions",
             "usp_content_type": "usp_content_selector_2",
             "content": ""
-          }
-        },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
           }
         },
         "buy_buttons": {
@@ -149,6 +149,15 @@
             "price_dom_element_selector": ""
           }
         },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
         "klarna_buttons_LyTFWQ": {
           "type": "klarna_buttons",
           "settings": {
@@ -195,16 +204,18 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_XQD3wk",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_ETwA7F",
+        "lipscore_testimonial_QdVxkf",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
-        "snap_buttons_HagTqx",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "dividebuy_spread_the_cost_dividebuyproduct_FKhNcU",
+        "snap_buttons_HagTqx",
         "klarna_buttons_LyTFWQ",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW",
