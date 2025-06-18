@@ -87,6 +87,10 @@
             "content": ""
           }
         },
+        "lipscore_testimonial_9JdM7P": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "dividebuy_spread_the_cost_dividebuyproduct_4R9PJa": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
           "settings": {
@@ -241,6 +245,7 @@
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "lipscore_testimonial_9JdM7P",
         "dividebuy_spread_the_cost_dividebuyproduct_4R9PJa",
         "snap_buttons_HagTqx",
         "klarna_buttons_E8rbfR",
