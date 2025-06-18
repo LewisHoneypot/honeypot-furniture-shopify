@@ -48,7 +48,6 @@
         },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
-          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font": "Gotham",
