@@ -639,8 +639,14 @@
         "padding_bottom_mobile": 0
       }
     },
+    "lipscore_product_widgets_gkLVDp": {
+      "type": "lipscore-product-widgets",
+      "name": "Lipscore Product Reviews",
+      "settings": {}
+    },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
+      "disabled": true,
       "settings": {
         "heading": "Collapsible content",
         "use_hr": false,
@@ -904,6 +910,7 @@
     "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
     "1736163667c8a5c273",
+    "lipscore_product_widgets_gkLVDp",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
