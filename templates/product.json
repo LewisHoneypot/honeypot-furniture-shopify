@@ -165,6 +165,7 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
             "colors_background": "#ffffff",
             "popup_layout": "double",
