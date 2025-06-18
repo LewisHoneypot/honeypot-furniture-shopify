@@ -679,6 +679,7 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
+      "disabled": true,
       "settings": {
         "heading": "Collapsible content",
         "use_hr": false,
