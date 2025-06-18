@@ -42,6 +42,10 @@
             "placement": "available-colours"
           }
         },
+        "lipscore_testimonial_fMmctR": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "disabled": true,
@@ -87,22 +91,6 @@
             "content": ""
           }
         },
-        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT": {
-          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
-          "settings": {
-            "finproms_text": "or_from",
-            "include_cart_total": true,
-            "show_soft_search": true,
-            "alignment": "left",
-            "tooltip-alignment": "center",
-            "top_margin": 0,
-            "bottom_margin": 0,
-            "alignment-mobile": "center",
-            "top_margin_mobile": 0,
-            "bottom_margin_mobile": 0,
-            "price_dom_element_selector": ""
-          }
-        },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "disabled": true,
@@ -110,13 +98,6 @@
             "colors_background": "#ededed",
             "popup_layout": "double",
             "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
-        "klarna_buttons_E8rbfR": {
-          "type": "klarna_buttons",
-          "settings": {
-            "colors_background": "#ffffff",
             "popup_design": "minimal"
           }
         },
@@ -160,6 +141,29 @@
             "padding_bottom": 0,
             "background_colour": "#ededed",
             "data_source": "nosto"
+          }
+        },
+        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "center",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
+        "klarna_buttons_E8rbfR": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "popup_wJ3rXc": {
@@ -237,15 +241,16 @@
         "lipscore_rating_tYae7R",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_XbFj6r",
+        "lipscore_testimonial_fMmctR",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
-        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT",
         "snap_buttons_HagTqx",
-        "klarna_buttons_E8rbfR",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT",
+        "klarna_buttons_E8rbfR",
         "popup_wJ3rXc",
         "popup_C7wLwE",
         "popup_4gFHxf",
