@@ -672,9 +672,27 @@
         "padding_bottom_mobile": 0
       }
     },
+    "lipscore_product_widgets_Ubb64U": {
+      "type": "lipscore-product-widgets",
+      "name": "Lipscore Product Reviews",
+      "settings": {}
+    },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "settings": {}
+      "settings": {
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 15,
+        "padding_bottom": 0,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
+      }
     },
     "as_seen_in_Pnd8YJ": {
       "type": "as-seen-in",
@@ -998,6 +1016,7 @@
     "slideshow_6RTJiB",
     "rich_text_WaVhX9",
     "video_FxQj6U",
+    "lipscore_product_widgets_Ubb64U",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
     "as_seen_in_Pnd8YJ",
     "17361637054b91e455",
