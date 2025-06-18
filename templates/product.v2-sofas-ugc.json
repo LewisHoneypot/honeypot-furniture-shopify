@@ -88,7 +88,7 @@
             "finproms_text": "or_from",
             "include_cart_total": true,
             "show_soft_search": true,
-            "alignment": "center",
+            "alignment": "left",
             "tooltip-alignment": "center",
             "top_margin": 0,
             "bottom_margin": 0,
@@ -100,6 +100,7 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
             "colors_background": "#ededed",
             "popup_layout": "double",
