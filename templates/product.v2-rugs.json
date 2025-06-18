@@ -185,6 +185,12 @@
             "button-1-text": "ADD COVER",
             "button-2-text": "RETURN TO CART"
           }
+        },
+        "nosto_nosto_placements_block_m3rmNt": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
+          }
         }
       },
       "block_order": [
@@ -201,7 +207,8 @@
         "dividebuy_spread_the_cost_dividebuyproduct_FKhNcU",
         "klarna_buttons_LyTFWQ",
         "drawer_j3bNWd",
-        "protection_drawer_iWbVLW"
+        "protection_drawer_iWbVLW",
+        "nosto_nosto_placements_block_m3rmNt"
       ],
       "settings": {
         "use_custom_title": true,
@@ -514,6 +521,11 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
+    },
+    "lipscore_product_widgets_dpyeya": {
+      "type": "lipscore-product-widgets",
+      "name": "Lipscore Product Reviews",
+      "settings": {}
     },
     "1736163654e8d791fe": {
       "type": "apps",
@@ -853,6 +865,7 @@
     "rich_text_WaVhX9",
     "multicolumn_FJHgEr",
     "video_FxQj6U",
+    "lipscore_product_widgets_dpyeya",
     "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
     "1736163667c8a5c273",
