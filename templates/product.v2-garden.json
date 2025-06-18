@@ -194,6 +194,12 @@
             "button-1-text": "ADD COVER",
             "button-2-text": "RETURN TO CART"
           }
+        },
+        "nosto_nosto_placements_block_wMiqNL": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
+          }
         }
       },
       "block_order": [
@@ -212,7 +218,8 @@
         "dividebuy_spread_the_cost_dividebuyproduct_nRGaQX",
         "snap_buttons_HagTqx",
         "klarna_buttons_KUw9Wh",
-        "protection_drawer_iWbVLW"
+        "protection_drawer_iWbVLW",
+        "nosto_nosto_placements_block_wMiqNL"
       ],
       "settings": {
         "use_custom_title": true,
