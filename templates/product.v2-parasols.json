@@ -33,6 +33,10 @@
             "placement": "additional-colours"
           }
         },
+        "lipscore_testimonial_3BzBVm": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
           "disabled": true,
@@ -196,6 +200,7 @@
         "title",
         "lipscore_rating_9awehV",
         "nosto_nosto_placements_block_nJkcbk",
+        "lipscore_testimonial_3BzBVm",
         "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
