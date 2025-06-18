@@ -23,8 +23,13 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_447BAr": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 0,
@@ -229,6 +234,7 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_447BAr",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_XbFj6r",
         "color_swatch_bWwLRJ",
