@@ -118,7 +118,7 @@
             "tooltip-alignment": "center",
             "top_margin": 0,
             "bottom_margin": 0,
-            "alignment-mobile": "center",
+            "alignment-mobile": "left",
             "top_margin_mobile": 0,
             "bottom_margin_mobile": 0,
             "price_dom_element_selector": ""
