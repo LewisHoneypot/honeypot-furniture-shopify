@@ -21,7 +21,7 @@
   
     handles = handles.filter(item => item !== false);
   
-    console.log('Preparing for the loop...');
+    // console.log('Preparing for the loop...');
   
     for (let handle of handles) {
       let response = await fetch('/products/' + handle.handle + '.js');
@@ -46,11 +46,11 @@
       handle.item.dataset.lsRatingWidget = 1;
     }
   
-    console.log('done!');
+    // console.log('done!');
   
     if (typeof lipscore !== 'undefined') {
       lipscore.initWidgets();
-      console.log('init!');
+      // console.log('init!');
     }
   }
 

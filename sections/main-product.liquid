@@ -874,6 +874,7 @@
 
               {%- when 'trustpilot_mini' -%}
                 {%- if template contains 'product' -%}
+                  {%- assign trustpilotActive = true  %}
                   {% render 'product-trustpilot-mini' %}
                 {%- endif -%}
 
@@ -2723,170 +2724,176 @@
                   {% endfor %}
 
                   {%- if template contains 'product' -%}
-                    {% assign trustpilot_skus = final_tag_list | json %}
 
-                    <script>
-                      // Function to initialize TrustPilot (including the tooltip button)
-                      function initializeTrustPilot() {
-                        const urlCurrentProductRange = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php?type=batch-summaries`;
-                        const requestBody = JSON.stringify({ skus: {{trustpilot_skus}} });
+                    {%- if trustpilotActive == true -%}
 
-                        // Fetch batch summaries first for the tooltip
-                        fetch(urlCurrentProductRange, {
-                          method: "POST",
-                          credentials: "same-origin",
-                          headers: {
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer {{ settings.storefront_api.token }}",
-                          },
-                          body: requestBody
-                        })
-                        .then(response => response.json())
-                        .then(summariesData => {
-                          // Handle summaries data (average ratings)
-                          const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
-                          if (!Array.isArray(summariesData.summaries)) return;
+                      {% assign trustpilot_skus = final_tag_list | json %}
 
-                          const outerDivSummaries = createElement("div", ["main-trustpilot"]);
-                          trustPilotContainer.appendChild(outerDivSummaries);
+                      <script>
+                        // Function to initialize TrustPilot (including the tooltip button)
+                        function initializeTrustPilot() {
+                          const urlCurrentProductRange = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php?type=batch-summaries`;
+                          const requestBody = JSON.stringify({ skus: {{trustpilot_skus}} });
 
-                          let totalStars = 0, amountOfReviews = 0;
-                          const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+                          // Fetch batch summaries first for the tooltip
+                          fetch(urlCurrentProductRange, {
+                            method: "POST",
+                            credentials: "same-origin",
+                            headers: {
+                              "Content-Type": "application/json",
+                              Authorization: "Bearer {{ settings.storefront_api.token }}",
+                            },
+                            body: requestBody
+                          })
+                          .then(response => response.json())
+                          .then(summariesData => {
+                            // Handle summaries data (average ratings)
+                            const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
+                            if (!Array.isArray(summariesData.summaries)) return;
 
-                          summariesData.summaries.forEach(summary => {
-                            totalStars += summary.starsAverage;
-                            amountOfReviews += summary.numberOfReviews.total;
-                            reviewCounts[1] += summary.numberOfReviews.oneStar;
-                            reviewCounts[2] += summary.numberOfReviews.twoStars;
-                            reviewCounts[3] += summary.numberOfReviews.threeStars;
-                            reviewCounts[4] += summary.numberOfReviews.fourStars;
-                            reviewCounts[5] += summary.numberOfReviews.fiveStars;
-                          });
+                            const outerDivSummaries = createElement("div", ["main-trustpilot"]);
+                            trustPilotContainer.appendChild(outerDivSummaries);
 
-                          const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
-                          const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
-                          const totalStarsAverage = (totalStars / summariesData.summaries.length).toFixed(1);
-                          const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
+                            let totalStars = 0, amountOfReviews = 0;
+                            const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 
-                          if (totalStarsAverage >= 4){
-                            const reviewsLink = createElement("div", [], {}, `
-                              <span style='min-height:17px;'>
-                                <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
-                                <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
-                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
-                                {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
-                              </span>
-                            `);
-
-                            if (amountOfReviews === 0) {
-                              var trustpilotProductMini = document.querySelector(".trustpilot-mini-widget");
-                              var trustpilotProductCollapsible = document.querySelector('[id*="trustpilot_product_reviews_collapsible"]');
-                              trustpilotProductMini.style.display = "none";
-                              trustpilotProductCollapsible.classList.add("d-none");
-                            }
-
-                            const toolTip = createElement("span", ["tooltip-content"]);
-                            const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
-                            toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
-                            toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
-
-                            // Iterate in reverse order and include all rows
-                            [5, 4, 3, 2, 1].forEach(stars => {
-                              toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
+                            summariesData.summaries.forEach(summary => {
+                              totalStars += summary.starsAverage;
+                              amountOfReviews += summary.numberOfReviews.total;
+                              reviewCounts[1] += summary.numberOfReviews.oneStar;
+                              reviewCounts[2] += summary.numberOfReviews.twoStars;
+                              reviewCounts[3] += summary.numberOfReviews.threeStars;
+                              reviewCounts[4] += summary.numberOfReviews.fourStars;
+                              reviewCounts[5] += summary.numberOfReviews.fiveStars;
                             });
 
-                            toolTip.appendChild(toolTipHeader);
-                            reviewsLink.appendChild(toolTip);
-                            outerDivSummaries.appendChild(reviewsLink);
+                            const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
+                            const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
+                            const totalStarsAverage = (totalStars / summariesData.summaries.length).toFixed(1);
+                            const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
 
-                            // Attach click event listener to the <details> element
-                            const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
+                            if (totalStarsAverage >= 4){
+                              const reviewsLink = createElement("div", [], {}, `
+                                <span style='min-height:17px;'>
+                                  <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
+                                  <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
+                                  <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
+                                  {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
+                                </span>
+                              `);
 
-                            if (detailsElement) {
-                              detailsElement.addEventListener("click", function() {
-                                // Load reviews only if details element is not open
-                                if (!this.hasAttribute("open") && !reviewsLoaded) {
-                                  loadReviews();
-                                }
-                              });
-                            } else {
-                              console.log("Details element not found");
-                            }
-
-                            const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
-                         
-                            readMoreReviewsButton.addEventListener('click', function () {
-                              // Simulate a click on the collapsible content element
-                              const collapsible = document.querySelector('.trustpilot-accordion');
-
-                              if (collapsible) {
-                                collapsible.click();
+                              if (amountOfReviews === 0) {
+                                var trustpilotProductMini = document.querySelector(".trustpilot-mini-widget");
+                                var trustpilotProductCollapsible = document.querySelector('[id*="trustpilot_product_reviews_collapsible"]');
+                                trustpilotProductMini.style.display = "none";
+                                trustpilotProductCollapsible.classList.add("d-none");
                               }
 
-                              // Smoothly scroll to the element with the ID "reviews"
-                              document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
-                          
-                              // Determine scroll offset based on screen size
-                              const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
-                          
-                              // Adjust the scroll position slightly above the target
-                              setTimeout(function () {
-                                window.scrollBy(0, -offset); // Use the offset value based on the device
-                              }, 500); // Delay to allow smooth scroll to finish
-                            });
+                              const toolTip = createElement("span", ["tooltip-content"]);
+                              const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
+                              toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+                              toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
 
-                            tooltip = document.querySelector('.trustpilotTooltip');
-
-                            if (readMoreReviewsButton) {
-                              readMoreReviewsButton.addEventListener("click", function() {
-                                // Load reviews if the details element is not open
-                                if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
-                                  tooltip.classList.remove('active');
-                                  loadReviews();
-                                }
+                              // Iterate in reverse order and include all rows
+                              [5, 4, 3, 2, 1].forEach(stars => {
+                                toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
                               });
-                            } else {
-                              console.log("Reviews button not found");
+
+                              toolTip.appendChild(toolTipHeader);
+                              reviewsLink.appendChild(toolTip);
+                              outerDivSummaries.appendChild(reviewsLink);
+
+                              // Attach click event listener to the <details> element
+                              const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
+
+                              if (detailsElement) {
+                                detailsElement.addEventListener("click", function() {
+                                  // Load reviews only if details element is not open
+                                  if (!this.hasAttribute("open") && !reviewsLoaded) {
+                                    loadReviews();
+                                  }
+                                });
+                              } else {
+                                console.log("Details element not found");
+                              }
+
+                              const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
+                          
+                              readMoreReviewsButton.addEventListener('click', function () {
+                                // Simulate a click on the collapsible content element
+                                const collapsible = document.querySelector('.trustpilot-accordion');
+
+                                if (collapsible) {
+                                  collapsible.click();
+                                }
+
+                                // Smoothly scroll to the element with the ID "reviews"
+                                document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
+                            
+                                // Determine scroll offset based on screen size
+                                const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
+                            
+                                // Adjust the scroll position slightly above the target
+                                setTimeout(function () {
+                                  window.scrollBy(0, -offset); // Use the offset value based on the device
+                                }, 500); // Delay to allow smooth scroll to finish
+                              });
+
+                              tooltip = document.querySelector('.trustpilotTooltip');
+
+                              if (readMoreReviewsButton) {
+                                readMoreReviewsButton.addEventListener("click", function() {
+                                  // Load reviews if the details element is not open
+                                  if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
+                                    tooltip.classList.remove('active');
+                                    loadReviews();
+                                  }
+                                });
+                              } else {
+                                console.log("Reviews button not found");
+                              }
                             }
-                          }
-                        })
-                        .catch(error => console.error("Error fetching batch summaries from Trustpilot API:", error));
-                      }
-
-                      initializeTrustPilot();
-
-                      let tooltip = '';
-
-                      document.addEventListener('DOMContentLoaded', () => {
-                        tooltip = document.querySelector('.trustpilotTooltip');
-                        const reviewsButton = document.getElementById('reviews-button'); 
-                        const readMoreButton = document.getElementById('reviews-read-more-button'); 
-
-                        {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
-
-                        // Open tooltip when clicking the reviews button
-                        reviewsButton.addEventListener('click', (event) => {
-                          event.stopPropagation(); // Prevents event from bubbling up to document
-                          tooltip.classList.add('active'); // Open the tooltip
-                        });
-
-                        // Prevent click on "Read More" from affecting tooltip behavior
-                        if (readMoreButton) {
-                          readMoreButton.addEventListener('click', (event) => {
-                            event.stopPropagation(); // Prevents event from reaching reviews-button or document
-                          });
+                          })
+                          .catch(error => console.error("Error fetching batch summaries from Trustpilot API:", error));
                         }
 
-                        // Close tooltip when clicking anywhere else on the page
-                        document.addEventListener("click", function(event) {
-                          setTimeout(() => {
-                            if (tooltip && !tooltip.contains(event.target)) {
-                              tooltip.classList.remove("active"); // Close tooltip
+                        initializeTrustPilot();
+
+                        let tooltip = '';
+
+                        document.addEventListener('DOMContentLoaded', () => {
+                          tooltip = document.querySelector('.trustpilotTooltip');
+                          const reviewsButton = document.getElementById('reviews-button'); 
+                          const readMoreButton = document.getElementById('reviews-read-more-button'); 
+
+                          {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
+
+                          // Open tooltip when clicking the reviews button
+                          reviewsButton.addEventListener('click', (event) => {
+                            event.stopPropagation(); // Prevents event from bubbling up to document
+                            tooltip.classList.add('active'); // Open the tooltip
+                          });
+
+                          // Prevent click on "Read More" from affecting tooltip behavior
+                          if (readMoreButton) {
+                            readMoreButton.addEventListener('click', (event) => {
+                              event.stopPropagation(); // Prevents event from reaching reviews-button or document
+                            });
                           }
-                          }, 10); // Small delay to ensure click events don't conflict
+
+                          // Close tooltip when clicking anywhere else on the page
+                          document.addEventListener("click", function(event) {
+                            setTimeout(() => {
+                              if (tooltip && !tooltip.contains(event.target)) {
+                                tooltip.classList.remove("active"); // Close tooltip
+                            }
+                            }, 10); // Small delay to ensure click events don't conflict
+                          });
                         });
-                      });
-                    </script>
+                      </script>
+
+                    {%- endif -%}
+
                   {%- endif -%}
 
                 {%- else -%}
