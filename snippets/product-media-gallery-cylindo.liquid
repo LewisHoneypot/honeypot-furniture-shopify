@@ -45,7 +45,7 @@
 
       <cylindo-custom-content
         slot="Picture(0{{ media_position }})"
-        thumbnail-src="{{ media.src | image_url }}"
+        thumbnail-src="{{ media.src | image_url: width: 50, height: 50, crop: 'center' }}"
         class="cylindo-custom-content"
       >
         <img
