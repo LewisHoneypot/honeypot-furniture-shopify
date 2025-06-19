@@ -144,74 +144,11 @@
         "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
-    "29a4766e-9b16-4206-927b-f13e02616027": {
-      "type": "collage",
-      "blocks": {
-        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1": {
-          "type": "image",
-          "settings": {
-            "heading_image": "Makeup Brushes Collections",
-            "heading_size": "x-small",
-            "button_transparent": "default",
-            "button_type": "standard",
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/new-arrivals",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#2d2d2d",
-            "desktop_content_position": "top-left"
-          }
-        },
-        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2": {
-          "type": "image",
-          "settings": {
-            "heading_image": "Kissable Confidence Collections",
-            "heading_size": "x-small",
-            "button_transparent": "default",
-            "button_type": "standard",
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/new-arrivals",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#2d2d2d",
-            "desktop_content_position": "top-left"
-          }
-        }
-      },
-      "block_order": [
-        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1",
-        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1600,
-        "enable_full_width": true,
-        "heading": "",
-        "text": "",
-        "text_alignment": "center",
-        "heading_margin_bottom": 30,
-        "image_ratio": "adapt",
-        "spacing_desktop": 20,
-        "spacing_tablet": 10,
-        "spacing_mobile": 10,
-        "enable_carousel": false,
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
-        "color_scheme": "",
-        "image_animation": "zoom-out",
-        "image_behavior": "none",
-        "text_animation": "fade-up",
-        "padding_top": 100,
-        "padding_bottom": 100,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
     "1736440044ce275a3d": {
       "type": "apps",
       "blocks": {
         "nosto_nosto_placements_block_gJQ3B8": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "disabled": true,
           "settings": {
             "placement": "categorypage-nosto-1"
           }
@@ -362,7 +299,6 @@
   "order": [
     "banner",
     "product-grid",
-    "29a4766e-9b16-4206-927b-f13e02616027",
     "1736440044ce275a3d",
     "collection_list_ig8tXp",
     "17364400660185726f",

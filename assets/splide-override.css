@@ -1,19 +1,28 @@
 .splide__arrow {
   z-index: 2 !important;
-  height: 4em !important;
-  width: 4em !important;
-  border: solid 1px #000 !important;
-  background: #fff !important;
+  height: 100% !important;
+  width: 6em !important;
+  /* border: solid 1px #000 !important; */
+  background: transparent !important;
+  border-radius: 0 !important;
+  border: none !important;
+  opacity: 1 !important;
 }
 
+.splide__arrow--prev {
+  left: 0em !important;
+}
+.splide__arrow--next {
+  right: 0em !important;
+}
 /* .splide__list {
   max-height: 100vw;
 } */
 
-@media  screen and (min-width:641px) {
+@media screen and (min-width: 641px) {
   .nosto-carousel .splide__slide {
     padding: 5px;
-  }  
+  }
 }
 
 #shopify-section-template--24400885285239__a0b92d9e-e25a-4de9-9035-373ef5c4d596 {

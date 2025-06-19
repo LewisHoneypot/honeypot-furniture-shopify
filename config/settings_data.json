@@ -122,6 +122,9 @@
     "view_cart_color_scheme": "scheme-6129edf5-f2cb-409d-832b-936cf3545e85",
     "continue_shopping_color_scheme": "scheme-6129edf5-f2cb-409d-832b-936cf3545e85",
     "continue_shopping_button_transparent": "default",
+    "use_protection_drawer": true,
+    "protection_cart_paragraph": "Staingard offers a host of protection benefits for your new sofa.",
+    "protection_cart_button_text": "Add Staingard...",
     "login_style": "classic",
     "login_color_scheme": "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0",
     "sign_in_color_scheme": "scheme-d011068e-3d0b-4d0a-9503-63fe05cf10e0",
@@ -263,6 +266,14 @@
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": false,
         "settings": {}
+      },
+      "9215962420185474525": {
+        "type": "shopify://apps/lipscore-reviews/blocks/lipscore-init/e89bfb0c-cc26-450f-9297-cec873403986",
+        "disabled": false,
+        "settings": {
+          "init_repeat": true,
+          "init_repeat_delay": 0.3
+        }
       }
     },
     "color_schemes": {
@@ -840,7 +851,14 @@
       ".color-list {display: flex;}",
       ".color-list a {margin-right: 1rem;}",
       ".color-item {display: block !important;}",
-      ".section_image-gallery .swiper .swiper-slide {opacity: 1;}"
+      ".section_image-gallery .swiper .swiper-slide {opacity: 1;}",
+      ".lipscore-rating {float: inline-end;}",
+      ".lipscore-testimonial {margin: 20px 0;}",
+      ".lipscore-rating-review-link {color: black;}",
+      ".lipscore-service-review-badge-small-short > svg > text:first-of-type {transform: translate(100px, -27px);}",
+      ".lipscore-service-review-badge-small-short > svg > g:last-of-type {transform: translate(1600px, 70px) scale(0.45);}",
+      ".lipscore-product-widgets {max-width: 1200px; padding: 20px; margin: 0 auto;}",
+      ".lipscore-rating-small {display: block; min-height: 27px;}"
     ]
   }
 }

@@ -164,31 +164,34 @@
                     {%- if sofas_price > 0 -%}
                       {%- if sofas_price <= 49999 -%}
                         {% assign protection_price = 50 %}
-                        {% assign protection_id = 54782371201399 %}
-                      {% elsif sofas_price <= 99999 %}
+                        {% assign protection_id = 55229695787383 %}
+                      {% comment %} {% elsif sofas_price <= 99999 %}
                         {% assign protection_price = 75 %}
-                        {% assign protection_id = 54782371529079 %}
-                      {% elsif sofas_price <= 149999 %}
+                        {% assign protection_id = 54782371529079 %} {% endcomment %}
+                      {% elsif sofas_price <= 99999 %}
                         {% assign protection_price = 100 %}
-                        {% assign protection_id = 54782372053367 %}
-                      {% elsif sofas_price <= 199999 %}
+                        {% assign protection_id = 55229704143223 %}
+                      {% elsif sofas_price <= 149999 %}
                         {% assign protection_price = 150 %}
-                        {% assign protection_id = 54782492606839 %}
-                      {% elsif sofas_price <= 299999 %}
+                        {% assign protection_id = 55229774332279 %}
+                      {% elsif sofas_price <= 199999 %}
                         {% assign protection_price = 200 %}
-                        {% assign protection_id = 54782492967287 %}
-                      {% elsif sofas_price <= 399999 %}
+                        {% assign protection_id = 48626778964255 %}
+                      {% elsif sofas_price <= 299999 %}
                         {% assign protection_price = 250 %}
-                        {% assign protection_id = 54782493000055 %}
-                      {% elsif sofas_price <= 499999 %}
+                        {% assign protection_id = 55229754933623 %}
+                      {% elsif sofas_price <= 399999 %}
                         {% assign protection_price = 300 %}
-                        {% assign protection_id = 54782493622647 %}
-                      {% elsif sofas_price <= 999999 %}
+                        {% assign protection_id = 55229782753655 %}
+                      {% elsif sofas_price <= 499999 %}
                         {% assign protection_price = 350 %}
-                        {% assign protection_id = 54782493819255 %}
-                      {% elsif sofas_price >= 1000000 %}
+                        {% assign protection_id = 55229799629175 %}
+                      {% elsif sofas_price <= 999999 %}
                         {% assign protection_price = 400 %}
-                        {% assign protection_id = 54782494245239 %}
+                        {% assign protection_id = 55229801005431 %}
+                      {% elsif sofas_price >= 1000000 %}
+                        {% assign protection_price = 450 %}
+                        {% assign protection_id = 55229803659639 %}
                       {% endif %}
                     {% endif %}
 
@@ -381,12 +384,12 @@
                 </p>
 
                 <p>
-                  <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Newline_Insurance_IPID_Form_-_18-12-2024.pdf_1.2.pdf?v=1738750354" target="_blank">Insurance Product Information Document</a>
+                  <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Staingard_IPID_Form_sgfc24v1.pdf?v=1747811764" target="_blank">Insurance Product Information Document</a>
                 </p>
 
-                <div id="emmiera-checks">
-                  <input type="checkbox" id="emmiera-tnc">
-                  <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Emmiera_Terms_Conditions_Newline_18-12-2024.pdf_2.7.pdf?v=1738744488" target="_blank">Terms & Conditions</a></p>
+                <div id="staingard-checks">
+                  <input type="checkbox" id="staingard-tnc">
+                  <p>I have read and agree to the <a href="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Staingard_Furniture_Leaflet_sgfc24v2.pdf?v=1747811768" target="_blank">Terms & Conditions</a></p>
                 </div>
 
                 <div
@@ -414,8 +417,8 @@
   <script>
     // Function to handle adding to the cart
     function handleProtectionAddToCart(protectionId) {
-      const checkbox = document.getElementById('emmiera-tnc');
-      const checkboxWrapper = document.getElementById('emmiera-checks');
+      const checkbox = document.getElementById('staingard-tnc');
+      const checkboxWrapper = document.getElementById('staingard-checks');
 
       // Check if checkbox is checked
       if (!checkbox.checked) {
@@ -481,7 +484,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       const button = document.getElementById('protection-add-to-cart');
-      const checkboxWrapper = document.getElementById('emmiera-checks');
+      const checkboxWrapper = document.getElementById('staingard-checks');
       const protectionId = {{ protection_id }}; // Assuming the protection_id is being passed in
 
       {% comment %} console.log('protectionId', protectionId); {% endcomment %}
@@ -491,14 +494,14 @@
 
       // Event delegation to handle checkbox state change
       document.addEventListener('change', function (event) {
-        if (event.target && event.target.id === 'emmiera-tnc') {
+        if (event.target && event.target.id === 'staingard-tnc') {
           {% comment %} console.log('EventListener | Checkbox state changed:', event.target.checked ? 'Checked' : 'Unchecked'); {% endcomment %}
 
           // Enable/disable the button based on checkbox state
           button.disabled = !event.target.checked;
 
           if (event.target.checked) {
-            document.getElementById('emmiera-checks').style.border = '2px solid white';
+            document.getElementById('staingard-checks').style.border = '2px solid white';
           } else {
             checkboxWrapper.style.border = '2px solid red';
           }
@@ -509,12 +512,12 @@
   </script>
 
   {% style %}
-    #emmiera-checks {
+    #staingard-checks {
       display: flex;
       align-items: center;
-      border: 2px solid white;
+      border: 2px solid #d1d1d1;
     }
-    #emmiera-checks #emmiera-tnc {
+    #staingard-checks #staingard-tnc {
       position: relative;
       -webkit-appearance: auto;
       appearance: auto;
@@ -526,7 +529,7 @@
       height: 3.6rem;
     }
     @media only screen and (min-width: 750px) {
-      #emmiera-checks #emmiera-tnc {
+      #staingard-checks #staingard-tnc {
         width: 1.6rem;
         height: 1.6rem;
       }

@@ -23,16 +23,32 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_XQD3wk": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 0,
             "padding_bottom": 0
           }
         },
+        "nosto_nosto_placements_block_ETwA7F": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "available-colours"
+          }
+        },
+        "lipscore_testimonial_QdVxkf": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
+          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font": "Gotham",
@@ -53,18 +69,6 @@
             "colors_text": "#424242",
             "padding_top": 12,
             "padding_bottom": 12
-          }
-        },
-        "drawer_j3bNWd": {
-          "type": "drawer",
-          "settings": {
-            "heading": "VIEW THE RANGE",
-            "font": "Gotham",
-            "content_type": "view_the_range",
-            "content": "",
-            "page": "",
-            "colors_background": "#ededed",
-            "colors_border": "#707070"
           }
         },
         "usp_drawer_1_h8wxkV": {
@@ -93,7 +97,7 @@
             "use_buy_button_price": true,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
@@ -121,19 +125,56 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "on",
+            "tiers": "off",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
-            "background_colour": "#ededed"
+            "background_colour": "#ededed",
+            "data_source": "nosto"
+          }
+        },
+        "dividebuy_spread_the_cost_dividebuyproduct_FKhNcU": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "finance_available",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
           }
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
             "colors_background": "#ededed",
-            "use_finance_popup": true,
-            "finance_button_text": "FINANCE AVAILABLE"
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_LyTFWQ": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
+          }
+        },
+        "drawer_j3bNWd": {
+          "type": "drawer",
+          "settings": {
+            "heading": "VIEW THE RANGE",
+            "font": "Gotham",
+            "content_type": "view_the_range",
+            "content": "",
+            "page": "",
+            "colors_background": "#ededed",
+            "colors_border": "#707070"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -153,20 +194,32 @@
             "button-1-text": "ADD COVER",
             "button-2-text": "RETURN TO CART"
           }
+        },
+        "nosto_nosto_placements_block_m3rmNt": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
+          }
         }
       },
       "block_order": [
         "title",
+        "lipscore_rating_XQD3wk",
         "trustpilot_mini_TB9jLy",
+        "nosto_nosto_placements_block_ETwA7F",
+        "lipscore_testimonial_QdVxkf",
         "color_swatch_bWwLRJ",
         "price",
-        "drawer_j3bNWd",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "dividebuy_spread_the_cost_dividebuyproduct_FKhNcU",
         "snap_buttons_HagTqx",
-        "protection_drawer_iWbVLW"
+        "klarna_buttons_LyTFWQ",
+        "drawer_j3bNWd",
+        "protection_drawer_iWbVLW",
+        "nosto_nosto_placements_block_m3rmNt"
       ],
       "settings": {
         "use_custom_title": true,
@@ -176,6 +229,8 @@
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
         "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
@@ -478,6 +533,11 @@
         "padding_bottom_mobile": 0
       }
     },
+    "lipscore_product_widgets_dpyeya": {
+      "type": "lipscore-product-widgets",
+      "name": "Lipscore Product Reviews",
+      "settings": {}
+    },
     "1736163654e8d791fe": {
       "type": "apps",
       "blocks": {
@@ -557,36 +617,17 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
       "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Gotham",
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 15,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
+        "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
       }
@@ -835,6 +876,7 @@
     "rich_text_WaVhX9",
     "multicolumn_FJHgEr",
     "video_FxQj6U",
+    "lipscore_product_widgets_dpyeya",
     "1736163654e8d791fe",
     "as_seen_in_Pnd8YJ",
     "1736163667c8a5c273",

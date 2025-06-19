@@ -52,8 +52,20 @@
         "padding_bottom_mobile": 16
       }
     },
+    "custom_liquid_6HM4xt": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center; padding-top: 10px;\">\n<div class=\"lipscore-service-review-badge-small-short lipscore-no-border lipscore-no-separator\"\n    data-ls-widget-height=\"30px\"\n    data-ls-widget-width=\"300px\">\n</div>\n</div>",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "trustpilot_pfqpVk": {
       "type": "trustpilot",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
         "padding_top": 5,
@@ -109,9 +121,9 @@
             "section_width": "customized-width",
             "customize_width": 1400,
             "heading_font_size": 16,
-            "image_1": "shopify://shop_images/1_b460768e-3384-4721-81c0-9fc7384db2cc.png",
+            "image_1": "shopify://shop_images/Sofas_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "",
+            "link_image_1": "shopify://pages/finance",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
@@ -123,8 +135,9 @@
             "section_width": "customized-width",
             "customize_width": 1400,
             "heading_font_size": 16,
+            "image_1": "shopify://shop_images/Bedroom_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "",
+            "link_image_1": "shopify://pages/finance",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
@@ -136,8 +149,9 @@
             "section_width": "customized-width",
             "customize_width": 1400,
             "heading_font_size": 16,
+            "image_1": "shopify://shop_images/Living_and_dining_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "",
+            "link_image_1": "shopify://pages/finance",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
@@ -155,8 +169,9 @@
             "image_2": "shopify://shop_images/4_90b93fd1-e2be-4201-a4a3-708282f01835.jpg",
             "text_image_2": "Medium Rugs: 230cm x 160cm",
             "link_image_2": "shopify://collections/medium-rugs",
+            "image_3": "shopify://shop_images/Rugs_menu_banner_2991386f-1612-48d7-863f-acb35e1a6377.webp",
             "text_image_3": "",
-            "link_image_3": "",
+            "link_image_3": "shopify://pages/finance",
             "text_image_4": "",
             "link_image_4": ""
           }
@@ -243,6 +258,7 @@
   },
   "order": [
     "announcement-bar",
+    "custom_liquid_6HM4xt",
     "trustpilot_pfqpVk",
     "b38aad37-e5d6-4a4a-9109-e406344cc53a",
     "header"

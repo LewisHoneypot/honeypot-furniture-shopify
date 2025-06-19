@@ -1,24 +1,13 @@
 {%- if section.settings.image_tech == "cylindo" -%}
+  
   <link rel="preconnect" href="https://content.cylindo.com" crossorigin>
-  <script
-    type="module"
-    src="https://viewer-cdn.cylindo.com/v1/index.mjs"
-    async
-  ></script>
-  <script
-    type="module"
-    src="https://viewer-cdn.cylindo.com/v1/shopify.mjs"
-    async
-  ></script>
+  <script type="module" src="https://viewer-cdn.cylindo.com/v1/index.mjs" async></script>
+  <script type="module" src="https://viewer-cdn.cylindo.com/v1/shopify.mjs" async></script>
 
   {%- if section.settings.cylindo_thumbnail_bar == "on" -%}
-    <script
-      type="module"
-      src="https://viewer-cdn.cylindo.com/v1/bar.mjs"
-      async
-    ></script>
+    <script type="module" src="https://viewer-cdn.cylindo.com/v1/bar.mjs" async></script>
   {%- endif -%}
-  
+
 {%- endif -%}
 
 <section
@@ -69,25 +58,26 @@
             <div class="col-12 p-0">
               <div class="product__title break element-spacing-all float-left float-lg-none pt-0 pb-0">
                 {%- if product.metafields.custom.range_name and product.metafields.custom.colour_and_model -%}
-                  <h1
-                    style="
-                      font-weight: normal;
-                      font-size: 24pt;
-                      margin-top: 15px;
-                      margin-bottom: 0px;
-                      font-weight: 700;
-                      line-height: 26pt;
-                    "
-                  >
-                    {{ product.metafields.custom.range_name }}
+                  <h1 style="line-height: 20pt; margin-top: 15px;">
+                    <span
+                      style="
+                        font-weight: normal;
+                        font-size: 24pt;
+                        margin-top: 15px;
+                        margin-bottom: 0px;
+                        font-weight: bold;
+                        line-height: 30pt;
+                      "
+                    >
+                      {{ product.metafields.custom.range_name }}
+                    </span>
                     <br>
                     <span
                       style="
                         font-size: 14pt;
-                        font-weight: 400;
-                        top: -11px;
+                        font-weight: 500;
                         position: relative;
-                        line-height: 17pt;
+                        line-height: 0pt;
                       "
                     >
                       {{ product.metafields.custom.colour_and_model }}
@@ -112,7 +102,7 @@
       {%- endif -%}
 
       {%- if product.media.size > 0 -%}
-        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:405px; z-index:0;">
+        <div class="product__media-wrapper w-100 pos-relative f-grow f-shrink" style="min-height:405px; z-index:0; margin-top: 40px;">
           {%- if section.settings.use_dimensions_icon == true or section.settings.use_image_zoom_icon == true -%}
             <div
               class="container-fluid"
@@ -348,34 +338,38 @@
                         {%- endif -%}
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    {% comment %} was when price {% endcomment %}
-                    <div class="col-4 col-lg-12 p-0">
-                      <div
-                        class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
-                        {{ block.shopify_attributes }}
-                        id="price-{{ section.id }}"
-                        role="status"
-                        style="
-                          --padding-top: {{ block.settings.padding_top }}px;
-                          --padding-bottom: {{ block.settings.padding_bottom }}px;
-                        "
-                      >
-                        {%- liquid
-                          if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
-                            assign show_you_save = false
-                          else
-                            assign show_you_save = true
-                          endif
-                        -%}
-                        {%- render 'price',
-                          product: product,
-                          use_variant: true,
-                          show_you_save: show_you_save,
-                          main_price: true,
-                          price_class: 'price--large style-m-price'
-                        -%}
-                      </div>
+              {% comment %} was when price {% endcomment %}
+              {%- when 'price' -%}
+                <div class="row">
+
+                  <div class="col-4 col-lg-12 p-0">
+                    <div
+                      class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
+                      {{ block.shopify_attributes }}
+                      id="price-{{ section.id }}"
+                      role="status"
+                      style="
+                        --padding-top: {{ block.settings.padding_top }}px;
+                        --padding-bottom: {{ block.settings.padding_bottom }}px;
+                      "
+                    >
+                      {%- liquid
+                        if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
+                          assign show_you_save = false
+                        else
+                          assign show_you_save = true
+                        endif
+                      -%}
+                      {%- render 'price',
+                        product: product,
+                        use_variant: true,
+                        show_you_save: show_you_save,
+                        main_price: true,
+                        price_class: 'price--large style-m-price'
+                      -%}
                     </div>
                   </div>
                 </div>
@@ -441,6 +435,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                
               {%- when 'information' -%}
                 {%- if block.settings.show_sku
                   or block.settings.show_availability
@@ -815,36 +810,78 @@
                 {%- endif -%}
 
               {%- when 'popup' -%}
+                {%- if block.settings.design_type == "minimal" %}
+                  <style>
+                    [data-side-drawer="#PopupModal-{{ block.id }}"] {
+                      width: 100%;
+                    }
+                    #ProductPopup-{{ block.id }}.product-popup-modal__button {
+                      text-align: left !important;
+                      font-family: "Aeonik", Arial, Helvetica, sans-serif;
+                      font-size: .7em;
+                      height: 40px;
+                      min-height: 30px;
+                      align-content: center;
+                      color: #000;
+                      margin-bottom: -5px;
+                      text-decoration: none;
+                      cursor: pointer;
+                      margin-top: 10px;
+                      width: 100%;
+                    }
+                    #ProductPopup-{{ block.id }} .see-details {
+                      color: #527e36;
+                      text-decoration: underline;
+                      margin-left: 5px;
+                    }
+                  </style>
+                {%- endif -%}
+
                 {%- if block.settings.text != blank or block.settings.page != blank -%}
                   <side-drawer-opener
                     class="popups-popup-modal__opener product-popup-modal__opener d-inline-block no-js-hidden"
                     data-side-drawer="#PopupModal-{{ block.id }}"
                     {{ block.shopify_attributes }}
                   >
-                    <button
+                    <{%- if block.settings.dummy_button == "yes" -%}div {% else -%}button {% endif %}
                       id="ProductPopup-{{ block.id }}"
                       class="product-popup-modal__button bg-transparent b-none link u-link d-inline-block u-u t-button p-0"
                       type="button"
                       aria-haspopup="dialog"
+                    {%- if block.settings.dummy_button == "yes" %} style="cursor: default;"{%- endif %}
                     >
+                      {%- if block.settings.use_icon == "on" -%}
+                        <img src="{{ block.settings.icon_image | image_url }}" height="39" width="39">
+                      {%- endif -%}
                       <span>{{ block.settings.text | default: block.settings.page.title }}</span>
-                    </button>
+                      {%- if block.settings.dummy_button == "no" -%}
+                        {%- if block.settings.design_type == "minimal" %}
+                          <span class="see-details">SEE DETAILS</span>
+                        {%- endif -%}
+                      {%- endif -%}
+                  </{%- if block.settings.dummy_button == "yes" -%}div{%- else -%}button{%- endif -%}>
                   </side-drawer-opener>
-                  <a
-                    href="{{ block.settings.page.url }}"
-                    class="product-popup-modal__button link u-link d-inline-block u-u t-button p-0 no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    {{- block.settings.text -}}
-                  </a>
+                    <a
+                      href="{{ block.settings.page.url }}"
+                      class="product-popup-modal__button link u-link d-inline-block u-u t-button p-0 no-js{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {{- block.settings.text -}}
+                    </a>
                 {%- endif -%}
 
               {%- when 'trustpilot_mini' -%}
                 {%- if template contains 'product' -%}
+                  {%- assign trustpilotActive = true  %}
                   {% render 'product-trustpilot-mini' %}
                 {%- endif -%}
+
+              {%- when 'lipscore_rating' -%}
+                <div {{ block.shopify_attributes }}>
+                  {% render 'lipscore-rating', product: product %}
+                </div>
 
               {%- when 'color_swatch' -%}
                 {%- if product.metafields.custom.product_colour_list != blank -%}
@@ -878,7 +915,13 @@
                     <!-- Set columns -->
                     <style>
                       .color-list {
-                        {%- if p_count == 5 %}
+                        {%- if p_count == 8 %}
+                          grid-template-columns: repeat({{ p_count }}, 12.5%);
+                        {%- elsif p_count == 7 %}
+                          grid-template-columns: repeat({{ p_count }}, 14.2%);
+                        {%- elsif p_count == 6 %}
+                          grid-template-columns: repeat({{ p_count }}, 16.6%);
+                        {%- elsif p_count == 5 %}
                           grid-template-columns: repeat({{ p_count }}, 20%);
                         {%- elsif p_count == 4 -%}
                           grid-template-columns: repeat({{ p_count }}, 25%);
@@ -987,7 +1030,7 @@
                           class="d-block product-drawer__opener no-js-hidden"
                           data-side-drawer="#Drawer-{{ block.id }}"
                           {{ block.shopify_attributes }}
-                          style="min-height:58px;"
+                          style="min-height:58px; display:none !important;"
                         >
                           <button
                             class="
@@ -1076,7 +1119,7 @@
                 </div>
                 </div>
 
-                {% comment %} Delivery ETA {% endcomment %}
+              {% comment %} Delivery ETA {% endcomment %}
               {%- when 'expected_delivery' -%}
                 {%- if block.settings.enable_expected_delivery == true -%}
                   {% comment %} Check if in stock {% endcomment %}
@@ -1088,9 +1131,17 @@
                     {%- assign in_stock = false -%}
                   {% endif %}
 
+                  <script>
+                    // console.log('product: ', {{ product | json }});
+                    // console.log('product.collections: ', {{ product.collections | json }});
+                    </script>
+
                   {% comment %} Check which collections product is in {% endcomment %}
                   {%- assign collection_titles = '' -%}
                   {%- for collection in product.collections -%}
+                    <script>
+                      // console.log('collection: ', collection);
+                    </script>
                     {%- assign collection_titles = collection_titles | append: collection.title -%}
                     {%- unless forloop.last -%}
                       {%- assign collection_titles = collection_titles | append: ', ' -%}
@@ -1100,13 +1151,16 @@
                   {%- assign date_1 = 0 -%}
                   {%- assign date_2 = 0 -%}
 
+                  <script>
+                    // console.log("ProductTier: ", {{ product.metafields.Details.ProductTier }});
+                    // console.log("collection_titles: ", {{ collection_titles | json }});
+                    </script>
+
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                      {% comment %}
                         <script>
-                          console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
+                          // console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
                         </script>
-                      {% endcomment %}
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
@@ -1161,10 +1215,16 @@
                     or collection_titles contains 'Chest of Drawers'
                     or collection_titles contains 'Bedside Tables'
                     or collection_titles contains 'Sideboards'
+                    or collection_titles contains 'Garden'
                   -%}
                     {%- assign date_1 = 7 -%}
                     {%- assign date_2 = 10 -%}
                   {%- endif -%}
+
+                  <script>
+                    // console.log("date_1: ", {{ date_1 }});
+                    // console.log("date_2: ", {{ date_2 }});
+                  </script>
 
                   {%- assign today_1 = 'now' | date: '%s' -%}
                   {%- assign today_2 = 'now' | date: '%s' -%}
@@ -1213,6 +1273,11 @@
                     | append: delivery_date_suffix_2
                   -%}
 
+                  <script>
+                    // console.log("formatted_date_1: ", {{ formatted_date_1 }});
+                    // console.log("formatted_date_2: ", {{ formatted_date_2 }});
+                  </script>
+
                   <div
                     class="deliverydate-new sb_delivery-new m-0 text-center pt-2 pr-3 pb-2 pl-3{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
                     style="background-color:{{ block.settings.background_colour }};"
@@ -1239,29 +1304,93 @@
 
                         {% comment %} Change display based on date type {% endcomment %}
                         {%- if block.settings.date_type == 'accurate' -%}
+                          <script>
+                            // console.log("date_type: Accurate");
+                          </script>
+
                           <strong class="pr-1 mr-1">{{ formatted_date_1 }}</strong>
                           <span class="pr-1 mr-1">to</span>
                           <strong class="pr-1 mr-1">{{ formatted_date_2 }}</strong>
                         {%- else -%}
-                          {%- if in_stock == true -%}
-                            <strong class="pr-1 mr-1"> Tomorrow</strong>
-                          {%- else -%}
-                            {%- if block.settings.tiers == 'on' -%}
-                              {%- if product.metafields.Details.ProductTier == 1 -%}
-                                <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
-                              {%- elsif product.metafields.Details.ProductTier == 2 -%}
-                                <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
-                              {%- endif -%}
+
+                          <script>
+                            // console.log("date_type: Vague");
+                          </script>
+
+                          {%- if block.settings.data_source == "nosto" -%}
+
+                            {%- assign nosto_delivery = product.metafields.Nosto.Delivery -%}
+
+                            <script>
+                              // console.log("data_source: Nosto");
+                              // console.log("Nosto.delivery: ", {{ product.metafields.Nosto.delivery }});
+                              // console.log("Nosto.Delivery: ", {{ product.metafields.Nosto.Delivery }});
+                              // console.log("nosto_delivery: ", {{ nosto_delivery }});
+                            </script>
+
+                            {%- if nosto_delivery == "1" -%}
+                              {%- assign nosto_delivery_text = "Tomorrow" -%}
+                            {%- elsif nosto_delivery == "2" -%}
+                              {%- assign nosto_delivery_text = "1 Week" -%}
+                            {%- elsif nosto_delivery == "3" -%}
+                              {%- assign nosto_delivery_text = "4 Weeks" -%}
+                            {%- elsif nosto_delivery == "4" -%}
+                              {%- assign nosto_delivery_text = "6 Weeks" -%}
                             {%- else -%}
-                              <strong class="pr-1 mr-1"> 2 weeks</strong>
+                              {%- assign nosto_delivery_text = "2 Weeks" -%}
                             {%- endif -%}
+
+                            <strong class="pr-1 mr-1"> {{ nosto_delivery_text }}</strong>
+
+                          {%- else -%}
+
+                            {%- if in_stock == true -%}
+
+                              <script>
+                                // console.log("in_stock: yes");
+                              </script>
+
+                              <strong class="pr-1 mr-1"> Tomorrow</strong>
+                            {%- else -%}
+
+                              <script>
+                                // console.log("in_stock: no");
+                              </script>
+
+                              {%- if block.settings.tiers == 'on' -%}
+
+                                <script>
+                                  // console.log("tiers: on");
+                                </script>
+    
+                                {%- if product.metafields.Details.ProductTier == 1 -%}
+                                  <strong class="pr-1 mr-1"> 1 - 6 weeks</strong>
+                                {%- elsif product.metafields.Details.ProductTier == 2 -%}
+                                  <strong class="pr-1 mr-1"> 6 - 12 weeks</strong>
+                                {%- endif -%}
+
+                              {%- else -%}
+
+                                <strong class="pr-1 mr-1"> 2 weeks</strong>
+
+                              {%- endif -%}
+
+                            {%- endif -%}
+
                           {%- endif -%}
+
+
                         {%- endif -%}
                       </div>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
 
+              {%- when 'lipscore_testimonial' -%}
+                <div {{ block.shopify_attributes }}>
+                  {% render 'lipscore-testimonial', product: product %}
+                </div>
+                
               {%- when 'buy_buttons' -%}
                 <div
                   class="product__action element-spacing-all {{ block.settings.show_quantity_selector }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -1302,7 +1431,17 @@
                   >
                     {% assign colors_background = block.settings.colors_background %}
 
-                    {%- if block.settings.use_finance_popup == true -%}
+                    {%- if block.settings.popup_design == "minimal" -%}
+                      <script>
+                        let custom_button_style = "minimal"
+                      </script>
+                    {%- else -%}
+                      <script>
+                        let custom_button_style = "standard"
+                      </script>
+                  {%- endif -%}
+
+                    {%- if block.settings.popup_layout == "single" -%}
                       <div id="open-finance-options" class="col-12 pt-2 pl-0 pr-0 pr-md-1 pr-lg-0">
                         <div
                           class="
@@ -1333,7 +1472,7 @@
                           {{ block.settings.finance_button_text }}
                         </div>
                       </div>
-
+                      
                       <!-- Popup -->
                       <div id="finance-options-popup" class="popup">
                         <div class="popup-content">
@@ -1380,13 +1519,13 @@
                     {%- endif %}
 
                     <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-rbp-widget', colors_background: colors_background %}
+                      {% render 'snap-finance-rbp-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
                     </div>
-                    <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background %}
+                    <div class="col-12 pt-0 pl-0 pr-0">
+                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
                     </div>
 
-                    {%- if block.settings.use_finance_popup == true -%}
+                    {%- if block.settings.popup_layout == "single" -%}
                       <p class="mb-0 center">Choose Snap Finance at checkout.</p>
                       </div>
                       </div>
@@ -1461,62 +1600,61 @@
 
                           // Add CSS rules to the style element
                           style.textContent = `
-                        .injected-product-widget {
-                          background-color: {{ colors_background }} !important;
-                          border: 0.1rem solid #707070 !important;
-                          border-radius: 0 !important;
-                          min-height: 80px !important;
-                          min-width: 100%;
-                          padding: 0 !important;
-                          cursor: pointer;
-                          flex-direction: row-reverse;
-                        }
-                        .injected-product-widget .injected-product-widget__grid__text p {
-                          font-size: 16px !important;
-                          gap: 0 !important;
-                          justify-content: center !important;
-                        }
-                        #snap-product-widget-container {
-                          justify-content: center;
-                          align-items: center;
-                          margin: 0 auto;
-                          padding-left: 1px;
-                          padding-right: 1px;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
-                          display: none;
-                          min-width: 17%;
-                          max-width: 17%;
-                          @media screen and (min-width:460px) {
-                            min-width: 27%;
-                            max-width: 27%;
-                          }
-                          @media screen and (min-width:768px) {
-                            min-width: 15%;
-                            max-width: 15%;
-                          }
-                          @media screen and (min-width:992px) {
-                            min-width: 20%;
-                            max-width: 20%;
-                          }
-                          @media screen and (min-width:1455px) {
-                            min-width: 15%;
-                            max-width: 15%;
-                          }
-                          align-items: flex-start;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid__text {
-                          text-align: center;
-                        }
-                        .three-col-holder {
-                          {% comment %} min-width: 85%;
-                          max-width: 85%; {% endcomment %}
-                        }
-                        /* Hide the 'Learn more' element */
-                        #rbp-bnpl-learn-more {
-                          display: none !important;
-                        }
-                      `;
+                            #rbp-bnpl-widget .light-theme p {
+                              color: #000 !important;
+                            }
+                            .injected-product-widget {
+                              background-color: {{ colors_background }} !important;
+                              border: 0.1rem solid #707070 !important;
+                              border-radius: 0 !important;
+                              min-height: 80px !important;
+                              min-width: 100%;
+                              padding: 0 !important;
+                              cursor: pointer;
+                              flex-direction: row-reverse;
+                            }
+                            .injected-product-widget .injected-product-widget__grid__text p {
+                              font-size: 16px !important;
+                              gap: 0 !important;
+                              justify-content: center !important;
+                            }
+                            #snap-product-widget-container {
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0 auto;
+                              padding-left: 1px;
+                              padding-right: 1px;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                              display: none;
+                              min-width: 17%;
+                              max-width: 17%;
+                              @media screen and (min-width:460px) {
+                                min-width: 27%;
+                                max-width: 27%;
+                              }
+                              @media screen and (min-width:768px) {
+                                min-width: 15%;
+                                max-width: 15%;
+                              }
+                              @media screen and (min-width:992px) {
+                                min-width: 20%;
+                                max-width: 20%;
+                              }
+                              @media screen and (min-width:1455px) {
+                                min-width: 15%;
+                                max-width: 15%;
+                              }
+                              align-items: flex-start;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid__text {
+                              text-align: center;
+                            }
+                            /* Hide the 'Learn more' element */
+                            #rbp-bnpl-learn-more {
+                              display: none !important;
+                            }
+                          `;
 
                           // Append the style element to the shadow root
                           shadowRoot.appendChild(style);
@@ -1535,68 +1673,109 @@
 
                           // Add CSS rules to the style element
                           style.textContent = `
-                        .injected-product-widget {
-                          background-color: {{ colors_background }} !important;
-                          border: 0.1rem solid #707070 !important;
-                          border-radius: 0 !important;
-                          min-height: 80px !important;
-                          min-width: 100%;
-                          padding: 0 !important;
-                          cursor: pointer;
-                          flex-direction: row-reverse;
-                        }
-                        .injected-product-widget .injected-product-widget__grid__text p {
-                          font-size: 16px! important;
-                          gap: 0 !important;
-                          justify-content: center !important;
-                        }
-                        #snap-product-widget-container {
-                          justify-content: center;
-                          align-items: center;
-                          margin: 0 auto;
-                          padding-left: 1px;
-                          padding-right: 1px;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid-logo {
-                          display: none;
-                          min-width: 25%;
-                          max-width: 17%;
-                          @media screen and (min-width:460px) {
-                            min-width: 31%;
-                            max-width: 31%;
-                          }
-                          @media screen and (min-width:768px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          @media screen and (min-width:992px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          @media screen and (min-width:1500px) {
-                            min-width: 25%;
-                            max-width: 25%;
-                          }
-                          align-items: flex-start;
-                        }
-                        .rbp-bnpl-widget .injected-product-widget__grid__text {
-                          text-align: center;
-                        }
-                        .three-col-holder {
-                          {% comment %} min-width: 75%;
-                          max-width: 75%; {% endcomment %}
-                        }
-                        /* Hide the 'Learn more' element */
-                        #rbp-bnpl-learn-more {
-                          display: none !important;
-                        }
-                      `;
+                            #rbp-bnpl-widget .light-theme p {
+                              color: #000 !important;
+                            }
+                            .injected-product-widget {
+                              background-color: {{ colors_background }} !important;
+                              border: 0.1rem solid #707070 !important;
+                              border-radius: 0 !important;
+                              min-height: 80px !important;
+                              min-width: 100%;
+                              padding: 0 !important;
+                              cursor: pointer;
+                              flex-direction: row-reverse;
+                            }
+                            .injected-product-widget .injected-product-widget__grid__text p {
+                              font-size: 16px !important;
+                              gap: 0 !important;
+                              justify-content: center !important;
+                            }
+                            #snap-product-widget-container {
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0 auto;
+                              padding-left: 1px;
+                              padding-right: 1px;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid-logo {
+                              display: none;
+                              min-width: 25%;
+                              max-width: 17%;
+                              @media screen and (min-width:460px) {
+                                min-width: 31%;
+                                max-width: 31%;
+                              }
+                              @media screen and (min-width:768px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              @media screen and (min-width:992px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              @media screen and (min-width:1500px) {
+                                min-width: 25%;
+                                max-width: 25%;
+                              }
+                              align-items: flex-start;
+                            }
+                            .rbp-bnpl-widget .injected-product-widget__grid__text {
+                              text-align: center;
+                            }
+                            /* Hide the 'Learn more' element */
+                            #rbp-bnpl-learn-more {
+                              display: none !important;
+                            }
+                          `;
 
                           // Append the style element to the shadow root
                           shadowRoot.appendChild(style);
                         });
                       </script>
                     {%- endif %}
+                  </div>
+                </div>
+
+              {%- when 'klarna_buttons' -%}
+                <div class="container-fluid {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+                  <div
+                    class="row"
+                    {{ block.shopify_attributes }}
+                  >
+                    {% assign colors_background = block.settings.colors_background %}
+                      
+                    {% assign klarna_price = product.price %}
+                    {% assign klarna_price = klarna_price | divided_by: 100 %}
+                    {% assign klarna_price = klarna_price | divided_by: 3 %}
+
+                    <div class="col-12 pt-2 pl-0 pr-0 klarna">
+                      <span>Pay in 3 - £{{ klarna_price | round: 2 }} P/M</span>
+                      <img src="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/klarna-black.webp?v=1718639352" alt="Klarna Logo" height="72" width="318" >                        
+                    </div>
+
+                    {%- if block.settings.popup_design == "minimal" -%}
+
+                      <style>
+                        .klarna {
+                          font-family: "Aeonik", Arial, Helvetica, sans-serif;
+                          font-size: .7em;
+                          height: 40px;
+                          min-height: 30px;
+                          align-content: center;
+                          color: #000;
+                          margin-bottom: -5px;
+                        }
+                        .klarna img {
+                          max-height: 11px;
+                          width: auto;
+                          margin-bottom: 4px;
+                          margin-left: 11px;
+                        }
+                      </style>
+
+                    {%- endif -%}
+
                   </div>
                 </div>
 
@@ -2311,7 +2490,7 @@
     </side-drawer>
   {%- endfor -%}
 
-  {% render 'protection-drawer' SeatingCapacity %}
+  {% render 'protection-drawer' %}
 
   {%- for block in usp_drawer_blocks -%}
     <side-drawer
@@ -2545,170 +2724,176 @@
                   {% endfor %}
 
                   {%- if template contains 'product' -%}
-                    {% assign trustpilot_skus = final_tag_list | json %}
 
-                    <script>
-                      // Function to initialize TrustPilot (including the tooltip button)
-                      function initializeTrustPilot() {
-                        const urlCurrentProductRange = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php?type=batch-summaries`;
-                        const requestBody = JSON.stringify({ skus: {{trustpilot_skus}} });
+                    {%- if trustpilotActive == true -%}
 
-                        // Fetch batch summaries first for the tooltip
-                        fetch(urlCurrentProductRange, {
-                          method: "POST",
-                          credentials: "same-origin",
-                          headers: {
-                            "Content-Type": "application/json",
-                            Authorization: "Bearer {{ settings.storefront_api.token }}",
-                          },
-                          body: requestBody
-                        })
-                        .then(response => response.json())
-                        .then(summariesData => {
-                          // Handle summaries data (average ratings)
-                          const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
-                          if (!Array.isArray(summariesData.summaries)) return;
+                      {% assign trustpilot_skus = final_tag_list | json %}
 
-                          const outerDivSummaries = createElement("div", ["main-trustpilot"]);
-                          trustPilotContainer.appendChild(outerDivSummaries);
+                      <script>
+                        // Function to initialize TrustPilot (including the tooltip button)
+                        function initializeTrustPilot() {
+                          const urlCurrentProductRange = `https://honeypot-trade.co.uk/live/trustpilot/product-reviews.php?type=batch-summaries`;
+                          const requestBody = JSON.stringify({ skus: {{trustpilot_skus}} });
 
-                          let totalStars = 0, amountOfReviews = 0;
-                          const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+                          // Fetch batch summaries first for the tooltip
+                          fetch(urlCurrentProductRange, {
+                            method: "POST",
+                            credentials: "same-origin",
+                            headers: {
+                              "Content-Type": "application/json",
+                              Authorization: "Bearer {{ settings.storefront_api.token }}",
+                            },
+                            body: requestBody
+                          })
+                          .then(response => response.json())
+                          .then(summariesData => {
+                            // Handle summaries data (average ratings)
+                            const trustPilotContainer = document.querySelector(".trustpilot-mini-widget");
+                            if (!Array.isArray(summariesData.summaries)) return;
 
-                          summariesData.summaries.forEach(summary => {
-                            totalStars += summary.starsAverage;
-                            amountOfReviews += summary.numberOfReviews.total;
-                            reviewCounts[1] += summary.numberOfReviews.oneStar;
-                            reviewCounts[2] += summary.numberOfReviews.twoStars;
-                            reviewCounts[3] += summary.numberOfReviews.threeStars;
-                            reviewCounts[4] += summary.numberOfReviews.fourStars;
-                            reviewCounts[5] += summary.numberOfReviews.fiveStars;
-                          });
+                            const outerDivSummaries = createElement("div", ["main-trustpilot"]);
+                            trustPilotContainer.appendChild(outerDivSummaries);
 
-                          const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
-                          const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
-                          const totalStarsAverage = (totalStars / summariesData.summaries.length).toFixed(1);
-                          const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
+                            let totalStars = 0, amountOfReviews = 0;
+                            const reviewCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 
-                          if (totalStarsAverage >= 4){
-                            const reviewsLink = createElement("div", [], {}, `
-                              <span style='min-height:17px;'>
-                                <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
-                                <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
-                                <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
-                                {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
-                              </span>
-                            `);
-
-                            if (amountOfReviews === 0) {
-                              var trustpilotProductMini = document.querySelector(".trustpilot-mini-widget");
-                              var trustpilotProductCollapsible = document.querySelector('[id*="trustpilot_product_reviews_collapsible"]');
-                              trustpilotProductMini.style.display = "none";
-                              trustpilotProductCollapsible.classList.add("d-none");
-                            }
-
-                            const toolTip = createElement("span", ["tooltip-content"]);
-                            const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
-                            toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
-                            toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
-
-                            // Iterate in reverse order and include all rows
-                            [5, 4, 3, 2, 1].forEach(stars => {
-                              toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
+                            summariesData.summaries.forEach(summary => {
+                              totalStars += summary.starsAverage;
+                              amountOfReviews += summary.numberOfReviews.total;
+                              reviewCounts[1] += summary.numberOfReviews.oneStar;
+                              reviewCounts[2] += summary.numberOfReviews.twoStars;
+                              reviewCounts[3] += summary.numberOfReviews.threeStars;
+                              reviewCounts[4] += summary.numberOfReviews.fourStars;
+                              reviewCounts[5] += summary.numberOfReviews.fiveStars;
                             });
 
-                            toolTip.appendChild(toolTipHeader);
-                            reviewsLink.appendChild(toolTip);
-                            outerDivSummaries.appendChild(reviewsLink);
+                            const totalCombinedReviews = Object.values(reviewCounts).reduce((a, b) => a + b, 0);
+                            const fills = Object.fromEntries(Object.entries(reviewCounts).map(([stars, count]) => [stars, (count / totalCombinedReviews) * 100]));
+                            const totalStarsAverage = (totalStars / summariesData.summaries.length).toFixed(1);
+                            const trustpilotImage = getTrustpilotImage(totalStarsAverage, true);
 
-                            // Attach click event listener to the <details> element
-                            const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
+                            if (totalStarsAverage >= 4){
+                              const reviewsLink = createElement("div", [], {}, `
+                                <span style='min-height:17px;'>
+                                  <span style="display: inline; top: -2px; position: relative;">${trustpilotImage}</span>
+                                  <span class="ammount-of-reviews mx-1"> ${amountOfReviews} Reviews</span>
+                                  <span class="tp-widget-readmore-arrow mt-1 mr-3" id="readMoreArrow"></span>
+                                  {% comment %} <img  style="display: inline; top: -2px; position: relative;" class="ml-2" src="https://images-static.trustpilot.com/api/logos/light-bg/72x18.png" height="18" width="72" alt="Trustpilot"> {% endcomment %}
+                                </span>
+                              `);
 
-                            if (detailsElement) {
-                              detailsElement.addEventListener("click", function() {
-                                // Load reviews only if details element is not open
-                                if (!this.hasAttribute("open") && !reviewsLoaded) {
-                                  loadReviews();
-                                }
-                              });
-                            } else {
-                              console.log("Details element not found");
-                            }
-
-                            const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
-                         
-                            readMoreReviewsButton.addEventListener('click', function () {
-                              // Simulate a click on the collapsible content element
-                              const collapsible = document.querySelector('.trustpilot-accordion');
-
-                              if (collapsible) {
-                                collapsible.click();
+                              if (amountOfReviews === 0) {
+                                var trustpilotProductMini = document.querySelector(".trustpilot-mini-widget");
+                                var trustpilotProductCollapsible = document.querySelector('[id*="trustpilot_product_reviews_collapsible"]');
+                                trustpilotProductMini.style.display = "none";
+                                trustpilotProductCollapsible.classList.add("d-none");
                               }
 
-                              // Smoothly scroll to the element with the ID "reviews"
-                              document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
-                          
-                              // Determine scroll offset based on screen size
-                              const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
-                          
-                              // Adjust the scroll position slightly above the target
-                              setTimeout(function () {
-                                window.scrollBy(0, -offset); // Use the offset value based on the device
-                              }, 500); // Delay to allow smooth scroll to finish
-                            });
+                              const toolTip = createElement("span", ["tooltip-content"]);
+                              const toolTipHeader = createElement("div", ["tooltip-header", "col-12", "px-0", "pt-1", "pb-3"]);
+                              toolTipHeader.appendChild(createElement("div", [], {}, `Rated ${totalStarsAverage} out of 5 stars`));
+                              toolTipHeader.appendChild(createElement("div", ["pt-4"], { id: "reviews-read-more-button" }, `Read Reviews`));
 
-                            tooltip = document.querySelector('.trustpilotTooltip');
-
-                            if (readMoreReviewsButton) {
-                              readMoreReviewsButton.addEventListener("click", function() {
-                                // Load reviews if the details element is not open
-                                if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
-                                  tooltip.classList.remove('active');
-                                  loadReviews();
-                                }
+                              // Iterate in reverse order and include all rows
+                              [5, 4, 3, 2, 1].forEach(stars => {
+                                toolTip.innerHTML += createScoreRow(stars, fills[stars] || 0, reviewCounts[stars] || 0);
                               });
-                            } else {
-                              console.log("Reviews button not found");
+
+                              toolTip.appendChild(toolTipHeader);
+                              reviewsLink.appendChild(toolTip);
+                              outerDivSummaries.appendChild(reviewsLink);
+
+                              // Attach click event listener to the <details> element
+                              const detailsElement = document.querySelector("details[id*='Details-collapsible_row']");
+
+                              if (detailsElement) {
+                                detailsElement.addEventListener("click", function() {
+                                  // Load reviews only if details element is not open
+                                  if (!this.hasAttribute("open") && !reviewsLoaded) {
+                                    loadReviews();
+                                  }
+                                });
+                              } else {
+                                console.log("Details element not found");
+                              }
+
+                              const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
+                          
+                              readMoreReviewsButton.addEventListener('click', function () {
+                                // Simulate a click on the collapsible content element
+                                const collapsible = document.querySelector('.trustpilot-accordion');
+
+                                if (collapsible) {
+                                  collapsible.click();
+                                }
+
+                                // Smoothly scroll to the element with the ID "reviews"
+                                document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
+                            
+                                // Determine scroll offset based on screen size
+                                const offset = window.matchMedia('(max-width: 750px)').matches ? 260 : 50; // 20px for mobile, 50px for desktop
+                            
+                                // Adjust the scroll position slightly above the target
+                                setTimeout(function () {
+                                  window.scrollBy(0, -offset); // Use the offset value based on the device
+                                }, 500); // Delay to allow smooth scroll to finish
+                              });
+
+                              tooltip = document.querySelector('.trustpilotTooltip');
+
+                              if (readMoreReviewsButton) {
+                                readMoreReviewsButton.addEventListener("click", function() {
+                                  // Load reviews if the details element is not open
+                                  if (detailsElement && !detailsElement.hasAttribute("open") && !reviewsLoaded) {
+                                    tooltip.classList.remove('active');
+                                    loadReviews();
+                                  }
+                                });
+                              } else {
+                                console.log("Reviews button not found");
+                              }
                             }
-                          }
-                        })
-                        .catch(error => console.error("Error fetching batch summaries from Trustpilot API:", error));
-                      }
-
-                      initializeTrustPilot();
-
-                      let tooltip = '';
-
-                      document.addEventListener('DOMContentLoaded', () => {
-                        tooltip = document.querySelector('.trustpilotTooltip');
-                        const reviewsButton = document.getElementById('reviews-button'); 
-                        const readMoreButton = document.getElementById('reviews-read-more-button'); 
-
-                        {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
-
-                        // Open tooltip when clicking the reviews button
-                        reviewsButton.addEventListener('click', (event) => {
-                          event.stopPropagation(); // Prevents event from bubbling up to document
-                          tooltip.classList.add('active'); // Open the tooltip
-                        });
-
-                        // Prevent click on "Read More" from affecting tooltip behavior
-                        if (readMoreButton) {
-                          readMoreButton.addEventListener('click', (event) => {
-                            event.stopPropagation(); // Prevents event from reaching reviews-button or document
-                          });
+                          })
+                          .catch(error => console.error("Error fetching batch summaries from Trustpilot API:", error));
                         }
 
-                        // Close tooltip when clicking anywhere else on the page
-                        document.addEventListener("click", function(event) {
-                          setTimeout(() => {
-                            if (tooltip && !tooltip.contains(event.target)) {
-                              tooltip.classList.remove("active"); // Close tooltip
+                        initializeTrustPilot();
+
+                        let tooltip = '';
+
+                        document.addEventListener('DOMContentLoaded', () => {
+                          tooltip = document.querySelector('.trustpilotTooltip');
+                          const reviewsButton = document.getElementById('reviews-button'); 
+                          const readMoreButton = document.getElementById('reviews-read-more-button'); 
+
+                          {% comment %} if (!tooltip || !reviewsButton) return; // Prevent errors if elements don't exist {% endcomment %}
+
+                          // Open tooltip when clicking the reviews button
+                          reviewsButton.addEventListener('click', (event) => {
+                            event.stopPropagation(); // Prevents event from bubbling up to document
+                            tooltip.classList.add('active'); // Open the tooltip
+                          });
+
+                          // Prevent click on "Read More" from affecting tooltip behavior
+                          if (readMoreButton) {
+                            readMoreButton.addEventListener('click', (event) => {
+                              event.stopPropagation(); // Prevents event from reaching reviews-button or document
+                            });
                           }
-                          }, 10); // Small delay to ensure click events don't conflict
+
+                          // Close tooltip when clicking anywhere else on the page
+                          document.addEventListener("click", function(event) {
+                            setTimeout(() => {
+                              if (tooltip && !tooltip.contains(event.target)) {
+                                tooltip.classList.remove("active"); // Close tooltip
+                            }
+                            }, 10); // Small delay to ensure click events don't conflict
+                          });
                         });
-                      });
-                    </script>
+                      </script>
+
+                    {%- endif -%}
+
                   {%- endif -%}
 
                 {%- else -%}
@@ -3260,6 +3445,10 @@
           "default": 5
         }
       ]
+    },
+    {
+      "type": "lipscore_rating",
+      "name": "Lipscore Rating"
     },
     {
       "type": "protection_drawer",
@@ -4346,16 +4535,79 @@
           "default": "#fff"
         },
         {
-          "type": "checkbox",
-          "id": "use_finance_popup",
-          "label": "Use Popup",
-          "default": false
+          "type": "header",
+          "content": "Finance Popups"
+        },
+        {
+          "type": "select",
+          "id": "popup_layout",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "double",
+              "label": "Double"
+            }
+          ],
+          "label": "Popup Layout",
+          "default": "single"
         },
         {
           "type": "text",
           "id": "finance_button_text",
-          "label": "Button Text",
+          "label": "Single Button Text",
           "default": "FINANCE AVAILABLE"
+        },
+        {
+          "type": "select",
+          "id": "popup_design",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ],
+          "label": "Popup Design",
+          "default": "standard"
+        }
+      ]
+    },
+    {
+      "type": "klarna_buttons",
+      "name": "Klarna Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color",
+          "id": "colors_background",
+          "label": "t:sections.all.colors.colors_background",
+          "default": "#fff"
+        },
+        {
+          "type": "header",
+          "content": "Finance Popups"
+        },
+        {
+          "type": "select",
+          "id": "popup_design",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ],
+          "label": "Popup Design",
+          "default": "standard"
         }
       ]
     },
@@ -4744,12 +4996,62 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.all.content_from_page.label"
+        },
+        {
+          "id": "use_icon",
+          "type": "select",
+          "label": "Use Icon",
+          "options": [
+            {
+              "value": "off",
+              "label": "Off"
+            },
+            {
+              "value": "on",
+              "label": "On"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "id": "design_type",
+          "type": "select",
+          "label": "Design Type",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            }
+          ]
+        },
+        {
+          "id": "dummy_button",
+          "type": "select",
+          "label": "Dummy Button",
+          "options": [
+            {
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "value": "yes",
+              "label": "Yes"
+            }
+          ]
         }
       ]
     },
     {
       "type": "expected_delivery",
-      "name": "t:sections.main-collection-product-grid.settings.delivery_eta.collection_delivery_eta_heading.label",
+      "name": "Delivery",
       "settings": [
         {
           "type": "text",
@@ -4820,8 +5122,28 @@
           "id": "background_colour",
           "default": "#EDE9E2",
           "label": "t:sections.main-collection-product-grid.settings.delivery_eta.background_colour.label"
+        },
+        {
+          "type": "select",
+          "id": "data_source",
+          "label": "Data Source",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "nosto",
+              "label": "Nosto"
+            }
+          ],
+          "default": "default"
         }
       ]
+    },
+    {
+      "type": "lipscore_testimonial",
+      "name": "Lipscore Testimonial"
     },
     {
       "type": "drawer",
@@ -6723,6 +7045,7 @@
       display: grid;
       max-width: 400px;
       max-height: 70px;
+      margin-top: 24px;
     }
     .color-list a {
       margin-right: 1rem;

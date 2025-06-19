@@ -74,9 +74,26 @@
             "padding_bottom": 5
           }
         },
+        "dividebuy_spread_the_cost_dividebuyproduct_FTVeTX": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
@@ -110,7 +127,7 @@
             "content_type": "view_the_range",
             "content": "",
             "page": "",
-            "colors_background": "#fff",
+            "colors_background": "#ffffff",
             "colors_border": "#707070"
           }
         },
@@ -139,15 +156,21 @@
         "price",
         "size_chart_kqc3gt",
         "variant_picker_yaEEGK",
+        "dividebuy_spread_the_cost_dividebuyproduct_FTVeTX",
         "buy_buttons",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": true,
         "type_style": "classic",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
@@ -163,12 +186,12 @@
         "padding_bottom_mobile": 30,
         "use_overlay_1": false,
         "overlay_text_1": "Delivery from Fri, 13 Dec",
-        "overlay_text_color_1": "#000",
-        "overlay_background_color_1": "#fff",
+        "overlay_text_color_1": "#000000",
+        "overlay_background_color_1": "#ffffff",
         "use_overlay_2": false,
         "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
-        "overlay_text_color_2": "#fff",
-        "overlay_background_color_2": "#000",
+        "overlay_text_color_2": "#ffffff",
+        "overlay_background_color_2": "#000000",
         "christmas_delivery_eta_toggle": false
       }
     },
@@ -300,6 +323,7 @@
         "image_ratio": "adapt-image",
         "image_ratio_mobile": "550px",
         "color_scheme": "accent-1",
+        "title": "See It In Action",
         "arrows_type": "all",
         "arrows_position": "middle-center",
         "carousel_infinite_scroll": true,
@@ -715,7 +739,7 @@
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
-        "carousel_background_colour": "#F4F4F4",
+        "carousel_background_colour": "#f4f4f4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",

@@ -1,0 +1,185 @@
+/* BOTTOM LONG DESCRIPTION */
+.clickslice-section .collection-full-text {
+    text-align: center;
+    padding: 20px 0;
+}
+.clickslice-section .collection-full-text.full-wrapper-border {
+    border: thin solid #2a2d311a;
+    border-radius: 5px;
+    padding: 40px 30px;
+}
+.clickslice-section .collection-inner-box {
+    border: thin solid #2a2d311a;
+    border-radius: 5px;
+    padding: 40px 30px;
+    text-align: center;
+}
+.clickslice-section .collection-wrapper-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin: 35px 0;
+}
+.clickslice-section .collection-full-text {
+    text-align: center;
+    margin: 0 0 35px;
+}
+.clickslice-section .collection-inner-box ul, .clickslice-section .collection-full-text.full-wrapper-border ul, .clickslice-section .collection-full-text ul {
+    text-align: left;
+    padding: 0 0 0 16px;
+}
+.clickslice-section .collection-full-text ul, .clickslice-section .collection-inner-box ul {
+   display: inline-table;
+}
+.clickslice-section .collection-section-container {
+    margin: 0 0 80px;
+}
+.clickslice-section .collection-full-text h2 {
+    font-size: 42px;
+}
+.clickslice-section .collection-full-text.full-wrapper-border h2, .clickslice-section .collection-inner-box h2, .clickslice-section .collection-inner-box h3, .clickslice-section .collection-full-text h3 {
+    font-size: 26px;
+    line-height: 34px;
+    margin: 0 0 8px;
+}
+/*  TABS */
+.clickslice-faq-wrapper .bottom-faq-tabs .faqtabs {
+    overflow: hidden;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqtab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    border: thin solid #2a2d311a;
+    margin: 0 0 12px;
+    background: #fff;
+    padding: 5px 0;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqinput {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqtab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqtab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 18px;
+    text-align: center;
+    transition: all 0.35s;
+    color: #000;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqtab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.35s;
+    display: none;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqinput:checked + .faqtab-label::after {
+    transform: rotate(90deg);
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqinput:checked + .faqtab-label {
+    background: #fff;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs .faqinput:checked ~ .faqtab-content {
+    max-height: 100vh;
+    padding: 0 1em 1em;
+    display: block;
+}
+.clickslice-faq-wrapper .faqtab .faqtab-label h2 {
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0;
+    margin: 0;
+    line-height: 28px;
+    color: #000;
+}
+.clickslice-faq-wrapper {
+    padding: 2rem 0;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs h2.faqmain-heading {
+    text-align: center;
+    margin: 0 0 30px;
+    font-size: 42px;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs {
+    display: block;
+    margin: 0 auto;
+    width: 762px;
+}
+.clickslice-section .collection-full-text h2 {
+    margin: 0 0 8px;
+}
+.clickslice-section .collection-inner-box li {
+    list-style: disc;
+}
+.clickslice-article-section .article-template__content h2, .clickslice-article-section .article-template__content h3, .clickslice-article-section .article-template__content p {
+    color: #000;
+}
+.clickslice-article-section .article-title-wrapper {
+    justify-content: center;
+}
+/*** MEDIA ***/
+@media only screen and (min-width: 1200px) {
+  .clickslice-article-section .article-style-special .article-template__hero-container {
+        margin-left: auto !important;
+  }
+}
+@media only screen and (max-width: 1199px) {
+.clickslice-section .collection-full-text.full-wrapper-border {
+    padding: 30px 20px;
+}    
+.clickslice-section .collection-inner-box {
+    padding: 30px 20px;
+}
+}
+@media only screen and (max-width: 991px) {
+.clickslice-section .collection-full-text.full-wrapper-border h2, .clickslice-section .collection-inner-box h2, .clickslice-section .collection-inner-box h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.clickslice-section .collection-full-text h2 {
+    font-size: 26px;
+    line-height: 32px;
+}
+}
+@media only screen and (max-width: 767px) {
+.clickslice-section .collection-wrapper-box {
+    grid-template-columns: repeat(1,1fr);
+}  
+.clickslice-section .collection-section-container {
+    margin: 0 0 40px;
+}  
+.clickslice-faq-wrapper .bottom-faq-tabs h2.faqmain-heading {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs {
+    padding: 3rem 0;
+}
+.clickslice-faq-wrapper .bottom-faq-tabs {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 479px) {
+.clickslice-section .collection-full-text h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+.clickslice-section .collection-full-text.full-wrapper-border, .clickslice-section .collection-inner-box {
+    padding: 30px 15px;
+}    
+}

@@ -257,6 +257,7 @@
         },
         "marquee_aGCjeG": {
           "type": "marquee",
+          "disabled": true,
           "settings": {
             "type_marquee": "text",
             "text": "<p>5-Year Sofa Frame Guarantee</p>",
@@ -568,6 +569,7 @@
     },
     "trustpilot_service_reviews_mini_qrrfxa": {
       "type": "trustpilot-service-reviews-mini",
+      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1050,
@@ -696,6 +698,7 @@
       "blocks": {
         "nosto_nosto_placements_block_kPtLfq": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "disabled": true,
           "settings": {
             "placement": "frontpage-nosto-4"
           }
@@ -704,6 +707,7 @@
       "block_order": [
         "nosto_nosto_placements_block_kPtLfq"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -1046,6 +1050,17 @@
         "padding_bottom_mobile": 0
       }
     },
+    "custom_liquid_X7qiKC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% render 'lipscore-custom-testimonial-banner' %}",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "testimonial_NkEcJz": {
       "type": "testimonial",
       "blocks": {
@@ -1091,6 +1106,7 @@
         "slide_T33ykV",
         "slide_aPFeFp"
       ],
+      "disabled": true,
       "settings": {
         "type_style": "classic",
         "heading": "Customer Reviews",
@@ -1125,7 +1141,7 @@
             "heading": "",
             "heading_size": "small",
             "heading_margin_bottom": 0,
-            "description": "<p>Join the Honeypot community and receieve exclusive offers, rewards and a host of other exciting benefits!</p>",
+            "description": "<p>Join the Honeypot community and receive exclusive offers, rewards and a host of other exciting benefits!</p>",
             "description_size": "medium",
             "text_margin_bottom": 0,
             "text_link": "",
@@ -1478,6 +1494,7 @@
     "collection_list_GDamp9",
     "496e3ccd-49a7-4461-951f-0d3c7a67bf86",
     "quotes_d7CMtB",
+    "custom_liquid_X7qiKC",
     "testimonial_NkEcJz",
     "069a21ef-b01c-4296-b010-b63bc9797851",
     "custom_liquid_dfcHEi",

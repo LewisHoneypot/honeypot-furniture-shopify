@@ -23,7 +23,7 @@
             "heading_size": "default"
           }
         },
-        "lipscore_rating_M9jTDd": {
+        "lipscore_rating_tYae7R": {
           "type": "lipscore_rating",
           "settings": {}
         },
@@ -36,13 +36,13 @@
             "padding_bottom": 0
           }
         },
-        "nosto_nosto_placements_block_wJWyGG": {
+        "nosto_nosto_placements_block_XbFj6r": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "available-colours"
           }
         },
-        "lipscore_testimonial_D9JhY9": {
+        "lipscore_testimonial_fMmctR": {
           "type": "lipscore_testimonial",
           "settings": {}
         },
@@ -91,6 +91,16 @@
             "content": ""
           }
         },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "disabled": true,
+          "settings": {
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -125,7 +135,7 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "off",
+            "tiers": "on",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
@@ -133,7 +143,7 @@
             "data_source": "nosto"
           }
         },
-        "dividebuy_spread_the_cost_dividebuyproduct_zFe9nt": {
+        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
           "settings": {
             "finproms_text": "or_from",
@@ -149,24 +159,47 @@
             "price_dom_element_selector": ""
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "disabled": true,
-          "settings": {
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
-        "klarna_buttons_Cb86nH": {
+        "klarna_buttons_E8rbfR": {
           "type": "klarna_buttons",
           "settings": {
             "colors_background": "#ffffff",
             "popup_design": "minimal"
           }
         },
-        "nosto_nosto_placements_block_8kgmiP": {
+        "popup_wJ3rXc": {
+          "type": "popup",
+          "settings": {
+            "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
+            "page": "",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
+            "design_type": "minimal",
+            "dummy_button": "yes"
+          }
+        },
+        "popup_C7wLwE": {
+          "type": "popup",
+          "settings": {
+            "text": "PRICE MATCH GUARANTEE*",
+            "page": "price-match-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "popup_4gFHxf": {
+          "type": "popup",
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "nosto_nosto_placements_block_PaFfMh": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
             "placement": "view-the-range"
@@ -187,10 +220,10 @@
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
-            "title": "Emmiera",
+            "title": "Staingard",
             "pricing_type": "price",
-            "main_image": "shopify://shop_images/emmiera_logo.jpg",
-            "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
+            "main_image": "shopify://shop_images/StainGard.png",
+            "text1": "<p>Staingard care plan helps to prevent long-term damage from household spills, splits and stains. The Staingard team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
             "seat-price": "40",
             "tick-1-text": "5-year fabric upholstery care plan",
@@ -205,20 +238,23 @@
       },
       "block_order": [
         "title",
-        "lipscore_rating_M9jTDd",
+        "lipscore_rating_tYae7R",
         "trustpilot_mini_TB9jLy",
-        "nosto_nosto_placements_block_wJWyGG",
-        "lipscore_testimonial_D9JhY9",
+        "nosto_nosto_placements_block_XbFj6r",
+        "lipscore_testimonial_fMmctR",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "snap_buttons_HagTqx",
         "buy_buttons",
         "expected_delivery_TKcTdt",
-        "dividebuy_spread_the_cost_dividebuyproduct_zFe9nt",
-        "snap_buttons_HagTqx",
-        "klarna_buttons_Cb86nH",
-        "nosto_nosto_placements_block_8kgmiP",
+        "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT",
+        "klarna_buttons_E8rbfR",
+        "popup_wJ3rXc",
+        "popup_C7wLwE",
+        "popup_4gFHxf",
+        "nosto_nosto_placements_block_PaFfMh",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
@@ -257,34 +293,6 @@
         "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
       }
     },
-    "1742301693568cca9c": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_nU8TEV": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "nosto-product-page-3"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_nU8TEV"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "drawers_Ut99DD": {
       "type": "drawers",
       "blocks": {
@@ -300,7 +308,6 @@
         },
         "drawer_EkDrRn": {
           "type": "drawer",
-          "disabled": true,
           "settings": {
             "heading": "Additional Information",
             "content_type": "additional_information",
@@ -314,14 +321,13 @@
           "settings": {
             "heading": "Delivery & Returns",
             "content_type": "delivery_and_returns",
-            "content1": "<p><strong>Delivery</strong><br/><br/><strong>Fast and Reliable</strong><br/><br/>Enjoy 1-3 week delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
+            "content1": "<p><strong>Delivery</strong><br/><br/><strong>Fast and Reliable</strong><br/><br/>Enjoy fast 1-7 day delivery on all in-stock sofas. delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
             "content2": "",
             "page": ""
           }
         },
         "drawer_r9twij": {
           "type": "drawer",
-          "disabled": true,
           "settings": {
             "heading": "Care & Cleaning",
             "content_type": "care_and_cleaning",
@@ -359,58 +365,6 @@
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 40,
         "use_icon_caret": false
-      }
-    },
-    "rich_text_WaVhX9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_yjApHr": {
-          "type": "heading",
-          "settings": {
-            "heading": "QUESTIONS ABOUT THIS FURNITURE?",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_mDUJrg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our team is just a call or WhatsApp message away!</p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "button_HKewh9": {
-          "type": "button",
-          "settings": {
-            "primary_button_label": "CALL US",
-            "primary_button_link": "tel:01476338771",
-            "primary_button_type": "transparent",
-            "secondary_button_label": "CHAT WITH US",
-            "secondary_button_link": "https://wa.me/15557037896",
-            "secondary_button_type": "transparent",
-            "padding_top": 50,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_yjApHr",
-        "text_mDUJrg",
-        "button_HKewh9"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "show_line_separator": false,
-        "text_alignment": "center",
-        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
       }
     },
     "multicolumn_FJHgEr": {
@@ -484,7 +438,7 @@
         "use_hr": true,
         "font": "Gotham",
         "content_inside_image": false,
-        "heading": "Why We Love This Range",
+        "heading": "The Essentials",
         "link_label": "",
         "link": "",
         "image_ratio": "adapt",
@@ -507,11 +461,172 @@
         "pagination_type": "progressbar",
         "image_animation": "none",
         "text_animation": "none",
-        "margin_top": 40,
-        "margin_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0,
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 45,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "slideshow_6RTJiB": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_hxgmNx": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "{{ product.metafields.custom.ugc_pdp_image_1.value }}",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_7WgBUq": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "{{ product.metafields.custom.ugc_pdp_image_2.value }}",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_afPF4Q": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "{{ product.metafields.custom.ugc_pdp_image_3.value }}",
+            "content_max_width": 440,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_hxgmNx",
+        "slide_7WgBUq",
+        "slide_afPF4Q"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "image_ratio": "adapt-image",
+        "image_ratio_mobile": "adapt-image",
+        "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
+        "title": "See It In Action",
+        "arrows_type": "none",
+        "arrows_position": "middle-center",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": true,
+        "color_autoplay": "#ffffff",
+        "change_slides_speed": 3,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "image_behavior": "none",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_WaVhX9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yjApHr": {
+          "type": "heading",
+          "settings": {
+            "heading": "QUESTIONS ABOUT THIS SOFA?",
+            "heading_size": "default",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_mDUJrg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team is just a call or WhatsApp message away!</p>",
+            "show_line_separator": false,
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "button_HKewh9": {
+          "type": "button",
+          "settings": {
+            "primary_button_label": "CALL US",
+            "primary_button_link": "tel:01476338771",
+            "primary_button_type": "transparent",
+            "secondary_button_label": "CHAT WITH US",
+            "secondary_button_link": "https://wa.me/15557037896",
+            "secondary_button_type": "transparent",
+            "padding_top": 50,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_yjApHr",
+        "text_mDUJrg",
+        "button_HKewh9"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "show_line_separator": false,
+        "text_alignment": "center",
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
     },
@@ -562,6 +677,79 @@
         "padding_bottom_mobile": 0
       }
     },
+    "lipscore_product_widgets_Ubb64U": {
+      "type": "lipscore-product-widgets",
+      "name": "Lipscore Product Reviews",
+      "settings": {}
+    },
+    "trustpilot_product_reviews_collapsible_8YH8Ak": {
+      "type": "trustpilot-product-reviews-collapsible",
+      "disabled": true,
+      "settings": {
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 15,
+        "padding_bottom": 0,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 15,
+        "padding_left_right": 50,
+        "padding_left_right_mobile": 10
+      }
+    },
+    "as_seen_in_Pnd8YJ": {
+      "type": "as-seen-in",
+      "settings": {
+        "heading": "As Seen In",
+        "font": "Gotham",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 15,
+        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
+        "image_picker_link1": "",
+        "image_picker_alt1": "HouseBeautiful",
+        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
+        "image_picker_link2": "",
+        "image_picker_alt2": "interior designer",
+        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
+        "image_picker_link3": "",
+        "image_picker_alt3": "COUNTRY LIVING",
+        "background_color": "#48544c"
+      }
+    },
+    "17361637054b91e455": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_DigETz": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "disabled": true,
+          "settings": {
+            "placement": "product-page-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_DigETz"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "background-1",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "1736163654e8d791fe": {
       "type": "apps",
       "blocks": {
@@ -590,27 +778,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "as_seen_in_Pnd8YJ": {
-      "type": "as-seen-in",
-      "settings": {
-        "heading": "As Seen In",
-        "font": "Gotham",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 15,
-        "padding_bottom_mobile": 15,
-        "logo1": "shopify://shop_images/1_d5758214-c826-444c-bafd-07857f6f5020.png",
-        "image_picker_link1": "",
-        "image_picker_alt1": "HouseBeautiful",
-        "logo2": "shopify://shop_images/2_4e831094-11e2-4fee-ba7c-e2f214db65ab.png",
-        "image_picker_link2": "",
-        "image_picker_alt2": "interior designer",
-        "logo3": "shopify://shop_images/3_4c0acdd1-bba3-485e-a06a-cb437e0cd51a.png",
-        "image_picker_link3": "",
-        "image_picker_alt3": "COUNTRY LIVING",
-        "background_color": "#48544c"
-      }
-    },
     "1736163667c8a5c273": {
       "type": "apps",
       "blocks": {
@@ -637,29 +804,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
-      }
-    },
-    "lipscore_product_widgets_LkQcCB": {
-      "type": "lipscore-product-widgets",
-      "name": "Lipscore Product Reviews",
-      "settings": {}
-    },
-    "trustpilot_product_reviews_collapsible_8YH8Ak": {
-      "type": "trustpilot-product-reviews-collapsible",
-      "disabled": true,
-      "settings": {
-        "heading": "Collapsible content",
-        "use_hr": false,
-        "font": "normal",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "color_scheme": "",
-        "padding_top": 15,
-        "padding_bottom": 0,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 15,
-        "padding_left_right": 50,
-        "padding_left_right_mobile": 10
       }
     },
     "lookbook_pGUge4": {
@@ -790,35 +934,6 @@
         "padding_bottom_mobile": 15
       }
     },
-    "17361637054b91e455": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_DigETz": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "disabled": true,
-          "settings": {
-            "placement": "product-page-nosto-3"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_DigETz"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "recently-products": {
       "type": "recently-products",
       "disabled": true,
@@ -902,20 +1017,20 @@
   },
   "order": [
     "main",
-    "1742301693568cca9c",
     "drawers_Ut99DD",
-    "rich_text_WaVhX9",
     "multicolumn_FJHgEr",
+    "slideshow_6RTJiB",
+    "rich_text_WaVhX9",
     "video_FxQj6U",
-    "1736163654e8d791fe",
-    "as_seen_in_Pnd8YJ",
-    "1736163667c8a5c273",
-    "lipscore_product_widgets_LkQcCB",
+    "lipscore_product_widgets_Ubb64U",
     "trustpilot_product_reviews_collapsible_8YH8Ak",
+    "as_seen_in_Pnd8YJ",
+    "17361637054b91e455",
+    "1736163654e8d791fe",
+    "1736163667c8a5c273",
     "lookbook_pGUge4",
     "featured_collection_RD8KMd",
     "related-products",
-    "17361637054b91e455",
     "recently-products",
     "newsletter_Lkdri8"
   ]

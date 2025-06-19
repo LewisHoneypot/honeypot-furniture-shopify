@@ -68,6 +68,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
@@ -95,6 +96,7 @@
         },
         "expected_delivery_EBee6K": {
           "type": "expected_delivery",
+          "disabled": true,
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
@@ -102,7 +104,41 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ede9e2"
+            "background_colour": "#ede9e2",
+            "data_source": "default"
+          }
+        },
+        "dividebuy_spread_the_cost_dividebuyproduct_ADDYmi": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
+        "snap_buttons_AxQ6m4": {
+          "type": "snap_buttons",
+          "disabled": true,
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_xLAfFe": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "drawer_j3bNWd": {
@@ -144,15 +180,23 @@
         "size_chart_kqc3gt",
         "buy_buttons",
         "expected_delivery_EBee6K",
+        "dividebuy_spread_the_cost_dividebuyproduct_ADDYmi",
+        "snap_buttons_AxQ6m4",
+        "klarna_buttons_xLAfFe",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
-        "media_size": "small",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
+        "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
         "enable_video_looping": false,
@@ -306,36 +350,17 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Read customer reviews...",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
       "settings": {
-        "heading": "Reviews",
+        "heading": "Collapsible content",
         "use_hr": false,
         "font": "normal",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 15,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
+        "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
       }

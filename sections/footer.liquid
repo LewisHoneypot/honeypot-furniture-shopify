@@ -542,6 +542,14 @@
             </localization-form>
           {%- endif -%}
         </div>
+
+        <div style="text-align: center">
+          <div class="lipscore-service-review-badge-starred"
+              data-ls-widget-height="100px"
+              data-ls-widget-width="100px">
+          </div>
+        </div>
+        
         <div class="footer__column footer__column--info d-flex f-row w-100 j-c-between a-i-center g-gap{% if section.settings.show_social and section.settings.payment_enable %} show-social-and-payment{% endif %}" style="--g-gap: 1rem;">
           {%- if section.settings.text_copyright != blank or section.settings.show_policy -%}
             <div class="footer__copyright left center-xs color-foreground {{ section.settings.bottom_text_size | prepend: 'text-size text-size-' }}{% if section.settings.type_style == 'special' %} w-100 d-flex j-c-between{% endif %}{% if section.settings.type_style == 'classy' %} spacing{% endif %}">

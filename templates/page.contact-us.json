@@ -104,6 +104,7 @@
     },
     "af56dcf8-8a72-482f-b12b-b4ef33768eeb": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "map_address": "Honeypot Furniture",
         "section_width": "full-width",

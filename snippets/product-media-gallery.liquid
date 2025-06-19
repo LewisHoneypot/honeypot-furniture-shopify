@@ -24,8 +24,12 @@
       align-items: center;
       opacity: 0.6;
       transition: opacity 0.3s ease, transform 0.3s ease;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
-
+    #thumbnail-carousel .splide__slide img {
+      filter: brightness(87%);
+    }
     @media (max-width: 600px) {
       #thumbnail-carousel .splide__slide {
         width: 60px !important;
@@ -34,6 +38,15 @@
 
     #main-carousel .splide__arrows {
       display: none !important;
+    }
+    #thumbnail-carousel .splide__arrow {
+      background: unset !important;
+    }
+    #thumbnail-carousel .splide__arrow.splide__arrow--prev {
+      background: linear-gradient(to right, #ededed, transparent) !important;
+    }
+    #thumbnail-carousel .splide__arrow.splide__arrow--next {
+      background: linear-gradient(to left, #ededed, transparent) !important;
     }
     .splide__slide img {
       width: 100%;
@@ -47,13 +60,20 @@
 
     /* Active thumbnail styling */
     #thumbnail-carousel .splide__slide.is-active {
-      opacity: 1 !important;
-      border: 2px solid #707070; /* Highlight with a blue border */
-      transform: scale(1.1); /* Slight zoom on active thumbnail */
+      /* opacity: 1 !important; */
+      opacity: unset !important;
+      /* border: 2px solid #707070; */
+      border: 3px solid transparent;
+      /* transform: scale(1.1); */
+      transform: none;
     }
 
     #thumbnail-carousel .product__media-icon {
       display: none !important;
+    }
+    #thumbnail-carousel .product__media {
+      border: solid 1px #d1d1d1;
+      border-radius: 8px;
     }
 
     /* Hide cloned slides */
@@ -69,20 +89,8 @@
     }
 
     #thumbnail-carousel .splide__list {
-      justify-content: center;
       gap: 10px;
       list-style-type: none;
-    }
-
-    /* Prevent the transform that is causing misalignment */
-    #thumbnail-carousel .splide__slide {
-      transform: none !important;
-    }
-
-    /* Counteract any translations applied by Splide.js */
-    #thumbnail-carousel .splide__track,
-    #thumbnail-carousel .splide__list {
-      transform: none !important;
     }
 
     #thumbnail-carousel .splide__slide {
@@ -110,36 +118,33 @@
   </style>
     
   <script>
-    document.addEventListener( 'DOMContentLoaded', function () {
-    var main = new Splide( '#main-carousel', {
-      type      : 'loop',
-      pagination: false,
-      arrows    : false,
-      perPage   : 1
-    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var main = new Splide('#main-carousel');
+      var thumbs = new Splide('#thumbnail-carousel');
 
-    var thumbnails = new Splide( '#thumbnail-carousel', {
-      fixedWidth  : 100,
-      fixedHeight : 60,
-      gap         : 10,
-      rewind      : true,
-      pagination  : false,
-      isNavigation: true,
-      breakpoints : {
-        600: {
-          fixedWidth : 60,
-          fixedHeight: 44
-        },
-      },
+      main.sync(thumbs);
+      main.mount();
+      thumbs.mount();
     });
-
-    main.sync( thumbnails );
-    main.mount();
-    thumbnails.mount();
-  });
   </script>
 
-  <section id="main-carousel" class="splide" aria-label="Product Images">
+  <section 
+    id="main-carousel" 
+    class="splide" 
+    aria-label="Product Images"
+    data-splide='{
+      "type": "slide",
+      "arrows": true,
+      "lazyLoad": "nearby",
+      "rewind": false,
+      "gap": 0,
+      "breakpoints": {
+        "640": {
+          "gap": 0
+        }
+      }
+    }'
+  >
     <div class="splide__track">
       <ul class="splide__list">
         {%- for media in product.media -%}
@@ -168,6 +173,26 @@
     id="thumbnail-carousel"
     class="splide"
     aria-label="The carousel with thumbnails. Selecting a thumbnail will change the product carousel."
+    data-splide='{
+      "type": "slide",
+      "perPage": 4,
+      "rewind": false,
+      "fixedWidth": 100,
+      "fixedHeight": 100,
+      "isNavigation": true,
+      "gap": 10,
+      "focus": "center",
+      "pagination": false,
+      "lazyLoad": "nearby",
+      "arrows": true,
+      "direction": "ltr",
+      "breakpoints": {
+        "640": {
+          "fixedWidth": 100,
+          "fixedHeight": 60
+        }
+      }
+    }'
   >
     <div class="splide__track">
       <ul class="splide__list">

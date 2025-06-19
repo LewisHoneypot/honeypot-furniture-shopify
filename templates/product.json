@@ -14,6 +14,7 @@
       "blocks": {
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "layout": "default",
             "font_weight": "normal",
@@ -22,8 +23,13 @@
             "heading_size": "default"
           }
         },
+        "lipscore_rating_E8XXgr": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
@@ -32,6 +38,7 @@
         },
         "variant_picker_WnfGcU": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch": "Color",
@@ -41,6 +48,7 @@
         },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
+          "disabled": true,
           "settings": {
             "available_colours": "Available Colours",
             "font": "normal",
@@ -51,8 +59,19 @@
             "padding_bottom": 10
           }
         },
+        "nosto_nosto_placements_block_zBVL7z": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "available-colours"
+          }
+        },
+        "lipscore_testimonial_pPGqxB": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes": false,
             "show_shipping": false,
@@ -89,29 +108,30 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": true,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": true,
             "show_pickup_availability": false,
             "show_gift_card_recipient": false,
             "add_to_cart_colors_text": "#ede9e2",
-            "add_to_cart_colors_background": "#3c3c3b",
+            "add_to_cart_colors_background": "#527e36",
             "add_to_cart_gradient_background": "",
-            "add_to_cart_colors_text_hover": "#3c3c3b",
-            "add_to_cart_colors_background_hover": "#ede9e2",
+            "add_to_cart_colors_text_hover": "#ffffff",
+            "add_to_cart_colors_background_hover": "rgba(0,0,0,0)",
             "add_to_cart_gradient_background_hover": "",
             "buy_it_now_colors_text": "#3c3c3b",
             "buy_it_now_colors_background": "#ede9e2",
             "buy_it_now_gradient_background": "",
-            "buy_it_now_colors_text_hover": "#ede9e2",
-            "buy_it_now_colors_background_hover": "#3c3c3b",
+            "buy_it_now_colors_text_hover": "rgba(0,0,0,0)",
+            "buy_it_now_colors_background_hover": "rgba(0,0,0,0)",
             "buy_it_now_gradient_background_hover": "",
             "wishlist_colors_text": "#000000",
             "wishlist_colors_background": "#000000",
             "wishlist_colors_text_hover": "#eb9c9c",
             "wishlist_colors_background_hover": "#eb9c9c",
             "padding_top": 10,
-            "padding_bottom": 5
+            "padding_bottom": 0
           }
         },
         "expected_delivery_TKcTdt": {
@@ -119,17 +139,88 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "tiers": "off",
+            "tiers": "on",
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ffffff"
+            "background_colour": "#ededed",
+            "data_source": "nosto"
+          }
+        },
+        "dividebuy_spread_the_cost_dividebuyproduct_aUzQyw": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
           }
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
-            "colors_background": "#ffffff"
+            "colors_background": "#ffffff",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_pUYwXw": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
+          }
+        },
+        "lipscore_testimonial_EqmezU": {
+          "type": "lipscore_testimonial",
+          "settings": {}
+        },
+        "popup_9w3zk3": {
+          "type": "popup",
+          "settings": {
+            "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
+            "page": "",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
+            "design_type": "minimal",
+            "dummy_button": "yes"
+          }
+        },
+        "popup_RLkDHc": {
+          "type": "popup",
+          "settings": {
+            "text": "PRICE MATCH GUARANTEE*",
+            "page": "price-match-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "popup_7RCDPY": {
+          "type": "popup",
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "nosto_nosto_placements_block_pBVKN9": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "view-the-range"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -153,23 +244,38 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_E8XXgr",
         "trustpilot_mini_TB9jLy",
         "variant_picker_WnfGcU",
         "color_swatch_bWwLRJ",
+        "nosto_nosto_placements_block_zBVL7z",
+        "lipscore_testimonial_pPGqxB",
         "price",
         "size_chart_kqc3gt",
         "drawer_j3bNWd",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "dividebuy_spread_the_cost_dividebuyproduct_aUzQyw",
         "snap_buttons_HagTqx",
+        "klarna_buttons_pUYwXw",
+        "lipscore_testimonial_EqmezU",
+        "popup_9w3zk3",
+        "popup_RLkDHc",
+        "popup_7RCDPY",
+        "nosto_nosto_placements_block_pBVKN9",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": true,
+        "use_dimensions_icon": true,
+        "use_image_zoom_icon": true,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
-        "media_size": "small",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
+        "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
         "enable_video_looping": false,
@@ -177,7 +283,7 @@
         "carousel_direction": "horizontal",
         "carousel_gap_desktop": 16,
         "carousel_gap_tablet": 8,
-        "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
+        "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "padding_top": 0,
         "padding_bottom": 32,
         "padding_top_mobile": 0,
@@ -285,6 +391,81 @@
         "padding_bottom_mobile": 40
       }
     },
+    "drawers_WHPMrG": {
+      "type": "drawers",
+      "blocks": {
+        "drawer_CYwMjW": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Dimensions",
+            "content_type": "dimensions",
+            "content1": "",
+            "content2": "",
+            "page": ""
+          }
+        },
+        "drawer_TGRrfk": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Additional Information",
+            "content_type": "additional_information",
+            "content1": "",
+            "content2": "",
+            "page": ""
+          }
+        },
+        "drawer_M8PnWh": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Delivery & Returns",
+            "content_type": "delivery_and_returns",
+            "content1": "<p><strong>Delivery</strong><br/><br/><strong>Fast and Reliable</strong><br/><br/>Enjoy fast 1-7 day delivery on all in-stock sofas. delivery with this product. Please note, that orders on finance may take longer when ordering multiple items. </p><p><strong>Real-Time Tracking</strong><br/><br/>Never be left in the dark again! Track your delivery in real-time with our live tracking feature.<br/><br/><strong>Hassle-Free Returns</strong><br/><br/>We offer a 14-day cooling-off period for your peace of mind. If you're not completely satisfied, simply return your item in its original condition within 14 days.</p><p><strong>Need Assistance?</strong><br/><br/>Contact our friendly customer service team for any questions or concerns:</p><p><a href=\"tel:01476 38771\" title=\"tel:01476 38771\">📞 <strong>01476 338771</strong></a><br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><strong>hello@honeypotfurniture.co.uk</strong></a></p><p><strong>Office Hours:</strong><br/><br/>Mon-Fri: 8am-8pm<br/>Sat-Sun: 10am-3pm</p>",
+            "content2": "",
+            "page": ""
+          }
+        },
+        "drawer_HqH4gX": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Care & Cleaning",
+            "content_type": "care_and_cleaning",
+            "content1": "<h2>Faux Leather Sofa Care</h2><p>Combatting Spills:</p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.</li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.</li><li>Avoid harsh chemicals: Strong cleaners can damage the faux leather. Opt for mild, leather-safe products.</li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.</li></ul><p>General Cleaning Tips:</p><ul><li>Regular dusting: Use a soft brush or duster to remove dust and debris.</li><li>Weekly wipe-down: With a damp, soft cloth and a mild leather cleaner, gently wipe down the surface.</li><li>Avoid direct sunlight: Prolonged exposure to sunlight can cause fading and drying.</li><li>Protect from moisture: Excessive moisture can lead to mold and mildew.</li></ul><p>Additional Tips:</p><ul><li>Prevent stains: Use protective covers or throws when eating or drinking on your sofa.</li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers.</li><li>Avoid sharp objects: Be cautious of sharp items that could scratch the surface.</li></ul><p>By following these tips, you can keep your faux leather sofa looking its best for years to come.</p>",
+            "content2": "<h2>Fabric Sofa Care</h2><p>Spills:</p><ul><li>Act quickly: The sooner you address a spill, the easier it will be to remove.</li><li>Blot, don't rub: Use a clean, absorbent cloth to blot up the spill. Rubbing can spread the stain.</li><li>Avoid harsh chemicals: Strong cleaners can damage the fabric. Opt for mild, fabric-safe products.</li><li>For stubborn stains: If the spill is persistent, consult a professional cleaning service.</li></ul><p>General Cleaning:</p><ul><li>Regular vacuuming: Vacuum your sofa regularly to remove dust and dirt.</li><li>Spot cleaning: For stains or spills, use a mild upholstery cleaner and a clean, soft cloth. Test the cleaner in an inconspicuous area first to ensure it doesn't cause discoloration.</li><li>Avoid excessive moisture: While spot cleaning is necessary, avoid soaking the fabric. Too much moisture can lead to mold or mildew.</li></ul><p>Protection:</p><ul><li>Protect from sunlight: Prolonged exposure to direct sunlight can cause fading. Consider using curtains or blinds to protect your sofa.</li><li>Prevent moisture: Keep your sofa away from damp areas and avoid placing it directly on the floor. Consider using a sofa cover or throw to protect it from spills and wear and tear.</li></ul><p>Conditioning:</p><ul><li>Use fabric conditioner or protector: To help maintain the fabric's appearance and durability, apply a fabric conditioner or protector according to the manufacturer's instructions.</li></ul><p>Prevention:</p><ul><li>Use covers: To protect your sofa from spills, stains, and wear and tear, consider using removable covers.</li><li>Handle pets carefully: If you have pets, keep them off the sofa or use pet-friendly covers to prevent damage.</li><li>Avoid sharp objects: Be cautious of sharp items that could snag or tear the fabric.</li></ul><p>By following these tips, you can keep your fabric sofa looking its best for years to come.</p>",
+            "page": ""
+          }
+        },
+        "drawer_eXHzJX": {
+          "type": "drawer",
+          "settings": {
+            "heading": "Description",
+            "content_type": "description",
+            "content1": "",
+            "content2": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "drawer_CYwMjW",
+        "drawer_TGRrfk",
+        "drawer_M8PnWh",
+        "drawer_HqH4gX",
+        "drawer_eXHzJX"
+      ],
+      "name": "Drawers",
+      "settings": {
+        "font": "normal",
+        "heading": "Drawers",
+        "section_width": "customized-width",
+        "customize_width": 1400,
+        "color_scheme": "",
+        "padding_top": 75,
+        "padding_bottom": 30,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 0,
+        "use_icon_caret": true
+      }
+    },
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95": {
       "type": "custom-tab",
       "blocks": {
@@ -343,6 +524,7 @@
         "dimensions_MmNA4J",
         "text_XHxTG4"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -384,36 +566,17 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
       "settings": {
-        "heading": "Reviews",
+        "heading": "Collapsible content",
         "use_hr": false,
         "font": "normal",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 15,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
+        "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
       }
@@ -648,6 +811,7 @@
   "order": [
     "main",
     "d429c49f-e09d-426d-a360-6ab92fc46930",
+    "drawers_WHPMrG",
     "ea6baf63-7fc9-4a8a-90ba-a648ff6fbf95",
     "video_QM4Cg7",
     "trustpilot_product_reviews_collapsible_8YH8Ak",

@@ -83,9 +83,26 @@
             "content": ""
           }
         },
+        "dividebuy_spread_the_cost_dividebuyproduct_DQUnDf": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": false,
@@ -120,13 +137,17 @@
             "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 0,
-            "background_colour": "#ede9e2"
+            "background_colour": "#ede9e2",
+            "data_source": "nosto"
           }
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#f2f2f2"
+            "colors_background": "#f2f2f2",
+            "popup_layout": "single",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "standard"
           }
         },
         "protection_drawer_iWbVLW": {
@@ -156,16 +177,22 @@
         "drawer_j3bNWd",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "dividebuy_spread_the_cost_dividebuyproduct_DQUnDf",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_HagTqx",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
+        "image_tech": "cylindo",
+        "cylindo_thumbnail_bar": "on",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
@@ -261,7 +288,8 @@
         "padding_top": 75,
         "padding_bottom": 30,
         "padding_top_mobile": 15,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "use_icon_caret": true
       }
     },
     "as_seen_in_Pnd8YJ": {
@@ -390,36 +418,17 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
       "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Garamond",
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 15,
+        "padding_bottom": 0,
         "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43,
+        "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
       }

@@ -46,8 +46,8 @@
         "slide_TUrnyn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Garden_Banner_2_short.jpg",
-            "mobile_image": "shopify://shop_images/Garden-Banner-Mobile.jpg",
+            "image": "shopify://shop_images/low2SUMMER-Garden-Furniture-Sale-25_-OFF-_Website-Banners.jpg",
+            "mobile_image": "shopify://shop_images/low-SUMMER-Garden-Furniture-Sale-25_-OFF-_Mobile-Website-Banner.jpg",
             "content_max_width": 400,
             "heading_font": "font-heading",
             "heading": "",
@@ -232,6 +232,7 @@
       "blocks": {
         "nosto_nosto_placements_block_chyi6d": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "disabled": true,
           "settings": {
             "placement": "categorypage-nosto-3"
           }
@@ -578,6 +579,137 @@
       "type": "clickslice-bottom-collapsible-tabs",
       "disabled": true,
       "settings": {}
+    },
+    "ai_smart_section_JmykQq": {
+      "type": "ai-smart-section",
+      "blocks": {
+        "ai_gen_block_5e376c3_rrQxjr": {
+          "type": "ai_gen_block_5e376c3",
+          "disabled": true,
+          "settings": {
+            "main_heading": "Our Garden Furniture Collection",
+            "background_color": "#ffffff",
+            "tab_active_color": "#2a6876",
+            "button_color": "#2a6876",
+            "add_to_cart_text": "",
+            "view_product_text": "",
+            "tab_1_enabled": true,
+            "tab_1_label": "Kensington",
+            "tab_1_heading": "",
+            "tab_1_main_image": "shopify://shop_images/KensingtonGardenSet4.jpg",
+            "tab_1_product": "",
+            "tab_1_feature_1_image": "shopify://shop_images/1_3932095a-8bf0-40c5-94bd-6905eccbb069.jpg",
+            "tab_1_feature_1_caption": "Scratch-proof table top.",
+            "tab_1_feature_1_bg_color": "#f5f5f5",
+            "tab_1_feature_2_image": "shopify://shop_images/2_35519fd4-426c-44da-8857-3b33f0aa8bbe.jpg",
+            "tab_1_feature_2_caption": "Heat-retaining coals.",
+            "tab_1_feature_2_bg_color": "#f5f5f5",
+            "tab_1_feature_3_image": "shopify://shop_images/3_46b8a595-bb6f-439b-8a39-3642cf01ff7f.jpg",
+            "tab_1_feature_3_caption": "Comfy cushions.",
+            "tab_1_feature_3_bg_color": "#f5f5f5",
+            "tab_2_enabled": true,
+            "tab_2_label": "Chester",
+            "tab_2_heading": "",
+            "tab_2_product": "",
+            "tab_2_feature_1_caption": "Seats up to 6 people comfortably",
+            "tab_2_feature_1_bg_color": "#f5f5f5",
+            "tab_2_feature_2_caption": "UV-resistant fabric cushions included",
+            "tab_2_feature_2_bg_color": "#f5f5f5",
+            "tab_2_feature_3_caption": "Rust-proof aluminum frame construction",
+            "tab_2_feature_3_bg_color": "#f5f5f5",
+            "tab_3_enabled": true,
+            "tab_3_label": "Lounge Sets",
+            "tab_3_heading": "Comfortable Outdoor Lounge Sets",
+            "tab_3_product": "",
+            "tab_3_feature_1_caption": "Modular design for flexible arrangements",
+            "tab_3_feature_1_bg_color": "#f5f5f5",
+            "tab_3_feature_2_caption": "Water-resistant cushion covers",
+            "tab_3_feature_2_bg_color": "#f5f5f5",
+            "tab_3_feature_3_caption": "Durable wicker material that withstands elements",
+            "tab_3_feature_3_bg_color": "#f5f5f5",
+            "tab_4_enabled": true,
+            "tab_4_label": "Patio Accessories",
+            "tab_4_heading": "Complete Your Outdoor Space",
+            "tab_4_product": "",
+            "tab_4_feature_1_caption": "Solar-powered LED lighting options",
+            "tab_4_feature_1_bg_color": "#f5f5f5",
+            "tab_4_feature_2_caption": "Weather-resistant outdoor rugs",
+            "tab_4_feature_2_bg_color": "#f5f5f5",
+            "tab_4_feature_3_caption": "Decorative outdoor pillows and throws",
+            "tab_4_feature_3_bg_color": "#f5f5f5"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_bdd6eea_dbGxYm": {
+          "type": "ai_gen_block_bdd6eea",
+          "disabled": true,
+          "settings": {
+            "main_heading": "Explore Our Garden Collection",
+            "section_background": "#ffffff",
+            "tab_background": "#f4f4f4",
+            "tab_text_color": "#333333",
+            "tab_active_background": "#333333",
+            "tab_active_text_color": "#ffffff",
+            "product_card_background": "#ffffff",
+            "button_text": "View",
+            "button_background": "#4a8f29",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#3a7020",
+            "tab_1_label": "Kensington",
+            "tab_1_heading": "",
+            "tab_1_main_image": "shopify://shop_images/KensingtonGardenSet4.jpg",
+            "tab_1_product": "",
+            "tab_1_feature_1_image": "shopify://shop_images/1_a271ea8a-d5b2-4b87-b388-c59b8f7d1ff1.jpg",
+            "tab_1_feature_1_caption": "Scratch-proof table top.",
+            "tab_1_feature_1_color": "#ffffff",
+            "tab_1_feature_2_image": "shopify://shop_images/2_0ea46ef5-7513-48bc-9d12-caf698c80e2e.jpg",
+            "tab_1_feature_2_caption": "Heat-retaining coals.",
+            "tab_1_feature_2_color": "#ffffff",
+            "tab_1_feature_3_image": "shopify://shop_images/3_a52ed99a-8aa9-429f-aadd-b138efe37574.jpg",
+            "tab_1_feature_3_caption": "Comfy cushions.",
+            "tab_1_feature_3_color": "#ffffff",
+            "tab_2_label": "Outdoor Sofa",
+            "tab_2_heading": "Comfortable Outdoor Sofa Sets",
+            "tab_2_product": "",
+            "tab_2_feature_1_caption": "All-weather wicker that resists fading and cracking",
+            "tab_2_feature_1_color": "#27ae60",
+            "tab_2_feature_2_caption": "Quick-dry foam cushions with removable, washable covers",
+            "tab_2_feature_2_color": "#8e44ad",
+            "tab_2_feature_3_caption": "Modular design allows for multiple configurations",
+            "tab_2_feature_3_color": "#e67e22",
+            "tab_3_label": "Dining Set",
+            "tab_3_heading": "Elegant Outdoor Dining Sets",
+            "tab_3_product": "",
+            "tab_3_feature_1_caption": "Rust-resistant aluminum frame for years of use",
+            "tab_3_feature_1_color": "#1abc9c",
+            "tab_3_feature_2_caption": "Tempered glass tabletop that's easy to clean",
+            "tab_3_feature_2_color": "#9b59b6",
+            "tab_3_feature_3_caption": "Stackable chairs for convenient storage",
+            "tab_3_feature_3_color": "#2980b9",
+            "tab_4_label": "Planters",
+            "tab_4_heading": "Stylish Garden Planters",
+            "tab_4_product": "",
+            "tab_4_feature_1_caption": "Frost-resistant ceramic that withstands extreme temperatures",
+            "tab_4_feature_1_color": "#c0392b",
+            "tab_4_feature_2_caption": "Built-in drainage system to prevent root rot",
+            "tab_4_feature_2_color": "#d35400",
+            "tab_4_feature_3_caption": "Available in various sizes for different plants",
+            "tab_4_feature_3_color": "#16a085"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5e376c3_rrQxjr",
+        "ai_gen_block_bdd6eea_dbGxYm"
+      ],
+      "disabled": true,
+      "name": "AI Smart Section",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1400,
+        "section_margin": 40
+      }
     }
   },
   "order": [
@@ -592,6 +724,7 @@
     "collection_list_ig8tXp",
     "recently-products",
     "clickslice_bottom_description_gfNHzA",
-    "clickslice_bottom_collapsible_tabs_GD3zKe"
+    "clickslice_bottom_collapsible_tabs_GD3zKe",
+    "ai_smart_section_JmykQq"
   ]
 }

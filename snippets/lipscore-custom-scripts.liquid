@@ -1,0 +1,64 @@
+<script>
+  let allowedCategories = ["sofas","corner-sofas","sofa-beds","u-shape-sofas","4-seater-sofas","3-seater-sofas","2-seater-sofas","modular-sofas","recliner-sofas","armchairs","foot-stools","beige","grey","black-sofas","blue-sofas","brown-sofas","green-sofas","carnaby-range","bishop-range","inga-range","cimiano-range","new-in","naples","azzuro","rupert-sofas","jacob-range"]
+  
+  async function appendSmallRatingWidgets() {
+    let elements = [];
+  
+    if (document.querySelectorAll('#nosto-collection .ns-product').length) {
+      elements.push(...document.querySelectorAll('#nosto-collection .ns-product'));
+    }
+  
+    let handles = elements.map(function(item) {
+      if (typeof item.dataset.lsRatingWidget !== 'undefined') {
+        return false;
+      }
+  
+      return {
+        handle: item.getAttribute('href').split('/').pop(),
+        item: item
+      }
+    });
+  
+    handles = handles.filter(item => item !== false);
+  
+    // console.log('Preparing for the loop...');
+  
+    for (let handle of handles) {
+      let response = await fetch('/products/' + handle.handle + '.js');
+      let data = await response.json();
+  
+      let widget = document.createElement('div');
+      widget.dataset.lsProductName = data.title;
+      widget.dataset.lsBrand = data.vendor;
+      widget.dataset.lsSku = data.variants.map(variant => variant.sku).join(';');
+      widget.dataset.lsProductId = data.id;
+      widget.dataset.lsProductUrl = window.location.origin + data.url;
+      widget.dataset.lsImageUrl = 'https:' + data.featured_image;
+      widget.dataset.lsPrice = parseInt(data.price / 100) + "." + (data.price % 100);
+      widget.dataset.lsPriceCurrency = Shopify.currency.active;
+      widget.dataset.lsAvailability = data.available === true ? 1 : 0;
+      widget.classList.add('lipscore-rating-small');
+  
+      if (typeof handle.item.dataset.lsRatingWidget === 'undefined') {
+        handle.item.querySelector('.ns-d-flex.ns-justify-content-center').insertAdjacentElement('afterend', widget);
+      }
+  
+      handle.item.dataset.lsRatingWidget = 1;
+    }
+  
+    // console.log('done!');
+  
+    if (typeof lipscore !== 'undefined') {
+      lipscore.initWidgets();
+      // console.log('init!');
+    }
+  }
+
+  let currentCollectionSlug = window.location.pathname.replace('/collections/', '');
+  
+  if (document.querySelector('#nosto-collection') && allowedCategories.includes(currentCollectionSlug)) {
+    setInterval(() => {
+      appendSmallRatingWidgets();
+    }, 1000); 
+  }
+</script>

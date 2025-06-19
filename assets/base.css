@@ -4354,6 +4354,13 @@ summary::-webkit-details-marker {
 .button > span {
   position: relative;
   z-index: 2;
+  top: 3px;
+}
+
+@media screen and (min-width:576px) {
+  .button > span {
+    top: 0px;
+  }
 }
 
 .button--close {
@@ -5022,6 +5029,7 @@ input[type="checkbox"]:checked ~ svg {
   transition-property: transform, visibility;
   transition-duration: var(--duration-extra-long);
   transition-timing-function: var(--cubic-fade);
+  background-color: #ededed;
 }
 
 #CartDrawer {
@@ -6149,6 +6157,13 @@ details.modal .modal__toggle-close {
 
 slideshow-component .swiper-slide {
   height: auto;
+  max-height: 520px;
+}
+
+@media screen and (min-width:990px) {
+  slideshow-component .swiper-slide {
+    max-height: none;
+  }
 }
 
 slideshow-component .swiper-pagination-bullet:not(.cus-bullet) {

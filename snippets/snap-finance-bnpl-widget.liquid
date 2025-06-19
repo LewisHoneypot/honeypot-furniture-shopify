@@ -1,4 +1,4 @@
-<div id="snap-uk-widgets-product-bnpl" class="mt-2" style="min-height:63px;"></div>
+<div id="snap-uk-widgets-product-bnpl" class="mt-0"></div>
 
 {% assign product_price = product.price | money_without_currency %}
 
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Wait for the widget to be initialized
         setTimeout(function() {
-            // Select the shadow host element
             const shadowHost = document.querySelector('#snap-uk-widgets-product-bnpl');
 
             if (shadowHost) {
@@ -31,6 +30,41 @@ document.addEventListener('DOMContentLoaded', function() {
                         shadowHost.addEventListener('click', function() {
                             learnMoreElement.click();
                         });
+                    }
+
+                    if (custom_button_style == "minimal") {
+                      const logoContainer = shadowRoot.querySelector('.injected-product-widget__grid-logo');
+                      if (logoContainer) {
+                        const svgMarkup = `
+                          <svg 
+                            fill="#000000" 
+                            version="1.1" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            width="14px" 
+                            height="15px" 
+                            viewBox="0 0 416.979 416.979"
+                            xml:space="preserve"
+                            style="margin-left: 5px; height: 15px; width: 14px; margin-bottom: 5px;"
+                          >
+                            <g>
+                              <path d="M356.004,61.156c-81.37-81.47-213.377-81.551-294.848-0.182
+                                c-81.47,81.371-81.552,213.379-0.181,294.85
+                                c81.369,81.47,213.378,81.551,294.849,0.181
+                                C437.293,274.636,437.375,142.626,356.004,61.156z
+                                M237.6,340.786c0,3.217-2.607,5.822-5.822,5.822h-46.576
+                                c-3.215,0-5.822-2.605-5.822-5.822V167.885
+                                c0-3.217,2.607-5.822,5.822-5.822h46.576
+                                c3.215,0,5.822,2.604,5.822,5.822V340.786z
+                                M208.49,137.901c-18.618,0-33.766-15.146-33.766-33.765
+                                c0-18.617,15.147-33.766,33.766-33.766
+                                c18.619,0,33.766,15.148,33.766,33.766
+                                C242.256,122.755,227.107,137.901,208.49,137.901z"/>
+                            </g>
+                          </svg>
+                        `;
+                        logoContainer.insertAdjacentHTML('beforeend', svgMarkup);
+                      }
                     }
                 }
             }
@@ -60,65 +94,129 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create a style element
     const style = document.createElement('style');
+
+    if (custom_button_style == "minimal") {
+
+      style.textContent = `
+        #rbp-bnpl-widget .light-theme p {
+          color: #000 !important;
+        }
+        .injected-product-widget {
+          background-color: transparent !important;
+          border: none !important;
+          border-radius: 0 !important;
+          padding: 0 !important;
+          cursor: pointer;
+          flex-direction: row-reverse;
+          min-width: unset !important;
+          width: unset !important;
+        }
+        .injected-product-widget__grid {
+          width: 140px !important;
+        }
+        @media screen and (min-width:370px) {
+          .injected-product-widget__grid {
+            width: 191px !important;
+            flex: none !important;
+            height: unset !important;
+          }
+        }
+        .injected-product-widget .injected-product-widget__grid__text p {
+          font-size: clamp(11px, 3.5cqw, 14px) !important;
+          gap: 0 !important;
+          color: #000 !important;
+        }
+        .injected-product-widget .injected-product-widget__grid__text p span {
+          color: #000 !important;
+        }
+        #snap-product-widget-container {
+          align-items: center;
+          margin: 0 auto;
+          padding-left: 1px;
+          padding-right: 1px;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid-logo {
+          min-width: 0%;
+          align-items: flex-start;
+          display: block;
+          position: relative;
+          top: 4px;
+          max-width: 65px;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid__text {
+          text-align: left;
+          height: unset !important;
+        }
+        /* Hide the 'Learn more' element */
+        #rbp-bnpl-learn-more {
+          display: none !important;
+        }
+      `;
     
-    // Add CSS rules to the style element
-    style.textContent = `
-      .injected-product-widget {
-        background-color: {{ colors_background }} !important;
-        border: 0.1rem solid #707070 !important;
-        border-radius: 0 !important;
-        min-height: 80px !important;
-        min-width: 100%;
-        padding: 0 !important;
-        cursor: pointer;
-        flex-direction: row-reverse;
-      }
-      .injected-product-widget .injected-product-widget__grid__text p {
-        font-size: clamp(11px, 3.5cqw, 14px) !important;
-        gap: 0 !important;
-        justify-content: flex-end !important;
-      }
-      #snap-product-widget-container {
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding-left: 1px;
-        padding-right: 1px;
-      }
-      .rbp-bnpl-widget .injected-product-widget__grid-logo {
-        min-width: 25%;
-        max-width: 17%;
-        @media screen and (min-width:460px) {
-          min-width: 31%;
-          max-width: 31%;
+    } else {
+
+      // Add CSS rules to the style element
+      style.textContent = `
+        #rbp-bnpl-widget .light-theme p {
+          color: #000 !important;
         }
-        @media screen and (min-width:768px) {
+        #snap-uk-widgets-product-bnpl {
+          min-height: 63px;
+        }
+        .injected-product-widget {
+          background-color: {{ colors_background }} !important;
+          border: 0.1rem solid #707070 !important;
+          border-radius: 0 !important;
+          min-height: 80px !important;
+          min-width: 100%;
+          padding: 0 !important;
+          cursor: pointer;
+          flex-direction: row-reverse;
+        }
+        .injected-product-widget .injected-product-widget__grid__text p {
+          font-size: clamp(11px, 3.5cqw, 14px) !important;
+          gap: 0 !important;
+          justify-content: flex-end !important;
+        }
+        #snap-product-widget-container {
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          padding-left: 1px;
+          padding-right: 1px;
+        }
+        .rbp-bnpl-widget .injected-product-widget__grid-logo {
           min-width: 25%;
-          max-width: 25%;
+          max-width: 17%;
+          @media screen and (min-width:460px) {
+            min-width: 31%;
+            max-width: 31%;
+          }
+          @media screen and (min-width:768px) {
+            min-width: 34%;
+            max-width: 31%;
+          }
+          @media screen and (min-width:992px) {
+            min-width: 25%;
+            max-width: 25%;
+          }
+          @media screen and (min-width:1500px) {
+            min-width: 30%;
+            max-width: 30%;
+          }
+          align-items: flex-start;
         }
-        @media screen and (min-width:992px) {
-          min-width: 25%;
-          max-width: 25%;
+        .rbp-bnpl-widget .injected-product-widget__grid__text {
+          text-align: right;
         }
-        @media screen and (min-width:1500px) {
-          min-width: 25%;
-          max-width: 25%;
+        /* Hide the 'Learn more' element */
+        #rbp-bnpl-learn-more {
+          display: none !important;
         }
-        align-items: flex-start;
-      }
-      .rbp-bnpl-widget .injected-product-widget__grid__text {
-        text-align: right;
-      }
-      .three-col-holder {
-        {% comment %} min-width: 75%;
-        max-width: 75%; {% endcomment %}
-      }
-      /* Hide the 'Learn more' element */
-      #rbp-bnpl-learn-more {
-        display: none !important;
-      }
-    `;
-    
+      `;
+
+    }
+
     // Append the style element to the shadow root
     shadowRoot.appendChild(style);
   }

@@ -22,8 +22,13 @@
             "heading_size": "small"
           }
         },
+        "lipscore_rating_Y9Gnea": {
+          "type": "lipscore_rating",
+          "settings": {}
+        },
         "trustpilot_mini_TB9jLy": {
           "type": "trustpilot_mini",
+          "disabled": true,
           "settings": {
             "title": "Trustpilot Mini",
             "padding_top": 5,
@@ -34,8 +39,8 @@
           "type": "color_swatch",
           "settings": {
             "available_colours": "Available Colours",
-            "font_size": 13,
             "font": "Garamond",
+            "font_size": 13,
             "font_weight": "normal",
             "font_style": "italic",
             "padding_top": 0,
@@ -83,9 +88,26 @@
             "content": ""
           }
         },
+        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "use_buy_button_price": false,
             "show_quantity_selector": false,
             "show_wishlist_product": false,
             "show_dynamic_checkout": false,
@@ -116,22 +138,28 @@
           "settings": {
             "heading": "Delivery From",
             "enable_expected_delivery": true,
-            "date_type": "accurate",
+            "tiers": "off",
+            "date_type": "vague",
             "padding_top": 0,
             "padding_bottom": 5,
-            "background_colour": "#ede9e2"
+            "background_colour": "#ede9e2",
+            "data_source": "nosto"
           }
         },
         "snap_buttons_pPFVRj": {
           "type": "snap_buttons",
           "settings": {
-            "colors_background": "#f2f2f2"
+            "colors_background": "#f2f2f2",
+            "popup_layout": "single",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "standard"
           }
         },
         "protection_drawer_iWbVLW": {
           "type": "protection_drawer",
           "settings": {
             "title": "Protection",
+            "pricing_type": "seating_capacity",
             "main_image": "shopify://shop_images/StainGard.png",
             "text1": "<p>Emmiera care plan helps to prevent long-term damage from household spills, splits and stains. The Emmiera team will come to your home to assess the damage, and professionally repair and clean your furniture as part of your cover. Find out more here.</p>",
             "text2": "Add 5 Years Accidental Damage Cover For Just:",
@@ -148,22 +176,29 @@
       },
       "block_order": [
         "title",
+        "lipscore_rating_Y9Gnea",
         "trustpilot_mini_TB9jLy",
         "color_swatch_bWwLRJ",
         "price",
         "drawer_j3bNWd",
         "usp_drawer_1_R7cbxP",
         "usp_drawer_2_fe3jBM",
+        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "snap_buttons_pPFVRj",
         "protection_drawer_iWbVLW"
       ],
       "settings": {
+        "use_custom_title": false,
+        "use_dimensions_icon": false,
+        "use_image_zoom_icon": false,
         "enable_sticky_add_to_cart": true,
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
+        "image_tech": "default",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "small",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
@@ -176,7 +211,16 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000000",
+        "overlay_background_color_1": "#ffffff",
+        "use_overlay_2": false,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#ffffff",
+        "overlay_background_color_2": "#000000",
+        "christmas_delivery_eta_toggle": false
       }
     },
     "drawers_MFCe4V": {
@@ -249,7 +293,8 @@
         "padding_top": 75,
         "padding_bottom": 30,
         "padding_top_mobile": 15,
-        "padding_bottom_mobile": 0
+        "padding_bottom_mobile": 0,
+        "use_icon_caret": true
       }
     },
     "as_seen_in_GybwJa": {
@@ -295,6 +340,7 @@
       ],
       "settings": {
         "video": "{{ product.metafields.custom.video_file.value }}",
+        "video_width": 1000,
         "video_url": "",
         "description": "{{ product.title }}",
         "enable_autoplay": false,
@@ -423,35 +469,16 @@
     },
     "trustpilot_product_reviews_collapsible_8YH8Ak": {
       "type": "trustpilot-product-reviews-collapsible",
-      "blocks": {
-        "collapsible_row_V9KmDH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Reviews",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_top_mobile": 0,
-            "padding_bottom_mobile": 0,
-            "primary_button_label": "Rating Breakdown",
-            "primary_button_color_scheme": "background-1",
-            "secondary_button_label": "Hide Breakdown",
-            "secondary_button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_V9KmDH"
-      ],
       "settings": {
-        "heading": "Reviews",
-        "use_hr": true,
-        "font": "Garamond",
+        "heading": "Collapsible content",
+        "use_hr": false,
+        "font": "normal",
         "section_width": "customized-width",
         "customize_width": 1400,
         "color_scheme": "",
-        "padding_top": 45,
+        "padding_top": 15,
         "padding_bottom": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 35,
         "padding_bottom_mobile": 15,
         "padding_left_right": 50,
         "padding_left_right_mobile": 10
@@ -486,6 +513,8 @@
         "image_L4QhHh"
       ],
       "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
         "use_hr": true,
         "font": "Garamond",
         "heading": "Shop The Look",
@@ -497,6 +526,7 @@
         "image_ratio": "adapt",
         "lookbook_max_height": 950,
         "color_scheme": "",
+        "carousel_background_colour": "#f4f4f4",
         "arrows_type": "all",
         "carousel_infinite_scroll": false,
         "enable_pagination_type": "all",
@@ -518,9 +548,7 @@
         "heading_margin_bottom": 30,
         "text_alignment": "center",
         "collection": "",
-        "product_list": [
-
-        ],
+        "product_list": [],
         "products_to_show": 5,
         "carousel_number": 2,
         "carousel_number_tablet": 1.3,
