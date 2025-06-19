@@ -305,7 +305,7 @@
           "settings": {
             "heading": "Additional Information",
             "content_type": "additional_information",
-            "content1": "<p><strong>Please note:</strong> Gas bottle not included.</p><p>The firepit table comes with easy-to-follow instructions for quick setup, and includes decorative coals that retain heat even after the gas is turned off—ideal for relaxing outdoors as the evening cools down.</p><p>To keep your set protected, a rain cover is also included <strong>at no extra cost</strong>.</p>",
+            "content1": "<p>{{ product.metafields.custom.garden_info | metafield_tag }}</p>",
             "content2": "",
             "page": ""
           }
