@@ -304,7 +304,7 @@
           "type": "drawer",
           "settings": {
             "heading": "Additional Information",
-            "content_type": "additional_information",
+            "content_type": "custom",
             "content1": "<p>{{ product.metafields.custom.garden_info | metafield_tag }}</p>",
             "content2": "",
             "page": ""
