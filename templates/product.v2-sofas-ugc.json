@@ -152,6 +152,8 @@
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
           "settings": {
+            "rbp_toggle": "on",
+            "bnpl_toggle": "off",
             "colors_background": "#ededed",
             "popup_layout": "double",
             "finance_button_text": "FINANCE AVAILABLE",
