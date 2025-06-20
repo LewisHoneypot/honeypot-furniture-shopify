@@ -1518,12 +1518,16 @@
                           <div class="popup-body">
                     {%- endif %}
 
-                    <div class="col-12 pt-2 pl-0 pr-0">
-                      {% render 'snap-finance-rbp-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
-                    </div>
-                    <div class="col-12 pt-0 pl-0 pr-0">
-                      {% render 'snap-finance-bnpl-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
-                    </div>
+                    {%- if block.settings.rbp_toggle == "on" -%}
+                      <div class="col-12 pt-2 pl-0 pr-0">
+                        {% render 'snap-finance-rbp-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.bnpl_toggle == "on" -%}
+                      <div class="col-12 pt-0 pl-0 pr-0">
+                        {% render 'snap-finance-bnpl-widget', colors_background: colors_background, custom_button_style: custom_button_style %}
+                      </div>
+                    {%- endif -%}
 
                     {%- if block.settings.popup_layout == "single" -%}
                       <p class="mb-0 center">Choose Snap Finance at checkout.</p>
@@ -4528,6 +4532,38 @@
       "name": "Snap Buttons",
       "limit": 1,
       "settings": [
+        {
+          "type": "select",
+          "id": "rbp_toggle",
+           "options": [
+            {
+              "value": "off",
+              "label": "Off"
+            },
+            {
+              "value": "on",
+              "label": "On"
+            }
+          ],
+          "label": "RBP",
+          "default": "off"
+        },
+        {
+          "type": "select",
+          "id": "bnpl_toggle",
+           "options": [
+            {
+              "value": "off",
+              "label": "Off"
+            },
+            {
+              "value": "on",
+              "label": "On"
+            }
+          ],
+          "label": "BNPL (0%)",
+          "default": "off"
+        },
         {
           "type": "color",
           "id": "colors_background",
