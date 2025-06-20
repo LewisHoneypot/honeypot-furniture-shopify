@@ -1,0 +1,142 @@
+{% assign valid_ugc_images = 0 %}
+
+{% for i in (1..10) %}
+  {% assign metafield_key = 'ugc_pdp_image_' | append: i %}
+  {% assign image = product.metafields.custom[metafield_key] %}
+  {% if image != blank %}
+    {% assign valid_ugc_images = valid_ugc_images | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% if valid_ugc_images >= 2 %}
+  <section
+    class="ugc-carousel-section"
+    style="
+      padding-top: {{ section.settings.section_padding_top }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    "
+    {{ section.shopify_attributes }}
+  >
+    {% assign image_gap = section.settings.image_padding | times: 2 %}
+    <div
+      class="splide"
+      id="ugc-carousel"
+      data-splide='{
+        "type": "loop",
+        "perPage": {{ section.settings.desktop_slides_to_show }},
+        "perMove": 1,
+        "gap": "{{ image_gap }}px",
+        "breakpoints": {
+          "768": {
+            "perPage": 1
+          }
+        }
+      }'
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% assign rendered = 0 %}
+          {% for i in (1..10) %}
+            {% if rendered >= section.settings.max_images %}
+              {% break %}
+            {% endif %}
+            {% assign metafield_key = 'ugc_pdp_image_' | append: i %}
+            {% assign image = product.metafields.custom[metafield_key] %}
+            {% if image != blank %}
+              <li class="splide__slide">
+                <div
+                  class="ugc-image-wrapper"
+                  style="padding: {{ section.settings.image_padding }}px;"
+                >
+                  <img
+                    src="{{ image | image_url: width: 313 }}"
+                    alt="Customer photo {{ i }}"
+                    loading="lazy"
+                    style="border-radius: {{ section.settings.image_border_radius }}px;"
+                    height="100%"
+                    width="100%"
+                  >
+                </div>
+              </li>
+              {% assign rendered = rendered | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "UGC Image Carousel",
+  "settings": [
+    {
+      "type": "range",
+      "id": "max_images",
+      "label": "Max UGC Images",
+      "min": 4,
+      "max": 10,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Border Radius (px)",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_padding",
+      "label": "Image Padding (px)",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "desktop_slides_to_show",
+      "label": "Slides on Desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_loop",
+      "label": "Enable Infinite Loop",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Top Padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Bottom Padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC Image Carousel",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
