@@ -88,22 +88,6 @@
             "content": ""
           }
         },
-        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j": {
-          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
-          "settings": {
-            "finproms_text": "or_from",
-            "include_cart_total": true,
-            "show_soft_search": true,
-            "alignment": "left",
-            "tooltip-alignment": "center",
-            "top_margin": 0,
-            "bottom_margin": 0,
-            "alignment-mobile": "left",
-            "top_margin_mobile": 0,
-            "bottom_margin_mobile": 0,
-            "price_dom_element_selector": ""
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -146,11 +130,29 @@
             "data_source": "nosto"
           }
         },
+        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j": {
+          "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "settings": {
+            "finproms_text": "or_from",
+            "include_cart_total": true,
+            "show_soft_search": true,
+            "alignment": "left",
+            "tooltip-alignment": "center",
+            "top_margin": 0,
+            "bottom_margin": 0,
+            "alignment-mobile": "left",
+            "top_margin_mobile": 0,
+            "bottom_margin_mobile": 0,
+            "price_dom_element_selector": ""
+          }
+        },
         "snap_buttons_pPFVRj": {
           "type": "snap_buttons",
           "settings": {
+            "rbp_toggle": "on",
+            "bnpl_toggle": "off",
             "colors_background": "#f2f2f2",
-            "popup_layout": "single",
+            "popup_layout": "double",
             "finance_button_text": "FINANCE AVAILABLE",
             "popup_design": "standard"
           }
@@ -183,9 +185,9 @@
         "drawer_j3bNWd",
         "usp_drawer_1_R7cbxP",
         "usp_drawer_2_fe3jBM",
-        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j",
         "buy_buttons",
         "expected_delivery_TKcTdt",
+        "dividebuy_spread_the_cost_dividebuyproduct_iTkt7j",
         "snap_buttons_pPFVRj",
         "protection_drawer_iWbVLW"
       ],
