@@ -165,8 +165,9 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
-          "disabled": true,
           "settings": {
+            "rbp_toggle": "on",
+            "bnpl_toggle": "off",
             "colors_background": "#ffffff",
             "popup_layout": "double",
             "finance_button_text": "FINANCE AVAILABLE",
