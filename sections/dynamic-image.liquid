@@ -1,0 +1,58 @@
+<div class="responsive-image-switcher">
+  {% if section.settings.desktop_image %}
+    <img 
+      src="{{ section.settings.desktop_image | image_url: width: 1600 }}" 
+      alt="{{ section.settings.alt_text }}"
+      class="d-none d-md-block"
+      loading="lazy"
+      width="100%"
+      height="100%"
+    >
+  {% endif %}
+
+  {% if section.settings.mobile_image %}
+    <img 
+      src="{{ section.settings.mobile_image | image_url: width: 800 }}" 
+      alt="{{ section.settings.alt_text }}"
+      class="d-block d-md-none"
+      loading="lazy"
+      width="100%"
+      height="100%"
+    >
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Dynamic Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt Text",
+      "default": "Responsive image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dynamic Image"
+    }
+  ]
+}
+{% endschema %}
+
+{%  style  %} 
+  .responsive-image-switcher img {
+    width: 100%;
+  }
+{% endstyle %}
