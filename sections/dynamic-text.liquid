@@ -119,16 +119,20 @@
                       </a>
                     {%- endif -%}
                     {%- if block.settings.secondary_button_label != blank -%}
-                      <a
-                        {% if block.settings.secondary_button_link == blank %}
-                          role="link" aria-disabled="true"
-                        {% else %}
-                          href="{{ block.settings.secondary_button_link }}"
-                        {% endif %}
-                        class="button{% if block.settings.primary_button_label != blank %} button--secondary{% endif %} {{ settings.button_style | prepend: 'button--style-' }}{% if block.settings.seondary_button_type == 'transparent' %} button--transparent{% endif %}"
-                      >
-                        <span>{{- block.settings.secondary_button_label | escape -}}</span>
-                      </a>
+                      {% if block.settings.secondary_button_type == 'dummy' %}
+                        <p>{{- block.settings.secondary_button_label | escape -}}</p>
+                      {% else %}
+                        <a
+                          {% if block.settings.secondary_button_link == blank %}
+                            role="link" aria-disabled="true"
+                          {% else %}
+                            href="{{ block.settings.secondary_button_link }}"
+                          {% endif %}
+                          class="button{% if block.settings.primary_button_label != blank %} button--secondary{% endif %} {{ settings.button_style | prepend: 'button--style-' }}{% if block.settings.secondary_button_type == 'transparent' %} button--transparent{% endif %}"
+                        >
+                          <span>{{- block.settings.secondary_button_label | escape -}}</span>
+                        </a>
+                      {%- endif -%}
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -497,6 +501,10 @@
             {
               "value": "transparent",
               "label": "t:sections.all.button_style.label__3"
+            },
+            {
+              "value": "dummy",
+              "label": "Dummy"
             }
           ],
           "default": "default",
