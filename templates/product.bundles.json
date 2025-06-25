@@ -195,7 +195,7 @@
         "show_product_badges": true,
         "enable_share": false,
         "type_style": "classic",
-        "image_tech": "default",
+        "image_tech": "cylindo",
         "cylindo_thumbnail_bar": "on",
         "media_size": "large",
         "gallery_layout": "slider_thumbnail",
