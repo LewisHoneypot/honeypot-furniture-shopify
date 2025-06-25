@@ -33,10 +33,12 @@
 >
   {%- if template contains '360' -%}
     <cylindo-360></cylindo-360>
-    {% comment %} <cylindo-360-frame frame="4"></cylindo-360-frame>
-    <cylindo-360-frame frame="9"></cylindo-360-frame>
-    <cylindo-360-frame frame="13"></cylindo-360-frame>
-    <cylindo-360-frame frame="17"></cylindo-360-frame> {% endcomment %}
+    {% comment %}
+      <cylindo-360-frame frame="4"></cylindo-360-frame>
+      <cylindo-360-frame frame="9"></cylindo-360-frame>
+      <cylindo-360-frame frame="13"></cylindo-360-frame>
+      <cylindo-360-frame frame="17"></cylindo-360-frame>
+    {% endcomment %}
   {%- endif -%}
 
   {%- for media in product.media -%}
@@ -111,11 +113,30 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const waitForViewer = async () => {
+      // console.log('🕓 Waiting for cylindo-360 definition...');
       await customElements.whenDefined('cylindo-360');
-      const viewer = document.querySelector('cylindo-viewer');
-      if (!viewer) return console.warn('❌ cylindo-viewer not found');
+      // console.log('✅ cylindo-360 defined.');
 
-      // ✅ Recursively traverse into all shadow roots
+      const viewer = document.querySelector('cylindo-viewer');
+      if (!viewer) {
+        // console.warn('❌ cylindo-viewer not found');
+        return;
+      }
+      // console.log('✅ cylindo-viewer found:', viewer);
+
+      // ✅ Apply `position: relative` to .container-fluid
+      const containerFluid = document.querySelector('.product__media-wrapper .container-fluid');
+      if (containerFluid) {
+        // console.log('🎯 .container-fluid found:', containerFluid);
+        // console.log('🔍 Current computed position:', getComputedStyle(containerFluid).position);
+        containerFluid.style.position = 'relative';
+        // console.log('✅ Applied position: relative');
+        // console.log('🧪 New inline style:', containerFluid.getAttribute('style'));
+      } else {
+        // console.warn('⚠️ .container-fluid not found');
+      }
+
+      // The rest of your code stays the same...
       const deepQuerySelectorAll = (root, selector) => {
         const results = [];
 
