@@ -851,7 +851,7 @@
                     {%- if block.settings.dummy_button == "yes" %} style="cursor: default;"{%- endif %}
                     >
                       {%- if block.settings.use_icon == "on" -%}
-                        <img src="{{ block.settings.icon_image | image_url }}" height="39" width="39">
+                        <img src="{{ block.settings.icon_image | image_url: width: 39 }}" height="39" width="39">
                       {%- endif -%}
                       <span>{{ block.settings.text | default: block.settings.page.title }}</span>
                       {%- if block.settings.dummy_button == "no" -%}
