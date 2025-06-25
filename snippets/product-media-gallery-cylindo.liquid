@@ -48,12 +48,22 @@
         thumbnail-src="{{ media.src | image_url: width: 50, height: 50, crop: 'center' }}"
         class="cylindo-custom-content"
       >
-        <img
-          src="{{ media | image_url: width: 1500 }}"
-          alt="{{ media.alt | escape }}"
-          height="1500"
-          width="1500"
-        >
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="{{ media | image_url: width: 392 }}"
+          >
+          <source
+            media="(min-width: 768px)"
+            srcset="{{ media | image_url: width: 1500 }}"
+          >
+          <img
+            src="{{ media | image_url: width: 1500 }}"
+            alt="{{ media.alt | escape }}"
+            height="1500"
+            width="1500"
+          >
+        </picture>
       </cylindo-custom-content>
     {%- endunless -%}
   {%- endfor -%}
