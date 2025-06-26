@@ -2564,12 +2564,7 @@
         "id": "enable_clarity",
         "label": "Enable Clarity",
         "default": false
-      }
-    ]
-  },
-  {
-    "name": "Scripts",
-    "settings": [
+      },
       {
         "type": "checkbox",
         "id": "enable_omniconvert",
