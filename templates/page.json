@@ -120,8 +120,8 @@
       ],
       "name": "Dynamic Text",
       "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
+        "section_width": "customized-width",
+        "customize_width": 1400,
         "show_line_separator": false,
         "text_alignment_mobile": "center",
         "text_alignment_desktop": "left",
