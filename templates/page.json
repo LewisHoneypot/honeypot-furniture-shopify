@@ -94,19 +94,10 @@
     "dynamic_text_AyxNJt": {
       "type": "dynamic-text",
       "blocks": {
-        "heading_7gpeCK": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "default",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
         "text_TfiAAj": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Need more time to pay? </p><p>Snap Finance offers flexible payment plans from 6 to 48 months, with the option to settle early and pay less interest. </p><p></p><p>Who can apply? </p><p>- Aged 18–75 </p><p>- UK resident </p><p>- Monthly income of £200+ </p><p>- Valid debit card </p><p>- Active current account with direct debit </p><p>- Not currently bankrupt, IVA or DRO </p><p>Snap Finance Ltd is authorised and regulated by the Financial Conduct Authority (FCA). Finance is subject to status, affordability checks and terms.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -115,19 +106,18 @@
         "button_3MKyzX": {
           "type": "button",
           "settings": {
-            "primary_button_label": "Button label",
-            "primary_button_link": "",
+            "primary_button_label": "Learn More",
+            "primary_button_link": "shopify://pages/snap-finance",
             "primary_button_type": "default",
-            "secondary_button_label": "Button label",
+            "secondary_button_label": "OR See Options At Checkout",
             "secondary_button_link": "",
-            "secondary_button_type": "default",
+            "secondary_button_type": "dummy",
             "padding_top": 10,
             "padding_bottom": 10
           }
         }
       },
       "block_order": [
-        "heading_7gpeCK",
         "text_TfiAAj",
         "button_3MKyzX"
       ],
