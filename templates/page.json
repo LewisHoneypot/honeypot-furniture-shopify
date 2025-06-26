@@ -24,8 +24,8 @@
       "type": "dynamic-image",
       "name": "Dynamic Image",
       "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
+        "section_width": "customized-width",
+        "customize_width": 1400,
         "desktop_image": "shopify://shop_images/DVB_Desktop.jpg",
         "mobile_image": "shopify://shop_images/DVB_Mob.jpg",
         "alt_text": "DivideBuy"
