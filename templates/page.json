@@ -63,8 +63,8 @@
       ],
       "name": "Dynamic Text",
       "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
+        "section_width": "customized-width",
+        "customize_width": 1400,
         "show_line_separator": false,
         "text_alignment_mobile": "center",
         "text_alignment_desktop": "left",
@@ -81,8 +81,8 @@
       "type": "dynamic-image",
       "name": "Dynamic Image",
       "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
+        "section_width": "customized-width",
+        "customize_width": 1400,
         "desktop_image": "shopify://shop_images/Snap_Desktop.jpg",
         "mobile_image": "shopify://shop_images/Snap_Mob.jpg",
         "alt_text": "Snap Finance"
