@@ -2568,6 +2568,17 @@
     ]
   },
   {
+    "name": "Scripts",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_omniconvert",
+        "label": "Enable Omniconvert",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.snap-finance.name",
     "settings": [
       {

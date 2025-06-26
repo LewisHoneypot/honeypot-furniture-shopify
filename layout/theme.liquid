@@ -1,12 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    <!-- start Omniconvert.com code -->
-    {% comment %} <link rel="dns-prefetch" href="//app.omniconvert.com" /> {% endcomment %}
-    {% comment %} <script type="text/javascript">window._mktz=window._mktz||[];</script> {% endcomment %}
-    {% comment %} <script src="//cdn.omniconvert.com/js/xeb7be7.js" defer="defer"></script> {% endcomment %}
-    <!-- end Omniconvert.com code -->
-
+    <!-- Omniconvert.com -->
+    {%- if settings.enable_omniconvert == true -%}
+      <link rel="dns-prefetch" href="//app.omniconvert.com" />
+      <script type="text/javascript">window._mktz=window._mktz||[];</script>
+      <script src="//cdn.omniconvert.com/js/xeb7be7.js" defer="defer"></script>
+    {%- endif -%}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
