@@ -1,7 +1,0 @@
-{
-  "parent": "popup-group.json",
-  "context": {
-    "market": "gb"
-  },
-  "sections": {}
-}
