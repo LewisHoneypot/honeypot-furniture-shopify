@@ -116,16 +116,16 @@
     min-height: 27px;
   }
 
-  .lipscore-service-review-badge-small-short text,
-  .lipscore-rating-star > g {
+  .lipscore-service-review-badge-small-short text, .lipscore-service-review-badge-small-short .lipscore-rating-star > g {
     fill: #fff !important;
   }
-  svg.lipscore-rating-star.lipscore-star-incomplete.lipscore-svg-rating-star > g.lipscore-star-last-half {
+  .lipscore-service-review-badge-small-short svg.lipscore-rating-star.lipscore-star-incomplete.lipscore-svg-rating-star > g.lipscore-star-last-half {
     fill: #d1d1d1 !important;
   }
-  .lipscore-service-review-logo {
+  .lipscore-service-review-badge-small-short .lipscore-service-review-logo {
     width: 300px;
     height: 100px;
+    display: none;
   }
 </style>
 
@@ -143,7 +143,7 @@
       image.setAttributeNS(null, 'y', '0'); // Adjust position if needed
       image.setAttributeNS(null, 'width', '300'); // Set desired size
       image.setAttributeNS(null, 'height', '100'); // Set desired size
-      image.setAttributeNS(null, 'class', 'lipscore-service-review-logo'); // Add the original class
+      image.setAttributeNS(null, 'class', 'lipscore-service-review-logo d-block'); // Add the original class
 
       logoGroup.parentNode.replaceChild(image, logoGroup);
     }
