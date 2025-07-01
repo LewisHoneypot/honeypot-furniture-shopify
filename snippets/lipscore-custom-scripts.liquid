@@ -1,53 +1,80 @@
 <script>
-  let allowedCategories = ["sofas","corner-sofas","sofa-beds","u-shape-sofas","4-seater-sofas","3-seater-sofas","2-seater-sofas","modular-sofas","recliner-sofas","armchairs","foot-stools","beige","grey","black-sofas","blue-sofas","brown-sofas","green-sofas","carnaby-range","bishop-range","inga-range","cimiano-range","new-in","naples","azzuro","rupert-sofas","jacob-range"]
-  
+  let allowedCategories = [
+    'sofas',
+    'corner-sofas',
+    'sofa-beds',
+    'u-shape-sofas',
+    '4-seater-sofas',
+    '3-seater-sofas',
+    '2-seater-sofas',
+    'modular-sofas',
+    'recliner-sofas',
+    'armchairs',
+    'foot-stools',
+    'beige',
+    'grey',
+    'black-sofas',
+    'blue-sofas',
+    'brown-sofas',
+    'green-sofas',
+    'carnaby-range',
+    'bishop-range',
+    'inga-range',
+    'cimiano-range',
+    'new-in',
+    'naples',
+    'azzuro',
+    'rupert-sofas',
+    'jacob-range',
+  ];
+
   async function appendSmallRatingWidgets() {
     let elements = [];
-  
+
     if (document.querySelectorAll('#nosto-collection .ns-product').length) {
       elements.push(...document.querySelectorAll('#nosto-collection .ns-product'));
     }
-  
-    let handles = elements.map(function(item) {
+
+    let handles = elements.map(function (item) {
       if (typeof item.dataset.lsRatingWidget !== 'undefined') {
         return false;
       }
-  
+
       return {
         handle: item.getAttribute('href').split('/').pop(),
-        item: item
-      }
+        item: item,
+      };
     });
-  
-    handles = handles.filter(item => item !== false);
-  
+
+    handles = handles.filter((item) => item !== false);
+
     // console.log('Preparing for the loop...');
-  
+
     for (let handle of handles) {
       let response = await fetch('/products/' + handle.handle + '.js');
       let data = await response.json();
-  
+
       let widget = document.createElement('div');
       widget.dataset.lsProductName = data.title;
       widget.dataset.lsBrand = data.vendor;
-      widget.dataset.lsSku = data.variants.map(variant => variant.sku).join(';');
+      widget.dataset.lsSku = data.variants.map((variant) => variant.sku).join(';');
       widget.dataset.lsProductId = data.id;
       widget.dataset.lsProductUrl = window.location.origin + data.url;
       widget.dataset.lsImageUrl = 'https:' + data.featured_image;
-      widget.dataset.lsPrice = parseInt(data.price / 100) + "." + (data.price % 100);
+      widget.dataset.lsPrice = parseInt(data.price / 100) + '.' + (data.price % 100);
       widget.dataset.lsPriceCurrency = Shopify.currency.active;
       widget.dataset.lsAvailability = data.available === true ? 1 : 0;
       widget.classList.add('lipscore-rating-small');
-  
+
       if (typeof handle.item.dataset.lsRatingWidget === 'undefined') {
         handle.item.querySelector('.ns-d-flex.ns-justify-content-center').insertAdjacentElement('afterend', widget);
       }
-  
+
       handle.item.dataset.lsRatingWidget = 1;
     }
-  
+
     // console.log('done!');
-  
+
     if (typeof lipscore !== 'undefined') {
       lipscore.initWidgets();
       // console.log('init!');
@@ -55,10 +82,70 @@
   }
 
   let currentCollectionSlug = window.location.pathname.replace('/collections/', '');
-  
+
   if (document.querySelector('#nosto-collection') && allowedCategories.includes(currentCollectionSlug)) {
     setInterval(() => {
       appendSmallRatingWidgets();
-    }, 1000); 
+    }, 1000);
   }
+</script>
+
+<style>
+  .lipscore-rating {
+    float: inline-end;
+  }
+  .lipscore-testimonial {
+    margin: 20px 0;
+  }
+  .lipscore-rating-review-link {
+    color: black;
+  }
+  .lipscore-service-review-badge-small-short > svg > text:first-of-type {
+    transform: translate(35px, -20px);
+  }
+  .lipscore-service-review-badge-small-short > svg > g:last-of-type {
+    transform: translate(1742px, 58px) scale(2.3);
+  }
+  .lipscore-product-widgets {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .lipscore-rating-small {
+    display: block;
+    min-height: 27px;
+  }
+
+  .lipscore-service-review-badge-small-short text,
+  .lipscore-rating-star > g {
+    fill: #fff !important;
+  }
+  svg.lipscore-rating-star.lipscore-star-incomplete.lipscore-svg-rating-star > g.lipscore-star-last-half {
+    fill: #d1d1d1 !important;
+  }
+  .lipscore-service-review-logo {
+    width: 300px;
+    height: 100px;
+  }
+</style>
+
+<script>
+  window.addEventListener('load', function () {
+    const logoGroup = document.querySelector('g.lipscore-service-review-logo');
+
+    if (logoGroup && logoGroup.parentNode) {
+      // Create a new <image> element to replace the <g> element
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const image = document.createElementNS(svgNS, 'image');
+
+      image.setAttributeNS(null, 'href', 'https://cdn.shopify.com/s/files/1/0857/1358/4415/files/LS_WHITE_LOGO.png?v=1751357279'); // Replace with your image URL
+      image.setAttributeNS(null, 'x', '0'); // Adjust position if needed
+      image.setAttributeNS(null, 'y', '0'); // Adjust position if needed
+      image.setAttributeNS(null, 'width', '300'); // Set desired size
+      image.setAttributeNS(null, 'height', '100'); // Set desired size
+      image.setAttributeNS(null, 'class', 'lipscore-service-review-logo'); // Add the original class
+
+      logoGroup.parentNode.replaceChild(image, logoGroup);
+    }
+  });
 </script>
