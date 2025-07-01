@@ -48,8 +48,6 @@
 
     handles = handles.filter((item) => item !== false);
 
-    // console.log('Preparing for the loop...');
-
     for (let handle of handles) {
       let response = await fetch('/products/' + handle.handle + '.js');
       let data = await response.json();
@@ -73,11 +71,8 @@
       handle.item.dataset.lsRatingWidget = 1;
     }
 
-    // console.log('done!');
-
     if (typeof lipscore !== 'undefined') {
       lipscore.initWidgets();
-      // console.log('init!');
     }
   }
 
@@ -134,11 +129,13 @@
 
 <script>
   window.addEventListener('load', function () {
+    const currentCollectionSlug = window.location.pathname.replace('/collections/', '');
+    const intervalTime = allowedCategories.includes(currentCollectionSlug) ? 5000 : 1000;
+
     setInterval(() => {
       const logoGroup = document.querySelector('g.lipscore-service-review-logo');
 
       if (logoGroup && logoGroup.parentNode) {
-        // Create a new <image> element to replace the <g> element
         const svgNS = 'http://www.w3.org/2000/svg';
         const image = document.createElementNS(svgNS, 'image');
 
@@ -146,16 +143,16 @@
           null,
           'href',
           'https://cdn.shopify.com/s/files/1/0857/1358/4415/files/LS_WHITE_LOGO.png?v=1751357279'
-        ); // Replace with your image URL
-        image.setAttributeNS(null, 'x', '0'); // Adjust position if needed
-        image.setAttributeNS(null, 'y', '0'); // Adjust position if needed
-        image.setAttributeNS(null, 'width', '300'); // Set desired size
-        image.setAttributeNS(null, 'height', '100'); // Set desired size
-        image.setAttributeNS(null, 'class', 'lipscore-service-review-logo'); // Add the original class
-        image.setAttributeNS(null, 'style', 'display: block;'); // Add the original class
+        );
+        image.setAttributeNS(null, 'x', '0');
+        image.setAttributeNS(null, 'y', '0');
+        image.setAttributeNS(null, 'width', '300');
+        image.setAttributeNS(null, 'height', '100');
+        image.setAttributeNS(null, 'class', 'lipscore-service-review-logo');
+        image.setAttributeNS(null, 'style', 'display: block;');
 
         logoGroup.parentNode.replaceChild(image, logoGroup);
       }
-    }, 1000);
+    }, intervalTime);
   });
 </script>
