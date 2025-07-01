@@ -990,7 +990,7 @@ li.active .link--style-dot .link-style:before,
 }
 
 .d-block {
-  display: block !important;
+  display: block;
 }
 
 .d-inline-block {
