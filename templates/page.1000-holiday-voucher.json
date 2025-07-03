@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1400,
@@ -57,7 +58,7 @@
         "heading_LaUpiY": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to Honeypot Furniture",
+            "heading": "£1000 Holiday Voucher Prize Draw - Terms & Conditions",
             "heading_size": "small",
             "padding_top": 10,
             "padding_bottom": 10
@@ -111,7 +112,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>We’re All About The Sofa Experience…</strong></p>",
+            "heading": "<p>Win a £1,000 Holiday Voucher This Summer!</p>",
             "heading_size": "h2",
             "padding_top": 0,
             "padding_bottom": 8
@@ -120,7 +121,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe that one's true appreciation for a good piece of furniture is found in the moments of comfort, joy, and contentment that are experienced at home and in the company of loved ones.<br/><br/></p><p>We aim to elevate this experience for our customers through our high-quality pieces and to be a part of creating unforgettable memories, undeniable connections, and a true sense of home pride.</p>",
+            "text": "<p>Buy any sofa from Honeypot Furniture this July and you’ll be automatically entered into our exclusive prize draw to <strong>win a £1,000 holiday voucher</strong> – just in time for your dream summer getaway!<br/><br/>Want to boost your chances? <strong>Follow us on Instagram and tag a friend in our giveaway post</strong> for a bonus entry!</p>",
             "padding_top": 10,
             "padding_bottom": 20
           }
@@ -135,7 +136,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify://shop_images/About_Us_Rupert_Sofa_Beige_Sofa_Experience_Image.jpg",
+        "image": "shopify://shop_images/Holiday.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -158,164 +159,6 @@
         "padding_bottom": 50,
         "padding_top_mobile": 25,
         "padding_bottom_mobile": 25
-      }
-    },
-    "a1a91792-a4e4-4254-bd04-603f6955212c": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>We Keep it All At Home…</strong></p>",
-            "heading_size": "h2",
-            "padding_top": 0,
-            "padding_bottom": 8
-          }
-        },
-        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We take pride in how far we've grown and evolved from our humble beginnings while keeping all of our activities a hundred percent home-grown.</p><p><br/></p><p>Determined to maintain our exceptional level of quality while keeping costs down, we've ensured that every aspect of the Honeypot experience remains in-house, including our own land, warehouses, and fulfilment services. Every detail is run by the Honeypot family through a very hands-on approach that has helped us keep our brand as true to its roots as possible.</p>",
-            "padding_top": 10,
-            "padding_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-0",
-        "template--16836918247663__a1a91792-a4e4-4254-bd04-603f6955212c-16801414794d24ed86-1"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "customized-width",
-        "customize_width": 1600,
-        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify://shop_images/About_Us_Azzuro_U_Shape_Sofa.jpg",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#000000",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 25,
-        "padding_bottom_mobile": 25
-      }
-    },
-    "image_with_text_mD473n": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_jLiWzw": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>We’re All For You…</strong></p>",
-            "heading_size": "h2",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "text_6tPXCa": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We truly feel that everyone deserves to experience the luxury of being in love with the spaces they build and the interiors they create, hence why we want to help provide that for as many home-owners as possible.</p><p><br/></p><p>By bringing you a variety of pieces with different styles, functions and price-points, there is truly something for everyone. Additionally, our finance options make it a breeze to indulge in the \"Honeypot Experience\" on your own terms.</p>",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_jLiWzw",
-        "text_6tPXCa"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "customized-width",
-        "customize_width": 1600,
-        "color_scheme": "",
-        "image": "shopify://shop_images/About_Us_Naples_Sofa_Beige_Corner.jpg",
-        "heading": "",
-        "heading_size": "default",
-        "link_label": "",
-        "link": "",
-        "colors_heading": "#ffffff",
-        "show_top_line_separator": false,
-        "show_bot_line_separator": false,
-        "background_for_box": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "layout_mobile": "image_first_mobile",
-        "mobile_content_alignment": "left",
-        "image_animation": "none",
-        "text_animation": "none",
-        "padding_top": 50,
-        "padding_bottom": 51,
-        "padding_top_mobile": 25,
-        "padding_bottom_mobile": 25
-      }
-    },
-    "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa": {
-      "type": "quotes",
-      "blocks": {
-        "template--16836918247663__352c83e3-c7c0-4e6c-bd9c-91dea026b0fa-1680141926578b9a3c-0": {
-          "type": "slide",
-          "settings": {
-            "block_content_max_w": "customize",
-            "custom_content_max_w": 650,
-            "text": "“At our core, we believe your home deserves the best: exceptional design and top-notch quality, all without breaking the bank. We're committed to bringing joy into your home with carefully selected, high-quality pieces of furniture\"",
-            "heading_font": "font-heading",
-            "text_size": "h2",
-            "text_margin_bottom": 23,
-            "use_custom_size_avatar": false,
-            "custom_size_avatar": 40,
-            "info": "<p>Yusuf Riyadh - Director</p>",
-            "info_size": "h3",
-            "rating": "0",
-            "text_alignment": "center",
-            "time": "",
-            "colors_background": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16836918247663__352c83e3-c7c0-4e6c-bd9c-91dea026b0fa-1680141926578b9a3c-0"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "arrows_type": "all",
-        "carousel_infinite_scroll": true,
-        "enable_autoplay": false,
-        "change_slides_speed": 5,
-        "enable_pagination_type": "all",
-        "pagination_type": "dots",
-        "pagination_spacing_top": 50,
-        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "use_custom_color": false,
-        "colors_text": "#000000",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
       }
     },
     "fdad168f-7d9e-4226-9e96-e24307d01253": {
@@ -404,7 +247,7 @@
         "heading_x8nQwV": {
           "type": "heading",
           "settings": {
-            "heading": "Why Buy From Us?",
+            "heading": "Terms & Conditions",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -413,7 +256,7 @@
         "text_LrBhR9": {
           "type": "text",
           "settings": {
-            "text": "<p>Having conceptualised, procured and redistrubted popular sofas and sofa beds to other well-known retailers in the UK, we are well placed to understand what matters. We have built strong relationships with manfacturers across Europe to bring high-quality, fairly-priced furniture to the UK market</p>",
+            "text": "<ul><li>By entering, participants agree to be bound by these <strong>Terms & Conditions</strong>.<br/><br/></li><li>Honeypot Furniture reserves the right to:<br/><br/></li><li>Verify the eligibility of any entrant.<br/><br/></li><li>Cancel or amend the competition and these terms where necessary.<br/><br/></li><li>Disqualify any entries suspected of fraudulent activity or not in line with the rules.</li><li>This competition is open to <strong>UK residents only</strong>, aged <strong>18 years or over</strong>.<br/><br/></li><li>Employees of Honeypot Furniture, their immediate families, and anyone professionally connected with this promotion are <strong>not eligible</strong> to enter.</li><li>Participant information will be used solely for the administration of this competition and in accordance with Honeypot Furniture’s <strong>Privacy Policy</strong>.<br/><br/></li><li>No data will be sold or shared with third parties.<br/><br/></li><li>This promotion is in <strong>no way sponsored, endorsed, administered by, or associated with Instagram or Facebook</strong>.<br/><br/></li><li>By entering, participants <strong>release Instagram and Facebook of all responsibility</strong>.<br/><br/></li></ul><p><strong>For any questions regarding the giveaway, please contact</strong>:<br/><a href=\"mailto:hello@honeypotfurniture.co.uk\" title=\"mailto:hello@honeypotfurniture.co.uk\"><em>hello@honeypotfurniture.co.uk<br/></em></a><a href=\"mailto:kathleen.ciabo@honeypotfurniture.co.uk\" title=\"mailto:kathleen.ciabo@honeypotfurniture.co.uk\"><em>kathleen.ciabo@honeypotfurniture.co.uk</em></a></p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -449,158 +292,6 @@
         "padding_bottom": 30,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 20
-      }
-    },
-    "collapsible_content_H3JgAU": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_rHyJtr": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Our Products",
-            "icon": "price_tag",
-            "row_content": "<p>Having worked closely with well-known UK retailers to design, source, and supply popular sofas and sofa beds, we truly understand what British homes love. Our close relationships with European manufacturers allow us to bring you high-quality, fairly-priced furniture. As a trusted distributor and retailer, we’re passionate about using our insights to keep our collections fresh and exciting, regularly updating our styles, fabrics, colours, and materials to fit your home perfectly. Thanks to our extensive network of European furniture manufacturers, if you’re looking for something specific and don’t see it on our site, just let us know! We’ll likely be able to source it for you.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cUf7f7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Our Service",
-            "icon": "star",
-            "row_content": "<p>At Honeypot Furniture, we take pride in delivering not just high-quality furniture but also an exceptional customer experience. From our 140,000 sq ft warehouse and headquarters, we offer fast and reliable delivery to your home, ensuring every detail is managed with care and precision. Here’s what you can expect from our service:</p><ul><li><strong>Fast Delivery</strong>: We dispatch from our extensive 140,000 sq ft warehouse, ensuring your furniture reaches you quickly.</li><li><strong>Two-Person Delivery Team</strong>: Our experienced, professional team deliver your furniture with care and precision. Most of our delivery team have been delivering heavy and bulky items for years - you're in safe hands!</li><li><strong>Assembly Service</strong>: Sofas are assembled exactly where you want them, making your experience hassle-free.</li><li><strong>Live Tracking Link</strong>: Receive a live tracking link on the day of delivery, with regular ETA updates to keep you informed.</li><li><strong>Doesn't Fit?</strong>: If your sofa doesn’t fit through your door, we'll return it to our HQ at no charge. Our team will recommend alternative products that will fit, and there are no additional delivery costs for an alternative sofa on a different date.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_XgUb4V": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Our Promise",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_GrjMg9": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_rHyJtr",
-        "collapsible_row_cUf7f7",
-        "collapsible_row_XgUb4V",
-        "collapsible_row_GrjMg9"
-      ],
-      "settings": {
-        "heading": "",
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "top_subheading": "",
-        "top_text": "",
-        "top_icon_1": "chat_buble",
-        "top_heading_1": "",
-        "top_icon_2": "mail",
-        "top_heading_2": "",
-        "bottom_text": "",
-        "bottom_button_label": "",
-        "bottom_button_link": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 35,
-        "padding_bottom_mobile": 43
-      }
-    },
-    "marquee_pUTkVy": {
-      "type": "marquee",
-      "blocks": {
-        "marquee_MzRLr4": {
-          "type": "marquee",
-          "settings": {
-            "type_marquee": "text",
-            "text": "<p>1-7 Day Delivery</p>",
-            "set_transparent_text": false,
-            "enable_color_underline": false,
-            "colors_underline": "#000000",
-            "options_colors_underline": "full",
-            "image_height": 152,
-            "link": ""
-          }
-        },
-        "marquee_4x3hxG": {
-          "type": "marquee",
-          "settings": {
-            "type_marquee": "text",
-            "text": "<p>5-Year Sofa Frame Guarantee</p>",
-            "set_transparent_text": false,
-            "enable_color_underline": false,
-            "colors_underline": "#000000",
-            "options_colors_underline": "full",
-            "image_height": 152,
-            "link": ""
-          }
-        },
-        "marquee_qifkPq": {
-          "type": "marquee",
-          "settings": {
-            "type_marquee": "text",
-            "text": "<p>Flexible Payment and Finance Options</p>",
-            "set_transparent_text": false,
-            "enable_color_underline": false,
-            "colors_underline": "#000000",
-            "options_colors_underline": "full",
-            "image_height": 152,
-            "link": ""
-          }
-        },
-        "marquee_M4hfWz": {
-          "type": "marquee",
-          "settings": {
-            "type_marquee": "text",
-            "text": "<p>Sofas Assembled In Any Room of Choice</p>",
-            "set_transparent_text": false,
-            "enable_color_underline": false,
-            "colors_underline": "#000000",
-            "options_colors_underline": "full",
-            "image_height": 152,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "marquee_MzRLr4",
-        "marquee_4x3hxG",
-        "marquee_qifkPq",
-        "marquee_M4hfWz"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "enable_full_width": false,
-        "enable_cursor_hover": false,
-        "duration_speed": 30,
-        "heading_font": "font-heading",
-        "heading_size": "default",
-        "type_separating": "dots",
-        "custom_between": false,
-        "carousel_gap": 30,
-        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "padding_top_mobile": 10,
-        "padding_bottom_mobile": 10
       }
     },
     "icon_with_text_Y3WbTh": {
@@ -1224,60 +915,6 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
-    },
-    "featured_blog_mGz4UF": {
-      "type": "featured-blog",
-      "settings": {
-        "header_width": "page-width",
-        "content_width": "page-width",
-        "customize_width": 1800,
-        "padding_container_full_w": 0,
-        "show_line_separator": false,
-        "style_layout": "enable_carousel",
-        "icon": "none",
-        "heading": "Blog posts",
-        "heading_size": "default",
-        "show_view_all": "none",
-        "button_label": "Button label",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 60,
-        "blog": "news",
-        "post_limit": 3,
-        "spacing_desktop": 30,
-        "spacing_tablet": 30,
-        "spacing_mobile": 10,
-        "show_image": true,
-        "image_ratio": "adapt",
-        "show_content": false,
-        "show_date": true,
-        "show_author": false,
-        "show_tags": false,
-        "show_button": false,
-        "button_transparent": "default",
-        "text_per_line": "none",
-        "text_alignment": "left",
-        "title_margin_top": 0,
-        "title_margin_bottom": 10,
-        "content_margin_top": 15,
-        "content_margin_bottom": 0,
-        "grid_number": 3,
-        "grid_number_tablet": 2,
-        "grid_number_mobile": 1,
-        "carousel_number": 3,
-        "carousel_number_tablet": 1.3,
-        "t:sections.featured-blog.settings.heading_3": "1.2",
-        "arrows_type": "all",
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
-        "color_scheme": "",
-        "image_animation": "none",
-        "heading_animation": "none",
-        "text_animation": "none",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
     }
   },
   "order": [
@@ -1285,13 +922,8 @@
     "f7081c96-4557-48f7-9510-e23627f84c6e",
     "rich_text_QgCcFa",
     "bcdfdd92-1560-4fa2-832d-8531cf03526d",
-    "a1a91792-a4e4-4254-bd04-603f6955212c",
-    "image_with_text_mD473n",
-    "352c83e3-c7c0-4e6c-bd9c-91dea026b0fa",
     "fdad168f-7d9e-4226-9e96-e24307d01253",
     "rich_text_ctUHEi",
-    "collapsible_content_H3JgAU",
-    "marquee_pUTkVy",
     "icon_with_text_Y3WbTh",
     "multicolumn_Tqaf3H",
     "multicolumn_Hi4cct",
@@ -1299,7 +931,6 @@
     "multicolumn_KEX9Mt",
     "17f60c09-db31-4fe1-97e5-3d85f1363257",
     "countdown_showcase_hero_LY7hag",
-    "map_6R6T8c",
-    "featured_blog_mGz4UF"
+    "map_6R6T8c"
   ]
 }
