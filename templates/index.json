@@ -110,7 +110,7 @@
             "subheading": "",
             "subheading_size": "medium",
             "subheading_margin_bottom": 30,
-            "box_align": "bottom-right",
+            "box_align": "bottom-left",
             "text_alignment": "right",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
