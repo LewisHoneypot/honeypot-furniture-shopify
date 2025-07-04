@@ -118,7 +118,7 @@
             "primary_button_link": "shopify://collections/outlet",
             "secondary_button_label": "",
             "secondary_button_link": "",
-            "button_transparent": "transparent",
+            "button_transparent": "default",
             "button_spacing_between": 10,
             "buttons_direction": "horizontal",
             "padding_top_bottom": 0,
