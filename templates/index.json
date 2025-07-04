@@ -12,6 +12,34 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
+        "slide_BzgHcM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Flash-Weekend-Sale-_final-final.jpg",
+            "mobile_image": "shopify://shop_images/Copy-of-Flash-Weekend-Sale-_FINAL2.jpg",
+            "content_max_width": 440,
+            "heading_font": "font-body",
+            "heading": "",
+            "heading_size": "medium",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "bottom-right",
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Learn More",
+            "primary_button_link": "shopify://collections/outlet",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "vertical",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
@@ -97,34 +125,6 @@
             "padding_left_right": 0
           }
         },
-        "slide_BzgHcM": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Flash-Weekend-Sale-_final-final.jpg",
-            "mobile_image": "shopify://shop_images/Copy-of-Flash-Weekend-Sale-_FINAL2.jpg",
-            "content_max_width": 440,
-            "heading_font": "font-body",
-            "heading": "",
-            "heading_size": "medium",
-            "heading_margin_bottom": 20,
-            "subheading": "",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 30,
-            "box_align": "bottom-right",
-            "text_alignment": "left",
-            "image_overlay_opacity": 30,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Learn More",
-            "primary_button_link": "shopify://collections/outlet",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "vertical",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
         "slide_dN3rVP": {
           "type": "slide",
           "settings": {
@@ -200,10 +200,10 @@
         }
       },
       "block_order": [
+        "slide_BzgHcM",
         "slide_MVHYjL",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-1",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
-        "slide_BzgHcM",
         "slide_dN3rVP",
         "lookbook_m7Girj"
       ],
