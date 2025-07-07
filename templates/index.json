@@ -14,6 +14,7 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Flash-Weekend-Sale-_final-final.jpg",
             "mobile_image": "shopify://shop_images/Copy-of-Flash-Weekend-Sale-_FINAL2.jpg",
