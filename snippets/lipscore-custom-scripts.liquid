@@ -40,8 +40,13 @@
         return false;
       }
 
+      const href = item.getAttribute('href');
+      if (!href) {
+        return false;
+      }
+
       return {
-        handle: item.getAttribute('href').split('/').pop(),
+        handle: href.split('/').pop(),
         item: item,
       };
     });
