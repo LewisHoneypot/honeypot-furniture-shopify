@@ -21,17 +21,19 @@
     <div
       class="splide"
       id="ugc-carousel"
-      data-splide='{
-        "type": "loop",
-        "perPage": {{ section.settings.desktop_slides_to_show }},
-        "perMove": 1,
-        "gap": "{{ image_gap }}px",
-        "breakpoints": {
-          "768": {
-            "perPage": 1
+      data-splide='
+        {
+          "type": "loop",
+          "perPage": {{ section.settings.desktop_slides_to_show }},
+          "perMove": 1,
+          "gap": "{{ image_gap }}px",
+          "breakpoints": {
+            "768": {
+              "perPage": 1
+            }
           }
         }
-      }'
+      '
     >
       <div class="splide__track">
         <ul class="splide__list">
@@ -66,6 +68,17 @@
     </div>
   </section>
 {% endif %}
+
+{% style %}
+  #ugc-carousel .splide__pagination {
+    bottom: -1.4em;
+  }
+  @media screen and (min-width: 767px) {
+    #ugc-carousel .splide__pagination {
+      display: none;
+    }
+  }
+{% endstyle %}
 
 {% schema %}
 {
