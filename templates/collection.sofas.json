@@ -14,12 +14,14 @@
       "blocks": {
         "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "HUGE SAVING ON SOFAS & MORE"
           }
         },
         "9d466322-a450-453a-adc0-7fe3b697bda4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Sale up to 60% off on selected items*</p>"
           }
@@ -29,13 +31,14 @@
         "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8",
         "9d466322-a450-453a-adc0-7fe3b697bda4"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "type": "custom",
         "image_ratio": "adapt",
         "custom_height": 20,
         "color_scheme": "accent-1",
+        "image": "shopify://shop_images/HOLIDAY_VOUCHER_COMPETITION_BANNER_4.png",
+        "mobile_image": "shopify://shop_images/Copy_of_Flash_Weekend_Sale_1.png",
         "padding_top": 0,
         "padding_bottom": 0
       }
