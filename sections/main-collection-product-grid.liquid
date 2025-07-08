@@ -455,6 +455,53 @@
   assign files = files | split: ', '
   render 'theme-loader', files: files
 -%}
+
+<script>
+  // console.log('collection.metafields: ', {{ collection.metafields.custom | json }});
+</script>
+
+{% assign popup_page_1 = collection.metafields.custom.offer_1_popup.value %}
+{% assign popup_page_2 = collection.metafields.custom.offer_2_popup.value %}
+{% assign popup_page_3 = collection.metafields.custom.offer_3_popup.value %}
+
+{% capture offers_json %}
+{
+  "offer_1": {
+    "title": {% if collection.metafields.custom.offer1_header.value %}{{ collection.metafields.custom.offer1_header.value | json }}{% else %}"1-7 Day Delivery"{% endif %},
+    "content": {% if collection.metafields.custom.offer1_text.value %}{{ collection.metafields.custom.offer1_text.value | json }}{% else %}"For any item in stock, we offer fast delivery from tomorrow depending on your delivery area."{% endif %},
+    "button_text": {% if collection.metafields.custom.offer1_cta_text.value %}{{ collection.metafields.custom.offer1_cta_text.value | json }}{% else %}""{% endif %},
+    "button_url": {% if collection.metafields.custom.offer1_cta_link.value %}{{ collection.metafields.custom.offer1_cta_link.value | json }}{% else %}""{% endif %},
+    "background_image": {% if collection.metafields.custom.offer1_image.value %}{{ collection.metafields.custom.offer1_image.value | image_url: width: 1200 | json }}{% else %}""{% endif %},
+    "popup_content": {% if popup_page_1.content %}{{ popup_page_1.content | strip | json }}{% else %}""{% endif %}
+  },
+  "offer_2": {
+    "title": {% if collection.metafields.custom.offer2_header.value %}{{ collection.metafields.custom.offer2_header.value | json }}{% else %}"Default Title"{% endif %},
+    "content": {% if collection.metafields.custom.offer2_text.value %}{{ collection.metafields.custom.offer2_text.value | json }}{% else %}"Default Content"{% endif %},
+    "button_text": {% if collection.metafields.custom.offer2_cta_text.value %}{{ collection.metafields.custom.offer2_cta_text.value | json }}{% else %}""{% endif %},
+    "button_url": {% if collection.metafields.custom.offer2_cta_link.value %}{{ collection.metafields.custom.offer2_cta_link.value | json }}{% else %}""{% endif %},
+    "background_image": {% if collection.metafields.custom.offer2_image.value %}{{ collection.metafields.custom.offer2_image.value | image_url: width: 1200 | json }}{% else %}""{% endif %},
+    "popup_content": {% if popup_page_2.content %}{{ popup_page_2.content | strip | json }}{% else %}""{% endif %}
+  },
+  "offer_3": {
+    "title": {% if collection.metafields.custom.offer3_header.value %}{{ collection.metafields.custom.offer3_header.value | json }}{% else %}"0% Finance Available"{% endif %},
+    "content": {% if collection.metafields.custom.offer3_text.value %}{{ collection.metafields.custom.offer3_text.value | json }}{% else %}"Spread the cost with interest-free finance - subject to status."{% endif %},
+    "button_text": {% if collection.metafields.custom.offer3_cta_text.value %}{{ collection.metafields.custom.offer3_cta_text.value | json }}{% else %}"Learn More"{% endif %},
+    "button_url": {% if collection.metafields.custom.offer3_cta_link.value %}{{ collection.metafields.custom.offer3_cta_link.value | json }}{% else %}"/pages/snap-finance"{% endif %},
+    "background_image":
+      {% if collection.metafields.custom.offer3_image.value %}
+        {{ collection.metafields.custom.offer3_image.value | image_url: width: 1200 | json }}
+      {% else %}
+        "https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Offer3_Image.jpg?v=1751543107"
+      {% endif %},
+    "popup_content": {% if popup_page_3.content %}{{ popup_page_3.content | strip | json }}{% else %}""{% endif %}
+  }
+}
+{% endcapture %}
+
+<script id="collection-metafields" type="application/json">
+{{ offers_json | strip }}
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
