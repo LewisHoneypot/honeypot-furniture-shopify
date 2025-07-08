@@ -30,7 +30,7 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Learn More",
-            "primary_button_link": "shopify://collections/outlet",
+            "primary_button_link": "shopify://pages/1000-holiday-voucher-prize-draw",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
