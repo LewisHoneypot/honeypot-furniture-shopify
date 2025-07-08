@@ -14,9 +14,8 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Flash-Weekend-Sale-_final-final.jpg",
+            "image": "shopify://shop_images/HOLIDAY_VOUCHER_COMPETITION_BANNER_3.png",
             "mobile_image": "shopify://shop_images/Copy-of-Flash-Weekend-Sale-_FINAL2.jpg",
             "content_max_width": 440,
             "heading_font": "font-body",
