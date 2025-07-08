@@ -10,7 +10,7 @@
 
 {% if valid_ugc_images >= 4 %}
   <section
-    class="ugc-carousel-section color-{{ section.settings.color_scheme }}"
+    class="ugc-carousel-section color-{{ section.settings.color_scheme }} {% if section.settings.section_width == 'page-width' %}page-width{% endif %}"
     style="
       padding-top: {{ section.settings.section_padding_top }}px;
       padding-bottom: {{ section.settings.section_padding_bottom }}px;
@@ -90,6 +90,26 @@
       "id": "heading",
       "label": "UGC Heading",
       "default": "See It In Action"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "customized-width",
+          "label": "Customized width"
+        }
+      ]
     },
     {
       "type": "color_scheme",
