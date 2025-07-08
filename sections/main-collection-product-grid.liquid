@@ -468,18 +468,18 @@
 {
   "offer_1": {
     "title": {% if collection.metafields.custom.offer1_header.value %}{{ collection.metafields.custom.offer1_header.value | json }}{% else %}"1-7 Day Delivery"{% endif %},
-    "content": {% if collection.metafields.custom.offer1_text.value %}{{ collection.metafields.custom.offer1_text.value | json }}{% else %}"For any item in stock, we offer fast delivery from tomorrow depending on your delivery area."{% endif %},
+    "content": {% if collection.metafields.custom.offer1_text.value %}{{ collection.metafields.custom.offer1_text.value | json }}{% else %}"For any item in stock, we offer fast delivery from tomorrow depending on your location."{% endif %},
     "button_text": {% if collection.metafields.custom.offer1_cta_text.value %}{{ collection.metafields.custom.offer1_cta_text.value | json }}{% else %}""{% endif %},
     "button_url": {% if collection.metafields.custom.offer1_cta_link.value %}{{ collection.metafields.custom.offer1_cta_link.value | json }}{% else %}""{% endif %},
-    "background_image": {% if collection.metafields.custom.offer1_image.value %}{{ collection.metafields.custom.offer1_image.value | image_url: width: 1200 | json }}{% else %}""{% endif %},
+    "background_image": {% if collection.metafields.custom.offer1_image.value %}{{ collection.metafields.custom.offer1_image.value | image_url: width: 1200 | json }}{% else %}"https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Collection_Tile_Images_1.jpg?v=1751980617"{% endif %},
     "popup_content": {% if popup_page_1.content %}{{ popup_page_1.content | strip | json }}{% else %}""{% endif %}
   },
   "offer_2": {
-    "title": {% if collection.metafields.custom.offer2_header.value %}{{ collection.metafields.custom.offer2_header.value | json }}{% else %}"Default Title"{% endif %},
-    "content": {% if collection.metafields.custom.offer2_text.value %}{{ collection.metafields.custom.offer2_text.value | json }}{% else %}"Default Content"{% endif %},
+    "title": {% if collection.metafields.custom.offer2_header.value %}{{ collection.metafields.custom.offer2_header.value | json }}{% else %}"Happy Customers"{% endif %},
+    "content": {% if collection.metafields.custom.offer2_text.value %}{{ collection.metafields.custom.offer2_text.value | json }}{% else %}"3000+ 5-Star Product and Service Reviews"{% endif %},
     "button_text": {% if collection.metafields.custom.offer2_cta_text.value %}{{ collection.metafields.custom.offer2_cta_text.value | json }}{% else %}""{% endif %},
     "button_url": {% if collection.metafields.custom.offer2_cta_link.value %}{{ collection.metafields.custom.offer2_cta_link.value | json }}{% else %}""{% endif %},
-    "background_image": {% if collection.metafields.custom.offer2_image.value %}{{ collection.metafields.custom.offer2_image.value | image_url: width: 1200 | json }}{% else %}""{% endif %},
+    "background_image": {% if collection.metafields.custom.offer2_image.value %}{{ collection.metafields.custom.offer2_image.value | image_url: width: 1200 | json }}{% else %}"https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Collection_Tile_Images.jpg?v=1751980617"{% endif %},
     "popup_content": {% if popup_page_2.content %}{{ popup_page_2.content | strip | json }}{% else %}""{% endif %}
   },
   "offer_3": {
