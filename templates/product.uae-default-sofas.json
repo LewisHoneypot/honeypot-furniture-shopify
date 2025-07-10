@@ -487,7 +487,7 @@
         "image_L4QhHh": {
           "type": "image",
           "settings": {
-            "product_1": "inga-fullback-sofa-beige-u-shape-corner",
+            "product_1": "inga-fullback-sofa-beige-u-shape",
             "horizontal_1": 32,
             "vertical_1": 26,
             "product_2": "verona-fullback-sofa-black-3-seater",
@@ -564,8 +564,8 @@
         "show_line_separator_bottom": false,
         "collection": "",
         "product_list": [
-          "inga-fullback-sofa-beige-u-shape-corner",
-          "inga-fullback-sofa-grey-u-shape-corner",
+          "inga-fullback-sofa-beige-u-shape",
+          "inga-fullback-sofa-grey-u-shape",
           "verona-fullback-sofa-black-2-seater",
           "verona-fullback-sofa-black-3-seater"
         ],
