@@ -210,7 +210,7 @@
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "text_size": "medium",
         "font_transform": "capitalize",
-        "enable_transparent": true,
+        "enable_transparent": false,
         "logo_transparent": "shopify://shop_images/Primary_Logo.png",
         "color_opacity_1": 100,
         "text_transparent": "#000000",
