@@ -1,0 +1,312 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "HUGE SAVING ON SOFAS & MORE"
+          }
+        },
+        "9d466322-a450-453a-adc0-7fe3b697bda4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Sale up to 60% off on selected items*</p>"
+          }
+        }
+      },
+      "block_order": [
+        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8",
+        "9d466322-a450-453a-adc0-7fe3b697bda4"
+      ],
+      "settings": {
+        "full_width": true,
+        "type": "custom",
+        "image_ratio": "adapt",
+        "custom_height": 20,
+        "color_scheme": "accent-1",
+        "image": "shopify://shop_images/HOLIDAY_VOUCHER_COMPETITION_BANNER_2000_x_600_px.jpg",
+        "mobile_image": "shopify://shop_images/Copy_of_Flash_Weekend_Sale_1000_x_1000_px.jpg",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "cc19003e-188e-4f3a-a092-71a303ff5987": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner_position": 3,
+            "image": "shopify://shop_images/1_5d5ad752-a33b-4eea-8590-bb5309016b15.jpg",
+            "image_ratio": "adapt",
+            "subtitle_image": "",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading_image": "",
+            "heading_size": "small",
+            "show_view_all": "button",
+            "text_view_all": "SHOP NOW",
+            "link": "shopify://collections/bundles-1",
+            "content_inside_image": true,
+            "text_alignment": "center",
+            "image_color_scheme": "background-1",
+            "image_overlay_opacity": 0,
+            "color_overlay_opacity": "#ffffff"
+          }
+        },
+        "3fca5cef-72fc-4b52-a001-50044316c114": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner_position": 6,
+            "image": "shopify://shop_images/2_89de4692-8a29-41fe-bad4-9b2783d05687.jpg",
+            "image_ratio": "adapt",
+            "subtitle_image": "",
+            "subheading_font": "font-body",
+            "subheading_size": "x-large",
+            "heading_image": "",
+            "heading_size": "x-small",
+            "show_view_all": "button",
+            "text_view_all": "SHOP NOW",
+            "link": "shopify://collections/outlet",
+            "content_inside_image": true,
+            "text_alignment": "center",
+            "image_color_scheme": "background-1",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "cc19003e-188e-4f3a-a092-71a303ff5987",
+        "3fca5cef-72fc-4b52-a001-50044316c114"
+      ],
+      "settings": {
+        "use_nosto": true,
+        "products_per_row": 3,
+        "products_per_page": 24,
+        "columns_mobile": "1",
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "breadcrumb_size": "medium",
+        "breadcrumb_padding_bottom": 60,
+        "heading_size": "default",
+        "heading_margin_bottom": 24,
+        "description_size": "xxx-large",
+        "text_margin_bottom": 72,
+        "content_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "content_use_custom_color": false,
+        "content_colors_text": "#424242",
+        "content_colors_background": "",
+        "content_gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "margin_bottom": 30,
+        "enable_filtering": true,
+        "filter_heading_size": "default",
+        "filter_type": "horizontal",
+        "type_style": "special",
+        "pagination_type": "progressbar",
+        "swatch": "Color",
+        "pill": "Size",
+        "filtering_color_scheme": "inverse",
+        "enable_sorting": true,
+        "sorting_style": "default",
+        "enable_switcher": false,
+        "product_color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "collection_dimensions_toggle": true,
+        "collection_delivery_eta_heading": "Delivery From",
+        "collection_delivery_eta_toggle": true,
+        "tiers": "on",
+        "date_type": "vague",
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000000",
+        "overlay_background_color_1": "#ffffff",
+        "use_overlay_2": true,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#ffffff",
+        "overlay_background_color_2": "#000000",
+        "christmas_delivery_eta_toggle": false,
+        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
+      }
+    },
+    "1736440044ce275a3d": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_gJQ3B8": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_gJQ3B8"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collection_list_ig8tXp": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_PeLXiN": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_8QwTFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-in"
+          }
+        },
+        "collection_WA4Xwj": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-1"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PeLXiN",
+        "collection_8QwTFk",
+        "collection_WA4Xwj"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Collections",
+        "font": "default",
+        "heading_size": "medium",
+        "heading_margin_bottom": 30,
+        "heading_margin_bottom_mobile": 0,
+        "arrow_position": 0,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "17364400660185726f": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_Lh3ncE": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_Lh3ncE"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "recently-products": {
+      "type": "recently-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Recently Viewed Products",
+        "heading_margin_bottom": 32,
+        "color_scheme": "background-1",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "spacing_desktop": 24,
+        "spacing_tablet": 20,
+        "spacing_mobile": 8,
+        "arrows_type": "lg",
+        "carousel_infinite_scroll": true,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "clickslice_bottom_description_gfNHzA": {
+      "type": "clickslice-bottom-description",
+      "settings": {}
+    },
+    "clickslice_bottom_collapsible_tabs_GD3zKe": {
+      "type": "clickslice-bottom-collapsible-tabs",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1736440044ce275a3d",
+    "collection_list_ig8tXp",
+    "17364400660185726f",
+    "recently-products",
+    "clickslice_bottom_description_gfNHzA",
+    "clickslice_bottom_collapsible_tabs_GD3zKe"
+  ]
+}
