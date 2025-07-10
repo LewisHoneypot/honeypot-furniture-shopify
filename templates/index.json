@@ -14,6 +14,7 @@
       "blocks": {
         "slide_BzgHcM": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/HOLIDAY_VOUCHER_COMPETITION_BANNER_4.png",
             "mobile_image": "shopify://shop_images/Copy_of_Flash_Weekend_Sale_1.png",
