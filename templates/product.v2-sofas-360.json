@@ -359,7 +359,7 @@
       "settings": {
         "font": "Gotham",
         "heading": "",
-        "section_width": "customized-width",
+        "section_width": "page-width",
         "customize_width": 1400,
         "color_scheme": "scheme-057f3e60-6a77-40c5-abd9-dd27d5131c8c",
         "padding_top": 75,
