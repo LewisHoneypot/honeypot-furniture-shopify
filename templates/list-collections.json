@@ -27,25 +27,29 @@
         "collection_gfVC3P": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-03"
+            "collection": "mattresses",
+            "image": "shopify://shop_images/gbg-Ember_Soft_Mattress_7_a2fff84e-e6b2-485c-a5d2-6b633d37a5a5.jpg"
           }
         },
         "collection_LcdaNG": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-04"
+            "collection": "bedroom-furniture",
+            "image": "shopify://shop_images/Mira_Lamp_Table_Black_5.jpg"
           }
         },
         "collection_NdmKfi": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-1"
+            "collection": "living-room",
+            "image": "shopify://shop_images/Modena_Sofa_Charcoal_Leftt_Hand_Corner_Lifestyle_1.jpg"
           }
         },
         "banner_a4VWxh": {
           "type": "banner",
           "settings": {
             "type_style": "image_left",
+            "image": "shopify://shop_images/Turin_Electric_Recliner_Sofa_Silver_Right_Hand_Corner_Lifestyle_1_2.jpg",
             "content_max_width": 440,
             "subheading": "Concept Theme",
             "subheading_size": "small",
@@ -67,37 +71,41 @@
         "collection_NrFhTj": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-06"
+            "collection": "dining-room",
+            "image": "shopify://shop_images/gbg-Dara_Dining_Table_Ivory___Oak_3_6d0bc19e-e4d7-48f9-800c-b3d9c31dd888.jpg"
           }
         },
         "collection_XEGMUX": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-07"
+            "collection": "garden"
           }
         },
         "collection_MMVBiJ": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-08"
+            "collection": "large-rugs"
           }
         },
         "collection_Dh3i3U": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-09"
+            "collection": "best-sellers",
+            "image": "shopify://shop_images/Turin_Electric_Recliner_Sofa_Charcoal_Right_Hand_Corner_Lifestyle_1.jpg"
           }
         },
         "collection_bBXpzm": {
           "type": "collection",
           "settings": {
-            "collection": "beauty-blossom-10"
+            "collection": "new-in",
+            "image": "shopify://shop_images/Bari_Sofa_Beige_2_Seater_Lifestyle_1.jpg"
           }
         },
         "banner_kkBRq3": {
           "type": "banner",
           "settings": {
             "type_style": "image_left",
+            "image": "shopify://shop_images/best_fabrics_for_sofa_beds_a_comprehensive_guide.jpg",
             "content_max_width": 300,
             "subheading": "CONCEPT THEME",
             "subheading_size": "small",
