@@ -26464,20 +26464,8 @@ body.multitasking__show .newsletter-popup-opener {
     top: -60px;
     position: relative;
     margin-bottom: -50px;
-    min-width: 70vw;
+    /* min-width: 70vw; */
     top: 14px;
-  }
-}
-
-@media screen and (min-width: 1300px){
-  .wide-search .ns-autocomplete {
-    left: -57vw;
-  }
-}
-
-@media screen and (max-width: 1024px){
-  .wide-search {
-    /* display: none !important; */
   }
 }
 
@@ -26518,7 +26506,15 @@ body.multitasking__show .newsletter-popup-opener {
 
 @media screen and (min-width: 1024px){
   .wide-search .ns-autocomplete {
-    min-width: 80vw;
+    max-height: 70vh;
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .wide-search .ns-autocomplete {
+    max-width: 61vw;
+    left: -50vw;
   }
 }
 
