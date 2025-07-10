@@ -513,9 +513,9 @@
         "below_link": "",
         "text_animation": "none",
         "padding_top": 0,
-        "padding_bottom": 20,
+        "padding_bottom": 30,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 12
       }
     },
     "rich_text_WaVhX9": {
