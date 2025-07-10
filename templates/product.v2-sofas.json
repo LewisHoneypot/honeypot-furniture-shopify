@@ -14,7 +14,6 @@
       "blocks": {
         "title": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "layout": "v2",
             "font_weight": "bold",
@@ -261,7 +260,7 @@
         "protection_drawer_iWbVLW"
       ],
       "settings": {
-        "use_custom_title": true,
+        "use_custom_title": false,
         "use_dimensions_icon": true,
         "use_image_zoom_icon": true,
         "enable_sticky_add_to_cart": true,
