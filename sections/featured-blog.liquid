@@ -98,15 +98,39 @@
             {% endif %}
           >
             {%- if section.settings.style_layout == 'enable_carousel' -%}
-              <div class="{%- if settings.slider_type == 'splide' -%}splide{%- endif %} swiper d-block pos-relative grid-scroll no-js-grid-scroll no-js-overflow-x" 
+              <div 
+                class="{%- if settings.slider_type == 'splide' -%}splide{%- endif %} swiper d-block pos-relative grid-scroll no-js-grid-scroll no-js-overflow-x" 
                 style="--n-j-grid-h-md: 0px; --n-j-grid-h-xs: 0px; --padding-h-md: 20px; --padding-h-xs: 10px;"
               > 
 
-              {%- if settings.slider_type == 'splide' -%}<div class="splide__track">{%- endif -%}
+              {%- if settings.slider_type == 'splide' -%}
+                <div class="splide__track">
+              {%- endif -%}
 
             {%- endif -%}
-                <div class="{%- if settings.slider_type == 'splide' -%}splide__list{%- endif %} carousel__items{% if section.settings.style_layout == 'enable_carousel' %} swiper-wrapper f-nowrap{% else %} f-wrap grid{% endif %} d-flex" id="Slider-{{ section.id }}" aria-label="Featured blog"
-                  style="{% if section.settings.style_layout == 'enable_carousel' %}--c-xs: {{ carousel_number_mobile }}; --c-sm: {{ carousel_number_mobile }}; --c-md: {{ carousel_number_tablet }}; --c-lg: {{ carousel_number }};{% else %}--c-xs: {{ grid_number_mobile }}; --c-sm: {{ grid_number_mobile }}; --c-md: {{ grid_number_tablet }}; --c-lg: {{ grid_number }};{% endif %} --grid-v-xs: {{ spacing_mobile }}px; --grid-v-md: {{ spacing_tablet }}px; --grid-v-lg: {{ spacing_desktop }}px; --grid-h-xs: {{ spacing_mobile }}px; --grid-h-md: {{ spacing_tablet }}px; --grid-h-lg: {{ spacing_desktop }}px;"
+                <div 
+                  class="{%- if settings.slider_type == 'splide' -%}splide__list{%- endif %} carousel__items{% if section.settings.style_layout == 'enable_carousel' %} swiper-wrapper f-nowrap{% else %} f-wrap grid{% endif %} d-flex" 
+                  id="Slider-{{ section.id }}" 
+                  aria-label="Featured blog"
+                  style="
+                    {% if section.settings.style_layout == 'enable_carousel' %}
+                      --c-xs: {{ carousel_number_mobile }}; 
+                      --c-sm: {{ carousel_number_mobile }}; 
+                      --c-md: {{ carousel_number_tablet }}; 
+                      --c-lg: {{ carousel_number }};
+                    {% else %}
+                      --c-xs: {{ grid_number_mobile }}; 
+                      --c-sm: {{ grid_number_mobile }}; 
+                      --c-md: {{ grid_number_tablet }}; 
+                      --c-lg: {{ grid_number }};
+                    {% endif %} 
+                    --grid-v-xs: {{ spacing_mobile }}px; 
+                    --grid-v-md: {{ spacing_tablet }}px; 
+                    --grid-v-lg: {{ spacing_desktop }}px; 
+                    --grid-h-xs: {{ spacing_mobile }}px; 
+                    --grid-h-md: {{ spacing_tablet }}px; 
+                    --grid-h-lg: {{ spacing_desktop }}px;
+                  "
                 >
                   {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
                     <div role="listitem" 
@@ -158,9 +182,9 @@
                                 {% endfor %}
                               </div>
                             {%- endif -%}
-                            <h2 class="h2 spacing" style="--padding-top: {{ section.settings.title_margin_top }}px; --padding-bottom: {{ section.settings.title_margin_bottom }}px;">
+                            <h3 class="spacing" style="--padding-top: {{ section.settings.title_margin_top }}px; --padding-bottom: {{ section.settings.title_margin_bottom }}px;">
                               <a href="{{ article.url }}" class="d-block u-none color-current link{% if section.settings.text_per_line != 'none' %} limit-text{% endif %}" style="{% if section.settings.text_per_line != 'none' %} --text-per-line: {{ section.settings.text_per_line }} {% endif %}">{{ article.title | escape }}</a>
-                            </h2>
+                            </h3>
                             {%- if section.settings.show_date or section.settings.show_author -%}
                               <div class="info d-grid">
                                 <div class="author">{% if section.settings.show_author %}{{ 'blogs.article.author_1' | t : author :  article.author }}{% endif %}</div>
