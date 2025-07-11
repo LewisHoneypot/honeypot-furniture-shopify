@@ -52,24 +52,13 @@
         "padding_bottom_mobile": 16
       }
     },
-    "custom_liquid_6HM4xt": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align: center; padding-top: 10px; background-color: #45544c;\">\n<div class=\"lipscore-service-review-badge-small-short lipscore-no-border lipscore-no-separator\"\n    data-ls-widget-height=\"30px\"\n    data-ls-widget-width=\"300px\">\n</div>\n</div>",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "trustpilot_pfqpVk": {
-      "type": "trustpilot",
-      "disabled": true,
+    "lipscore_header_jFXDeY": {
+      "type": "lipscore-header",
+      "name": "Lipscore",
       "settings": {
         "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
-        "padding_top": 5,
-        "padding_bottom": 5
+        "padding_top": 10,
+        "padding_bottom": 0
       }
     },
     "b38aad37-e5d6-4a4a-9109-e406344cc53a": {
@@ -258,8 +247,7 @@
   },
   "order": [
     "announcement-bar",
-    "custom_liquid_6HM4xt",
-    "trustpilot_pfqpVk",
+    "lipscore_header_jFXDeY",
     "b38aad37-e5d6-4a4a-9109-e406344cc53a",
     "header"
   ]
