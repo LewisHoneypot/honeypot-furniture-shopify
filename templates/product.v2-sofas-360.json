@@ -362,8 +362,8 @@
         "section_width": "page-width",
         "customize_width": 1150,
         "color_scheme": "background-1",
-        "padding_top": 10,
-        "padding_bottom": 10,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "padding_top_mobile": 15,
         "padding_bottom_mobile": 40,
         "use_icon_caret": false
