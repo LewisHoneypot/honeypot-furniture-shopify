@@ -1,0 +1,128 @@
+<!-- Splide container (mobile only) -->
+<div
+  class="splide d-md-none color-{{ section.settings.color_scheme }}"
+  id="usp-slider"
+  data-splide='
+    {
+      "type": "loop",
+      "perPage": 1,
+      "autoplay": true,
+      "interval": 3000,
+      "pauseOnHover": false,
+      "arrows": false,
+      "pagination": false
+    }
+  '
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="splide__track">
+    <ul class="splide__list color-{{ section.settings.color_scheme }}">
+      <li class="splide__slide text-center">{{ section.settings.usp_text_1 }}</li>
+      <li class="splide__slide text-center">{{ section.settings.usp_text_2 }}</li>
+      <li class="splide__slide text-center">{{ section.settings.usp_text_3 }}</li>
+      <li class="splide__slide text-center">{{ section.settings.usp_text_4 }}</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Bootstrap 4-column layout (desktop only) -->
+<div
+  class="usps-header d-none d-md-flex justify-content-between text-center color-{{ section.settings.color_scheme }}"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="col">{{ section.settings.usp_text_1 }}</div>
+  <div class="col">{{ section.settings.usp_text_2 }}</div>
+  <div class="col">{{ section.settings.usp_text_3 }}</div>
+  <div class="col">{{ section.settings.usp_text_4 }}</div>
+</div>
+
+<!-- Auto-mount Splide -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    Splide.mount();
+  });
+</script>
+
+<style>
+  @media screen and (min-width:768px) {
+    .usps-header {
+      font-size: 11px;
+    }
+  }
+  @media screen and (min-width:900px) {
+    .usps-header {
+      font-size: 14px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "USPs",
+  "class": "section-usps-header pos-relative z-index-4",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colours"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "usp_text_1",
+      "label": "USP 1 Text",
+      "default": "1 - 7 Day Delivery"
+    },
+    {
+      "type": "text",
+      "id": "usp_text_2",
+      "label": "USP 2 Text",
+      "default": "Assembly in Any Room"
+    },
+    {
+      "type": "text",
+      "id": "usp_text_3",
+      "label": "USP 3 Text",
+      "default": "0% Finance Available"
+    },
+    {
+      "type": "text",
+      "id": "usp_text_4",
+      "label": "USP 4 Text",
+      "default": "Sofa Price Match Guarantee"
+    }
+  ],
+  "presets": [
+    {
+      "name": "USPs"
+    }
+  ]
+}
+{% endschema %}
