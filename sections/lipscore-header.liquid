@@ -1,8 +1,16 @@
-<div style="text-align: center; padding-top: 10px; background-color: #45544c;" class="color-{{ section.settings.color_scheme }}">
-<div class="lipscore-service-review-badge-small-short lipscore-no-border lipscore-no-separator"
+<div 
+  style="
+    text-align: center;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  " 
+  class="color-{{ section.settings.color_scheme }}"
+>
+  <div
+    class="lipscore-service-review-badge-small-short lipscore-no-border lipscore-no-separator"
     data-ls-widget-height="30px"
-    data-ls-widget-width="300px">
-</div>
+    data-ls-widget-width="300px"
+  ></div>
 </div>
 
 {% schema %}
