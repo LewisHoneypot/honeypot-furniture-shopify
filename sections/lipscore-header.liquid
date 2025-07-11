@@ -1,0 +1,53 @@
+<div style="text-align: center; padding-top: 10px; background-color: #45544c;" class="color-{{ section.settings.color_scheme }}">
+<div class="lipscore-service-review-badge-small-short lipscore-no-border lipscore-no-separator"
+    data-ls-widget-height="30px"
+    data-ls-widget-width="300px">
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Lipscore",
+  "class": "section-lipscore-header pos-relative z-index-4",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colours"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lipscore"
+    }
+  ]
+}
+{% endschema %}
