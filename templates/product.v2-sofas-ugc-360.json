@@ -42,10 +42,6 @@
             "placement": "available-colours"
           }
         },
-        "lipscore_testimonial_fMmctR": {
-          "type": "lipscore_testimonial",
-          "settings": {}
-        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "disabled": true,
@@ -89,6 +85,24 @@
             "usp_icon_2": "dimensions",
             "usp_content_type": "usp_content_selector_2",
             "content": ""
+          }
+        },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "rbp_toggle": "on",
+            "bnpl_toggle": "on",
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
+          }
+        },
+        "klarna_buttons_E8rbfR": {
+          "type": "klarna_buttons",
+          "settings": {
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "buy_buttons": {
@@ -150,24 +164,6 @@
             "price_dom_element_selector": ""
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "rbp_toggle": "on",
-            "bnpl_toggle": "on",
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
-        "klarna_buttons_E8rbfR": {
-          "type": "klarna_buttons",
-          "settings": {
-            "colors_background": "#ffffff",
-            "popup_design": "minimal"
-          }
-        },
         "popup_wJ3rXc": {
           "type": "popup",
           "settings": {
@@ -200,6 +196,10 @@
             "design_type": "minimal",
             "dummy_button": "no"
           }
+        },
+        "lipscore_testimonial_fMmctR": {
+          "type": "lipscore_testimonial",
+          "settings": {}
         },
         "nosto_nosto_placements_block_PaFfMh": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
@@ -243,19 +243,19 @@
         "lipscore_rating_tYae7R",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_XbFj6r",
-        "lipscore_testimonial_fMmctR",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
+        "snap_buttons_HagTqx",
+        "klarna_buttons_E8rbfR",
         "buy_buttons",
         "expected_delivery_TKcTdt",
         "dividebuy_spread_the_cost_dividebuyproduct_qPn8xT",
-        "snap_buttons_HagTqx",
-        "klarna_buttons_E8rbfR",
         "popup_wJ3rXc",
         "popup_C7wLwE",
         "popup_4gFHxf",
+        "lipscore_testimonial_fMmctR",
         "nosto_nosto_placements_block_PaFfMh",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
