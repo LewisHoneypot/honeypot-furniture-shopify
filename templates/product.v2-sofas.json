@@ -89,6 +89,7 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
             "rbp_toggle": "on",
             "bnpl_toggle": "on",
@@ -98,11 +99,37 @@
             "popup_design": "minimal"
           }
         },
-        "klarna_buttons_DEbH3h": {
-          "type": "klarna_buttons",
+        "popup_bbyB6H": {
+          "type": "popup",
           "settings": {
-            "colors_background": "#ffffff",
-            "popup_design": "minimal"
+            "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
+            "page": "",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
+            "design_type": "minimal",
+            "dummy_button": "yes"
+          }
+        },
+        "popup_grnbAg": {
+          "type": "popup",
+          "settings": {
+            "text": "PRICE MATCH GUARANTEE*",
+            "page": "price-match-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
+          }
+        },
+        "popup_zT8VM4": {
+          "type": "popup",
+          "settings": {
+            "text": "5-YEAR FRAME GUARANTEE",
+            "page": "5-year-frame-guarantee",
+            "use_icon": "on",
+            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
+            "design_type": "minimal",
+            "dummy_button": "no"
           }
         },
         "buy_buttons": {
@@ -149,7 +176,6 @@
         },
         "dividebuy_spread_the_cost_dividebuyproduct_QmxDj3": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
-          "disabled": true,
           "settings": {
             "finproms_text": "or_from",
             "include_cart_total": true,
@@ -164,37 +190,11 @@
             "price_dom_element_selector": ""
           }
         },
-        "popup_bbyB6H": {
-          "type": "popup",
+        "klarna_buttons_DEbH3h": {
+          "type": "klarna_buttons",
           "settings": {
-            "text": "SOFA ASSEMBLED IN ANY ROOM OF CHOICE",
-            "page": "",
-            "use_icon": "on",
-            "icon_image": "shopify://shop_images/3_c524be80-d1e1-41ab-864e-e0610638138a.png",
-            "design_type": "minimal",
-            "dummy_button": "yes"
-          }
-        },
-        "popup_grnbAg": {
-          "type": "popup",
-          "settings": {
-            "text": "PRICE MATCH GUARANTEE*",
-            "page": "price-match-guarantee",
-            "use_icon": "on",
-            "icon_image": "shopify://shop_images/2_33fe119a-9ed6-4de1-a83b-24fd20856a9d.png",
-            "design_type": "minimal",
-            "dummy_button": "no"
-          }
-        },
-        "popup_zT8VM4": {
-          "type": "popup",
-          "settings": {
-            "text": "5-YEAR FRAME GUARANTEE",
-            "page": "5-year-frame-guarantee",
-            "use_icon": "on",
-            "icon_image": "shopify://shop_images/1_d81a35e9-b529-40d7-9960-373c29ca14d0.png",
-            "design_type": "minimal",
-            "dummy_button": "no"
+            "colors_background": "#ffffff",
+            "popup_design": "minimal"
           }
         },
         "lipscore_testimonial_knw7TN": {
@@ -248,13 +248,13 @@
         "usp_drawer_1_h8wxkV",
         "usp_drawer_2_Yk9cgj",
         "snap_buttons_HagTqx",
-        "klarna_buttons_DEbH3h",
-        "buy_buttons",
-        "expected_delivery_TKcTdt",
-        "dividebuy_spread_the_cost_dividebuyproduct_QmxDj3",
         "popup_bbyB6H",
         "popup_grnbAg",
         "popup_zT8VM4",
+        "buy_buttons",
+        "expected_delivery_TKcTdt",
+        "dividebuy_spread_the_cost_dividebuyproduct_QmxDj3",
+        "klarna_buttons_DEbH3h",
         "lipscore_testimonial_knw7TN",
         "nosto_nosto_placements_block_gLkfYt",
         "drawer_j3bNWd",
