@@ -42,10 +42,6 @@
             "placement": "available-colours"
           }
         },
-        "lipscore_testimonial_gHWVdj": {
-          "type": "lipscore_testimonial",
-          "settings": {}
-        },
         "color_swatch_bWwLRJ": {
           "type": "color_swatch",
           "disabled": true,
@@ -135,7 +131,6 @@
         },
         "dividebuy_spread_the_cost_dividebuyproduct_xHKfay": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
-          "disabled": true,
           "settings": {
             "finproms_text": "or_from",
             "include_cart_total": true,
@@ -152,6 +147,7 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
             "rbp_toggle": "on",
             "bnpl_toggle": "on",
@@ -167,6 +163,10 @@
             "colors_background": "#ffffff",
             "popup_design": "minimal"
           }
+        },
+        "lipscore_testimonial_gHWVdj": {
+          "type": "lipscore_testimonial",
+          "settings": {}
         },
         "nosto_nosto_placements_block_JHD3FT": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
@@ -210,7 +210,6 @@
         "lipscore_rating_3Hzdtt",
         "trustpilot_mini_TB9jLy",
         "nosto_nosto_placements_block_CwWhyT",
-        "lipscore_testimonial_gHWVdj",
         "color_swatch_bWwLRJ",
         "price",
         "usp_drawer_1_h8wxkV",
@@ -220,6 +219,7 @@
         "dividebuy_spread_the_cost_dividebuyproduct_xHKfay",
         "snap_buttons_HagTqx",
         "klarna_buttons_DGVMxL",
+        "lipscore_testimonial_gHWVdj",
         "nosto_nosto_placements_block_JHD3FT",
         "drawer_j3bNWd",
         "protection_drawer_iWbVLW"
