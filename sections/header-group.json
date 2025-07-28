@@ -126,13 +126,14 @@
             "heading_font_size": 16,
             "image_1": "shopify://shop_images/Sofas_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "shopify://pages/snap-finance",
+            "link_image_1": "shopify://pages/dividebuy",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
         },
         "mega_menu_1_MkHmHf": {
           "type": "mega_menu_1",
+          "disabled": true,
           "settings": {
             "menu_item": "Bedroom",
             "section_width": "customized-width",
@@ -154,7 +155,7 @@
             "heading_font_size": 16,
             "image_1": "shopify://shop_images/Living_and_dining_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "shopify://pages/snap-finance",
+            "link_image_1": "shopify://pages/dividebuy",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
