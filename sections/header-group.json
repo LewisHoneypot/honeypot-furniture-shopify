@@ -54,11 +54,25 @@
     },
     "lipscore_header_jFXDeY": {
       "type": "lipscore-header",
+      "disabled": true,
       "name": "Lipscore",
       "settings": {
         "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
         "padding_top": 10,
         "padding_bottom": 3
+      }
+    },
+    "usps_header_AfdXy6": {
+      "type": "usps-header",
+      "name": "USPs",
+      "settings": {
+        "color_scheme": "scheme-a7105165-5a01-4c68-86bd-c6d839cad3ad",
+        "padding_top": 5,
+        "padding_bottom": 5,
+        "usp_text_1": "1 - 7 Day Delivery",
+        "usp_text_2": "Assembly in Any Room",
+        "usp_text_3": "0% Finance Available",
+        "usp_text_4": "Sofa Price Match Guarantee"
       }
     },
     "b38aad37-e5d6-4a4a-9109-e406344cc53a": {
@@ -248,6 +262,7 @@
   "order": [
     "announcement-bar",
     "lipscore_header_jFXDeY",
+    "usps_header_AfdXy6",
     "b38aad37-e5d6-4a4a-9109-e406344cc53a",
     "header"
   ]
