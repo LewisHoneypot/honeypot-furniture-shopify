@@ -163,6 +163,7 @@
         },
         "snap_buttons_HagTqx": {
           "type": "snap_buttons",
+          "disabled": true,
           "settings": {
             "rbp_toggle": "on",
             "bnpl_toggle": "off",
