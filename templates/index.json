@@ -435,6 +435,92 @@
         "padding_bottom_mobile": 0
       }
     },
+    "collection_list_NKqtYJ": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_C3hGgh": {
+          "type": "collection",
+          "settings": {
+            "collection": "sofas"
+          }
+        },
+        "collection_ezwFEi": {
+          "type": "collection",
+          "settings": {
+            "collection": "beds"
+          }
+        },
+        "collection_VW4dHF": {
+          "type": "collection",
+          "settings": {
+            "collection": "mattresses"
+          }
+        },
+        "collection_7KV883": {
+          "type": "collection",
+          "settings": {
+            "collection": "dining-room"
+          }
+        },
+        "collection_LA3XCq": {
+          "type": "collection",
+          "settings": {
+            "collection": "living-room"
+          }
+        },
+        "collection_3HMabm": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_C3hGgh",
+        "collection_ezwFEi",
+        "collection_VW4dHF",
+        "collection_7KV883",
+        "collection_LA3XCq",
+        "collection_3HMabm"
+      ],
+      "settings": {
+        "type_style": "classic",
+        "heading": "Shop Collections",
+        "font": "garamond",
+        "heading_size": "small",
+        "heading_margin_bottom": 0,
+        "heading_margin_bottom_mobile": 0,
+        "arrow_position": 0,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "image_animation": "fade-down",
+        "text_animation": "fade-up",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0
+      }
+    },
     "1736424003f2ba2ed5": {
       "type": "apps",
       "blocks": {
@@ -500,92 +586,6 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "collection_list_NKqtYJ": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_C3hGgh": {
-          "type": "collection",
-          "settings": {
-            "collection": "sofas"
-          }
-        },
-        "collection_ezwFEi": {
-          "type": "collection",
-          "settings": {
-            "collection": "beds"
-          }
-        },
-        "collection_VW4dHF": {
-          "type": "collection",
-          "settings": {
-            "collection": "mattresses"
-          }
-        },
-        "collection_7KV883": {
-          "type": "collection",
-          "settings": {
-            "collection": "dining-room"
-          }
-        },
-        "collection_LA3XCq": {
-          "type": "collection",
-          "settings": {
-            "collection": "living-room"
-          }
-        },
-        "collection_3HMabm": {
-          "type": "collection",
-          "settings": {
-            "collection": "best-sellers"
-          }
-        }
-      },
-      "block_order": [
-        "collection_C3hGgh",
-        "collection_ezwFEi",
-        "collection_VW4dHF",
-        "collection_7KV883",
-        "collection_LA3XCq",
-        "collection_3HMabm"
-      ],
-      "settings": {
-        "type_style": "classic",
-        "heading": "",
-        "font": "default",
-        "heading_size": "small",
-        "heading_margin_bottom": 0,
-        "heading_margin_bottom_mobile": 0,
-        "arrow_position": 0,
-        "show_view_all": false,
-        "text_view_all": "",
-        "button_transparent": "transparent",
-        "show_line_separator": true,
-        "header_alignment": "left",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "height_odd_image": 150,
-        "height_even_image": 100,
-        "blocks_heading_size": "text-body",
-        "font_transform": "uppercase",
-        "text_alignment": "center",
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_background": "",
-        "gradient_background": "",
-        "enable_carousel": false,
-        "carousel_gap": 25,
-        "arrows_type": "all",
-        "carousel_infinite_scroll": false,
-        "columns_desktop": 3,
-        "columns_mobile": "2",
-        "image_animation": "fade-down",
-        "text_animation": "fade-up",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
       }
     },
@@ -806,7 +806,7 @@
       ],
       "settings": {
         "type_style": "classic",
-        "heading": "Shop Collections",
+        "heading": "More Collections",
         "font": "garamond",
         "heading_size": "small",
         "heading_margin_bottom": 0,
@@ -1386,10 +1386,10 @@
     "41769cb9-5f5a-4896-9da0-2d3bf33aef1e",
     "1736414156dbc7d523",
     "a0b92d9e-e25a-4de9-9035-373ef5c4d596",
+    "collection_list_NKqtYJ",
     "1736424003f2ba2ed5",
     "trustpilot_service_reviews_mini_qrrfxa",
     "17364240654517feb4",
-    "collection_list_NKqtYJ",
     "17364241009649290f",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
     "3d277f0b-f31b-482d-996e-089de61f3e90",
