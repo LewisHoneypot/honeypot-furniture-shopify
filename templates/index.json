@@ -105,7 +105,7 @@
       "settings": {
         "section_width": "page-width",
         "customize_width": 1450,
-        "image_ratio": "full-screen",
+        "image_ratio": "adapt-image",
         "image_ratio_mobile": "adapt-image",
         "color_scheme": "scheme-e478b9c9-3edc-41c0-a269-635cbe8ed918",
         "title": "See It In Action",
