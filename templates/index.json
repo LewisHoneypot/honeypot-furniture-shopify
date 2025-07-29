@@ -59,7 +59,7 @@
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
             "primary_button_label": "Find out more",
-            "primary_button_link": "shopify://pages/snap-finance",
+            "primary_button_link": "shopify://pages/dividebuy",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
