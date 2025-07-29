@@ -12,6 +12,34 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
+        "slide_dN3rVP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/3_a8077fa8-1760-413d-99ac-5f8ba8b988cc.jpg",
+            "mobile_image": "shopify://shop_images/3_d08d7216-1e23-4bce-8bae-568f35b8b5ec.jpg",
+            "content_max_width": 1200,
+            "heading_font": "font-heading",
+            "heading": "New In: Seriously Stylish Sofa Beds",
+            "heading_size": "small",
+            "heading_margin_bottom": 20,
+            "subheading": "Comfort meets versatility",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 26,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 90,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Shop New In",
+            "primary_button_link": "shopify://collections/new-in",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
@@ -67,40 +95,12 @@
             "padding_top_bottom": 0,
             "padding_left_right": 0
           }
-        },
-        "slide_dN3rVP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/3_a8077fa8-1760-413d-99ac-5f8ba8b988cc.jpg",
-            "mobile_image": "shopify://shop_images/3_d08d7216-1e23-4bce-8bae-568f35b8b5ec.jpg",
-            "content_max_width": 1200,
-            "heading_font": "font-heading",
-            "heading": "New In: Seriously Stylish Sofa Beds",
-            "heading_size": "small",
-            "heading_margin_bottom": 20,
-            "subheading": "Comfort meets versatility",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 26,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 90,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Shop New In",
-            "primary_button_link": "shopify://collections/new-in",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
         }
       },
       "block_order": [
+        "slide_dN3rVP",
         "slide_MVHYjL",
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
-        "slide_dN3rVP"
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0"
       ],
       "settings": {
         "section_width": "page-width",
