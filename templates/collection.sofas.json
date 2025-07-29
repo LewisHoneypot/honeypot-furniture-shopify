@@ -82,7 +82,7 @@
             "heading_size": "x-small",
             "show_view_all": "button",
             "text_view_all": "SHOP NOW",
-            "link": "shopify://collections/outlet",
+            "link": "shopify://collections/sale",
             "content_inside_image": true,
             "text_alignment": "center",
             "image_color_scheme": "background-1",
