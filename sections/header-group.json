@@ -126,7 +126,7 @@
             "heading_font_size": 16,
             "image_1": "shopify://shop_images/Sofas_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "shopify://pages/snap-finance",
+            "link_image_1": "shopify://pages/finance",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
@@ -153,7 +153,7 @@
             "heading_font_size": 16,
             "image_1": "shopify://shop_images/Living_and_dining_menu_banner.webp",
             "text_image_1": "",
-            "link_image_1": "shopify://pages/snap-finance",
+            "link_image_1": "shopify://pages/finance",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000"
           }
