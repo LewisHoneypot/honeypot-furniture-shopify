@@ -11,7 +11,6 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1400,
@@ -23,6 +22,7 @@
     },
     "dynamic_image_nQimYh": {
       "type": "dynamic-image",
+      "disabled": true,
       "name": "Dynamic Image",
       "settings": {
         "section_width": "customized-width",
@@ -62,6 +62,7 @@
         "text_H3VNgM",
         "button_JxpriK"
       ],
+      "disabled": true,
       "name": "Dynamic Text",
       "settings": {
         "section_width": "customized-width",
