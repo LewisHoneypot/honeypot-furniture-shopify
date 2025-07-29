@@ -789,13 +789,20 @@
           "settings": {
             "collection": "sofas"
           }
+        },
+        "collection_EUWpdC": {
+          "type": "collection",
+          "settings": {
+            "collection": "living-room"
+          }
         }
       },
       "block_order": [
         "collection_U64bhR",
         "collection_niexDf",
         "collection_UTjMBb",
-        "collection_yaqDQx"
+        "collection_yaqDQx",
+        "collection_EUWpdC"
       ],
       "settings": {
         "type_style": "classic",
