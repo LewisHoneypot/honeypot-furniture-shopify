@@ -1,8 +1,8 @@
 <section
   class="text-center {% if section.settings.section_width == 'page-width' %}page-width{% endif %}"
   style="
-    margin-top: {{ section.settings.section_margin }}px;
-    margin-bottom: {{ section.settings.section_margin }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
     {% if section.settings.section_width == 'customized-width' %}
       max-width: {{ section.settings.customize_width }}px;
       margin-left: auto;
@@ -80,26 +80,6 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding_top_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top_mobile",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom_mobile",
       "default": 0
     },
     {
