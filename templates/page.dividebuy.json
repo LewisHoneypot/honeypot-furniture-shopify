@@ -81,6 +81,7 @@
     },
     "dynamic_image_mfXbFg": {
       "type": "dynamic-image",
+      "disabled": true,
       "name": "Dynamic Image",
       "settings": {
         "section_width": "customized-width",
@@ -120,6 +121,7 @@
         "text_TfiAAj",
         "button_3MKyzX"
       ],
+      "disabled": true,
       "name": "Dynamic Text",
       "settings": {
         "section_width": "customized-width",
