@@ -195,7 +195,7 @@
       "type": "footer-info",
       "name": "Footer Info",
       "settings": {
-        "section_width": "customized-width",
+        "section_width": "page-width",
         "customize_width": 1100,
         "color_scheme": "",
         "padding_top": 0,
