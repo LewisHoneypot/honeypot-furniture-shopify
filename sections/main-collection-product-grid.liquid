@@ -486,7 +486,7 @@
     "title": {% if collection.metafields.custom.offer3_header.value %}{{ collection.metafields.custom.offer3_header.value | json }}{% else %}"0% Finance Available"{% endif %},
     "content": {% if collection.metafields.custom.offer3_text.value %}{{ collection.metafields.custom.offer3_text.value | json }}{% else %}"Spread the cost with interest-free finance - subject to status."{% endif %},
     "button_text": {% if collection.metafields.custom.offer3_cta_text.value %}{{ collection.metafields.custom.offer3_cta_text.value | json }}{% else %}"Learn More"{% endif %},
-    "button_url": {% if collection.metafields.custom.offer3_cta_link.value %}{{ collection.metafields.custom.offer3_cta_link.value | json }}{% else %}"/pages/dividebuy"{% endif %},
+    "button_url": {% if collection.metafields.custom.offer3_cta_link.value %}{{ collection.metafields.custom.offer3_cta_link.value | json }}{% else %}"/pages/finance"{% endif %},
     "background_image":
       {% if collection.metafields.custom.offer3_image.value %}
         {{ collection.metafields.custom.offer3_image.value | image_url: width: 1200 | json }}
