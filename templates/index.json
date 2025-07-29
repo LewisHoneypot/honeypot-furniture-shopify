@@ -691,17 +691,17 @@
     "3d277f0b-f31b-482d-996e-089de61f3e90": {
       "type": "lookbook",
       "blocks": {
-        "image_Pqbbcn": {
+        "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_d169829d-54b7-4378-acda-e9400479894d.jpg",
-            "product_1": "nebraska-sofa-stone-3-seater",
-            "horizontal_1": 75,
-            "vertical_1": 65,
-            "product_2": "",
+            "image": "shopify://shop_images/INSPO_HOME_PAGE_1_1.webp",
+            "product_1": "azzuro-sofabed-cream-universal-corner",
+            "horizontal_1": 46,
+            "vertical_1": 77,
+            "product_2": "light-grey-chair-and-pillow-from-annies-house",
             "horizontal_2": 19,
             "vertical_2": 60,
-            "product_3": "",
+            "product_3": "light-grey-wide-tufted-armchair-with-ottoman",
             "horizontal_3": 58,
             "vertical_3": 44,
             "product_4": "",
@@ -733,17 +733,17 @@
             "vertical_5": 50
           }
         },
-        "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0": {
+        "image_Pqbbcn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/INSPO_HOME_PAGE_1_1.webp",
-            "product_1": "azzuro-sofabed-cream-universal-corner",
-            "horizontal_1": 46,
-            "vertical_1": 77,
-            "product_2": "light-grey-chair-and-pillow-from-annies-house",
+            "image": "shopify://shop_images/2_d169829d-54b7-4378-acda-e9400479894d.jpg",
+            "product_1": "nebraska-sofa-stone-3-seater",
+            "horizontal_1": 75,
+            "vertical_1": 65,
+            "product_2": "",
             "horizontal_2": 19,
             "vertical_2": 60,
-            "product_3": "light-grey-wide-tufted-armchair-with-ottoman",
+            "product_3": "",
             "horizontal_3": 58,
             "vertical_3": 44,
             "product_4": "",
@@ -777,9 +777,9 @@
         }
       },
       "block_order": [
-        "image_Pqbbcn",
-        "image_WXaBwp",
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0",
+        "image_WXaBwp",
+        "image_Pqbbcn",
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-1"
       ],
       "settings": {
