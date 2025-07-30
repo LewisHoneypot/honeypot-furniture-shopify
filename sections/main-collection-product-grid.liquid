@@ -132,11 +132,50 @@
           >
             {{ collection.title | escape }}
           </h1>
+
           {% if collection.metafields.custom.top_description != blank %}
-            <div class="clickslice-top-description">
-              {{ collection.metafields.custom.top_description }}
+            <div class="clickslice-top-description-container">
+              <div class="clickslice-top-description collapsed" id="top-description">
+                {{ collection.metafields.custom.top_description }}
+              </div>
+              <button id="read-more-btn" class="read-more-button">Read more</button>
             </div>
+
+            <style>
+              .clickslice-top-description.collapsed {
+                max-height: 45px; /* adjust as needed */
+                overflow: hidden;
+                position: relative;
+              }
+
+              .read-more-button {
+                background: none;
+                border: none;
+                color: #45544C;
+                cursor: pointer;
+                padding: 0;
+                margin-top: 10px;
+                font-size: 1rem;
+              }
+
+              .read-more-button:focus {
+                outline: none;
+              }
+            </style>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const btn = document.getElementById("read-more-btn");
+                const desc = document.getElementById("top-description");
+
+                btn.addEventListener("click", function () {
+                  desc.classList.toggle("collapsed");
+                  btn.textContent = desc.classList.contains("collapsed") ? "Read more" : "Read less";
+                });
+              });
+            </script>
           {% endif %}
+
           {%- if section.settings.show_collection_description -%}
             <div class="p-w__description rte {{ section.settings.description_size | prepend: 'text-size text-size-' }} m-spacing"
               style="--m-spacing-b: {{ section.settings.text_margin_bottom | plus: 23 }}px;"
