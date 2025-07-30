@@ -893,7 +893,7 @@
           "type": "heading",
           "settings": {
             "heading": "A Variety of Payment and Finance Options",
-            "heading_size": "small",
+            "heading_size": "x-small",
             "padding_top": 31,
             "padding_bottom": 15
           }
@@ -902,7 +902,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Spread the cost with a variety of popular payment options. </p>",
-            "text_size": "medium",
+            "text_size": "small",
             "padding_top": 0,
             "padding_bottom": 30
           }
