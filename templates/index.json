@@ -756,7 +756,6 @@
         },
         "image_Pqbbcn": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/7_5919f3b7-76bd-4c27-8d4d-af769b73dcc7.jpg",
             "product_1": "jacob-natural-right-hand",
