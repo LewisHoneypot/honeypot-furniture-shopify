@@ -1,7 +1,7 @@
 :root {
-    --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-    --animation-slide-left: slideLeft var(--duration-extra-long) var(--ease-out-slow) forwards;
-    --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow) forwards;
+    --animation-slide-in: slideIn var(--duration-short) var(--ease-out-slow) forwards;
+    --animation-slide-left: slideLeft var(--duration-short) var(--ease-out-slow) forwards;
+    --animation-fade-in: fadeIn var(--duration-short) var(--ease-out-slow) forwards;
 }
 
 /* Animate */
