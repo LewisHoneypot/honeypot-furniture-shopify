@@ -893,13 +893,14 @@
           "type": "heading",
           "settings": {
             "heading": "A Variety of Payment and Finance Options",
-            "heading_size": "x-small",
+            "heading_size": "small",
             "padding_top": 31,
             "padding_bottom": 15
           }
         },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Spread the cost with a variety of popular payment options. </p>",
             "text_size": "small",
@@ -946,7 +947,7 @@
       ],
       "settings": {
         "section_width": "full-width",
-        "customize_width": 1500,
+        "customize_width": 1000,
         "custom_rouded": false,
         "custom_block_rouded": 0,
         "image": "shopify://shop_images/New_Banners.jpg",
@@ -969,7 +970,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 0
       }
     },
     "quotes_d7CMtB": {
