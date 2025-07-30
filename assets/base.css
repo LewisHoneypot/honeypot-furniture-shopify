@@ -245,10 +245,10 @@ animate-element:not([loaded]) {
 
 animate-element[loaded] [data-animate] {
   opacity: 1;
-  transition-delay: var(--a-delay, 0s);
+  /* transition-delay: var(--a-delay, 0s);
   transition-property: opacity, transform;
   transition-timing-function: ease;
-  transition-duration: var(--duration-long);
+  transition-duration: var(--duration-long); */
 }
 
 animate-element[loaded] [data-animate="fade-up"],
@@ -5007,7 +5007,7 @@ input[type="checkbox"]:checked ~ svg {
   pointer-events: none;
   background-color: rgba(var(--color-foreground), 0.5);
   transition-property: opacity, visibility, background-color, transform;
-  transition-duration: var(--duration-slow);
+  transition-duration: var(--duration-short);
   transition-timing-function: var(--cubic-fade);
 }
 
@@ -5017,7 +5017,7 @@ input[type="checkbox"]:checked ~ svg {
   display: block;
   cursor: url(close.svg) 24 24, auto;
   transition-property: opacity, visibility, background;
-  transition-duration: var(--duration-slow);
+  transition-duration: var(--duration-short);
   transition-timing-function: var(--cubic-fade);
 }
 
@@ -5027,7 +5027,7 @@ input[type="checkbox"]:checked ~ svg {
   padding: 0 2rem 2rem;
   transform: translateX(100%);
   transition-property: transform, visibility;
-  transition-duration: var(--duration-extra-long);
+  transition-duration: var(--duration-short);
   transition-timing-function: var(--cubic-fade);
   background-color: #ededed;
 }
@@ -5035,7 +5035,7 @@ input[type="checkbox"]:checked ~ svg {
 #CartDrawer {
   transform: translateX(100%);
   transition-property: transform, visibility;
-  transition-duration: var(--duration-extra-long);
+  transition-duration: var(--duration-short);
   transition-timing-function: var(--cubic-fade);
 }
 
@@ -5260,7 +5260,7 @@ details.modal .modal__toggle-close {
 }
 
 .quick-add-modal[open] .quick-add-modal__content:after {
-  transition-delay: var(--duration-extra-long);
+  transition-delay: var(--duration-short);
 }
 
 .quick-add-modal .scroll-trigger.scroll-trigger {
@@ -9782,7 +9782,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .menu-drawer {
-  animation: animateDrawerClose var(--duration-extra-long) var(--cubic-fade)
+  animation: animateDrawerClose var(--duration-short) var(--cubic-fade)
     forwards;
   width: calc(100vw - 4rem);
   border-width: var(--drawer-border-width) var(--drawer-border-width) 0 0;
@@ -9811,14 +9811,14 @@ details[open] > .header__icon--menu .icon-hamburger {
 .js details[open] > .menu-drawer__submenu {
   transition-property: opacity, visibility, transform;
   -webkit-transition-property: opacity, visibility, -webkit-transform;
-  transition-duration: var(--duration-extra-long);
+  transition-duration: var(--duration-short);
   transition-timing-function: var(--cubic-fade);
 }
 
 .no-js details[open] > .menu-drawer,
 .js details[open].menu-opening > .menu-drawer,
 details[open].menu-opening > .menu-drawer__submenu {
-  animation: animateDrawerOpen var(--duration-extra-long) var(--cubic-fade)
+  animation: animateDrawerOpen var(--duration-short) var(--cubic-fade)
     forwards;
 }
 
@@ -18364,7 +18364,7 @@ body.multitasking__show .newsletter-popup-opener {
     visibility: hidden;
     pointer-events: none;
     transform: translate3d(0, calc(0% - var(--m-t)), 0);
-    transition: all var(--duration-long) ease;
+    /* transition: all var(--duration-long) ease; */
   }
 
   header-menu:hover > .header__submenu,
