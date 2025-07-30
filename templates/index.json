@@ -691,6 +691,27 @@
     "3d277f0b-f31b-482d-996e-089de61f3e90": {
       "type": "lookbook",
       "blocks": {
+        "image_wG9xJm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_be69e397-4766-41b2-9172-6ab8128af4d6.jpg",
+            "product_1": "azzuro-sofabed-mocha-universal-corner",
+            "horizontal_1": 32,
+            "vertical_1": 26,
+            "product_2": "",
+            "horizontal_2": 19,
+            "vertical_2": 60,
+            "product_3": "",
+            "horizontal_3": 58,
+            "vertical_3": 44,
+            "product_4": "",
+            "horizontal_4": 53,
+            "vertical_4": 75,
+            "product_5": "",
+            "horizontal_5": 50,
+            "vertical_5": 50
+          }
+        },
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0": {
           "type": "image",
           "settings": {
@@ -777,6 +798,7 @@
         }
       },
       "block_order": [
+        "image_wG9xJm",
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0",
         "image_WXaBwp",
         "image_Pqbbcn",
