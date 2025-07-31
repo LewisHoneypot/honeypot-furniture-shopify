@@ -139,6 +139,7 @@
     "multitasking_secondary_button_background": "#d0e9e9",
     "enable_preloading_screen": false,
     "enable_clarity": true,
+    "enable_omniconvert": true,
     "enable_snap_collections": false,
     "checkout_logo_image": "shopify://shop_images/Primary_Logo.png",
     "checkout_logo_size": "small",
@@ -236,11 +237,6 @@
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {}
-      },
-      "17428600031447253342": {
-        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
-        "disabled": true,
         "settings": {}
       },
       "6990797075511561578": {

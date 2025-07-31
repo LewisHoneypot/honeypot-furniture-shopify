@@ -71,8 +71,8 @@
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_9153bc1b-1059-4cd2-b4d7-5335a7cd0bbf.jpg",
-            "mobile_image": "shopify://shop_images/1_842b411e-a325-45b6-9f96-6f81d913acd6.jpg",
+            "image": "shopify://shop_images/1_c951efdc-492b-45dc-951e-c606c26ad923.jpg",
+            "mobile_image": "shopify://shop_images/1_e52909bb-2208-4896-9ace-a6e85f979107.jpg",
             "content_max_width": 1200,
             "heading_font": "font-heading",
             "heading": "Sink Into Comfort, Stay in Style",
@@ -561,34 +561,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "17364240654517feb4": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_U9jEWT": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "frontpage-nosto-3"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_U9jEWT"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1800,
-        "color_scheme": "",
-        "use_custom_color": false,
-        "colors_text": "#424242",
-        "colors_background": "",
-        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
-        "type_review": "special",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "17364241009649290f": {
       "type": "apps",
       "blocks": {
@@ -691,6 +663,27 @@
     "3d277f0b-f31b-482d-996e-089de61f3e90": {
       "type": "lookbook",
       "blocks": {
+        "image_wG9xJm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_be69e397-4766-41b2-9172-6ab8128af4d6.jpg",
+            "product_1": "azzuro-sofabed-mocha-universal-corner",
+            "horizontal_1": 32,
+            "vertical_1": 26,
+            "product_2": "",
+            "horizontal_2": 19,
+            "vertical_2": 60,
+            "product_3": "",
+            "horizontal_3": 58,
+            "vertical_3": 44,
+            "product_4": "",
+            "horizontal_4": 53,
+            "vertical_4": 75,
+            "product_5": "",
+            "horizontal_5": 50,
+            "vertical_5": 50
+          }
+        },
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0": {
           "type": "image",
           "settings": {
@@ -736,8 +729,8 @@
         "image_Pqbbcn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_d169829d-54b7-4378-acda-e9400479894d.jpg",
-            "product_1": "nebraska-sofa-stone-3-seater",
+            "image": "shopify://shop_images/7_5919f3b7-76bd-4c27-8d4d-af769b73dcc7.jpg",
+            "product_1": "jacob-natural-right-hand",
             "horizontal_1": 75,
             "vertical_1": 65,
             "product_2": "",
@@ -777,6 +770,7 @@
         }
       },
       "block_order": [
+        "image_wG9xJm",
         "template--16801853964527__3d277f0b-f31b-482d-996e-089de61f3e90-167818052563a4fa59-0",
         "image_WXaBwp",
         "image_Pqbbcn",
@@ -893,13 +887,14 @@
           "type": "heading",
           "settings": {
             "heading": "A Variety of Payment and Finance Options",
-            "heading_size": "x-small",
+            "heading_size": "small",
             "padding_top": 31,
             "padding_bottom": 15
           }
         },
         "template--16801853964527__496e3ccd-49a7-4461-951f-0d3c7a67bf86-1679294957e276c25c-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Spread the cost with a variety of popular payment options. </p>",
             "text_size": "small",
@@ -946,7 +941,7 @@
       ],
       "settings": {
         "section_width": "full-width",
-        "customize_width": 1500,
+        "customize_width": 1000,
         "custom_rouded": false,
         "custom_block_rouded": 0,
         "image": "shopify://shop_images/New_Banners.jpg",
@@ -969,7 +964,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 0
       }
     },
     "quotes_d7CMtB": {
@@ -1077,6 +1072,88 @@
         "padding_bottom_mobile": 0
       }
     },
+    "17364240654517feb4": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_U9jEWT": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "frontpage-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_U9jEWT"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "featured_blog_DdAnpK": {
+      "type": "featured-blog",
+      "settings": {
+        "header_width": "page-width",
+        "content_width": "page-width",
+        "customize_width": 1800,
+        "padding_container_full_w": 0,
+        "show_line_separator": false,
+        "style_layout": "enable_grid",
+        "icon": "none",
+        "heading": "Blog Posts",
+        "heading_size": "small",
+        "show_view_all": "none",
+        "button_label": "Button label",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 60,
+        "blog": "news",
+        "post_limit": 4,
+        "spacing_desktop": 30,
+        "spacing_tablet": 30,
+        "spacing_mobile": 10,
+        "show_image": true,
+        "image_ratio": "landscape",
+        "show_content": false,
+        "show_date": true,
+        "show_author": false,
+        "show_tags": false,
+        "show_button": false,
+        "button_transparent": "default",
+        "text_per_line": "none",
+        "text_alignment": "left",
+        "title_margin_top": 0,
+        "title_margin_bottom": 10,
+        "content_margin_top": 15,
+        "content_margin_bottom": 0,
+        "grid_number": 4,
+        "grid_number_tablet": 2,
+        "grid_number_mobile": 2,
+        "carousel_number": 3,
+        "carousel_number_tablet": 1.3,
+        "t:sections.featured-blog.settings.heading_3": "1.2",
+        "arrows_type": "all",
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "image_animation": "none",
+        "heading_animation": "fade-up",
+        "text_animation": "fade-up",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "069a21ef-b01c-4296-b010-b63bc9797851": {
       "type": "newsletter",
       "blocks": {
@@ -1132,7 +1209,7 @@
         "padding_top": 30,
         "padding_bottom": 0,
         "padding_top_mobile": 13,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 0
       }
     },
     "custom_liquid_dfcHEi": {
@@ -1207,60 +1284,6 @@
         "padding_top": 65,
         "padding_bottom": 55,
         "padding_top_mobile": 15,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "featured_blog_DdAnpK": {
-      "type": "featured-blog",
-      "settings": {
-        "header_width": "page-width",
-        "content_width": "page-width",
-        "customize_width": 1800,
-        "padding_container_full_w": 0,
-        "show_line_separator": false,
-        "style_layout": "enable_grid",
-        "icon": "none",
-        "heading": "Blog Posts",
-        "heading_size": "small",
-        "show_view_all": "none",
-        "button_label": "Button label",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 60,
-        "blog": "news",
-        "post_limit": 4,
-        "spacing_desktop": 30,
-        "spacing_tablet": 30,
-        "spacing_mobile": 10,
-        "show_image": true,
-        "image_ratio": "landscape",
-        "show_content": false,
-        "show_date": true,
-        "show_author": false,
-        "show_tags": false,
-        "show_button": false,
-        "button_transparent": "default",
-        "text_per_line": "none",
-        "text_alignment": "left",
-        "title_margin_top": 0,
-        "title_margin_bottom": 10,
-        "content_margin_top": 15,
-        "content_margin_bottom": 0,
-        "grid_number": 4,
-        "grid_number_tablet": 2,
-        "grid_number_mobile": 2,
-        "carousel_number": 3,
-        "carousel_number_tablet": 1.3,
-        "t:sections.featured-blog.settings.heading_3": "1.2",
-        "arrows_type": "all",
-        "enable_pagination_type": "all",
-        "pagination_type": "progressbar",
-        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image_animation": "none",
-        "heading_animation": "fade-up",
-        "text_animation": "fade-up",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
     },
@@ -1345,6 +1368,7 @@
     },
     "slideshow_E9Lebj": {
       "type": "slideshow",
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "customize_width": 1800,
@@ -1433,7 +1457,6 @@
     "collection_list_NKqtYJ",
     "1736424003f2ba2ed5",
     "trustpilot_service_reviews_mini_qrrfxa",
-    "17364240654517feb4",
     "17364241009649290f",
     "cf17315b-8775-4564-8c4f-52a09f5fdd5b",
     "3d277f0b-f31b-482d-996e-089de61f3e90",
@@ -1442,10 +1465,11 @@
     "quotes_d7CMtB",
     "custom_liquid_X7qiKC",
     "testimonial_NkEcJz",
+    "17364240654517feb4",
+    "featured_blog_DdAnpK",
     "069a21ef-b01c-4296-b010-b63bc9797851",
     "custom_liquid_dfcHEi",
     "2c0f3337-8adc-4a53-bad5-fa7e4e5087e1",
-    "featured_blog_DdAnpK",
     "79993e5e-b47d-42d2-8535-5d30f78f1b0f",
     "slideshow_E9Lebj",
     "visual_hightlight_XzftDa"
