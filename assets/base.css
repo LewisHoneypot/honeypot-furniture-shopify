@@ -6163,6 +6163,7 @@ slideshow-component .swiper-slide {
 @media screen and (min-width:990px) {
   slideshow-component .swiper-slide {
     max-height: none;
+    min-height: 500px;
   }
 }
 
