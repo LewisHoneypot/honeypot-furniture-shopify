@@ -138,7 +138,7 @@
     "multitasking_collapse": true,
     "multitasking_secondary_button_background": "#d0e9e9",
     "enable_preloading_screen": false,
-    "enable_clarity": true,
+    "enable_clarity": false,
     "enable_omniconvert": true,
     "enable_snap_collections": false,
     "checkout_logo_image": "shopify://shop_images/Primary_Logo.png",
