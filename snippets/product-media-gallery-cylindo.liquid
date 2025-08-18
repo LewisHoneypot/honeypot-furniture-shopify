@@ -33,10 +33,10 @@
 >
   {%- if template contains '360' -%}
     <cylindo-360></cylindo-360>
-      <cylindo-360-frame frame="4"></cylindo-360-frame>
+      {% comment %} <cylindo-360-frame frame="4"></cylindo-360-frame>
       <cylindo-360-frame frame="9"></cylindo-360-frame>
       <cylindo-360-frame frame="13"></cylindo-360-frame>
-      <cylindo-360-frame frame="17"></cylindo-360-frame>
+      <cylindo-360-frame frame="17"></cylindo-360-frame> {% endcomment %}
   {%- endif -%}
 
   {%- for media in product.media -%}
