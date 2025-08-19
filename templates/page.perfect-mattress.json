@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -38,7 +47,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -48,7 +57,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "Show Me All Mattresses",
-            "primary_button_link": "shopify:\/\/collections\/mattresses",
+            "primary_button_link": "shopify://collections/mattresses",
             "primary_button_type": "default",
             "secondary_button_label": "Help Me Find The Perfect Mattress",
             "secondary_button_link": "#shopify-section-template--22448440049951__rich_text_UFAaYt",
@@ -155,7 +164,7 @@
         "collection_EWnfLd": {
           "type": "collection",
           "settings": {
-            "collection": "firm"
+            "collection": "firm-mattresses"
           }
         }
       },
@@ -214,7 +223,7 @@
         "text_bYNLQ7": {
           "type": "text",
           "settings": {
-            "text": "<p>Selecting the perfect mattress is pivotal to your overall health and wellbeing. It’s far more than just a sleeping surface; it’s a sanctuary where your body rejuvenates, repairs, and revitalises after a long day. An ill-suited mattress can lead to discomfort, sleep deprivation, and long-term health issues like chronic back pain. Thus, taking the time to choose the right mattress that aligns with your sleep style, comfort preferences, and budget is essential to secure quality sleep and promote optimal health. It’s not simply about sleeping well, but living well.<\/p>",
+            "text": "<p>Selecting the perfect mattress is pivotal to your overall health and wellbeing. It’s far more than just a sleeping surface; it’s a sanctuary where your body rejuvenates, repairs, and revitalises after a long day. An ill-suited mattress can lead to discomfort, sleep deprivation, and long-term health issues like chronic back pain. Thus, taking the time to choose the right mattress that aligns with your sleep style, comfort preferences, and budget is essential to secure quality sleep and promote optimal health. It’s not simply about sleeping well, but living well.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -243,7 +252,7 @@
         "heading_MGWkzi": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Soft Mattresses: Embrace The Plush Comfort<\/h2>",
+            "heading": "<h2>Soft Mattresses: Embrace The Plush Comfort</h2>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -252,7 +261,7 @@
         "text_QdUjeq": {
           "type": "text",
           "settings": {
-            "text": "<p>If you enjoy the feeling of sinking into your mattress at the end of the day, soft mattresses will fit the bill perfectly. They are well-padded, offering a gentle cushion that cradles your body in a soothing embrace. These mattresses are ideal for individuals of a lighter build, side sleepers, or those who experience joint sensitivity, as the plush surface helps alleviate pressure points, providing a pain-free slumber. However, it’s worth remembering that even a soft mattress needs to offer enough support to maintain a healthy spine alignment and prevent potential back discomfort.<\/p><p><strong>Best for:<\/strong> <em>Lighter individuals, side sleepers, those with joint sensitivity or pain.<\/em><\/p>",
+            "text": "<p>If you enjoy the feeling of sinking into your mattress at the end of the day, soft mattresses will fit the bill perfectly. They are well-padded, offering a gentle cushion that cradles your body in a soothing embrace. These mattresses are ideal for individuals of a lighter build, side sleepers, or those who experience joint sensitivity, as the plush surface helps alleviate pressure points, providing a pain-free slumber. However, it’s worth remembering that even a soft mattress needs to offer enough support to maintain a healthy spine alignment and prevent potential back discomfort.</p><p><strong>Best for:</strong> <em>Lighter individuals, side sleepers, those with joint sensitivity or pain.</em></p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -280,7 +289,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/9.jpg",
+        "image": "shopify://shop_images/9.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -311,7 +320,7 @@
         "heading_Ytr6cn": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Medium Mattresses: Balancing Comfort And Support<\/h2>",
+            "heading": "<h2>Medium Mattresses: Balancing Comfort And Support</h2>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -320,7 +329,7 @@
         "text_apfC3Y": {
           "type": "text",
           "settings": {
-            "text": "<p>Medium mattresses are often the preferred choice for many, providing a balance between soft comfort and firm support. These versatile mattresses are suitable for most body types and sleep positions, offering a well-rounded balance of comfort, support, and pressure relief. If you’re someone who changes positions frequently during the night, or if you share the bed with a partner who has different comfort preferences, a medium mattress could be the ideal solution, ensuring a peaceful sleep for all.<\/p><p><strong>Best for:<\/strong> <em>Combination sleepers, couples with different comfort preferences, people seeking balanced comfort and support.<\/em><\/p>",
+            "text": "<p>Medium mattresses are often the preferred choice for many, providing a balance between soft comfort and firm support. These versatile mattresses are suitable for most body types and sleep positions, offering a well-rounded balance of comfort, support, and pressure relief. If you’re someone who changes positions frequently during the night, or if you share the bed with a partner who has different comfort preferences, a medium mattress could be the ideal solution, ensuring a peaceful sleep for all.</p><p><strong>Best for:</strong> <em>Combination sleepers, couples with different comfort preferences, people seeking balanced comfort and support.</em></p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -348,7 +357,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/9.jpg",
+        "image": "shopify://shop_images/9.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -379,7 +388,7 @@
         "heading_UX4knK": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Firm Mattresses: Solid Support For Sound Sleep<\/h2>",
+            "heading": "<h2>Firm Mattresses: Solid Support For Sound Sleep</h2>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -388,7 +397,7 @@
         "text_aPXPd8": {
           "type": "text",
           "settings": {
-            "text": "<p>For those who favour a sturdy sleeping surface, firm mattresses are a great option. They offer robust support, helping to maintain a neutral spine position and reduce the risk of waking up with aches and pains. These mattresses are particularly beneficial for back or stomach sleepers, and heavier individuals, as they prevent excessive sinkage which can disrupt the alignment of the spine. While firm mattresses may feel a touch less ‘cushy’ to some, the benefits of excellent support and alignment they provide are considerable for promoting a healthier, more restful sleep.<\/p><p><strong>Best for:<\/strong> <em>Back or stomach sleepers, heavier individuals, those seeking robust support.<\/em><\/p>",
+            "text": "<p>For those who favour a sturdy sleeping surface, firm mattresses are a great option. They offer robust support, helping to maintain a neutral spine position and reduce the risk of waking up with aches and pains. These mattresses are particularly beneficial for back or stomach sleepers, and heavier individuals, as they prevent excessive sinkage which can disrupt the alignment of the spine. While firm mattresses may feel a touch less ‘cushy’ to some, the benefits of excellent support and alignment they provide are considerable for promoting a healthier, more restful sleep.</p><p><strong>Best for:</strong> <em>Back or stomach sleepers, heavier individuals, those seeking robust support.</em></p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -416,7 +425,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/7.jpg",
+        "image": "shopify://shop_images/7.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -457,7 +466,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "Show Me All Mattresses",
-            "primary_button_link": "shopify:\/\/collections\/mattresses",
+            "primary_button_link": "shopify://collections/mattresses",
             "primary_button_type": "default",
             "secondary_button_label": "",
             "secondary_button_link": "",
