@@ -11,24 +11,6 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "blocks": {
-        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8": {
-          "type": "heading",
-          "settings": {
-            "heading": "HUGE SAVING ON SOFAS & MORE"
-          }
-        },
-        "9d466322-a450-453a-adc0-7fe3b697bda4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Sale up to 60% off on selected items*</p>"
-          }
-        }
-      },
-      "block_order": [
-        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8",
-        "9d466322-a450-453a-adc0-7fe3b697bda4"
-      ],
       "disabled": true,
       "settings": {
         "full_width": true,
@@ -45,10 +27,9 @@
       "blocks": {
         "slide_TUrnyn": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/GardenEOSSale.jpg",
-            "mobile_image": "shopify://shop_images/Garden_Furniture_Spring_Sale_25_OFF_Website_Banners_500_x_500_px.jpg",
+            "image": "shopify://shop_images/Cinema_Sofas_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/Cinema_Sofas_Mobile.jpg",
             "content_max_width": 400,
             "heading_font": "font-heading",
             "heading": "",
