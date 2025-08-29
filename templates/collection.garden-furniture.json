@@ -45,6 +45,7 @@
       "blocks": {
         "slide_TUrnyn": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/GardenEOSSale.jpg",
             "mobile_image": "shopify://shop_images/Garden_Furniture_Spring_Sale_25_OFF_Website_Banners_500_x_500_px.jpg",
