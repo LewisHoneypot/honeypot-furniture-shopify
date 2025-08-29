@@ -1,0 +1,731 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8": {
+          "type": "heading",
+          "settings": {
+            "heading": "HUGE SAVING ON SOFAS & MORE"
+          }
+        },
+        "9d466322-a450-453a-adc0-7fe3b697bda4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sale up to 60% off on selected items*</p>"
+          }
+        }
+      },
+      "block_order": [
+        "750b1967-9fdf-4d6b-be33-15eb2c9b0ab8",
+        "9d466322-a450-453a-adc0-7fe3b697bda4"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "type": "custom",
+        "image_ratio": "adapt",
+        "custom_height": 20,
+        "color_scheme": "accent-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_cK3HQE": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_TUrnyn": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/GardenEOSSale.jpg",
+            "mobile_image": "shopify://shop_images/Garden_Furniture_Spring_Sale_25_OFF_Website_Banners_500_x_500_px.jpg",
+            "content_max_width": 400,
+            "heading_font": "font-heading",
+            "heading": "",
+            "heading_size": "default",
+            "heading_margin_bottom": 20,
+            "subheading": "",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 30,
+            "box_align": "middle-left",
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "",
+            "primary_button_link": "",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_TUrnyn"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "image_ratio": "adapt-image",
+        "image_ratio_mobile": "550px",
+        "color_scheme": "",
+        "title": "See It In Action",
+        "arrows_type": "none",
+        "arrows_position": "middle-center",
+        "carousel_infinite_scroll": true,
+        "enable_autoplay": false,
+        "color_autoplay": "#ffffff",
+        "change_slides_speed": 5,
+        "enable_pagination_type": "all",
+        "pagination_type": "dots",
+        "image_behavior": "none",
+        "accessibility_info": ""
+      }
+    },
+    "image_banner_kW7TGh": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "section_width": "full-width",
+        "customize_width": 1800,
+        "custom_rouded": false,
+        "custom_block_rouded": 0,
+        "image": "shopify://shop_images/Garden-Banner-1.jpg",
+        "content_inside_image_mobile": false,
+        "mobile_row_height": 42,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "custom_content_max_width": false,
+        "content_max_width": 500,
+        "mobile_color_scheme": "custom",
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "color_scheme": "",
+        "image_overlay_opacity": 30,
+        "color_overlay_opacity": "#000000",
+        "image_behavior": "none",
+        "text_animation": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "cc19003e-188e-4f3a-a092-71a303ff5987": {
+          "type": "image",
+          "settings": {
+            "banner_position": 3,
+            "image": "shopify://shop_images/1_5d5ad752-a33b-4eea-8590-bb5309016b15.jpg",
+            "image_ratio": "adapt",
+            "subtitle_image": "",
+            "subheading_font": "font-body",
+            "subheading_size": "medium",
+            "heading_image": "",
+            "heading_size": "small",
+            "show_view_all": "button",
+            "text_view_all": "SHOP NOW",
+            "link": "shopify://collections/bundles-1",
+            "content_inside_image": true,
+            "text_alignment": "center",
+            "image_color_scheme": "background-1",
+            "image_overlay_opacity": 0,
+            "color_overlay_opacity": "#ffffff"
+          }
+        },
+        "3fca5cef-72fc-4b52-a001-50044316c114": {
+          "type": "image",
+          "settings": {
+            "banner_position": 6,
+            "image": "shopify://shop_images/2_89de4692-8a29-41fe-bad4-9b2783d05687.jpg",
+            "image_ratio": "adapt",
+            "subtitle_image": "",
+            "subheading_font": "font-body",
+            "subheading_size": "x-large",
+            "heading_image": "",
+            "heading_size": "x-small",
+            "show_view_all": "button",
+            "text_view_all": "SHOP NOW",
+            "link": "shopify://collections/sale",
+            "content_inside_image": true,
+            "text_alignment": "center",
+            "image_color_scheme": "background-1",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "cc19003e-188e-4f3a-a092-71a303ff5987",
+        "3fca5cef-72fc-4b52-a001-50044316c114"
+      ],
+      "settings": {
+        "use_nosto": true,
+        "products_per_row": 3,
+        "products_per_page": 24,
+        "columns_mobile": "1",
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "breadcrumb_size": "medium",
+        "breadcrumb_padding_bottom": 60,
+        "heading_size": "default",
+        "heading_margin_bottom": 24,
+        "description_size": "xxx-large",
+        "text_margin_bottom": 72,
+        "content_color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
+        "content_use_custom_color": false,
+        "content_colors_text": "#424242",
+        "content_colors_background": "",
+        "content_gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "margin_bottom": 30,
+        "enable_filtering": true,
+        "filter_heading_size": "default",
+        "filter_type": "horizontal",
+        "type_style": "special",
+        "pagination_type": "progressbar",
+        "swatch": "Color",
+        "pill": "Size",
+        "filtering_color_scheme": "inverse",
+        "enable_sorting": true,
+        "sorting_style": "default",
+        "enable_switcher": false,
+        "product_color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "collection_dimensions_toggle": true,
+        "collection_delivery_eta_heading": "Delivery From",
+        "collection_delivery_eta_toggle": true,
+        "tiers": "on",
+        "date_type": "vague",
+        "use_overlay_1": false,
+        "overlay_text_1": "Delivery from Fri, 13 Dec",
+        "overlay_text_color_1": "#000000",
+        "overlay_background_color_1": "#ffffff",
+        "use_overlay_2": true,
+        "overlay_text_2": "PRE-CHRISTMAS DELIVERY",
+        "overlay_text_color_2": "#ffffff",
+        "overlay_background_color_2": "#000000",
+        "christmas_delivery_eta_toggle": false,
+        "christmas_image": "shopify://shop_images/Copy_of_PRE-XMAS_DELIVERY_STICKER_1.png"
+      }
+    },
+    "1744710593d3c3e758": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_chyi6d": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "disabled": true,
+          "settings": {
+            "placement": "categorypage-nosto-3"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_chyi6d"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "type_review": "special",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_with_text_Tghmdz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iNgVMc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Garden Furniture On Finance</strong></h3>",
+            "heading_size": "h0",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "text_YbfLtJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Honeypot Furniture, we make it easy to spread the cost of your perfect outdoor setup. Our flexible finance options are designed to suit every budget:</p><p><br/> – Enjoy interest-free payments over shorter terms, so you can spread the cost without paying a penny more.<br/></p><p><br/> – Need more time? Choose from extended finance options with competitive rates to make larger purchases more manageable.<br/><br/>See Finance Options at Checkout.<br/></p>",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        },
+        "link_4VQJqj": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_view_all": "link",
+            "link_label": "",
+            "link": "",
+            "button_transparent": "transparent",
+            "padding_top": 10,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_iNgVMc",
+        "text_YbfLtJ",
+        "link_4VQJqj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "type_style": "classic",
+        "section_width": "page-width",
+        "customize_width": 1800,
+        "color_scheme": "",
+        "image": "shopify://shop_images/2_68e8a00b-c706-459d-b73b-eadda8278163.jpg",
+        "heading": "",
+        "heading_size": "default",
+        "link_label": "",
+        "link": "",
+        "colors_heading": "#ffffff",
+        "show_top_line_separator": false,
+        "show_bot_line_separator": false,
+        "background_for_box": false,
+        "colors_text": "#424242",
+        "colors_background": "",
+        "gradient_background": "linear-gradient(90deg, rgba(246, 238, 227, 1), rgba(223, 244, 247, 1) 100%)",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "layout_mobile": "image_first_mobile",
+        "mobile_content_alignment": "left",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "featured_product_pK8JEd": {
+      "type": "featured-product",
+      "blocks": {
+        "title_6G3YA9": {
+          "type": "title",
+          "settings": {
+            "padding_top": 5,
+            "padding_bottom": 5,
+            "heading_size": "h1"
+          }
+        },
+        "price_AfrPCc": {
+          "type": "price",
+          "settings": {
+            "show_taxes": false,
+            "show_shipping": false,
+            "use_custom_color": false,
+            "colors_text": "#424242",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "vendor_9gEAri": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "variant_picker_4XULVU": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch": "Color",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "buy_buttons_MCW8Xy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_wishlist_product": false,
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_colors_text": "#121212",
+            "add_to_cart_colors_background": "#ffffff",
+            "add_to_cart_gradient_background": "",
+            "add_to_cart_colors_text_hover": "#ffffff",
+            "add_to_cart_colors_background_hover": "#396774",
+            "add_to_cart_gradient_background_hover": "",
+            "buy_it_now_colors_text": "#ffffff",
+            "buy_it_now_colors_background": "#121212",
+            "buy_it_now_gradient_background": "",
+            "buy_it_now_colors_text_hover": "#ffffff",
+            "buy_it_now_colors_background_hover": "#000000",
+            "buy_it_now_gradient_background_hover": "",
+            "wishlist_colors_text": "#000000",
+            "wishlist_colors_background": "#000000",
+            "wishlist_colors_text_hover": "#eb9c9c",
+            "wishlist_colors_background_hover": "#eb9c9c",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        }
+      },
+      "block_order": [
+        "title_6G3YA9",
+        "price_AfrPCc",
+        "vendor_9gEAri",
+        "variant_picker_4XULVU",
+        "buy_buttons_MCW8Xy"
+      ],
+      "settings": {
+        "product": "oxford-garden-furniture-set",
+        "show_product_badges": true,
+        "enable_share": true,
+        "type_style": "modern",
+        "media_size": "large",
+        "gallery_layout": "stacked",
+        "image_zoom": "lightbox",
+        "enable_video_looping": false,
+        "image_ratio": "square",
+        "carousel_direction": "vertical",
+        "carousel_gap_desktop": 16,
+        "carousel_gap_tablet": 8,
+        "color_scheme": "",
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 25
+      }
+    },
+    "29a4766e-9b16-4206-927b-f13e02616027": {
+      "type": "collage",
+      "blocks": {
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Makeup Brushes Collections",
+            "heading_size": "x-small",
+            "button_transparent": "default",
+            "button_type": "standard",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/new-arrivals",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#2d2d2d",
+            "desktop_content_position": "top-left"
+          }
+        },
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Kissable Confidence Collections",
+            "heading_size": "x-small",
+            "button_transparent": "default",
+            "button_type": "standard",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/new-arrivals",
+            "image_overlay_opacity": 30,
+            "color_overlay_opacity": "#2d2d2d",
+            "desktop_content_position": "top-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-1",
+        "template--16909400178927__29a4766e-9b16-4206-927b-f13e02616027-image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "customized-width",
+        "customize_width": 1600,
+        "enable_full_width": true,
+        "heading": "",
+        "text": "",
+        "text_alignment": "center",
+        "heading_margin_bottom": 30,
+        "image_ratio": "adapt",
+        "spacing_desktop": 20,
+        "spacing_tablet": 10,
+        "spacing_mobile": 10,
+        "enable_carousel": false,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "color_scheme": "",
+        "image_animation": "zoom-out",
+        "image_behavior": "none",
+        "text_animation": "fade-up",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "collection_list_ig8tXp": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_PeLXiN": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_8QwTFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-in"
+          }
+        },
+        "collection_WA4Xwj": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-1"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PeLXiN",
+        "collection_8QwTFk",
+        "collection_WA4Xwj"
+      ],
+      "disabled": true,
+      "settings": {
+        "type_style": "classic",
+        "heading": "Collections",
+        "font": "default",
+        "heading_size": "medium",
+        "heading_margin_bottom": 30,
+        "heading_margin_bottom_mobile": 0,
+        "arrow_position": 0,
+        "show_view_all": false,
+        "text_view_all": "",
+        "button_transparent": "transparent",
+        "show_line_separator": true,
+        "header_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "height_odd_image": 150,
+        "height_even_image": 100,
+        "blocks_heading_size": "text-body",
+        "font_transform": "uppercase",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "use_custom_color": false,
+        "colors_background": "",
+        "gradient_background": "",
+        "enable_carousel": false,
+        "carousel_gap": 25,
+        "arrows_type": "all",
+        "carousel_infinite_scroll": false,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_animation": "none",
+        "text_animation": "none",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 43
+      }
+    },
+    "recently-products": {
+      "type": "recently-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Recently Viewed Products",
+        "heading_margin_bottom": 32,
+        "color_scheme": "background-1",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "spacing_desktop": 24,
+        "spacing_tablet": 20,
+        "spacing_mobile": 8,
+        "arrows_type": "lg",
+        "carousel_infinite_scroll": true,
+        "enable_pagination_type": "all",
+        "pagination_type": "progressbar",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "clickslice_bottom_description_gfNHzA": {
+      "type": "clickslice-bottom-description",
+      "disabled": true,
+      "settings": {}
+    },
+    "clickslice_bottom_collapsible_tabs_GD3zKe": {
+      "type": "clickslice-bottom-collapsible-tabs",
+      "disabled": true,
+      "settings": {}
+    },
+    "ai_smart_section_JmykQq": {
+      "type": "ai-smart-section",
+      "blocks": {
+        "ai_gen_block_5e376c3_rrQxjr": {
+          "type": "ai_gen_block_5e376c3",
+          "disabled": true,
+          "settings": {
+            "main_heading": "Our Garden Furniture Collection",
+            "background_color": "#ffffff",
+            "tab_active_color": "#2a6876",
+            "button_color": "#2a6876",
+            "add_to_cart_text": "",
+            "view_product_text": "",
+            "tab_1_enabled": true,
+            "tab_1_label": "Kensington",
+            "tab_1_heading": "",
+            "tab_1_main_image": "shopify://shop_images/KensingtonGardenSet4.jpg",
+            "tab_1_product": "",
+            "tab_1_feature_1_image": "shopify://shop_images/1_3932095a-8bf0-40c5-94bd-6905eccbb069.jpg",
+            "tab_1_feature_1_caption": "Scratch-proof table top.",
+            "tab_1_feature_1_bg_color": "#f5f5f5",
+            "tab_1_feature_2_image": "shopify://shop_images/2_35519fd4-426c-44da-8857-3b33f0aa8bbe.jpg",
+            "tab_1_feature_2_caption": "Heat-retaining coals.",
+            "tab_1_feature_2_bg_color": "#f5f5f5",
+            "tab_1_feature_3_image": "shopify://shop_images/3_46b8a595-bb6f-439b-8a39-3642cf01ff7f.jpg",
+            "tab_1_feature_3_caption": "Comfy cushions.",
+            "tab_1_feature_3_bg_color": "#f5f5f5",
+            "tab_2_enabled": true,
+            "tab_2_label": "Chester",
+            "tab_2_heading": "",
+            "tab_2_product": "",
+            "tab_2_feature_1_caption": "Seats up to 6 people comfortably",
+            "tab_2_feature_1_bg_color": "#f5f5f5",
+            "tab_2_feature_2_caption": "UV-resistant fabric cushions included",
+            "tab_2_feature_2_bg_color": "#f5f5f5",
+            "tab_2_feature_3_caption": "Rust-proof aluminum frame construction",
+            "tab_2_feature_3_bg_color": "#f5f5f5",
+            "tab_3_enabled": true,
+            "tab_3_label": "Lounge Sets",
+            "tab_3_heading": "Comfortable Outdoor Lounge Sets",
+            "tab_3_product": "",
+            "tab_3_feature_1_caption": "Modular design for flexible arrangements",
+            "tab_3_feature_1_bg_color": "#f5f5f5",
+            "tab_3_feature_2_caption": "Water-resistant cushion covers",
+            "tab_3_feature_2_bg_color": "#f5f5f5",
+            "tab_3_feature_3_caption": "Durable wicker material that withstands elements",
+            "tab_3_feature_3_bg_color": "#f5f5f5",
+            "tab_4_enabled": true,
+            "tab_4_label": "Patio Accessories",
+            "tab_4_heading": "Complete Your Outdoor Space",
+            "tab_4_product": "",
+            "tab_4_feature_1_caption": "Solar-powered LED lighting options",
+            "tab_4_feature_1_bg_color": "#f5f5f5",
+            "tab_4_feature_2_caption": "Weather-resistant outdoor rugs",
+            "tab_4_feature_2_bg_color": "#f5f5f5",
+            "tab_4_feature_3_caption": "Decorative outdoor pillows and throws",
+            "tab_4_feature_3_bg_color": "#f5f5f5"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_bdd6eea_dbGxYm": {
+          "type": "ai_gen_block_bdd6eea",
+          "disabled": true,
+          "settings": {
+            "main_heading": "Explore Our Garden Collection",
+            "section_background": "#ffffff",
+            "tab_background": "#f4f4f4",
+            "tab_text_color": "#333333",
+            "tab_active_background": "#333333",
+            "tab_active_text_color": "#ffffff",
+            "product_card_background": "#ffffff",
+            "button_text": "View",
+            "button_background": "#4a8f29",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#3a7020",
+            "tab_1_label": "Kensington",
+            "tab_1_heading": "",
+            "tab_1_main_image": "shopify://shop_images/KensingtonGardenSet4.jpg",
+            "tab_1_product": "",
+            "tab_1_feature_1_image": "shopify://shop_images/1_a271ea8a-d5b2-4b87-b388-c59b8f7d1ff1.jpg",
+            "tab_1_feature_1_caption": "Scratch-proof table top.",
+            "tab_1_feature_1_color": "#ffffff",
+            "tab_1_feature_2_image": "shopify://shop_images/2_0ea46ef5-7513-48bc-9d12-caf698c80e2e.jpg",
+            "tab_1_feature_2_caption": "Heat-retaining coals.",
+            "tab_1_feature_2_color": "#ffffff",
+            "tab_1_feature_3_image": "shopify://shop_images/3_a52ed99a-8aa9-429f-aadd-b138efe37574.jpg",
+            "tab_1_feature_3_caption": "Comfy cushions.",
+            "tab_1_feature_3_color": "#ffffff",
+            "tab_2_label": "Outdoor Sofa",
+            "tab_2_heading": "Comfortable Outdoor Sofa Sets",
+            "tab_2_product": "",
+            "tab_2_feature_1_caption": "All-weather wicker that resists fading and cracking",
+            "tab_2_feature_1_color": "#27ae60",
+            "tab_2_feature_2_caption": "Quick-dry foam cushions with removable, washable covers",
+            "tab_2_feature_2_color": "#8e44ad",
+            "tab_2_feature_3_caption": "Modular design allows for multiple configurations",
+            "tab_2_feature_3_color": "#e67e22",
+            "tab_3_label": "Dining Set",
+            "tab_3_heading": "Elegant Outdoor Dining Sets",
+            "tab_3_product": "",
+            "tab_3_feature_1_caption": "Rust-resistant aluminum frame for years of use",
+            "tab_3_feature_1_color": "#1abc9c",
+            "tab_3_feature_2_caption": "Tempered glass tabletop that's easy to clean",
+            "tab_3_feature_2_color": "#9b59b6",
+            "tab_3_feature_3_caption": "Stackable chairs for convenient storage",
+            "tab_3_feature_3_color": "#2980b9",
+            "tab_4_label": "Planters",
+            "tab_4_heading": "Stylish Garden Planters",
+            "tab_4_product": "",
+            "tab_4_feature_1_caption": "Frost-resistant ceramic that withstands extreme temperatures",
+            "tab_4_feature_1_color": "#c0392b",
+            "tab_4_feature_2_caption": "Built-in drainage system to prevent root rot",
+            "tab_4_feature_2_color": "#d35400",
+            "tab_4_feature_3_caption": "Available in various sizes for different plants",
+            "tab_4_feature_3_color": "#16a085"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5e376c3_rrQxjr",
+        "ai_gen_block_bdd6eea_dbGxYm"
+      ],
+      "disabled": true,
+      "name": "AI Smart Section",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1400,
+        "section_margin": 40
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "slideshow_cK3HQE",
+    "image_banner_kW7TGh",
+    "product-grid",
+    "1744710593d3c3e758",
+    "image_with_text_Tghmdz",
+    "featured_product_pK8JEd",
+    "29a4766e-9b16-4206-927b-f13e02616027",
+    "collection_list_ig8tXp",
+    "recently-products",
+    "clickslice_bottom_description_gfNHzA",
+    "clickslice_bottom_collapsible_tabs_GD3zKe",
+    "ai_smart_section_JmykQq"
+  ]
+}
