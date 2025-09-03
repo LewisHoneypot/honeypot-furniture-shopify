@@ -105,7 +105,7 @@
         "button_3MKyzX": {
           "type": "button",
           "settings": {
-            "primary_button_label": "Learn More",
+            "primary_button_label": "View our Finance Complaints Policy",
             "primary_button_link": "shopify://pages/snap-finance",
             "primary_button_type": "default",
             "secondary_button_label": "OR See Options At Checkout",
