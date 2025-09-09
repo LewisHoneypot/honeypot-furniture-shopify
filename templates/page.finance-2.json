@@ -47,7 +47,7 @@
         "button_JxpriK": {
           "type": "button",
           "settings": {
-            "primary_button_label": "Learn More",
+            "primary_button_label": "Learn More DivideBuy Finance Options",
             "primary_button_link": "shopify://pages/dividebuy",
             "primary_button_type": "default",
             "secondary_button_label": "OR See Options At Checkout",
@@ -104,7 +104,7 @@
         "button_3MKyzX": {
           "type": "button",
           "settings": {
-            "primary_button_label": "Learn More",
+            "primary_button_label": "Learn More Snap Finance Flexible Plans",
             "primary_button_link": "shopify://pages/snap-finance",
             "primary_button_type": "default",
             "secondary_button_label": "OR See Options At Checkout",
