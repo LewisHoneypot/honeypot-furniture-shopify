@@ -742,6 +742,12 @@
         aria-label="{{ section.settings.accessibility_info | escape }}"
         data-splide='
           {
+          {%- if section.settings.pagination_type == "none" -%}
+          "pagination": false,
+          {%- endif -%}
+          {%- if section.settings.arrows_type == "none" -%}
+          "arrows": false,
+          {%- endif -%}
           "type": "loop",
           "perMove": 1,
           "autoplay": "true",
