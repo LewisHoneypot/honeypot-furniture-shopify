@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -26,7 +35,7 @@
         "text_ne9khT": {
           "type": "text",
           "settings": {
-            "text": "<p>Rated excellent on TrustPilot, check out what our customers love about us below.<\/p>",
+            "text": "",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -34,6 +43,7 @@
         },
         "button_yeaxwa": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "primary_button_label": "Leave your review",
             "primary_button_link": "",
@@ -63,8 +73,20 @@
         "padding_bottom_mobile": 20
       }
     },
+    "custom_liquid_PmAYRT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"lipscore-service-review-list\"></div>",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "trustpilot_service_reviews_Nyjc3L": {
       "type": "trustpilot-service-reviews",
+      "disabled": true,
       "settings": {
         "section_width": "customized-width",
         "customize_width": 1400,
@@ -72,14 +94,15 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
-        "user_image": "shopify:\/\/shop_images\/user-72x72.webp",
-        "staff_image": "shopify:\/\/shop_images\/bee-32x32.png"
+        "user_image": "shopify://shop_images/user-72x72.webp",
+        "staff_image": "shopify://shop_images/bee-32x32.png"
       }
     }
   },
   "order": [
     "main",
     "rich_text_Hahizt",
+    "custom_liquid_PmAYRT",
     "trustpilot_service_reviews_Nyjc3L"
   ]
 }
