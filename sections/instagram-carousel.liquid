@@ -1,0 +1,938 @@
+<div class="container my-4">
+  <div
+    id="instagram-feed"
+    class="splide"
+    data-splide='
+      {
+        "type": "loop",
+        "gap": "1rem",
+        "perMove": 1,
+        "perPage": 5,
+        "arrows": true,
+        "pagination": false,
+        "breakpoints": {
+          "1300": { "perPage": 4 },
+          "990": { "perPage": 3 },
+          "768": { "perPage": 2 },
+          "476": { "perPage": 1 }
+        }
+      }
+    '
+  >
+    <div class="splide__track">
+      <ul id="instagram-carousel" class="splide__list"></ul>
+    </div>
+
+    <!-- Add arrows -->
+    <div class="splide__arrows">
+      <!-- Prev -->
+      <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+          <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+        </svg>
+      </button>
+
+      <!-- Next -->
+      <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+          <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="instaModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        {% comment %} <h5 class="modal-title">Instagram Post</h5> {% endcomment %}
+        <div class="modal-nav">
+          <button type="button" class="btn btn-light btn-prev">&lsaquo;</button>
+          <button type="button" class="btn btn-light btn-next">&rsaquo;</button>
+        </div>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="modal-image-wrapper">
+          <img id="modal-image" src="" alt="Instagram post">
+        </div>
+
+        <div class="modal-text-wrapper">
+          <p id="modal-caption" class="text-muted"></p>
+
+          <div class="modal-social-icons text-center mt-3">
+            {%- liquid
+              assign has_social_icons = true
+              if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+                assign has_social_icons = false
+              endif
+            -%}
+            {%- if has_social_icons -%}
+              <ul class="list-unstyled list-social {{ class }}">
+                {%- if settings.social_facebook_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_facebook_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- if type_style != 'modern' and type_style != 'classy' and type_style != 'rounded' -%}
+                        {%- render 'icon-facebook' -%}
+                      {%- else -%}
+                        {%- render 'icon-facebook-normal' -%}
+                      {%- endif -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.facebook' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_facebook_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.facebook' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_twitter_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_twitter_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- if type_style != 'special' -%}
+                        {%- render 'icon-twitter' -%}
+                      {%- else -%}
+                        {%- render 'icon-twitter-square' -%}
+                      {%- endif -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.twitter' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_twitter_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.twitter' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_instagram_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_instagram_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- if type_style == 'rounded' -%}
+                        {%- render 'icon-instagram-rounded' -%}
+                      {%- else -%}
+                        {%- render 'icon-instagram' -%}
+                      {%- endif -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.instagram' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_instagram_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.instagram' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_youtube_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_youtube_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- render 'icon-youtube' -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.youtube' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_youtube_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.youtube' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tiktok_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_tiktok_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- if type_style == 'rounded' -%}
+                        {%- render 'icon-tiktok-rounded' -%}
+                      {%- else -%}
+                        {%- render 'icon-tiktok' -%}
+                      {%- endif -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.tiktok' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_tiktok_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.tiktok' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_pinterest_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_pinterest_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- if type_style == 'special' -%}
+                        {%- render 'icon-pinterest-square' -%}
+                      {%- elsif type_style == 'modern' or type_style == 'classy' -%}
+                        {%- render 'icon-pinterest-normal' -%}
+                      {%- else -%}
+                        {%- render 'icon-pinterest' -%}
+                      {%- endif -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.pinterest' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_pinterest_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.pinterest' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_snapchat_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_snapchat_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- render 'icon-snapchat' -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.snapchat' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_snapchat_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.snapchat' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tumblr_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_tumblr_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- render 'icon-tumblr' -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.tumblr' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_tumblr_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.tumblr' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_vimeo_link != blank -%}
+                  <li class="list-social__item {{ itemClass }}">
+                    {%- if settings.enable_animated_cursor -%}
+                      <span class="cursor-fixed__parallax-target d-inline-block pos-relative">
+                        <span class="cursor-fixed__parallax-inner d-inline-block">
+                    {%- endif -%}
+                    <a
+                      href="{{ settings.social_vimeo_link }}"
+                      class="link list-social__link b-circle o-h d-flex j-c-center pos-relative u-none bg-transparent"
+                    >
+                      {%- render 'icon-vimeo' -%}
+                      <span class="{% if check_social_link %}social-link__label link {{ settings.link_type | prepend: "link--style-" }} u-link h-link color-foreground{% else %}visually-hidden{% endif %}">
+                        {{- 'general.social.links.vimeo' | t -}}
+                      </span>
+                    </a>
+                    {%- if settings.enable_animated_cursor -%}
+                      </span>
+                      </span>
+                    {%- endif -%}
+                    {%- if itemClass != blank -%}
+                      <div class="list-social__info d-flex a-i-center j-c-center pos-absolute top-0 w-auto h-100 z-index-2 e-none gradient">
+                        <a
+                          class="link link--text h-link {{ settings.link_type | prepend: "link--style-" }} m-0 caption uppercase"
+                          href="{{ settings.social_vimeo_link }}"
+                        >
+                          <span class="link-style">{{ 'general.social.links.vimeo' | t }}</span>
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const token = '{{ section.settings.instagram_token }}';
+    const limit = '{{ section.settings.post_limit }}';
+    const feed = document.getElementById('instagram-carousel');
+
+    const instaModal = document.getElementById('instaModal');
+    const modalImage = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalClose = instaModal.querySelector('.btn-close');
+    const btnPrev = instaModal.querySelector('.btn-prev');
+    const btnNext = instaModal.querySelector('.btn-next');
+
+    let currentIndex = 0;
+    let modalPosts = [];
+
+    if (!token) {
+      feed.innerHTML = "<li class='splide__slide text-center'>⚠️ Add your Instagram token.</li>";
+      return;
+    }
+
+    fetch(
+      `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type&access_token=${token}&limit=${
+        limit * 2
+      }`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.data) {
+          feed.innerHTML = "<li class='splide__slide text-center'>⚠️ Could not load feed.</li>";
+          return;
+        }
+
+        const filtered = data.data
+          .filter((post) => post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM')
+          .slice(0, limit);
+
+        filtered.forEach((post, i) => {
+          const li = document.createElement('li');
+          li.className = 'splide__slide insta-wrapper';
+          li.innerHTML = `
+            <img src="${post.media_url}" alt="Instagram post"
+                 class="cursor-pointer"
+                 data-index="${i}"
+                 data-caption="${post.caption || ''}" 
+                 data-url="${post.media_url}">
+            <div class="insta-overlay">
+              <svg class="insta-logo" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                {%- render 'icon-instagram' -%}
+              </svg>
+            </div>
+          `;
+          feed.appendChild(li);
+
+          modalPosts.push({
+            url: post.media_url,
+            caption: post.caption || '',
+          });
+        });
+
+        // Destroy if core mounted it already
+        const instaEl = document.querySelector('#instagram-feed');
+        if (instaEl.splide) {
+          instaEl.splide.destroy(true);
+        }
+
+        // Mount Splide manually
+        const instaSplide = new Splide('#instagram-feed', { type: 'loop' }).mount();
+
+        // 👇 Simulate drag 3s after page load
+        setTimeout(() => {
+          instaSplide.go('-1');
+          setTimeout(() => {
+            instaSplide.go('+1');
+          }, instaSplide.options.speed + 100);
+        }, 1000);
+
+        // Delegate clicks on carousel images
+        feed.addEventListener('click', (e) => {
+          const img = e.target.closest('img[data-index]');
+          if (!img) return;
+
+          currentIndex = parseInt(img.dataset.index, 10);
+          updateModal();
+          instaModal.classList.add('show');
+          instaModal.setAttribute('aria-hidden', 'false');
+        });
+
+        function updateModal() {
+          const post = modalPosts[currentIndex];
+          if (!post) return;
+          modalImage.src = post.url;
+          modalCaption.textContent = post.caption;
+        }
+
+        btnPrev.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + modalPosts.length) % modalPosts.length;
+          updateModal();
+        });
+
+        btnNext.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % modalPosts.length;
+          updateModal();
+        });
+
+        modalClose.addEventListener('click', () => {
+          instaModal.classList.remove('show');
+          instaModal.setAttribute('aria-hidden', 'true');
+        });
+
+        instaModal.addEventListener('click', (e) => {
+          if (e.target === instaModal) {
+            instaModal.classList.remove('show');
+            instaModal.setAttribute('aria-hidden', 'true');
+          }
+        });
+      });
+  });
+</script>
+
+<style>
+  /* Grid & Utilities */
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+  .g-3 > * {
+    padding: 0.75rem;
+  }
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  @media (min-width: 576px) {
+    .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+    .col-md-5th {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+    .d-md-flex {
+      display: flex !important;
+    }
+    .d-md-block {
+      display: block !important;
+    }
+    .d-md-none {
+      display: none !important;
+    }
+  }
+  .insta-wrapper .d-none {
+    display: none !important;
+  }
+
+  /* Modal */
+  .modal {
+    display: none !important;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal.show {
+    display: flex !important;
+  }
+  /* Keep modal size fixed */
+  /* Fixed-size modal */
+  #instaModal .modal-dialog {
+    width: 90%;
+    max-width: 900px;
+    height: 85vh;
+    margin: auto; /* center vertically */
+  }
+
+  #instaModal .modal-content {
+    height: 100%; /* fill dialog */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* ensures modal content is white */
+  }
+
+  /* Modal body layout */
+  #instaModal .modal-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    padding: 1rem;
+    flex-direction: row; /* desktop: image and caption side by side */
+    gap: 1rem;
+  }
+
+  /* Image wrapper inside modal */
+  /* Default (desktop) */
+  #instaModal .modal-image-wrapper {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* Mobile only */
+  @media (max-width: 767px) {
+    #instaModal .modal-image-wrapper {
+      height: 60vh;
+    }
+  }
+
+  #instaModal .modal-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Text + icons container */
+  .modal-text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  /* Caption stays consistent below */
+  #modal-caption {
+    margin: 0 0 0.75rem; /* space above icons */
+    word-break: break-word;      text-align: center;
+  }
+
+  /* Mobile: full width image container */
+  @media (max-width: 767px) {
+    #instaModal .modal-body {
+      flex-direction: column;
+    }
+
+    #instaModal .modal-image-wrapper {
+      max-width: 100%;
+      height: 50vh; /* slightly shorter for mobile */
+    }
+
+    #modal-caption {
+      margin-top: 1rem;
+    }
+  }
+
+  /* Image inside modal */
+  #instaModal .modal-body img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Mobile only */
+  @media (max-width: 767px) {
+    #instaModal .modal-body img {
+      max-width: 60%; /* shrink on small screens */
+    }
+  }
+
+  /* Caption */
+  #modal-caption {
+    flex: 1;
+    text-align: center;
+    overflow-wrap: break-word; /* handle long captions */
+  }
+
+  /* Mobile: stack image and text */
+  @media (max-width: 767px) {
+    #instaModal .modal-body {
+      flex-direction: column;
+    }
+
+    #instaModal .modal-body img {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    #modal-caption {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  .modal-lg {
+    max-width: 900px;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .modal-nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .modal-nav .btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  .btn-close {
+    background: none;
+    border: 0;
+    font-size: 3.5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .btn-close:after {
+    content: '×';
+  }
+
+  /* Helpers */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  .rounded {
+    border-radius: 0.5rem;
+  }
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+  .text-muted {
+    color: #6c757d;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  /* Mobile carousel */
+  #instagram-feed-mobile .splide__slide {
+    height: 100%;
+    overflow: hidden;
+  }
+  #instagram-feed-mobile .splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 767px) {
+    #instagram-feed-mobile {
+      width: 100vw;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    #instagram-feed-mobile .splide__track,
+    #instagram-feed-mobile .splide__list,
+    #instagram-feed-mobile .splide__slide {
+      width: 100% !important;
+    }
+  }
+
+  /* Desktop images */
+  #instagram-feed-desktop img,
+  #instagram-feed-desktop-carousel .splide__slide img {
+    width: 100%;
+    height: 100%; /* fill parent (which has aspect-ratio) */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Wrapper sets portrait aspect ratio */
+  .insta-wrapper {
+    position: relative;
+    aspect-ratio: 4 / 5; /* IG portrait ratio */
+    width: 100%;
+    overflow: hidden;
+    /* border-radius: 0.5rem; */
+  }
+
+  .insta-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.4s ease, filter 0.4s ease; /* smooth hover */
+  }
+
+  .insta-wrapper:hover img {
+    filter: brightness(60%);
+    transform: scale(1.08); /* slightly more zoom */
+  }
+
+  .insta-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* fade + pop */
+    pointer-events: none;
+  }
+
+  .insta-wrapper:hover .insta-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); gentle pop-in
+  }
+
+  .insta-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Splide arrows (carousel) */
+  #instagram-feed .splide__arrow svg {
+    transition: transform 0.3s, fill 0.3s;
+  }
+
+  /* Optional: expand clickable area */
+  #instagram-feed .splide__arrow {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Modal arrows */
+  .modal-nav .btn-prev,
+  .modal-nav .btn-next {
+    font-size: 2.5rem; /* bigger arrows */
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 0%;
+    background: rgba(255, 255, 255, 0.9);
+    /* border: 1px solid #ccc; */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+  }
+
+  .modal-nav .btn-prev:hover,
+  .modal-nav .btn-next:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .modal-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: .5rem;
+  }
+
+  .modal-social-icons a {
+    color: #555;
+    text-decoration: none;
+    transition: color .3s;
+  }
+
+  .modal-social-icons a:hover {
+    color: #000;
+  }
+
+  .modal-social-icons ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* spacing between icons */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .modal-social-icons li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-social-icons svg {
+    width: 28px !important;
+    height: 28px !important;
+    display: block;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Instagram Feed",
+  "settings": [
+    {
+      "type": "text",
+      "id": "instagram_token",
+      "label": "Instagram Access Token",
+      "default": "Enter Token Here"
+    },
+    {
+      "type": "number",
+      "id": "post_limit",
+      "label": "Number of posts",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram Feed"
+    }
+  ]
+}
+{% endschema %}
