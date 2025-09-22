@@ -422,18 +422,17 @@
           const li = document.createElement('li');
           li.className = 'splide__slide insta-wrapper';
           li.innerHTML = `
-          <img src="${post.media_url}" alt="Instagram post"
-               class="cursor-pointer"
-               data-index="${i}"
-               data-caption="${post.caption || ''}" 
-               data-url="${post.media_url}">
-          <div class="insta-overlay">
-            <svg class="insta-logo" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
-              <path fill="#fff" d="M8.77 1.58c2.34..."></path>
-              <path fill="#fff" d="M8.8 4a4.5..."></path>
-            </svg>
-          </div>
-        `;
+            <img src="${post.media_url}" alt="Instagram post"
+                 class="cursor-pointer"
+                 data-index="${i}"
+                 data-caption="${post.caption || ''}" 
+                 data-url="${post.media_url}">
+            <div class="insta-overlay">
+              <svg class="insta-logo" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                {%- render 'icon-instagram' -%}
+              </svg>
+            </div>
+          `;
           feed.appendChild(li);
 
           modalPosts.push({
@@ -442,14 +441,22 @@
           });
         });
 
-        // ✅ Mount Splide after slides are added
-        const splide = new Splide('#instagram-feed').mount();
+        // Destroy if core mounted it already
+        const instaEl = document.querySelector('#instagram-feed');
+        if (instaEl.splide) {
+          instaEl.splide.destroy(true);
+        }
 
-        // ✅ Fix first arrow speed-up by syncing clones
-        splide.on('mounted', () => {
-          splide.go('+1');
-          splide.go('-1');
-        });
+        // Mount Splide manually
+        const instaSplide = new Splide('#instagram-feed', { type: 'loop' }).mount();
+
+        // 👇 Simulate drag 3s after page load
+        setTimeout(() => {
+          instaSplide.go('-1');
+          setTimeout(() => {
+            instaSplide.go('+1');
+          }, instaSplide.options.speed + 100);
+        }, 1000);
 
         // Delegate clicks on carousel images
         feed.addEventListener('click', (e) => {
@@ -563,7 +570,7 @@
   #instaModal .modal-dialog {
     width: 90%;
     max-width: 900px;
-    height: 80vh;
+    height: 85vh;
     margin: auto; /* center vertically */
   }
 
@@ -580,7 +587,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: scroll;
     padding: 1rem;
     flex-direction: row; /* desktop: image and caption side by side */
     gap: 1rem;
