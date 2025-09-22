@@ -1100,6 +1100,14 @@
         "padding_bottom_mobile": 0
       }
     },
+    "instagram_carousel_XNFFNT": {
+      "type": "instagram-carousel",
+      "name": "Instagram Feed",
+      "settings": {
+        "instagram_token": "IGAAQQ9PS8tHFBZAE1PcVRGc2dCNmZAzSkd6a0ltSTc3ZAzBUMDltSzBaa0ZAIdEs3VFJmN0FBOW5VTEo2RXdySFk2WFBpa3hsZADRHT1ZADVFBjSVFCYkJOaklNa19tRl96a29CN1JSaFBwVy00XzZA0ZAlFjbzFYci1sd0VOVlYxUVhvYwZDZD",
+        "post_limit": 6
+      }
+    },
     "featured_blog_DdAnpK": {
       "type": "featured-blog",
       "settings": {
@@ -1466,6 +1474,7 @@
     "custom_liquid_X7qiKC",
     "testimonial_NkEcJz",
     "17364240654517feb4",
+    "instagram_carousel_XNFFNT",
     "featured_blog_DdAnpK",
     "069a21ef-b01c-4296-b010-b63bc9797851",
     "custom_liquid_dfcHEi",
