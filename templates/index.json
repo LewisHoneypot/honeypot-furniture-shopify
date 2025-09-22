@@ -1156,6 +1156,7 @@
     },
     "instagram_carousel_XNFFNT": {
       "type": "instagram-carousel",
+      "disabled": true,
       "name": "Instagram Feed",
       "settings": {
         "instagram_token": "IGAAQQ9PS8tHFBZAE1PcVRGc2dCNmZAzSkd6a0ltSTc3ZAzBUMDltSzBaa0ZAIdEs3VFJmN0FBOW5VTEo2RXdySFk2WFBpa3hsZADRHT1ZADVFBjSVFCYkJOaklNa19tRl96a29CN1JSaFBwVy00XzZA0ZAlFjbzFYci1sd0VOVlYxUVhvYwZDZD",
