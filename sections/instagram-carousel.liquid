@@ -1,44 +1,67 @@
 <div class="container my-4">
-  <div
-    id="instagram-feed"
-    class="splide"
-    data-splide='
-      {
-        "type": "loop",
-        "gap": "1rem",
-        "perMove": 1,
-        "perPage": 5,
-        "arrows": true,
-        "pagination": false,
-        "breakpoints": {
-          "1300": { "perPage": 4 },
-          "990": { "perPage": 3 },
-          "768": { "perPage": 2 },
-          "476": { "perPage": 1 }
-        }
-      }
-    '
+  <div  
+    class="section__c-list style--{{ section.settings.type_style }}{% if section.settings.arrows_type != 'none' or section.settings.enable_carousel == true %}{% if section.settings.type_style == 'masonry' %} display-arrow display-arrow__{{ section.settings.arrows_type }}{% endif %}{% endif %}{% unless section.settings.show_line_separator %} spacing spacing-xs{% endunless %} color-{{ section.settings.color_scheme }} gradient" 
+    style="
+      --padding-top: {{ section.settings.padding_top }}px;
+      --padding-bottom: {{ section.settings.padding_bottom }}px;
+      --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
+      --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+    "
   >
-    <div class="splide__track">
-      <ul id="instagram-carousel" class="splide__list"></ul>
+    <h2
+      id="SectionHeading-{{ section.id }}"
+      class="p-w__heading {{ section.settings.heading_size | prepend: 'heading-size-' }} m-0 my-5 {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.heading_alignment }}"
+    >
+      {{ section.settings.title }}
+    </h2>
+    <div
+      id="instagram-feed"
+      class="splide"
+      data-splide='
+        {
+          "type": "loop",
+          "gap": "1rem",
+          "perMove": 1,
+          "perPage": 5,
+          "arrows": true,
+          "pagination": false,
+          "breakpoints": {
+            "1300": { "perPage": 4 },
+            "990": { "perPage": 3 },
+            "768": { "perPage": 2 },
+            "476": { "perPage": 1 }
+          }
+        }
+      '
+    >
+      <div class="splide__track">
+        <ul id="instagram-carousel" class="splide__list"></ul>
+      </div>
+
+      <!-- Add arrows -->
+      <div class="splide__arrows">
+        <!-- Prev -->
+        <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+            <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+          </svg>
+        </button>
+
+        <!-- Next -->
+        <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+            <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Add arrows -->
-    <div class="splide__arrows">
-      <!-- Prev -->
-      <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
-          <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
-        </svg>
-      </button>
-
-      <!-- Next -->
-      <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
-          <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
-        </svg>
+    <div style="width: 100%; text-align:center;">
+      <button class="button color-{{ section.settings.color_scheme }} {% if section.settings.button_transparent == 'transparent' %} button--transparent{% endif %} {% if section.settings.button_edges == 'rounded' %} rounded-button{% endif %} mt-5 mx-auto">
+        {{ section.settings.button_text }}
       </button>
     </div>
+
   </div>
 </div>
 
@@ -918,6 +941,62 @@
   "settings": [
     {
       "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Follow Us On Instagram"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.font_size.options"
+        },
+        {
+          "value": "xx-small",
+          "label": "t:sections.all.font_size.options__1"
+        },
+        {
+          "value": "x-small",
+          "label": "t:sections.all.font_size.options__2"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.all.font_size.options__3"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.all.font_size.options__4"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.all.font_size.options__5"
+        },
+        {
+          "value": "x-large",
+          "label": "t:sections.all.font_size.options__6"
+        },
+        {
+          "value": "xx-large",
+          "label": "t:sections.all.font_size.options__7"
+        },
+        {
+          "value": "xxx-large",
+          "label": "t:sections.all.font_size.options__8"
+        }
+      ],
+      "default": "small",
+      "label": "t:sections.all.font_size.label__2"
+    },
+    {
+      "type": "text_alignment",
+      "id": "heading_alignment",
+      "label": "t:sections.all.text_alignment.label__2",
+      "default": "center"
+    },
+    {
+      "type": "text",
       "id": "instagram_token",
       "label": "Instagram Access Token",
       "default": "Enter Token Here"
@@ -926,7 +1005,97 @@
       "type": "number",
       "id": "post_limit",
       "label": "Number of posts",
-      "default": 6
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 43
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Visit Instagram"
+    },
+    {
+      "type": "text",
+      "id": "button_url",
+      "label": "Button Url",
+      "default": "https://www.instagram.com/honeypotfurniture/"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "button_transparent",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.button_style.label__2"
+        },
+        {
+          "value": "transparent",
+          "label": "t:sections.all.button_style.label__3"
+        }
+      ],
+      "default": "transparent",
+      "label": "Button Style"
+    },
+    {
+      "type": "select",
+      "id": "button_edges",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.button_style.label__2"
+        },
+        {
+          "value": "rounded",
+          "label": "Rounded"
+        }
+      ],
+      "default": "default",
+      "label": "Edges"
     }
   ],
   "presets": [

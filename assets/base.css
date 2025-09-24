@@ -26848,7 +26848,7 @@ body.multitasking__show .newsletter-popup-opener {
   }
 }
 
-/* UAE CSS */
+/* UAE Button CSS */
 
 .ul-globo-dropdown-option {
   position: relative !important;
@@ -26866,4 +26866,8 @@ body.multitasking__show .newsletter-popup-opener {
 .country-selector img {
   height: 21px;
   padding-bottom: 4px;
+}
+
+.rounded-button {
+  border-radius: 50px;
 }
