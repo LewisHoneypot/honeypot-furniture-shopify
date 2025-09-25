@@ -1233,7 +1233,7 @@
         "title": "Follow Us On Instagram",
         "heading_size": "small",
         "heading_alignment": "center",
-        "instagram_token": "Enter Token Here",
+        "instagram_token": "IGAAQQ9PS8tHFBZAE1PcVRGc2dCNmZAzSkd6a0ltSTc3ZAzBUMDltSzBaa0ZAIdEs3VFJmN0FBOW5VTEo2RXdySFk2WFBpa3hsZADRHT1ZADVFBjSVFCYkJOaklNa19tRl96a29CN1JSaFBwVy00XzZA0ZAlFjbzFYci1sd0VOVlYxUVhvYwZDZD",
         "post_limit": 10,
         "padding_top": 0,
         "padding_bottom": 70,
@@ -1241,9 +1241,9 @@
         "padding_bottom_mobile": 43,
         "button_text": "Visit Instagram",
         "button_url": "https://www.instagram.com/honeypotfurniture/",
-        "color_scheme": "",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "button_transparent": "transparent",
-        "button_edges": "default"
+        "button_edges": "rounded"
       }
     },
     "custom_liquid_dfcHEi": {
