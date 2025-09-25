@@ -1142,7 +1142,7 @@
         "padding_bottom_mobile": 20
       }
     },
-    "instagram_carousel_XNFFNT": {
+    "instagram_carousel_9DyQEJ": {
       "type": "instagram-carousel",
       "disabled": true,
       "name": "Instagram Feed",
@@ -1153,16 +1153,16 @@
         "heading_size": "small",
         "heading_alignment": "center",
         "instagram_token": "IGAAQQ9PS8tHFBZAE1PcVRGc2dCNmZAzSkd6a0ltSTc3ZAzBUMDltSzBaa0ZAIdEs3VFJmN0FBOW5VTEo2RXdySFk2WFBpa3hsZADRHT1ZADVFBjSVFCYkJOaklNa19tRl96a29CN1JSaFBwVy00XzZA0ZAlFjbzFYci1sd0VOVlYxUVhvYwZDZD",
-        "post_limit": 6,
+        "post_limit": 10,
         "padding_top": 0,
         "padding_bottom": 70,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 43,
         "button_text": "Visit Instagram",
         "button_url": "https://www.instagram.com/honeypotfurniture/",
-        "color_scheme": "",
+        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "button_transparent": "transparent",
-        "button_edges": "default"
+        "button_edges": "rounded"
       }
     },
     "069a21ef-b01c-4296-b010-b63bc9797851": {
@@ -1221,29 +1221,6 @@
         "padding_bottom": 0,
         "padding_top_mobile": 13,
         "padding_bottom_mobile": 0
-      }
-    },
-    "instagram_carousel_9DyQEJ": {
-      "type": "instagram-carousel",
-      "disabled": true,
-      "name": "Instagram Feed",
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1400,
-        "title": "Follow Us On Instagram",
-        "heading_size": "small",
-        "heading_alignment": "center",
-        "instagram_token": "IGAAQQ9PS8tHFBZAE1PcVRGc2dCNmZAzSkd6a0ltSTc3ZAzBUMDltSzBaa0ZAIdEs3VFJmN0FBOW5VTEo2RXdySFk2WFBpa3hsZADRHT1ZADVFBjSVFCYkJOaklNa19tRl96a29CN1JSaFBwVy00XzZA0ZAlFjbzFYci1sd0VOVlYxUVhvYwZDZD",
-        "post_limit": 10,
-        "padding_top": 0,
-        "padding_bottom": 70,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 43,
-        "button_text": "Visit Instagram",
-        "button_url": "https://www.instagram.com/honeypotfurniture/",
-        "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "button_transparent": "transparent",
-        "button_edges": "rounded"
       }
     },
     "custom_liquid_dfcHEi": {
@@ -1500,9 +1477,8 @@
     "testimonial_NkEcJz",
     "17364240654517feb4",
     "featured_blog_DdAnpK",
-    "instagram_carousel_XNFFNT",
-    "069a21ef-b01c-4296-b010-b63bc9797851",
     "instagram_carousel_9DyQEJ",
+    "069a21ef-b01c-4296-b010-b63bc9797851",
     "custom_liquid_dfcHEi",
     "2c0f3337-8adc-4a53-bad5-fa7e4e5087e1",
     "79993e5e-b47d-42d2-8535-5d30f78f1b0f",
