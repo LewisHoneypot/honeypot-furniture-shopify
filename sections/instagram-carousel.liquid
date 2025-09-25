@@ -1,11 +1,19 @@
-<div class="container my-4">
-  <div  
-    class="section__c-list style--{{ section.settings.type_style }}{% if section.settings.arrows_type != 'none' or section.settings.enable_carousel == true %}{% if section.settings.type_style == 'masonry' %} display-arrow display-arrow__{{ section.settings.arrows_type }}{% endif %}{% endif %}{% unless section.settings.show_line_separator %} spacing spacing-xs{% endunless %} color-{{ section.settings.color_scheme }} gradient" 
+<div
+  class="container my-4"
+  style="padding:0px;"
+>
+  <div
+    class="section__c-list style--{{ section.settings.type_style }}{% if section.settings.arrows_type != 'none' or section.settings.enable_carousel == true %}{% if section.settings.type_style == 'masonry' %} display-arrow display-arrow__{{ section.settings.arrows_type }}{% endif %}{% endif %}{% unless section.settings.show_line_separator %} spacing spacing-xs{% endunless %} color-{{ section.settings.color_scheme }} gradient {% if section.settings.section_width == 'page-width' %}page-width{% endif %}"
     style="
       --padding-top: {{ section.settings.padding_top }}px;
       --padding-bottom: {{ section.settings.padding_bottom }}px;
       --padding-top-xs: {{ section.settings.padding_top_mobile }}px;
       --padding-bottom-xs: {{ section.settings.padding_bottom_mobile }}px;
+      {% if section.settings.section_width == 'customized-width' %}
+        max-width: {{ section.settings.customize_width }}px;
+        margin-left: auto;
+        margin-right: auto;
+      {% endif %}
     "
   >
     <h2
@@ -61,7 +69,6 @@
         {{ section.settings.button_text }}
       </button>
     </div>
-
   </div>
 </div>
 
@@ -939,6 +946,35 @@
 {
   "name": "Instagram Feed",
   "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "page-width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "customized-width",
+          "label": "Customized width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "customize_width",
+      "label": "Custom width (px)",
+      "min": 600,
+      "max": 2000,
+      "step": 100,
+      "default": 1400
+    },
     {
       "type": "text",
       "id": "title",
