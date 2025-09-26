@@ -46,8 +46,8 @@ function init360Gallery() {
   const framesHigh = [];
 
   // Drag/inertia tuning
-  const dragSensitivity = 30;
-  const friction = 0.92;
+  const dragSensitivity = 40;
+  const friction = 0.97;
 
   // Inertia state
   let isDragging = false;
