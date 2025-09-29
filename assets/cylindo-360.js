@@ -212,7 +212,7 @@ function init360Gallery() {
   // Thumbnail logic (fixed)
   // ----------------------------
   function setActiveThumb(btn) {
-    exitZoom(); // <--- force zoom off whenever user picks a new image
+    exitZoom(); // force zoom off whenever user picks a new image
 
     // Clear all active
     document
@@ -222,19 +222,57 @@ function init360Gallery() {
     // Mark this one active
     btn.classList.add("active");
 
+    // Prefer img then svg
     const img = btn.querySelector("img.thumb");
-    if (!img) return;
+    const svg = btn.querySelector("svg.thumb");
+    const thumbEl = img || svg;
+    if (!thumbEl) return;
 
-    if (img.dataset.type === "cylindo") {
-      // Cylindo frame thumbnails
-      const frame = parseInt(img.dataset.frame, 10) || currentFrame;
+    // helper to read dataset values with fallbacks
+    const read = (el, name) => {
+      if (!el) return null;
+      // prefer dataset if present (dataset gives camelCased keys)
+      if (
+        el.dataset &&
+        el.dataset[name] !== undefined &&
+        el.dataset[name] !== ""
+      ) {
+        return el.dataset[name];
+      }
+      // fallback to attribute
+      const attr = el.getAttribute && el.getAttribute("data-" + name);
+      return attr !== null ? attr : null;
+    };
+
+    // Determine type: element -> button -> default (SVG => cylindo)
+    let type =
+      read(thumbEl, "type") ||
+      read(btn, "type") ||
+      (thumbEl.tagName && thumbEl.tagName.toLowerCase() === "svg"
+        ? "cylindo"
+        : null);
+
+    if (type === "cylindo") {
+      // frame may live on the thumb element or the button; default to 1
+      const frameStr = read(thumbEl, "frame") || read(btn, "frame") || "1";
+      const frame = parseInt(frameStr, 10) || currentFrame;
       currentFrame = frame;
       spinning = true;
       mainWrapper.style.cursor = "grab";
       showFrame(currentFrame, true);
-    } else if (img.dataset.type === "shopify") {
-      // Shopify static image thumbnails
-      mainImage.src = img.dataset.src;
+    } else if (type === "shopify") {
+      // source may be data-src or src
+      const src =
+        read(thumbEl, "src") ||
+        read(btn, "src") ||
+        (thumbEl.src ? thumbEl.src : null) ||
+        (btn.querySelector &&
+        btn.querySelector("img") &&
+        btn.querySelector("img").src
+          ? btn.querySelector("img").src
+          : null);
+
+      if (src) mainImage.src = src;
       spinning = false;
       mainWrapper.style.cursor = "default";
     }
