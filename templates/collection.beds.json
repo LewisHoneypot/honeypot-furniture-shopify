@@ -113,7 +113,7 @@
         "margin_bottom": 30,
         "enable_filtering": true,
         "filter_heading_size": "default",
-        "filter_type": "horizontal",
+        "filter_type": "horizontal-plus",
         "type_style": "special",
         "pagination_type": "progressbar",
         "swatch": "Color",
