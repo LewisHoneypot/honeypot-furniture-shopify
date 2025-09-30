@@ -113,7 +113,7 @@
         "margin_bottom": 30,
         "enable_filtering": true,
         "filter_heading_size": "default",
-        "filter_type": "drawer",
+        "filter_type": "vertical",
         "type_style": "special",
         "pagination_type": "progressbar",
         "swatch": "Color",
