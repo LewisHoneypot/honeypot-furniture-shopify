@@ -101,9 +101,21 @@ function init360Gallery() {
   // ----------------------------
   // Zoom button
   // ----------------------------
+
+  const zoomInSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14m0-2a9 9 0 0 0 0 18c2.05 0 3.93-.69 5.43-1.84l4.71 4.7 1.41-1.41-4.7-4.71A9 9 0 0 0 11 2zm1 5h-2v3H7v2h3v3h2v-3h3v-2h-3V7z"/>
+  </svg>
+`;
+
+  const zoomOutSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14m0-2a9 9 0 0 0 0 18c2.05 0 3.93-.69 5.43-1.84l4.71 4.7 1.41-1.41-4.7-4.71A9 9 0 0 0 11 2zm-4 9h8v-2H7v2z"/>
+  </svg>
+`;
+
   const zoomBtn = document.createElement("button");
   zoomBtn.id = "zoom-btn";
-  zoomBtn.innerText = "🔍 Zoom";
   zoomBtn.style.position = "absolute";
   zoomBtn.style.top = "10px";
   zoomBtn.style.right = "10px";
@@ -116,9 +128,12 @@ function init360Gallery() {
   zoomBtn.style.pointerEvents = "auto";
   mainWrapper.parentElement.appendChild(zoomBtn);
 
+  // INITIAL ICON
+  zoomBtn.innerHTML = zoomInSVG; // <--- use SVG here instead of innerText
+
   zoomBtn.addEventListener("click", () => {
     zoomEnabled = !zoomEnabled;
-    zoomBtn.innerText = zoomEnabled ? "➖ Exit Zoom" : "🔍 Zoom";
+    zoomBtn.innerHTML = zoomEnabled ? `${zoomOutSVG}` : `${zoomInSVG}`;
 
     if (zoomEnabled) {
       mainWrapper.classList.add("zoomed");
