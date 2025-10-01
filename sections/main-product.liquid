@@ -1321,8 +1321,8 @@
 
                           {%- if block.settings.date_type == 'simple' -%}
                             <script>
-                              console.log("date_type: Simple");
-                              console.log("stock_date: {{ metafields.custom.stock_date }}");
+                              // console.log("date_type: Simple");
+                              // console.log("stock_date: {{ metafields.custom.stock_date }}");
                             </script>
 
                             {%- if in_stock == true -%}
@@ -1383,20 +1383,20 @@
                             {%- if in_stock == true -%}
 
                               <script>
-                                console.log("in_stock: yes");
+                                // console.log("in_stock: yes");
                               </script>
 
                               <strong class="pr-1 mr-1"> Tomorrow</strong>
                             {%- else -%}
 
                               <script>
-                                console.log("in_stock: no");
+                                // console.log("in_stock: no");
                               </script>
 
                               {%- if block.settings.tiers == 'on' -%}
 
                                 <script>
-                                  console.log("tiers: on");
+                                  // console.log("tiers: on");
                                 </script>
     
                                 {%- if product.metafields.Details.ProductTier == 1 -%}
@@ -2854,7 +2854,7 @@
                                   }
                                 });
                               } else {
-                                console.log("Details element not found");
+                                // console.log("Details element not found");
                               }
 
                               const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
@@ -2890,7 +2890,7 @@
                                   }
                                 });
                               } else {
-                                console.log("Reviews button not found");
+                                // console.log("Reviews button not found");
                               }
                             }
                           })
