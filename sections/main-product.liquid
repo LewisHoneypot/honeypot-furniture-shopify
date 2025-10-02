@@ -1147,7 +1147,7 @@
                   <script>
                     // console.log('product: ', {{ product | json }});
                     // console.log('product.collections: ', {{ product.collections | json }});
-                    </script>
+                  </script>
 
                   {% comment %} Check which collections product is in {% endcomment %}
                   {%- assign collection_titles = '' -%}
@@ -1167,13 +1167,13 @@
                   <script>
                     // console.log("ProductTier: ", {{ product.metafields.Details.ProductTier }});
                     // console.log("collection_titles: ", {{ collection_titles | json }});
-                    </script>
+                  </script>
 
                   {%- if collection_titles contains 'Sofas' -%}
                     {%- if block.settings.tiers == 'on' -%}
-                        <script>
-                          // console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
-                        </script>
+                      <script>
+                        // console.log("ProductTier", {{ product.metafields.Details.ProductTier }});
+                      </script>
                       {%- if product.metafields.Details.ProductTier == 1 -%}
                         {%- if product.available and in_stock == true -%}
                           {%- assign date_1 = 1 -%}
@@ -1317,7 +1317,28 @@
                         <span class="pr-1 mr-1">{{ block.settings.heading | escape }}</span>
 
                         {% comment %} Change display based on date type {% endcomment %}
-                        {%- if block.settings.date_type == 'accurate' -%}
+                        {%- if block.settings.date_type == 'simple' -%}
+
+                          {%- if block.settings.date_type == 'simple' -%}
+                            <script>
+                              // console.log("date_type: Simple");
+                              // console.log("stock_date: {{ metafields.custom.stock_date }}");
+                            </script>
+
+                            {%- if in_stock == true -%}
+                              <strong class="pr-1 mr-1"> tomorrow</strong>
+                            {%- else  -%}
+                              {%- if metafields.custom.stock_date -%}
+                                <strong class="pr-1 mr-1">{{ metafields.custom.stock_date }}</strong>
+                              {%- else  -%}
+                                <strong class="pr-1 mr-1">8 weeks</strong>
+                              {%- endif -%}
+                            {%- endif -%}
+
+                          {%- endif -%}
+
+                        {%- elsif block.settings.date_type == 'accurate' -%}
+
                           <script>
                             // console.log("date_type: Accurate");
                           </script>
@@ -1325,6 +1346,7 @@
                           <strong class="pr-1 mr-1">{{ formatted_date_1 }}</strong>
                           <span class="pr-1 mr-1">to</span>
                           <strong class="pr-1 mr-1">{{ formatted_date_2 }}</strong>
+
                         {%- else -%}
 
                           <script>
@@ -2832,7 +2854,7 @@
                                   }
                                 });
                               } else {
-                                console.log("Details element not found");
+                                // console.log("Details element not found");
                               }
 
                               const readMoreReviewsButton = document.querySelector("#reviews-read-more-button");
@@ -2868,7 +2890,7 @@
                                   }
                                 });
                               } else {
-                                console.log("Reviews button not found");
+                                // console.log("Reviews button not found");
                               }
                             }
                           })
@@ -5136,6 +5158,10 @@
           "id": "date_type",
           "label": "t:sections.main-collection-product-grid.settings.delivery_eta.date_type.name",
           "options": [
+            {
+              "value": "simple",
+              "label": "Simple"
+            },
             {
               "value": "accurate",
               "label": "t:sections.main-collection-product-grid.settings.delivery_eta.date_type.accurate"
