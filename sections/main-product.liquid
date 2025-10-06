@@ -356,33 +356,35 @@
 
               {% comment %} was when price {% endcomment %}
               {%- when 'price' -%}
-                <div class="row">
+                <div class="container-fluid">
+                  <div class="row">
 
-                  <div class="col-4 col-lg-12 p-0">
-                    <div
-                      class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
-                      {{ block.shopify_attributes }}
-                      id="price-{{ section.id }}"
-                      role="status"
-                      style="
-                        --padding-top: {{ block.settings.padding_top }}px;
-                        --padding-bottom: {{ block.settings.padding_bottom }}px;
-                      "
-                    >
-                      {%- liquid
-                        if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
-                          assign show_you_save = false
-                        else
-                          assign show_you_save = true
-                        endif
-                      -%}
-                      {%- render 'price',
-                        product: product,
-                        use_variant: true,
-                        show_you_save: show_you_save,
-                        main_price: true,
-                        price_class: 'price--large style-m-price'
-                      -%}
+                    <div class="col-12 p-0">
+                      <div
+                        class="product__price element-spacing-all no-js-hidden float-right float-lg-none pt-0"
+                        {{ block.shopify_attributes }}
+                        id="price-{{ section.id }}"
+                        role="status"
+                        style="
+                          --padding-top: {{ block.settings.padding_top }}px;
+                          --padding-bottom: {{ block.settings.padding_bottom }}px;
+                        "
+                      >
+                        {%- liquid
+                          if section.settings.type_style == 'special' or section.settings.type_style == 'modern'
+                            assign show_you_save = false
+                          else
+                            assign show_you_save = true
+                          endif
+                        -%}
+                        {%- render 'price',
+                          product: product,
+                          use_variant: true,
+                          show_you_save: show_you_save,
+                          main_price: true,
+                          price_class: 'price--large style-m-price'
+                        -%}
+                      </div>
                     </div>
                   </div>
                 </div>
