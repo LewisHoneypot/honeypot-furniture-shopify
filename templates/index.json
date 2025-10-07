@@ -43,8 +43,8 @@
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/New_Banners_1.jpg",
-            "mobile_image": "shopify://shop_images/2_137d9028-d7a2-4ae8-ac48-d5eb555afd45.jpg",
+            "image": "shopify://shop_images/Venice_Banner_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/Venice_Banner_Mobile.jpg",
             "content_max_width": 910,
             "heading_font": "font-heading",
             "heading": "0% Finance Available",
@@ -71,8 +71,8 @@
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_c951efdc-492b-45dc-951e-c606c26ad923.jpg",
-            "mobile_image": "shopify://shop_images/1_e52909bb-2208-4896-9ace-a6e85f979107.jpg",
+            "image": "shopify://shop_images/Azzuro_Banner_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/Azzuro_Banner_Mobile.jpg",
             "content_max_width": 1200,
             "heading_font": "font-heading",
             "heading": "Sink Into Comfort, Stay in Style",
