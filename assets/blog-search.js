@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Add "See all results" link at bottom pointing to blog-only search page
           resultsContainer.innerHTML += `
             <div class="blog-search-item blog-search-see-all">
-              <a href="/search.blog?q=${encodeURIComponent(query)}">
+              <a href="/pages/blog-search-results?q=${encodeURIComponent(query)}">
                 See all results →
               </a>
             </div>
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = this.value.trim();
       if (query.length > 0) {
         // redirect to blog-only search results page
-        window.location.href = `/search.blog?q=${encodeURIComponent(query)}`;
+        window.location.href = `/pages/blog-search-results?q=${encodeURIComponent(query)}`;
       }
     }
   });
