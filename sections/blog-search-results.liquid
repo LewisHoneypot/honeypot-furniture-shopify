@@ -1,0 +1,19 @@
+{% assign terms = search.terms | escape %}
+{% assign results = search.results | where: "object_type", "article" %}
+
+<div class="blog-search-results-page">
+  <h1>Search results for “{{ terms }}”</h1>
+
+  {% if results.size > 0 %}
+    <ul class="blog-results-list">
+      {% for item in results %}
+        <li class="blog-result">
+          <a href="{{ item.url | escape }}">{{ item.title | escape }}</a>
+          <p>{{ item.excerpt | strip_html | truncate: 150 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No blog posts found for “{{ terms }}”.</p>
+  {% endif %}
+</div>
