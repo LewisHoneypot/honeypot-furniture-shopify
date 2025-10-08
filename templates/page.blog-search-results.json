@@ -78,70 +78,11 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
-    },
-    "dynamic_image_mfXbFg": {
-      "type": "dynamic-image",
-      "name": "Dynamic Image",
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "desktop_image": "shopify://shop_images/Snap_Desktop.jpg",
-        "mobile_image": "shopify://shop_images/Snap_Mob.jpg",
-        "alt_text": "Snap Finance"
-      }
-    },
-    "dynamic_text_AyxNJt": {
-      "type": "dynamic-text",
-      "blocks": {
-        "text_TfiAAj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Need more time to pay? </p><p>Snap Finance offers flexible payment plans from 6 to 48 months, with the option to settle early and pay less interest. </p><p></p><p>Who can apply? </p><p>- Aged 18–75 </p><p>- UK resident </p><p>- Monthly income of £200+ </p><p>- Valid debit card </p><p>- Active current account with direct debit </p><p>- Not currently bankrupt, IVA or DRO </p><p>Snap Finance Ltd is authorised and regulated by the Financial Conduct Authority (FCA). Finance is subject to status, affordability checks and terms.</p>",
-            "show_line_separator": false,
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
-        "button_3MKyzX": {
-          "type": "button",
-          "settings": {
-            "primary_button_label": "View our Finance Complaints Policy",
-            "primary_button_link": "shopify://pages/snap-finance",
-            "primary_button_type": "default",
-            "secondary_button_label": "OR See Options At Checkout",
-            "secondary_button_link": "",
-            "secondary_button_type": "dummy",
-            "padding_top": 50,
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_TfiAAj",
-        "button_3MKyzX"
-      ],
-      "name": "Dynamic Text",
-      "settings": {
-        "section_width": "customized-width",
-        "customize_width": 1400,
-        "show_line_separator": false,
-        "text_alignment_mobile": "center",
-        "text_alignment_desktop": "left",
-        "button_alignment_mobile": "center",
-        "button_alignment_desktop": "start",
-        "color_scheme": "scheme-2831d20a-2aa6-42d9-a92d-94286d12db6e",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
     }
   },
   "order": [
     "main",
     "dynamic_image_nQimYh",
-    "dynamic_text_9xp839",
-    "dynamic_image_mfXbFg",
-    "dynamic_text_AyxNJt"
+    "dynamic_text_9xp839"
   ]
 }
