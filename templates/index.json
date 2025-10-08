@@ -44,7 +44,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Banner_Image_Venice_1_2.jpg",
-            "mobile_image": "shopify://shop_images/Venice_Banner_Mobile.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Image_Venice_Square_1.jpg",
             "content_max_width": 910,
             "heading_font": "font-heading",
             "heading": "0% Finance Available",
