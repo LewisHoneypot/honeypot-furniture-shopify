@@ -348,7 +348,7 @@
           "settings": {
             "heading": "Do you assemble my furniture?",
             "icon": "question_mark",
-            "row_content": "<p>If you have ordered a sofa, our delivery team will assemble your sofa in any room of choice. This is included as part of our delivery service at no extra cost. There is no assembly included on flatpack furniture and other items. </p>",
+            "row_content": "<p>If you have ordered a sofa, the delivery team will assemble your sofa in any room of choice. This is included as part of the delivery service at no extra cost. There is no assembly included on flatpack furniture and other items. </p>",
             "page": ""
           }
         }
