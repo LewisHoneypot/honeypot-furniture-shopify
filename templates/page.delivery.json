@@ -321,7 +321,7 @@
           "settings": {
             "heading": "What if the items don't fit through my door?",
             "icon": "question_mark",
-            "row_content": "<p>If we are unable to successfully deliver your items due to the size of your doorway, we will return the items to our Headquarters and offer a full refund with no hidden costs or charges. </p>",
+            "row_content": "<p>If the delivery team are unable to successfully deliver your items due to the size of your doorway, they will return the items to our Headquarters and offer a full refund with no hidden costs or charges. </p>",
             "page": ""
           }
         },
@@ -339,7 +339,7 @@
           "settings": {
             "heading": "When will my order be delivered?",
             "icon": "question_mark",
-            "row_content": "<p>For in-stock items, we are usually able to deliver within 7 days. Some orders take a little longer depending on your location and the availability of gthe items you order.We deliver to different regions of the UK on different days of the week. Simply enter your postcode into our postcode checker below to see which days we deliver to your area. </p>",
+            "row_content": "<p>For in-stock items, the delivery team are usually able to deliver within 7 days. Some orders take a little longer depending on your location and the availability of the items you order. The delivery team deliver to different regions of the UK on different days of the week. Simply enter your postcode into our postcode checker below to see which days they deliver to your area. </p>",
             "page": ""
           }
         },
