@@ -158,6 +158,7 @@
         },
         "dividebuy_spread_the_cost_dividebuyproduct_nRGaQX": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
+          "disabled": true,
           "settings": {
             "finproms_text": "or_from",
             "include_cart_total": true,
