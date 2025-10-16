@@ -1,0 +1,112 @@
+/* ---------- BLOG LIVE SEARCH (dropdown) ---------- */
+.blog-live-search {
+  position: relative;
+  max-width: 500px;
+  margin: 1.5rem auto;
+  min-height: 50px;
+}
+
+#blog-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#blog-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 20;
+  margin-top: 0.25rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.blog-dropdown .blog-search-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blog-dropdown .blog-search-item a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+.blog-dropdown .blog-search-item p {
+  margin: 0.25rem 0 0;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- BLOG SEARCH RESULTS PAGE ---------- */
+.blog-results-section .blog-search-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1.5rem;
+}
+
+.blog-results-section .card-title {
+  font-size: 2.3rem;
+}
+
+.blog-search-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image + Text layout using Bootstrap flex classes */
+.blog-search-thumb {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.blog-search-text {
+  flex: 1;
+}
+
+.blog-search-title {
+  margin: 0 0 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.blog-search-excerpt {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .blog-search-thumb {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-search-link {
+    flex-direction: column !important; /* override d-flex row */
+  }
+}

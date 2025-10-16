@@ -81,74 +81,18 @@
                 {% endif %}
               </page-drawer>
             </aside>
-            <div class="aside__sibling d-none">
-              <div class="blog-live-search">
-                <input
-                  type="text"
-                  id="blog-search-input"
-                  placeholder="Search blog posts..."
-                  autocomplete="off"
-                >
+            <div class="aside__sibling">
+
+              <div id="blog-search-root"></div>
+              <script src="{{ 'blog-search-react.js' | asset_url }}" defer></script>
+
+              {% comment %} <div class="blog-live-search">
+                <input type="text" id="blog-search-input" placeholder="Search blog posts..." autocomplete="off">
                 <div id="blog-search-results" class="hidden"></div>
-              </div>
+              </div> {% endcomment %}
 
-              <script src="{{ 'blog-search.js' | asset_url }}" defer></script>
-
-              <style>
-                .blog-live-search {
-                  position: relative;
-                  max-width: 500px;
-                  margin: 1.5rem auto;
-                }
-
-                #blog-search-input {
-                  width: 100%;
-                  padding: 0.75rem 1rem;
-                  border: 1px solid #ddd;
-                  border-radius: 8px;
-                  font-size: 1rem;
-                }
-
-                #blog-search-results {
-                  position: absolute;
-                  top: 100%;
-                  left: 0;
-                  right: 0;
-                  background: #fff;
-                  border: 1px solid #ddd;
-                  border-radius: 8px;
-                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                  z-index: 20;
-                  margin-top: 0.25rem;
-                  max-height: 300px;
-                  overflow-y: auto;
-                }
-
-                .blog-search-item {
-                  padding: 0.75rem 1rem;
-                  border-bottom: 1px solid #eee;
-                }
-
-                .blog-search-item:last-child {
-                  border-bottom: none;
-                }
-
-                .blog-search-item a {
-                  text-decoration: none;
-                  color: #111;
-                  font-weight: 600;
-                }
-
-                .blog-search-item p {
-                  margin: 0.25rem 0 0;
-                  font-size: 0.9rem;
-                  color: #555;
-                }
-
-                .hidden {
-                  display: none;
-                }
-              </style>
+              {% comment %} {{ 'blog-search.css' | asset_url | stylesheet_tag }} {% endcomment %}
+              {% comment %} <script src="{{ 'blog-search.js' | asset_url }}" defer></script> {% endcomment %}              
 
               <page-drawer-opener
                 class="page__drawer-opener d-block no-js-hidden{% if section.settings.sidebar_type == "default" %} d-none-md o-h{% endif %}"
