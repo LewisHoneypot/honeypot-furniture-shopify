@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -38,9 +47,9 @@
           "settings": {
             "layout": "image_first",
             "heading": "Tips To Arrange Your Living Room Furniture",
-            "text": "<ul><li>How To Arrange Furniture.<\/li><li>Furniture With Storage.<\/li><li>Symmetrical Furniture Arrangement.<\/li><li>Make your living room feel more sociable.<\/li><li>Use the brightening sofa.<\/li><\/ul>",
+            "text": "<ul><li>How To Arrange Furniture.</li><li>Furniture With Storage.</li><li>Symmetrical Furniture Arrangement.</li><li>Make your living room feel more sociable.</li><li>Use the brightening sofa.</li></ul>",
             "button_label": "Sample Button",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify://collections",
             "button_transparent": "default",
             "padding_top": 0,
             "padding_bottom": 0
@@ -50,7 +59,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"<\/p>",
+            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"</p>",
             "padding_top": 50,
             "padding_bottom": 16
           }
@@ -59,7 +68,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor<\/strong><\/h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.<\/p>\n<\/blockquote>",
+            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor</strong></h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.</p>\n</blockquote>",
             "padding_top": 20,
             "padding_bottom": 26
           }
@@ -68,7 +77,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor<\/strong><\/h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.<\/p>",
+            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor</strong></h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.</p>",
             "padding_top": 30,
             "padding_bottom": 31
           }
@@ -110,7 +119,7 @@
           "disabled": true,
           "settings": {
             "heading": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-07T121503.493.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-05-07T121503.493.png",
             "link": "",
             "padding_top": 5,
             "padding_bottom": 5
@@ -121,7 +130,7 @@
           "disabled": true,
           "settings": {
             "heading": "Custom Block",
-            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p><p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>",
             "padding_top": 16,
             "padding_bottom": 0
           }
@@ -130,7 +139,7 @@
           "type": "richtext",
           "disabled": true,
           "settings": {
-            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p><p><\/p>",
+            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space</strong></h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. </p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. </p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. </p><p></p>",
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -182,7 +191,7 @@
         "text_67qjMj": {
           "type": "text",
           "settings": {
-            "text": "<p>The global pandemic saw pubs, bars and nightclubs close for approximately 31 weeks during the national lockdowns here in the UK. But interestingly, alcohol sales were only down a surprising 1.2% on the previous year, suggesting that people were drinking more at home. <\/p><p>In fact, <a href=\"https:\/\/assets.publishing.service.gov.uk\/government\/uploads\/system\/uploads\/attachment_data\/file\/1002627\/Alcohol_and_COVID_report.pdf\"><span style=\"text-decoration:underline\">a report released by Public Health England<\/span><\/a> in July 2021, states that the total volume of alcohol sold in shops and supermarkets rose by 25% between 2019 to 2020 and 2020 to 2021. Whilst beer and cider showed the largest relative decrease, it was wine and spirits that proved to be popular purchases for consumers looking to enjoy a tipple at home. <\/p><p>Recreating that pub experience in the kitchen, living room or garden became a necessity as we were forced to stay at home. So, it’s no wonder that so many of us were searching for home bar ideas, from a humble bar trolley, to a more substantial bar cabinet to a full on pub in the garden shed. <\/p><p>The home bar won’t be going anywhere soon, so let’s take a look at some of the best home bar ideas for entertaining in style.<\/p><p><strong>Home Bar Units<\/strong><br\/>Home bar units can be the height of luxury so these are at the top of our list of home bar ideas. Nestled discreetly into a corner of your living or dining room, these unassuming pieces of furniture are a great option if you want to hide your alcohol away behind closed doors. With ample storage space for all your spirits and your home bar accessories, you can keep everything you need for entertaining close at hand, but safely out of view. <\/p><p>With so many options to choose from you can pick home bar furniture that blends in with the rest of your home or you can choose to make a stunning design statement by opting for something that stands out. Whether you’re looking for something more minimalist in Scandi-style light wood, or something more modern and opulent in dark wood with brass accents, there is a style to suit any taste and aesthetic.  <\/p><p><strong>Home Bar Console<\/strong><\/p><p>A console bar can be a great option if you decide you want somewhere specific to seat your guests while you entertain in your home bar. They are narrow so don’t take up too much floor space and are taller than the average table so you can easily slide bar stools underneath. <\/p><p>Most console bars have tiered storage or shelving so that you can house all your home bar accessories whilst still keeping them easily accessible. Some also have built-in racks for hanging wine glasses. <\/p><p><strong>Bar Cart Trolley<\/strong><\/p><p>A bar cart trolley is extremely flexible as it is on castors and can therefore be wheeled around if you need move it around or change its position. It can be kept out of the way when not in use and then wheeled out whenever you have people round to entertain.<\/p><p>They are often a lot smaller than other home bar ideas so can be used even in homes where space is at a premium. Some are similar in size to an average side table so you really don’t need to have a palatial home to have your own bar. <\/p><p><strong>Cocktail Bar<\/strong><\/p><p>If you are really looking to channel your favourite cocktail lounge, then a home cocktail bar is the perfect option for you. Stock it up with spirits, mixers, bar tools and glassware and you’ll be right on track to perfect your mixology and bottle flipping skills. Who knows, maybe you’ll even invent your own signature cocktail to enjoy with your guests. <\/p><p><strong>Outdoor Bar<\/strong><\/p><p>If an indoor bar isn’t for you, why not <span style=\"text-decoration:underline\">move your entertaining out to the garden<\/span> and take full advantage of any nice weather and the benefits of surrounding yourself with nature.  A bar table and bar stools will provide a perfect seating area for sipping on your favourite beverages this summer whilst spending time with friends and family. <\/p><p>So, there you have it, we’ve shared five different home bar ideas to help you entertain in style. What do you think? Did you jump on the home bar bandwagon over the past few years and if not, would you consider it now?<\/p><p>If you’ve created a home bar with the help of Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive so we can see.<\/p>",
+            "text": "<p>The global pandemic saw pubs, bars and nightclubs close for approximately 31 weeks during the national lockdowns here in the UK. But interestingly, alcohol sales were only down a surprising 1.2% on the previous year, suggesting that people were drinking more at home. </p><p>In fact, <a href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1002627/Alcohol_and_COVID_report.pdf\"><span style=\"text-decoration:underline\">a report released by Public Health England</span></a> in July 2021, states that the total volume of alcohol sold in shops and supermarkets rose by 25% between 2019 to 2020 and 2020 to 2021. Whilst beer and cider showed the largest relative decrease, it was wine and spirits that proved to be popular purchases for consumers looking to enjoy a tipple at home. </p><p>Recreating that pub experience in the kitchen, living room or garden became a necessity as we were forced to stay at home. So, it’s no wonder that so many of us were searching for home bar ideas, from a humble bar trolley, to a more substantial bar cabinet to a full on pub in the garden shed. </p><p>The home bar won’t be going anywhere soon, so let’s take a look at some of the best home bar ideas for entertaining in style.</p><p><strong>Home Bar Units</strong><br/>Home bar units can be the height of luxury so these are at the top of our list of home bar ideas. Nestled discreetly into a corner of your living or dining room, these unassuming pieces of furniture are a great option if you want to hide your alcohol away behind closed doors. With ample storage space for all your spirits and your home bar accessories, you can keep everything you need for entertaining close at hand, but safely out of view. </p><p>With so many options to choose from you can pick home bar furniture that blends in with the rest of your home or you can choose to make a stunning design statement by opting for something that stands out. Whether you’re looking for something more minimalist in Scandi-style light wood, or something more modern and opulent in dark wood with brass accents, there is a style to suit any taste and aesthetic.  </p><p><strong>Home Bar Console</strong></p><p>A console bar can be a great option if you decide you want somewhere specific to seat your guests while you entertain in your home bar. They are narrow so don’t take up too much floor space and are taller than the average table so you can easily slide bar stools underneath. </p><p>Most console bars have tiered storage or shelving so that you can house all your home bar accessories whilst still keeping them easily accessible. Some also have built-in racks for hanging wine glasses. </p><p><strong>Bar Cart Trolley</strong></p><p>A bar cart trolley is extremely flexible as it is on castors and can therefore be wheeled around if you need move it around or change its position. It can be kept out of the way when not in use and then wheeled out whenever you have people round to entertain.</p><p>They are often a lot smaller than other home bar ideas so can be used even in homes where space is at a premium. Some are similar in size to an average side table so you really don’t need to have a palatial home to have your own bar. </p><p><strong>Cocktail Bar</strong></p><p>If you are really looking to channel your favourite cocktail lounge, then a home cocktail bar is the perfect option for you. Stock it up with spirits, mixers, bar tools and glassware and you’ll be right on track to perfect your mixology and bottle flipping skills. Who knows, maybe you’ll even invent your own signature cocktail to enjoy with your guests. </p><p><strong>Outdoor Bar</strong></p><p>If an indoor bar isn’t for you, why not <span style=\"text-decoration:underline\">move your entertaining out to the garden</span> and take full advantage of any nice weather and the benefits of surrounding yourself with nature.  A bar table and bar stools will provide a perfect seating area for sipping on your favourite beverages this summer whilst spending time with friends and family. </p><p>So, there you have it, we’ve shared five different home bar ideas to help you entertain in style. What do you think? Did you jump on the home bar bandwagon over the past few years and if not, would you consider it now?</p><p>If you’ve created a home bar with the help of Honeypot Furniture we’d love to see. Please share on Instagram and tag us with @honeypotfurniture and use our hashtag #JoinTheHive so we can see.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -210,7 +219,7 @@
         "image_HyiDNH": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_6165.jpg",
+            "image": "shopify://shop_images/IMG_6165.jpg",
             "heading_image": "",
             "heading_size": "default",
             "button_transparent": "transparent",
@@ -225,7 +234,7 @@
         "image_yJnQiR": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_6184_4e0111b0-56a0-4e78-aea6-6d6948471b62.jpg",
+            "image": "shopify://shop_images/IMG_6184_4e0111b0-56a0-4e78-aea6-6d6948471b62.jpg",
             "heading_image": "",
             "heading_size": "default",
             "button_transparent": "transparent",

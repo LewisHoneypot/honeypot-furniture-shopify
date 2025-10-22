@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -19,7 +28,7 @@
         "customize_width": 1800,
         "custom_rouded": false,
         "custom_block_rouded": 0,
-        "image": "shopify:\/\/shop_images\/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_11_Low_Res.jpg",
+        "image": "shopify://shop_images/Tucano_Modular_Sofa_Grey_Large_Corner_Lifestyle_11_Low_Res.jpg",
         "content_inside_image_mobile": false,
         "mobile_row_height": 42,
         "desktop_content_position": "middle-center",
@@ -48,7 +57,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Check Out With Klarna<\/p>",
+            "heading": "<p>Check Out With Klarna</p>",
             "heading_size": "h2",
             "padding_top": 0,
             "padding_bottom": 8
@@ -57,7 +66,7 @@
         "template--16836918247663__bcdfdd92-1560-4fa2-832d-8531cf03526d-1680140482d774527d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Join 150 million customers and choose flexible payments, lightning-fast checkout and secure shopping.<br\/><br\/>How It Works:<\/p><ul><li>Choose Klarna at checkout<\/li><li>Click on the pink badge and pay with Klarna.<\/li><li>Choose your payment option<\/li><li>You can Pay in 3 interest-free payments or Pay in 30 days.<\/li><li>Manage everything in one place<\/li><li>Make any remaining payments in the app. Klarna will send you reminders and updates.<\/li><\/ul>",
+            "text": "<p>Join 150 million customers and choose flexible payments, lightning-fast checkout and secure shopping.<br/><br/>How It Works:</p><ul><li>Choose Klarna at checkout</li><li>Click on the pink badge and pay with Klarna.</li><li>Choose your payment option</li><li>You can Pay in 3 interest-free payments or Pay in 30 days.</li><li>Manage everything in one place</li><li>Make any remaining payments in the app. Klarna will send you reminders and updates.</li></ul>",
             "padding_top": 0,
             "padding_bottom": 20
           }
@@ -72,7 +81,7 @@
         "section_width": "customized-width",
         "customize_width": 1600,
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
-        "image": "shopify:\/\/shop_images\/Klarna_2.jpg",
+        "image": "shopify://shop_images/Klarna_2.jpg",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -105,7 +114,7 @@
           "settings": {
             "block_content_max_w": "full",
             "custom_content_max_w": 650,
-            "text": "Klarna's Pay in 3\/Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only. Subject to status. Ts&Cs and late fees apply.",
+            "text": "Klarna's Pay in 3/Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only. Subject to status. Ts&Cs and late fees apply.",
             "heading_font": "font-heading",
             "text_size": "h2",
             "text_margin_bottom": 16,
@@ -151,37 +160,37 @@
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-0": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-1": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-2": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-3": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-4": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "template--16836918247663__fdad168f-7d9e-4226-9e96-e24307d01253-16801463524da804a2-5": {
           "type": "brand",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         }
       },
@@ -240,7 +249,7 @@
         "template--16836918247663__17f60c09-db31-4fe1-97e5-3d85f1363257-1680144247cd10e1e7-1": {
           "type": "text",
           "settings": {
-            "text": "<p>This is where comfort and style meet to blissful perfection<\/p>",
+            "text": "<p>This is where comfort and style meet to blissful perfection</p>",
             "text_size": "medium",
             "padding_top": 10,
             "padding_bottom": 20
@@ -251,7 +260,7 @@
           "settings": {
             "button_transparent": "default",
             "primary_button_label": "Join Our Community",
-            "primary_button_link": "shopify:\/\/collections",
+            "primary_button_link": "shopify://collections",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "padding_top": 15,
@@ -270,7 +279,7 @@
         "customize_width": 1800,
         "custom_rouded": false,
         "custom_block_rouded": 0,
-        "image": "shopify:\/\/shop_images\/Community.png",
+        "image": "shopify://shop_images/Community.png",
         "content_inside_image_mobile": false,
         "mobile_row_height": 42,
         "desktop_content_position": "middle-center",
@@ -382,9 +391,7 @@
         "show_line_separator_top": false,
         "show_line_separator_bottom": false,
         "collection": "best-sellers",
-        "product_list": [
-
-        ],
+        "product_list": [],
         "products_to_show": 5,
         "carousel_number": 4,
         "carousel_number_tablet": 3,

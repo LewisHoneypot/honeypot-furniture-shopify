@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -27,7 +36,7 @@
           "settings": {
             "heading": "Q: “When can I expect the refund for my online order that was cancelled?”",
             "icon": "none",
-            "row_content": "<p>The refund timeline for an Online order is 7-14 business days from the date of refund issued.<\/p>",
+            "row_content": "<p>The refund timeline for an Online order is 7-14 business days from the date of refund issued.</p>",
             "page": ""
           }
         },
@@ -36,7 +45,7 @@
           "settings": {
             "heading": "Q: “Can I cancel the order once placed, is the refund immediate?”",
             "icon": "none",
-            "row_content": "<p>One can cancel the order via the link received on the order confirmation. Alternatively, you can connect with us on the Toll-free number <strong>+1 (090) 123-456<\/strong> for further assistance.<\/p>",
+            "row_content": "<p>One can cancel the order via the link received on the order confirmation. Alternatively, you can connect with us on the Toll-free number <strong>+1 (090) 123-456</strong> for further assistance.</p>",
             "page": ""
           }
         },
@@ -45,7 +54,7 @@
           "settings": {
             "heading": "Q: “How do I use my promo code?”",
             "icon": "none",
-            "row_content": "<p>Enter your code at the checkout, exactly as it appears.<br\/><strong>NOTE:<\/strong> Your code may have a minimum spend (which does not include delivery costs).<\/p>",
+            "row_content": "<p>Enter your code at the checkout, exactly as it appears.<br/><strong>NOTE:</strong> Your code may have a minimum spend (which does not include delivery costs).</p>",
             "page": ""
           }
         },
@@ -54,7 +63,7 @@
           "settings": {
             "heading": "Q: “Can I return the items I bought online at one of the stores?”",
             "icon": "none",
-            "row_content": "<p>Yes, the articles bought online or through click and collect can be returned even at the stores. We suggest you carry the invoice along as it helps the processing easier. The return is possible if the place of delivery\/pickup is in the same city where the store is located.<\/p>",
+            "row_content": "<p>Yes, the articles bought online or through click and collect can be returned even at the stores. We suggest you carry the invoice along as it helps the processing easier. The return is possible if the place of delivery/pickup is in the same city where the store is located.</p>",
             "page": ""
           }
         },
@@ -63,7 +72,7 @@
           "settings": {
             "heading": "Q: “Is there a way I can track my complaint online?”",
             "icon": "none",
-            "row_content": "<p>You can contact our Customer support team through call\/chat or email with a complaint reference id shared and we can help you better.<\/p>",
+            "row_content": "<p>You can contact our Customer support team through call/chat or email with a complaint reference id shared and we can help you better.</p>",
             "page": ""
           }
         },
@@ -72,7 +81,7 @@
           "settings": {
             "heading": "Q: “I selected an order address while placing the order, can it be changed now?”",
             "icon": "none",
-            "row_content": "<p>We would be able to assist in minor changes in address, other than the pin code. For more support on this please dial +1 (090) 123-456.<\/p>",
+            "row_content": "<p>We would be able to assist in minor changes in address, other than the pin code. For more support on this please dial +1 (090) 123-456.</p>",
             "page": ""
           }
         },
@@ -81,7 +90,7 @@
           "settings": {
             "heading": "Q: “Would assistance be available to upload the template if needed?”",
             "icon": "none",
-            "row_content": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "row_content": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
             "page": ""
           }
         },
@@ -90,7 +99,7 @@
           "settings": {
             "heading": "Q: “I would like to expedite the delivery, is it feasible?”",
             "icon": "none",
-            "row_content": "<p>Customers cannot prepone the delivery from the date of delivery. However, they can extend the date of delivery on availability of slots.<\/p>",
+            "row_content": "<p>Customers cannot prepone the delivery from the date of delivery. However, they can extend the date of delivery on availability of slots.</p>",
             "page": ""
           }
         },
@@ -99,7 +108,7 @@
           "settings": {
             "heading": "Q: “What does the Concept Installation cover?”",
             "icon": "none",
-            "row_content": "<p>Concept Installation service includes the following:<br\/>Kitchen cabinets, interiors, door fronts, cover panels, legs and plinths, handles, integrated lighting, sink, tap and Concept purchased appliances (excluding extractor hood).<\/p>",
+            "row_content": "<p>Concept Installation service includes the following:<br/>Kitchen cabinets, interiors, door fronts, cover panels, legs and plinths, handles, integrated lighting, sink, tap and Concept purchased appliances (excluding extractor hood).</p>",
             "page": ""
           }
         },
@@ -116,7 +125,7 @@
           "settings": {
             "heading": "Q: “Can I know the exact time of delivery?”",
             "icon": "none",
-            "row_content": "<p>At this point in time, we don’t have an option to choose a specific slot for delivery. Transport service providers ideally reach the customer to communicate on their time of arrival.<\/p>",
+            "row_content": "<p>At this point in time, we don’t have an option to choose a specific slot for delivery. Transport service providers ideally reach the customer to communicate on their time of arrival.</p>",
             "page": ""
           }
         },
@@ -125,7 +134,7 @@
           "settings": {
             "heading": "Q: “Is it possible to cancel my delivery at the doorstep?”",
             "icon": "none",
-            "row_content": "<p>We are happy to refund the delivery charges if the service is cancelled prior to 24 hrs. of the actual delivery date. However, if there is a specific reason due to which the service is being cancelled please reach us via call\/chat or email for more support.<\/p>",
+            "row_content": "<p>We are happy to refund the delivery charges if the service is cancelled prior to 24 hrs. of the actual delivery date. However, if there is a specific reason due to which the service is being cancelled please reach us via call/chat or email for more support.</p>",
             "page": ""
           }
         },
@@ -134,7 +143,7 @@
           "settings": {
             "heading": "Q: “How do I check stock availability?”",
             "icon": "none",
-            "row_content": "<p>Every effort is made to maintain the availability of products, but due to popularity some items may not always be available. You can check stock availability on the product information pages.<\/p>",
+            "row_content": "<p>Every effort is made to maintain the availability of products, but due to popularity some items may not always be available. You can check stock availability on the product information pages.</p>",
             "page": ""
           }
         },
@@ -143,7 +152,7 @@
           "settings": {
             "heading": "Q: “Do you provide extra or replacement fittings?”",
             "icon": "none",
-            "row_content": "<p>Please get in touch with us at +1 (090) 123-456.<\/p>",
+            "row_content": "<p>Please get in touch with us at +1 (090) 123-456.</p>",
             "page": ""
           }
         },
@@ -152,7 +161,7 @@
           "settings": {
             "heading": "Q: “What are your store timings?”",
             "icon": "none",
-            "row_content": "<p>11:00 AM to 09:00 PM (All days).<\/p>",
+            "row_content": "<p>11:00 AM to 09:00 PM (All days).</p>",
             "page": ""
           }
         },
@@ -161,7 +170,7 @@
           "settings": {
             "heading": "Q: “Do you have any COVID restrictions at your stores at this point in time?”",
             "icon": "none",
-            "row_content": "<p>We encourage everyone to follow basic safety measures. The COVID restrictions are dependent on the store our customer is visiting.<\/p>",
+            "row_content": "<p>We encourage everyone to follow basic safety measures. The COVID restrictions are dependent on the store our customer is visiting.</p>",
             "page": ""
           }
         },
@@ -170,7 +179,7 @@
           "settings": {
             "heading": "Q: “Is your store open on all days?”",
             "icon": "none",
-            "row_content": "<p>Yes, our stores are open on all days.<\/p>",
+            "row_content": "<p>Yes, our stores are open on all days.</p>",
             "page": ""
           }
         },
@@ -179,7 +188,7 @@
           "settings": {
             "heading": "Q: “Are pets allowed inside the store?”",
             "icon": "none",
-            "row_content": "<p>We love pets but to avoid any risk they are not allowed inside the store.<\/p>",
+            "row_content": "<p>We love pets but to avoid any risk they are not allowed inside the store.</p>",
             "page": ""
           }
         },
@@ -188,7 +197,7 @@
           "settings": {
             "heading": "Q: “Do you offer planning services?”",
             "icon": "none",
-            "row_content": "<p>We offer various planning services either via Online\/Store or at home, based on your needs we will call you.<\/p>",
+            "row_content": "<p>We offer various planning services either via Online/Store or at home, based on your needs we will call you.</p>",
             "page": ""
           }
         },
@@ -197,7 +206,7 @@
           "settings": {
             "heading": "Q: “Why are some articles out of stock?”",
             "icon": "none",
-            "row_content": "<p>Like many retailers, we’re experiencing some challenges with our supply owing to COVID and are therefore experiencing some availability issues.<br\/><br\/>We’re working hard to get products back onto our shelves. Our team can also help you with alternatives in making a purchase, please contact us on +1 (090) 123-456<\/p>",
+            "row_content": "<p>Like many retailers, we’re experiencing some challenges with our supply owing to COVID and are therefore experiencing some availability issues.<br/><br/>We’re working hard to get products back onto our shelves. Our team can also help you with alternatives in making a purchase, please contact us on +1 (090) 123-456</p>",
             "page": ""
           }
         }
@@ -235,9 +244,9 @@
         "top_heading_1": "",
         "top_icon_2": "mail",
         "top_heading_2": "",
-        "bottom_text": "<p>Unable to find satisfactory answers?<\/p>",
+        "bottom_text": "<p>Unable to find satisfactory answers?</p>",
         "bottom_button_label": "Contact Us",
-        "bottom_button_link": "shopify:\/\/pages\/contact",
+        "bottom_button_link": "shopify://pages/contact",
         "color_scheme": "scheme-06080b3f-4cd8-4a34-99a2-b3f3ed18987c",
         "padding_top": 0,
         "padding_bottom": 81,

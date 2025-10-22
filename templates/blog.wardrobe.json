@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -46,7 +46,7 @@
           "type": "text",
           "settings": {
             "heading": "Custom Block",
-            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p><p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>",
             "padding_top": 16,
             "padding_bottom": 0
           }
@@ -136,7 +136,7 @@
       "disabled": true,
       "settings": {
         "show_line_separator": true,
-        "article": "blog-new\/liquid-gold-the-transformative-benefits-of-oil-serums-in-skincare-regimens",
+        "article": "blog-new/liquid-gold-the-transformative-benefits-of-oil-serums-in-skincare-regimens",
         "image_ratio": "adapt",
         "show_date": true,
         "show_author": true,
@@ -286,7 +286,7 @@
         "text_36FpBA": {
           "type": "text",
           "settings": {
-            "text": "<p>Stacey Sheppard brings her keen eye for design and deep industry insights to her guest blog posts. With a focus on interior design trends, tips, and expert advice, Stacey offers readers fresh perspectives on creating stylish and functional spaces. Her approachable writing style and extensive knowledge make her posts a must-read for anyone looking to elevate their home. Dive into Stacey's articles for inspiration and practical design solutions.<\/p>",
+            "text": "<p>Stacey Sheppard brings her keen eye for design and deep industry insights to her guest blog posts. With a focus on interior design trends, tips, and expert advice, Stacey offers readers fresh perspectives on creating stylish and functional spaces. Her approachable writing style and extensive knowledge make her posts a must-read for anyone looking to elevate their home. Dive into Stacey's articles for inspiration and practical design solutions.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10

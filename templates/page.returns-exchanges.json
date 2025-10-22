@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -97,7 +97,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Place Your Order",
-            "text": "<p>Find your favourite items and checkout using a variety of payment and finance options.<\/p>",
+            "text": "<p>Find your favourite items and checkout using a variety of payment and finance options.</p>",
             "link_label": "",
             "link": ""
           }
@@ -110,7 +110,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Await Confirmation",
-            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.<\/p>",
+            "text": "<p>You'll receieve confirmation of your order via email. We'll be in touch to arrange delivery.</p>",
             "link_label": "",
             "link": ""
           }
@@ -124,7 +124,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "#c66969",
             "heading": "Guarantee heading",
-            "text": "<p>Share information about your products, policies or services.<\/p>",
+            "text": "<p>Share information about your products, policies or services.</p>",
             "link_label": "",
             "link": ""
           }
@@ -137,7 +137,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "The Day Of Delivery",
-            "text": "<p>You'll receieve a live tracking link and our two-person team will deliver your items. <\/p>",
+            "text": "<p>You'll receieve a live tracking link and our two-person team will deliver your items. </p>",
             "link_label": "",
             "link": ""
           }
@@ -150,7 +150,7 @@
             "custom_size_icon": 30,
             "custom_icon_background": "",
             "heading": "Enjoy Your New Furniture",
-            "text": "<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.<\/p>",
+            "text": "<p>Sit back, relax and please don't forget to leave us a review on Trustpilot.</p>",
             "link_label": "",
             "link": ""
           }
@@ -164,9 +164,7 @@
         "item_ypLzVb"
       ],
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "type_style": "classic",
         "section_width": "customized-width",
@@ -212,7 +210,7 @@
         "heading_FtzRWC": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Live Delivery Tracking<\/h3>",
+            "heading": "<h3>Live Delivery Tracking</h3>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -221,7 +219,7 @@
         "text_hB8Ee3": {
           "type": "text",
           "settings": {
-            "text": "<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br\/><br\/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br\/><br\/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.<\/p>",
+            "text": "<p>Tired of being given a 12-hour time window for deliveries? We've got you covered!<br/><br/>On the day of your delivery, you'll receieve a live tracking link with regular, real-time updates on your expected delivery time. <br/><br/>Whether you want to pop home from work quickly to take the delivery or want to enjoy your day off, you'll be able to see our drivers whereabouts in real time.</p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -237,7 +235,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "scheme-e7b46f89-aaff-4e16-a42a-d270e9598a21",
-        "image": "shopify:\/\/shop_images\/Screenshot_2024-04-16_at_09.19.16.png",
+        "image": "shopify://shop_images/Screenshot_2024-04-16_at_09.19.16.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -280,7 +278,7 @@
           "settings": {
             "heading": "What do I do if I have a problem with my product?",
             "icon": "question_mark",
-            "row_content": "<p>Our delivery team will ask you to inspect the products before signing acceptance of the delivery so please inspect the products carefully before signing. If you spot any faults or damges then please notify the delivery team immediately. Our team inspect all of our products to ensure that they are in perfect conditions before they are delivered to you If our team has missed anything or you have been sent the wrong products, please contact us immediately so we can assess the situation and act accordingly. Simply fill out the form below and select 'Problem With My Product' from the drop-down menu and we will contact you within 1 working day. To report a problem with a product AFTER 14 days from your delivery date, please visit our Warranty Page and submit a Warranty Claim Form.<\/p>",
+            "row_content": "<p>Our delivery team will ask you to inspect the products before signing acceptance of the delivery so please inspect the products carefully before signing. If you spot any faults or damges then please notify the delivery team immediately. Our team inspect all of our products to ensure that they are in perfect conditions before they are delivered to you If our team has missed anything or you have been sent the wrong products, please contact us immediately so we can assess the situation and act accordingly. Simply fill out the form below and select 'Problem With My Product' from the drop-down menu and we will contact you within 1 working day. To report a problem with a product AFTER 14 days from your delivery date, please visit our Warranty Page and submit a Warranty Claim Form.</p>",
             "page": ""
           }
         },
@@ -289,7 +287,7 @@
           "settings": {
             "heading": "How do I request an exchange?",
             "icon": "question_mark",
-            "row_content": "<p>If for any reason you need to exchange your product, we're here to help. We want you to be completely satisfied with your purchase, and we're happy to assist you in finding the right product. To start the exchange process, please click on the button below and follow the easy steps. Our team will then review your request and provide further instructions on how to proceed.<\/p>",
+            "row_content": "<p>If for any reason you need to exchange your product, we're here to help. We want you to be completely satisfied with your purchase, and we're happy to assist you in finding the right product. To start the exchange process, please click on the button below and follow the easy steps. Our team will then review your request and provide further instructions on how to proceed.</p>",
             "page": ""
           }
         },
@@ -298,7 +296,7 @@
           "settings": {
             "heading": "How do I request a refund?",
             "icon": "question_mark",
-            "row_content": "<p>We understand that sometimes a product may not meet your expectations, and we want to make the return process as easy as possible. To initiate a return, please click on the button below and follow the simple steps. Our team will then review your request and provide further instructions on how to proceed. Thank you for choosing our products.<\/p>",
+            "row_content": "<p>We understand that sometimes a product may not meet your expectations, and we want to make the return process as easy as possible. To initiate a return, please click on the button below and follow the simple steps. Our team will then review your request and provide further instructions on how to proceed. Thank you for choosing our products.</p>",
             "page": ""
           }
         },
@@ -307,7 +305,7 @@
           "settings": {
             "heading": "What do I do if I'm not happy with my purchase?",
             "icon": "question_mark",
-            "row_content": "<p>We exercise a 14-day cooling-off period on all our products so you can buy from us with confidence. The 14-day period starts from the date of your delivery. Any items which are returned to us must be in an unused, brand-new condition, and wrapped in sufficient packaging. You can also amend your order up to 2 working days before your delivery. If you wish to amend your order, all you need to do is contact us and we can discuss any changes to the order and any impact on price or delivery dates. Please read our Terms and Conditions to find out more. Please refer to sections 7 and 8. Please note. The warehouse is only open to accept returns from Monday to Friday, 9am to 5pm.<\/p>",
+            "row_content": "<p>We exercise a 14-day cooling-off period on all our products so you can buy from us with confidence. The 14-day period starts from the date of your delivery. Any items which are returned to us must be in an unused, brand-new condition, and wrapped in sufficient packaging. You can also amend your order up to 2 working days before your delivery. If you wish to amend your order, all you need to do is contact us and we can discuss any changes to the order and any impact on price or delivery dates. Please read our Terms and Conditions to find out more. Please refer to sections 7 and 8. Please note. The warehouse is only open to accept returns from Monday to Friday, 9am to 5pm.</p>",
             "page": ""
           }
         }
@@ -354,7 +352,7 @@
           "type": "button",
           "settings": {
             "primary_button_label": "Download Returns Label",
-            "primary_button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0857\/1358\/4415\/files\/Returns-Label_1.pdf?v=1713341863",
+            "primary_button_link": "https://cdn.shopify.com/s/files/1/0857/1358/4415/files/Returns-Label_1.pdf?v=1713341863",
             "primary_button_type": "default",
             "secondary_button_label": "",
             "secondary_button_link": "",
