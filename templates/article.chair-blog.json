@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -46,9 +55,9 @@
           "settings": {
             "layout": "image_first",
             "heading": "Tips To Arrange Your Living Room Furniture",
-            "text": "<ul><li>How To Arrange Furniture.<\/li><li>Furniture With Storage.<\/li><li>Symmetrical Furniture Arrangement.<\/li><li>Make your living room feel more sociable.<\/li><li>Use the brightening sofa.<\/li><\/ul>",
+            "text": "<ul><li>How To Arrange Furniture.</li><li>Furniture With Storage.</li><li>Symmetrical Furniture Arrangement.</li><li>Make your living room feel more sociable.</li><li>Use the brightening sofa.</li></ul>",
             "button_label": "Sample Button",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify://collections",
             "button_transparent": "default",
             "padding_top": 0,
             "padding_bottom": 0
@@ -58,7 +67,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"<\/p>",
+            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"</p>",
             "padding_top": 50,
             "padding_bottom": 16
           }
@@ -67,7 +76,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor<\/strong><\/h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.<\/p>\n<\/blockquote>",
+            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor</strong></h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.</p>\n</blockquote>",
             "padding_top": 20,
             "padding_bottom": 26
           }
@@ -76,7 +85,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor<\/strong><\/h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.<\/p>",
+            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor</strong></h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.</p>",
             "padding_top": 30,
             "padding_bottom": 31
           }
@@ -128,7 +137,7 @@
           "disabled": true,
           "settings": {
             "heading": "Custom Block",
-            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p><p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>",
             "padding_top": 16,
             "padding_bottom": 0
           }
@@ -137,7 +146,7 @@
           "type": "richtext",
           "disabled": true,
           "settings": {
-            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p><p><\/p>",
+            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space</strong></h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. </p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. </p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. </p><p></p>",
             "padding_top": 5,
             "padding_bottom": 5
           }
@@ -212,9 +221,7 @@
         "show_line_separator_top": false,
         "show_line_separator_bottom": false,
         "collection": "discover-the-essentials",
-        "product_list": [
-
-        ],
+        "product_list": [],
         "products_to_show": 3,
         "carousel_number": 3,
         "carousel_number_tablet": 2,
@@ -282,7 +289,7 @@
         "heading_ymhUTp": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Tips to Declutter and Organise Your Home<\/strong>",
+            "heading": "<strong>Tips to Declutter and Organise Your Home</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -291,7 +298,7 @@
         "heading_Qb9Gd9": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>1. Start Small<\/strong>",
+            "heading": "<strong>1. Start Small</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -300,7 +307,7 @@
         "text_YdiFer": {
           "type": "text",
           "settings": {
-            "text": "<p>Decluttering the house can seem overwhelming when you have many rooms to get through. That’s why we recommend breaking it down into smaller, more manageable tasks. An easy way to do this is to declutter by room. Work your way around the house one room at a time. If this still feels like too much, break it down further and attack one area of a room at a time. This way you have lots of little wins to celebrate that will keep you motivated and on track.<\/p>",
+            "text": "<p>Decluttering the house can seem overwhelming when you have many rooms to get through. That’s why we recommend breaking it down into smaller, more manageable tasks. An easy way to do this is to declutter by room. Work your way around the house one room at a time. If this still feels like too much, break it down further and attack one area of a room at a time. This way you have lots of little wins to celebrate that will keep you motivated and on track.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -309,7 +316,7 @@
         "heading_NqEWrM": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>2. Set Time Limits<\/strong>",
+            "heading": "<strong>2. Set Time Limits</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -318,7 +325,7 @@
         "text_TGzn4e": {
           "type": "text",
           "settings": {
-            "text": "<p>It may be helpful to set yourself time limits per room so that you don’t get distracted and can stay on schedule. Just do whatever you can in the time limit and then move on once the time is up. Remember, doing something is better than doing nothing, even if you don’t finish.<\/p>",
+            "text": "<p>It may be helpful to set yourself time limits per room so that you don’t get distracted and can stay on schedule. Just do whatever you can in the time limit and then move on once the time is up. Remember, doing something is better than doing nothing, even if you don’t finish.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -327,7 +334,7 @@
         "heading_Layp3d": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>3. Be Ruthless<\/strong>",
+            "heading": "<strong>3. Be Ruthless</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -336,7 +343,7 @@
         "text_dHUBrP": {
           "type": "text",
           "settings": {
-            "text": "<p>You will need to be ruthless when you declutter and organise your home. It will be tempting to get caught up in the emotions of your belongings, but this is why we need to take a more detached and practical approach. It might help to get five bags or boxes ready: keep, sell, bin, recycle, donate. Get rid of anything you don’t use, wear or love. <\/p>",
+            "text": "<p>You will need to be ruthless when you declutter and organise your home. It will be tempting to get caught up in the emotions of your belongings, but this is why we need to take a more detached and practical approach. It might help to get five bags or boxes ready: keep, sell, bin, recycle, donate. Get rid of anything you don’t use, wear or love. </p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -345,7 +352,7 @@
         "heading_n9dHzj": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>4. Organise Your Belongings<\/strong>",
+            "heading": "<strong>4. Organise Your Belongings</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -354,7 +361,7 @@
         "text_QADQ3y": {
           "type": "text",
           "settings": {
-            "text": "<p>Once you have decluttered as much as you can, you need to find a home for all the belongings that you want to keep. You want to avoid having piles of unnecessary items on your surfaces. This makes it harder to clean and clutter is not good for our mental health. <\/p>",
+            "text": "<p>Once you have decluttered as much as you can, you need to find a home for all the belongings that you want to keep. You want to avoid having piles of unnecessary items on your surfaces. This makes it harder to clean and clutter is not good for our mental health. </p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -363,7 +370,7 @@
         "text_QBtLzd": {
           "type": "text",
           "settings": {
-            "text": "<p>Now that we have a strategy for decluttering in place, we’d like to share some of our decluttering tips and tricks with you for the rooms in your home.<\/p>",
+            "text": "<p>Now that we have a strategy for decluttering in place, we’d like to share some of our decluttering tips and tricks with you for the rooms in your home.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -428,7 +435,7 @@
         "heading_eLVbhk": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Decluttering the Hallway<\/strong>",
+            "heading": "<strong>Decluttering the Hallway</strong>",
             "heading_size": "default",
             "padding_top": 10,
             "padding_bottom": 10
@@ -437,7 +444,7 @@
         "text_xH6NMm": {
           "type": "text",
           "settings": {
-            "text": "<p>Hallways are extremely important and often overlooked areas of the home. They are the first thing we see when we enter the home so they create an immediate impression on us and our guests. <\/p><p>Try placing a bench with a basket by your front door to make it easy for people to remove their shoes and store them tidily away. Built-in storage or coat cupboards are ideal but if you don’t have this luxury, make sure you provide adequate hooks, coat stands, clothes rails or luggage racks for hanging coats, hats and other items of outdoor wear. <\/p><p>Console tables also come in handy for creating a drop off station for keys, wallets, post and other small items. Again, bowls and trays will help to keep everything nicely organised and close to hand. <\/p><p>So those are our decluttering tips for organising your home in the New Year. You may find it helpful to make yourself a decluttering checklist to work through or to create a decluttering challenge that you can work towards in January. If all this still seems too much for you, you can always seek out the services of a local decluttering professional to help you. <\/p><p>Here are some of our favourite storage products to help you declutter your home.<\/p>",
+            "text": "<p>Hallways are extremely important and often overlooked areas of the home. They are the first thing we see when we enter the home so they create an immediate impression on us and our guests. </p><p>Try placing a bench with a basket by your front door to make it easy for people to remove their shoes and store them tidily away. Built-in storage or coat cupboards are ideal but if you don’t have this luxury, make sure you provide adequate hooks, coat stands, clothes rails or luggage racks for hanging coats, hats and other items of outdoor wear. </p><p>Console tables also come in handy for creating a drop off station for keys, wallets, post and other small items. Again, bowls and trays will help to keep everything nicely organised and close to hand. </p><p>So those are our decluttering tips for organising your home in the New Year. You may find it helpful to make yourself a decluttering checklist to work through or to create a decluttering challenge that you can work towards in January. If all this still seems too much for you, you can always seek out the services of a local decluttering professional to help you. </p><p>Here are some of our favourite storage products to help you declutter your home.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -469,7 +476,7 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 500,
             "set_border": false,
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-13T104126.945.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-05-13T104126.945.png",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
@@ -525,7 +532,7 @@
         "text_4DXEgP": {
           "type": "text",
           "settings": {
-            "text": "<p>Console tables also come in handy for creating a drop off station for keys, wallets, post and other small items. Again, bowls and trays will help to keep everything nicely organised and close to hand. <\/p><p><\/p><p>So those are our decluttering tips for organising your home in the New Year. You may find it helpful to make yourself a decluttering checklist to work through or to create a decluttering challenge that you can work towards in January. If all this still seems too much for you, you can always seek out the services of a local decluttering professional to help you. <\/p><p>Here are some of our favourite storage products to help you declutter your home.<\/p>",
+            "text": "<p>Console tables also come in handy for creating a drop off station for keys, wallets, post and other small items. Again, bowls and trays will help to keep everything nicely organised and close to hand. </p><p></p><p>So those are our decluttering tips for organising your home in the New Year. You may find it helpful to make yourself a decluttering checklist to work through or to create a decluttering challenge that you can work towards in January. If all this still seems too much for you, you can always seek out the services of a local decluttering professional to help you. </p><p>Here are some of our favourite storage products to help you declutter your home.</p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10

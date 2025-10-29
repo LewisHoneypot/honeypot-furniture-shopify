@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -36,7 +36,7 @@
         "text_Mb8Gpn": {
           "type": "text",
           "settings": {
-            "text": "<p>We've worked closely with our finance partners to ensure our customers have a wide selection of easy-to-manage payment options. <\/p>",
+            "text": "<p>We've worked closely with our finance partners to ensure our customers have a wide selection of easy-to-manage payment options. </p>",
             "show_line_separator": false,
             "padding_top": 10,
             "padding_bottom": 10
@@ -65,7 +65,7 @@
         "heading_9J4gBF": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Snap Finance<\/p>",
+            "heading": "<p>Snap Finance</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -74,7 +74,7 @@
         "text_4LzAJB": {
           "type": "text",
           "settings": {
-            "text": "<p>We've worked closely with Snap Finance for a number of years and as a long-term flagship retailer, they have listened to what our customers want. With a 12-month 0% finance option and a range of interest-bearing options over longer terms, Snap Finance have adapted to their products to make buying from us easy!<\/p>",
+            "text": "<p>We've worked closely with Snap Finance for a number of years and as a long-term flagship retailer, they have listened to what our customers want. With a 12-month 0% finance option and a range of interest-bearing options over longer terms, Snap Finance have adapted to their products to make buying from us easy!</p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -93,7 +93,7 @@
           "settings": {
             "show_view_all": "link",
             "link_label": "Find Out More",
-            "link": "shopify:\/\/pages\/finance",
+            "link": "shopify://pages/finance",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -111,11 +111,11 @@
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/1_ef92cdaa-047c-4590-9fe9-8040055ab6dd.png",
+        "image": "shopify://shop_images/1_ef92cdaa-047c-4590-9fe9-8040055ab6dd.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "Find Out More",
-        "link": "shopify:\/\/pages\/finance",
+        "link": "shopify://pages/finance",
         "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
@@ -142,7 +142,7 @@
         "heading_xzR8rr": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Klarna<\/p>",
+            "heading": "<p>Klarna</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -151,7 +151,7 @@
         "text_Qt7jNQ": {
           "type": "text",
           "settings": {
-            "text": "<p>With Pay in 30 days or Pay In 3 options, customers can easily use Klarna's Buy Now Pay Later solution at checkout. <\/p>",
+            "text": "<p>With Pay in 30 days or Pay In 3 options, customers can easily use Klarna's Buy Now Pay Later solution at checkout. </p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -170,7 +170,7 @@
           "settings": {
             "show_view_all": "link",
             "link_label": "Find Out More",
-            "link": "shopify:\/\/pages\/klarna",
+            "link": "shopify://pages/klarna",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -189,11 +189,11 @@
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/2_f8c87fb0-7a07-45ae-b584-b60d7cbda82d.png",
+        "image": "shopify://shop_images/2_f8c87fb0-7a07-45ae-b584-b60d7cbda82d.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
-        "link": "shopify:\/\/pages\/klarna",
+        "link": "shopify://pages/klarna",
         "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
@@ -220,7 +220,7 @@
         "heading_f3Y3i4": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Clearpay<\/p>",
+            "heading": "<p>Clearpay</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -229,7 +229,7 @@
         "text_3q4qg9": {
           "type": "text",
           "settings": {
-            "text": "<p>With a Payin4 option, customers can easily use Clearpay's Buy Now Pay Later solution at checkout. <\/p>",
+            "text": "<p>With a Payin4 option, customers can easily use Clearpay's Buy Now Pay Later solution at checkout. </p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -248,7 +248,7 @@
           "settings": {
             "show_view_all": "link",
             "link_label": "Find Out More",
-            "link": "shopify:\/\/pages\/clearpay",
+            "link": "shopify://pages/clearpay",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -266,11 +266,11 @@
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/3_7bae4ac7-4ae0-45d0-93e6-27f22eb0fbfa.png",
+        "image": "shopify://shop_images/3_7bae4ac7-4ae0-45d0-93e6-27f22eb0fbfa.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
-        "link": "shopify:\/\/pages\/clearpay",
+        "link": "shopify://pages/clearpay",
         "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
@@ -297,7 +297,7 @@
         "heading_aBeEmn": {
           "type": "heading",
           "settings": {
-            "heading": "<p>PayPal<\/p>",
+            "heading": "<p>PayPal</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -306,7 +306,7 @@
         "text_BqLBMp": {
           "type": "text",
           "settings": {
-            "text": "<p>With an express checkout solution, you can use PayPal to quickly checkout with their trusted solution.<br\/><br\/>Simply choose PayPal at checkout.  <\/p>",
+            "text": "<p>With an express checkout solution, you can use PayPal to quickly checkout with their trusted solution.<br/><br/>Simply choose PayPal at checkout.  </p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -331,11 +331,11 @@
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/4.png",
+        "image": "shopify://shop_images/4.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
-        "link": "shopify:\/\/pages\/klarna",
+        "link": "shopify://pages/klarna",
         "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
@@ -362,7 +362,7 @@
         "heading_bkDndM": {
           "type": "heading",
           "settings": {
-            "heading": "<p>ShopPay<\/p>",
+            "heading": "<p>ShopPay</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -371,7 +371,7 @@
         "text_PDHQmL": {
           "type": "text",
           "settings": {
-            "text": "<p>Shopify's payment solution allows you to checkout with credit  card, debit card or use digital wallets including ApplePay and GooglePay. <br\/><br\/>If you've used ShopPay before, it's easy to check out using your saved details. <br\/><br\/>Simply choose a digital wallet solution or pay by card at checkout. <\/p>",
+            "text": "<p>Shopify's payment solution allows you to checkout with credit  card, debit card or use digital wallets including ApplePay and GooglePay. <br/><br/>If you've used ShopPay before, it's easy to check out using your saved details. <br/><br/>Simply choose a digital wallet solution or pay by card at checkout. </p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -396,11 +396,11 @@
         "section_width": "full-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/5.png",
+        "image": "shopify://shop_images/5.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
-        "link": "shopify:\/\/pages\/clearpay",
+        "link": "shopify://pages/clearpay",
         "colors_heading": "#ffffff",
         "show_top_line_separator": false,
         "show_bot_line_separator": false,
@@ -448,9 +448,7 @@
         "show_line_separator_top": false,
         "show_line_separator_bottom": false,
         "collection": "best-sellers",
-        "product_list": [
-
-        ],
+        "product_list": [],
         "products_to_show": 5,
         "carousel_number": 4,
         "carousel_number_tablet": 3,

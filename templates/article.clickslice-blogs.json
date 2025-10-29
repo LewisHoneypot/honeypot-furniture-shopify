@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -56,9 +56,9 @@
           "settings": {
             "layout": "image_first",
             "heading": "Tips To Arrange Your Living Room Furniture",
-            "text": "<ul><li>How To Arrange Furniture.<\/li><li>Furniture With Storage.<\/li><li>Symmetrical Furniture Arrangement.<\/li><li>Make your living room feel more sociable.<\/li><li>Use the brightening sofa.<\/li><\/ul>",
+            "text": "<ul><li>How To Arrange Furniture.</li><li>Furniture With Storage.</li><li>Symmetrical Furniture Arrangement.</li><li>Make your living room feel more sociable.</li><li>Use the brightening sofa.</li></ul>",
             "button_label": "Sample Button",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify://collections",
             "button_transparent": "default",
             "padding_top": 0,
             "padding_bottom": 0
@@ -68,7 +68,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"<\/p>",
+            "textarea": "<p style=\"text-align: center; font-style: normal; font-size: 18px; font-weight: 600; color: #2d2d2d; display: block; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;\">\" First, let's think about that your seating options cater to everyone. Start with the sofa. A modular design is best here, yes you can play around with the size and shape depending on your space and needs. Next, add a couple of armchairs if you can fit them in. If not, pouffes are a great option here as they take up way less room. Finally, create a focal point with a coffee table.. \"</p>",
             "padding_top": 50,
             "padding_bottom": 16
           }
@@ -77,7 +77,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor<\/strong><\/h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.<\/p>\n<\/blockquote>",
+            "textarea": "<blockquote>\n\t<h4><strong>Personalize Living Room Decor</strong></h4>\n\t<p>Personalize Living Room Decor with incorporating items that reflect your travels, hobbies, and cherished memories can make your living room feel extra special. Display ancestral portraits, framed genealogical charts, maps representing your favorite places, and photo collages featuring family and friends. Hang letters or signage that reference your initials or a familial surname for a cheap living room decor idea.</p>\n</blockquote>",
             "padding_top": 20,
             "padding_bottom": 26
           }
@@ -86,7 +86,7 @@
           "type": "textarea",
           "disabled": true,
           "settings": {
-            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor<\/strong><\/h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.<\/p>",
+            "textarea": "<h4><strong>Repurpose Vintage or Thrifted Decor</strong></h4>\n<p>Search flea markets, antique shops, estate sales, and thrift stores for inexpensive living room decor. Consider repurposing items in unique ways to create functional furnishings with vintage style. Cut down a farm table's legs to craft a rustic coffee table, employ an antique ladder to store and display throw blankets, use a vintage trunk to hold board games or provide seating, and move in wicker laundry baskets to hold magazines or in-process projects.</p>",
             "padding_top": 30,
             "padding_bottom": 31
           }
@@ -128,7 +128,7 @@
           "disabled": true,
           "settings": {
             "heading": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-07T121503.493.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-05-07T121503.493.png",
             "link": "",
             "padding_top": 5,
             "padding_bottom": 5
@@ -139,7 +139,7 @@
           "disabled": true,
           "settings": {
             "heading": "Custom Block",
-            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p><p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>",
             "padding_top": 16,
             "padding_bottom": 0
           }
@@ -148,7 +148,7 @@
           "type": "richtext",
           "disabled": true,
           "settings": {
-            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space<\/strong><\/h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. <\/p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. <\/p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. <\/p><p><\/p>",
+            "richtext": "<h2><strong>2. Corner Sofas Create and Save Space</strong></h2><p>Corner sofas are very versatile pieces of furniture. Not only are they built for relaxing but they are also ideal for entertaining. Corner sofas are great for larger families who want to stretch out and unwind with ample space but they are also perfect for those who like to entertain. </p><p>Due to the angle of the corner sofa, people can easily and conveniently gather together without having to sit in an awkward row and without the need for additional seating. </p><p>With so many shapes, sizes and styles of corner sofa available, there are options to suit all your needs. Whether you opt for an angled corner sofa, a corner chaise sofa, a corner sofa with recliner, or a U-shaped corner sofa, finding one that works for your home is easier than you may think. </p><p></p>",
             "padding_top": 5,
             "padding_bottom": 5
           }

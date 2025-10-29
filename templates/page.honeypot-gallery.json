@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -39,19 +39,19 @@
         "show_line_separator": true,
         "subheading": "",
         "subheading_size": "large",
-        "title": "<p>Swipe to style<\/p>",
+        "title": "<p>Swipe to style</p>",
         "heading_size": "default",
-        "content": "<p>Curves, soft hues and elegant textures make for the perfect boho interior. Combine woven textures and scandi inspired colours, with Azzuro at the centre of the space.<\/p>",
+        "content": "<p>Curves, soft hues and elegant textures make for the perfect boho interior. Combine woven textures and scandi inspired colours, with Azzuro at the centre of the space.</p>",
         "description_size": "large",
         "text_alignment": "center",
         "vertical_spacing": 16,
         "button_transparent": "transparent",
         "button_label": "Shop the Azzuro",
-        "button_link": "shopify:\/\/collections\/azzuro-sofas",
+        "button_link": "shopify://collections/azzuro-sofas",
         "button_margin_top": 23,
-        "before_image": "shopify:\/\/shop_images\/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_1_2_copy.jpg",
+        "before_image": "shopify://shop_images/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_1_2_copy.jpg",
         "label_before": "",
-        "after_image": "shopify:\/\/shop_images\/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_2_1_7d60d993-250e-4d53-8e5c-afa258067c5d_copy.jpg",
+        "after_image": "shopify://shop_images/Azzuro_Sofa_Cream_U_Shape_Corner_Hero_Slider_2_1_7d60d993-250e-4d53-8e5c-afa258067c5d_copy.jpg",
         "label_after": "",
         "text_position": "left",
         "drag_initial_position": 50,
@@ -74,19 +74,19 @@
         "show_line_separator": true,
         "subheading": "",
         "subheading_size": "large",
-        "title": "<p>Swipe to style<\/p>",
+        "title": "<p>Swipe to style</p>",
         "heading_size": "default",
-        "content": "<p>Our Colbee sofa is the anchor in this cosy story, using natural wood grain textures and contemporary design touches to create relaxed, modern look with a rustic twist. <\/p>",
+        "content": "<p>Our Colbee sofa is the anchor in this cosy story, using natural wood grain textures and contemporary design touches to create relaxed, modern look with a rustic twist. </p>",
         "description_size": "large",
         "text_alignment": "center",
         "vertical_spacing": 16,
         "button_transparent": "transparent",
         "button_label": "Shop the Colbee",
-        "button_link": "shopify:\/\/collections\/colbee-sofas",
+        "button_link": "shopify://collections/colbee-sofas",
         "button_margin_top": 23,
-        "before_image": "shopify:\/\/shop_images\/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_1_copy.jpg",
+        "before_image": "shopify://shop_images/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_1_copy.jpg",
         "label_before": "",
-        "after_image": "shopify:\/\/shop_images\/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_2_copy.jpg",
+        "after_image": "shopify://shop_images/Colbee_Sofa_Natural_Large_Corner_Hero_Slider_2_copy.jpg",
         "label_after": "",
         "text_position": "left",
         "drag_initial_position": 50,
@@ -107,7 +107,7 @@
         "heading_K4HqbN": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Corner styling inspo<\/p>",
+            "heading": "<p>Corner styling inspo</p>",
             "heading_size": "h1",
             "padding_top": 10,
             "padding_bottom": 10
@@ -116,7 +116,7 @@
         "text_LN9yJz": {
           "type": "text",
           "settings": {
-            "text": "<p>We think corner sofas are one of the greatest sofa creations there are. They allow you to make more of your space and when you get the right one, they can look as though they were made to perfectly slot right into your home.<\/p>",
+            "text": "<p>We think corner sofas are one of the greatest sofa creations there are. They allow you to make more of your space and when you get the right one, they can look as though they were made to perfectly slot right into your home.</p>",
             "padding_top": 10,
             "padding_bottom": 10
           }
@@ -126,7 +126,7 @@
           "settings": {
             "show_view_all": "link",
             "link_label": "Shop all corners",
-            "link": "shopify:\/\/collections\/corner-sofas",
+            "link": "shopify://collections/corner-sofas",
             "button_transparent": "transparent",
             "padding_top": 10,
             "padding_bottom": 10
@@ -143,7 +143,7 @@
         "section_width": "page-width",
         "customize_width": 1800,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T163039.563.png",
+        "image": "shopify://shop_images/Untitled_design_-_2024-06-10T163039.563.png",
         "heading": "",
         "heading_size": "default",
         "link_label": "",
@@ -198,8 +198,8 @@
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
-        "image_first": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T164330.952_638beccf-c720-4d54-902b-9a67345b8141.png",
-        "image_second": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T164349.624.png",
+        "image_first": "shopify://shop_images/Untitled_design_-_2024-06-10T164330.952_638beccf-c720-4d54-902b-9a67345b8141.png",
+        "image_second": "shopify://shop_images/Untitled_design_-_2024-06-10T164349.624.png",
         "mobile_row_height": 150,
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#000000",
@@ -247,8 +247,8 @@
       "settings": {
         "section_width": "full-width",
         "customize_width": 1800,
-        "image_first": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T165122.208_3d523dd6-16e2-4a2b-94df-71758b144070.png",
-        "image_second": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T164349.624.png",
+        "image_first": "shopify://shop_images/Untitled_design_-_2024-06-10T165122.208_3d523dd6-16e2-4a2b-94df-71758b144070.png",
+        "image_second": "shopify://shop_images/Untitled_design_-_2024-06-10T164349.624.png",
         "mobile_row_height": 150,
         "image_overlay_opacity": 30,
         "color_overlay_opacity": "#000000",
@@ -272,15 +272,15 @@
         "image_JCzPAn": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_1_15f94ac2-e576-43fe-9feb-77ffcf67a599.jpg",
-            "link": "shopify:\/\/collections\/belgravia-range"
+            "image": "shopify://shop_images/Belgravia_Sofa_Slate_U_Shape_Corner_Lifestyle_Low_Res_1_15f94ac2-e576-43fe-9feb-77ffcf67a599.jpg",
+            "link": "shopify://collections/belgravia-range"
           }
         },
         "image_fFAb3N": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T163956.274.png",
-            "link": "shopify:\/\/collections\/inga-range"
+            "image": "shopify://shop_images/Untitled_design_-_2024-06-10T163956.274.png",
+            "link": "shopify://collections/inga-range"
           }
         }
       },
@@ -327,13 +327,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-07-01T104715.451.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-07-01T104715.451.png",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Mary",
             "heading_size": "h1",
-            "text": "<p>Want to make your lounge feel bright and airy, creating a sense of space without removing any furniture? Then a main neutral colour scheme built around a beige sofa is the perfect way of doing just that. Beige is a calming and reflective tone that encourages a sense of tranquillity and light. Styled with a bold red to bring a pop of colour and life to your home.<\/p>",
+            "text": "<p>Want to make your lounge feel bright and airy, creating a sense of space without removing any furniture? Then a main neutral colour scheme built around a beige sofa is the perfect way of doing just that. Beige is a calming and reflective tone that encourages a sense of tranquillity and light. Styled with a bold red to bring a pop of colour and life to your home.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -346,13 +346,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-28T152646.872.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-06-28T152646.872.png",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Miel",
             "heading_size": "h1",
-            "text": "<p>Bringing a combination of rustic and nature into the home with our Miel sofabed. A blank canvas sofa that allows your home's personality to shine through.<\/p>",
+            "text": "<p>Bringing a combination of rustic and nature into the home with our Miel sofabed. A blank canvas sofa that allows your home's personality to shine through.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
@@ -365,13 +365,13 @@
             "block_content_max_w": "full",
             "custom_content_max_w": 250,
             "set_border": false,
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-06-10T165122.208_4d70478c-5ca4-41f2-810b-d44477293562.png",
+            "image": "shopify://shop_images/Untitled_design_-_2024-06-10T165122.208_4d70478c-5ca4-41f2-810b-d44477293562.png",
             "content_position": "center",
             "subheading": "",
             "subheading_size": "medium",
             "heading": "The Tucano",
             "heading_size": "h1",
-            "text": "<p>This modular sofa in Ivory looks great when styled with airy and neutral tones. Creating tranquil escapism in your home.<\/p>",
+            "text": "<p>This modular sofa in Ivory looks great when styled with airy and neutral tones. Creating tranquil escapism in your home.</p>",
             "text_size": "medium",
             "button_type": "standard",
             "button_label": "",
