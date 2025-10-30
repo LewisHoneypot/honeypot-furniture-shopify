@@ -1,0 +1,374 @@
+<div id="pdp-gallery" style="max-width:820px;margin:0 auto;">
+  <!-- Main display -->
+  <div
+    id="main-image-wrapper"
+    style="aspect-ratio:3/3.1;position:relative;touch-action:pan-y;user-select:none;-webkit-user-drag:none;cursor:grab;"
+  >
+    <div class="Fixtuur" data-embed="360" data-product="ABC456"></div>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="thumb-carousel">
+    <!-- Left chevron -->
+    <button class="thumb-nav left" part="chevron-left" aria-label="Previous">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style="transform: rotate(180deg);"
+      >
+        <path fill="currentColor" d="M9.01 17.45a.92.92 0 0 1-.2-.55c-.02-.2.05-.38.2-.53l4.4-4.4L9 7.55A.69.69 0 0 1 8.8 7c.01-.22.08-.4.21-.54a.7.7 0 0 1 .54-.23c.2 0 .36.08.51.23l4.98 4.98c.08.08.14.17.17.25.04.08.05.17.05.27s-.01.2-.05.28a.76.76 0 0 1-.17.25l-4.95 4.95a.68.68 0 0 1-.53.21.92.92 0 0 1-.55-.21Z"></path>
+      </svg>
+    </button>
+
+    <div id="thumb-bar" style="display:flex;gap:8px;overflow-x:auto;margin-top:1rem;align-items:center;">
+      <!-- Fixtuur 360 thumbnail -->
+      <div class="cylindo-thumbnail-btn active" data-fixtuur>
+        <div class="thumb-inner">
+          <img
+            src="https://fixtuur-honeypot.sirv.com/prod/Example/ABC456/spin/1054696_0000.jpg?w=70"
+            draggable="false"
+            alt="360 view"
+          >
+        </div>
+      </div>
+
+      {% for media in product.media %}
+        {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
+          <div class="cylindo-thumbnail-btn">
+            <div class="thumb-inner">
+              <img
+                class="thumb"
+                data-type="shopify"
+                data-src="{{ media | image_url: width: 1500 }}"
+                src="{{ media | image_url: width: 150 }}"
+                alt="{{ media.alt | escape }}"
+                draggable="false"
+                height="48"
+                width="64"
+              >
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    <!-- Right chevron -->
+    <button class="thumb-nav right" part="chevron-right" aria-label="Next">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M9.01 17.45a.92.92 0 0 1-.2-.55c-.02-.2.05-.38.2-.53l4.4-4.4L9 7.55A.69.69 0 0 1 8.8 7c.01-.22.08-.4.21-.54a.7.7 0 0 1 .54-.23c.2 0 .36.08.51.23l4.98 4.98c.08.08.14.17.17.25.04.08.05.17.05.27s-.01.2-.05.28a.76.76 0 0 1-.17.25l-4.95 4.95a.68.68 0 0 1-.53.21.92.92 0 0 1-.55-.21Z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  #thumb-bar {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    align-items: center;
+  }
+
+  .cylindo-thumbnail-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #ededed;
+    overflow: hidden; /* crop tall/wide images */
+    cursor: pointer;
+  }
+
+  .cylindo-thumbnail-btn img.thumb {
+    height: auto; /* maintain aspect ratio */
+    object-fit: cover; /* crop if aspect doesn’t match */
+  }
+
+  .cylindo-thumbnail-btn img.thumb,
+  .cylindo-thumbnail-btn svg.thumb {
+    pointer-events: none;
+    width: 100%;
+    display: block;
+  }
+
+  #thumb-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cylindo-thumbnail-btn img {
+    pointer-events: none; /* let parent div capture clicks */
+  }
+
+  .thumb {
+    filter: brightness(96%);
+  }
+
+  .thumb-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* crop excess */
+    border-radius: 2px; /* optional: soften inside corners */
+    display: contents;
+  }
+
+  .cylindo-svg-degrees {
+    font-size: 9px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    fill: currentcolor;
+  }
+
+  .cylindo-svg-text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    fill: currentcolor;
+  }
+
+  .thumb-inner img.thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop if aspect ratio doesn't match */
+    display: block;
+  }
+
+  .cylindo-thumbnail-btn.active {
+    border: 1px solid #9bb0be !important; /* highlight active */
+  }
+
+  #thumb-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thumb-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ✅ centers the whole thumbnail bar */
+    gap: 4px;
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .thumb-nav {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms ease;
+    color: var(--scoped-chevron-color);
+    background-color: transparent;
+    background-position: center;
+    transition: background 500ms;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1;
+    padding-top: 14px;
+  }
+
+  .cylindo-thumbnail-btn:hover:not(.active) {
+    border: 1px solid #888;
+  }
+
+  .thumb-nav:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hand teaser styling */
+  #teaser-hand {
+    position: absolute;
+    bottom: 42%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translateX(-50%);
+    pointer-events: none; /* don’t block clicks */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  #teaser-hand.dragging {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  #main-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* default for spin mode */
+  }
+
+  #main-image-wrapper .Fixtuur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* max width of container */
+    height: auto; /* maintain aspect ratio */
+    max-height: 100%; /* never overflow vertically */
+  }
+
+  #main-image-wrapper.zoomed {
+    overflow: hidden; /* allow panning */
+    cursor: grab; /* change cursor */
+  }
+
+  #main-image-wrapper.zoomed img {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  #main-image-wrapper img {
+    display: block;
+    margin: 0 auto; /* keep centered horizontally */
+  }
+
+  #zoomBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+  }
+
+  #zoomBtn svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
+
+    const thumbs = document.querySelectorAll('#thumb-bar > .cylindo-thumbnail-btn');
+    const mainWrapper = document.getElementById('main-image-wrapper');
+
+    function showShopifyImage(src) {
+      const existingFixtuur = mainWrapper.querySelector('.Fixtuur');
+      if (existingFixtuur) existingFixtuur.remove();
+
+      const oldImg = mainWrapper.querySelector('img.main-display');
+      if (oldImg) oldImg.remove();
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'main-display';
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.draggable = false;
+      mainWrapper.appendChild(img);
+    }
+
+    function showFixtuur360() {
+      const oldImg = mainWrapper.querySelector('img.main-display');
+      if (oldImg) oldImg.remove();
+
+      const existingFixtuur = mainWrapper.querySelector('.Fixtuur');
+      if (existingFixtuur) existingFixtuur.remove();
+
+      const div = document.createElement('div');
+      div.className = 'Fixtuur';
+      div.dataset.embed = '360';
+      div.dataset.product = 'ABC456';
+      mainWrapper.appendChild(div);
+
+      Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
+    }
+
+    // Handle thumbnail clicks
+    thumbs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        thumbs.forEach((t) => t.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (btn.hasAttribute('data-fixtuur')) {
+          showFixtuur360();
+        } else {
+          const img = btn.querySelector('img.thumb');
+          if (!img) return;
+          showShopifyImage(img.dataset.src || img.src);
+        }
+      });
+    });
+
+    // Left/Right nav
+    const thumbBar = document.getElementById('thumb-bar');
+    const leftBtn = document.querySelector('.thumb-nav.left');
+    const rightBtn = document.querySelector('.thumb-nav.right');
+
+    function getActiveIndex() {
+      return Array.from(thumbs).findIndex((t) => t.classList.contains('active'));
+    }
+
+    function activateThumb(newIdx) {
+      if (newIdx < 0) newIdx = thumbs.length - 1;
+      if (newIdx >= thumbs.length) newIdx = 0;
+      thumbs[newIdx].click();
+
+      const thumb = thumbs[newIdx];
+      const offset = thumb.offsetLeft - thumbBar.clientWidth / 2 + thumb.offsetWidth / 2;
+      thumbBar.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+
+    leftBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      activateThumb(getActiveIndex() - 1);
+    });
+    rightBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      activateThumb(getActiveIndex() + 1);
+    });
+  });
+</script>
+
+{% comment %} Fixtuur {% endcomment %}
+<script>
+  (function (w, d, s, o, js, fjs) {
+    w[o] =
+      w[o] ||
+      function () {
+        (w[o].q = w[o].q || []).push(arguments);
+      };
+    (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+    js.id = o;
+    js.type = 'text/javascript';
+    js.src = 'https://sdk.fixtuur.io/v1/sdk.js?clientId=' + '8ce8cb9c-06c8-4d3f-bc28-d663fd9d79ad';
+    js.async = 1;
+    fjs.parentNode.insertBefore(js, fjs);
+  })(window, document, 'script', 'Fixtuur');
+
+  Fixtuur('init', {
+    clientId: '8ce8cb9c-06c8-4d3f-bc28-d663fd9d79ad',
+    onAddToCart: function (cart) {
+      // place your code here
+    },
+    // include language code if required
+    language: 'en',
+    // include region code if required
+    region: 'GB',
+    // opt in/out of cookies if required
+    cookiePreferences: {
+      performance: true,
+      functional: true,
+    },
+  });
+</script>
