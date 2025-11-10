@@ -23,7 +23,6 @@
     },
     "dynamic_image_nQimYh": {
       "type": "dynamic-image",
-      "disabled": true,
       "name": "Dynamic Image",
       "settings": {
         "section_width": "customized-width",
@@ -38,7 +37,6 @@
       "blocks": {
         "text_H3VNgM": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>DivideBuy – Interest-Free Finance <br/><br/>Spread the cost of your sofa on finance with DivideBuy – interest-free credit available over 6, 9 or 12 months, making it easier to budget for your purchase. Who can apply? </p><p></p><p>- Aged 18 or over </p><p>- UK resident for 3+ years </p><p>- Valid debit or credit card </p><p>- No recent missed payments or active CCJs </p><p></p><p>DivideBuy is interest-free with no hidden fees, subject to status and affordability checks. Check your eligibility using the free eligibility checker on our product pages.</p>",
             "show_line_separator": false,
@@ -48,7 +46,6 @@
         },
         "button_JxpriK": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "primary_button_label": "Learn More DivideBuy Finance Options",
             "primary_button_link": "shopify://pages/dividebuy",
