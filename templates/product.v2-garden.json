@@ -145,20 +145,8 @@
             "data_source": "nosto"
           }
         },
-        "snap_buttons_HagTqx": {
-          "type": "snap_buttons",
-          "settings": {
-            "rbp_toggle": "on",
-            "bnpl_toggle": "off",
-            "colors_background": "#ededed",
-            "popup_layout": "double",
-            "finance_button_text": "FINANCE AVAILABLE",
-            "popup_design": "minimal"
-          }
-        },
         "dividebuy_spread_the_cost_dividebuyproduct_nRGaQX": {
           "type": "shopify://apps/dividebuy-spread-the-cost/blocks/dividebuyproduct/3ea5bc0e-1a15-490b-b431-d3ea9a2cd3da",
-          "disabled": true,
           "settings": {
             "finproms_text": "or_from",
             "include_cart_total": true,
@@ -171,6 +159,17 @@
             "top_margin_mobile": 0,
             "bottom_margin_mobile": 0,
             "price_dom_element_selector": ""
+          }
+        },
+        "snap_buttons_HagTqx": {
+          "type": "snap_buttons",
+          "settings": {
+            "rbp_toggle": "on",
+            "bnpl_toggle": "off",
+            "colors_background": "#ededed",
+            "popup_layout": "double",
+            "finance_button_text": "FINANCE AVAILABLE",
+            "popup_design": "minimal"
           }
         },
         "klarna_buttons_KUw9Wh": {
@@ -219,8 +218,8 @@
         "usp_drawer_2_Yk9cgj",
         "buy_buttons",
         "expected_delivery_TKcTdt",
-        "snap_buttons_HagTqx",
         "dividebuy_spread_the_cost_dividebuyproduct_nRGaQX",
+        "snap_buttons_HagTqx",
         "klarna_buttons_KUw9Wh",
         "protection_drawer_iWbVLW",
         "nosto_nosto_placements_block_wMiqNL"
