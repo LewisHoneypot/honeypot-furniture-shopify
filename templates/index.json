@@ -43,11 +43,11 @@
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Banner_Image_Venice_1_2.jpg",
-            "mobile_image": "shopify://shop_images/Banner_Image_Venice_Square_1.jpg",
+            "image": "shopify://shop_images/BF_SALE_BANNER.jpg",
+            "mobile_image": "shopify://shop_images/BF_SALE_BANNER_-_mobile.jpg",
             "content_max_width": 910,
             "heading_font": "font-heading",
-            "heading": "0% Finance Available",
+            "heading": "",
             "heading_size": "small",
             "heading_margin_bottom": 30,
             "subheading": "",
@@ -57,7 +57,7 @@
             "text_alignment": "left",
             "image_overlay_opacity": 30,
             "color_overlay_opacity": "#000000",
-            "primary_button_label": "Find out more",
+            "primary_button_label": "",
             "primary_button_link": "shopify://pages/finance",
             "secondary_button_label": "",
             "secondary_button_link": "",
