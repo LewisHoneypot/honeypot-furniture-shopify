@@ -3,8 +3,10 @@
   <head>
     <!-- Omniconvert -->
     {%- if settings.enable_omniconvert == true -%}
-      <link rel="dns-prefetch" href="//app.omniconvert.com" />
-      <script type="text/javascript">window._mktz=window._mktz||[];</script>
+      <link rel="dns-prefetch" href="//app.omniconvert.com">
+      <script type="text/javascript">
+        window._mktz = window._mktz || [];
+      </script>
       <script src="//cdn.omniconvert.com/js/xeb7be7.js" defer="defer"></script>
     {%- endif -%}
     <meta charset="utf-8">
@@ -31,11 +33,14 @@
     {% endif %}
 
     {% if template == 'collection.json' %}
-  <title>Shop Sofas, Beds & Furniture | Honeypot Furniture UK</title>
-  <meta name="description" content="Shop sofas, beds, and furniture at Honeypot Furniture. Discover comfort, value, and style for every room. Order now for fast UK delivery!">
-{% else %}
-  {{ content_for_header }}
-{% endif %}
+      <title>Shop Sofas, Beds & Furniture | Honeypot Furniture UK</title>
+      <meta
+        name="description"
+        content="Shop sofas, beds, and furniture at Honeypot Furniture. Discover comfort, value, and style for every room. Order now for fast UK delivery!"
+      >
+    {% else %}
+      {{ content_for_header }}
+    {% endif %}
 
     {% render 'meta-tags' %}
     {% render 'global-style' %}
@@ -349,5 +354,6 @@
     {% endcomment %}
     <link rel="stylesheet" href="{{ 'animation.css' | asset_url }}" media="print" onload="this.media='all'">
     {% render 'lipscore-custom-scripts' %}
+
   </body>
 </html>
