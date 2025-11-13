@@ -891,16 +891,18 @@
                     {%- if block.settings.image != blank -%}
                       {%- assign image_alt = block.settings.image.alt | default: shop.name | escape -%}
                       {%- if forloop.index == 1 -%}
-                        {{
-                          block.settings.image
-                          | image_url: width: block.settings.image.width
-                          | image_tag:
-                            loading: 'lazy',
-                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                            sizes: '100vw',
-                            alt: image_alt,
-                            class: 'd-none d-block-md w-100 h-100 o-f-cover motion-reduce'
-                        }}
+                        <a href="/collections/sofas">
+                          {{
+                            block.settings.image
+                            | image_url: width: block.settings.image.width
+                            | image_tag:
+                              loading: 'lazy',
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              sizes: '100vw',
+                              alt: image_alt,
+                              class: 'd-none d-block-md w-100 h-100 o-f-cover motion-reduce'
+                          }}
+                        </a>
                       {%- else -%}
                         {{
                           block.settings.image
