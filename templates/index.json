@@ -12,34 +12,6 @@
     "12b81e44-2b28-427b-9080-19dfb79fd112": {
       "type": "slideshow",
       "blocks": {
-        "slide_dN3rVP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/3_9fba164d-6d85-4496-962b-ae955156a543.jpg",
-            "mobile_image": "shopify://shop_images/3_68bf11b7-15bb-4bd7-a2ca-c398bc82ceca.jpg",
-            "content_max_width": 1200,
-            "heading_font": "font-heading",
-            "heading": "New In",
-            "heading_size": "small",
-            "heading_margin_bottom": 20,
-            "subheading": "Seriously Stylish Sofa Beds",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 26,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 90,
-            "color_overlay_opacity": "#000000",
-            "primary_button_label": "Shop New In",
-            "primary_button_link": "shopify://collections/new-in",
-            "secondary_button_label": "",
-            "secondary_button_link": "",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
         "slide_MVHYjL": {
           "type": "slide",
           "settings": {
@@ -59,6 +31,34 @@
             "color_overlay_opacity": "#000000",
             "primary_button_label": "",
             "primary_button_link": "shopify://pages/finance",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "horizontal",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
+        "slide_dN3rVP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/3_9fba164d-6d85-4496-962b-ae955156a543.jpg",
+            "mobile_image": "shopify://shop_images/3_68bf11b7-15bb-4bd7-a2ca-c398bc82ceca.jpg",
+            "content_max_width": 1200,
+            "heading_font": "font-heading",
+            "heading": "New In",
+            "heading_size": "small",
+            "heading_margin_bottom": 20,
+            "subheading": "Seriously Stylish Sofa Beds",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 26,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 90,
+            "color_overlay_opacity": "#000000",
+            "primary_button_label": "Shop New In",
+            "primary_button_link": "shopify://collections/new-in",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "button_transparent": "transparent",
@@ -98,8 +98,8 @@
         }
       },
       "block_order": [
-        "slide_dN3rVP",
         "slide_MVHYjL",
+        "slide_dN3rVP",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0"
       ],
       "settings": {
