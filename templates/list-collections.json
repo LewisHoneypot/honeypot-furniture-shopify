@@ -115,12 +115,6 @@
             "image": "shopify://shop_images/Venice_3_Seater_Grey_Lifestyle.jpg"
           }
         },
-        "collection_xgGpJg": {
-          "type": "collection",
-          "settings": {
-            "collection": "sectional-sofas"
-          }
-        },
         "banner_kkBRq3": {
           "type": "banner",
           "settings": {
@@ -159,7 +153,6 @@
         "collection_bBXpzm",
         "collection_Ek9dMM",
         "collection_QQzMiJ",
-        "collection_xgGpJg",
         "banner_kkBRq3"
       ],
       "settings": {
