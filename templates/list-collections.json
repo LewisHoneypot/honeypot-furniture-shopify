@@ -101,6 +101,26 @@
             "image": "shopify://shop_images/Bari_Sofa_Beige_2_Seater_Lifestyle_1.jpg"
           }
         },
+        "collection_Ek9dMM": {
+          "type": "collection",
+          "settings": {
+            "collection": "cinema-sofas",
+            "image": "shopify://shop_images/Harald_Electric_Recliner_Sofa_Grey_3_Seater_1.jpg"
+          }
+        },
+        "collection_QQzMiJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "compact-sofas",
+            "image": "shopify://shop_images/Venice_3_Seater_Grey_Lifestyle.jpg"
+          }
+        },
+        "collection_xgGpJg": {
+          "type": "collection",
+          "settings": {
+            "collection": "sectional-sofas"
+          }
+        },
         "banner_kkBRq3": {
           "type": "banner",
           "settings": {
@@ -137,6 +157,9 @@
         "collection_MMVBiJ",
         "collection_Dh3i3U",
         "collection_bBXpzm",
+        "collection_Ek9dMM",
+        "collection_QQzMiJ",
+        "collection_xgGpJg",
         "banner_kkBRq3"
       ],
       "settings": {
