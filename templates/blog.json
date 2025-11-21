@@ -69,7 +69,7 @@
         "show_image": true,
         "show_date": true,
         "show_author": false,
-        "show_excerpts": true,
+        "show_excerpts": false,
         "button_transparent": "default",
         "sidebar_type": "popup",
         "color_scheme": "accent-2",
