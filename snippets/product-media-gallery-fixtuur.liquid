@@ -4,8 +4,13 @@
     id="main-image-wrapper"
     style="aspect-ratio:3/3.1;position:relative;touch-action:pan-y;user-select:none;-webkit-user-drag:none;cursor:grab;"
   >
-    <div class="Fixtuur" data-embed="360" data-product="ABC456"></div>
+    <div class="Fixtuur" data-embed="360" data-product="{{ product.variants[0].sku }}"></div>
   </div>
+
+  <script>
+    console.log({{ product.variants[0].sku }});
+    console.log({{ product.variants[0].sku }});
+  </script>
 
   <!-- Thumbnails -->
   <div class="thumb-carousel">
@@ -25,7 +30,7 @@
 
     <div id="thumb-bar" style="display:flex;gap:8px;overflow-x:auto;margin-top:1rem;align-items:center;">
       <div class="cylindo-thumbnail-btn">
-        <div class="Fixtuur" data-embed="thumbnail" data-product="ABC456"></div>
+        <div class="Fixtuur" data-embed="thumbnail" data-product="{{ product.variants[0].sku }}"></div>
       </div>
 
       <!-- Fixtuur 360 thumbnail -->
@@ -33,7 +38,7 @@
         <div class="thumb-inner">
           <img
             class="thumb"
-            src="https://fixtuur-honeypot.sirv.com/prod/Example/ABC456/spin/1054696_0000.jpg?w=70"
+            src="https://fixtuur-honeypot.sirv.com/prod/Example/{{ product.variants[0].sku }}/spin/1054696_0000.jpg?w=70"
             alt="360 view"
             draggable="false"
             height="48"
@@ -307,7 +312,7 @@
       const div = document.createElement('div');
       div.className = 'Fixtuur';
       div.dataset.embed = '360';
-      div.dataset.product = 'ABC456';
+      div.dataset.product = '{{ product.variants[0].sku }}';
       mainWrapper.appendChild(div);
 
       Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
