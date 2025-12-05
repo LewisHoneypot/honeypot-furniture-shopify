@@ -101,6 +101,7 @@
         },
         "slide_DL46Yz": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/5_ccebc920-c486-44af-b21d-1c0afda58aac.png",
             "mobile_image": "shopify://shop_images/2_70e2a32f-c7a4-442a-aeef-b938e9ff09e9.png",
