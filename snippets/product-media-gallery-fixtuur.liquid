@@ -7,9 +7,7 @@
     <div class="Fixtuur" data-embed="360" data-product="{{ product.variants[0].sku }}"></div>
   </div>
 
-  <script>
-    console.log({{ product.variants[0].sku | json }});
-  </script>
+  {% assign first_word = product.title | split: " " | first %}
 
   <!-- Thumbnails -->
   <div class="thumb-carousel">
@@ -28,16 +26,13 @@
     </button>
 
     <div id="thumb-bar" style="display:flex;gap:8px;overflow-x:auto;margin-top:1rem;align-items:center;">
-      <div class="cylindo-thumbnail-btn">
-        <div class="Fixtuur" data-embed="thumbnail" data-product="{{ product.variants[0].sku }}"></div>
-      </div>
 
       <!-- Fixtuur 360 thumbnail -->
       <div class="cylindo-thumbnail-btn active" data-fixtuur>
         <div class="thumb-inner">
           <img
             class="thumb"
-            src="https://fixtuur-honeypot.sirv.com/prod/Example/{{ product.variants[0].sku }}/spin/1054696_0000.jpg?w=70"
+            src="https://fixtuur-honeypot.sirv.com/prod/{{ first_word }}/{{ product.variants[0].sku }}/spin/{{ product.variants[0].sku }}_0000.jpg?w=70"
             alt="360 view"
             draggable="false"
             height="48"
