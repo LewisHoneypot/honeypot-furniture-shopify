@@ -269,7 +269,7 @@
         "enable_share": false,
         "type_style": "classic",
         "image_tech": "default",
-        "cylindo_thumbnail_bar": "on",
+        "cylindo_thumbnail_bar": "off",
         "media_size": "large",
         "gallery_layout": "slider_thumbnail",
         "image_zoom": "lightbox",
