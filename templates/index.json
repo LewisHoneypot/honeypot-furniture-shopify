@@ -14,7 +14,6 @@
       "blocks": {
         "slide_VQiCzB": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Banner_2.jpg",
             "mobile_image": "shopify://shop_images/Banner_Mobile.jpg",
