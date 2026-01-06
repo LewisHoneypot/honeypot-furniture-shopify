@@ -2,12 +2,12 @@
   <!-- Main display -->
   <div
     id="main-image-wrapper"
-    style="aspect-ratio:3/2.962;position:relative;touch-action:pan-y;user-select:none;-webkit-user-drag:none;cursor:grab;"
+    style="aspect-ratio:1/1;position:relative;touch-action:pan-y;user-select:none;-webkit-user-drag:none;cursor:grab;"
   >
     <div class="Fixtuur" data-embed="360" data-product="{{ product.variants[0].sku }}"></div>
   </div>
 
-  {% assign first_word = product.title | split: " " | first %}
+  {% assign first_word = product.title | split: ' ' | first %}
 
   <!-- Thumbnails -->
   <div class="thumb-carousel">
@@ -26,7 +26,6 @@
     </button>
 
     <div id="thumb-bar" style="display:flex;gap:8px;overflow-x:auto;margin-top:1rem;align-items:center;">
-
       <!-- Fixtuur 360 thumbnail -->
       <div class="cylindo-thumbnail-btn active" data-fixtuur>
         <div class="thumb-inner">
@@ -394,31 +393,33 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const fixtuurContainer = document.querySelector('#main-image-wrapper');
-
     if (!fixtuurContainer) return;
 
-    // Define function to attach observer
-    function attachFixtuurObserver() {
-      const observer = new MutationObserver(() => {
-        const fullscreenIcon = fixtuurContainer.querySelector('.smv-button-fullscreen-open .smv-icon');
-        if (fullscreenIcon && !fixtuurContainer.querySelector('.smv-icon-custom')) {
-          const newIcon = document.createElement('div');
-          newIcon.className = 'smv-icon smv-icon-custom';
-          newIcon.setAttribute('role', 'button');
-          newIcon.setAttribute('aria-label', '360 View');
-          newIcon.style.width = '36px';
-          newIcon.style.height = '36px';
-          newIcon.style.cursor = 'pointer';
-          newIcon.style.marginRight = '8px';
-          newIcon.style.display = 'flex';
-          newIcon.style.alignItems = 'center';
-          newIcon.style.justifyContent = 'center';
-          newIcon.style.zIndex = '9999';
+    const observer = new MutationObserver(() => {
+      const fullscreenIcon = fixtuurContainer.querySelector('.smv-button-fullscreen-open .smv-icon');
 
-          // Inline SVG
-          newIcon.innerHTML = `
-            <side-drawer-opener data-side-drawer="#Drawer-drawer_nfiTCK">
-              <button type="button" aria-haspopup="dialog" aria-label="Dimensions" style="border:none;cursor:pointer;padding:0;background:transparent;">
+      // If Fixtuur UI exists AND our icon does not
+      if (fullscreenIcon && !fixtuurContainer.querySelector('.smv-icon-custom')) {
+        const newIcon = document.createElement('div');
+        newIcon.className = 'smv-icon smv-icon-custom';
+        newIcon.setAttribute('role', 'button');
+        newIcon.setAttribute('aria-label', '360 View');
+
+        newIcon.style.cssText = `
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        margin-right: 8px;
+      `;
+
+        newIcon.innerHTML = `
+        <side-drawer-opener data-side-drawer="#Drawer-drawer_nfiTCK">
+          <button type="button" aria-label="Dimensions"
+            style="border:none;background:transparent;padding:0;cursor:pointer;">
                     
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" width="40" zoomAndPan="magnify" viewBox="0 0 375 374.999991" preserveAspectRatio="xMidYMid meet" version="1.0" style="
                   width: 40px;
@@ -443,28 +444,18 @@
                   </g>
                 </svg>
                 
-              </button>
-            </side-drawer-opener>
-          `;
+              ${document.querySelector('svg') ? '' : ''}
+          </button>
+        </side-drawer-opener>
+      `;
 
-          fullscreenIcon.parentElement.parentElement.insertBefore(newIcon, fullscreenIcon.parentElement);
-          // Stop this observer once icon is added
-          observer.disconnect();
-        }
-      });
+        fullscreenIcon.parentElement.parentElement.insertBefore(newIcon, fullscreenIcon.parentElement);
+      }
+    });
 
-      observer.observe(fixtuurContainer, { childList: true, subtree: true });
-    }
-
-    // Attach observer initially
-    attachFixtuurObserver();
-
-    // Intercept Fixtuur refresh calls
-    const originalShowFixtuur360 = window.showFixtuur360;
-    window.showFixtuur360 = function () {
-      originalShowFixtuur360?.(); // run original if defined
-      // Reattach observer after Fixtuur reloads
-      attachFixtuurObserver();
-    };
+    observer.observe(fixtuurContainer, {
+      childList: true,
+      subtree: true,
+    });
   });
 </script>
