@@ -42,6 +42,36 @@
             "padding_left_right": 0
           }
         },
+        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_651478da-f9eb-40a5-acd3-4c3af477484c.jpg",
+            "mobile_image": "shopify://shop_images/mobile_version.jpg",
+            "content_max_width": 1200,
+            "heading_font": "font-heading",
+            "heading": "Sink Into Comfort, Stay in Style",
+            "heading_size": "small",
+            "heading_margin_bottom": 30,
+            "subheading": "Elevate your home with our cosy corners designed for ultimate relaxation.",
+            "subheading_size": "medium",
+            "subheading_margin_bottom": 32,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_overlay_opacity": "#ffffff",
+            "link": "",
+            "primary_button_label": "Shop Corners",
+            "primary_button_link": "shopify://collections/corner-sofas",
+            "secondary_button_label": "",
+            "secondary_button_link": "shopify://collections/chairs",
+            "button_transparent": "transparent",
+            "button_spacing_between": 10,
+            "buttons_direction": "vertical",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0
+          }
+        },
         "slide_dN3rVP": {
           "type": "slide",
           "settings": {
@@ -67,35 +97,6 @@
             "button_transparent": "transparent",
             "button_spacing_between": 10,
             "buttons_direction": "horizontal",
-            "padding_top_bottom": 0,
-            "padding_left_right": 0
-          }
-        },
-        "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Azzuro_Banner_Desktop.jpg",
-            "mobile_image": "shopify://shop_images/Azzuro_Banner_Mobile.jpg",
-            "content_max_width": 1200,
-            "heading_font": "font-heading",
-            "heading": "Sink Into Comfort, Stay in Style",
-            "heading_size": "small",
-            "heading_margin_bottom": 30,
-            "subheading": "Elevate your home with our cosy corners designed for ultimate relaxation.",
-            "subheading_size": "medium",
-            "subheading_margin_bottom": 32,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 0,
-            "color_overlay_opacity": "#ffffff",
-            "link": "",
-            "primary_button_label": "Shop Corners",
-            "primary_button_link": "shopify://collections/corner-sofas",
-            "secondary_button_label": "",
-            "secondary_button_link": "shopify://collections/chairs",
-            "button_transparent": "transparent",
-            "button_spacing_between": 10,
-            "buttons_direction": "vertical",
             "padding_top_bottom": 0,
             "padding_left_right": 0
           }
@@ -133,8 +134,8 @@
       },
       "block_order": [
         "slide_VQiCzB",
-        "slide_dN3rVP",
         "template--16793024757999__12b81e44-2b28-427b-9080-19dfb79fd112-1676275303a720accc-0",
+        "slide_dN3rVP",
         "slide_DL46Yz"
       ],
       "settings": {
