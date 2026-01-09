@@ -315,6 +315,7 @@
       mainWrapper.appendChild(img);
 
       ensureGalleryControls();
+      toggleFullscreenFor360();
     }
 
     function showFixtuur360() {
@@ -333,6 +334,7 @@
       Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
 
       ensureGalleryControls();
+      toggleFullscreenFor360();
     }
 
     // Handle thumbnail clicks
@@ -475,8 +477,8 @@
               src="https://cdn.shopify.com/s/files/1/0857/1358/4415/files/fixtuur_fullscreen.svg?v=1767948931" 
               class="icon icon-zoom" 
               style="
-                width: 25px;
-                height: 25px;
+                width: 36px;
+                height: 36px;
                 cursor: pointer;
               "
             >
@@ -491,5 +493,35 @@
 
       controls.appendChild(fullscreen);
     }
+
+    toggleFullscreenFor360();
   }
+</script>
+
+<script>
+  function toggleFullscreenFor360() {
+    const wrapper = document.getElementById('main-image-wrapper');
+    if (!wrapper) return;
+
+    const fullscreen = wrapper.querySelector('.icon-fullscreen');
+    if (!fullscreen) return;
+
+    const is360Active = !!wrapper.querySelector('.Fixtuur[data-embed="360"]');
+
+    fullscreen.style.display = is360Active ? 'none' : '';
+  }
+
+  (function observe360Switching() {
+    const wrapper = document.getElementById('main-image-wrapper');
+    if (!wrapper) return;
+
+    const observer = new MutationObserver(() => {
+      toggleFullscreenFor360();
+    });
+
+    observer.observe(wrapper, {
+      childList: true,
+      subtree: true
+    });
+  })();
 </script>
