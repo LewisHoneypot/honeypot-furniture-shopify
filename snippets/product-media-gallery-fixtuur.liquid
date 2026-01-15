@@ -276,7 +276,7 @@
   #custom-gallery-controls {
     position: absolute;
     top: 5px;
-    right: -4px;
+    right: 52px;
     display: flex;
     gap: 8px;
     z-index: 9999;
@@ -289,7 +289,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    right: 54px;
   }
 </style>
 
@@ -381,6 +380,10 @@
       e.preventDefault();
       activateThumb(getActiveIndex() + 1);
     });
+
+    // ✅ INITIALISE GALLERY CONTROLS ON PAGE LOAD
+    ensureGalleryControls();
+    toggleFullscreenFor360();
   });
 </script>
 
@@ -471,7 +474,7 @@
       const fullscreen = document.createElement('div');
       fullscreen.className = 'smv-icon-custom icon-fullscreen';
       fullscreen.innerHTML = `
-      <modal-opener class="product__modal-opener product__modal-opener--image d-block pos-relative w-100 no-js-hidden" data-modal="#ProductModal-template--27442919145847__main">
+      <modal-opener class="product__modal-opener product__modal-opener--image d-block pos-relative w-100 no-js-hidden" data-modal="#ProductModal-template--27568632856951__main">
         <button id="pdp-zoom-toggle" class="product__media-toggle t-button b-none c-pointer d-flex p-0" type="button" aria-haspopup="dialog" data-media-id="48386929131807" style="background-color: transparent;">
           <span>
             <img 
