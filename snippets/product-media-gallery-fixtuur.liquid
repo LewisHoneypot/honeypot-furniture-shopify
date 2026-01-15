@@ -264,8 +264,8 @@
     opacity: 0.9;
     transition: opacity 0.2s ease;
     position: relative;
-    margin-top: 12px;
-    margin-right: 10px !important;
+    margin-top: 7px;
+    margin-right: 9px !important;
     float: inline-end;
   }
   .smv-icon-custom:hover {
@@ -280,6 +280,18 @@
     display: flex;
     gap: 8px;
     z-index: 9999;
+  }
+
+  #custom-gallery-controls.not-360 {
+    right: 3px;
+  }
+
+  .icon-dimensions {
+    margin-top: 11px;
+  }
+
+  .not-360 .icon-dimensions {
+    right: -4px;
   }
 
   #custom-gallery-controls .smv-icon-custom {
@@ -508,11 +520,18 @@
     if (!wrapper) return;
 
     const fullscreen = wrapper.querySelector('.icon-fullscreen');
-    if (!fullscreen) return;
+    const controls = wrapper.querySelector('#custom-gallery-controls');
+    if (!controls) return;
 
     const is360Active = !!wrapper.querySelector('.Fixtuur[data-embed="360"]');
 
-    fullscreen.style.display = is360Active ? 'none' : '';
+    // fullscreen icon
+    if (fullscreen) {
+      fullscreen.style.display = is360Active ? 'none' : '';
+    }
+
+    // controls positioning
+    controls.classList.toggle('not-360', !is360Active);
   }
 
   (function observe360Switching() {
@@ -525,7 +544,7 @@
 
     observer.observe(wrapper, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
   })();
 </script>
