@@ -14,10 +14,9 @@
       "blocks": {
         "slide_VQiCzB": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Banner_2.jpg",
-            "mobile_image": "shopify://shop_images/Banner_Mobile.jpg",
+            "image": "shopify://shop_images/NEW_IN_Sofa_Collectin_3.png",
+            "mobile_image": "shopify://shop_images/mob_version.png",
             "content_max_width": 440,
             "heading_font": "font-heading",
             "heading": "",
