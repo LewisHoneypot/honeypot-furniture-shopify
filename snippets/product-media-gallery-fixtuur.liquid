@@ -306,6 +306,20 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+
+    Fixtuur('getCapabilities', {
+      productId: '{{ product.variants[0].sku }}',
+      callback: capabilities => {
+        if (capabilities.content) {
+          // Product is available for visual content
+          console.log('Product available');
+        } else {
+          // Product is not available visual content
+          console.log('Product not available');
+        }
+      },
+    });
+
     Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
 
     const thumbs = document.querySelectorAll('#thumb-bar > .cylindo-thumbnail-btn');
