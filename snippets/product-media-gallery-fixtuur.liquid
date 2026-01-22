@@ -5,7 +5,6 @@
     style="aspect-ratio:1/1;position:relative;touch-action:pan-y;user-select:none;-webkit-user-drag:none;cursor:grab;"
   >
     <div id="custom-gallery-controls" aria-hidden="false"></div>
-    <div class="Fixtuur" data-embed="360" data-product="{{ product.variants[0].sku }}"></div>
   </div>
 
   {% assign first_word = product.title | split: ' ' | first %}
@@ -28,7 +27,7 @@
 
     <div id="thumb-bar" style="display:flex;gap:8px;overflow-x:auto;margin-top:1rem;align-items:center;">
       <!-- Fixtuur 360 thumbnail -->
-      <div class="cylindo-thumbnail-btn active" data-fixtuur>
+      <div class="cylindo-thumbnail-btn" data-fixtuur hidden>
         <div class="thumb-inner">
           <img
             class="thumb"
@@ -306,10 +305,40 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    Fixtuur('refresh', { selector: '#main-image-wrapper .Fixtuur' });
-
-    const thumbs = document.querySelectorAll('#thumb-bar > .cylindo-thumbnail-btn');
     const mainWrapper = document.getElementById('main-image-wrapper');
+    const fixtuurThumb = document.querySelector('.cylindo-thumbnail-btn[data-fixtuur]');
+    const thumbs = document.querySelectorAll('#thumb-bar > .cylindo-thumbnail-btn');
+
+    // ✅ Render first Shopify image by default
+    const firstShopifyThumb = document.querySelector('#thumb-bar .cylindo-thumbnail-btn:not([data-fixtuur]) img.thumb');
+
+    if (firstShopifyThumb) {
+      firstShopifyThumb.closest('.cylindo-thumbnail-btn').classList.add('active');
+      showShopifyImage(firstShopifyThumb.dataset.src || firstShopifyThumb.src);
+    }
+
+    Fixtuur('getCapabilities', {
+      productId: '{{ product.variants[0].sku }}',
+      callback: (capabilities) => {
+        if (capabilities.content) {
+          console.log('Product available');
+
+          // ✅ Show 360 thumbnail
+          if (fixtuurThumb) fixtuurThumb.hidden = false;
+        } else {
+          console.log('Product not available');
+
+          // ❌ Ensure 360 never loads
+          fixtuurThumb?.remove();
+
+          // ❌ Remove any accidental Fixtuur instance
+          mainWrapper.querySelector('.Fixtuur')?.remove();
+
+          // ✅ Ensure fullscreen + controls behave like non-360
+          toggleFullscreenFor360();
+        }
+      },
+    });
 
     function showShopifyImage(src) {
       const existingFixtuur = mainWrapper.querySelector('.Fixtuur');
@@ -352,6 +381,8 @@
     // Handle thumbnail clicks
     thumbs.forEach((btn) => {
       btn.addEventListener('click', () => {
+        if (btn.hasAttribute('data-fixtuur') && btn.hidden) return;
+
         thumbs.forEach((t) => t.classList.remove('active'));
         btn.classList.add('active');
 
@@ -371,7 +402,8 @@
     const rightBtn = document.querySelector('.thumb-nav.right');
 
     function getActiveIndex() {
-      return Array.from(thumbs).findIndex((t) => t.classList.contains('active'));
+      const idx = Array.from(thumbs).findIndex((t) => t.classList.contains('active'));
+      return idx === -1 ? 0 : idx;
     }
 
     function activateThumb(newIdx) {
@@ -503,10 +535,6 @@
       </modal-opener>
     `;
 
-      fullscreen.addEventListener('click', () => {
-        document.querySelector('.smv-button-fullscreen-open')?.click();
-      });
-
       controls.appendChild(fullscreen);
     }
 
@@ -521,17 +549,28 @@
 
     const fullscreen = wrapper.querySelector('.icon-fullscreen');
     const controls = wrapper.querySelector('#custom-gallery-controls');
-    if (!controls) return;
+    if (!controls || !fullscreen) return;
 
-    const is360Active = !!wrapper.querySelector('.Fixtuur[data-embed="360"]');
+    const fixtuur = wrapper.querySelector('.Fixtuur[data-embed="360"]');
+    const img = wrapper.querySelector('img.main-display');
+    const is360Active = !!fixtuur;
 
-    // fullscreen icon
-    if (fullscreen) {
-      fullscreen.style.display = is360Active ? 'none' : '';
-    }
-
-    // controls positioning
+    // 🧠 UI state
+    fullscreen.style.display = is360Active ? 'none' : '';
     controls.classList.toggle('not-360', !is360Active);
+
+    // 🔁 Reset click handler
+    fullscreen.onclick = null;
+
+    fullscreen.addEventListener('click', () => {
+      if (is360Active && fixtuur) {
+        // 360 fullscreen
+        Fixtuur('fullscreen', { selector: fixtuur });
+      } else if (img) {
+        // Image fullscreen
+        openImageFullscreen(img.src);
+      }
+    });
   }
 
   (function observe360Switching() {
@@ -547,4 +586,8 @@
       subtree: true,
     });
   })();
+
+  function openImageFullscreen(src) {
+    document.querySelector('.smv-button-fullscreen-open')?.click();
+  }
 </script>
