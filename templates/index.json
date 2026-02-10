@@ -1179,6 +1179,7 @@
     },
     "instagram_carousel_9DyQEJ": {
       "type": "instagram-carousel",
+      "disabled": true,
       "name": "Instagram Feed",
       "settings": {
         "section_width": "page-width",
