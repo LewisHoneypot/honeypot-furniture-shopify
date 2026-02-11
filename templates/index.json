@@ -948,7 +948,7 @@
           "settings": {
             "button_transparent": "transparent",
             "primary_button_label": "Find Out More",
-            "primary_button_link": "shopify://pages/finance",
+            "primary_button_link": "shopify://pages/snap-finance",
             "secondary_button_label": "",
             "secondary_button_link": "",
             "padding_top": 19,
