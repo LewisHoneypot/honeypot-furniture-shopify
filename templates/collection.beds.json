@@ -93,7 +93,7 @@
         "3fca5cef-72fc-4b52-a001-50044316c114"
       ],
       "settings": {
-        "use_nosto": true,
+        "use_nosto": false,
         "products_per_row": 3,
         "products_per_page": 15,
         "columns_mobile": "1",
@@ -127,11 +127,12 @@
         "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
+        "show_snap": false,
         "collection_dimensions_toggle": false,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
         "tiers": "off",
-        "date_type": "vague",
+        "date_type": "metafield",
         "use_overlay_1": false,
         "overlay_text_1": "Delivery from Fri, 13 Dec",
         "overlay_text_color_1": "#000000",
