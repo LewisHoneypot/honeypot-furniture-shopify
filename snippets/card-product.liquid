@@ -790,14 +790,14 @@
               {%- endif -%}
 
               <div class="row">
-                <div class="col-6 center">
+                <div class="col-6 center" style="border-right: 1px solid #ddd;">
 
                   <div class="card__price{% if product_cards_style == 'card' %} m-l{% endif %}{% if product_cards_style == 'advanced-card' %} right{% endif %} center"{% if product_cards_style == 'card' or product_cards_style == 'advanced-card' %} style="--color-default-price: 0,0,0; --m-l:auto;"{% endif %}>
                     {% render 'price', product: card_product, price_class: '' %}
                   </div>
 
                   {% if section.settings.show_snap == true %}
-                    {% if card_product.price < 25000  %}
+                    {% if card_product.price > 25000  %}
                       <div class="center">or</div>
                       <div>Snap</div>
                     {% endif %}

@@ -1,116 +1,157 @@
 <script>
-  let allowedCategories = [
-    'sofas',
-    'corner-sofas',
-    'sofa-beds',
-    'u-shape-sofas',
-    '4-seater-sofas',
-    '3-seater-sofas',
-    '2-seater-sofas',
-    'modular-sofas',
-    'recliner-sofas',
-    'armchairs',
-    'foot-stools',
-    'beige',
-    'grey',
-    'black-sofas',
-    'blue-sofas',
-    'brown-sofas',
-    'green-sofas',
-    'carnaby-range',
-    'bishop-range',
-    'inga-range',
-    'cimiano-range',
-    'new-in',
-    'naples',
-    'azzuro',
-    'rupert-sofas',
-    'jacob-range',
-  ];
+  (function () {
+    const allowedCategories = [
+      'sofas',
+      'corner-sofas',
+      'sofa-beds',
+      'u-shape-sofas',
+      '4-seater-sofas',
+      '3-seater-sofas',
+      '2-seater-sofas',
+      'modular-sofas',
+      'recliner-sofas',
+      'armchairs',
+      'foot-stools',
+      'beige',
+      'grey',
+      'black-sofas',
+      'blue-sofas',
+      'brown-sofas',
+      'green-sofas',
+      'carnaby-range',
+      'bishop-range',
+      'inga-range',
+      'cimiano-range',
+      'new-in',
+      'naples',
+      'azzuro',
+      'rupert-sofas',
+      'jacob-range'
+    ];
 
-  async function appendSmallRatingWidgets() {
-    let elements = [];
+    const currentCollectionSlug = window.location.pathname
+      .replace('/collections/', '')
+      .split('/')[0];
 
-    if (document.querySelectorAll('#nosto-collection .ns-product').length) {
-      elements.push(...document.querySelectorAll('#nosto-collection .ns-product'));
+    if (!allowedCategories.includes(currentCollectionSlug)) return;
+
+    const processedHandles = new Set();
+
+    async function createWidget(item) {
+      try {
+        // ✅ Prevent duplicates
+        if (item.dataset.lsProcessed === 'true') return;
+        if (item.querySelector('.lipscore-rating-small')) return;
+
+        const link = item.querySelector('a[href*="/products/"]');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        const handle = href.split('/products/')[1]?.split('?')[0];
+        if (!handle || processedHandles.has(handle)) return;
+
+        processedHandles.add(handle);
+
+        const res = await fetch(`/products/${handle}.js`);
+        if (!res.ok) return;
+
+        const data = await res.json();
+
+        const widget = document.createElement('div');
+        widget.className = 'lipscore-rating-small';
+
+        widget.dataset.lsProductName = data.title;
+        widget.dataset.lsBrand = data.vendor;
+        widget.dataset.lsSku = data.variants.map(v => v.sku).join(';');
+        widget.dataset.lsProductId = data.id;
+        widget.dataset.lsProductUrl = window.location.origin + data.url;
+        widget.dataset.lsImageUrl = data.featured_image?.startsWith('http')
+          ? data.featured_image
+          : 'https:' + data.featured_image;
+        widget.dataset.lsPrice = (data.price / 100).toFixed(2);
+        widget.dataset.lsPriceCurrency = window.Shopify?.currency?.active || 'GBP';
+        widget.dataset.lsAvailability = data.available ? '1' : '0';
+
+        const dimensions = item.querySelector('.collection-dimensions');
+        const info = item.querySelector('.card__information');
+
+        if (dimensions) {
+          dimensions.insertAdjacentElement('beforebegin', widget);
+        } else if (info) {
+          info.appendChild(widget);
+        }
+
+        item.dataset.lsProcessed = 'true';
+
+        if (typeof lipscore !== 'undefined') {
+          lipscore.initWidgets();
+        }
+      } catch (err) {
+        console.warn('Lipscore error:', err);
+      }
     }
 
-    let handles = elements.map(function (item) {
-      if (typeof item.dataset.lsRatingWidget !== 'undefined') {
-        return false;
-      }
+    function scanProducts() {
+      const items = document.querySelectorAll('#product-grid .grid__item');
+      items.forEach(item => createWidget(item));
+    }
 
-      const href = item.getAttribute('href');
-      if (!href) {
-        return false;
-      }
+    // ✅ Initial run
+    document.addEventListener('DOMContentLoaded', scanProducts);
 
-      return {
-        handle: href.split('/').pop(),
-        item: item,
-      };
+    // ✅ Observe dynamic loads (filters, pagination, infinite scroll)
+    const grid = document.querySelector('#product-grid');
+    if (!grid) return;
+
+    const observer = new MutationObserver(() => {
+      scanProducts();
     });
 
-    handles = handles.filter((item) => item !== false);
+    observer.observe(grid, {
+      childList: true,
+      subtree: true
+    });
 
-    for (let handle of handles) {
-      let response = await fetch('/products/' + handle.handle + '.js');
-      let data = await response.json();
+    // ✅ Logo replacement fix (cleaned + safe)
+    window.addEventListener('load', function () {
+      setInterval(() => {
+        const logoGroup = document.querySelector('g.lipscore-service-review-logo');
 
-      let widget = document.createElement('div');
-      widget.dataset.lsProductName = data.title;
-      widget.dataset.lsBrand = data.vendor;
-      widget.dataset.lsSku = data.variants.map((variant) => variant.sku).join(';');
-      widget.dataset.lsProductId = data.id;
-      widget.dataset.lsProductUrl = window.location.origin + data.url;
-      widget.dataset.lsImageUrl = 'https:' + data.featured_image;
-      widget.dataset.lsPrice = parseInt(data.price / 100) + '.' + (data.price % 100);
-      widget.dataset.lsPriceCurrency = Shopify.currency.active;
-      widget.dataset.lsAvailability = data.available === true ? 1 : 0;
-      widget.classList.add('lipscore-rating-small');
+        if (logoGroup && logoGroup.parentNode && !document.querySelector('.lipscore-service-review-logo-image')) {
+          const svgNS = 'http://www.w3.org/2000/svg';
+          const image = document.createElementNS(svgNS, 'image');
 
-      if (typeof handle.item.dataset.lsRatingWidget === 'undefined') {
-        handle.item.querySelector('.ns-d-flex.ns-justify-content-center').insertAdjacentElement('afterend', widget);
-      }
+          image.setAttributeNS(null, 'href', 'https://cdn.shopify.com/s/files/1/0857/1358/4415/files/LS_WHITE_LOGO.png?v=1751357279');
+          image.setAttributeNS(null, 'width', '300');
+          image.setAttributeNS(null, 'height', '100');
+          image.setAttributeNS(null, 'class', 'lipscore-service-review-logo-image');
 
-      handle.item.dataset.lsRatingWidget = 1;
-    }
-
-    if (typeof lipscore !== 'undefined') {
-      lipscore.initWidgets();
-    }
-  }
-
-  let currentCollectionSlug = window.location.pathname.replace('/collections/', '');
-
-  if (document.querySelector('#nosto-collection') && allowedCategories.includes(currentCollectionSlug)) {
-    setInterval(() => {
-      appendSmallRatingWidgets();
-    }, 1000);
-  }
+          logoGroup.parentNode.replaceChild(image, logoGroup);
+        }
+      }, 3000);
+    });
+  })();
 </script>
 
 <style>
   .lipscore-rating {
     float: inline-end;
   }
+
   .lipscore-testimonial {
     margin: 20px 0;
   }
+
   .lipscore-rating-review-link {
     color: black;
   }
-  .lipscore-service-review-badge-small-short > svg > text:first-of-type {
-    transform: translate(35px, -20px);
-  }
-  .lipscore-service-review-badge-small-short > svg > g:last-of-type {
-    transform: translate(1742px, 58px) scale(2.3);
-  }
+
   .lipscore-product-widgets {
     max-width: 1200px;
     padding: 20px;
     margin: 0 auto;
   }
+
   .lipscore-rating-small {
     display: block;
     min-height: 27px;
@@ -120,44 +161,14 @@
   .lipscore-service-review-badge-small-short .lipscore-rating-star > g {
     fill: #fff !important;
   }
+
   .lipscore-service-review-badge-small-short
     svg.lipscore-rating-star.lipscore-star-incomplete.lipscore-svg-rating-star
     > g.lipscore-star-last-half {
     fill: #d1d1d1 !important;
   }
+
   .lipscore-service-review-badge-small-short .lipscore-service-review-logo {
-    width: 300px;
-    height: 100px;
     display: none;
   }
 </style>
-
-<script>
-  window.addEventListener('load', function () {
-    const currentCollectionSlug = window.location.pathname.replace('/collections/', '');
-    const intervalTime = allowedCategories.includes(currentCollectionSlug) ? 5000 : 1000;
-
-    setInterval(() => {
-      const logoGroup = document.querySelector('g.lipscore-service-review-logo');
-
-      if (logoGroup && logoGroup.parentNode) {
-        const svgNS = 'http://www.w3.org/2000/svg';
-        const image = document.createElementNS(svgNS, 'image');
-
-        image.setAttributeNS(
-          null,
-          'href',
-          'https://cdn.shopify.com/s/files/1/0857/1358/4415/files/LS_WHITE_LOGO.png?v=1751357279'
-        );
-        image.setAttributeNS(null, 'x', '0');
-        image.setAttributeNS(null, 'y', '0');
-        image.setAttributeNS(null, 'width', '300');
-        image.setAttributeNS(null, 'height', '100');
-        image.setAttributeNS(null, 'class', 'lipscore-service-review-logo');
-        image.setAttributeNS(null, 'style', 'display: block;');
-
-        logoGroup.parentNode.replaceChild(image, logoGroup);
-      }
-    }, intervalTime);
-  });
-</script>
