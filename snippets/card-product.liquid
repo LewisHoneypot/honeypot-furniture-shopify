@@ -804,7 +804,7 @@
 
                       <div class="center">or</div>
                       <div>
-                        From £{{ snap_price | round: 2 }}/month
+                        From <span class="snap-price">£{{ snap_price | round: 2 }}</span>/month
                       </div>
 
                     {% endif %}
@@ -1591,5 +1591,9 @@
 .price__regular, .price__sale {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.snap-price {
+  font-weight:900;
 }
 {% endstyle %}
