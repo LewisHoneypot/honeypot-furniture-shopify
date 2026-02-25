@@ -1,5 +1,4 @@
 {%- liquid
-
   if use_variant
     assign target = product.selected_or_first_available_variant
   else
@@ -19,7 +18,7 @@
   assign unformatted_price = price
   assign amount_of_credit = unformatted_price | minus: snap_deposit | divided_by: 100
 
-  assign money_price = money_price | remove: '.00' 
+  assign money_price = money_price | remove: '.00'
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
@@ -30,7 +29,7 @@
 
 <div
   class="
-    price 
+    price
     {%- if settings.product_cards_style == 'card' %}{% unless main_price %} right{% endunless %}{% endif -%}
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} price--sold-out{% endif -%}
@@ -61,7 +60,7 @@
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="was">Was</span>
-        <span> 
+        <span>
           <s class="price-item price-item--regular d-inline-block{% if compare_at_price != blank %} price-before--sale{% endif %}">
             {% if settings.currency_code_enabled %}
               {{ compare_at_price | money_with_currency }}
@@ -114,17 +113,17 @@
         {%- endif -%}
       {%- endif -%}
     {%- endif -%}
-
   </div>
 
   {%- if settings.enable_snap_collections == true %}
     {%- if template contains 'product' -%}
       {%- if price > 25000 -%}
-        <div class="monthly-payment-description">Over {{ snap_years }} years £{{ settings.snap_deposit }} deposit {{ snap_apr }}% apr</div>
+        <div class="monthly-payment-description">
+          Over {{ snap_years }} years £{{ settings.snap_deposit }} deposit {{ snap_apr }}% apr
+        </div>
       {%- endif -%}
     {%- endif -%}
   {%- endif -%}
-
 </div>
 
 {%- if settings.enable_snap_collections == true %}
@@ -133,42 +132,42 @@
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           var monthlyPaymentElements = document.querySelectorAll('.monthly-payment');
-          
+
           // Calculated values
           var basePercentage = -0.017; // Base percentage
-          var incrementPerHundred = -0.0011050; // Percentage increment per £1 increase
-      
+          var incrementPerHundred = -0.001105; // Percentage increment per £1 increase
+
           monthlyPaymentElements.forEach(function (element) {
             var amountOfCredit = parseFloat(element.getAttribute('data-amount-of-credit'));
             var snapAPR = parseFloat(element.getAttribute('data-snap-apr'));
             var snapMonths = parseInt(element.getAttribute('data-snap-months'));
             var snapWeeks = parseInt(element.getAttribute('data-snap-weeks'));
-      
+
             // Calculate weekly interest rate
             var weeklyInterestRate = snapAPR / 100 / 52; // Convert APR to a weekly rate
-      
+
             // Calculate weekly payment using the formula
             var numerator = amountOfCredit * weeklyInterestRate * Math.pow(1 + weeklyInterestRate, snapWeeks);
             var denominator = Math.pow(1 + weeklyInterestRate, snapWeeks) - 1;
             var weeklyPayment = numerator / denominator;
-      
+
             // Convert weekly payment to monthly payment
             var monthlyPayment = (weeklyPayment * snapWeeks) / snapMonths;
-      
+
             // Calculate the percentage increase based on amountOfCredit
-            var fixedPercentageIncrease = basePercentage + (Math.floor(amountOfCredit / 100) * incrementPerHundred);
-      
+            var fixedPercentageIncrease = basePercentage + Math.floor(amountOfCredit / 100) * incrementPerHundred;
+
             // Apply the percentage increase to the monthly payment
             monthlyPayment += monthlyPayment * fixedPercentageIncrease;
-      
+
             // Round to two decimal places
             monthlyPayment = Math.round(monthlyPayment * 100) / 100;
-      
+
             // Update the HTML content with the calculated monthly payment
             element.innerText = ' / £' + monthlyPayment.toFixed(2) + ' per month';
           });
         });
-      </script>    
+      </script>
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
@@ -190,5 +189,15 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 30px;
+  }
+
+  .price__regular,
+  .price--on-sale .price__sale {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .snap-price {
+    font-weight: 900;
   }
 </style>
