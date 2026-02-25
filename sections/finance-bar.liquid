@@ -1,0 +1,170 @@
+{% schema %}
+{
+  "name": "Finance Bar",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "page-width", "label": "Page Width" },
+        { "value": "full-width", "label": "Full Width" },
+        { "value": "customized-width", "label": "Custom Width" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "range",
+      "id": "customize_width",
+      "label": "Custom Width (px)",
+      "min": 800,
+      "max": 1800,
+      "step": 50,
+      "default": 1200
+    },
+
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Heading",
+      "default": "Spread the Cost up to 48 months"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Intro Text",
+      "default": "To check your eligibility, add items to your basket, continue to checkout and click 'Apply for Snap Finance'."
+    },
+
+    { "type": "text", "id": "payments", "label": "Number of Payments", "default": "48" },
+    { "type": "text", "id": "apr", "label": "Representative APR", "default": "29.9%" },
+    { "type": "text", "id": "cost", "label": "Cost of Goods", "default": "£1299.00" },
+    { "type": "text", "id": "deposit", "label": "Minimum Deposit", "default": "£1.00" },
+    { "type": "text", "id": "credit", "label": "Amount of Credit", "default": "£1298.00" },
+    { "type": "text", "id": "monthly", "label": "Monthly Payment", "default": "£44.26" },
+    { "type": "text", "id": "total", "label": "Total Payable", "default": "£2125.57" },
+
+    {
+      "type": "textarea",
+      "id": "representative_text",
+      "label": "Representative Example Text",
+      "default": "Representative Example: Cost of Goods £1200, Deposit £1, Amount of Credit £1199, Annual Fixed Interest Rate 26.47%, Monthly Payment £65.23, Term 24 months, Total Payable £1566.52, Representative 29.9% APR"
+    },
+    {
+      "type": "textarea",
+      "id": "legal_text",
+      "label": "Legal / FCA Text",
+      "default": "Snap Finance Limited is authorised and regulated by the Financial Conduct Authority with Reference Number 741813. Credit subject to status. Terms and conditions apply."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Finance Bar"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="finance-bar">
+  <div class="{{ section.settings.section_width }} m-auto"
+       {% if section.settings.section_width == 'customized-width' %}
+         style="--page-width:{{ section.settings.customize_width }}px;"
+       {% endif %}>
+
+    <div class="finance-container">
+
+      <!-- Header -->
+      <div class="finance-header">
+        <div class="finance-icon">💳</div>
+        <div>
+          <p class="finance-title">{{ section.settings.title }}</p>
+          <p class="finance-subtext">{{ section.settings.subtext }}</p>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="finance-grid">
+        <div><strong>Payments</strong><span>{{ section.settings.payments }}</span></div>
+        <div><strong>APR</strong><span>{{ section.settings.apr }}</span></div>
+        <div><strong>Cost</strong><span>{{ section.settings.cost }}</span></div>
+        <div><strong>Deposit</strong><span>{{ section.settings.deposit }}</span></div>
+        <div><strong>Credit</strong><span>{{ section.settings.credit }}</span></div>
+        <div><strong>Monthly</strong><span>{{ section.settings.monthly }}</span></div>
+        <div><strong>Total</strong><span>{{ section.settings.total }}</span></div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="finance-footer">
+      <p>The example detailed above is based on the Representative APR across the longest loan term.</p>
+      <p>{{ section.settings.representative_text }}</p>
+      <p>{{ section.settings.legal_text }}</p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+.finance-bar {
+  background: #f8f8f8;
+  padding: 24px 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.finance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.finance-header {
+  display: flex;
+  gap: 14px;
+  max-width: 420px;
+}
+
+.finance-title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.finance-subtext {
+  font-size: 12px;
+  color: #666;
+}
+
+.finance-grid {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.finance-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.finance-grid strong {
+  font-size: 11px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.finance-grid span {
+  font-weight: 600;
+}
+
+.finance-footer {
+  margin-top: 18px;
+  font-size: 11px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .finance-container {
+    flex-direction: column;
+  }
+}
+</style>
