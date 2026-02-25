@@ -797,9 +797,16 @@
                   </div>
 
                   {% if section.settings.show_snap == true %}
-                    {% if card_product.price > 25000  %}
+                    {% if card_product.price > 25000 %}
+
+                      {% assign price = card_product.price | divided_by: 100.0 %}
+                      {% assign snap_price = price | times: 0.022058 | divided_by: 0.649113 %}
+
                       <div class="center">or</div>
-                      <div>Snap</div>
+                      <div>
+                        From <span class="snap-price">£{{ snap_price | round: 2 }}</span>/month
+                      </div>
+
                     {% endif %}
                   {% endif %}
 
@@ -1581,8 +1588,12 @@
 {%- endif -%}
 
 {% style %}
-.price__regular {
+.price__regular, .price--on-sale .price__sale {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.snap-price {
+  font-weight:900;
 }
 {% endstyle %}
