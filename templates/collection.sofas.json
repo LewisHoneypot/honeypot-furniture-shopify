@@ -131,7 +131,7 @@
         "padding_bottom": 30,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 100,
-        "show_snap": false,
+        "show_snap": true,
         "collection_dimensions_toggle": true,
         "collection_delivery_eta_heading": "Delivery From",
         "collection_delivery_eta_toggle": true,
