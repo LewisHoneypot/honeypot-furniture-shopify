@@ -44,6 +44,25 @@
         "padding_bottom": 0
       }
     },
+    "finance_bar_UTkFY9": {
+      "type": "finance-bar",
+      "name": "Finance Bar",
+      "settings": {
+        "section_width": "page-width",
+        "customize_width": 1200,
+        "title": "Spread the Cost up to 48 months",
+        "subtext": "To check your eligibility, add items to your basket, continue to checkout and click 'Apply for Snap Finance'.",
+        "payments": "48",
+        "apr": "29.9%",
+        "cost": "£1299.00",
+        "deposit": "£1.00",
+        "credit": "£1298.00",
+        "monthly": "£44.26",
+        "total": "£2125.57",
+        "representative_text": "Representative Example: Cost of Goods £1200, Deposit £1, Amount of Credit £1199, Annual Fixed Interest Rate 26.47%, Monthly Payment £65.23, Term 24 months, Total Payable £1566.52, Representative 29.9% APR",
+        "legal_text": "Snap Finance Limited is authorised and regulated by the Financial Conduct Authority with Reference Number 741813. Credit subject to status. Terms and conditions apply."
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -98,7 +117,7 @@
       ],
       "settings": {
         "use_nosto": false,
-        "products_per_row": 3,
+        "products_per_row": 4,
         "products_per_page": 24,
         "columns_mobile": "1",
         "show_collection_description": false,
@@ -175,25 +194,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
-      }
-    },
-    "finance_bar_UTkFY9": {
-      "type": "finance-bar",
-      "name": "Finance Bar",
-      "settings": {
-        "section_width": "page-width",
-        "customize_width": 1200,
-        "title": "Spread the Cost up to 48 months",
-        "subtext": "To check your eligibility, add items to your basket, continue to checkout and click 'Apply for Snap Finance'.",
-        "payments": "48",
-        "apr": "29.9%",
-        "cost": "£1299.00",
-        "deposit": "£1.00",
-        "credit": "£1298.00",
-        "monthly": "£44.26",
-        "total": "£2125.57",
-        "representative_text": "Representative Example: Cost of Goods £1200, Deposit £1, Amount of Credit £1199, Annual Fixed Interest Rate 26.47%, Monthly Payment £65.23, Term 24 months, Total Payable £1566.52, Representative 29.9% APR",
-        "legal_text": "Snap Finance Limited is authorised and regulated by the Financial Conduct Authority with Reference Number 741813. Credit subject to status. Terms and conditions apply."
       }
     },
     "collection_list_ig8tXp": {
