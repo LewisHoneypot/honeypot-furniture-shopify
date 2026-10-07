@@ -1270,7 +1270,7 @@
                   {%- assign delivery_date_suffix_1 = '' -%}
                   {%- assign delivery_date_suffix_2 = '' -%}
 
-                  {%- case delivery_day_1 | modulo: 10 -%}
+                  {%- case delivery_day_1 -%}
                     {%- when 1 -%}
                       {%- assign delivery_date_suffix_1 = 'st' -%}
                     {%- when 2 -%}
@@ -1281,7 +1281,7 @@
                       {%- assign delivery_date_suffix_1 = 'th' -%}
                   {%- endcase -%}
 
-                  {%- case delivery_day_2 | modulo: 10 -%}
+                  {%- case delivery_day_2 -%}
                     {%- when 1 -%}
                       {%- assign delivery_date_suffix_2 = 'st' -%}
                     {%- when 2 -%}
@@ -7323,4 +7323,16 @@
 .global-media-settings {
   background-color: #ededed !important;
 }
-{% endstyle %}
+{% endstyle %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- case delivery_day_1 | modulo: 10 -%}"
+  to: "{%- case delivery_day_1 -%}"
+  position: 75711..75738
+- from: "{%- case delivery_day_2 | modulo: 10 -%}"
+  to: "{%- case delivery_day_2 -%}"
+  position: 76198..76225
+{%- endcomment -%}

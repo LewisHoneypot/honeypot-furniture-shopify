@@ -938,7 +938,7 @@
                     {%- assign delivery_date_suffix_1 = '' -%}
                     {%- assign delivery_date_suffix_2 = '' -%}
 
-                    {%- case delivery_day_1 | modulo: 10 -%}
+                    {%- case delivery_day_1 -%}
                       {%- when 1 -%}
                         {%- assign delivery_date_suffix_1 = 'st' -%}
                       {%- when 2 -%}
@@ -949,7 +949,7 @@
                         {%- assign delivery_date_suffix_1 = 'th' -%}
                     {%- endcase -%}
 
-                    {%- case delivery_day_2 | modulo: 10 -%}
+                    {%- case delivery_day_2 -%}
                       {%- when 1 -%}
                         {%- assign delivery_date_suffix_2 = 'st' -%}
                       {%- when 2 -%}
@@ -1596,4 +1596,16 @@
 .snap-price {
   font-weight:900;
 }
-{% endstyle %}
+{% endstyle %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- case delivery_day_1 | modulo: 10 -%}"
+  to: "{%- case delivery_day_1 -%}"
+  position: 70837..70864
+- from: "{%- case delivery_day_2 | modulo: 10 -%}"
+  to: "{%- case delivery_day_2 -%}"
+  position: 71344..71371
+{%- endcomment -%}

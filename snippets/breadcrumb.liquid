@@ -56,7 +56,7 @@
 	       	<li class="is-active">
 	          <span aria-current="page">{{ 'breadcrumb.cart' | t }}</span>
 	        </li>
-	      {%- when 'collection' and collection.handle -%}
+	      {%- when 'collection' -%}
 	      	{%- if current_tags -%}
 	      		<li>
               <a class="link link--text h-link link--style-line" href="/collections" aria-current="page">
@@ -125,4 +125,13 @@
 	  	{%- endcase -%}
   	</ul>
   </nav>
-{%- endunless -%}
+{%- endunless -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- when 'collection' and collection.handle -%}"
+  to: "{%- when 'collection' -%}"
+  position: 2287..2312
+{%- endcomment -%}
